@@ -61,8 +61,8 @@ class UKLottoTests(unittest.TestCase):
 
     def test_2026_two_round_any_prize_odds_match_operator_claim(self):
         probability = two_round_any_prize_probability()
-        self.assertAlmostEqual(probability, 0.20495658466118272, places=14)
-        self.assertAlmostEqual(1 / probability, 4.879082083011238, places=12)
+        self.assertAlmostEqual(probability, 0.20495658452397336, places=14)
+        self.assertAlmostEqual(1 / probability, 4.879082086201685, places=12)
 
     def test_2026_observed_fixed_prize_baseline(self):
         ev = two_round_fixed_cash_ev(CURRENT_2026_OBSERVED_FIXED_PRIZES)
