@@ -8,10 +8,29 @@ portfolio interactions make exact enumeration impractical.
 from __future__ import annotations
 
 from math import comb
-from typing import Iterable, Sequence, Tuple
+from typing import Dict, Iterable, Sequence, Tuple
 
 
 PrizeTier = Tuple[float, float]
+
+# Official 4+4 mechanics use two independent 4-from-20 boards.  The public
+# game page states that 11 prize categories exist and that 1+2 / 2+1 / 0+3 /
+# 3+0 are the minimum winning configurations.  These grouped match patterns
+# are therefore a convenient exact probability basis; payout values are kept
+# out of this module because they can vary by draw and/or pool state.
+FOUR_PLUS_FOUR_CATEGORY_PATTERNS = {
+    "I": ((4, 4),),
+    "II": ((4, 3), (3, 4)),
+    "III": ((4, 2), (2, 4)),
+    "IV": ((4, 1), (1, 4)),
+    "V": ((4, 0), (0, 4)),
+    "VI": ((3, 3),),
+    "VII": ((3, 2), (2, 3)),
+    "VIII": ((3, 1), (1, 3)),
+    "IX": ((3, 0), (0, 3)),
+    "X": ((2, 2),),
+    "XI": ((2, 1), (1, 2)),
+}
 
 
 def _validate_pool(pool_size: int, player_picks: int, draw_picks: int) -> None:
@@ -76,6 +95,37 @@ def multi_pool_match_probability(
             matches,
         )
     return probability
+
+
+def four_plus_four_category_probabilities() -> Dict[str, float]:
+    """Return exact probabilities for the 11 grouped 4+4 match categories.
+
+    Each board is an independent hypergeometric draw: the player selects 4 of
+    20 and 4 are drawn.  Balls are returned before the B-board draw, so the
+    board probabilities multiply.
+
+    Payout amounts are deliberately not encoded here.  The research model must
+    attach the draw-specific or rule-version-specific payout separately.
+    """
+
+    board_probabilities = {
+        matches: single_pool_match_probability(20, 4, 4, matches)
+        for matches in range(5)
+    }
+
+    return {
+        category: sum(
+            board_probabilities[a_matches] * board_probabilities[b_matches]
+            for a_matches, b_matches in patterns
+        )
+        for category, patterns in FOUR_PLUS_FOUR_CATEGORY_PATTERNS.items()
+    }
+
+
+def four_plus_four_any_prize_probability() -> float:
+    """Return probability that one 4+4 variant reaches any prize category."""
+
+    return sum(four_plus_four_category_probabilities().values())
 
 
 def jackpot_denominator_two_pool(
