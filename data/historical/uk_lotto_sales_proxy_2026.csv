@@ -1,0 +1,16 @@
+draw_date,weekday,jackpot_gbp,previous_jackpot_gbp,jackpot_increment_gbp,assumed_jackpot_sales_fraction,ticket_price_gbp,implied_ticket_sales,millionaire_raffle,powerball_uk_live,source_url,source_class
+2026-06-13,Sat,3681650,2000000,1681650,0.0979,2,8588610.8274,0,0,https://www.lottery.co.uk/lotto/results-13-06-2026,secondary_archive_plus_historical_allocation_assumption
+2026-06-17,Wed,4706314,3681650,1024664,0.0979,2,5233217.5689,0,0,https://www.lottery.co.uk/lotto/results-17-06-2026,secondary_archive_plus_historical_allocation_assumption
+2026-06-20,Sat,6348233,4706314,1641919,0.0979,2,8385694.5863,0,0,https://www.lottery.co.uk/lotto/results-20-06-2026,secondary_archive_plus_historical_allocation_assumption
+2026-06-24,Wed,7357143,6348233,1008910,0.0979,2,5152757.9162,0,0,https://www.lottery.co.uk/lotto/results-24-06-2026,secondary_archive_plus_historical_allocation_assumption
+2026-06-27,Sat,9269710,7357143,1912567,0.0979,2,9767951.9918,0,0,https://www.lottery.co.uk/lotto/results-27-06-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-04,Sat,4061212,2000000,2061212,0.0979,2,10527129.7242,1,0,https://www.lottery.co.uk/lotto/results-04-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-08,Wed,5043330,4061212,982118,0.0979,2,5015924.4127,0,0,https://www.lottery.co.uk/lotto/results-08-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-11,Sat,6643227,5043330,1599897,0.0979,2,8171077.6302,0,0,https://www.lottery.co.uk/lotto/results-11-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-15,Wed,7663813,6643227,1020586,0.0979,2,5212380.3882,0,0,https://www.lottery.co.uk/lotto/results-15-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-18,Sat,9559451,7663813,1895638,0.0979,2,9681501.5322,0,0,https://www.lottery.co.uk/lotto/results-18-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-25,Sat,3492117,2000000,1492117,0.0979,2,7620617.9775,0,1,https://www.lottery.co.uk/lotto/results-25-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-07-29,Wed,4404668,3492117,912551,0.0979,2,4660628.1920,0,1,https://www.lottery.co.uk/lotto/results-29-07-2026,secondary_archive_plus_historical_allocation_assumption
+2026-08-01,Sat,5920669,4404668,1516001,0.0979,2,7742609.8059,0,1,https://www.lottery.co.uk/lotto/results-01-08-2026,secondary_archive_plus_historical_allocation_assumption
+2026-08-05,Wed,6855189,5920669,934520,0.0979,2,4772829.4178,0,1,https://www.lottery.co.uk/lotto/results-05-08-2026,secondary_archive_plus_historical_allocation_assumption
+2026-08-08,Sat,8535146,6855189,1679957,0.0979,2,8579964.2492,0,1,https://www.lottery.co.uk/lotto/results-08-08-2026,secondary_archive_plus_historical_allocation_assumption
