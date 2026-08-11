@@ -1,0 +1,8 @@
+mbw_date,outcome,mbw_jackpot_gbp,prior_saturday_jackpot_gbp,mbw_jackpot_increment_gbp,previous_wednesday_date,previous_wednesday_jackpot_gbp,preceding_saturday_jackpot_gbp,previous_wednesday_increment_gbp,jackpot_growth_uplift,mbw_match2_winners,previous_wednesday_match2_winners,match2_uplift,notes
+2023-12-13,jackpot_won,13035101,10981323,2053778,2023-12-06,8621810,7184056,1437754,0.4284627273,1017769,780755,0.3035702621,"Natural sixth-draw Wednesday state; jackpot won so no rolldown, but pre-draw demand signal remains relevant."
+2024-05-08,rolldown,12644545,10767270,1877275,2024-05-01,8528659,7141148,1387511,0.3529802647,874189,728419,0.2001183385,"Natural Wednesday Must Be Won rolldown."
+2024-09-04,jackpot_won,12626193,10721591,1904602,2024-08-28,8460930,7127514,1333416,0.4283629415,1082907,701370,0.5439881945,"Natural sixth-draw Wednesday state; jackpot won, so no rolldown."
+2025-10-29,rolldown,12423596,10513580,1910016,2025-10-22,8360535,7053955,1306580,0.4618438978,935178,664120,0.4081461182,"Natural Wednesday Must Be Won rolldown."
+2026-02-11,rolldown,12011099,10276622,1734477,2026-02-04,8274349,6971375,1302974,0.3311677746,934390,629485,0.4843721455,"Natural Wednesday Must Be Won rolldown."
+2026-03-04,rolldown,12219097,10336369,1882728,2026-02-25,8262434,6951028,1311406,0.4356560821,761585,483392,0.5755018701,"Natural Wednesday Must Be Won rolldown."
+2026-03-25,rolldown,12141356,10295179,1846177,2026-03-18,8262101,6970816,1291285,0.4297207820,900421,637403,0.4126400409,"Natural Wednesday Must Be Won rolldown."
