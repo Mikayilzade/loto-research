@@ -1,9 +1,27 @@
-draw,date,superprize,tickets_sold,base_300,cat2_winners,cat2_pool,cat3_winners,cat3_pool,cat4_winners,cat4_pool,unpaid_lower_pools,next_draw,source,confidence
-1545,2026-06-17,226866699,16572,4971600,0,99432,1,99432,0,149148,248580,1546,https://lucky-numbers.ru/lottery/kz/4x20/1781708400000,secondary_high_internal_consistency
-1546,2026-06-18,227247957,14742,4422600,0,88452,0,88452,2,132678,,1547,https://lucky-numbers.ru/lottery/kz/4x20/1781794800000,secondary_high_internal_consistency
+draw,date,superprize,tickets_sold,base_300,cat2_winners,cat2_pool,cat3_winners,cat3_pool,cat4_winners,cat4_pool,cat5_winners,cat5_pool,unpaid_lower_pools,next_draw,source,confidence
+1499,2026-05-02,212457078,13806,4141800,1,82836,0,82836,2,124254,0,82836,165672,1500,https://lucky-numbers.ru/lottery/kz/4x20/1777734000000,secondary_high_internal_consistency
+1500,2026-05-03,212739174,12936,3880800,0,77616,1,77616,2,116424,4,77616,77616,1501,https://lucky-numbers.ru/lottery/kz/4x20/1777820400000,secondary_high_internal_consistency
+1501,2026-05-04,212946696,14434,4330200,0,86604,2,86604,5,216510,2,86604,,1502,https://lucky-numbers.ru/lottery/kz/4x20/1777906800000,secondary_high_internal_consistency
+1545,2026-06-17,226866699,16572,4971600,0,99432,1,99432,0,149148,2,99432,248580,1546,https://lucky-numbers.ru/lottery/kz/4x20/1781708400000,secondary_high_internal_consistency
+1546,2026-06-18,227247957,14742,4422600,0,88452,0,88452,2,132678,3,88452,,1547,https://lucky-numbers.ru/lottery/kz/4x20/1781794800000,secondary_high_internal_consistency
 
-# Proven transition for 1545 -> 1546:
-# J_1546 - J_1545 = 381258
-# unpaid lower pools from draw 1545 = 99432 + 149148 = 248580
-# current draw 1546 3% contribution = 14742 * 300 * 0.03 = 132678
+# Replicated exact transition identity:
+# J_t = J_(t-1) + unpaid_lower_pools_(t-1) + 0.03 * 300 * tickets_sold_t
+#
+# 1499 -> 1500:
+# 212739174 - 212457078 = 282096
+# unpaid in 1499 = cat3 82836 + cat5 82836 = 165672
+# current 1500 contribution = 12936 * 300 * 0.03 = 116424
+# 165672 + 116424 = 282096 exactly
+#
+# 1500 -> 1501:
+# 212946696 - 212739174 = 207522
+# unpaid in 1500 = cat2 77616
+# current 1501 contribution = 14434 * 300 * 0.03 = 129906
+# 77616 + 129906 = 207522 exactly
+#
+# 1545 -> 1546:
+# 227247957 - 226866699 = 381258
+# unpaid in 1545 = cat2 99432 + cat4 149148 = 248580
+# current 1546 contribution = 14742 * 300 * 0.03 = 132678
 # 248580 + 132678 = 381258 exactly
