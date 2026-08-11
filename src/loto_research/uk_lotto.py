@@ -1,12 +1,12 @@
-"""Exact UK Lotto probabilities and Must Be Won benchmark helpers.
+"""Exact UK Lotto probability helpers split by rule regime.
 
-The Must Be Won functions distinguish a crowd-average aggregate benchmark from
-strategy-specific sharing. In a Must Be Won draw the jackpot is paid to players
-whether Match 6 is hit or the jackpot rolls down. Therefore, if J is the jackpot
-fund and N is the number of sold entries, J/N is the average jackpot-derived
-value per sold entry across the whole crowd. A particular number-selection
-strategy can differ from that average when duplicated/popular selections change
-sharing in rolldown categories.
+Important rule-version boundary:
+- through 6 June 2026: one 6/59 round per £2 line;
+- from 10 June 2026: one £2 line is entered into two separate 6/59 rounds.
+
+Do not mix prize tables or draw mechanics across these regimes. The current
+(2026+) helpers accept lower-tier prize amounts explicitly where the repository
+has not yet captured a primary rules document for the exact values.
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ TOTAL_COMBINATIONS = comb(POOL_SIZE, PICKS)
 
 
 def lotto_probabilities() -> dict[str, float]:
-    """Return exact probabilities for the UK Lotto prize categories."""
+    """Return exact probabilities for one independent UK Lotto 6/59 round."""
 
     d = TOTAL_COMBINATIONS
     return {
@@ -35,8 +35,11 @@ def lotto_probabilities() -> dict[str, float]:
     }
 
 
-def ordinary_fixed_cash_ev() -> float:
-    """Cash EV excluding Match 6 and the non-cash Match 2 Lucky Dip."""
+def pre_2026_fixed_cash_ev() -> float:
+    """Old one-round cash EV excluding Match 6 and Match-2 Lucky Dip.
+
+    Applies to the rule regime ending with the 6 June 2026 draw.
+    """
 
     p = lotto_probabilities()
     return (
@@ -47,35 +50,81 @@ def ordinary_fixed_cash_ev() -> float:
     )
 
 
-def estimate_entries_from_winner_count(winners: int, category: str) -> float:
-    """Estimate sold entries as winners / exact category probability.
+# Backward-compatible name used by the first historical benchmark/tests.
+def ordinary_fixed_cash_ev() -> float:
+    return pre_2026_fixed_cash_ev()
 
-    This is a simple method-of-moments estimate. It is useful for historical
-    draws when official sales counts are unavailable, but it carries sampling
-    error and may be affected by correlated/duplicated player selections.
+
+def two_round_fixed_cash_ev(prizes: Mapping[str, float]) -> float:
+    """Gross fixed cash EV for the 2026+ two-round format, excluding Match 6.
+
+    One purchased line is entered into two independent rounds. ``prizes`` must
+    contain per-round cash values for match5_bonus, match5, match4, match3 and
+    match2. Values are explicit so secondary observations are not silently
+    promoted into permanent official constants.
+    """
+
+    required = {"match5_bonus", "match5", "match4", "match3", "match2"}
+    missing = required - set(prizes)
+    if missing:
+        raise ValueError(f"missing prize keys: {sorted(missing)}")
+    if any(prizes[key] < 0 for key in required):
+        raise ValueError("prizes cannot be negative")
+
+    p = lotto_probabilities()
+    one_round = sum(p[key] * prizes[key] for key in required)
+    return 2.0 * one_round
+
+
+def two_round_any_prize_probability(include_match6: bool = True) -> float:
+    """Probability a £2 line wins at least one prize across two rounds."""
+
+    p = lotto_probabilities()
+    categories = ["match5_bonus", "match5", "match4", "match3", "match2"]
+    if include_match6:
+        categories.append("match6")
+    one_round_any = sum(p[key] for key in categories)
+    return 1.0 - (1.0 - one_round_any) ** 2
+
+
+def estimate_entries_from_winner_count(
+    winners: int,
+    category: str,
+    rounds_per_ticket: int = 1,
+) -> float:
+    """Estimate sold tickets from category winner-count observations.
+
+    For the 2026+ format, winner tables usually report round-wins (Round 1 plus
+    Round 2), so set ``rounds_per_ticket=2``. This method-of-moments estimate has
+    sampling error and can be biased by non-uniform/correlated player choices.
     """
 
     if winners < 0:
         raise ValueError("winners cannot be negative")
+    if rounds_per_ticket <= 0:
+        raise ValueError("rounds_per_ticket must be positive")
     probabilities = lotto_probabilities()
     if category not in probabilities:
         raise ValueError(f"unknown category: {category}")
     probability = probabilities[category]
     if probability <= 0:
         raise ValueError("category probability must be positive")
-    return winners / probability
+    return winners / (rounds_per_ticket * probability)
 
 
 def must_be_won_crowd_average_ev(
     jackpot: float,
     entries: float,
+    non_jackpot_value: float | None = None,
     lucky_dip_value: float = 0.0,
 ) -> float:
-    """Crowd-average gross EV for a Must Be Won draw.
+    """Crowd-average gross EV for a forced-redistribution draw.
 
-    ``lucky_dip_value`` is deliberately explicit. Use 0 for a conservative
-    cash-only benchmark; £2 is a face-value upper bound when a future free line
-    genuinely substitutes for a line that would otherwise have been purchased.
+    The jackpot-derived aggregate value is approximately J/N per sold ticket if
+    the advertised jackpot fund is fully distributed to players. For the old
+    one-round regime, omit ``non_jackpot_value`` to use the historical fixed cash
+    baseline plus an explicit Match-2 Lucky-Dip value. For 2026+, pass the
+    two-round fixed-cash EV as ``non_jackpot_value`` and leave lucky_dip_value 0.
     """
 
     if jackpot < 0:
@@ -85,16 +134,22 @@ def must_be_won_crowd_average_ev(
     if lucky_dip_value < 0:
         raise ValueError("lucky_dip_value cannot be negative")
 
-    p2 = lotto_probabilities()["match2"]
-    return ordinary_fixed_cash_ev() + jackpot / entries + p2 * lucky_dip_value
+    if non_jackpot_value is None:
+        p2 = lotto_probabilities()["match2"]
+        non_jackpot_value = pre_2026_fixed_cash_ev() + p2 * lucky_dip_value
+    elif non_jackpot_value < 0:
+        raise ValueError("non_jackpot_value cannot be negative")
+
+    return non_jackpot_value + jackpot / entries
 
 
 def must_be_won_break_even_jackpot(
     entries: float,
+    non_jackpot_value: float | None = None,
     lucky_dip_value: float = 0.0,
     ticket_cost: float = TICKET_COST,
 ) -> float:
-    """Jackpot needed for the crowd-average Must Be Won EV to reach ticket cost."""
+    """Jackpot needed for crowd-average gross EV to reach ticket cost."""
 
     if entries <= 0:
         raise ValueError("entries must be positive")
@@ -103,18 +158,27 @@ def must_be_won_break_even_jackpot(
     if lucky_dip_value < 0:
         raise ValueError("lucky_dip_value cannot be negative")
 
-    p2 = lotto_probabilities()["match2"]
-    non_jackpot_value = ordinary_fixed_cash_ev() + p2 * lucky_dip_value
+    if non_jackpot_value is None:
+        p2 = lotto_probabilities()["match2"]
+        non_jackpot_value = pre_2026_fixed_cash_ev() + p2 * lucky_dip_value
+    elif non_jackpot_value < 0:
+        raise ValueError("non_jackpot_value cannot be negative")
+
     return max(0.0, entries * (ticket_cost - non_jackpot_value))
 
 
-def published_rolldown_schedule_cash_ev(prizes: Mapping[str, float]) -> float:
-    """EV of a published no-jackpot rolldown schedule for a uniform fixed line.
+def published_rolldown_schedule_cash_ev(
+    prizes: Mapping[str, float],
+    rounds_per_ticket: int = 1,
+) -> float:
+    """EV of a post-draw no-jackpot payout schedule for a uniform fixed line.
 
-    Expected keys are ``match5_bonus``, ``match5``, ``match4``, ``match3`` and
-    ``match2_cash``. This is a post-draw schedule diagnostic, not a complete
-    ex-ante model: prize-per-winner amounts themselves depend on winner counts.
+    Expected keys: match5_bonus, match5, match4, match3, match2_cash. This is a
+    diagnostic using realized per-winner payouts, not a complete ex-ante model.
     """
+
+    if rounds_per_ticket <= 0:
+        raise ValueError("rounds_per_ticket must be positive")
 
     p = lotto_probabilities()
     required = {"match5_bonus", "match5", "match4", "match3", "match2_cash"}
@@ -124,10 +188,11 @@ def published_rolldown_schedule_cash_ev(prizes: Mapping[str, float]) -> float:
     if any(prizes[key] < 0 for key in required):
         raise ValueError("prizes cannot be negative")
 
-    return (
+    one_round = (
         p["match5_bonus"] * prizes["match5_bonus"]
         + p["match5"] * prizes["match5"]
         + p["match4"] * prizes["match4"]
         + p["match3"] * prizes["match3"]
         + p["match2"] * prizes["match2_cash"]
     )
+    return rounds_per_ticket * one_round
