@@ -4,7 +4,7 @@ Updated: 2026-08-11
 Status: **probability model validated; economic EV not yet validated**
 
 ## Official mechanics captured
-Primary source: https://www.azerlotereya.com/game/fourplus
+Primary source: https://www.azerlotereya.com/lotereya/4-4
 
 Current public rules state:
 - two boards, A and B;
@@ -21,7 +21,7 @@ Current public rules state:
 ### Critical unresolved pricing point
 The public 4+4 page displays `Bilet qiyməti 2₼`, but unlike the current Beşdə 5 page it does **not** explicitly state the cost of one individual variant.
 
-Therefore this research does **not** assume that one 4+4 variant costs 1 AZN.  Economic EV remains parameterized until this is verified from an official rule document or an actual purchase flow/receipt.
+Therefore this research does **not** assume that one 4+4 variant costs 1 AZN. Economic EV remains parameterized until this is verified from an official rule document or an actual purchase flow/receipt.
 
 This matters materially: a 1-AZN and a 2-AZN per-variant interpretation lead to completely different economic conclusions.
 
@@ -64,6 +64,30 @@ Jackpot probability:
 `1 / C(20,4)^2 = 1 / 23,474,025`.
 
 The exact implementation is in `src/loto_research/probability.py` and regression-tested in `tests/test_probability.py`.
+
+## Jackpot state observations from official sources
+Official operator news provides additional state information that is useful for modelling:
+
+- on 28 July 2026 a **530,359 AZN** jackpot was won;
+- the operator stated that the next jackpot would be **250,000 AZN**, confirming a post-win reset/floor at that amount for that rule era;
+- the same article states that approximately four months earlier a **913,072 AZN** 4+4 jackpot had been won;
+- an official 26 November 2025 article reported the jackpot had exceeded **1,000,000 AZN** for the first time;
+- an official January 2026 year-in-review article said more than **1,300,000 AZN** was then waiting in 4+4.
+
+Primary references:
+- https://www.azerlotereya.com/xeberler/44da-530-359-manatliq-cekpotu-saatli-sakini-qazandi-41
+- https://www.azerlotereya.com/xeberler/44-lotereyasinda-cekpot-1-000-000-manati-kecdi-1883
+- https://www.azerlotereya.com/xeberler/azarlotereya-2025-ci-ilda-267-boyuk-udus-qazandirib-1888
+
+### Jackpot component is small by itself
+Because the jackpot probability is only 1 / 23,474,025, the jackpot-only gross EV contribution of one variant before tax/sharing is:
+
+- 250,000 AZN jackpot -> about **0.01065 AZN**;
+- 530,359 AZN jackpot -> about **0.02259 AZN**;
+- 913,072 AZN jackpot -> about **0.03890 AZN**;
+- 1,300,000 AZN jackpot -> about **0.05538 AZN**.
+
+Therefore the jackpot level observed so far cannot by itself plausibly overcome a 1–2 AZN variant cost. If 4+4 contains an exploitable state edge, the economically important component is much more likely to be the lower-category allocation/carryover system, or a promotion/price effect, rather than jackpot accumulation alone.
 
 ## Evidence that lower-tier payouts are state-dependent
 The official public game page does not expose the full historical prize table in crawlable HTML. A secondary archive currently exposes draw-level winner counts and payouts. It must be independently reconciled against primary data before being treated as authoritative.
