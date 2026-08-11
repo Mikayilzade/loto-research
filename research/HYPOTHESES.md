@@ -13,7 +13,8 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 - Historical benchmark: Massachusetts Cash WinFall
 - Current target: UK Lotto Must Be Won and any other current forced-redistribution game
 - Evidence: `research/cash_winfall_benchmark.md` reproduces a conservative cash-only +10.69% expected ROI for a historical May 9, 2011 roll-down using exact 6/46 probabilities and preserved draw payouts; free-bet value is excluded
-- Status: **validated as a historical mechanism class; current-game exploitation untested**
+- New current-game evidence: `research/uk_lotto_must_be_won.md` shows that forced redistribution is real in UK Lotto but the tested 2025 rolldowns remained negative at observed crowd sizes; a £15m jackpot alone was not enough because sales surged
+- Status: **validated as a historical mechanism class; current-game exploitation unvalidated**
 
 ## H002 — Jackpot threshold positive EV
 **Claim:** A progressive jackpot game can reach a jackpot size where a ticket has positive pre-tax or post-tax EV.
@@ -117,9 +118,22 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 - Class: state-dependent / pari-mutuel payout edge
 - Evidence so far: official rules confirm two independent 4-from-20 boards, 11 prize categories and a rolling jackpot; secondary draw archives show materially varying per-winner payouts across lower categories
 - Exact math: jackpot odds 1 in 23,474,025; any listed prize-state probability ~18.614724%
+- New official state evidence: after a 530,359 AZN jackpot win on 2026-07-28 the operator said the next jackpot would be 250,000 AZN; official articles also document 913,072 AZN, >1,000,000 AZN and >1,300,000 AZN jackpot states
+- Interpretation: jackpot accumulation alone contributes only about 0.01065 AZN EV at 250k and 0.05538 AZN at 1.3m per variant before tax/sharing, so lower-category state is the more important lead
 - Critical unknowns: exact per-variant price, rule-version prize-fund allocation, whether/how lower category balances carry, pre-draw observability, sales volume and effect of our own tickets on winner shares
 - Test: reconstruct consecutive draw state transitions and fit prize-pool allocation/carryover equations; require that any profitable signal is observable before purchase
 - Status: **testing**
+
+## H015 — Rolldown lower-tier anti-popularity edge
+**Claim:** In forced-redistribution games where fixed category funds are divided among actual winners, choosing combinations that are less correlated with other players' choices can increase expected payout not only for the jackpot but also for lower rolldown tiers.
+
+- Class: crowd behaviour + pari-mutuel sharing
+- First target: UK Lotto Must Be Won, especially Match 3 because 85% of the residual rolldown jackpot is allocated to that category after the Match 2 £5 payments
+- Mechanism: every fixed line has the same raw match probability, but payout per winning entry depends on how many other entries land in the same prize category; duplicated/popular number structures can create extra sharing
+- Important distinction: draw-number frequencies cannot estimate this edge; we need player-choice/collision data or a defensible crowd-choice model
+- Candidate signals: birthdays, visually simple patterns, consecutive sequences, repeated endings, culturally salient numbers and popular six-number templates
+- Validation: compare expected category share for a uniform/random or deliberately unpopular portfolio against crowd-average J/N benchmark, including self-collision within our own portfolio
+- Status: **promising theoretical mechanism; empirical magnitude untested**
 
 ## Anti-hypotheses / controls
 The following are not accepted as edges without extraordinary evidence:
