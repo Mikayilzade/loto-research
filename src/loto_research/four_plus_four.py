@@ -2,7 +2,7 @@
 
 This module deliberately separates exact combinatorics from empirical inference.
 The category-pool ratios below are NOT yet promoted to official rules; they are
-an observed pattern in preserved 2026 secondary draw tables and must be checked
+observed patterns in preserved 2026 secondary draw tables and must be checked
 against a larger sample and primary rules.
 """
 
@@ -14,9 +14,6 @@ from typing import Mapping
 from .probability import multi_pool_match_probability
 
 
-# Empirically stable total-pool ratios observed in sampled 2026 draws.
-# Categories V and VI are special: their combined total is approximately 2U,
-# while the split between them changes from draw to draw.
 STABLE_POOL_WEIGHTS = {
     3: 11.0,
     4: 5.0,
@@ -25,6 +22,7 @@ STABLE_POOL_WEIGHTS = {
     9: 7.0,
 }
 COMBINED_5_6_WEIGHT = 2.0
+EMPIRICAL_5_TO_6_PER_WINNER_FLOOR = 1.5
 
 
 def category_probability(a_matches: int, b_matches: int) -> float:
@@ -61,12 +59,7 @@ def grouped_category_probabilities() -> dict[int, float]:
 
 
 def infer_pool_unit(category_totals: Mapping[int, float]) -> float:
-    """Infer the common empirical pool unit U from stable categories.
-
-    For sampled 2026 tables, categories III, IV, VII, VIII and IX closely follow
-    11U, 5U, 9U, 14U and 7U. Median normalization is used for robustness to
-    rounding and a bad source row.
-    """
+    """Infer the common empirical pool unit U from stable categories."""
 
     missing = set(STABLE_POOL_WEIGHTS) - set(category_totals)
     if missing:
@@ -81,7 +74,7 @@ def infer_pool_unit(category_totals: Mapping[int, float]) -> float:
 
 
 def stable_pool_fit_error(category_totals: Mapping[int, float], unit: float | None = None) -> float:
-    """Maximum relative deviation from the stable empirical pool-weight model."""
+    """Maximum deviation from the stable empirical pool-weight model, in U units."""
 
     if unit is None:
         unit = infer_pool_unit(category_totals)
@@ -97,7 +90,7 @@ def stable_pool_fit_error(category_totals: Mapping[int, float], unit: float | No
 
 
 def combined_5_6_fit_error(category_totals: Mapping[int, float], unit: float | None = None) -> float:
-    """Absolute deviation of categories V+VI from the empirical 2U combined pool."""
+    """Deviation of categories V+VI from the empirical 2U combined pool."""
 
     if 5 not in category_totals or 6 not in category_totals:
         raise ValueError("categories 5 and 6 are required")
@@ -109,6 +102,45 @@ def combined_5_6_fit_error(category_totals: Mapping[int, float], unit: float | N
     return observed - COMBINED_5_6_WEIGHT * unit
 
 
+def expected_5_6_pool_split(
+    unit: float,
+    cat5_winners: int,
+    cat6_winners: int,
+    per_winner_floor_ratio: float = EMPIRICAL_5_TO_6_PER_WINNER_FLOOR,
+) -> tuple[float, float]:
+    """Empirical prediction for category V/VI total pools.
+
+    Sampled draws are explained by this rule:
+    1. start from U allocated to V and U allocated to VI;
+    2. if V has no more winners than VI, keep U/U;
+    3. if V has more winners, redistribute the fixed 2U combined pool so the
+       category-V per-winner payout is ``per_winner_floor_ratio`` times VI.
+
+    With the current sample the ratio is almost exactly 1.5. This is an
+    empirical reconstruction, NOT yet an official rule statement.
+    """
+
+    if unit < 0:
+        raise ValueError("unit cannot be negative")
+    if cat5_winners < 0 or cat6_winners < 0:
+        raise ValueError("winner counts cannot be negative")
+    if per_winner_floor_ratio <= 0:
+        raise ValueError("per_winner_floor_ratio must be positive")
+
+    if cat5_winners == 0 and cat6_winners == 0:
+        return unit, unit
+    if cat5_winners <= cat6_winners or cat6_winners == 0:
+        # The c6==0 branch is intentionally conservative until a real zero-winner
+        # transition is captured. Do not infer an unpaid-pool carryover here.
+        return unit, unit
+
+    weighted_5 = per_winner_floor_ratio * cat5_winners
+    total_weight = weighted_5 + cat6_winners
+    cat5_total = 2.0 * unit * weighted_5 / total_weight
+    cat6_total = 2.0 * unit - cat5_total
+    return cat5_total, cat6_total
+
+
 def fixed_tail_expected_payout() -> float:
     """Exact EV contribution from observed fixed categories X=6 AZN and XI=4 AZN."""
 
@@ -117,17 +149,7 @@ def fixed_tail_expected_payout() -> float:
 
 
 def infer_variants_from_tail_winners(cat10_winners: int, cat11_winners: int) -> float:
-    """Estimate sold variants from observed category X+XI winner counts.
-
-    This is a method-of-moments estimator using exact category probabilities:
-
-        N_hat = (W10 + W11) / (P10 + P11)
-
-    It is preferable to choosing U/N by eye because it derives the variant
-    volume independently from the payout pool. Real crowd selection is not
-    perfectly uniform, so this remains a noisy estimate rather than official
-    ticket-sales data.
-    """
+    """Estimate sold variants from observed category X+XI winner counts."""
 
     if cat10_winners < 0 or cat11_winners < 0:
         raise ValueError("winner counts cannot be negative")
@@ -152,13 +174,7 @@ def empirical_unit_per_variant(
 
 
 def infer_variants_from_unit(unit: float, unit_per_variant: float = 0.01) -> float:
-    """Convert U to an implied variant count under an explicit scaling assumption.
-
-    The current empirical estimate across the first seven sampled 2026 draws is
-    very close to U ~= 0.01 AZN per sold variant (median around 0.00995),
-    equivalently about 0.5% of revenue if one variant costs 2 AZN. This remains
-    an inference pending primary prize-allocation rules.
-    """
+    """Convert U to implied variants under an explicit scaling assumption."""
 
     if unit < 0:
         raise ValueError("unit cannot be negative")
