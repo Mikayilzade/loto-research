@@ -11,6 +11,7 @@ Branch: `research-work`
 - Dedicated working branch `research-work` created.
 - `START_HERE.md` created for cross-chat handoff.
 - `PROJECT_RULES.md` created with scientific/testing standards.
+- `AGENTS.md` created with coding/Codex instructions.
 
 ## In progress
 - Define research universe: lotteries, raffles, number games, pools, promotional draws and other lottery-like mechanisms worth modelling.
@@ -29,4 +30,4 @@ Branch: `research-work`
 No profitability claim has been validated yet. Project has not reached data collection or model testing stage.
 
 ## Handoff rule
-A future chat should read `START_HERE.md`, `PROJECT_RULES.md`, this file, and `RESEARCH_PLAN.md`, then verify GitHub state before continuing.
+A future chat should read `START_HERE.md`, `PROJECT_RULES.md`, this file, and `AGENTS.md` when code work is involved, then verify GitHub state before continuing.
