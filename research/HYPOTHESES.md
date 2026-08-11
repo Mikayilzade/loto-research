@@ -136,19 +136,21 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 - Status: **promising theoretical mechanism; empirical magnitude untested**
 
 ## H016 — Wednesday Must Be Won calendar edge
-**Claim:** Under the current two-round UK Lotto format, a Must Be Won draw that lands on Wednesday may cross into positive crowd-average EV because the inherited carryover is built across preceding draws including high-sales Saturdays while current Wednesday ticket demand is materially lower than Saturday demand.
+**Claim:** Under the current two-round UK Lotto format, a Must Be Won draw that lands on Wednesday could cross into positive crowd-average EV because inherited carryover is built across preceding draws including high-sales Saturdays while ordinary Wednesday demand is materially lower.
 
 - Class: calendar/state-dependent forced-redistribution edge
 - Rule basis: Allwyn states jackpot starts at £2m, can roll five times and the sixth draw is Must Be Won; draws alternate Wednesday/Saturday
-- Calendar condition: if a new jackpot cycle begins on Saturday after a Wednesday jackpot win/reset, the sixth draw of an uninterrupted cycle lands on Wednesday
-- Data: `data/historical/uk_lotto_sales_proxy_2026.csv` contains 15 rollover increments from 13 June through 8 August 2026
-- Sales proxy assumption: jackpot increment divided by £0.1958 per ticket, based on the old primary 9.79% sales allocation plus current secondary reporting that 9.79% continues; updated primary 2026 procedures still required
-- Observed proxy pattern: Wednesday median ~5.08m tickets versus non-raffle Saturday median ~8.48m
-- Screening math: with observed current fixed-prize EV ~£0.729 and assumed current jackpot contribution £0.1958/ticket, break-even requires inherited carryover/current sales >= ~£1.0752 per ticket
-- Median-path scenario: a Saturday-start cycle produces a rough ~£7.313m prior carryover before a Wednesday sixth draw; screening break-even max sales ~6.801m versus observed ordinary-Wednesday proxy range ~4.66m–5.23m
-- Central risk: explicit Must-Be-Won marketing could increase Wednesday sales enough to erase the edge; current primary allocation/rolldown rules and real sales data are still missing
-- Current-regime evidence: captured sixth draws to date were Saturday-aligned; 18 July rolled down and was negative, while 8 August had two Match-6 winners and therefore did not rolldown
-- Status: **promising current-game lead; not validated and no current-regime Wednesday Must Be Won sample yet**
+- Current-regime data: `data/historical/uk_lotto_sales_proxy_2026.csv` contains 15 rollover increments from 13 June through 8 August 2026
+- Initial screen: Wednesday ordinary-demand proxy median ~5.08m tickets versus non-raffle Saturday median ~8.48m; median-path inherited carryover ~£7.313m; break-even max current sales ~6.801m
+- Initial apparent margin: ordinary Wednesday demand could rise about **+33.77%** before the screen loses break-even
+- Historical stress dataset: `data/historical/uk_lotto_wednesday_mbw_stress_old_regime.csv` reconstructs seven natural old-regime Wednesday sixth-draw states from 2023–2026
+- Cleaner old-regime jackpot-growth uplift proxy: mean **+40.97%**, median **+42.85%**, range **+33.12% to +46.18%** relative to the previous ordinary Wednesday in the same cycle
+- Result: the historical jackpot-growth uplift exceeds the current +33.77% screening margin in **6 of 7** samples; applying the historical median uplift to current ordinary-Wednesday demand projects ~7.263m tickets, above the ~6.801m break-even screen
+- Independent noisy Match-2 proxy points the same direction (median uplift ~+41.26%)
+- Mechanical stress result: with the original median-path carryover, historical mean/median demand uplift would reduce the simple current-regime screening value to roughly **£1.95 / £1.93 per £2 ticket**
+- Caveats: old/new rule regimes differ; jackpot increments can include reserve/top-up effects; no current-regime Wednesday Must Be Won sample exists yet; updated primary 2026 allocation/rolldown procedures remain missing
+- Full stress test: `research/uk_lotto_wednesday_mbw_stress_test.md`
+- Status: **inconclusive / materially weakened; calendar effect alone is not a promising +EV trigger**
 
 ## Anti-hypotheses / controls
 The following are not accepted as edges without extraordinary evidence:
