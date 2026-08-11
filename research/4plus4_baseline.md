@@ -1,47 +1,28 @@
-# 4+4 — exact probability baseline and state-dependent payout lead
+# 4+4 — current baseline
 
-Updated: 2026-08-11
-Status: **probability model validated; economic EV not yet validated**
+Updated: 2026-08-12
+Status: **exact probability model validated; ordinary payout engine strongly reconstructed; special carryover states still under test**
 
-## Official mechanics captured
-Primary source: https://www.azerlotereya.com/lotereya/4-4
+Primary game source:
+- https://www.azerlotereya.com/game/fourplus
 
-Current public rules state:
-- two boards, A and B;
-- player selects 4 numbers from 1–20 on each board;
-- 4 numbers are drawn for A;
-- balls are returned before the B draw, then 4 numbers are drawn for B;
-- 11 prize categories exist;
-- the minimum listed winning match configurations include 1+2, 2+1, 0+3 and 3+0;
+Detailed empirical reconstruction:
+- `research/4plus4_economics_inference.md`
+
+## Official mechanics
+- public ticket price: **2 AZN**;
+- A board: choose 4 from 20;
+- B board: choose 4 from 20;
+- A draw is made, balls are returned, then B is drawn;
+- 11 winning categories;
 - 4+4 wins the jackpot;
-- public page displays a **2 AZN ticket price**;
-- jackpot can roll forward when not won;
-- current public tax note says 10% is withheld after subtracting ticket price and 500 AZN from the win amount.
+- jackpot rolls when unwon;
+- current public tax note: 10% after subtracting ticket price and 500 AZN from the win amount.
 
-### Critical unresolved pricing point
-The public 4+4 page displays `Bilet qiyməti 2₼`, but unlike the current Beşdə 5 page it does **not** explicitly state the cost of one individual variant.
+The public page still does not explicitly expose a separate sentence saying “one base variant costs 2 AZN”. However the payout/winner-count reconstruction now makes 2 AZN per base variant a high-confidence inference consistent with the displayed ticket price. It remains labelled inference until confirmed by detailed registered rules, purchase flow or receipt.
 
-Therefore this research does **not** assume that one 4+4 variant costs 1 AZN. Economic EV remains parameterized until this is verified from an official rule document or an actual purchase flow/receipt.
-
-This matters materially: a 1-AZN and a 2-AZN per-variant interpretation lead to completely different economic conclusions.
-
-## Exact one-board probabilities
-For one board, with 4 selected and 4 drawn from 20:
-
-| matches | probability |
-|---:|---:|
-| 0 | 0.3756449948400413 |
-| 1 | 0.4623323013415893 |
-| 2 | 0.1486068111455108 |
-| 3 | 0.0132094943240454 |
-| 4 | 0.0002063983488132 |
-
-Because the balls are returned before the B draw, the A/B probabilities multiply.
-
-## Exact grouped category probabilities
-The 11 public winning match groups can be represented as follows:
-
-| Category | A+B match states | Probability | Approx. 1 in N |
+## Exact probabilities
+| Category | Match states | Probability | Approx. 1 in N |
 |---|---|---:|---:|
 | I | 4+4 | 0.000000042600278393 | 23,474,025 |
 | II | 4+3 / 3+4 | 0.000005452835634281 | 183,390.82 |
@@ -55,72 +36,60 @@ The 11 public winning match groups can be represented as follows:
 | X | 2+2 | 0.022083984318837523 | 45.28 |
 | XI | 2+1 / 1+2 | 0.137411457983877900 | 7.28 |
 
-Probability of any of the 11 prize configurations:
+Any listed prize state: **0.186147241472223** (~18.614724%, 1 in 5.372091).
 
-`0.186147241472223` = about **18.614724%**, or **1 in 5.372091**.
+## Jackpot contribution
+Official operator news has documented a 250,000 AZN post-win reset and jackpot states of 530,359 AZN, 913,072 AZN and above 1m/1.3m.
 
-Jackpot probability:
+At jackpot probability 1/23,474,025, jackpot-only gross EV per base variant before tax/sharing is small:
+- 250k -> ~0.01065 AZN;
+- 530,359 -> ~0.02259 AZN;
+- 913,072 -> ~0.03890 AZN;
+- 1.3m -> ~0.05538 AZN.
 
-`1 / C(20,4)^2 = 1 / 23,474,025`.
+The observed jackpot range alone cannot make an ordinary 2-AZN variant profitable.
 
-The exact implementation is in `src/loto_research/probability.py` and regression-tested in `tests/test_probability.py`.
+## Empirical lower-tier engine
+The earlier observation that categories III–IX have variable per-winner payouts is now largely explained.
 
-## Jackpot state observations from official sources
-Official operator news provides additional state information that is useful for modelling:
+Across preserved 2026 draw tables, define one common draw-level unit `U`:
+- III ≈ 11U
+- IV ≈ 5U
+- VII ≈ 9U
+- VIII ≈ 14U
+- IX ≈ 7U
+- V + VI ≈ 2U
 
-- on 28 July 2026 a **530,359 AZN** jackpot was won;
-- the operator stated that the next jackpot would be **250,000 AZN**, confirming a post-win reset/floor at that amount for that rule era;
-- the same article states that approximately four months earlier a **913,072 AZN** 4+4 jackpot had been won;
-- an official 26 November 2025 article reported the jackpot had exceeded **1,000,000 AZN** for the first time;
-- an official January 2026 year-in-review article said more than **1,300,000 AZN** was then waiting in 4+4.
+Thus III–IX jointly distribute approximately **48U**.
 
-Primary references:
-- https://www.azerlotereya.com/xeberler/44da-530-359-manatliq-cekpotu-saatli-sakini-qazandi-41
-- https://www.azerlotereya.com/xeberler/44-lotereyasinda-cekpot-1-000-000-manati-kecdi-1883
-- https://www.azerlotereya.com/xeberler/azarlotereya-2025-ci-ilda-267-boyuk-udus-qazandirib-1888
+Draw #790 (2026-07-07) was added only after this ratio had been inferred from other draws and independently fits it closely, providing a first out-of-sample confirmation.
 
-### Jackpot component is small by itself
-Because the jackpot probability is only 1 / 23,474,025, the jackpot-only gross EV contribution of one variant before tax/sharing is:
+Observed fixed categories X and XI pay 6 AZN and 4 AZN per winner in the sample. Their exact expected contribution is:
 
-- 250,000 AZN jackpot -> about **0.01065 AZN**;
-- 530,359 AZN jackpot -> about **0.02259 AZN**;
-- 913,072 AZN jackpot -> about **0.03890 AZN**;
-- 1,300,000 AZN jackpot -> about **0.05538 AZN**.
+**0.6821497378485368 AZN per variant.**
 
-Therefore the jackpot level observed so far cannot by itself plausibly overcome a 1–2 AZN variant cost. If 4+4 contains an exploitable state edge, the economically important component is much more likely to be the lower-category allocation/carryover system, or a promotion/price effect, rather than jackpot accumulation alone.
+The working scaling `U ≈ 0.01 × sold_variants` is consistent with observed X/XI winner counts and with a 2-AZN base variant. Under this scale:
+- III–IX aggregate ≈ **0.48 AZN / variant**;
+- X/XI ≈ **0.68215 AZN / variant**;
+- subtotal before category II and jackpot ≈ **1.16215 AZN per 2-AZN variant** (~58.11% gross return).
 
-## Evidence that lower-tier payouts are state-dependent
-The official public game page does not expose the full historical prize table in crawlable HTML. A secondary archive currently exposes draw-level winner counts and payouts. It must be independently reconciled against primary data before being treated as authoritative.
+So an ordinary 4+4 state remains strongly negative. The floating per-winner numbers are mostly an accounting consequence of variable pool size and winner count, not a free edge.
 
-Secondary archive examples:
-- draw 776, 2026-05-19: https://lucky-numbers.ru/lottery/az/4-4/1779205500000
-- draw 795, 2026-07-24: https://lucky-numbers.ru/lottery/az/4-4/latest-result (snapshot at retrieval)
-- archive: https://lucky-numbers.ru/lottery/az/4-4
+## H014 — what remains interesting
+The live question is now specifically **zero-winner carryover**.
 
-Observed payout values vary materially between draws for categories III–IX while categories X and XI in the sampled draws were 6 AZN and 4 AZN respectively. This is a strong signal that a simple fixed-prize-table EV model is inadequate.
+For a draw where a variable low-probability category receives no winners, determine whether its normally assigned money:
+- carries to the same category;
+- transfers to another category;
+- joins the jackpot;
+- enters a reserve;
+- or is redistributed immediately.
 
-For example, using the exact category probabilities and treating one sampled draw's published per-winner payouts as if they were exogenous gives a lower-tier gross expectation greater than 1 AZN per variant. **That calculation is not an executable EV estimate** because:
-- per-winner payouts can depend on sales and winner counts;
-- our own purchases can change winner counts and pool shares;
-- category carryovers may alter a draw's state;
-- the per-variant ticket cost is not yet verified;
-- jackpot, taxes, purchase limits and execution constraints still need modelling.
+If an accumulated balance survives into a future draw and is visible before ticket purchase, it can be plugged into an exact forward EV model. If unpaid balances are not carried or are not observable, H014 likely dies.
 
-The observed variation is therefore a research lead, not a profitability claim.
+## Current data
+- `data/historical/az_4plus4_payout_samples_2026.csv`
+- `src/loto_research/four_plus_four.py`
+- `tests/test_four_plus_four.py`
 
-## H014 candidate — category-pool/carryover state edge
-A current 4+4 draw may become materially better value when money accumulated in jackpot and/or lower-tier pools is redistributed into a draw whose expected competing-winner count is low.
-
-To validate or reject this we need, by draw:
-1. exact rule-version prize-fund allocation;
-2. exact per-variant price;
-3. jackpot before draw;
-4. any category carryover balances before draw;
-5. ticket/variant sales volume;
-6. winners and payout by category;
-7. tax treatment;
-8. online/retail purchase limits;
-9. model of how our own portfolio changes payout sharing.
-
-## Immediate next test
-Reconstruct at least 50–100 consecutive 4+4 draws with winner counts and payout amounts. Infer whether category prize pools follow stable allocation formulas and whether carryovers can be identified from state transitions. Only then calculate forward-observable EV thresholds.
+Next milestone: 50–100 consecutive draws with emphasis on zero-winner categories II–VI and t→t+1 transition reconstruction.
