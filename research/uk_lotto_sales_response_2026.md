@@ -1,182 +1,163 @@
-# UK Lotto 2026 — jackpot-growth sales proxy and Wednesday Must Be Won lead
+# UK Lotto 2026 — sales response and Must Be Won screening
 
 Updated: 2026-08-11
-Status: **promising screening model; not a validated +EV strategy**
+Status: **screening model retained; Wednesday calendar edge materially weakened by historical demand stress test**
 
-## Motivation
-The current two-round Lotto format creates a useful structural question: can a Must Be Won draw become positive EV when a large inherited jackpot meets unusually low current-draw sales?
-
-The first current-regime Must Be Won example tested (18 July 2026, Saturday) was negative. The next step is therefore to model the crowd before the draw rather than look only at the advertised jackpot.
-
-## Rule facts
+## Current-rule context
 Primary Allwyn sources confirm that from 10 June 2026:
 - one £2 line enters two independent 6/59 rounds;
-- jackpots start at £2m;
-- the jackpot can roll over up to five times before a Must Be Won event on the sixth draw;
+- jackpot starts at £2m;
+- it can roll up to five times before a sixth-draw Must Be Won state;
 - draws remain Wednesday and Saturday;
-- the jackpot is shared across the two rounds.
+- jackpot is shared across the two rounds.
 
 Primary current-format sources:
 - https://www.allwyn.co.uk/insights/double-your-luck-new-lotto-gives-players-two-chances-to-win-more-than-double-the-number-of-millionaires-expected-to-be-made
 - https://www.allwyn.co.uk/insights/double-your-luck-delivers-new-lotto-creates-three-millionaires-in-first-weekend-and-over-3-1-million-winners-in-opening-draws
 
-The indexed official National Lottery procedures are still Edition 20 (2024), i.e. the old one-round regime. They state that 9.79% of Lotto sales is allocated to the jackpot. A current independent Lotto Q&A also reports that the jackpot still receives 9.79% of ticket-sales revenue after the June-2026 redesign. We have not yet captured an updated primary procedure document confirming that percentage, so 9.79% is an **explicit research assumption** for the 2026 sales proxy, not a promoted fact.
+The indexed official National Lottery procedures are still the old pre-June-2026 edition. They state that 9.79% of Lotto sales is allocated to the jackpot. A current independent Lotto Q&A also reports 9.79% after the redesign. Until updated primary 2026 procedures are captured, this project treats 9.79% as an explicit modelling assumption, not a confirmed current rule.
 
-Old primary procedure source:
+Old primary procedure:
 https://www.national-lottery.co.uk/games/lotto/game-procedures
 
 Current secondary cross-check:
 https://www.national-lottery.com/lotto/questions-and-answers
 
-## Sales proxy from jackpot growth
-If the allocation fraction remains 9.79% and a ticket costs £2, each ticket contributes approximately:
-
-`£2 * 0.0979 = £0.1958`
-
-to that draw's jackpot allocation.
-
-For an ordinary rollover transition with no reset/top-up adjustment, use:
+## 2026 jackpot-growth sales proxy
+Under the 9.79% assumption, a £2 ticket contributes approximately £0.1958 to the current-draw jackpot allocation. For an ordinary rollover transition without reset/top-up adjustment:
 
 `N_proxy = (J_t - J_(t-1)) / 0.1958`
 
-The first 15 usable rollover increments from 13 June through 8 August 2026 are stored in:
+The first 15 usable current-regime rollover increments from 13 June through 8 August 2026 are stored in:
 
 `data/historical/uk_lotto_sales_proxy_2026.csv`
 
-This is an inferred proxy. It is not official sales data and can be distorted by reserve-fund actions, jackpot estimation/rounding, special promotions or a changed allocation fraction.
+This is an inferred demand proxy, not official sales data. Reserve-fund actions, jackpot estimation/rounding, promotions or a changed allocation fraction can distort it.
 
-## Strong weekday pattern
+### Weekday pattern
 Across those 15 increments:
 
-### Wednesday
-- observations: 6
-- mean implied tickets: **~5.008m**
-- median: **~5.084m**
-- range: **~4.661m to ~5.233m**
+Wednesday:
+- n = 6
+- mean ~5.008m implied tickets
+- median ~5.084m
+- range ~4.661m–5.233m
 
-### Saturday
-- observations: 9
-- mean: **~8.785m**
-- median: **~8.580m**
-- range: **~7.621m to ~10.527m**
+Saturday:
+- n = 9
+- mean ~8.785m
+- median ~8.580m
 
-Excluding the special 4 July Millionaire Raffle draw:
-- Saturday mean: **~8.567m**
-- Saturday median: **~8.483m**
+Excluding the 4 July Millionaire Raffle draw:
+- Saturday mean ~8.567m
+- Saturday median ~8.483m
 
-The day-of-week gap is therefore much larger than the short-run jackpot-size variation in this sample. Any useful pre-draw model must include Wednesday/Saturday and promotion state, not merely jackpot size.
+The day-of-week effect is therefore much larger than the small jackpot-size variation in this short sample. Promotion state also matters: 4 July's special ten-millionaire raffle produced the highest proxy in the sample (~10.53m) despite only a ~£4.06m jackpot.
 
-### Promotion signal
-4 July 2026 had a special event with ten £1m Millionaire Raffle winners. Its jackpot-growth proxy is approximately **10.53m tickets**, the highest point in the sample despite a jackpot of only about £4.06m. This is a warning that promotions can overwhelm ordinary jackpot-demand relationships.
+## Match-2 counts are only a secondary proxy
+The same purchased selections enter both rounds, yet some 2026 draws show very large Round-1/Round-2 differences in Match-2 winner counts. This demonstrates that player number selections are not uniform enough to treat Match-2 winners as a clean per-draw binomial sales meter.
 
-## Why Match-2 winner counts are not an exact sales meter
-A second possible proxy is:
+This weakens Match-2 as a sales estimator but strengthens H015: crowd number-choice behaviour can materially affect category winner counts and therefore sharing.
 
-`N_hat = Match2 round-winners / (2 * exact P(Match2))`
-
-However, the same bought selections are entered into both rounds and some draws show very large Round-1/Round-2 differences in Match-2 counts. For example, the 24 June archive reports approximately 751,580 Match-2 winners in one round versus 470,345 in the other.
-
-That difference is far too large to treat per-draw Match-2 counts as a clean binomial meter with uniform player selections. It is consistent with real player-number non-uniformity interacting with the particular winning numbers. This both weakens Match-2 as a single-draw sales estimator and strengthens the motivation for H015 (crowd-choice/sharing effects).
-
-The jackpot-growth proxy is therefore currently the preferred screening proxy, but it still needs primary-rule and official-sales validation.
-
-## Saturday Must Be Won screening
+## Aggregate Must Be Won screening equation
 Using the observed regular current lower tiers (£1m / £1,000 / £50 / £10 / £1 per round), the non-jackpot fixed cash EV is approximately:
 
 **F = £0.728983386863 per £2 ticket.**
 
-If the jackpot allocation fraction is `f = 0.0979`, a £2 ticket contributes `f*2 = £0.1958` to the current jackpot. Let `P` be the jackpot carried into the Must Be Won draw before current-draw sales, and `N` be current sales.
+If `f = 0.0979`, current sales contribute `£0.1958` per ticket to the jackpot. Let `P` be inherited carryover before current-draw sales and `N` be current sales.
 
-A simple aggregate screening model is:
+Simple aggregate screen:
 
 `gross EV ≈ F + P/N + 0.1958`
 
-Break-even therefore requires:
+Break-even:
 
 `P/N >= £1.075216613137`
 
-or equivalently:
+or
 
 `N <= P / 1.075216613137`.
 
-This assumes the jackpot fund is fully distributable in aggregate and abstracts from updated 2026 capping/reserve details. It is a screening inequality, not proof of executable EV.
+This assumes the jackpot-derived fund is fully distributable in aggregate and ignores current reserve/capping details. It is a screening inequality, not a profit proof.
 
-### 18 July 2026 Saturday Must Be Won
-Prior jackpot on 15 July: **£7,663,813**.
+## Saturday sixth-draw evidence
+### 18 July 2026
+Prior jackpot: £7,663,813.
+- screening break-even max sales: ~7.128m
+- jackpot-growth proxy for current draw: ~9.682m
+- realized no-jackpot rolldown schedule EV: ~£1.5337 per £2 ticket
 
-The screening inequality allows at most about:
+Negative under both the pre-draw-style screen and realized post-draw schedule.
 
-**7.128m current tickets**
+### 27 June 2026
+Prior jackpot: £7,357,143.
+- screening break-even max sales: ~6.842m
+- current sales proxy: ~9.768m
 
-for crowd-average break-even.
+The jackpot was won rather than rolled down, but Saturday demand again exceeds the screen.
 
-The jackpot-growth sales proxy for 18 July is approximately:
+### 8 August 2026
+The cycle again reached its sixth draw, but two Match-6 tickets shared the £8,535,146 jackpot, so no rolldown occurred.
 
-**9.682m tickets**.
+## H016 — Wednesday Must Be Won idea
+Calendar logic allows a sixth draw to land on Wednesday if the jackpot cycle begins on Saturday.
 
-So the observed Saturday crowd is comfortably above the screening threshold, consistent with the realized post-draw schedule also being negative.
+Using only the ordinary June-August 2026 demand medians:
+- typical Wednesday jackpot increment ~£0.996m
+- typical non-raffle Saturday increment ~£1.661m
+- rough inherited carryover before a hypothetical Wednesday sixth draw ~£7.313m
+- screening break-even max sales ~6.801m
+- ordinary Wednesday median proxy ~5.084m
 
-### 27 June 2026 sixth draw
-The jackpot was won rather than rolled down, but it reached the sixth draw in the cycle.
+If Must Be Won did not alter demand, the screen would show about £2.36 gross value per £2 ticket. Ordinary Wednesday sales could increase about **+33.77%** before this apparent advantage disappeared.
 
-Prior jackpot on 24 June: **£7,357,143**.
-- break-even max sales screen: **~6.842m**;
-- current sales proxy: **~9.768m**.
+That initial result was deliberately subjected to a historical demand stress test rather than accepted as an edge.
 
-Again, Saturday demand is too high under this screen.
+## Historical Wednesday Must Be Won stress test
+Full analysis:
 
-## H016 — Wednesday Must Be Won calendar edge
-This is the most interesting current lead found so far.
+`research/uk_lotto_wednesday_mbw_stress_test.md`
 
-The sixth draw does not have to be a Saturday. Allwyn confirms that Must Be Won occurs on the sixth draw after a new jackpot cycle and draws alternate Wednesday/Saturday. Therefore:
+Dataset:
 
-- if a cycle resets on a **Wednesday**, its sixth draw is **Saturday**;
-- if a jackpot is won/reset so the next £2m cycle starts on a **Saturday**, its sixth draw is **Wednesday**.
+`data/historical/uk_lotto_wednesday_mbw_stress_old_regime.csv`
 
-The current-regime cycles captured so far have produced Saturday sixth draws. On 8 August 2026, for example, the sixth draw did not rolldown because two Match-6 tickets shared the £8,535,146 jackpot.
+Seven natural old-regime Wednesday sixth-draw states from 2023–2026 were reconstructed. Because old primary rules explicitly used the 9.79% jackpot allocation, relative jackpot-growth increments provide a useful same-cycle demand proxy.
 
-A future cycle beginning on Saturday could therefore create the first clean Wednesday Must Be Won test in this regime.
+Relative to the previous ordinary Wednesday in the same cycle, jackpot-growth uplift was:
+- mean **+40.97%**
+- median **+42.85%**
+- range **+33.12% to +46.18%**
 
-### Median-path thought experiment
-Use only the observed June-August 2026 proxy medians:
-- typical Wednesday jackpot increment: **~£0.996m**;
-- typical non-raffle Saturday increment: **~£1.661m**.
+The current H016 screen only tolerates about **+33.77%** uplift. Historical uplift exceeds that margin in **6 of 7** observations.
 
-Starting from a £2m Saturday reset, an alternating five-draw path gives a rough prior carryover before a Wednesday sixth draw of:
+Applying the historical uplift distribution mechanically to the current ordinary-Wednesday median gives:
+- mean-uplift projected sales ~7.168m -> screen ~£1.95 gross / £2 ticket
+- median-uplift projected sales ~7.263m -> screen ~£1.93 gross / £2 ticket
 
-**~£7.313m**.
+An independent but noisier Match-2 comparison points in the same direction, with historical median uplift around +41.26%.
 
-With `P = £7.313m`, the screening break-even maximum current sales is:
+## Decision on H016
+The calendar effect alone is **not robust**. H016 is downgraded from `promising` to **`inconclusive / materially weakened`**.
 
-**~6.801m tickets**.
+It is not formally rejected because:
+- the 2026 two-round product differs from the old one-round regime;
+- updated current jackpot-allocation and rolldown procedures are still missing;
+- reserve/top-up effects can distort jackpot-growth proxies;
+- no current-regime Wednesday Must Be Won observation exists yet.
 
-Observed ordinary Wednesday sales-proxy values so far are only ~4.66m–5.23m, median ~5.08m. At the median, the screening model would imply gross crowd-average value around **£2.36 per £2 ticket**.
+However, the historical evidence now says that assuming ordinary Wednesday demand is too optimistic.
 
-That is a materially positive screening result, but it is **not yet a strategy validation**. The central unknown is whether a Wednesday draw explicitly advertised as Must Be Won would attract enough extra demand to push sales above ~6.8m. Relative to the observed ordinary-Wednesday median, the threshold allows roughly a **34% sales uplift** before the screen loses break-even.
+H016 becomes interesting again only if at least one additional edge appears, such as:
+- unusually large inherited carryover;
+- lower current-regime Must-Be-Won demand response than historical behaviour;
+- more generous verified current redistribution mechanics;
+- measurable H015 anti-popularity/sharing advantage;
+- promotion/cashback/effective-price overlay.
 
-## Why this lead is stronger than 'big jackpot'
-The structural opportunity is calendar-sensitive:
-
-1. Saturday rollovers build the carryover quickly because Saturday demand is high.
-2. If the cycle is aligned so the forced sixth draw lands on Wednesday, that inherited pot may meet a much smaller crowd.
-3. The ratio `inherited carryover / current sales` is what matters economically.
-
-This is exactly the kind of state-dependent mechanism the project is seeking: no prediction of draw numbers is required.
-
-## What can invalidate the lead
-Before any real-money conclusion, all of the following must be resolved:
-- capture updated 2026 primary procedures and confirm the jackpot sales allocation;
-- determine current Must Be Won redistribution/capping mechanics exactly;
-- obtain official or otherwise robust sales data to validate the jackpot-growth proxy;
-- estimate the **Must-Be-Won-specific** Wednesday sales uplift, not ordinary Wednesday demand;
-- account for promotions (4 July shows they materially move demand);
-- account for number-choice sharing/collisions and our own portfolio self-collision;
-- use the final purchasable pre-cutoff jackpot estimate, not hindsight final jackpot;
-- check legal/physical purchase constraints separately from mathematical EV.
-
-## Status
-**H016 is a promising current-game structural lead, not validated.**
-
-The next decisive evidence is either:
-1. a current-regime Wednesday Must Be Won draw, or
-2. enough sales/marketing data to model what Wednesday Must Be Won demand would be before one occurs.
+## Priority shift
+Do not spend more effort trying to prove H016 from the same small current dataset. Higher-value next work:
+1. capture updated primary 2026 Lotto procedures;
+2. quantify H015 crowd-choice/sharing effects;
+3. return to Azerbaijan 4+4 lower-tier carryover reconstruction;
+4. search other current games for structural overlays that are less efficiently competed away.
