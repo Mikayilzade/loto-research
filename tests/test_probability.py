@@ -9,6 +9,8 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from loto_research.probability import (  # noqa: E402
     expected_jackpot_share_fraction,
+    four_plus_four_any_prize_probability,
+    four_plus_four_category_probabilities,
     jackpot_denominator_two_pool,
     multi_pool_match_probability,
     single_pool_match_probability,
@@ -51,6 +53,30 @@ class ProbabilityTests(unittest.TestCase):
         )
         expected = 1.0 / (math.comb(20, 4) ** 2)
         self.assertAlmostEqual(actual, expected, places=18)
+        self.assertEqual(math.comb(20, 4) ** 2, 23_474_025)
+
+    def test_four_plus_four_category_one_is_jackpot(self):
+        categories = four_plus_four_category_probabilities()
+        self.assertAlmostEqual(
+            categories["I"],
+            1.0 / 23_474_025,
+            places=18,
+        )
+
+    def test_four_plus_four_any_prize_probability(self):
+        self.assertAlmostEqual(
+            four_plus_four_any_prize_probability(),
+            0.186147241472223,
+            places=15,
+        )
+
+    def test_four_plus_four_categories_are_mutually_exclusive(self):
+        categories = four_plus_four_category_probabilities()
+        # Winning states are exactly the 11 public match groups; the remainder
+        # of the A/B match-state grid is losing.
+        self.assertEqual(len(categories), 11)
+        self.assertGreater(sum(categories.values()), 0.0)
+        self.assertLess(sum(categories.values()), 1.0)
 
     def test_expected_share_with_no_other_tickets(self):
         self.assertEqual(expected_jackpot_share_fraction(0, 0.5), 1.0)
