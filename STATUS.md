@@ -1,124 +1,130 @@
 # STATUS
 
-Updated: 2026-08-11
+Updated: 2026-08-12
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — universe, exact baselines, rule-versioning and structural-edge search**
+**Stage 1 — exact baselines, rule-versioning and structural-edge search**
 
-## Completed foundation
-- `START_HERE.md`, `PROJECT_RULES.md`, `AGENTS.md`, `RESEARCH_PLAN.md` establish handoff, scientific standards and engineering rules.
-- `catalog/games.csv` and `catalog/sources.csv` hold the first game/source universe with rule-version notes.
-- `schemas/DATA_MODEL.md` defines normalized game/rule/draw/prize/experiment data.
+## Foundation / code
+- `START_HERE.md`, `PROJECT_RULES.md`, `AGENTS.md`, `RESEARCH_PLAN.md` define handoff and research standards.
+- `catalog/games.csv`, `catalog/sources.csv`, `schemas/DATA_MODEL.md` define the first research universe and data model.
 - `research/HYPOTHESES.md` contains H001–H016 plus anti-hypothesis controls.
-- `src/loto_research/probability.py` implements exact combinatorial probability/EV helpers.
-- `src/loto_research/collectors/azerbaijan.py` validates/normalizes Beşdə 5, 4+4 and Super Keno draw records.
-- `src/loto_research/uk_lotto.py` separates pre-June-2026 one-round UK Lotto from the current two-round regime and includes assumption-driven jackpot-growth sales proxies plus carryover break-even screening.
-- Regression tests exist in `tests/test_probability.py`, `tests/test_azerbaijan_collector.py`, `tests/test_uk_lotto.py`. GitHub Actions remains disabled. Earlier baseline suite had 8 passing tests; newest UK-regime/sales-proxy tests have not been run in Actions, although critical numeric expectations were independently recomputed during research.
+- `src/loto_research/probability.py` contains exact combinatorial probability/EV helpers.
+- `src/loto_research/collectors/azerbaijan.py` validates/normalizes Azerbaijan draw records.
+- `src/loto_research/uk_lotto.py` separates old/current UK Lotto regimes and includes Must-Be-Won screening helpers.
+- **NEW:** `src/loto_research/four_plus_four.py` contains empirical 4+4 pool-unit reconstruction helpers.
+- **NEW:** `tests/test_four_plus_four.py` adds regression expectations for the discovered 4+4 payout structure.
+- GitHub Actions remains disabled; critical new numeric identities were independently recomputed during the research pass.
 
-## Current findings
-### Azerbaijan — Beşdə 5
-- 5/36; one variant 1 AZN, ticket minimum 2 AZN.
-- exact 5/5 odds: **1 in 376,992**.
-- favorable gross baseline: **0.535555131 AZN per 1 AZN variant**.
-- net baseline before tax/sharing: about **-46.44%**.
-
-### Azerbaijan — Super Keno
-- choose 10/70; 20 drawn.
-- displayed base-table gross EV: **0.598555794 AZN per 1 AZN**.
-- net baseline before tax: about **-40.14%**.
-- multiplier economics still require full normalization.
-
-### Azerbaijan — 4+4
-- two independent 4/20 boards; 11 winning match groups.
-- jackpot odds: **1 in 23,474,025**.
-- probability of any listed winning state: **18.614724%** (~1 in 5.3721).
-- public ticket price is 2 AZN; exact per-variant price remains unverified.
-- official jackpot-state evidence includes 250k reset, 530,359 AZN win, prior 913,072 AZN win, and >1m / >1.3m jackpot states.
-- jackpot-only EV contribution is small (about 0.01065 AZN at 250k; 0.05538 AZN at 1.3m), so the higher-priority lead is the variable lower-category allocation/carryover mechanism.
-- H014 status: **testing**.
-
+## Validated / strong findings
 ### Cash WinFall historical benchmark
-A preserved May 9, 2011 roll-down, using exact 6/46 probabilities and cash-only tiers, gives:
+Historical structural +EV is real in principle. A preserved May 9, 2011 roll-down gives, using exact 6/46 probabilities and cash-only tiers:
 - ticket: $2;
 - expected cash payout: **$2.2137120403**;
-- net EV: **+$0.2137120403**;
 - expected ROI: **+10.6856%** before tax/execution costs.
 
-The free-bet prize is intentionally valued at zero. H001 is historically validated as a mechanism class: structural redistribution can create +EV without predicting winning numbers.
+### Azerbaijan — Beşdə 5
+- exact 5/5 odds: **1 in 376,992**;
+- favorable baseline gross payout: **0.535555131 AZN per 1-AZN variant**;
+- baseline net before tax/sharing: about **-46.44%**.
 
-### UK Lotto — current two-round regime
-From 10 June 2026 each £2 line enters two separate 6/59 rounds; jackpot is shared across both rounds and the sixth draw of an uninterrupted cycle is Must Be Won.
+### Azerbaijan — Super Keno
+- displayed base-table gross EV: **0.598555794 AZN per 1 AZN**;
+- baseline net before tax: about **-40.14%**;
+- multiplier economics remain pending.
 
-Exact two-round any-prize probability:
-- **0.204956584524**, or **1 in 4.879082086**.
+## Azerbaijan — 4+4: current priority
+### Exact mechanics
+- two independent 4/20 boards;
+- 11 grouped winning categories;
+- jackpot odds: **1 in 23,474,025**;
+- probability of any listed winning state: **18.614724%** (~1 in 5.3721);
+- operator publicly displays **2 AZN ticket price**.
 
-Observed current fixed lower tiers imply non-jackpot cash EV:
-- **£0.728983386863 per £2 ticket**.
+Official jackpot evidence includes a 250k reset after a win and historical jackpot states above 1m / 1.3m. Jackpot-only EV remains too small to explain a profitable ordinary state.
 
-Captured Saturday sixth-draw states remain unattractive:
-- 18 July 2026 rolldown realized uniform-line schedule EV ~**£1.5337 / £2**;
-- 8 August 2026 reached the sixth draw but two Match6 tickets won the jackpot, so no rolldown occurred.
+### NEW — hidden lower-tier payout engine found
+Six preserved 2026 draw tables are stored in:
+- `data/historical/az_4plus4_payout_samples_2026.csv`
 
-### UK Lotto 2026 demand proxy
-`data/historical/uk_lotto_sales_proxy_2026.csv` contains 15 current-regime rollover jackpot increments.
+Detailed derivation:
+- `research/4plus4_economics_inference.md`
 
-Under the explicit 9.79% jackpot-allocation assumption:
-- ordinary Wednesday median demand proxy ~**5.084m** tickets;
-- non-raffle Saturday median ~**8.483m**;
-- promotions materially change demand (4 July raffle proxy ~10.53m).
+For sampled draws 772, 774, 776, 777, 795 and 796, categories III, IV, VII, VIII and IX follow an almost exact common-unit structure:
+- III = **11U**
+- IV = **5U**
+- VII = **9U**
+- VIII = **14U**
+- IX = **7U**
 
-### H016 — Wednesday Must Be Won calendar edge: downgraded
-Initial current-regime screen:
-- median-path inherited carryover before hypothetical Wednesday sixth draw ~**£7.313m**;
-- break-even max current sales ~**6.801m**;
-- ordinary Wednesday median ~**5.084m**;
-- apparent allowable demand uplift before break-even: **~+33.77%**.
+Additionally:
+- V + VI = **2U**
 
-Historical stress test now stored in:
-- `data/historical/uk_lotto_wednesday_mbw_stress_old_regime.csv`
-- `research/uk_lotto_wednesday_mbw_stress_test.md`
+So categories III–IX together distribute approximately **48U** per draw when those pools are paid.
 
-Seven natural old-regime Wednesday sixth-draw states from 2023–2026 show jackpot-growth demand-proxy uplift relative to the previous ordinary Wednesday in the same cycle:
-- mean **+40.97%**;
-- median **+42.85%**;
-- range **+33.12% to +46.18%**.
+The V/VI split changes materially while their combined total stays near 2U, proving these two categories are coupled by an internal allocation mechanism rather than simple independent fixed prizes.
 
-The historical uplift exceeds the current +33.77% screening cushion in **6 of 7** observations. Applying the historical median uplift to current ordinary-Wednesday demand projects ~**7.263m** tickets, above the ~6.801m break-even screen. The simple aggregate value falls to roughly **£1.93 / £2**. An independent but noisier Match2 proxy points in the same direction (median uplift ~+41.26%).
+### NEW — strong 2-AZN-per-variant inference
+Observed fixed tail prizes remain:
+- category X (2+2): **6 AZN**;
+- category XI (2+1 / 1+2): **4 AZN**.
 
-Conclusion: **H016 is now `inconclusive / materially weakened`; calendar effect alone is not a promising +EV trigger.** It remains open only because old/new rule regimes differ and no current-regime Wednesday Must Be Won sample exists yet.
+Their exact probabilities imply a fixed-tail EV contribution of:
+- **0.682149737849 AZN per variant**.
 
-### H015 — lower-tier crowd-sharing lead
-Large two-round differences in Match2 winner counts provide direct evidence that non-uniform player number choices materially change realized category winner counts. This strengthens the case for modelling number-popularity avoidance in shared rolldown categories, but economic magnitude remains untested.
+The observed common pool unit U is strongly consistent with:
+- `U ≈ 0.01 × sold_variants`.
 
-## Data-collection status
-- Azərlotereya current-results page is crawlable.
-- official Beşdə 5 / 4+4 archive pages are client-rendered; underlying official historical API/network call remains undiscovered.
-- secondary 4+4 history can be used for reconstruction only after reconciliation.
-- UK Lotto 2025 and 2026 are stored as separate rule regimes.
-- `data/historical/uk_lotto_must_be_won_2025.csv` stores old-regime rolldowns.
-- `data/historical/uk_lotto_must_be_won_2026.csv` stores the 18 July 2026 current-regime rolldown sample.
-- `data/historical/uk_lotto_sales_proxy_2026.csv` stores current-regime jackpot-growth demand proxies.
-- `data/historical/uk_lotto_wednesday_mbw_stress_old_regime.csv` stores the old-regime Wednesday stress sample.
-- `research/uk_lotto_regime_2026.md`, `research/uk_lotto_sales_response_2026.md`, and `research/uk_lotto_wednesday_mbw_stress_test.md` document the current UK work.
+That is equivalent to U being ~0.5% of gross sales if one base variant costs 2 AZN. The variant counts inferred this way closely match winner-count expectations for categories X/XI across most sampled draws.
 
-## Research interpretation
-- **No currently executable +EV strategy has been validated yet.**
-- Historical Cash WinFall proves structural +EV is real in principle.
-- The UK Lotto pass demonstrated a useful failure mode: an overlay that looks attractive under ordinary demand can be competed away by the demand response to the overlay itself.
-- H016 should not be pursued further from the same small dataset; keep it available for future current-regime evidence.
-- H015 crowd-choice/sharing and Azerbaijan 4+4 lower-tier carryover now rank above H016.
-- Promotions, remaining-inventory states and other inefficiently competed structural overlays remain high priority.
+Therefore **one base variant costing 2 AZN is now a high-confidence inference**, matching the operator's public 2-AZN ticket price. It is not yet promoted to primary-source fact until detailed rules, purchase flow or a receipt explicitly confirms it.
+
+A 1-AZN variant interpretation is economically inconsistent with the observed lower-tier payouts in the sampled draws.
+
+### NEW — ordinary 4+4 economics are less mysterious
+Under the working U scaling:
+- categories III–IX contribute about **0.48 AZN per 2-AZN variant** in aggregate;
+- categories X/XI contribute exactly about **0.68215 AZN** in expectation;
+- subtotal before category II and jackpot: **~1.16215 AZN / 2 AZN**, about **58.11% gross return**.
+
+This means the ordinary draw remains strongly negative. Variable payout-per-winner values are mostly explained by a stable pool formula + changing winner counts, not by a free-standing exploitable anomaly.
+
+### H014 revised
+H014 remains **testing**, but the target is narrower.
+
+Old interpretation: variable payouts themselves might indicate carryover edge.
+
+New interpretation:
+- ordinary III–IX variation is mostly explained by the stable U-engine;
+- the decisive edge question is what happens when a low-probability variable category has **zero winners**;
+- we need to determine whether its assigned pool carries to the same category, moves to another category/jackpot, or is redistributed immediately;
+- only a balance observable before the next purchase can become a strategy signal.
+
+## UK Lotto result
+H016 Wednesday Must Be Won calendar edge was stress-tested and downgraded.
+- initial allowable demand uplift: ~+33.77%;
+- seven historical Wednesday Must-Be-Won analogues show jackpot-growth demand uplift median **+42.85%**;
+- historical demand response exceeds the screen in 6/7 observations;
+- H016 status: **inconclusive / materially weakened**.
+
+H015 crowd-choice/sharing remains theoretically interesting but unquantified.
+
+## Data collection blockers
+- Azərlotereya current results are crawlable.
+- official 4+4 / Beşdə 5 archive pages are client-rendered; the underlying historical API/network payload is still undiscovered.
+- secondary archives can be used for reconstruction, but primary reconciliation is required before authoritative status.
 
 ## Next actions
-1. Return to Azerbaijan **4+4**: verify exact per-variant price and detailed lower-tier prize-fund/carryover rules.
-2. Reconstruct 50–100+ consecutive 4+4 payout states and infer state-transition equations.
-3. Quantify H015 with a crowd number-choice/collision model, using current UK two-round winner-count asymmetries as calibration evidence.
-4. Find/capture updated primary UK Lotto 2026 procedures; revisit H016 only when genuinely new current-regime evidence appears.
-5. Discover/ingest the official Azərlotereya historical API or payload.
-6. Normalize Super Keno multiplier economics.
-7. Add scratch/instant games where remaining-prize/inventory data can support state-dependent EV.
-8. Continue Powerball / Mega Millions / EuroMillions threshold work with demand and sharing response included from the start.
+1. Expand `az_4plus4_payout_samples_2026.csv` toward **50–100 consecutive draws**, prioritizing draws with zero winners in categories II–VI.
+2. Infer t→t+1 pool transitions to identify true carryover/redistribution rules.
+3. Find direct primary confirmation of **2 AZN per base 4+4 variant** and the registered detailed prize-fund rules.
+4. Discover the official Azərlotereya historical API/payload and reconcile the secondary sample.
+5. Estimate full ordinary 4+4 EV including category II and jackpot once their exact allocation/payment mechanics are confirmed.
+6. Quantify H015 crowd-choice/sharing after the 4+4 state-transition pass.
+7. Normalize Super Keno multiplier economics.
+8. Add scratch/instant games with remaining-prize/inventory state.
+9. Continue Powerball / Mega Millions / EuroMillions threshold work with demand/sharing response included from the start.
 
 ## Handoff rule
-A future chat should read `START_HERE.md`, `PROJECT_RULES.md`, this file, `RESEARCH_PLAN.md`, and `AGENTS.md` when code work is involved, then verify the factual state of `research-work` in GitHub before continuing.
+A future chat should read `START_HERE.md`, `PROJECT_RULES.md`, this file, `RESEARCH_PLAN.md`, and `AGENTS.md` when code work is involved, then verify the factual state of `research-work` before continuing.
