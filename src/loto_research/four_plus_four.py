@@ -116,13 +116,48 @@ def fixed_tail_expected_payout() -> float:
     return p[10] * 6.0 + p[11] * 4.0
 
 
+def infer_variants_from_tail_winners(cat10_winners: int, cat11_winners: int) -> float:
+    """Estimate sold variants from observed category X+XI winner counts.
+
+    This is a method-of-moments estimator using exact category probabilities:
+
+        N_hat = (W10 + W11) / (P10 + P11)
+
+    It is preferable to choosing U/N by eye because it derives the variant
+    volume independently from the payout pool. Real crowd selection is not
+    perfectly uniform, so this remains a noisy estimate rather than official
+    ticket-sales data.
+    """
+
+    if cat10_winners < 0 or cat11_winners < 0:
+        raise ValueError("winner counts cannot be negative")
+    p = grouped_category_probabilities()
+    denominator = p[10] + p[11]
+    return (cat10_winners + cat11_winners) / denominator
+
+
+def empirical_unit_per_variant(
+    unit: float,
+    cat10_winners: int,
+    cat11_winners: int,
+) -> float:
+    """Estimate U per sold variant from an independently inferred variant volume."""
+
+    if unit < 0:
+        raise ValueError("unit cannot be negative")
+    variants = infer_variants_from_tail_winners(cat10_winners, cat11_winners)
+    if variants <= 0:
+        raise ValueError("tail winner counts imply zero variants")
+    return unit / variants
+
+
 def infer_variants_from_unit(unit: float, unit_per_variant: float = 0.01) -> float:
     """Convert U to an implied variant count under an explicit scaling assumption.
 
-    The current working hypothesis from sampled draws is U ~= 0.01 AZN per sold
-    variant, equivalently about 0.5% of revenue if one variant costs 2 AZN.
-    This is an inference, not an official rule. Pass a different scaling factor
-    when testing alternatives.
+    The current empirical estimate across the first seven sampled 2026 draws is
+    very close to U ~= 0.01 AZN per sold variant (median around 0.00995),
+    equivalently about 0.5% of revenue if one variant costs 2 AZN. This remains
+    an inference pending primary prize-allocation rules.
     """
 
     if unit < 0:
