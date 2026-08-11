@@ -46,6 +46,24 @@ class FourPlusFourEmpiricalTests(unittest.TestCase):
         self.assertLess(stable_pool_fit_error(totals, unit), 0.01)
         self.assertLess(abs(combined_5_6_fit_error(totals, unit)), 0.05)
 
+    def test_draw_790_out_of_sample_confirms_pool_engine(self):
+        # Draw 790 was added only after the 11/5/9/14/7 + combined-2U pattern
+        # had been inferred from other draws. It therefore acts as a small
+        # out-of-sample check rather than another fitting observation.
+        totals = {
+            3: 4593.40,
+            4: 2087.91,
+            5: 592.41,
+            6: 243.04,
+            7: 3758.96,
+            8: 5847.84,
+            9: 2923.20,
+        }
+        unit = infer_pool_unit(totals)
+        self.assertAlmostEqual(unit, 417.6, places=10)
+        self.assertLess(stable_pool_fit_error(totals, unit), 0.11)
+        self.assertLess(abs(combined_5_6_fit_error(totals, unit)), 0.30)
+
     def test_fixed_tail_expected_payout(self):
         self.assertAlmostEqual(
             fixed_tail_expected_payout(),
