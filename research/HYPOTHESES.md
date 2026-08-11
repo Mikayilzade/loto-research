@@ -10,8 +10,10 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 - Class: structural payout edge
 - Baseline: exact combinatorial EV under ordinary draw
 - Test: reconstruct payout table before/after trigger and include taxes, ticket throughput and sharing
-- First target: historical Massachusetts Cash WinFall; then current UK Lotto Must Be Won mechanics
-- Status: untested
+- Historical benchmark: Massachusetts Cash WinFall
+- Current target: UK Lotto Must Be Won and any other current forced-redistribution game
+- Evidence: `research/cash_winfall_benchmark.md` reproduces a conservative cash-only +10.69% expected ROI for a historical May 9, 2011 roll-down using exact 6/46 probabilities and preserved draw payouts; free-bet value is excluded
+- Status: **validated as a historical mechanism class; current-game exploitation untested**
 
 ## H002 — Jackpot threshold positive EV
 **Claim:** A progressive jackpot game can reach a jackpot size where a ticket has positive pre-tax or post-tax EV.
@@ -60,7 +62,7 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 **Claim:** High-frequency RNG-based games can provide enough samples to detect reproducible departures from the published random model if an implementation issue exists.
 
 - Class: RNG diagnostics
-- Targets: Ekspres Keno, Şanslı 6 and similar games
+- Targets: Ekspres Keno, Şanslı 6, ONLOTO and similar games
 - Requirement: do not assume predictability from frequency alone; search for reproducible mechanism, regime changes and forward prediction
 - Status: untested
 
@@ -108,6 +110,16 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 - Class: data/rule audit
 - First target: Super Keno currently advertises up to 1,000,000 AZN while the displayed base top tier is 100,000 AZN; multiplier mechanics appear to bridge the difference
 - Status: promising as a data-quality finding; profitability not tested
+
+## H014 — 4+4 category-pool / carryover state edge
+**Claim:** The Azerbaijan 4+4 game may have draw states in which accumulated jackpot and/or lower-tier prize-pool money makes the draw materially better value, potentially analogous in mechanism (not necessarily magnitude) to a roll-down game.
+
+- Class: state-dependent / pari-mutuel payout edge
+- Evidence so far: official rules confirm two independent 4-from-20 boards, 11 prize categories and a rolling jackpot; secondary draw archives show materially varying per-winner payouts across lower categories
+- Exact math: jackpot odds 1 in 23,474,025; any listed prize-state probability ~18.614724%
+- Critical unknowns: exact per-variant price, rule-version prize-fund allocation, whether/how lower category balances carry, pre-draw observability, sales volume and effect of our own tickets on winner shares
+- Test: reconstruct consecutive draw state transitions and fit prize-pool allocation/carryover equations; require that any profitable signal is observable before purchase
+- Status: **testing**
 
 ## Anti-hypotheses / controls
 The following are not accepted as edges without extraordinary evidence:
