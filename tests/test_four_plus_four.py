@@ -8,8 +8,11 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from loto_research.four_plus_four import (  # noqa: E402
     combined_5_6_fit_error,
+    empirical_unit_per_variant,
+    expected_5_6_pool_split,
     fixed_tail_expected_payout,
     infer_pool_unit,
+    infer_variants_from_tail_winners,
     infer_variants_from_unit,
     stable_pool_fit_error,
 )
@@ -46,10 +49,11 @@ class FourPlusFourEmpiricalTests(unittest.TestCase):
         self.assertLess(stable_pool_fit_error(totals, unit), 0.01)
         self.assertLess(abs(combined_5_6_fit_error(totals, unit)), 0.05)
 
+        expected5, expected6 = expected_5_6_pool_split(unit, 13, 6)
+        self.assertAlmostEqual(expected5, 635.5827450980392, places=6)
+        self.assertAlmostEqual(expected6, 195.5639215686274, places=6)
+
     def test_draw_790_out_of_sample_confirms_pool_engine(self):
-        # Draw 790 was added only after the 11/5/9/14/7 + combined-2U pattern
-        # had been inferred from other draws. It therefore acts as a small
-        # out-of-sample check rather than another fitting observation.
         totals = {
             3: 4593.40,
             4: 2087.91,
@@ -64,12 +68,27 @@ class FourPlusFourEmpiricalTests(unittest.TestCase):
         self.assertLess(stable_pool_fit_error(totals, unit), 0.11)
         self.assertLess(abs(combined_5_6_fit_error(totals, unit)), 0.30)
 
+        expected5, expected6 = expected_5_6_pool_split(unit, 13, 8)
+        self.assertAlmostEqual(expected5, 592.2327272727273, places=6)
+        self.assertAlmostEqual(expected6, 242.9672727272727, places=6)
+
+    def test_equal_base_pools_when_cat5_has_no_more_winners(self):
+        cat5, cat6 = expected_5_6_pool_split(408.0, 8, 15)
+        self.assertEqual(cat5, 408.0)
+        self.assertEqual(cat6, 408.0)
+
     def test_fixed_tail_expected_payout(self):
         self.assertAlmostEqual(
             fixed_tail_expected_payout(),
             0.6821497378485368,
             places=14,
         )
+
+    def test_tail_winners_independently_estimate_variant_volume(self):
+        variants = infer_variants_from_tail_winners(946, 5616)
+        self.assertAlmostEqual(variants, 41142.24146634616, places=6)
+        unit_per_variant = empirical_unit_per_variant(408.00857142857143, 946, 5616)
+        self.assertAlmostEqual(unit_per_variant, 0.009917023398, places=9)
 
     def test_working_unit_scaling(self):
         self.assertAlmostEqual(
