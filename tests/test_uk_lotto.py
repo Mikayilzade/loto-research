@@ -8,7 +8,9 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from loto_research.uk_lotto import (  # noqa: E402
     TOTAL_COMBINATIONS,
+    carryover_break_even_max_sales,
     estimate_entries_from_winner_count,
+    implied_ticket_sales_from_jackpot_growth,
     lotto_probabilities,
     must_be_won_break_even_jackpot,
     ordinary_fixed_cash_ev,
@@ -98,6 +100,20 @@ class UKLottoTests(unittest.TestCase):
             non_jackpot_value=non_jackpot,
         )
         self.assertAlmostEqual(threshold, 11_450_108.895440394, places=6)
+
+    def test_jackpot_growth_sales_proxy(self):
+        estimated = implied_ticket_sales_from_jackpot_growth(1_024_664)
+        self.assertAlmostEqual(estimated, 5_233_217.568947906, places=6)
+
+    def test_saturday_must_be_won_carryover_threshold_is_below_proxy_sales(self):
+        non_jackpot = two_round_fixed_cash_ev(CURRENT_2026_OBSERVED_FIXED_PRIZES)
+        max_sales = carryover_break_even_max_sales(
+            prior_carryover=7_663_813,
+            non_jackpot_value=non_jackpot,
+        )
+        observed_proxy = implied_ticket_sales_from_jackpot_growth(1_895_638)
+        self.assertAlmostEqual(max_sales, 7_127_692.137901962, places=6)
+        self.assertGreater(observed_proxy, max_sales)
 
 
 if __name__ == "__main__":
