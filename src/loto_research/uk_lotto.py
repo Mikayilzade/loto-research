@@ -4,14 +4,16 @@ Important rule-version boundary:
 - through 6 June 2026: one 6/59 round per £2 line;
 - from 10 June 2026: one £2 line is entered into two separate 6/59 rounds.
 
-Do not mix prize tables or draw mechanics across these regimes. The current
-(2026+) helpers accept lower-tier prize amounts explicitly where the repository
-has not yet captured a primary rules document for the exact values.
+Do not mix prize tables or draw mechanics across these regimes. Current-regime
+sales-proxy helpers are deliberately assumption-driven: the 9.79% jackpot-sales
+allocation is authoritative for the pre-2026 procedures and is independently
+reported as continuing in 2026, but an updated primary procedure document has
+not yet been captured. Treat those outputs as research estimates, not sales data.
 """
 
 from __future__ import annotations
 
-from math import comb
+from math import comb, inf
 from typing import Mapping
 
 
@@ -36,10 +38,7 @@ def lotto_probabilities() -> dict[str, float]:
 
 
 def pre_2026_fixed_cash_ev() -> float:
-    """Old one-round cash EV excluding Match 6 and Match-2 Lucky Dip.
-
-    Applies to the rule regime ending with the 6 June 2026 draw.
-    """
+    """Old one-round cash EV excluding Match 6 and Match-2 Lucky Dip."""
 
     p = lotto_probabilities()
     return (
@@ -58,10 +57,9 @@ def ordinary_fixed_cash_ev() -> float:
 def two_round_fixed_cash_ev(prizes: Mapping[str, float]) -> float:
     """Gross fixed cash EV for the 2026+ two-round format, excluding Match 6.
 
-    One purchased line is entered into two independent rounds. ``prizes`` must
-    contain per-round cash values for match5_bonus, match5, match4, match3 and
-    match2. Values are explicit so secondary observations are not silently
-    promoted into permanent official constants.
+    ``prizes`` contains per-round cash values for match5_bonus, match5, match4,
+    match3 and match2. Values stay explicit so observed secondary-source values
+    are not silently promoted into permanent official constants.
     """
 
     required = {"match5_bonus", "match5", "match4", "match3", "match2"}
@@ -94,9 +92,9 @@ def estimate_entries_from_winner_count(
 ) -> float:
     """Estimate sold tickets from category winner-count observations.
 
-    For the 2026+ format, winner tables usually report round-wins (Round 1 plus
-    Round 2), so set ``rounds_per_ticket=2``. This method-of-moments estimate has
-    sampling error and can be biased by non-uniform/correlated player choices.
+    This is only a method-of-moments proxy. It can be materially biased draw by
+    draw when players choose numbers non-uniformly; 2026 round-level Match-2
+    counts demonstrate that this caveat is economically relevant.
     """
 
     if winners < 0:
@@ -112,20 +110,68 @@ def estimate_entries_from_winner_count(
     return winners / (rounds_per_ticket * probability)
 
 
+def implied_ticket_sales_from_jackpot_growth(
+    jackpot_increment: float,
+    jackpot_sales_fraction: float = 0.0979,
+    ticket_price: float = TICKET_COST,
+) -> float:
+    """Estimate sold tickets from a rollover jackpot increment.
+
+    Assumes ``jackpot_increment = jackpot_sales_fraction * ticket_price * N``.
+    For 2026 this is a research proxy until the current primary procedures are
+    captured and reserve/top-up effects are fully modelled. Do not apply across
+    resets, jackpot wins, special top-ups or rule changes without review.
+    """
+
+    if jackpot_increment < 0:
+        raise ValueError("jackpot_increment cannot be negative")
+    if not 0 < jackpot_sales_fraction <= 1:
+        raise ValueError("jackpot_sales_fraction must be in (0, 1]")
+    if ticket_price <= 0:
+        raise ValueError("ticket_price must be positive")
+    return jackpot_increment / (jackpot_sales_fraction * ticket_price)
+
+
+def carryover_break_even_max_sales(
+    prior_carryover: float,
+    non_jackpot_value: float,
+    jackpot_sales_fraction: float = 0.0979,
+    ticket_price: float = TICKET_COST,
+) -> float:
+    """Maximum current-draw sales compatible with crowd-average break-even.
+
+    Approximate model:
+        J_final = prior_carryover + f * ticket_price * N
+        gross_EV = non_jackpot_value + J_final / N
+
+    Solving gross_EV >= ticket_price gives the largest N that still breaks even.
+    This assumes the jackpot fund is fully distributable in aggregate and ignores
+    reserve/top-up/capping details. It is a screening model, not a profit proof.
+    """
+
+    if prior_carryover < 0:
+        raise ValueError("prior_carryover cannot be negative")
+    if non_jackpot_value < 0:
+        raise ValueError("non_jackpot_value cannot be negative")
+    if not 0 < jackpot_sales_fraction <= 1:
+        raise ValueError("jackpot_sales_fraction must be in (0, 1]")
+    if ticket_price <= 0:
+        raise ValueError("ticket_price must be positive")
+
+    current_sales_jackpot_value = jackpot_sales_fraction * ticket_price
+    gap = ticket_price - non_jackpot_value - current_sales_jackpot_value
+    if gap <= 0:
+        return inf
+    return prior_carryover / gap
+
+
 def must_be_won_crowd_average_ev(
     jackpot: float,
     entries: float,
     non_jackpot_value: float | None = None,
     lucky_dip_value: float = 0.0,
 ) -> float:
-    """Crowd-average gross EV for a forced-redistribution draw.
-
-    The jackpot-derived aggregate value is approximately J/N per sold ticket if
-    the advertised jackpot fund is fully distributed to players. For the old
-    one-round regime, omit ``non_jackpot_value`` to use the historical fixed cash
-    baseline plus an explicit Match-2 Lucky-Dip value. For 2026+, pass the
-    two-round fixed-cash EV as ``non_jackpot_value`` and leave lucky_dip_value 0.
-    """
+    """Crowd-average gross EV for a forced-redistribution draw."""
 
     if jackpot < 0:
         raise ValueError("jackpot cannot be negative")
@@ -171,11 +217,7 @@ def published_rolldown_schedule_cash_ev(
     prizes: Mapping[str, float],
     rounds_per_ticket: int = 1,
 ) -> float:
-    """EV of a post-draw no-jackpot payout schedule for a uniform fixed line.
-
-    Expected keys: match5_bonus, match5, match4, match3, match2_cash. This is a
-    diagnostic using realized per-winner payouts, not a complete ex-ante model.
-    """
+    """EV of a post-draw no-jackpot payout schedule for a uniform fixed line."""
 
     if rounds_per_ticket <= 0:
         raise ValueError("rounds_per_ticket must be positive")
