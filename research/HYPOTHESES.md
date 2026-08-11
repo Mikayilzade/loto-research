@@ -13,7 +13,7 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 - Historical benchmark: Massachusetts Cash WinFall
 - Current target: UK Lotto Must Be Won and any other current forced-redistribution game
 - Evidence: `research/cash_winfall_benchmark.md` reproduces a conservative cash-only +10.69% expected ROI for a historical May 9, 2011 roll-down using exact 6/46 probabilities and preserved draw payouts; free-bet value is excluded
-- New current-game evidence: `research/uk_lotto_must_be_won.md` shows that forced redistribution is real in UK Lotto but the tested 2025 rolldowns remained negative at observed crowd sizes; a £15m jackpot alone was not enough because sales surged
+- New current-game evidence: `research/uk_lotto_must_be_won.md` shows that forced redistribution is real in UK Lotto but the tested 2025 rolldowns remained negative at observed crowd sizes; current 2026 work splits the two-round rule regime separately
 - Status: **validated as a historical mechanism class; current-game exploitation unvalidated**
 
 ## H002 — Jackpot threshold positive EV
@@ -128,12 +128,27 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 **Claim:** In forced-redistribution games where fixed category funds are divided among actual winners, choosing combinations that are less correlated with other players' choices can increase expected payout not only for the jackpot but also for lower rolldown tiers.
 
 - Class: crowd behaviour + pari-mutuel sharing
-- First target: UK Lotto Must Be Won, especially Match 3 because 85% of the residual rolldown jackpot is allocated to that category after the Match 2 £5 payments
-- Mechanism: every fixed line has the same raw match probability, but payout per winning entry depends on how many other entries land in the same prize category; duplicated/popular number structures can create extra sharing
+- First target: UK Lotto Must Be Won
+- Mechanism: every fixed line has the same raw match probability, but payout per winning entry can depend on how many competing entries land in the same prize category
 - Important distinction: draw-number frequencies cannot estimate this edge; we need player-choice/collision data or a defensible crowd-choice model
-- Candidate signals: birthdays, visually simple patterns, consecutive sequences, repeated endings, culturally salient numbers and popular six-number templates
-- Validation: compare expected category share for a uniform/random or deliberately unpopular portfolio against crowd-average J/N benchmark, including self-collision within our own portfolio
+- 2026 evidence: very large Round-1/Round-2 differences in Match-2 winner counts occur even though the same sold selections enter both rounds, demonstrating that non-uniform player selections materially affect realized winner counts
+- Validation: compare expected category share for uniform/random or deliberately unpopular portfolios against a crowd-choice model, including self-collision
 - Status: **promising theoretical mechanism; empirical magnitude untested**
+
+## H016 — Wednesday Must Be Won calendar edge
+**Claim:** Under the current two-round UK Lotto format, a Must Be Won draw that lands on Wednesday may cross into positive crowd-average EV because the inherited carryover is built across preceding draws including high-sales Saturdays while current Wednesday ticket demand is materially lower than Saturday demand.
+
+- Class: calendar/state-dependent forced-redistribution edge
+- Rule basis: Allwyn states jackpot starts at £2m, can roll five times and the sixth draw is Must Be Won; draws alternate Wednesday/Saturday
+- Calendar condition: if a new jackpot cycle begins on Saturday after a Wednesday jackpot win/reset, the sixth draw of an uninterrupted cycle lands on Wednesday
+- Data: `data/historical/uk_lotto_sales_proxy_2026.csv` contains 15 rollover increments from 13 June through 8 August 2026
+- Sales proxy assumption: jackpot increment divided by £0.1958 per ticket, based on the old primary 9.79% sales allocation plus current secondary reporting that 9.79% continues; updated primary 2026 procedures still required
+- Observed proxy pattern: Wednesday median ~5.08m tickets versus non-raffle Saturday median ~8.48m
+- Screening math: with observed current fixed-prize EV ~£0.729 and assumed current jackpot contribution £0.1958/ticket, break-even requires inherited carryover/current sales >= ~£1.0752 per ticket
+- Median-path scenario: a Saturday-start cycle produces a rough ~£7.313m prior carryover before a Wednesday sixth draw; screening break-even max sales ~6.801m versus observed ordinary-Wednesday proxy range ~4.66m–5.23m
+- Central risk: explicit Must-Be-Won marketing could increase Wednesday sales enough to erase the edge; current primary allocation/rolldown rules and real sales data are still missing
+- Current-regime evidence: captured sixth draws to date were Saturday-aligned; 18 July rolled down and was negative, while 8 August had two Match-6 winners and therefore did not rolldown
+- Status: **promising current-game lead; not validated and no current-regime Wednesday Must Be Won sample yet**
 
 ## Anti-hypotheses / controls
 The following are not accepted as edges without extraordinary evidence:
