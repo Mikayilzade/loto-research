@@ -1,0 +1,9 @@
+draw,date,superprize,tickets_sold,base_300,cat2_winners,cat2_pool,cat3_winners,cat3_pool,cat4_winners,cat4_pool,unpaid_lower_pools,next_draw,source,confidence
+1545,2026-06-17,226866699,16572,4971600,0,99432,1,99432,0,149148,248580,1546,https://lucky-numbers.ru/lottery/kz/4x20/1781708400000,secondary_high_internal_consistency
+1546,2026-06-18,227247957,14742,4422600,0,88452,0,88452,2,132678,,1547,https://lucky-numbers.ru/lottery/kz/4x20/1781794800000,secondary_high_internal_consistency
+
+# Proven transition for 1545 -> 1546:
+# J_1546 - J_1545 = 381258
+# unpaid lower pools from draw 1545 = 99432 + 149148 = 248580
+# current draw 1546 3% contribution = 14742 * 300 * 0.03 = 132678
+# 248580 + 132678 = 381258 exactly
