@@ -1,163 +1,134 @@
 # HYPOTHESIS REGISTRY
 
-Updated: 2026-08-11
+Updated: 2026-08-12
 
 Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `validated`.
 
 ## H001 — Roll-down positive EV
 **Claim:** A lottery with a roll-down / must-be-won mechanism can cross into positive expected value when accumulated jackpot funds are redistributed to lower tiers.
+- Historical benchmark: Massachusetts Cash WinFall.
+- Evidence: `research/cash_winfall_benchmark.md` reproduces a conservative cash-only +10.69% expected ROI for a preserved May 9, 2011 roll-down.
+- Status: **validated as a historical mechanism class; current-game exploitation unvalidated**.
 
-- Class: structural payout edge
-- Baseline: exact combinatorial EV under ordinary draw
-- Test: reconstruct payout table before/after trigger and include taxes, ticket throughput and sharing
-- Historical benchmark: Massachusetts Cash WinFall
-- Current target: UK Lotto Must Be Won and any other current forced-redistribution game
-- Evidence: `research/cash_winfall_benchmark.md` reproduces a conservative cash-only +10.69% expected ROI for a historical May 9, 2011 roll-down using exact 6/46 probabilities and preserved draw payouts; free-bet value is excluded
-- New current-game evidence: `research/uk_lotto_must_be_won.md` shows that forced redistribution is real in UK Lotto but the tested 2025 rolldowns remained negative at observed crowd sizes; current 2026 work splits the two-round rule regime separately
-- Status: **validated as a historical mechanism class; current-game exploitation unvalidated**
+## H002 — Progressive jackpot threshold
+**Claim:** A progressive jackpot can reach a state where a ticket is +EV after cash-value, sharing, tax and sales response are included.
+- Targets: Powerball, Mega Millions, EuroMillions.
+- Status: `untested`.
 
-## H002 — Jackpot threshold positive EV
-**Claim:** A progressive jackpot game can reach a jackpot size where a ticket has positive pre-tax or post-tax EV.
-
-- Class: progressive jackpot
-- Baseline: full prize-tier EV
-- Critical adjustment: expected jackpot sharing must increase with sales; advertised annuity must be converted to comparable cash/present value
-- Targets: Powerball, Mega Millions, EuroMillions
-- Status: untested
-
-## H003 — Number-popularity avoidance improves conditional payout
-**Claim:** Choosing combinations less likely to be chosen by other players does not increase draw probability but may increase expected jackpot share conditional on winning.
-
-- Class: crowd behaviour
-- Baseline: random selection with identical win probability
-- Candidate signals: birthdays 1–31, straight sequences, repeated digits, visual shapes, culturally salient numbers
-- Test: require ticket-choice or winner-sharing data; avoid inferring popularity from draw frequencies
-- Status: untested
+## H003 — Number-popularity avoidance
+**Claim:** Less-popular combinations do not increase draw probability but may increase conditional jackpot/share payout.
+- Candidate crowd signals: birthdays, simple sequences, repeated endings, culturally salient numbers, visual patterns.
+- Status: `untested`.
 
 ## H004 — Covering designs improve risk profile
-**Claim:** Wheels / covering designs can improve probability of reaching specified lower-tier prize conditions for a fixed portfolio, even when they do not change raw per-ticket EV.
+**Claim:** Wheels/covering designs can improve target-tier hit probability or variance for a fixed budget even when raw EV is unchanged.
+- Status: `untested`.
 
-- Class: combinatorial optimization
-- Baseline: equal-budget random independent portfolio
-- Metrics: EV, variance, lower-tail loss, probability of at least one target-tier hit
-- Status: untested
-
-## H005 — Nonlinear prize tables can make optimized portfolios superior in EV
-**Claim:** If prize rules include caps, guarantees, duplicate-line effects, multipliers or shared pools, portfolio construction may affect expected return rather than only variance.
-
-- Class: combinatorial optimization
-- Baseline: random portfolio
-- Method: integer programming / dynamic programming where possible
-- Status: untested
+## H005 — Nonlinear payout portfolio edge
+**Claim:** Caps, guarantees, shared pools, duplicate-line effects or multipliers can make portfolio construction affect EV rather than only variance.
+- Status: `untested`.
 
 ## H006 — Physical draw bias
-**Claim:** A physical ball/machine process may show persistent number-level bias large enough to have out-of-sample predictive value.
+**Claim:** A physical machine/ball process may have persistent bias large enough to survive multiple-testing correction and forward validation.
+- Status: `untested`.
 
-- Class: randomness testing
-- Requirement: plausible mechanism plus rule-era segmentation
-- Tests: chi-square, machine/ball-set conditional models, serial diagnostics, multiple-testing correction
-- Reject criterion: effect fails out-of-sample or is too small to overcome house edge
-- Status: untested
+## H007 — High-frequency RNG implementation anomaly
+**Claim:** High-frequency virtual games may provide enough samples to detect reproducible departures from their published random model if an implementation problem exists.
+- Targets: Ekspres Keno, Şanslı 6, ONLOTO and comparators.
+- Status: `untested`.
 
-## H007 — High-frequency virtual games expose implementation anomalies
-**Claim:** High-frequency RNG-based games can provide enough samples to detect reproducible departures from the published random model if an implementation issue exists.
-
-- Class: RNG diagnostics
-- Targets: Ekspres Keno, Şanslı 6, ONLOTO and similar games
-- Requirement: do not assume predictability from frequency alone; search for reproducible mechanism, regime changes and forward prediction
-- Status: untested
-
-## H008 — Cross-jurisdiction same-jackpot EV differences
-**Claim:** When jurisdictions share a jackpot draw but charge different ticket prices or use different lower-tier/tax rules, one jurisdiction may offer materially better EV.
-
-- Class: jurisdiction arbitrage / comparison
-- First target: US Powerball vs UK Powerball after the July 2026 UK launch
-- Important: legal availability and purchase-location rules are execution constraints
-- Status: untested
+## H008 — Cross-jurisdiction same-jackpot EV difference
+**Claim:** Shared jackpot games can have materially different EV by jurisdiction because of price, lower tiers, tax and payout rules.
+- First target: US vs UK Powerball.
+- Status: `untested`.
 
 ## H009 — Promotional overlay
-**Claim:** Cashback, free tickets, loyalty points, deposit bonuses, second-chance draws or operator promotions can turn a normally negative-EV product into positive EV for a bounded number of entries.
-
-- Class: promotion
-- Test: value every benefit conservatively and model wagering/withdrawal conditions
-- Status: untested
+**Claim:** Cashback, free tickets, second-chance draws, loyalty rewards or bounded bonuses can turn a normally negative product +EV for a limited volume.
+- Status: `untested`.
 
 ## H010 — Instant-ticket remaining-prize edge
-**Claim:** For scratch/instant games that publish remaining prizes and remaining ticket inventory, late-stage game state can create unusually high or potentially positive EV.
-
-- Class: inventory-state edge
-- Requirement: denominator (remaining tickets or defensible estimate) is essential; remaining prizes alone are not enough
-- Status: untested
+**Claim:** Published remaining prizes plus a defensible remaining-ticket denominator can create state-dependent scratch-ticket EV.
+- Requirement: remaining-prize counts alone are insufficient.
+- Status: `untested`.
 
 ## H011 — Visible-ticket information leak
-**Claim:** Some physical instant-ticket designs may leak outcome-correlated information before purchase/scratch due to ticket-generation or printing structure.
-
-- Class: implementation flaw
-- Historical benchmark: documented scratch-ticket design flaws
-- Requirement: only test lawfully observable information and current tickets; do not generalize a historical flaw to other games
-- Status: untested
+**Claim:** A physical instant-ticket design may reveal lawful pre-purchase information correlated with outcomes.
+- Status: `untested`.
 
 ## H012 — Full-space coverage / buy-the-pot
-**Claim:** In certain finite ticket spaces, buying every combination can create positive expected return when jackpot/pool conditions exceed total ticket and execution costs.
+**Claim:** Finite spaces can become profitable to cover when retained payout exceeds acquisition, sharing, tax and execution cost.
+- Status: `untested`.
 
-- Class: syndicate / complete coverage
-- Baseline condition: total expected retained prizes minus sharing/taxes > total acquisition cost
-- Research references: Moffitt & Ziemba buy-the-pot / trump-ticket analyses
-- Status: untested
+## H013 — Rule/prize-table inconsistency signal
+**Claim:** Apparent operator-page inconsistencies can reveal multiplier/bonus mechanics that materially alter EV models.
+- First target: Super Keno base 100k tier vs advertised up-to-1m outcome.
+- Status: `promising as data-audit signal; profitability untested`.
 
-## H013 — Operator page/prize-table inconsistency as research signal
-**Claim:** Apparent inconsistencies between advertised maximums and base prize tables can reveal multiplier, bonus or rule details that materially change EV models.
+## H014 — Azerbaijan 4+4 state-dependent pool/carryover edge
+**Claim:** A pre-draw observable accumulated balance in one or more variable 4+4 prize categories may create unusually favorable or potentially +EV draw states.
 
-- Class: data/rule audit
-- First target: Super Keno currently advertises up to 1,000,000 AZN while the displayed base top tier is 100,000 AZN; multiplier mechanics appear to bridge the difference
-- Status: promising as a data-quality finding; profitability not tested
+### What is now established
+- exact jackpot probability: **1 / 23,474,025**;
+- exact probability of any of the 11 listed winning groups: **~18.614724%**;
+- official public ticket price: **2 AZN**;
+- fixed observed tail prizes: category X = 6 AZN, XI = 4 AZN in the sampled secondary tables;
+- seven sampled 2026 draw tables, including draw 790 used as an out-of-sample check, reveal a highly stable common-unit payout engine.
 
-## H014 — 4+4 category-pool / carryover state edge
-**Claim:** The Azerbaijan 4+4 game may have draw states in which accumulated jackpot and/or lower-tier prize-pool money makes the draw materially better value, potentially analogous in mechanism (not necessarily magnitude) to a roll-down game.
+### Empirical pool engine
+For ordinary sampled draws, define a draw-level common unit `U`:
+- III = **11U**
+- IV = **5U**
+- VII = **9U**
+- VIII = **14U**
+- IX = **7U**
+- V + VI = **2U**
 
-- Class: state-dependent / pari-mutuel payout edge
-- Evidence so far: official rules confirm two independent 4-from-20 boards, 11 prize categories and a rolling jackpot; secondary draw archives show materially varying per-winner payouts across lower categories
-- Exact math: jackpot odds 1 in 23,474,025; any listed prize-state probability ~18.614724%
-- New official state evidence: after a 530,359 AZN jackpot win on 2026-07-28 the operator said the next jackpot would be 250,000 AZN; official articles also document 913,072 AZN, >1,000,000 AZN and >1,300,000 AZN jackpot states
-- Interpretation: jackpot accumulation alone contributes only about 0.01065 AZN EV at 250k and 0.05538 AZN at 1.3m per variant before tax/sharing, so lower-category state is the more important lead
-- Critical unknowns: exact per-variant price, rule-version prize-fund allocation, whether/how lower category balances carry, pre-draw observability, sales volume and effect of our own tickets on winner shares
-- Test: reconstruct consecutive draw state transitions and fit prize-pool allocation/carryover equations; require that any profitable signal is observable before purchase
-- Status: **testing**
+Therefore III–IX jointly distribute approximately **48U**. Draw 790 confirmed the pattern after it had been inferred from the earlier sample, reducing the chance that it is simple overfit.
+
+### Economic implication
+The working scale `U ≈ 0.01 × sold_variants` fits observed X/XI winner counts reasonably well and is equivalent to U being ~0.5% of revenue if one base variant costs 2 AZN. This makes **2 AZN per base variant a high-confidence inference**, consistent with the operator's displayed ticket price, but still not a direct detailed-rule statement.
+
+Under that working scale:
+- III–IX crowd-average contribution ≈ **0.48 AZN / variant**;
+- X/XI exact expected contribution ≈ **0.682149738 AZN / variant**;
+- subtotal before category II and jackpot ≈ **1.16215 AZN per 2-AZN variant** (~58.11% gross return).
+
+Thus ordinary draw-to-draw variation in lower-tier payout per winner is **not itself an exploitable signal**; it is mostly explained by stable pool weights divided among changing winner counts.
+
+### Revised carryover test
+The decisive target is now a zero-winner state in a variable low-probability category (especially II–VI):
+1. infer ordinary U for draw t;
+2. calculate the category's expected assigned pool;
+3. observe that it was not paid because there were zero winners;
+4. inspect draw t+1 and later draws;
+5. determine whether the unpaid balance carries to the same category, another category, jackpot, reserve, or is redistributed immediately;
+6. require the balance/state to be observable **before** buying the next ticket.
+
+Only that pre-draw state can become a real H014 strategy signal.
+
+- Data: `data/historical/az_4plus4_payout_samples_2026.csv`.
+- Model: `src/loto_research/four_plus_four.py`.
+- Detailed analysis: `research/4plus4_economics_inference.md`.
+- Status: **testing; ordinary-variable-payout interpretation weakened, zero-winner carryover hypothesis remains live**.
 
 ## H015 — Rolldown lower-tier anti-popularity edge
-**Claim:** In forced-redistribution games where fixed category funds are divided among actual winners, choosing combinations that are less correlated with other players' choices can increase expected payout not only for the jackpot but also for lower rolldown tiers.
-
-- Class: crowd behaviour + pari-mutuel sharing
-- First target: UK Lotto Must Be Won
-- Mechanism: every fixed line has the same raw match probability, but payout per winning entry can depend on how many competing entries land in the same prize category
-- Important distinction: draw-number frequencies cannot estimate this edge; we need player-choice/collision data or a defensible crowd-choice model
-- 2026 evidence: very large Round-1/Round-2 differences in Match-2 winner counts occur even though the same sold selections enter both rounds, demonstrating that non-uniform player selections materially affect realized winner counts
-- Validation: compare expected category share for uniform/random or deliberately unpopular portfolios against a crowd-choice model, including self-collision
-- Status: **promising theoretical mechanism; empirical magnitude untested**
+**Claim:** In shared/rolldown categories, less-correlated number choices can improve expected share even below jackpot level.
+- Evidence: current two-round UK Lotto has large Round-1/Round-2 differences in winner counts despite the same sold selections entering both rounds, consistent with non-uniform crowd choices affecting realized sharing.
+- Status: **promising theoretical mechanism; empirical economic magnitude untested**.
 
 ## H016 — Wednesday Must Be Won calendar edge
-**Claim:** Under the current two-round UK Lotto format, a Must Be Won draw that lands on Wednesday could cross into positive crowd-average EV because inherited carryover is built across preceding draws including high-sales Saturdays while ordinary Wednesday demand is materially lower.
-
-- Class: calendar/state-dependent forced-redistribution edge
-- Rule basis: Allwyn states jackpot starts at £2m, can roll five times and the sixth draw is Must Be Won; draws alternate Wednesday/Saturday
-- Current-regime data: `data/historical/uk_lotto_sales_proxy_2026.csv` contains 15 rollover increments from 13 June through 8 August 2026
-- Initial screen: Wednesday ordinary-demand proxy median ~5.08m tickets versus non-raffle Saturday median ~8.48m; median-path inherited carryover ~£7.313m; break-even max current sales ~6.801m
-- Initial apparent margin: ordinary Wednesday demand could rise about **+33.77%** before the screen loses break-even
-- Historical stress dataset: `data/historical/uk_lotto_wednesday_mbw_stress_old_regime.csv` reconstructs seven natural old-regime Wednesday sixth-draw states from 2023–2026
-- Cleaner old-regime jackpot-growth uplift proxy: mean **+40.97%**, median **+42.85%**, range **+33.12% to +46.18%** relative to the previous ordinary Wednesday in the same cycle
-- Result: the historical jackpot-growth uplift exceeds the current +33.77% screening margin in **6 of 7** samples; applying the historical median uplift to current ordinary-Wednesday demand projects ~7.263m tickets, above the ~6.801m break-even screen
-- Independent noisy Match-2 proxy points the same direction (median uplift ~+41.26%)
-- Mechanical stress result: with the original median-path carryover, historical mean/median demand uplift would reduce the simple current-regime screening value to roughly **£1.95 / £1.93 per £2 ticket**
-- Caveats: old/new rule regimes differ; jackpot increments can include reserve/top-up effects; no current-regime Wednesday Must Be Won sample exists yet; updated primary 2026 allocation/rolldown procedures remain missing
-- Full stress test: `research/uk_lotto_wednesday_mbw_stress_test.md`
-- Status: **inconclusive / materially weakened; calendar effect alone is not a promising +EV trigger**
+**Claim:** A Wednesday sixth-draw UK Lotto state might benefit from inherited carryover meeting lower weekday demand.
+- Initial current-regime demand cushion: ~+33.77%.
+- Seven old-regime Wednesday Must-Be-Won analogues show median demand uplift ~+42.85%; six of seven exceed the cushion.
+- Stress-tested screening value falls to roughly £1.93–£1.95 per £2 at historical mean/median uplift.
+- Status: **inconclusive / materially weakened; calendar effect alone is not a promising trigger**.
 
 ## Anti-hypotheses / controls
-The following are not accepted as edges without extraordinary evidence:
+Do not accept as an edge without extraordinary forward evidence:
 - hot/cold numbers;
-- "number due" logic;
+- “number due” logic;
 - gambler's fallacy;
 - numerology;
-- pattern fitting on the same draws used to invent the pattern;
-- martingale-style bet sizing that does not alter underlying EV;
-- ML accuracy that does not beat a strict random baseline out-of-sample.
+- fitting and testing on the same draws;
+- martingale/bet sizing that leaves underlying EV unchanged;
+- ML that does not beat a strict random baseline out-of-sample.
