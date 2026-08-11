@@ -67,12 +67,12 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 ## H014 — Azerbaijan 4+4 state-dependent pool/carryover edge
 **Claim:** A pre-draw observable accumulated balance in one or more variable 4+4 prize categories may create unusually favorable or potentially +EV draw states.
 
-### What is now established
+### What is established
 - exact jackpot probability: **1 / 23,474,025**;
 - exact probability of any of the 11 listed winning groups: **~18.614724%**;
 - official public ticket price: **2 AZN**;
-- fixed observed tail prizes: category X = 6 AZN, XI = 4 AZN in the sampled secondary tables;
-- seven sampled 2026 draw tables, including draw 790 used as an out-of-sample check, reveal a highly stable common-unit payout engine.
+- fixed observed tail prizes: category X = 6 AZN, XI = 4 AZN in sampled secondary tables;
+- seven sampled 2026 draw tables, including draw 790 as an out-of-sample check, reveal a highly stable common-unit payout engine.
 
 ### Empirical pool engine
 For ordinary sampled draws, define a draw-level common unit `U`:
@@ -81,35 +81,29 @@ For ordinary sampled draws, define a draw-level common unit `U`:
 - VII = **9U**
 - VIII = **14U**
 - IX = **7U**
-- V + VI = **2U**
+- V + VI = **2U**.
 
-Therefore III–IX jointly distribute approximately **48U**. Draw 790 confirmed the pattern after it had been inferred from the earlier sample, reducing the chance that it is simple overfit.
+Draw 790 confirmed the pattern after it had been inferred from earlier samples.
+
+The V/VI combined 2U pool also follows an empirical hierarchy rule: when V has more winners than VI, the split is adjusted so V pays about 1.5× VI per winner; otherwise it remains close to U/U.
 
 ### Economic implication
-The working scale `U ≈ 0.01 × sold_variants` fits observed X/XI winner counts reasonably well and is equivalent to U being ~0.5% of revenue if one base variant costs 2 AZN. This makes **2 AZN per base variant a high-confidence inference**, consistent with the operator's displayed ticket price, but still not a direct detailed-rule statement.
+Independent volume estimates from X/XI winner counts give median `U/N ≈ 0.00995`, strongly supporting `U≈0.01×sold_variants`. If one base variant is 2 AZN, this corresponds to ~0.5% revenue per U; 2 AZN/variant remains a high-confidence inference, not yet a direct primary-rule statement.
 
-Under that working scale:
-- III–IX crowd-average contribution ≈ **0.48 AZN / variant**;
+Under that scale:
+- III–IX ≈ **0.48 AZN / variant**;
 - X/XI exact expected contribution ≈ **0.682149738 AZN / variant**;
-- subtotal before category II and jackpot ≈ **1.16215 AZN per 2-AZN variant** (~58.11% gross return).
+- subtotal before II and jackpot ≈ **1.16215 AZN per 2-AZN variant** (~58.11% gross return).
 
-Thus ordinary draw-to-draw variation in lower-tier payout per winner is **not itself an exploitable signal**; it is mostly explained by stable pool weights divided among changing winner counts.
+Ordinary floating payouts therefore are not themselves an edge.
 
 ### Revised carryover test
-The decisive target is now a zero-winner state in a variable low-probability category (especially II–VI):
-1. infer ordinary U for draw t;
-2. calculate the category's expected assigned pool;
-3. observe that it was not paid because there were zero winners;
-4. inspect draw t+1 and later draws;
-5. determine whether the unpaid balance carries to the same category, another category, jackpot, reserve, or is redistributed immediately;
-6. require the balance/state to be observable **before** buying the next ticket.
-
-Only that pre-draw state can become a real H014 strategy signal.
+The decisive target is a zero-winner state in variable categories II–VI. Reconstruct the unpaid amount, then test t→t+1 jackpot/category balances. The Kazakhstan H017 comparator now supplies a replicated accounting signature for exactly this test.
 
 - Data: `data/historical/az_4plus4_payout_samples_2026.csv`.
 - Model: `src/loto_research/four_plus_four.py`.
 - Detailed analysis: `research/4plus4_economics_inference.md`.
-- Status: **testing; ordinary-variable-payout interpretation weakened, zero-winner carryover hypothesis remains live**.
+- Status: **testing; zero-winner carryover hypothesis remains live**.
 
 ## H015 — Rolldown lower-tier anti-popularity edge
 **Claim:** In shared/rolldown categories, less-correlated number choices can improve expected share even below jackpot level.
@@ -122,6 +116,40 @@ Only that pre-draw state can become a real H014 strategy signal.
 - Seven old-regime Wednesday Must-Be-Won analogues show median demand uplift ~+42.85%; six of seven exceed the cushion.
 - Stress-tested screening value falls to roughly £1.93–£1.95 per £2 at historical mean/median uplift.
 - Status: **inconclusive / materially weakened; calendar effect alone is not a promising trigger**.
+
+## H017 — Zero-winner lower-category funds feed the next superprize
+**Claim:** In at least some active pari-mutuel draw lotteries, a lower category with no winners can feed its assigned fund into a visible cumulative superprize for the next draw, creating a deterministic state transition that can be modeled before purchase.
+
+- Class: validated active state-transition mechanism / comparator.
+- First validated target: Kazakhstan Satty Zhuldyz 4/20.
+- Primary current operator page states a 3% superprize component plus carried superprize and pari-mutuel category pools.
+- Kazakhstan law defines superprize as undrawn prize-fund money moving between draws according to lottery conditions and otherwise requires draw prize funds to be played in that draw except for cumulative superprize formation.
+
+### Replicated arithmetic
+The same identity closes exactly on three independent transitions:
+
+`J_t = J_(t-1) + unpaid_lower_pools_(t-1) + 3% × 300 × reported_tickets_t`
+
+1. **1499→1500**: jackpot growth 282,096 = unpaid III+V 165,672 + current contribution 116,424.
+2. **1500→1501**: jackpot growth 207,522 = unpaid II 77,616 + current contribution 129,906.
+3. **1545→1546**: jackpot growth 381,258 = unpaid II+IV 248,580 + current contribution 132,678.
+
+All three equalities close **to the tenge**.
+
+### Economic result
+The mechanism is real but not automatically profitable. At draw-1546 scale (N≈14,742, J≈227.25m KZT), an exact uniform pari-mutuel screen gives roughly:
+- lower-category EV ≈ **155.43 KZT**;
+- jackpot EV ≈ **9.68 KZT**;
+- total ≈ **165.10 KZT per 300-KZT unit** (~55.03%).
+
+Static break-even jackpot at that crowd size/structure is roughly **3.395bn KZT**.
+
+Thus H017 validates a modern active accumulation mechanism, **not a current +EV strategy**.
+
+- Data: `data/historical/kz_4x20_transition_samples.csv`.
+- Analysis: `research/kazakhstan_4x20_control.md`.
+- Math: `src/loto_research/pari_mutuel.py`.
+- Status: **validated mechanism; current sampled state strongly negative EV**.
 
 ## Anti-hypotheses / controls
 Do not accept as an edge without extraordinary forward evidence:
