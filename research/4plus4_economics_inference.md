@@ -1,18 +1,21 @@
 # 4+4 — empirical payout-engine reconstruction
 
 Updated: 2026-08-12
-Status: **strong empirical structure + first out-of-sample confirmation; primary-rule confirmation still required**
+Status: **strong empirical structure + out-of-sample and primary-story cross-checks; detailed primary-rule confirmation still required**
 
 ## Why this matters
-The exact draw probabilities were easy. The hard part was reconstructing how sales become category pools and how those pools are divided among winners. This pass now recovers a large part of that hidden payout engine from preserved draw tables.
+The exact draw probabilities were easy. The hard part was reconstructing how sales become category pools and how those pools are divided among winners. This work now recovers a large part of that hidden payout engine from preserved draw tables and has begun to cross-check the same scale against official operator winner stories.
 
 Primary/current operator page:
 - https://www.azerlotereya.com/game/fourplus
 - publicly states ticket price **2 AZN**, two 4/20 boards and 11 prize categories;
 - detailed category-allocation percentages are not exposed in crawlable text.
 
-Secondary draw-level evidence is stored in:
+Secondary draw-level evidence:
 - `data/historical/az_4plus4_payout_samples_2026.csv`
+
+Official winner-story cross-checks:
+- `data/historical/az_4plus4_official_winner_crosschecks.csv`
 
 Secondary sources remain non-authoritative and must eventually be reconciled with the operator archive/API.
 
@@ -121,7 +124,41 @@ Thus the round `0.01 AZN per sold variant` coefficient emerges from the winner-c
 
 If the base variant is 2 AZN, `U≈0.01N` means one U is approximately **0.5% of gross variant sales**. This strongly supports the interpretation that the publicly displayed 2-AZN ticket is a 2-AZN base variant, but direct primary-rule confirmation is still required.
 
-## 5. Ordinary EV implications
+## 5. NEW — primary operator winner stories cross-check the U scale
+Official Azərlotereya Telegram/winner material contains current 4+4 winner stories whose reported match descriptions line up with the reconstructed category structure.
+
+Two particularly useful examples are direct **4+2** reports, which correspond to category III (`4+2 / 2+4`). The empirical draw-table model says category III has total pool **11U**.
+
+- Samir İmaməliyev: operator reports **4+2** and **4,503 AZN**. `4503 / 11 = 409.36 AZN`.
+- Orxan Həsənov: operator reports **4+2** and **4,381 AZN**. `4381 / 11 = 398.27 AZN`.
+
+Those implied U values lie squarely in the same roughly 400–430 AZN scale reconstructed from the secondary 2026 draw tables (for example draw 790 U≈417.6 and draw 781 U≈418.2).
+
+This is important because the U-engine is no longer supported only by one secondary archive: **independent primary operator winner stories reproduce the same category-III scale.**
+
+Caveat: a winner story normally reports the ticket's total win, and combination/system tickets can contain more than one generated variant. Therefore these are high-value cross-checks, not yet proof that every reported amount is exactly one category pool divided by one winner. The direct `4+2` wording and numerical agreement nevertheless materially increase confidence in the reconstructed engine.
+
+Data:
+- `data/historical/az_4plus4_official_winner_crosschecks.csv`
+
+## 6. Category-II weight hypothesis — promising but not yet promoted
+Official winner stories also provide two tickets described as missing the jackpot by one number, i.e. containing at least one category-II (`4+3 / 3+4`) variant:
+
+- Nizami Tağıyev: **8,609 AZN**; `8609 / 20 = 430.45`.
+- Ümüd Hüseynov: **15,986 AZN**; `15986 / 40 = 399.65`.
+
+Both quotients again fall on the same U scale. This creates a compact working hypothesis:
+
+- a pure category-II pool may have ordinary weight around **20U**;
+- Nizami's ticket could represent one ~20U category-II variant;
+- Ümüd's ticket could represent two such category-II variants or another system-ticket aggregate, producing roughly 40U total.
+
+This is **not yet accepted as the category-II rule**. A 5+5 or 6+6 system ticket can generate multiple winning variants, and category II itself may have state/carryover behavior. The decisive evidence remains draw #780's full payout table or another winner/ticket with known variant structure.
+
+Detailed category-II note:
+- `research/4plus4_category2_lead.md`
+
+## 7. Ordinary EV implications
 Exact expected contribution from fixed X/XI alone:
 
 `P(X)×6 + P(XI)×4 = 0.6821497378485368 AZN per variant`.
@@ -132,10 +169,10 @@ With `48U` and empirical `U/N≈0.01`:
 - subtotal before category II and jackpot ≈ **1.16215 AZN per 2-AZN variant**;
 - gross return subtotal ≈ **58.11%**.
 
-So the ordinary game remains strongly negative. The previously exciting floating payout-per-winner values are mostly explained by the payout engine, not by a free carryover bonus.
+If category II ultimately proves to have ordinary pool weight **20U**, its aggregate sales-funded pool would be roughly `20×0.01 = 0.20 AZN` per sold variant before accounting for the substantial chance of zero winners and whatever carryover rule applies. That would move the ordinary sales-funded subtotal toward ~1.36 AZN/2 AZN before jackpot, still negative. **Do not use this 20U assumption as a real-money EV input until category II is validated.**
 
-## 6. Revised H014 target: zero-winner state transitions
-The useful question is now much sharper.
+## 8. Revised H014 target: zero-winner state transitions
+The useful question remains much sharper than ordinary payout variation.
 
 When a variable category receives its normal allocation but has **zero winners**, where does that money go?
 
@@ -149,22 +186,22 @@ For each zero-winner event in II–VI:
 
 Only a forward-observable balance can become an exploitable H014 state.
 
-## 7. Current confidence
-High confidence empirically, but not yet primary-authoritative:
+## 9. Current confidence
+High confidence empirically:
 - common U engine;
 - 11/5/9/14/7 weights;
 - V+VI combined 2U;
 - conditional V/VI 1.5× per-winner correction;
 - U/N around 0.01;
-- ordinary lower-tier return far below break-even.
+- ordinary lower-tier return far below break-even;
+- category-III/U scale now has primary operator winner-story cross-checks.
 
-Still unresolved:
-- primary detailed prize-allocation rules;
+Promising but unresolved:
+- category II ≈20U working hypothesis;
 - exact treatment of zero-winner categories;
-- category II economics;
 - direct base-variant price statement;
 - primary historical archive payload/API;
 - taxes and self-impact for a large portfolio.
 
 ## Next milestone
-Expand to 50–100 consecutive draws, with special priority on zero-winner III–VI events and their following draws. Do not claim carryover edge until a repeated t→t+1 state equation is demonstrated.
+Recover draw #780 full payout table or another category-II winner with known system structure, while continuing to collect zero-winner II–VI transitions. Do not claim category-II 20U or carryover edge until direct payout/state accounting demonstrates it.
