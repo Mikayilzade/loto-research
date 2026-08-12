@@ -17,7 +17,7 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 
 ## H003 — Number-popularity avoidance
 **Claim:** Less-popular combinations do not increase draw probability but may improve conditional shared payout.
-- Status: `untested`.
+- Status: **partially quantified under H015; useful sharing optimizer, not standalone +EV**.
 
 ## H004 — Covering designs improve risk profile
 **Claim:** Wheels/covering designs can improve target-tier hit probability or variance for fixed budget even when raw EV is unchanged.
@@ -48,24 +48,17 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 ## H010 — Instant-ticket remaining-prize edge
 **Claim:** If a physical instant-ticket series exposes both remaining after-tax prize value and a defensible remaining-purchasable-ticket denominator, late-stage conditional EV can differ materially from initial EV and may in principle cross positive.
 
-### Initial Azerbaijan evidence
-Current registered Poz-Qazan series expose enough information to compute exact initial after-tax EV:
-- Prestij reg.317: **~69.906%** after-tax payout ratio;
-- Meqa 7 reg.365: **~66.876%**;
-- Qoşa 2 reg.383: **~66.305%**;
-- 4 Fəsil reg.375: **~62.978%**.
+Current Azerbaijan registered-series initial after-tax payout ratios:
+- Prestij reg.317: ~69.906%
+- Meqa 7 reg.365: ~66.876%
+- Qoşa 2 reg.383: ~66.305%
+- 4 Fəsil reg.375: ~62.978%.
 
-All initial states remain negative EV.
-
-### Decisive blocker
-No public live registration-specific counter was found for remaining unsold tickets or a complete current remaining-prize table. Legal/tax rules show ticket-sales and unsold inventory are tracked institutionally, but no public live denominator has been recovered.
-
-### Data-quality finding
-Winner carousels can mix different historical releases with the same game name; inventory must be matched by exact registration/batch before decrementing prize counts.
+All initial states negative. Legal/tax rules show sales and unsold inventory are tracked institutionally, but no public live registration-specific denominator has been recovered. Winner carousels can mix historical releases, so exact registration identity is mandatory.
 
 - Data: `data/derived/az_poz_qazan_initial_ev_2026.csv`.
 - Analysis: `research/poz_qazan_remaining_prize_edge.md`.
-- Status: **testing / data-blocked; mechanism valid in principle, no executable Azerbaijan state yet**.
+- Status: **testing / data-blocked; no executable Azerbaijan state yet**.
 
 ## H011 — Visible-ticket information leak
 **Claim:** A physical instant-ticket design may reveal lawful pre-purchase information correlated with outcomes.
@@ -78,22 +71,11 @@ Winner carousels can mix different historical releases with the same game name; 
 ## H013 — Operator page/prize-table inconsistency signal
 **Claim:** Apparent operator-page inconsistencies can reveal multiplier/bonus mechanics that materially alter EV models.
 
-### Super Keno result
-The apparent `100,000 AZN base top tier` vs `up to 1,000,000 AZN` inconsistency is now **resolved**.
-
-Current operator/FAQ material states that one Super Keno variant can be paid at **1x, 2x, 5x or 10x**. The 10x option costs 10x the base payment and scales prizes 10x, so the advertised 1m maximum is the 10x version of the 100k base top tier, not a free overlay.
-
-Exact displayed-table gross payout ratio is invariant at about **59.8556%** before tax. Under the current tax formula, a single-variant favorable upper-bound after-tax payout ratio is approximately:
-- 1x: **59.1807%**
-- 2x: **59.1266%**
-- 5x: **58.9036%**
-- 10x: **58.6982%**
-
-Larger multipliers are slightly worse after tax because the 500-AZN deduction is fixed while prize amounts scale. Top-prize sharing is ignored in these favorable bounds and can only lower real EV.
+Super Keno `100k base / up to 1m` ambiguity is resolved: one variant supports 1x/2x/5x/10x payment, with prizes scaling proportionally. Gross displayed-table ROI is invariant ~59.8556%; after tax the larger multipliers are slightly worse (~59.18% at 1x down to ~58.70% at 10x), before top-prize sharing.
 
 - Data: `data/derived/az_superkeno_multiplier_ev.csv`.
 - Analysis: `research/superkeno_multiplier_economics.md`.
-- Status: **validated as a useful data-audit finding; Super Keno multiplier ambiguity resolved, no multiplier EV edge found**.
+- Status: **validated data-audit finding; ambiguity resolved, no multiplier EV edge**.
 
 ## H014 — Azerbaijan 4+4 state-dependent pool/carryover edge
 **Claim:** A pre-draw observable accumulated balance in one or more variable 4+4 prize categories may create unusually favorable or potentially +EV states.
@@ -101,22 +83,42 @@ Larger multipliers are slightly worse after tax because the 500-AZN deduction is
 Established:
 - jackpot probability **1 / 23,474,025**;
 - any listed winning group probability **~18.614724%**;
-- strong empirical draw-level pool engine:
-  - III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U;
-- draw #790 and draw #781 provide independent checks;
-- median `U/N` remains close to 0.01;
-- ordinary subtotal before category II and jackpot about **1.16215 AZN per assumed 2-AZN variant**.
+- draw-level pool engine III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U;
+- draw #790 and #781 independent checks;
+- median `U/N` close to 0.01;
+- ordinary subtotal before II and jackpot about **1.16215 AZN per assumed 2-AZN variant**.
 
-Important correction: standalone winner-story payouts are not category totals and cannot independently estimate U without winner counts/ticket structure.
+Live test remains zero-winner II–VI state accounting across adjacent draws. Manual archive routes are currently data-blocked.
+- Status: **testing; zero-winner carryover hypothesis live but unvalidated**.
 
-The live test remains zero-winner II–VI state accounting across adjacent draws.
-- Status: **testing; zero-winner carryover hypothesis remains live but unvalidated**.
+## H015 — Rolldown/shared-pool anti-popularity edge
+**Claim:** In shared prize pools, less-popular combinations can improve expected retained share conditional on winning; this may improve EV when layered on top of a structural overlay/rolldown.
 
-## H015 — Rolldown lower-tier anti-popularity edge
-**Claim:** In shared/rolldown categories, less-correlated number choices can improve expected share even below jackpot level.
-- Evidence lead: current two-round UK Lotto has large Round-1/Round-2 differences in winner counts despite the same sold selections entering both rounds, consistent with non-uniform crowd choices affecting realized sharing.
-- Requirement: quantify expected-share uplift under a defensible crowd-choice model and compare the uplift against the underlying negative EV; do not infer player preferences from draw frequencies.
-- Status: **promising theoretical mechanism; empirical magnitude untested**.
+### Empirical mechanism
+Large proprietary lottery datasets show player choices are strongly non-uniform: birthdays/personal numbers, small numbers, central positions, sequences/spatial patterns and other aesthetically salient combinations are over-selected. A 2026 New Zealand Lotto study using >70m played six-tuples identifies prize sharing as a first-order ticket-valuation feature.
+
+### Exact-jackpot magnitude bound
+For a 6/59 game (`M=C(59,6)=45,057,474`), let `a` be our exact combination's crowd popularity relative to uniform and `n` other played lines. Conditional expected jackpot share is computed with `q=a/M` and `X~Binomial(n,q)`.
+
+At **10m other lines**:
+- uniform (`a=1`): expected share ≈ **89.68%**;
+- 0.2×-popular: ≈ **97.81%**, about **+9.07%** to the jackpot component versus uniform;
+- theoretical no-duplicate upper bound: about **+11.51%** versus uniform;
+- 5×-popular: ≈ **60.41%**, about **−32.64%** versus uniform;
+- 10×-popular: ≈ **40.16%**, about **−55.22%** versus uniform.
+
+Across 5m–15m other lines, perfect uniqueness can improve the jackpot component by only about **+5.65% to +17.57%** relative to uniform.
+
+### Interpretation
+Anti-popularity is real and useful, but **not a standalone cure for a deeply negative lottery**. The upside from perfect uniqueness is bounded because a uniform combination already often wins alone. The downside from choosing a crowd-magnet combination can be much larger.
+
+Best current use: avoid obvious crowd magnets and apply anti-popularity as an **overlay optimizer** when a roll-down/progressive state is already favorable.
+
+The high-value unresolved part is lower-tier shared-pool optimization, where many competing winners can make crowd-choice effects larger than exact-jackpot duplicate effects.
+
+- Data: `data/derived/h015_jackpot_collision_screen_6of59.csv`.
+- Analysis: `research/h015_crowd_sharing.md`.
+- Status: **partially validated/quantified mechanism; jackpot benefit bounded and modest, lower-tier rolldown magnitude still testing**.
 
 ## H016 — Wednesday Must Be Won calendar edge
 **Claim:** A Wednesday sixth-draw UK Lotto state might benefit from inherited carryover meeting lower weekday demand.
@@ -126,8 +128,7 @@ The live test remains zero-winner II–VI state accounting across adjacent draws
 ## H017 — Zero-winner lower-category funds feed the next superprize
 **Claim:** In at least some active pari-mutuel draw lotteries, a lower category with no winners can feed its assigned fund into a visible cumulative superprize for the next draw.
 
-Validated comparator: Kazakhstan Satty Zhuldyz 4/20.
-Three independent transitions close exactly as:
+Validated comparator: Kazakhstan Satty Zhuldyz 4/20. Three independent transitions close exactly as:
 `J_t = J_(t-1) + unpaid_lower_pools_(t-1) + ordinary_current_contribution`.
 
 Example 1545→1546:
