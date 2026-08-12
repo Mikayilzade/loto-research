@@ -58,14 +58,10 @@ Current registered Poz-Qazan series expose enough information to compute exact i
 All initial states remain negative EV.
 
 ### Decisive blocker
-A bounded official-domain search did **not** find a live registration-specific counter for:
-- remaining unsold tickets; or
-- a complete current remaining-prize table.
-
-Remaining-prize anecdotes alone are insufficient because conditional EV requires a denominator.
+No public live registration-specific counter was found for remaining unsold tickets or a complete current remaining-prize table. Legal/tax rules show ticket-sales and unsold inventory are tracked institutionally, but no public live denominator has been recovered.
 
 ### Data-quality finding
-Winner carousels can mix different historical releases with the same game name. Example: current Prestij registration 317 starts in June 2025, while an official 500k Prestij winner shown in historical/current winner surfaces is dated July 2024. Therefore inventory must be matched by exact registration/batch before decrementing prize counts.
+Winner carousels can mix different historical releases with the same game name; inventory must be matched by exact registration/batch before decrementing prize counts.
 
 - Data: `data/derived/az_poz_qazan_initial_ev_2026.csv`.
 - Analysis: `research/poz_qazan_remaining_prize_edge.md`.
@@ -79,10 +75,25 @@ Winner carousels can mix different historical releases with the same game name. 
 **Claim:** Finite spaces can become profitable to cover when retained payout exceeds acquisition, sharing, tax and execution cost.
 - Status: `untested`.
 
-## H013 — Rule/prize-table inconsistency signal
-**Claim:** Operator-page inconsistencies can reveal multiplier/bonus mechanics that materially alter EV models.
-- First target: Super Keno base 100k tier vs advertised up-to-1m outcome.
-- Status: **promising as data-audit signal; profitability untested**.
+## H013 — Operator page/prize-table inconsistency signal
+**Claim:** Apparent operator-page inconsistencies can reveal multiplier/bonus mechanics that materially alter EV models.
+
+### Super Keno result
+The apparent `100,000 AZN base top tier` vs `up to 1,000,000 AZN` inconsistency is now **resolved**.
+
+Current operator/FAQ material states that one Super Keno variant can be paid at **1x, 2x, 5x or 10x**. The 10x option costs 10x the base payment and scales prizes 10x, so the advertised 1m maximum is the 10x version of the 100k base top tier, not a free overlay.
+
+Exact displayed-table gross payout ratio is invariant at about **59.8556%** before tax. Under the current tax formula, a single-variant favorable upper-bound after-tax payout ratio is approximately:
+- 1x: **59.1807%**
+- 2x: **59.1266%**
+- 5x: **58.9036%**
+- 10x: **58.6982%**
+
+Larger multipliers are slightly worse after tax because the 500-AZN deduction is fixed while prize amounts scale. Top-prize sharing is ignored in these favorable bounds and can only lower real EV.
+
+- Data: `data/derived/az_superkeno_multiplier_ev.csv`.
+- Analysis: `research/superkeno_multiplier_economics.md`.
+- Status: **validated as a useful data-audit finding; Super Keno multiplier ambiguity resolved, no multiplier EV edge found**.
 
 ## H014 — Azerbaijan 4+4 state-dependent pool/carryover edge
 **Claim:** A pre-draw observable accumulated balance in one or more variable 4+4 prize categories may create unusually favorable or potentially +EV states.
@@ -103,6 +114,8 @@ The live test remains zero-winner II–VI state accounting across adjacent draws
 
 ## H015 — Rolldown lower-tier anti-popularity edge
 **Claim:** In shared/rolldown categories, less-correlated number choices can improve expected share even below jackpot level.
+- Evidence lead: current two-round UK Lotto has large Round-1/Round-2 differences in winner counts despite the same sold selections entering both rounds, consistent with non-uniform crowd choices affecting realized sharing.
+- Requirement: quantify expected-share uplift under a defensible crowd-choice model and compare the uplift against the underlying negative EV; do not infer player preferences from draw frequencies.
 - Status: **promising theoretical mechanism; empirical magnitude untested**.
 
 ## H016 — Wednesday Must Be Won calendar edge
