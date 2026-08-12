@@ -14,28 +14,28 @@ Research runs in short packets. After every meaningful discovery or roughly 2–
 
 This file is the authoritative handoff checkpoint. Read `START_HERE.md`, `PROJECT_RULES.md`, `RESEARCH_PLAN.md` and `AGENTS.md` before code work.
 
-## Historically validated structural +EV benchmark
-Cash WinFall: preserved 2011 roll-down, exact 6/46 probabilities and cash-only tiers:
-- ticket $2;
-- expected payout **$2.2137120403**;
-- expected ROI **+10.6856%** before tax/execution.
+# Validated structural benchmark
+## Cash WinFall
+Historical 2011 roll-down benchmark using exact 6/46 probabilities and cash-only tiers:
+- ticket: $2;
+- expected payout: **$2.2137120403**;
+- expected ROI: **+10.6856%** before tax/execution.
 
-Structural +EV lotteries have existed without number prediction.
+Conclusion: structural +EV lotteries have existed without predicting numbers.
 
-## Azerbaijan baselines
-### Beşdə 5
+# Azerbaijan baseline games
+## Beşdə 5
 - jackpot odds **1 in 376,992**;
 - favorable gross baseline **0.535555131 AZN / 1-AZN variant**;
 - net before tax/sharing about **-46.44%**.
 
-### Super Keno
+## Super Keno
 - displayed base-table gross EV **0.598555794 AZN / 1 AZN**;
 - net before tax about **-40.14%**;
 - multipliers pending.
 
-# Azerbaijan 4+4 — current top local target
-
-## Exact mechanics
+# Azerbaijan 4+4 — still the top local draw-game target
+## Exact/current mechanics
 Primary operator page establishes:
 - two independent 4/20 boards;
 - 11 grouped winning categories;
@@ -46,7 +46,7 @@ Primary operator page establishes:
 - 5+5 / 6+6 system entries generate multiple variants and can win multiple categories;
 - current schedule **Tue/Fri 19:45**.
 
-Direct primary wording for one base-variant price remains missing. 2 AZN/base variant is a high-confidence empirical inference, not a direct rule fact.
+Direct primary wording for one base-variant price remains missing. `2 AZN/base variant` is a high-confidence empirical inference, not a direct rule fact.
 
 ## Strong draw-table payout engine
 Files:
@@ -64,150 +64,139 @@ For ordinary sampled draw totals:
 
 Thus III–IX jointly distribute approximately **48U**.
 
-### Out-of-sample confirmations
-- Draw #790 was added after discovery and independently fits closely: **U≈417.6**, V+VI=835.45 vs predicted 835.20.
-- **NEW draw #781 (2026-06-05)** was recovered from an indexed Statlotto detail page and independently fits again:
-  - III/11 ≈ 418.211
-  - IV/5 ≈ 418.212
-  - VII/9 ≈ 418.293
-  - VIII/14 ≈ 418.320
-  - IX/7 ≈ 418.549
-  - robust median **U≈418.293**
-  - V total 418.22 and VI total 418.25 with V winners=2 <= VI winners=7, matching the expected U/U case.
+Out-of-sample confirmations:
+- draw #790: **U≈417.6**, V+VI 835.45 vs predicted 835.20;
+- draw #781 (2026-06-05): robust **U≈418.293**, V/VI ≈ U/U as expected.
 
-The 11/5/9/14/7 + V/VI structure therefore survives more than one independent draw.
+With draw #781 added, eight samples give:
+- mean `U/N_hat` ≈ **0.01000654**;
+- median ≈ **0.00995289**.
+
+So `U≈0.01×sold_variants` remains stable.
 
 ### V/VI coupling
-Empirical sampled rule:
+Observed sampled rule:
 - if V winners <= VI winners, pools ≈ U/U;
 - if V winners > VI winners, combined 2U is redistributed so per-winner V ≈1.5× per-winner VI.
 
 Zero-winner V/VI behavior is not extrapolated.
 
-### Independent U/N scale
-Exact X/XI probabilities and observed fixed X=6 / XI=4 prizes provide a volume estimator.
+### Important correction: winner stories are NOT direct U estimates
+`III=11U` is a **total category pool**, not one winner payout. Ticket-level winner stories cannot identify U without category winner count and ticket/system structure. Earlier `payout/11=U` interpretation was corrected in:
+- `research/4plus4_economics_inference.md`
+- `data/historical/az_4plus4_official_winner_crosschecks.csv`
 
-With draw #781 added, eight samples now give:
-- mean `U/N_hat` ≈ **0.01000654**;
-- median ≈ **0.00995289**;
-- draw #781 itself: N_hat≈40,540 variants and `U/N_hat≈0.010318`.
+The draw-table U-engine remains strong; only standalone winner-story validation was downgraded.
 
-So `U≈0.01×sold_variants` remains stable after another independent row.
-
-### IMPORTANT CORRECTION — winner stories are NOT direct U estimates
-A prior pass treated official 4+2 winner stories as if `reported payout / 11 = U`. That was too strong.
-
-Reason:
-- `III=11U` is the **total category-III pool**;
-- an individual payout is the pool divided among category-winning variants;
-- system tickets can aggregate multiple variants/categories.
-
-Primary control observations exposing this include an older official `4+2 = 1,470 AZN` and `4+1 = 2,136 AZN`. These are match/payout observations, not category totals.
-
-The draw-table U-engine remains strong; only standalone winner-story arithmetic was downgraded.
-
-## Ordinary economic subtotal
+## Ordinary 4+4 subtotal
 - X/XI exact expected payout: **0.682149737849 AZN / variant**;
 - III–IX under empirical U/N scale: about **0.48 AZN / variant**;
 - subtotal before category II and jackpot: **~1.16215 AZN per assumed 2-AZN variant** (~58.11%).
 
 Ordinary state remains strongly negative.
 
-# Category II — strongest unresolved lead
-Files:
-- `research/4plus4_category2_lead.md`
-- `data/historical/az_4plus4_official_winner_crosschecks.csv`
-- `data/derived/az_4plus4_category2_carryover_screen.csv`
-
+## Category II / H014 — unresolved carryover lead
 Exact II (`4+3 / 3+4`) probability:
 - **0.000005452835634281** ≈ **1 in 183,390.82**.
 
-Three primary tickets described as one number short of jackpot:
-- Vəzir Quliyev: **10,287 AZN**, 2025-09-19;
-- Nizami Tağıyev: **8,609 AZN**, 2026-06-02 / working draw #780;
-- Ümüd Hüseynov: **15,986 AZN**, jackpot >1.8m; date/draw unresolved.
+Three primary one-number-short tickets exist (Vəzir 10,287; Nizami 8,609; Ümüd 15,986), proving category-II variants occurred, but ticket payouts do not reveal pure II pool totals.
 
-These prove each ticket contains at least one II variant, but do not reveal pure category-II pool totals.
+`II≈20U` remains a **pattern clue only**, not a rule.
 
-## II≈20U working hypothesis — pattern clue only
-Normalizations such as 8609/20, 10287/20 and 15986/40 are suggestive but are **not U estimates** without full draw totals, category winner count and ticket structure.
+Conditional scale screen, assuming II=20U, U=0.01N and zero-winner transfer:
+- P(no II winner) roughly **76–81%** at 38k–50k variants;
+- hypothetical unpaid II amount roughly **6.2k–7.6k AZN/draw**;
+- potential annual scale **~0.64m–0.79m AZN/year** at 104 draws.
 
-Possible Ümüd explanations:
-1. system-ticket aggregation;
-2. category-II carryover/state;
-3. other hierarchy/aggregation/reporting rules.
+This only shows the mechanism would be large enough to matter if real.
 
-## Conditional II carryover scale screen
-Assumptions only: II=20U, U=0.01N, N≈38k–50k, zero-winner pool survives intact.
+H014 proof still requires repeated adjacent-draw accounting showing unpaid pools enter a visible future state before purchase.
 
-Then P(no II winner) ≈76–81%, assumed II pool ~7,600–10,000 AZN, expected unpaid ~6,178–7,614 AZN/draw, or ~0.64m–0.79m AZN/year at 104 draws.
-
-This shows only that the mechanism would be large enough to matter if real.
-
-# H014 — zero-winner state edge
-Status: **testing**.
-
-Required proof:
-1. infer ordinary assigned pool from full draw-table data;
-2. observe zero winners;
-3. obtain adjacent jackpot/category states;
-4. show missing amount enters next state after normal/external contributions;
-5. repeat multiple times;
-6. require pre-purchase observability.
-
-Only then build a forward EV trigger.
-
-# Kazakhstan 4/20 comparator
-Do not transfer rules to Azerbaijan. Same two-board 4/20 math is used as methodology control.
-
-Three independent transitions close exactly as:
+## Kazakhstan 4/20 comparator
+Do not transfer its rules to Azerbaijan. Three independent transitions close exactly as:
 `next superprize = previous superprize + unpaid lower pools + current ordinary contribution`.
 
-Sampled state still ~55% return; mechanism real, sampled state not +EV.
+This validates an active modern zero-winner-transfer mechanism class, but the sampled Kazakhstan state is only ~55% return and nowhere near +EV.
 
-# Corrected Azerbaijan jackpot chronology
-- 530,359 AZN jackpot was won **08.07.2023**, not 2026;
-- next jackpot 250k applied to that historical era.
-
-Current accumulation lower bounds include >500k (Jan 2025), >800k, >1m, >1.3m, >1.5m, >1.8m.
-
-External transfer mechanism is real: on 06.01.2025 operator announced an unwon final Meqa 5/36 jackpot would transfer to 4+4; outcome/amount unresolved.
-
-Use:
-`J_t = J_(t-1) + ordinary contributions + zero-winner transfers + external transfers - payouts/adjustments`.
-
-# Archive/API and Telegram-media discovery
-Notes:
-- `research/azerlotereya_archive_api_discovery.md`
-
-Official archive API remains undiscovered; do not guess endpoints. Current-results renders data while historical archive shell exposes `Tiraj undefined` to crawler.
-
-Official Telegram archive exposes `Tiraj XXXXX – Nəticələr` posts and direct image/CDN links, but the current web-cache/container cannot fetch those JPEG result cards. This is a promising future route if a browser/HAR/network-capable tool becomes available.
-
-Secondary archive detail-page indexing is selective. A useful new route is the Statlotto mirror: draw #781 detail was indexed even though many neighboring draws are not. Exact-page searches for 782–785 and selected 786–794 produced no new detail pages in the latest bounded packet; do not immediately repeat identical queries.
-
-# UK Lotto
-H016 Wednesday Must Be Won is **inconclusive/materially weakened** after demand-uplift stress test. H015 crowd-choice/sharing remains theoretical.
-
-# Current blockers
+## 4+4 data blockers
 - official historical archive API/payload not discovered;
 - draw #780 full payout table unrecovered;
-- Vəzir 2025-09-19 draw-level category totals unrecovered;
+- Vəzir 2025-09-19 draw totals unrecovered;
 - Ümüd exact date/draw unresolved;
-- exact adjacent 4+4 jackpot values unavailable;
+- exact adjacent jackpot states unavailable;
 - January-2025 external-transfer amount unknown;
-- detailed registration no.336 allocation document unfound;
-- direct primary base-variant price wording missing;
-- II≈20U unvalidated;
-- secondary history requires primary reconciliation.
+- detailed registration no.336 allocation document unfound.
+
+Manual web-index approaches are currently exhausted. Do not repeat blind API/draw #780 searches without new tooling. Best future route is browser DevTools/HAR/network inspection or new indexed detail pages.
+
+# H010 — Poz-Qazan remaining-prize state edge: NEW active research thread
+Files:
+- `data/derived/az_poz_qazan_initial_ev_2026.csv`
+- `research/poz_qazan_remaining_prize_edge.md`
+
+## Exact initial after-tax baselines from current registered series
+Using official prize tables and operator-displayed after-tax values:
+
+1. **Prestij** — reg.317, current series from 12.06.2025
+   - ticket 10 AZN; 2.4m tickets
+   - gross payout ratio **70.4833%**
+   - after-tax payout ratio **69.9060%**
+   - initial after-tax EV **6.990595 AZN / 10 AZN**
+   - 2 top prizes × 500,000 AZN
+
+2. **Meqa 7** — reg.365, from 16.03.2026
+   - ticket 5 AZN; 4m tickets
+   - gross ratio **67.00%**
+   - after-tax ratio **66.8758%**
+   - initial after-tax EV **3.34378775 AZN / 5 AZN**
+   - 2 top prizes × 100,000 AZN
+
+3. **Qoşa 2** — reg.383, from 08.06.2026
+   - ticket 2 AZN; 4m tickets
+   - gross ratio **66.48%**
+   - after-tax ratio **66.3051%**
+   - initial after-tax EV **1.326102 AZN / 2 AZN**
+   - 40 top prizes × 4,000 AZN
+
+4. **4 Fəsil** — reg.375, from 01.05.2026
+   - ticket 1 AZN; 20m tickets
+   - gross ratio **63.00%**
+   - after-tax ratio **62.9775%**
+   - initial after-tax EV **0.629775 AZN / 1 AZN**
+   - 10 top prizes × 5,000 AZN
+
+All ordinary initial states are materially negative EV.
+
+## H010 decisive blocker: current denominator is missing
+Bounded official-domain search did **not** find a live public counter for:
+- remaining unsold tickets in a registered physical series; or
+- a complete registration-specific remaining-prize table updated as claims occur.
+
+Without a defensible `remaining tickets` denominator, current conditional EV cannot be calculated from remaining-prize anecdotes alone.
+
+## Critical series-identity trap found
+Winner carousels can mix **different releases/registrations with the same game name**.
+
+Example: current Prestij series is registration 317 starting 12.06.2025, but its current-page winner carousel includes Hüseyn Bünyatov, whose official 500,000-AZN win is dated **22.07.2024**. Therefore he belongs to an earlier Prestij release and must not be used to decrement the current reg.317 top-prize inventory.
+
+Same caution applies to `Qoşa` vs `Qoşa 2` and any recurring game name.
+
+Before decrementing current inventory require:
+1. exact registration/batch match;
+2. winner date inside that sale regime;
+3. ideally serial/series or explicit operator linkage.
+
+## H010 status
+**testing / data-blocked**.
+
+The mathematical edge is real in principle: if remaining after-tax prize value and remaining purchasable tickets are both known, conditional EV can be computed exactly. For current Azerbaijan physical Poz-Qazan series, the required live denominator has not yet been found.
+
+# UK Lotto
+H016 Wednesday Must Be Won remains **inconclusive/materially weakened** after demand-uplift stress test. H015 crowd-choice/sharing remains theoretical/unquantified.
 
 # Next actions
-1. Continue **selective** recovery of full payout pages from mirrors/locales; add every new row and prioritize zero-winner III–VI states.
-2. Do not repeat blocked draw #780/manual API queries unless new tooling or source appears.
-3. Use primary Telegram/news/result material to reconcile any newly recovered secondary payout page.
-4. Obtain exact adjacent jackpot states and test Kazakhstan-style accounting.
-5. Expand 4+4 history toward 50–100 draws once collection is reliable.
-6. Revisit archive API / Telegram cards only with DevTools/HAR/browser-network tooling.
-7. Resolve external-transfer amount and direct base-variant price.
-8. Validate category II and zero-winner accounting before any forward EV trigger.
-9. Then return to H015, Super Keno multipliers, scratch/instant inventory states and major progressive jackpots.
+1. **H010:** search for registration-specific sales-progress, batch-close, serial/pack-range, retailer inventory or regulator data that can provide a remaining-ticket denominator.
+2. Match current large-prize winner stories to exact registration/batch before decrementing prize counts.
+3. If a denominator is found, build exact after-tax conditional EV by registration and confidence bounds.
+4. Keep 4+4 open but pause repetitive manual archive searches until new tooling/source appears.
+5. Then evaluate Super Keno multiplier economics, H015 crowd-sharing, and other progressive/promotion edges.
