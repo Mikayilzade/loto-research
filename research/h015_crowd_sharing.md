@@ -1,7 +1,7 @@
 # H015 — crowd-choice / anti-popularity sharing edge
 
 Updated: 2026-08-12
-Status: **mechanism empirically real; exact-jackpot benefit bounded and usually modest; lower-tier rolldown magnitude still open**
+Status: **mechanism empirically real; exact-jackpot benefit bounded; lower-tier shared-pool sensitivity can be large but pre-draw crowd model remains missing**
 
 ## Question
 Can choosing combinations that other players are less likely to choose improve expected payout enough to matter economically?
@@ -13,120 +13,114 @@ Primary empirical literature using proprietary lottery-entry datasets finds subs
 
 Wang, Potter van Loon, van den Assem & van Dolder, *Number Preferences in Lotteries*:
 - millions of Lotto combinations;
-- individual Lotto numbers should appear 13.33% under uniform 6/45 selection;
-- observed examples include number 11 at 16.5%, 7 at 16.3%, versus 37 at 10.3% and 38 at 10.5%;
-- birthday/personal numbers, small numbers, central positions, odd/prime numbers and aesthetic patterns are favored;
-- popular combinations often form numeric sequences or spatial patterns and are selected far more often than random choice would imply.
+- under uniform 6/45 choice each number should appear 13.33%; observed examples include 11 at 16.5%, 7 at 16.3%, versus 37 at 10.3% and 38 at 10.5%;
+- birthday/personal numbers, smaller numbers, central positions and aesthetically attractive selections are over-used;
+- many of the most popular exact combinations are numeric sequences or visual patterns;
+- **0.9%** of played combinations were classified as diagonal/vertical patterns versus only **0.009%** expected under randomness — about 100× overrepresentation at the pattern-class level;
+- with 5,108,343 combinations, under random choice there was only ~0.1% probability that any exact combination would occur more than ten times, yet many actual popular combinations appeared hundreds of times.
 
 A 2026 study by Crack, Whigham & Wisen uses over 70m played New Zealand Lotto six-tuples / 400m individual played numbers. Its abstract reports that self-selected strategies can be value-destroying in a fixed prize pool and that prize sharing is a first-order feature of ticket valuation.
 
 These studies establish the mechanism class. They do **not** establish the crowd distribution for UK Lotto or Azerbaijan games; jurisdiction-specific calibration remains required.
 
-## Exact jackpot duplicate model
-For an exact 6/59 jackpot combination:
+# 1. Exact jackpot duplicate model
+For a 6/59 jackpot combination:
 
 `M = C(59,6) = 45,057,474`.
 
-Suppose there are `n` other played lines. Under uniform choice, another line selects our exact winning combination with probability `1/M`.
-
-If our chosen combination has crowd popularity multiplier `a` relative to uniform, use:
+If there are `n` other lines and our exact combination has popularity multiplier `a` relative to uniform:
 
 `q = a/M`.
 
-Conditional on our line winning, number of other identical jackpot winners is approximated as:
+Conditional on our line winning:
 
-`X ~ Binomial(n, q)`.
+`X ~ Binomial(n,q)`
 
-Expected fraction of jackpot retained is:
+and expected retained jackpot share is:
 
 `E[1/(1+X)] = [1-(1-q)^(n+1)] / ((n+1)q)`.
 
-This exact helper already exists in `src/loto_research/probability.py`.
-
-Derived scenarios:
+Derived data:
 - `data/derived/h015_jackpot_collision_screen_6of59.csv`
 
-## Magnitude screen
-### 5m other lines
-Uniform exact combination:
-- expected conditional jackpot share: **94.65%**.
+## Magnitude
+At 10m other lines:
+- uniform: expected share ≈ **89.68%**;
+- 0.2× popularity: ≈ **97.81%**, +9.07% to jackpot component vs uniform;
+- theoretical no-duplicate maximum: +11.51% vs uniform;
+- 5× popular: ≈ **60.41%**, −32.64% vs uniform;
+- 10× popular: ≈ **40.16%**, −55.22% vs uniform.
 
-Theoretical no-duplicate upper bound relative to uniform:
-- **+5.65%** to the jackpot component.
+Across 5m–15m other lines, perfect uniqueness improves the jackpot component by only about **+5.65% to +17.57%** relative to uniform.
 
-A combination selected at 0.2× uniform popularity:
-- share ≈98.90%;
-- about **+4.49%** relative to uniform.
+Interpretation: exact-combination anti-popularity is useful protection from dilution, but cannot by itself rescue a deeply negative ordinary game. Avoiding crowd magnets is more important than searching for a mythical perfectly unpopular line.
 
-A 5×-popular combination:
-- share ≈76.75%;
-- about **−18.91%** relative to uniform.
+# 2. Lower-tier shared-pool sensitivity
+Exact jackpot duplicates are a relatively weak sharing channel because expected number of other jackpot winners is small. A rolldown/shared lower category can have tens, hundreds, thousands or more competing winning variants.
 
-### 10m other lines
-Uniform:
-- share ≈**89.68%**.
+Let `lambda` be the expected number of **other** winners in a shared category conditional on our ticket hitting that category. Approximate competitor count as:
 
-Theoretical no-duplicate upper bound:
-- **+11.51%** relative to uniform.
+`X ~ Poisson(lambda)`.
 
-0.2× popularity:
-- share ≈97.81%;
-- **+9.07%** relative to uniform.
+Then expected retained pool fraction is:
 
-5× popularity:
-- share ≈60.41%;
-- **−32.64%** relative to uniform.
+`E[1/(1+X)] = (1-exp(-lambda))/lambda`.
 
-10× popularity:
-- share ≈40.16%;
-- **−55.22%** relative to uniform.
+Suppose our ticket construction changes expected competitor intensity by factor `a`, so `lambda -> a*lambda`. Derived sensitivity:
+- `data/derived/h015_shared_pool_intensity_sensitivity.csv`
 
-### 15m other lines
-Uniform:
-- share ≈**85.06%**.
+For categories with many expected competitors (`lambda >= 100`), the relationship is essentially inverse:
 
-Theoretical no-duplicate upper bound:
-- **+17.57%** relative to uniform.
+| relative competitor intensity | approximate payout vs baseline |
+|---:|---:|
+| 0.5× | **2.00×** |
+| 0.6× | **1.667×** |
+| 0.8× | **1.25×** |
+| 1.0× | 1.00× |
+| 1.2× | 0.833× |
+| 1.5× | 0.667× |
+| 2.0× | 0.50× |
 
-0.2× popularity:
-- share ≈96.74%;
-- **+13.74%** relative to uniform.
+Thus, **if** a pre-draw construction can reduce expected crowd overlap in a shared lower category by 20%, expected payout from that category rises roughly 25%; a 40% reduction raises it roughly 67%.
 
-5× popularity:
-- share ≈48.71%;
-- **−42.74%** relative to uniform.
+This is a sensitivity result, not evidence that we can currently achieve those `a` values.
 
-## Interpretation
-This sharpens H015 considerably.
+# 3. Strategic interpretation
+### Stronger result than exact-jackpot anti-duplication
+Lower-tier sharing can have much larger percentage sensitivity than exact jackpot sharing because the category contains many winners. This is precisely where H015 could matter during a Cash-WinFall-like / Must-Be-Won redistribution.
 
-### What anti-popularity can do
-- It can protect a jackpot winner from avoidable sharing.
-- Avoiding highly popular exact combinations can be materially valuable when sales are high.
-- In a large-jackpot / rolldown state, an extra ~5–15% on the **jackpot component** can matter.
+### The decisive unresolved problem is prediction of competitor intensity
+We need a model that maps **our chosen line** to expected number of other tickets reaching the same match category conditional on our line hitting it.
 
-### What it cannot do by itself
-Even the theoretical no-duplicate upper bound is only about +6% to +18% on the jackpot component for 5m–15m other 6/59 lines. It is **not** a +6–18% improvement to total ticket EV unless the entire ticket value comes from the jackpot.
+This is harder than exact duplicate avoidance. A lower-tier competitor need not hold our exact combination; many different selections can match the drawn set at the same tier.
 
-Therefore exact-combination anti-popularity cannot plausibly rescue a deeply negative ordinary lottery by itself. Its highest value is as an overlay optimizer once another mechanism has already made the draw unusually favorable.
+Therefore simple heuristics such as “pick high numbers” or “avoid birthdays” cannot yet be promoted into an expected-payout claim.
 
-### Popular selections are more dangerous than unpopular selections are magical
-The downside from choosing a very popular combination is asymmetric and can be large: at 10m lines, a 5×-popular exact combination loses roughly one-third of its conditional jackpot share versus uniform, while the maximum upside from perfect uniqueness is only about 11.5%.
+### Practical anti-crowd rules that are already defensible qualitatively
+Empirical data strongly justify avoiding obvious human-choice magnets such as:
+- visual lines/diagonals on the entry form;
+- simple numeric sequences;
+- culturally salient / personally meaningful patterns;
+- combinations concentrated in common birthday ranges when the game extends well above 31.
 
-So a robust practical objective is first to **avoid known crowd magnets**, rather than claim that any specific “unpopular numbers” recipe creates +EV.
+These rules reduce obvious collision risk, but their exact expected-EV benefit must be calibrated game-by-game.
 
-## Lower-tier shared-pool question remains open
-The exact-duplicate jackpot model is not sufficient for shared lower tiers such as rolldown categories. There, many different played combinations can reach the same match class, and player-number biases interact with the drawn numbers.
+# 4. Next quantitative test
+Build a synthetic/empirical crowd-choice generator with at least three populations:
+1. uniform/random-generated tickets;
+2. human-like tickets calibrated to published marginal/pattern biases;
+3. deliberately anti-crowd tickets.
 
-Observed UK Lotto two-round winner-count asymmetries are consistent with this being economically meaningful, but they do not yet identify a pre-draw optimal portfolio.
+Then, for each possible or sampled draw:
+- condition on our line reaching a target shared tier;
+- count competing crowd winners;
+- estimate payout multiplier vs random;
+- test out-of-sample on an independent empirical dataset or current-game winner-count data;
+- include our own portfolio self-collision.
 
-Next H015 test:
-1. build a crowd-choice model from empirical number/combination preferences;
-2. simulate/derive expected competing-winner counts for lower shared match tiers;
-3. compare random-generated lines, human-looking lines, and deliberately anti-crowd lines;
-4. estimate payout uplift specifically in a forced-redistribution/rolldown state;
-5. include self-collision for multi-line portfolios.
+The output should be a **distribution of relative payout uplift**, not a list of “lucky/unlucky numbers”.
 
 ## Current status
-**H015 remains promising as an overlay optimizer, not a standalone +EV strategy.**
+**H015 is now quantitatively promising as an overlay optimizer, not a standalone +EV strategy.**
 
-The exact jackpot-sharing part is now bounded quantitatively. The unresolved high-value part is lower-tier shared-pool optimization during an already favorable structural state.
+Exact-jackpot benefit is bounded and modest. Lower-tier shared-pool sensitivity can be much larger, but the pre-draw crowd-overlap model is the remaining scientific bottleneck.
