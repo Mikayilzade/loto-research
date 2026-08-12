@@ -95,30 +95,41 @@ Live test remains zero-winner II–VI state accounting across adjacent draws. Ma
 **Claim:** In shared prize pools, less-popular combinations can improve expected retained share conditional on winning; this may improve EV when layered on top of a structural overlay/rolldown.
 
 ### Empirical mechanism
-Large proprietary lottery datasets show player choices are strongly non-uniform: birthdays/personal numbers, small numbers, central positions, sequences/spatial patterns and other aesthetically salient combinations are over-selected. A 2026 New Zealand Lotto study using >70m played six-tuples identifies prize sharing as a first-order ticket-valuation feature.
+Large proprietary lottery datasets show strong non-uniform player choice. In one 6/45 dataset, diagonal/vertical visual-pattern combinations represented **0.9%** of actual entries versus **0.009%** expected under random choice, while many specific popular combinations appeared hundreds of times. A 2026 New Zealand Lotto study using >70m played six-tuples identifies prize sharing as a first-order ticket-valuation feature.
 
 ### Exact-jackpot magnitude bound
-For a 6/59 game (`M=C(59,6)=45,057,474`), let `a` be our exact combination's crowd popularity relative to uniform and `n` other played lines. Conditional expected jackpot share is computed with `q=a/M` and `X~Binomial(n,q)`.
+For a 6/59 game (`M=C(59,6)=45,057,474`), at **10m other lines**:
+- uniform combination: expected conditional jackpot share ≈ **89.68%**;
+- 0.2×-popular: ≈ **97.81%**, about **+9.07%** to jackpot component vs uniform;
+- theoretical no-duplicate upper bound: **+11.51%** vs uniform;
+- 5×-popular: ≈ **60.41%**, about **−32.64%** vs uniform;
+- 10×-popular: ≈ **40.16%**, about **−55.22%** vs uniform.
 
-At **10m other lines**:
-- uniform (`a=1`): expected share ≈ **89.68%**;
-- 0.2×-popular: ≈ **97.81%**, about **+9.07%** to the jackpot component versus uniform;
-- theoretical no-duplicate upper bound: about **+11.51%** versus uniform;
-- 5×-popular: ≈ **60.41%**, about **−32.64%** versus uniform;
-- 10×-popular: ≈ **40.16%**, about **−55.22%** versus uniform.
+Across 5m–15m other lines, perfect uniqueness can improve the jackpot component by only about **+5.65% to +17.57%** versus uniform.
 
-Across 5m–15m other lines, perfect uniqueness can improve the jackpot component by only about **+5.65% to +17.57%** relative to uniform.
+### Lower-tier shared-pool sensitivity
+If `lambda` is expected competing winner count conditional on our lower-tier hit and `X~Poisson(lambda)`, expected pool fraction is `(1-exp(-lambda))/lambda`.
+
+For large shared categories, changing relative competitor intensity approximately inversely changes payout:
+- 0.8× competitor intensity -> **~1.25× payout**;
+- 0.6× -> **~1.667× payout**;
+- 0.5× -> **~2.0× payout**;
+- 1.2× -> ~0.833× payout;
+- 1.5× -> ~0.667× payout;
+- 2× -> ~0.5× payout.
+
+Thus lower-tier shared-pool optimization can have materially larger percentage impact than exact jackpot anti-duplication **if** we can predictably reduce competitor intensity before the draw.
 
 ### Interpretation
-Anti-popularity is real and useful, but **not a standalone cure for a deeply negative lottery**. The upside from perfect uniqueness is bounded because a uniform combination already often wins alone. The downside from choosing a crowd-magnet combination can be much larger.
+Anti-popularity is real and useful, but not a standalone cure for a deeply negative lottery. Exact-jackpot upside is bounded; lower-tier rolldown sharing is the more promising channel.
 
-Best current use: avoid obvious crowd magnets and apply anti-popularity as an **overlay optimizer** when a roll-down/progressive state is already favorable.
+The scientific bottleneck is now a pre-draw crowd-choice model that maps our chosen line to expected competing-winner count in the target shared category. Simple heuristics such as “pick high numbers” cannot yet be promoted to EV claims.
 
-The high-value unresolved part is lower-tier shared-pool optimization, where many competing winners can make crowd-choice effects larger than exact-jackpot duplicate effects.
-
-- Data: `data/derived/h015_jackpot_collision_screen_6of59.csv`.
+- Data:
+  - `data/derived/h015_jackpot_collision_screen_6of59.csv`
+  - `data/derived/h015_shared_pool_intensity_sensitivity.csv`
 - Analysis: `research/h015_crowd_sharing.md`.
-- Status: **partially validated/quantified mechanism; jackpot benefit bounded and modest, lower-tier rolldown magnitude still testing**.
+- Status: **quantitatively promising as an overlay optimizer; jackpot benefit bounded, lower-tier sensitivity large but achievable crowd-intensity reduction unvalidated**.
 
 ## H016 — Wednesday Must Be Won calendar edge
 **Claim:** A Wednesday sixth-draw UK Lotto state might benefit from inherited carryover meeting lower weekday demand.
