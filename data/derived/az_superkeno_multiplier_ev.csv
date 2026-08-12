@@ -1,0 +1,5 @@
+misli,ticket_cost_azn,top_prize_if_full_azn,gross_ev_upper_bound_azn,gross_payout_ratio,after_tax_ev_upper_bound_azn,after_tax_payout_ratio,net_ev_after_tax_azn,expected_tax_azn,sharing_included,notes
+1,1,100000,0.598555794263,0.598555794263,0.591807033508,0.591807033508,-0.408192966492,0.006748760755,false,"Single variant/single draw. Full top-tier payout assumed; any multi-winner sharing can only reduce EV."
+2,2,200000,1.197111588527,0.598555794263,1.182532310259,0.591266155129,-0.817467689741,0.014579278268,false,"Prize table scaled 2x and payment scaled 2x. Tax uses fixed 500-AZN threshold, slightly lowering ROI vs 1x."
+5,5,500000,2.992778971317,0.598555794263,2.945177937565,0.589035587513,-2.054822062435,0.047601033753,false,"At 5x the base 150-AZN tier becomes 750 AZN and starts crossing the tax threshold, further reducing ROI."
+10,10,1000000,5.985557942634,0.598555794263,5.869824724606,0.586982472461,-4.130175275394,0.115733218029,false,"Current FAQ explicitly confirms 10x maximum prize 1,000,000 AZN vs 100,000 without misli. Upper-bound EV ignores top-prize sharing."
