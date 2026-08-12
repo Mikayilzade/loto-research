@@ -129,74 +129,50 @@ This validates an active modern zero-winner-transfer mechanism class, but the sa
 
 Manual web-index approaches are currently exhausted. Do not repeat blind API/draw #780 searches without new tooling. Best future route is browser DevTools/HAR/network inspection or new indexed detail pages.
 
-# H010 — Poz-Qazan remaining-prize state edge: NEW active research thread
+# H010 — Poz-Qazan remaining-prize state edge
 Files:
 - `data/derived/az_poz_qazan_initial_ev_2026.csv`
 - `research/poz_qazan_remaining_prize_edge.md`
 
-## Exact initial after-tax baselines from current registered series
-Using official prize tables and operator-displayed after-tax values:
-
-1. **Prestij** — reg.317, current series from 12.06.2025
-   - ticket 10 AZN; 2.4m tickets
-   - gross payout ratio **70.4833%**
-   - after-tax payout ratio **69.9060%**
-   - initial after-tax EV **6.990595 AZN / 10 AZN**
-   - 2 top prizes × 500,000 AZN
-
-2. **Meqa 7** — reg.365, from 16.03.2026
-   - ticket 5 AZN; 4m tickets
-   - gross ratio **67.00%**
-   - after-tax ratio **66.8758%**
-   - initial after-tax EV **3.34378775 AZN / 5 AZN**
-   - 2 top prizes × 100,000 AZN
-
-3. **Qoşa 2** — reg.383, from 08.06.2026
-   - ticket 2 AZN; 4m tickets
-   - gross ratio **66.48%**
-   - after-tax ratio **66.3051%**
-   - initial after-tax EV **1.326102 AZN / 2 AZN**
-   - 40 top prizes × 4,000 AZN
-
-4. **4 Fəsil** — reg.375, from 01.05.2026
-   - ticket 1 AZN; 20m tickets
-   - gross ratio **63.00%**
-   - after-tax ratio **62.9775%**
-   - initial after-tax EV **0.629775 AZN / 1 AZN**
-   - 10 top prizes × 5,000 AZN
+## Exact initial after-tax baselines
+1. **Prestij reg.317** — 10 AZN; 2.4m tickets; after-tax payout ratio **69.9060%**; EV **6.990595 AZN**; 2×500k top prizes.
+2. **Meqa 7 reg.365** — 5 AZN; 4m tickets; after-tax ratio **66.8758%**; EV **3.34378775 AZN**; 2×100k.
+3. **Qoşa 2 reg.383** — 2 AZN; 4m tickets; after-tax ratio **66.3051%**; EV **1.326102 AZN**; 40×4k.
+4. **4 Fəsil reg.375** — 1 AZN; 20m tickets; after-tax ratio **62.9775%**; EV **0.629775 AZN**; 10×5k.
 
 All ordinary initial states are materially negative EV.
 
-## H010 decisive blocker: current denominator is missing
-Bounded official-domain search did **not** find a live public counter for:
-- remaining unsold tickets in a registered physical series; or
-- a complete registration-specific remaining-prize table updated as claims occur.
+## Denominator blocker — refined
+No public live registration-specific counter was found for remaining unsold tickets or complete remaining-prize inventory.
 
-Without a defensible `remaining tickets` denominator, current conditional EV cannot be calculated from remaining-prize anecdotes alone.
+However, official law/tax rules show the denominator **exists institutionally**:
+- the lottery organizer is required to transmit ticket-sales data to the designated state information system **daily**;
+- physical tickets carry number/series identifiers;
+- unsold tickets are returned/destroyed under formal procedures;
+- the organizer must announce the end of an instant lottery.
 
-## Critical series-identity trap found
-Winner carousels can mix **different releases/registrations with the same game name**.
+The State Tax Service public open-data page currently exposes no searchable lottery-ticket-sales dataset under `lotereya`, `bilet`, or `satış`.
 
-Example: current Prestij series is registration 317 starting 12.06.2025, but its current-page winner carousel includes Hüseyn Bünyatov, whose official 500,000-AZN win is dated **22.07.2024**. Therefore he belongs to an earlier Prestij release and must not be used to decrement the current reg.317 top-prize inventory.
+A 2025 annual-report PDF exists on the tax-service report page, but the current tool timed out fetching it; it has **not** been analyzed and no series-level sales claim is made from it.
 
-Same caution applies to `Qoşa` vs `Qoşa 2` and any recurring game name.
+### Series-identity trap
+Current Prestij reg.317 starts 12.06.2025, but current/history surfaces include Hüseyn Bünyatov's 500k Prestij win dated **22.07.2024**. Winner carousels therefore mix releases. Never decrement current inventory by game name alone.
 
-Before decrementing current inventory require:
-1. exact registration/batch match;
-2. winner date inside that sale regime;
-3. ideally serial/series or explicit operator linkage.
+Require exact registration/batch + valid winner date, ideally ticket serial/explicit operator linkage.
 
 ## H010 status
 **testing / data-blocked**.
 
-The mathematical edge is real in principle: if remaining after-tax prize value and remaining purchasable tickets are both known, conditional EV can be computed exactly. For current Azerbaijan physical Poz-Qazan series, the required live denominator has not yet been found.
+The math is straightforward once both remaining after-tax prize value and remaining purchasable tickets are observable. Current web research has not recovered that live denominator.
+
+Higher-value next route is **official registration-specific data access** (operator/regulator request, batch-close/sales-progress report, or defensible serial/pack inventory source), not repeated generic web search.
 
 # UK Lotto
 H016 Wednesday Must Be Won remains **inconclusive/materially weakened** after demand-uplift stress test. H015 crowd-choice/sharing remains theoretical/unquantified.
 
 # Next actions
-1. **H010:** search for registration-specific sales-progress, batch-close, serial/pack-range, retailer inventory or regulator data that can provide a remaining-ticket denominator.
-2. Match current large-prize winner stories to exact registration/batch before decrementing prize counts.
-3. If a denominator is found, build exact after-tax conditional EV by registration and confidence bounds.
-4. Keep 4+4 open but pause repetitive manual archive searches until new tooling/source appears.
-5. Then evaluate Super Keno multiplier economics, H015 crowd-sharing, and other progressive/promotion edges.
+1. **H010:** pursue registration-specific sold-ticket counts / sales-progress through official data channels; avoid further generic search for the same missing counter.
+2. Match current large-prize winners to exact registration/batch before changing remaining-prize numerator.
+3. If denominator becomes available, build exact after-tax conditional EV by registration and uncertainty bounds.
+4. Keep 4+4 open but pause repetitive manual archive work until new tooling/source appears.
+5. Next research class if no new H010 data: Super Keno multiplier economics, then H015 crowd-sharing and other promotion/progressive edges.
