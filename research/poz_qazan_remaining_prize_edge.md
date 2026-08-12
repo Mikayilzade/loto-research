@@ -1,120 +1,88 @@
 # Azerbaijan Poz-Qazan — remaining-prize state edge (H010)
 
 Updated: 2026-08-12
-Status: **initial EV quantified; current conditional EV blocked by missing live denominator**
+Status: **initial EV quantified; denominator exists institutionally but no public live series-level access found**
 
 ## Research question
 Can a physical instant-ticket series become unusually favorable or +EV after some prizes have been claimed, if the remaining prize inventory and remaining unsold ticket count are observable before purchase?
 
-The key conditional-state formula is conceptually:
+Key conditional-state identity:
 
 `current EV = remaining after-tax prize value / remaining purchasable tickets`
 
-A list of remaining prizes without a defensible denominator of remaining tickets is not enough.
+A list of remaining prizes without a defensible denominator is not enough.
 
-## Current operator data is unusually useful for the initial state
-Azərlotereya publishes, by registered Poz-Qazan series:
+## Exact initial-state data
+Azərlotereya publishes by registered physical Poz-Qazan series:
 - ticket price;
-- registration number and validity;
+- registration and validity;
 - total tickets issued;
 - total winning tickets;
 - full prize-count table;
-- total gross prize fund and payout percentage;
-- after-tax amount for prize tiers where tax applies.
-
-This allows exact initial-series gross and after-tax EV.
+- gross prize fund and payout percentage;
+- after-tax amounts for taxable prize tiers.
 
 Derived dataset:
 - `data/derived/az_poz_qazan_initial_ev_2026.csv`
 
-## Four current-series baselines
-### Prestij — registration 317 / 03.06.2025
-- ticket: 10 AZN
-- tickets: 2.4m
-- gross prize fund: 16.916m AZN
-- gross payout ratio: **70.4833%**
-- after-tax prize total: **16.777428m AZN**
-- after-tax payout ratio: **69.9060%**
-- expected after-tax payout per initial ticket: **6.990595 AZN**
-- top tier: 2 × 500,000 AZN; displayed after-tax value 450,051 AZN each
+## Current-series initial after-tax ranking
+1. **Prestij reg.317** — ~69.9060% after-tax payout ratio; EV 6.990595 AZN per 10-AZN ticket.
+2. **Meqa 7 reg.365** — ~66.8758%; EV 3.34378775 AZN per 5-AZN ticket.
+3. **Qoşa 2 reg.383** — ~66.3051%; EV 1.326102 AZN per 2-AZN ticket.
+4. **4 Fəsil reg.375** — ~62.9775%; EV 0.629775 AZN per 1-AZN ticket.
 
-### Meqa 7 — registration 365 / 02.03.2026
-- ticket: 5 AZN
-- tickets: 4m
-- gross prize fund: 13.4m AZN
-- gross payout ratio: **67.00%**
-- after-tax prize total: **13.375151m AZN**
-- after-tax payout ratio: **66.8758%**
-- expected after-tax payout per initial ticket: **3.34378775 AZN**
-- top tier: 2 × 100,000 AZN; displayed after-tax value 90,050.50 AZN each
+All ordinary initial states are materially negative EV.
 
-### Qoşa 2 — registration 383 / 02.06.2026
-- ticket: 2 AZN
-- tickets: 4m
-- gross prize fund: 5.3184m AZN
-- gross payout ratio: **66.48%**
-- after-tax prize total: **5.304408m AZN**
-- after-tax payout ratio: **66.3051%**
-- expected after-tax payout per initial ticket: **1.326102 AZN**
-- top tier: 40 × 4,000 AZN; displayed after-tax value 3,650.20 AZN each
+## Denominator blocker — refined
+A bounded official-domain search did not find a public live counter giving:
+- remaining unsold tickets by active registration/batch; or
+- a complete registration-specific remaining-prize table updated as claims occur.
 
-### 4 Fəsil — registration 375 / 15.04.2026
-- ticket: 1 AZN
-- tickets: 20m
-- gross prize fund: 12.6m AZN
-- gross payout ratio: **63.00%**
-- after-tax prize total: **12.5955m AZN**
-- after-tax payout ratio: **62.9775%**
-- expected after-tax payout per initial ticket: **0.629775 AZN**
-- top tier: 10 × 5,000 AZN; displayed after-tax value 4,550 AZN each
+However, the denominator is **not conceptually unavailable**.
 
-Initial ranking among these four by after-tax payout ratio:
-1. Prestij ~69.91%
-2. Meqa 7 ~66.88%
-3. Qoşa 2 ~66.31%
-4. 4 Fəsil ~62.98%
+### Daily sales data exists in the state information system
+A current tax-law provision requires the lottery organizer to transmit lottery-ticket sales data and seller remuneration information **daily** from the organizer's information system to the designated state body's information system.
 
-All ordinary initial states remain materially negative EV.
+This is important: sales-to-date data exists institutionally and can in principle support a remaining-ticket denominator.
 
-## Critical blocker: no public live remaining-ticket denominator found
-A bounded official-domain search for terms equivalent to remaining prizes / remaining tickets did not reveal a public live counter that states:
-- tickets remaining unsold in a current registration/batch; or
-- a complete registration-specific remaining-prize table updated as prizes are claimed.
+### Physical unsold inventory is formally tracked
+The Lottery Law states, among other things, that:
+- lottery tickets carry a number and/or series;
+- unsold tickets are returned to the organizer under applicable procedures;
+- unsold/returned tickets are destroyed by an organizer commission;
+- the organizer must announce the end of an instant lottery.
 
-Without the remaining-ticket denominator, current conditional EV cannot be calculated reliably.
+So a physical-series closeout denominator also exists operationally.
 
-Even knowing that some top prizes were claimed is insufficient: a top-prize depletion can make EV worse, while a sales-heavy remaining inventory with unusually many prizes left could make EV better. Both numerator and denominator are required.
+### Public access search result
+The State Tax Service has a public open-data page and annual/monthly reporting pages, but the public open-data page did not contain searchable entries for `lotereya`, `bilet`, or `satış` in the current crawl.
 
-## Series identity is mandatory — game-name matching is unsafe
-A major data-quality trap was found on the current Prestij page.
+A 2025 annual-report PDF exists on the tax-service report page, but the current web tool timed out fetching it. It has **not** been analyzed, so no series-level sales content is claimed from it.
 
-The current series is registration **317**, starting 12.06.2025. Its table contains exactly two 500,000-AZN top prizes. The page's winner carousel also surfaces historical Prestij 500,000-AZN winners. However at least one such winner, Hüseyn Bünyatov, has an official winning date in **2024**, before registration 317 existed.
+## Series identity is mandatory
+Game-name matching is unsafe.
 
-Therefore the current game's winner carousel mixes winner stories from earlier Prestij releases/registrations. It would be incorrect to infer that a current-series top prize has been exhausted merely because a same-name historical winner appears on the page.
+Current Prestij is registration **317**, valid from 12.06.2025. Its page surfaces historical Prestij winners, including Hüseyn Bünyatov with an official 500,000-AZN winning date of **22.07.2024**, before registration 317 existed.
 
-The same caution applies to similarly named products such as Qoşa vs Qoşa 2.
+Therefore winner carousels mix releases/registrations. Never decrement current-series inventory by game name alone.
 
-Required matching before decrementing inventory:
+Required matching before inventory decrement:
 1. exact registration/batch;
-2. sale-validity window;
-3. winner date;
-4. ideally ticket serial/series or explicit operator statement linking the win to that registration.
+2. winner date inside the relevant sale regime;
+3. ideally ticket serial/series or explicit operator linkage.
+
+The same caution applies to `Qoşa` vs `Qoşa 2` and any reused game name.
+
+## Practical H010 routes from here
+The web-search route for a public live denominator is currently exhausted. Higher-value routes are now:
+
+1. **Official data request** to the operator and/or relevant state authority for sold-ticket count to date by registration (for example reg.317/365/375/383), plus current remaining prize counts if held.
+2. Inspect operator/regulator reports or batch-close announcements when a series ends.
+3. Investigate retailer/warehouse/pack information only if it can be tied defensibly to the whole registered series; local shop stock alone is not a global denominator.
+4. Match current large-prize winner claims to exact registration/serial before adjusting the numerator.
+5. If both numerator and denominator become observable, compute exact after-tax conditional EV and uncertainty bounds before any purchase conclusion.
 
 ## H010 status
-The mathematical mechanism remains valid in principle:
-- if remaining prize values and remaining tickets are observable, conditional EV can be computed exactly;
-- an initial negative payout ratio does not imply every late state is equally negative.
+**testing / data-blocked**.
 
-But for the current Azerbaijan physical Poz-Qazan products examined here, **the necessary live remaining-ticket denominator has not been found publicly**.
-
-Therefore H010 for these series is currently:
-- **testing / data-blocked**;
-- not executable as a current +EV strategy;
-- worth revisiting if a retailer/pack/serial system, official remaining-prize page, sales counter, batch-close report, or another defensible denominator becomes available.
-
-## Highest-value next checks
-1. Search current winner/news posts for explicit registration or batch identifiers rather than game name alone.
-2. Investigate whether physical ticket serial/pack ranges reveal how many tickets in a registered series remain purchasable.
-3. Look for operator/regulator batch-close or sales-progress reporting.
-4. If a denominator becomes observable, build registration-specific conditional EV with after-tax prizes and uncertainty bounds.
-5. Do not infer remaining inventory from a promotional winner carousel.
+The mathematical edge remains valid in principle. For current Azerbaijan physical Poz-Qazan games, exact initial EV is known, and institutional sales tracking is confirmed, but no public registration-specific live denominator has yet been recovered. Therefore no executable +EV state is validated.
