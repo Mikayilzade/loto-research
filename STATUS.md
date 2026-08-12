@@ -7,7 +7,7 @@ Branch: `research-work`
 **Stage 1 — exact baselines, rule-versioning and structural-edge search**
 
 ## Safe checkpoint
-This file is the authoritative handoff point after the interrupted long research pass. The latest valuable findings were saved before interruption and are summarized below.
+This file is the authoritative handoff point. Long research passes must checkpoint frequently; the latest 4+4 category-II and Telegram jackpot findings are included below.
 
 ## Foundation / code
 - `START_HERE.md`, `PROJECT_RULES.md`, `AGENTS.md`, `RESEARCH_PLAN.md` define handoff and research standards.
@@ -76,12 +76,12 @@ Zero-winner V/VI cases must still be observed; do not extrapolate the rule there
 ### Independent scale validation
 Using exact X/XI probabilities and their observed fixed prizes (X=6 AZN, XI=4 AZN), winner counts provide an independent volume estimator.
 
-Across the seven sampled draws:
+Across seven sampled draws:
 - mean `U/N_hat` ≈ **0.00996205**;
 - median ≈ **0.00995043**;
 - range ≈ **0.00953821–0.01050994**.
 
-Therefore `U ≈ 0.01 × sold_variants` emerges from the data rather than from a chosen round number.
+Therefore `U ≈ 0.01 × sold_variants` emerges from data rather than from a chosen round number.
 
 If one base variant costs 2 AZN, one U corresponds to roughly 0.5% of gross sales. This makes **2 AZN per base variant a high-confidence inference**, but not yet a primary-source fact.
 
@@ -101,17 +101,25 @@ Correct primary-source chronology:
 
 Do NOT use this as a July-2026 reset.
 
-Current accumulation checkpoints now stored in:
+Current accumulation checkpoints are stored in:
 - `data/historical/az_4plus4_jackpot_checkpoints.csv`
+- `data/historical/az_4plus4_telegram_checkpoints.csv`
 
-Official lower-bound checkpoints:
+Official site lower-bound checkpoints:
 - **15.01.2025:** >500k AZN;
 - **19.08.2025:** >800k AZN;
 - **26.11.2025:** >1m AZN;
 - **26.01.2026:** >1.3m AZN;
 - **10.06.2026:** >1.8m AZN in current 4+4/draw-game context.
 
-No jackpot win between these checkpoints has yet been established in the captured sources.
+Official Telegram message ordering adds denser intermediate states:
+- message **2335:** jackpot >1.2m AZN;
+- message **2344:** jackpot >1.4m AZN;
+- message **2353:** jackpot >1.5m AZN and Nizami Tağıyev winner story.
+
+The exact calendar dates for 2335/2344 remain unrecovered. Message 2353 is linked to the Nizami event dated **2026-06-02** by the official winner page; the secondary archive independently places draw **#780** on 2026-06-02.
+
+No jackpot win between the current accumulation checkpoints has yet been established in the captured sources.
 
 ### External transfers are real
 On 06.01.2025 Azərlotereya officially announced that if the final Meqa 5/36 jackpot was not won, its jackpot would be added to 4+4.
@@ -124,8 +132,22 @@ Therefore 4+4 jackpot accounting must allow:
 
 Do not fit all 2025 jackpot growth to organic 4+4 sales.
 
+## NEW — category II primary-source lead
+File:
+- `research/4plus4_category2_lead.md`
+
+Official Azərlotereya says **Nizami Tağıyev missed the 4+4 jackpot by only one number and won 8,609 AZN** while jackpot was >1.5m.
+
+For one ordinary variant, one number short of 4+4 means a **4+3 or 3+4** state, i.e. category II. Therefore the ticket definitely appears to contain at least one category-II winning variant.
+
+Important caveat: the game supports 5+5/6+6 combination tickets and one ticket may win several variants/categories. **Do not yet set category-II per-winner payout = 8,609 AZN.** The 8,609 may be aggregate ticket payout.
+
+Decisive next check:
+- recover draw #780 full payout table and determine category-II winner count/prize;
+- if exactly one category-II winner received 8,609 AZN, category II becomes directly observed and can be integrated into full EV.
+
 ## H014 — Azerbaijan zero-winner carryover
-This remains **testing** and is now the key local structural question.
+This remains **testing** and is still the key local structural question.
 
 Accessible 2026 secondary tables repeatedly show zero winners in rare category II, but do not expose its assigned pre-draw pool.
 
@@ -153,7 +175,7 @@ Example 1545 -> 1546:
 - previous superprize: **226,866,699 KZT**;
 - zero-winner lower pools in 1545: **99,432 + 149,148 = 248,580 KZT**;
 - ordinary current-draw 3% contribution: **132,678 KZT**;
-- next superprize: **227,247,957 KZT**;
+- next superprize: **227,247,957 KZT**.
 
 Identity:
 
@@ -176,8 +198,6 @@ For sampled draw 1546, a static uniform-selection screen gives approximately:
 
 So the mechanism is real, but the sampled state is nowhere near +EV.
 
-This comparator is strategically useful because it gives a concrete accounting signature to search for in Azerbaijan 4+4.
-
 ## UK Lotto
 H016 Wednesday Must Be Won was stress-tested and downgraded:
 - initial demand cushion ~+33.77%;
@@ -192,21 +212,22 @@ H015 crowd-choice/sharing remains theoretically interesting but unquantified.
 - underlying historical API/network payload remains undiscovered;
 - exact adjacent 4+4 jackpot values are not yet available from the current source set;
 - January-2025 external-transfer amount remains unknown;
-- category-II rule/pool value remains unresolved;
+- draw #780 full payout table remains unrecovered;
+- category-II pure per-winner payout remains unresolved;
 - secondary draw data require primary reconciliation.
 
 ## Next actions
-1. Find exact adjacent Azerbaijan 4+4 jackpot values and test the Kazakhstan-style accounting signature.
-2. Expand Azerbaijan 4+4 history toward 50–100 consecutive draws, prioritizing zero-winner II–VI states.
-3. Discover the official Azərlotereya archive API/payload.
-4. Resolve the final Meqa 5/36 draw outcome and exact January-2025 external transfer amount.
-5. Capture a real 4+4 category-II winner or primary detailed rule to determine category-II economics.
+1. Recover **draw #780** full payout table; test whether Nizami's 8,609 AZN is pure category-II payout or aggregate system-ticket payout.
+2. Continue searching for exact adjacent Azerbaijan 4+4 jackpot values and test the Kazakhstan-style accounting signature.
+3. Expand Azerbaijan 4+4 history toward 50–100 consecutive draws, prioritizing zero-winner II–VI states.
+4. Discover the official Azərlotereya archive API/payload.
+5. Resolve the final Meqa 5/36 draw outcome and exact January-2025 external transfer amount.
 6. Confirm base-variant price directly from primary rules/purchase flow/receipt.
 7. Build a forward state-EV trigger only after the balance equation is validated.
 8. Then return to H015, Super Keno multipliers, scratch/instant inventory edges and major progressive jackpots.
 
 ## Work-session rule
-For future long research passes, checkpoint to GitHub frequently rather than accumulating a large unsaved reasoning chain. After every meaningful discovery or roughly every 2-4 research substeps:
+For future long research passes, checkpoint to GitHub frequently rather than accumulating a large unsaved reasoning chain. After every meaningful discovery or roughly every 2–4 research substeps:
 - save raw/derived data first;
 - update the relevant research note;
 - update this `STATUS.md` when the strategic conclusion changes.
