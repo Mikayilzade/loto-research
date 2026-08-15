@@ -1,7 +1,7 @@
 # H020 — lawful two-sided hedging / arbitrage
 
 Updated: 2026-08-15
-Status: **mechanism validated; no current terminal SUCCESS; structural same-market complete-set subsidy rejected on screened venues**
+Status: **mechanism validated; live acquisition infrastructure implemented; no current terminal SUCCESS**
 
 ## Question
 Can mutually exclusive outcome positions be locked before resolution so that the minimum net payoff across every legal outcome exceeds total acquisition cost?
@@ -111,7 +111,74 @@ Source:
 
 Status: **complete-set arbitrage condition validated; no structural same-market profit; live crossed-book opportunities require real-time executable screening.**
 
-## 4. Execution theorem / terminal gate
+## 4. NEW — executable orderbook/depth scanner
+Current official API documentation materially improves the acquisition path:
+- Polymarket Gamma active-market data are public/no-auth and expose `clobTokenIds`;
+- Polymarket CLOB `/book` returns full resting bid/ask depth, minimum order size, tick size and market hash;
+- Polymarket current V2 taker fee is `C * feeRate * p * (1-p)` with a per-market fee rate; makers are fee-free under the platform schedule, while builder/intermediary fees can be additional;
+- Kalshi documents a bid-only orderbook where a YES bid at `x` is exactly a NO ask at `1-x`.
+
+Primary documentation:
+- https://docs.polymarket.com/quickstart
+- https://docs.polymarket.com/trading/orderbook
+- https://docs.polymarket.com/trading/fees
+- https://docs.polymarket.com/trading/clients/public
+- https://docs.kalshi.com/getting_started/orderbook_responses
+
+Implemented:
+- `src/loto_research/live_complete_set.py`
+- `tests/test_live_complete_set.py`
+- `data/derived/h020_fee_aware_pair_thresholds.csv`
+
+The scanner:
+1. walks **actual ask depth**, not just top-of-book;
+2. buys equal YES/NO quantities;
+3. adds exact V2-style taker fees per level;
+4. adds externally supplied gas/builder/FX costs;
+5. computes guaranteed redemption and profit;
+6. searches orderbook breakpoints for the largest actually executable profitable quantity.
+
+This closes an important false-positive route: a displayed top quote below `$1` is not enough if profitable depth is only a few shares or if the next level pushes average cost above `$1`.
+
+### Fee-aware gate
+For one YES share at price `p` and one NO share at price `q`, with both legs taker-filled at common fee rate `r`, ignoring other costs:
+
+`all_in = p + q + r*p*(1-p) + r*q*(1-q)`.
+
+Strict complete-set arbitrage requires:
+
+`all_in < 1`.
+
+At the highest-fee region around `p≈q≈0.50`, the raw pair price must be substantially below `$1`:
+- fee-free geopolitics: `< 1.000` before external costs;
+- sports `r=0.03`: `< 0.985`;
+- politics/finance `r=0.04`: `< 0.980`;
+- general/economics/culture/weather `r=0.05`: `< 0.975`;
+- crypto `r=0.07`: `< 0.965`.
+
+These are screening thresholds, not live opportunities. Actual fee parameters must be pulled from the market object because Polymarket documents them as per-market/dynamic.
+
+### Concrete false-positive example
+An apparent pair `YES ask 0.49 + NO ask 0.50 = 0.99` looks like a 1% gross cross. At a 5% fee-rate on both taker legs, 100 paired shares incur about `$2.4995` in platform fees, turning `$99` raw acquisition into about `$101.4995` all-in before any builder/gas/FX cost. Therefore the apparent cross is **not** arbitrage.
+
+### Kalshi matching implication
+From Kalshi's documented bid-only representation:
+- market-buy YES ask = `1 - best NO bid`;
+- market-buy NO ask = `1 - best YES bid`;
+- pre-fee complete-set cost = `2 - (best YES bid + best NO bid)`.
+
+Thus a sub-$1 market-buy complete set requires:
+
+`best YES bid + best NO bid > 1`.
+
+That is a crossed/matchable book state, not a structural subsidy, and positive fees tighten the condition further. This strengthens the previous conclusion that ordinary same-market Kalshi buy-both is not a persistent structural edge.
+
+## 5. Live acquisition result for this packet
+The current runtime could verify the official discovery/orderbook/fee interfaces but could not retrieve arbitrary raw live API payloads from `gamma-api.polymarket.com` / CLOB through the available network path. Therefore no honest current quote/depth pair is fabricated or promoted to SUCCESS.
+
+This is now an **execution/data-access blocker rather than a modeling blocker**: the exact scanner and fee/depth gate are implemented. A future environment with direct public REST/WebSocket access can run the scan immediately against all active markets.
+
+## 6. Execution theorem / terminal gate
 For H020 to qualify as project `SUCCESS`, all of the following must be true simultaneously:
 1. positions are exhaustive over every legal settlement branch;
 2. each leg is accepted/matched at a known price and quantity;
@@ -127,12 +194,13 @@ A useful distinction is therefore:
 
 ## Code/data
 - `src/loto_research/two_sided_arb.py`
+- `src/loto_research/live_complete_set.py`
 - `tests/test_two_sided_arb.py`
+- `tests/test_live_complete_set.py`
 - `data/derived/h020_two_sided_arb_screen.csv`
+- `data/derived/h020_fee_aware_pair_thresholds.csv`
 
 ## Conclusion
-H020 is the first still-open class in this phase where a genuine deterministic profit floor is explicitly supported by current operator documentation **after both sides are filled**. However no current live, legally executable, fully matched cross-venue opportunity has been established in this packet, so terminal state remains **NO SUCCESS; NOT EXHAUSTED**.
+H020 remains the strongest open deterministic-profit mechanism class because true post-fill surebets are real. This packet removes fee/depth accounting as the scientific bottleneck and turns the next gate into pure live acquisition/execution: obtain current executable books, verify settlement identity, and require positive minimum net payout at real fillable quantity.
 
-Next research should prioritize either:
-- a public live-data venue pair where executable quotes can be screened atomically enough to verify a current complete-set cost `< guaranteed payout`; or
-- another finite/final-draw product with a deterministic external subsidy large enough to overcome full coverage cost.
+Terminal state remains **NO SUCCESS; NOT EXHAUSTED**.
