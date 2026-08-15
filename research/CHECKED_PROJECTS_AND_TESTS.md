@@ -47,6 +47,7 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H028 Nebraska 2by2** | buy all `C(26,2)^2=105,625` plays; also test required seven-draw package with free Double Tuesday | normal optimistic terminal cash **$40,168 = 38.0289%**; 7-draw package **$321,344/$739,375 = 43.4616%** | **REJECTED guaranteed-profit full coverage**; top/set-prize liability reductions ignored in player's favor; `research/h028_nebraska_finite_coverage.md` |
 | **H028 Nebraska MyDaY** | buy every valid MM-DD-YY calendar combination | 36,525 plays; exact all-state gross range **$17,580–$21,357 = 48.1314%–58.4723%** | **REJECTED guaranteed-profit full coverage**; `research/h028_nebraska_finite_coverage.md` |
 | **H028 Nebraska Pick 5** | buy all `C(40,5)=658,008` plays; full published 4/5 and 3/5 cash tiers | deterministic non-jackpot cash **$141,050 = 21.4359%**; sole-winner jackpot hurdle **$516,958**; jackpot sharing and possible lower-tier pari-mutuel remain | **REJECTED current guaranteed-profit full coverage**; `research/h028_nebraska_finite_coverage.md` |
+| **H029 Virginia fixed digit base games** | Pick 3 / Pick 4 / Pick 5 Exact, Any, 50/50, Combo/Pair menus under additive base rules | every checked base wager has gross EV only **48%–50%** (Pick 5 50/50 30-way 49.75%); full Exact coverage returns exactly 50%; any strict all-outcome positive portfolio would contradict expectation linearity | **REJECTED entire base-game additive guarantee class**; `research/h029_fixed_digit_games_impossibility.md`, `data/derived/h029_virginia_digit_base_ev.csv` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -149,14 +150,13 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - additional finite/final-draw games where **guaranteed external subsidy exceeds the H021 takeout hurdle**.
 - H020 live executable arbitrage: scanner ready; resume where raw books/settlement can be fetched.
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
+- H029b FIREBALL exact joint-outcome analysis remains open; H029 base digit-game class is closed.
 
 ## Current priorities
-1. Apply **H021–H028 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
-2. H020 live-data arbitrage if direct public raw-book access becomes available.
-3. H006/H007 only after reliable histories/machine metadata become available.
-4. H010/H014 when new authoritative data routes appear.
-5. H018 conditional-EV calibration if exact mechanics/live endpoint become recoverable.
-6. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products.
-
-## Rule for future work
-Every research packet must update this ledger or add a linked detailed note. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
+1. **H029b:** exact Virginia FIREBALL joint-outcome EV/guarantee screen; if every add-on wager remains <1 EV, close the full Pick 3/4/5 family by the same theorem.
+2. Apply **H021–H029 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+3. H020 live-data arbitrage if direct public raw-book access becomes available.
+4. H006/H007 only after reliable histories/machine metadata become available.
+5. H010/H014 when new authoritative data routes appear.
+6. H018 conditional-EV calibration if exact mechanics/live endpoint become recoverable.
+7. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products.
