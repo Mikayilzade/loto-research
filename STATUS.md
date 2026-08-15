@@ -1,6 +1,6 @@
 # STATUS
 
-Updated: 2026-08-12
+Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
@@ -13,6 +13,12 @@ Research runs in short packets. After every meaningful discovery or roughly 2–
 3. update this file when the strategic conclusion changes.
 
 This file is the authoritative handoff checkpoint. Read `START_HERE.md`, `PROJECT_RULES.md`, `RESEARCH_PLAN.md` and `AGENTS.md` before code work.
+
+## Permanent audit ledger
+User-requested master list of checked projects, test variants, failures, blockers and remaining classes:
+- `research/CHECKED_PROJECTS_AND_TESTS.md`
+
+Every future packet must update that ledger or add a new checked path.
 
 # Validated structural benchmark
 ## Cash WinFall
@@ -80,7 +86,7 @@ At 10m other 6/59 lines:
 
 Across 5m–15m lines, perfect uniqueness improves only the jackpot component by about **+5.65% to +17.57%** vs uniform. Exact-combination anti-popularity is useful protection, not standalone +EV.
 
-## NEW — lower-tier shared-pool sensitivity
+## Lower-tier shared-pool sensitivity
 For a shared category, let `lambda` be expected **other** winners conditional on our hit. With Poisson competitor count:
 
 `E[share] = (1-exp(-lambda))/lambda`.
@@ -96,19 +102,40 @@ For categories with many competitors, payout is approximately inverse to competi
 Thus lower-tier crowd optimization can have substantially larger percentage impact than exact jackpot anti-duplication **if** a pre-draw ticket construction can reliably reduce competitor intensity.
 
 ## H015 scientific bottleneck
-The mechanism and sensitivity are now clear. Missing piece:
+The mechanism and sensitivity are clear. Missing piece:
 - a crowd-choice model mapping our chosen line to expected competing-winner count in a target lower tier.
 
-Do **not** promote simplistic rules such as “take high numbers” to EV claims. Need a calibrated human-like vs random vs anti-crowd generator, then conditional simulations / out-of-sample validation.
+Do **not** promote simplistic rules such as “take high numbers” to EV claims. Need calibrated human-like vs random vs anti-crowd generator, then conditional simulations / out-of-sample validation.
 
 H015 status: **quantitatively promising as an overlay optimizer; not standalone +EV**.
+
+# H002 — Powerball progressive threshold: first hard floor
+File:
+- `research/powerball_progressive_threshold.md`
+
+Current US structure: $2 play, jackpot odds **1 in 292,201,338**, fixed lower tiers outside California.
+
+Exact fixed lower-tier EV from official current prize/odds chart:
+- **~$0.31987825 per $2 play**.
+
+Therefore, under deliberately favorable assumptions of **zero tax, zero sharing and full cash receipt**, the cash jackpot must exceed approximately:
+- **$490.934m cash value**
+
+just to reach break-even.
+
+This is an optimistic floor. Real break-even is higher once jackpot sharing, tax, sales response, jurisdiction and execution are modeled.
+
+Captured official July-29-2026 state ($663m advertised / $290.4m cash) was far below this floor, hence negative even before tax/sharing.
+
+H002 status: **testing; Powerball optimistic cash threshold baseline established**.
 
 # UK Lotto
 H016 Wednesday Must Be Won remains **inconclusive/materially weakened** after demand-response stress testing.
 
 # Safe next priorities
-1. Build the **H015 crowd-choice simulation framework** using parameterized human-bias inputs; keep calibration assumptions explicit.
-2. H010 registration-specific denominator if a new official data route appears.
-3. H014 4+4 state accounting when new archive/network tooling appears.
-4. Progressive jackpot / promotion thresholds.
-5. High-frequency RNG diagnostics only after reliable historical collection.
+1. Extend **H002** into real Powerball threshold curve with tax + sharing + sales response; then Mega Millions / EuroMillions.
+2. Build the **H015 crowd-choice simulation framework** using parameterized human-bias inputs; keep calibration assumptions explicit.
+3. H010 registration-specific denominator if a new official data route appears.
+4. H014 4+4 state accounting when new archive/network tooling appears.
+5. H004/H005/H006/H007/H008/H009/H011/H012 and additional games from the master ledger.
+6. High-frequency RNG diagnostics only after reliable historical collection.
