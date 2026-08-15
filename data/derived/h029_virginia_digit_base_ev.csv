@@ -1,0 +1,35 @@
+game,wager,gross_ev_per_dollar,status
+Pick 3,Exact,0.5000,negative
+Pick 3,Any Order 3-way,0.4800,negative
+Pick 3,Any Order 6-way,0.4800,negative
+Pick 3,50/50 3-way,0.4900,negative
+Pick 3,50/50 6-way,0.4900,negative
+Pick 3,Combo 3-way,0.5000,negative
+Pick 3,Combo 6-way,0.5000,negative
+Pick 3,Pair,0.5000,negative
+Pick 4,Exact,0.5000,negative
+Pick 4,Any Order 4-way,0.4800,negative
+Pick 4,Any Order 6-way,0.4800,negative
+Pick 4,Any Order 12-way,0.4800,negative
+Pick 4,Any Order 24-way,0.4800,negative
+Pick 4,50/50 4-way,0.4900,negative
+Pick 4,50/50 6-way,0.4900,negative
+Pick 4,50/50 12-way,0.4900,negative
+Pick 4,50/50 24-way,0.4900,negative
+Pick 4,Combo 4-way,0.5000,negative
+Pick 4,Combo 6-way,0.5000,negative
+Pick 4,Combo 12-way,0.5000,negative
+Pick 4,Combo 24-way,0.5000,negative
+Pick 5,Exact,0.5000,negative
+Pick 5,Any Order 5-way,0.5000,negative
+Pick 5,Any Order 10-way,0.5000,negative
+Pick 5,Any Order 20-way,0.5000,negative
+Pick 5,Any Order 30-way,0.4950,negative
+Pick 5,Any Order 60-way,0.4800,negative
+Pick 5,Any Order 120-way,0.4800,negative
+Pick 5,50/50 5-way,0.5000,negative
+Pick 5,50/50 10-way,0.5000,negative
+Pick 5,50/50 20-way,0.5000,negative
+Pick 5,50/50 30-way,0.4975,negative
+Pick 5,50/50 60-way,0.4900,negative
+Pick 5,50/50 120-way,0.4900,negative
