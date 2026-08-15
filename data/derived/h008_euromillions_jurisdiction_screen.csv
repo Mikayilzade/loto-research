@@ -1,0 +1,5 @@
+jurisdiction,posted_simple_line_price,currency,bundled_national_addon,direct_initial_prize_tax_anchor,terminal_guarantee_status,source
+Spain,2.50,EUR,"El Millon: one EUR1m winning code per draw in Spain","20% on portion above EUR40000; El Millon exemption EUR24000",rejected,https://www.loteriasyapuestas.es/es/centro-de-ayuda/como-se-juega/jugar-a-euromillones
+France,2.50,EUR,"My Million: one EUR1m winning code per draw in France","FDJ: gambling/lottery winnings not income-taxed as gambling income",rejected,https://www.fdj.fr/jeux-de-tirage/euromillions-my-million/comment-jouer
+Ireland,2.50,EUR,"Ireland Only Raffle: 10 x EUR5000 winners per draw","Irish Revenue lists lottery wins among exempt gains/receipts in cited tax contexts",rejected,https://www.lottery.ie/game-information/euromillions
+United Kingdom,2.50,GBP,"UK Millionaire Maker: GBP1m national prize category","National Lottery: no tax on initial lottery win",rejected,https://www.national-lottery.co.uk/games/euromillions
