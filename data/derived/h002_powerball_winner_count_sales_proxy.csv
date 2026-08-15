@@ -1,0 +1,5 @@
+draw_date,advertised_jackpot_m,cash_value_m,total_nonjackpot_winners,overall_odds_denominator,estimated_base_plays_m,estimated_share_factor,required_cash_no_tax_m,notes
+2026-06-20,300.0,135.8,579759,24.87,14.418606,0.975728469,503.145946,"Official national result page; pre-UK expansion"
+2026-07-08,435.0,195.0,511306,24.87,12.716180,0.978552953,501.693671,"Official national aggregate result page; pre-UK expansion"
+2026-07-25,613.0,268.4,1067515,24.87,26.549098,0.955915728,513.574376,"Official national result page; after UK sales launch; U.S. result-table coverage may not include UK lower-tier winners, so common-jackpot play count can be understated"
+2026-07-29,668.0,292.5,840242,24.87,20.896819,0.965079800,508.697647,"Official national aggregate result page; after UK sales launch; common-jackpot play count can exceed this proxy"
