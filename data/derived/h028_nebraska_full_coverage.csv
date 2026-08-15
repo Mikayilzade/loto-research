@@ -1,0 +1,6 @@
+game,scenario,full_space_cost,optimistic_cash_gross,return_ratio,guarantee_status,notes
+2by2,one normal draw,105625,40168,0.3802887573964497,rejected,"Free-ticket prizes valued at zero terminal cash; top/set prize reductions ignored"
+2by2,seven-draw qualifying package incl Double Tuesday,739375,321344,0.4346157227387997,rejected,"Six normal full-space draws plus one doubled Tuesday; still far below cost"
+MyDaY,worst legal winning date,36525,17580,0.4813141683778234,rejected,"Exact enumeration over all 36,525 valid MM-DD-YY combinations"
+MyDaY,best legal winning date,36525,21357,0.5847227926078029,rejected,"Even best payout geometry is below cost"
+Nebraska Pick 5,lower-tier cash only,658008,141050,0.2143590959380433,rejected_as_standalone_floor,"Jackpot excluded because external sharing has no useful pre-draw hard cap; sole-jackpot break-even hurdle is 516,958"
