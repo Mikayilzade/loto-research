@@ -34,6 +34,7 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | EuroMillions H008 cross-jurisdiction | Spain/France/Ireland/UK ticket price, bundled national raffle and tax treatment | material net-ticket differences exist | **EV difference VALIDATED; standalone guaranteed arbitrage REJECTED**; `research/h008_euromillions_cross_jurisdiction.md` |
 | **H021 general forced-distribution subsidy bound** | full-space forced payout / final-draw screen | necessary condition `B+E > (1-r)S + costs`; forced payout alone does not erase takeout | **VALIDATED necessary-condition theorem**; `src/loto_research/forced_distribution.py` |
 | **H021 Austrian Lotto+LottoPlus 2026 fixed-pool promo** | full 6/45 coverage with required €1.50 Lotto + €0.80 LottoPlus; 48%/45% payout shares; grant entire €1m promo as external subsidy | spend €18,733,638; optimistic own-funded return €8,796,664.80; takeout hurdle €9,936,973.20; after €1m subsidy still -€8,936,973.20 | **REJECTED promotion/full-space guarantee**; `data/derived/h021_forced_distribution_screen.csv` |
+| **H022 Irish Lotto 5-4-3-2-1** | buy every k-subset for k=1..5 in both 6-number and 7-number fixed-payout variants | current 47-ball deterministic full-space return only **48.89%–76.60%**; announced 45-ball sensitivity (holding payouts fixed) still max **80%** | **REJECTED guaranteed-profit full coverage**; `research/h022_irish_54321_full_coverage.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -138,7 +139,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. Apply **H021 subsidy hurdle** to additional current finite/final-draw/forced-distribution products; only deep-dive candidates that pass or approach the hurdle.
+1. Apply **H021/H022 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
 2. H020 live-data arbitrage if direct public raw-book access becomes available.
 3. H006/H007 only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
