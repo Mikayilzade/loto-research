@@ -68,6 +68,17 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H019 capped fixed-prize takeover** | buy every valid entry in one-winner capped competition | theorem: guarantee requires zero external entries, ability to own all entries, atomic closure, no unresolved free-entry channel, and fixed cash floor > full effective acquisition cost | **mechanism valid in principle; no current SUCCESS**; `research/h019_capped_fixed_prize_saturation.md` |
 | H019 current/recent UK screen | Coast/Hot Comps/7days/Urban Draw/UKCC examples | cash alternative / full-cap revenue only ~28.6%–53.3%; most also have personal caps/free postal routes/external entries | **REJECTED sampled instances**; `data/derived/h019_capped_competition_screen.csv` |
 
+## H020 lawful two-sided hedging / arbitrage
+| Venue / structure | Test | Result | Status |
+|---|---|---|---|
+| Smarkets + bookmaker | back one outcome, lay same outcome on exchange, include 2% commission | official educational examples reproduce equal positive profit on both branches once both legs are accepted; e.g. back 2.20 £200 / lay 1.98 gives **£20 either way** | **mechanism VALIDATED; no current live executable quote established**; `research/h020_two_sided_hedging_arbitrage.md` |
+| Complete-set dutching | exhaustive mutually exclusive outcomes | strict surebet iff `sum(1/O_i) < 1` after all costs | theorem implemented; `src/loto_research/two_sided_arb.py` |
+| Kalshi ordinary binary | buy both Yes and No | official matching mechanics make combined opposing participant investment `$1`; fees are nonnegative | **same-market structural buy-both arb REJECTED** |
+| Kalshi collateral return | mutually exclusive/directional linked positions | lowers collateral requirement when worst-case simultaneous loss is bounded | capital efficiency only; **not payout subsidy** |
+| Polymarket standard binary | acquire Yes+No and merge | `$1 pUSD` splits to 1 Yes+1 No and equal pair merges to `$1`; deterministic arb only if all-in pair acquisition cost `< $1` | condition VALIDATED, **no structural same-market profit** |
+| Polymarket negative risk | convert one No into Yes in all other mutually-exclusive outcomes | atomic capital-efficient conversion | not itself a profit subsidy; live mispricing only |
+| H020 terminal gate | current reproducible opportunity | requires all legs fully matched, exhaustive compatible settlement rules, net min payout > capital, fees/tax/FX/limits/void risk cleared | **OPEN; post-fill guarantee validated, pre-trade repeatable guarantee not yet established** |
+
 ## Crowd / sharing
 | Test | Result | Status |
 |---|---|---|
@@ -116,11 +127,11 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H014 Azerbaijan 4+4 zero-winner carryover: data-blocked.
 - H018 Lucky Contestant remains open only as a conditional-EV/data-acquisition overlay; standalone guarantee is closed.
 - additional finite/final-draw games where deterministic external subsidy or accumulated pool can exceed full acquisition cost.
-- lawful lottery-adjacent hedging/arbitrage where both sides can be locked at positive net payout.
+- **H020 live executable arbitrage:** search only where all prices/fees/settlement rules and both-side fillability can be verified.
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. **Lawful two-sided hedging/arbitrage** where both sides can be locked before outcome.
+1. **H020 live-data arbitrage acquisition gate** — verify a current complete-set cost below guaranteed payout only if both-side executable conditions can be established.
 2. **H012 additional finite/final-draw states** only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
 3. **H006/H007** only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
