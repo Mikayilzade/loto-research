@@ -77,6 +77,10 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Kalshi collateral return | mutually exclusive/directional linked positions | lowers collateral requirement when worst-case simultaneous loss is bounded | capital efficiency only; **not payout subsidy** |
 | Polymarket standard binary | acquire Yes+No and merge | `$1 pUSD` splits to 1 Yes+1 No and equal pair merges to `$1`; deterministic arb only if all-in pair acquisition cost `< $1` | condition VALIDATED, **no structural same-market profit** |
 | Polymarket negative risk | convert one No into Yes in all other mutually-exclusive outcomes | atomic capital-efficient conversion | not itself a profit subsidy; live mispricing only |
+| H020 fee-aware Polymarket gate | include current V2 fee `C*r*p*(1-p)` on both taker legs | near 0.50/0.50 raw pair must be below ~0.985 at r=.03, .980 at .04, .975 at .05, .965 at .07 before extra costs | **quantified; false-positive filter implemented**; `data/derived/h020_fee_aware_pair_thresholds.csv` |
+| H020 executable depth | walk both ask books and cap quantity at matched profitable depth | top-of-book `<1` can fail once deeper levels or fees are included; largest profitable depth solved at book breakpoints | **IMPLEMENTED**; `src/loto_research/live_complete_set.py`, `tests/test_live_complete_set.py` |
+| Kalshi crossed-book implication | derive market-buy YES+NO from bid-only complement book | complete-set cost `2-(best_yes_bid+best_no_bid)`; sub-$1 requires crossed `yes_bid+no_bid>1`, not structural subsidy | strengthened structural rejection |
+| H020 live API acquisition | current raw Gamma/CLOB books | official public interfaces verified, but this runtime could not retrieve arbitrary raw live payloads | **DATA/EXECUTION BLOCKED IN CURRENT RUNTIME; scanner ready** |
 | H020 terminal gate | current reproducible opportunity | requires all legs fully matched, exhaustive compatible settlement rules, net min payout > capital, fees/tax/FX/limits/void risk cleared | **OPEN; post-fill guarantee validated, pre-trade repeatable guarantee not yet established** |
 
 ## Crowd / sharing
@@ -127,12 +131,12 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H014 Azerbaijan 4+4 zero-winner carryover: data-blocked.
 - H018 Lucky Contestant remains open only as a conditional-EV/data-acquisition overlay; standalone guarantee is closed.
 - additional finite/final-draw games where deterministic external subsidy or accumulated pool can exceed full acquisition cost.
-- **H020 live executable arbitrage:** search only where all prices/fees/settlement rules and both-side fillability can be verified.
+- **H020 live executable arbitrage:** exact fee/depth scanner now implemented; resume live scan only where raw books and settlement definitions can be fetched.
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. **H020 live-data arbitrage acquisition gate** — verify a current complete-set cost below guaranteed payout only if both-side executable conditions can be established.
-2. **H012 additional finite/final-draw states** only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+1. **H012 additional finite/final-draw states** only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+2. **H020 live-data arbitrage** when direct public REST/WebSocket access is available; scanner is ready and should require real fillable depth + exact fees/settlement compatibility.
 3. **H006/H007** only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
 5. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
