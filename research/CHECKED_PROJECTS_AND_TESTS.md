@@ -37,6 +37,9 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H022 Irish Lotto 5-4-3-2-1** | buy every k-subset for k=1..5 in both 6-number and 7-number fixed-payout variants | current 47-ball deterministic full-space return only **48.89%–76.60%**; announced 45-ball sensitivity (holding payouts fixed) still max **80%** | **REJECTED guaranteed-profit full coverage**; `research/h022_irish_54321_full_coverage.md` |
 | **H023 UK Set For Life full-space** | buy every 5/47 + Life Ball/10 line at £1.50; value headline annuity at undiscounted nominal £3.6m | 15,339,390 lines; cost £23,009,085; deterministic nominal gross **£12,949,100 = 56.2782%**; top-prize cap can only worsen strict floor | **REJECTED guaranteed-profit full coverage**; `research/h023_uk_fixed_prize_full_coverage.md` |
 | **H023 UK Thunderball full-space** | buy every 5/39 + Thunderball/14 line at £1 | 8,060,598 lines; deterministic gross **£4,262,568 = 52.8815%** | **REJECTED guaranteed-profit full coverage**; `research/h023_uk_fixed_prize_full_coverage.md` |
+| **H024 UK Lotto HotPicks** | buy every k-subset for Pick 1–5 | deterministic return **41.95%–61.02%** | **REJECTED guaranteed-profit full coverage**; `research/h024_hotpick_daily_million_full_coverage.md` |
+| **H024 UK EuroMillions HotPicks** | buy every k-subset for Pick 1–5 | deterministic return **31.46%–66.67%** | **REJECTED guaranteed-profit full coverage**; `research/h024_hotpick_daily_million_full_coverage.md` |
+| **H024 Irish Daily Million** | buy all `C(39,6)=3,262,623` lines; grant our top line the full €1m despite sharing possibility | optimistic deterministic gross €1,786,800 = **54.7658%**; guaranteed pre-execution loss €1,475,823 | **REJECTED guaranteed-profit full coverage**; `research/h024_hotpick_daily_million_full_coverage.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -141,7 +144,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. Apply **H021/H022/H023 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+1. Apply **H021/H022/H023/H024 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
 2. H020 live-data arbitrage if direct public raw-book access becomes available.
 3. H006/H007 only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
