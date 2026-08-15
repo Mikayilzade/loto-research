@@ -1,109 +1,99 @@
 # Checked projects and test variants
 
 Updated: 2026-08-15
-Purpose: permanent audit trail of what has been tested, what worked, what failed, and what remains. Do not remove failed paths; append/revise status with evidence.
+Purpose: permanent audit trail. Do not remove failed paths; preserve enough detail to avoid repeating closed work.
 
-Completion criterion for the research program:
-1. find a reproducible, executable **guaranteed positive net-profit** strategy after all costs and outcome branches; OR
-2. exhaust the currently defensible project/edge classes and document why each fails or remains data-blocked.
+Completion criterion:
+1. find a reproducible executable **guaranteed positive net-profit** strategy after all costs/outcome branches; OR
+2. exhaust the defensible registered edge classes and document why each fails or remains blocked.
 
-Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
+Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 
-## Checked / active projects
+## Structural / progressive jackpot work
+| Project / mechanism | Test variant | Result | Status / evidence |
+|---|---|---|---|
+| Cash WinFall | May 9 2011 roll-down reconstruction | ~+10.69% expected ROI before tax/execution | historical +EV mechanism validated; `research/cash_winfall_benchmark.md` |
+| UK Lotto 2026 | two-round Must Be Won sampled state | ~£1.53/£2 on July 18 2026 sample | negative sampled state; `research/uk_lotto_regime_2026.md` |
+| UK Lotto | Wednesday Must-Be-Won calendar/demand hypothesis | demand uplift usually erodes initial cushion | materially weakened; H016 |
+| Kazakhstan 4/20 | zero-winner lower pools feed next superprize | identity reproduced on 3 transitions | validated mechanism; sampled state ~55% / negative; `research/kazakhstan_4x20_control.md` |
+| Powerball current | exact fixed lower-tier EV | ~$0.31987825 per $2 play | baseline validated; `research/powerball_progressive_threshold.md` |
+| Powerball H002 | no-tax/no-sharing cash break-even | ~$490.934m cash | quantitative threshold established |
+| Powerball H002 | sharing curve | threshold ~$512.2m at 25m other lines, ~$579.7m at 100m, ~$785.3m at 300m, ~$1.025bn at 500m | modeled; `src/loto_research/powerball_threshold.py` |
+| Powerball H002 | 2026 winner-count participation proxy | sampled ~12.7m–26.5m play scale; observed cash states far below break-even | sampled states negative; `research/h002_powerball_demand_proxy.md` |
+| Powerball full-space | all 292,201,338 combinations | cost ~$584.403m; deterministic lower-tier gross ~$93.469m | identity validated |
+| Powerball full-space guarantee | external jackpot sharing | no useful hard pre-draw cap on duplicate jackpot winners | **REJECTED terminal guarantee** |
+| **Mega Millions H002a current $5 format** | exact lower-tier EV in fixed-prize jurisdictions | **$1.1184749105 per $5 play**; expected built-in multiplier 3.0 | quantified; `research/h002a_megamillions_threshold.md` |
+| **Mega Millions H002a** | optimistic no-tax/no-sharing cash break-even | **$1,127,475,660 cash** | quantified; sampled 2025–2026 cash jackpots checked are far below |
+| **Mega Millions H002a** | sharing curve | ~$1.147bn at 10m other lines; $1.227bn at 50m; $1.333bn at 100m; $1.808bn at 300m | modeled; `data/derived/h002a_megamillions_sharing_threshold_curve.csv` |
+| **Mega Millions full-space** | all 290,472,336 combinations at $5 | cost **$1.45236168bn** | exact |
+| **Mega Millions full-space guarantee** | worst legal 2x non-jackpot multiplier assignment + jackpot sharing | deterministic non-jackpot floor **$216.59068m**; sole-jackpot cash needed **$1.235771bn**; external jackpot-winner count unbounded by useful pre-draw rule | **REJECTED terminal guarantee**; `src/loto_research/megamillions_threshold.py` |
 
-| Project / mechanism | Test variant | Result | Status | Main evidence |
-|---|---|---|---|---|
-| Cash WinFall | historical roll-down, May 9 2011 cash-only EV | +10.69% expected ROI before tax/execution | validated historical +EV mechanism; not current guarantee | `research/cash_winfall_benchmark.md` |
-| Azerbaijan Beşdə 5 | exact probability + full displayed prize-table EV | ~53.56% gross return upper-bound | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
-| Azerbaijan Beşdə 5 | full-space buy every 5-of-36 combination | 376,992 AZN cost; deterministic gross 201,900 AZN even assuming full 50k jackpot and ignoring tax/sharing | REJECTED as guaranteed-profit coverage | `research/h012_full_space_coverage.md` |
-| Azerbaijan Super Keno | base 1-AZN table EV | ~59.86% gross return | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
-| Azerbaijan Super Keno | 1x/2x/5x/10x multiplier economics | proportional stake/payout; after-tax ROI slightly worsens as multiplier rises | no multiplier edge | `research/superkeno_multiplier_economics.md` |
-| Azerbaijan ONLOTO | full-space coverage bet types 1–10 | exact deterministic gross-return range ~76.59%–78.00% | REJECTED as guaranteed-profit coverage | `research/h012_full_space_coverage.md` |
-| H012a/H004 generic linear theorem | arbitrary additive wheel/partial covering/multi-ticket portfolio with EV≤0 tickets | strict all-outcome positive profit would imply positive EV, contradiction | REJECTED guarantee class under linear assumptions | `research/h012a_linear_portfolio_impossibility.md` |
-| H005 generic system packaging | system/bundle merely aggregates constituent variants at additive price/payout | does not break linear theorem | REJECTED unless genuine price/payout nonlinearity exists | `research/h005_nonlinear_overlay_screen.md` |
-| H005 Australia Oz Lotto System 8 | 8 constituent games cost AUD 13.20; standard games cost AUD 1.65 each | exact constituent-linear price; no discount | REJECTED nonlinear-pricing edge | `research/h005_system_pricing_screen_2026-08-15.md` |
-| H005 Poland Lotto system packaging | System 7–12 explicitly consists of all underlying simple six-number bets | no verified below-constituent discount recovered; payout multiplication comes from constituent wins | no nonlinear edge established | `research/h005_system_pricing_screen_2026-08-15.md` |
-| H005 Poland fractional coupons | full underlying ticket must be paid before fractions issued; prize merely split by share | capital-sharing only, no total-cost reduction/arbitrage | REJECTED pricing arbitrage | same note |
-| H005 Poland current 13→12 PLN Quick Pick bundle | deterministic ~7.69% reference-price discount on 3-bet/1-draw bundle | real discount, but all-lines-losing outcome keeps payout floor at 0 while cash cost is 12 PLN | REJECTED as guaranteed-profit strategy; useful EV discount only | same note |
-| H005 random extra prize layer | second-chance/promotional draw with legal zero-prize outcome | cannot repair negative base floor in every outcome | REJECTED as standalone guarantee | `research/h005_nonlinear_overlay_screen.md` |
-| H005 nonwithdrawable free-play credit | bonus/rebate must be replayed and replay can lose | guaranteed cash value can be zero | REJECTED as standalone cash guarantee absent coverage | same note |
-| H005 deterministic cashback filter | base cost C, floor F, withdrawable cashback B | guarantee requires F+B>C after all costs | necessary-condition filter established | same note |
-| Lotto.com promotion archetype | first-order all-losing second chance, non-payable credit capped at $10 | state-dependent subsidy but terminal replay can lose; winning-but-subcost branch may receive no credit | REJECTED as guaranteed cash-profit offer | same note |
-| Georgia Lottery July 2026 deposit match | 50% bonus up to $125 for never-deposit users, lottery-only/nonwithdrawable | real subsidy but expired by 2026-08-15 and no guaranteed cash conversion | not executable / no guarantee | `research/h009_current_deterministic_subsidy_screen_2026-08-15.md` |
-| Azerbaijan promotional lotteries | Kia Qızıl Açar / ABB Şanslı Fərdi Sahibkar | entries may have near-zero marginal cost if underlying purchase/action already desired, but no-prize outcome remains | positive incremental EV possible; not guarantee | `research/h005_nonlinear_overlay_screen.md` |
-| H009 Azerlotereya active-campaign index | official current-campaign page on checkpoint says no current campaign | no deterministic subsidy available from current index | SCREENED/CLOSED for checkpoint | `research/h009_current_deterministic_subsidy_screen_2026-08-15.md` |
-| H009 Azerlotereya 10-play/10-bonus | landing page says through Aug 31 but is labeled past; FAQ says Apr 14–Jul 31; current index says no campaign | `STALE-CONFLICT`; cannot treat as executable; even hypothetical 10-AZN bonus does not prove all-outcome profit | REJECTED as current proven guarantee | same note |
-| H009 Virginia new-player bonus games | >=$10 first deposit yields bonus games; promo value generally nonwithdrawable, only prizes withdrawable, Virginia geolocation required | random free-play branch can lose completely | REJECTED standalone guarantee | same note |
-| H009 New York NYL+ | eligible tickets earn points / exclusive games / second-chance entries | no verified deterministic withdrawable cash floor in current screen | no guarantee candidate | same note |
-| H009 Florida current Bonus Play | current portal lists bonus-play promotions | promotional chance/drawing retains no-prize branch | REJECTED standalone guarantee | same note |
-| H009 stale-promotion control | landing page date conflicts with official current index/FAQ | classify as `STALE-CONFLICT`; require consistent index+terms+dates or direct operator confirmation | validation rule established | same note |
-| Azerbaijan 4+4 | exact combinatorics | jackpot 1/23,474,025; any listed prize ~18.61% | validated math | `research/4plus4_baseline.md` |
-| Azerbaijan 4+4 | draw-level payout-engine reconstruction | III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U | strongly reproduced | `research/4plus4_economics_inference.md` |
-| Azerbaijan 4+4 | zero-winner II–VI carryover | potentially material; adjacent-state proof unavailable | testing/data-blocked | H014 |
-| Azerbaijan 4+4 | single 5+5 system guarantee | legal 0+0 draw outcomes exist | REJECTED | `research/h012_full_space_coverage.md` |
-| Azerbaijan 4+4 | single 6+6 system guarantee | legal 0+0 draw outcomes exist | REJECTED | same note |
-| Azerbaijan 4+4 | full-space / buy-the-pot | exact theorem needs authoritative pricing + II/carryover + pool response/sharing | BLOCKED | same note |
-| Kazakhstan 4/20 | zero-winner lower-pool -> next superprize transition | exact identity reproduced on 3 transitions | validated active mechanism | `research/kazakhstan_4x20_control.md` |
-| Kazakhstan 4/20 | sampled-state EV | ~55% return; break-even superprize ~3.395bn KZT vs ~227m | sampled state negative | same note |
-| UK Lotto 2026 | two-round Must Be Won | July 18 2026 sampled state ~£1.53/£2 | negative sampled state | `research/uk_lotto_regime_2026.md` |
-| UK Lotto | Wednesday Must Be Won calendar edge | demand uplift usually exceeds break-even cushion | materially weakened | H016 |
-| H015 anti-crowd standalone | unpopular selection without coverage/overlay | losing outcomes remain | REJECTED guarantee path | `research/h015_crowd_model_framework.md` |
-| H015 crowd-sharing | lower-tier competitor-intensity optimization | potentially useful when layered on structural +EV state | validated mechanism / target calibration pending | H015 notes |
-| Azerbaijan Poz-Qazan | initial-series after-tax EV | sampled games ~63–70% | ordinary initial states negative | `research/poz_qazan_remaining_prize_edge.md` |
-| Azerbaijan Poz-Qazan | remaining-prize conditional EV | live registration-specific denominator unavailable | data-blocked | H010 |
-| Powerball US 2026 | fixed lower-tier EV + absolute optimistic cash threshold | `EV_lower≈$0.31987825`; no-tax/no-sharing cash break-even **$490.934m** | baseline validated | `research/powerball_progressive_threshold.md` |
-| Powerball H002 sharing curve | exact binomial expected jackpot share vs other-ticket count | no-tax cash threshold rises to ~$512.2m at 25m other lines, ~$579.7m at 100m, ~$785.3m at 300m, ~$1.025bn at 500m | quantitative threshold model implemented | `src/loto_research/powerball_threshold.py`; `data/derived/h002_powerball_sharing_threshold_curve.csv` |
-| Powerball H002 tax/withholding sensitivity | generic retained-jackpot fractions incl. 24% and 30% haircuts | thresholds rise materially; columns are sensitivity only, not universal final tax rates | quantitative filter implemented | `research/powerball_progressive_threshold.md` |
-| Powerball 2026 winner-count sales proxy | official aggregate winner counts × overall odds denominator 24.87 | sampled ~12.7m–26.5m play-scale; sharing-only break-even ~$501.7m–$513.6m vs observed cash $135.8m–$292.5m | sampled 2026 states conclusively negative; proxy noisy | `research/h002_powerball_demand_proxy.md`; `data/derived/h002_powerball_winner_count_sales_proxy.csv` |
-| Powerball full-space buy-the-pot | buy all 292,201,338 combos at $2 | cost $584.403m; deterministic lower-tier gross ~$93.469m; ideal no-sharing jackpot break-even again $490.934m | identity validated | `research/powerball_progressive_threshold.md` |
-| Powerball full-space guarantee | account for external jackpot-sharing tickets | sufficient jackpot scales as ~$490.934m×(K+1) if a hard cap K on external jackpot winners exists; no useful rule-based pre-draw K cap | **REJECTED as current terminal guarantee candidate**; execution scale also extreme | same note |
+## Azerbaijan / finite-space coverage
+| Project | Test | Result | Status |
+|---|---|---|---|
+| Beşdə 5 | exact displayed-table EV | ~53.56% gross | negative |
+| Beşdə 5 | buy every 5/36 combination | 376,992 AZN cost vs deterministic gross 201,900 AZN under favorable assumptions | **REJECTED guarantee**; `research/h012_full_space_coverage.md` |
+| Super Keno | base EV | ~59.86% gross | negative |
+| Super Keno | 1x/2x/5x/10x | proportional stake/prize; larger multiplier slightly worse after tax | no multiplier edge |
+| ONLOTO | full-space coverage types 1–10 | deterministic gross ~76.59%–78.00% | **REJECTED guarantee** |
+| 4+4 | exact combinatorics | jackpot 1/23,474,025; any listed prize ~18.61% | validated math |
+| 4+4 | payout-engine reconstruction | III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U | strongly reproduced |
+| 4+4 | zero-winner II–VI carryover | potentially material | testing / data-blocked H014 |
+| 4+4 | single 5+5 or 6+6 system | legal 0+0 outcomes exist | **REJECTED guarantee** |
+| 4+4 | full-space buy-the-pot | exact theorem needs authoritative pricing + II/carryover + pool response/sharing | BLOCKED |
+| Poz-Qazan | sampled initial after-tax EV | ~63–70% | ordinary states negative |
+| Poz-Qazan | remaining-prize conditional EV | live registration-specific denominator unavailable | data-blocked H010 |
 
-## Hypothesis classes not yet fully tested
+## Portfolio / systems / promotions
+| Class / example | Result | Status |
+|---|---|---|
+| H012a/H004 additive wheels/partial covering | strict all-outcome positive profit would imply positive EV when all constituent tickets have EV≤0 | **REJECTED under linear assumptions**; `research/h012a_linear_portfolio_impossibility.md` |
+| H005 generic system packaging | additive constituent pricing/payout cannot break linear theorem | REJECTED unless genuine nonlinearity |
+| Australia Oz Lotto System 8 | 8 games × AUD1.65 = AUD13.20 system price | no discount / REJECTED |
+| Poland Lotto systems 7–12 | constituent simple bets; no verified acquisition arbitrage | no nonlinear edge |
+| Poland fractional coupons | full underlying ticket paid first, prize split | capital sharing only / REJECTED |
+| Poland current 13→12 PLN Quick Pick bundle | real ~7.69% deterministic discount but zero-payout outcome remains | **REJECTED guarantee**, EV discount only |
+| Random second chance / extra draw | no-prize branch remains | REJECTED standalone guarantee |
+| Nonwithdrawable replay/free-play credit | terminal replay can lose | REJECTED standalone cash guarantee |
+| Deterministic cashback filter | guarantee requires payout floor + withdrawable cashback > cost | necessary-condition filter established |
+| Georgia Lottery July 2026 deposit match | 50% up to $125, nonwithdrawable/lottery-only; expired by checkpoint | no executable guarantee |
+| Azerlotereya current campaign index | no current deterministic subsidy on checkpoint | screened/closed for checkpoint |
+| Azerlotereya stale 10-play/10-bonus page | conflicting dates/index; even hypothetical bonus lacks all-outcome proof | stale-conflict / REJECTED current guarantee |
+| Virginia new-player bonus games | random bonus games; geofenced; bonus value not guaranteed cash | REJECTED guarantee |
+| New York NYL+ | points/second-chance; no deterministic withdrawable cash floor verified | no guarantee candidate |
+| Florida Bonus Play | chance-based promotion | REJECTED standalone guarantee |
+| Azerbaijan purchase-linked promo lotteries | near-zero marginal entry cost possible if purchase already desired, but no-prize outcome | not guarantee |
 
-### Current priority
-- **H002a: Mega Millions current $5 format** — exact lower-tier EV, sharing/tax threshold, full-space guarantee bound.
-- **H002b: EuroMillions** — cap/rolldown, price/tax/claim differences, sharing and guarantee bound.
-- H008: cross-jurisdiction lawful pricing/tax/payout differences, especially US vs UK Powerball.
-- H012: finite/final-draw states only where accumulated pool/subsidy breaks ordinary negative economics.
-- H012b: execution limits for any candidate that survives economics.
-- H005/H009: revisit only if an unusually large deterministic refund/discount or nonzero guaranteed payout floor appears.
+## Crowd / sharing
+| Test | Result | Status |
+|---|---|---|
+| Exact jackpot anti-popularity | reduces expected splitting but only conditional on win | validated optimizer, not standalone guarantee |
+| Lower-tier shared-pool competitor intensity | can materially improve shared payout if calibrated | mechanism promising / calibration pending |
+| Human choice biases: low/birthday, lucky/salient, sequences, visual patterns, representative spacing, form-position | documented in large real-ticket datasets | validated mechanism class |
+| Synthetic crowd simulator | implemented conditional competitor-intensity estimation | implementation validated |
+| Empirical Dutch anchor | 7/11 over-selected, 37/38 under-selected; visual pattern class ~100× random | sensitivity anchor only |
+| Anti-crowd standalone guarantee | losing outcomes remain regardless of sharing optimization | **REJECTED terminal guarantee** |
 
-### Progressive / structural payout states
-- H002 Powerball: broader clean national sales/demand anchors may improve positive-EV threshold estimation, but **full-space guarantee path is now closed absent a guaranteed external-winner cap**.
-- H002a Mega Millions current $5 format.
-- H002b EuroMillions jackpot cap/rolldown and country-specific tax/claim rules.
-- H008 cross-jurisdiction differences.
-
-### Randomness / implementation
-- H006: physical draw bias with multiple-testing controls.
-- H007: high-frequency RNG anomaly tests and causal implementation subtests.
-
-### Instant tickets
-- H010: registration-specific remaining-ticket denominator.
-- H010b: lawful observable pack-state depletion.
-- H011: lawful visible pre-purchase information leak / official pack sequencing only.
-
-### Advanced controls before EXHAUSTED
-- Bayesian latent-state estimation for hidden sales/carryover/crowd intensity.
-- Genetic/evolutionary search only for nonlinear payout portfolios.
-- ML crowd prediction and strictly out-of-sample RNG tests.
-- Cross-product lawful lottery-adjacent arbitrage/hedging.
-- Additional current lotteries and lottery-like products outside initial catalog.
-
-## Permanent controls / rejected standalone edges
-- hot/cold or due numbers; numerology; martingale;
+## Randomness / predictive controls
+Permanent rejected standalone ideas unless extraordinary forward evidence appears:
+- hot/cold or “due” numbers;
+- gambler's fallacy / numerology;
+- martingale / staking progression on negative EV;
 - in-sample ML;
-- number systems that do not alter probabilities/sharing;
-- blind brute force;
-- anti-crowd selection alone;
-- ordinary additive wheels/coverings;
-- ordinary system packages with constituent-linear pricing;
-- syndicate/fractional-ticket splitting that does not reduce full-ticket acquisition cost;
-- modest deterministic discounts on portfolios with legal zero-return outcomes;
-- random promotional entry alone;
-- nonwithdrawable free-play face value treated as cash;
-- stale campaign landing pages treated as live without current-index/rule consistency;
-- Powerball full-space guarantee that assumes sole jackpot ownership without a guaranteed external-winner cap.
+- number systems that do not alter draw probability or payout sharing;
+- blind brute force.
+
+Still open:
+- H006 physical-machine/ball bias with strict multiple-testing and regime controls;
+- H007 high-frequency RNG anomaly tests with reliable histories and causal implementation subtests.
+
+## Current priorities
+1. **H002b EuroMillions** — exact cap/rolldown economics, country price/tax/claim differences, sharing and full-space bound.
+2. **H008 cross-jurisdiction** — lawful price/tax/payout differences, especially common-jackpot products.
+3. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+4. H010/H014 when new authoritative data routes appear.
+5. H006/H007 after reliable histories are collected.
+6. Advanced controls before EXHAUSTED: Bayesian hidden-state estimation, nonlinear portfolio optimization only where nonlinearity exists, strict out-of-sample ML/RNG tests, lawful lottery-adjacent arbitrage/hedging, additional current products.
 
 ## Rule for future work
-Every new research packet must add/update this ledger. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
+Every research packet must update this ledger or add a linked detailed note. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
