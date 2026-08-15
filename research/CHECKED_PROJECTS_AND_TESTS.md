@@ -22,11 +22,14 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Powerball H002 | 2026 winner-count participation proxy | sampled ~12.7m–26.5m play scale; observed cash states far below break-even | sampled states negative; `research/h002_powerball_demand_proxy.md` |
 | Powerball full-space | all 292,201,338 combinations | cost ~$584.403m; deterministic lower-tier gross ~$93.469m | identity validated |
 | Powerball full-space guarantee | external jackpot sharing | no useful hard pre-draw cap on duplicate jackpot winners | **REJECTED terminal guarantee** |
-| **Mega Millions H002a current $5 format** | exact lower-tier EV in fixed-prize jurisdictions | **$1.1184749105 per $5 play**; expected built-in multiplier 3.0 | quantified; `research/h002a_megamillions_threshold.md` |
-| **Mega Millions H002a** | optimistic no-tax/no-sharing cash break-even | **$1,127,475,660 cash** | quantified; sampled 2025–2026 cash jackpots checked are far below |
-| **Mega Millions H002a** | sharing curve | ~$1.147bn at 10m other lines; $1.227bn at 50m; $1.333bn at 100m; $1.808bn at 300m | modeled; `data/derived/h002a_megamillions_sharing_threshold_curve.csv` |
-| **Mega Millions full-space** | all 290,472,336 combinations at $5 | cost **$1.45236168bn** | exact |
-| **Mega Millions full-space guarantee** | worst legal 2x non-jackpot multiplier assignment + jackpot sharing | deterministic non-jackpot floor **$216.59068m**; sole-jackpot cash needed **$1.235771bn**; external jackpot-winner count unbounded by useful pre-draw rule | **REJECTED terminal guarantee**; `src/loto_research/megamillions_threshold.py` |
+| Mega Millions H002a current $5 format | exact lower-tier EV in fixed-prize jurisdictions | $1.1184749105 per $5 play; expected built-in multiplier 3.0 | quantified; `research/h002a_megamillions_threshold.md` |
+| Mega Millions H002a | optimistic no-tax/no-sharing cash break-even | $1,127,475,660 cash | quantified; sampled 2025–2026 cash jackpots checked are far below |
+| Mega Millions H002a | sharing curve | ~$1.147bn at 10m other lines; $1.227bn at 50m; $1.333bn at 100m; $1.808bn at 300m | modeled; `data/derived/h002a_megamillions_sharing_threshold_curve.csv` |
+| Mega Millions full-space | all 290,472,336 combinations at $5 | cost $1.45236168bn | exact |
+| Mega Millions full-space guarantee | worst legal 2x non-jackpot multiplier assignment + jackpot sharing | deterministic non-jackpot floor $216.59068m; sole-jackpot cash needed $1.235771bn; external jackpot-winner count unbounded by useful pre-draw rule | **REJECTED terminal guarantee**; `src/loto_research/megamillions_threshold.py` |
+| **EuroMillions H002b current** | current 5/50 + 2/12; €2.50 Spain price; cap €250m | full combination space **139,838,160**, full-space cost **€349,595,400** | quantified; `research/h002b_euromillions_cap_rolldown.md` |
+| **EuroMillions H002b terminal cap rolldown** | attempt to buy full space on terminal €250m cap draw | full coverage necessarily contains the realized 5+2 winner, so the required no-jackpot-winner condition for rolldown cannot occur | **REJECTED terminal guarantee by incompatibility theorem** |
+| **EuroMillions H002b sharing** | full/partial coverage under shared main-game pools | full coverage costs €99.5954m more than jackpot cap before lower tiers; external winning-bet counts have no useful pre-draw hard cap; partial coverage leaves uncovered outcomes | **REJECTED terminal guarantee**; code `src/loto_research/euromillions_coverage.py` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -88,12 +91,11 @@ Still open:
 - H007 high-frequency RNG anomaly tests with reliable histories and causal implementation subtests.
 
 ## Current priorities
-1. **H002b EuroMillions** — exact cap/rolldown economics, country price/tax/claim differences, sharing and full-space bound.
-2. **H008 cross-jurisdiction** — lawful price/tax/payout differences, especially common-jackpot products.
-3. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
-4. H010/H014 when new authoritative data routes appear.
-5. H006/H007 after reliable histories are collected.
-6. Advanced controls before EXHAUSTED: Bayesian hidden-state estimation, nonlinear portfolio optimization only where nonlinearity exists, strict out-of-sample ML/RNG tests, lawful lottery-adjacent arbitrage/hedging, additional current products.
+1. **H008 cross-jurisdiction** — lawful price/tax/payout differences for the same EuroMillions common jackpot and other shared-jackpot products.
+2. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+3. H010/H014 when new authoritative data routes appear.
+4. H006/H007 after reliable histories are collected.
+5. Advanced controls before EXHAUSTED: Bayesian hidden-state estimation, nonlinear portfolio optimization only where nonlinearity exists, strict out-of-sample ML/RNG tests, lawful lottery-adjacent arbitrage/hedging, additional current products.
 
 ## Rule for future work
 Every research packet must update this ledger or add a linked detailed note. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
