@@ -4,6 +4,8 @@ from loto_research.full_space import (
     fixed_match_full_coverage,
     full_space_match_counts,
     ordered_last_hit_full_coverage,
+    two_board_system_variant_count,
+    two_board_zero_zero_outcome_count,
 )
 
 
@@ -63,6 +65,18 @@ class FullSpaceCoverageTests(unittest.TestCase):
         self.assertEqual(variants, 10_272_278_170)
         self.assertEqual(gross, 7_938_231_510.0)
         self.assertAlmostEqual(roi, 0.7727819845439408, places=12)
+
+    def test_4plus4_5plus5_contains_25_base_variants_but_has_zero_return_draws(self):
+        self.assertEqual(two_board_system_variant_count(5), 25)
+        zero_zero = two_board_zero_zero_outcome_count(20, 4, 5)
+        self.assertEqual(zero_zero, 1_863_225)
+        self.assertGreater(zero_zero, 0)
+
+    def test_4plus4_6plus6_contains_225_base_variants_but_has_zero_return_draws(self):
+        self.assertEqual(two_board_system_variant_count(6), 225)
+        zero_zero = two_board_zero_zero_outcome_count(20, 4, 6)
+        self.assertEqual(zero_zero, 1_002_001)
+        self.assertGreater(zero_zero, 0)
 
 
 if __name__ == "__main__":
