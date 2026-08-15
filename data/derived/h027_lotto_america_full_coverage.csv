@@ -1,0 +1,6 @@
+scenario,lines,cost,nonjackpot_gross,jackpot_value,total_gross,gross_return,deficit,notes
+base_fixed_only,25989600,25989600,6991428,0,6991428,0.2690086804,18998172,deterministic non-jackpot gross before pari-mutuel reduction
+base_july18_2026_cash_full_share,25989600,25989600,6991428,15154248,22145676,0.8520976083,3843924,optimistic full cash jackpot with no external sharing or lower-tier reduction
+base_break_even_sole_winner_hurdle,25989600,25989600,6991428,18998172,25989600,1.0,0,minimum sole-winner cash jackpot before tax execution sharing or lower-tier reduction
+asb_worst_2x_fixed_only,25989600,51979200,13982856,0,13982856,0.2690086804,37996344,all lines buy $1 ASB; worst legal multiplier 2x; jackpot unchanged
+asb_break_even_sole_winner_hurdle,25989600,51979200,13982856,37996344,51979200,1.0,0,minimum sole-winner cash jackpot in worst 2x ASB state before other costs
