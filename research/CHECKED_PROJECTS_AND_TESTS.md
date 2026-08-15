@@ -30,8 +30,7 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | EuroMillions H002b current | current 5/50 + 2/12; €2.50 Spain price; cap €250m | full combination space **139,838,160**, full-space cost **€349,595,400** | quantified; `research/h002b_euromillions_cap_rolldown.md` |
 | EuroMillions H002b terminal cap rolldown | attempt to buy full space on terminal €250m cap draw | full coverage necessarily contains the realized 5+2 winner, so the required no-jackpot-winner condition for rolldown cannot occur | **REJECTED terminal guarantee by incompatibility theorem** |
 | EuroMillions H002b sharing | full/partial coverage under shared main-game pools | full coverage costs €99.5954m more than jackpot cap before lower tiers; external winning-bet counts have no useful pre-draw hard cap; partial coverage leaves uncovered outcomes | **REJECTED terminal guarantee**; code `src/loto_research/euromillions_coverage.py` |
-| **EuroMillions H008 cross-jurisdiction** | Spain/France/Ireland/UK ticket price, bundled national raffle and tax treatment | ES/FR/IE list €2.50 line; UK £2.50. National add-ons differ. Spain taxes 20% of qualifying prize portion above €40k; FR/UK initial lottery wins not income-taxed per operator material; IE Revenue lists lottery wins among exempt gains/receipts | **material EV difference VALIDATED; standalone guaranteed arbitrage REJECTED**; `research/h008_euromillions_cross_jurisdiction.md` |
-| EuroMillions H008 France vs Spain main-game | same €2.50 posted price, same common draw, large-prize operator tax difference | for common main-game prizes >€40k, France strictly dominates Spain on operator-level net payout subject to lawful access/personal-tax caveat; €250m Spanish sole-prize net ≈€200.008m | valuation edge validated, not guarantee |
+| **EuroMillions H008 cross-jurisdiction** | Spain/France/Ireland/UK ticket price, bundled national raffle and tax treatment | material net-ticket differences exist | **EV difference VALIDATED; standalone guaranteed arbitrage REJECTED**; `research/h008_euromillions_cross_jurisdiction.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -54,30 +53,37 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 |---|---|---|
 | H012a/H004 additive wheels/partial covering | strict all-outcome positive profit would imply positive EV when all constituent tickets have EV≤0 | **REJECTED under linear assumptions**; `research/h012a_linear_portfolio_impossibility.md` |
 | H005 generic system packaging | additive constituent pricing/payout cannot break linear theorem | REJECTED unless genuine nonlinearity |
-| Australia Oz Lotto System 8 | 8 games × AUD1.65 = AUD13.20 system price | no discount / REJECTED |
-| Poland Lotto systems 7–12 | constituent simple bets; no verified acquisition arbitrage | no nonlinear edge |
+| Australia Oz Lotto System 8 | no discount | REJECTED |
+| Poland Lotto systems 7–12 | constituent simple bets | no nonlinear edge |
 | Poland fractional coupons | full underlying ticket paid first, prize split | capital sharing only / REJECTED |
 | Poland current 13→12 PLN Quick Pick bundle | real ~7.69% deterministic discount but zero-payout outcome remains | **REJECTED guarantee**, EV discount only |
 | Random second chance / extra draw | no-prize branch remains | REJECTED standalone guarantee |
 | Nonwithdrawable replay/free-play credit | terminal replay can lose | REJECTED standalone cash guarantee |
 | Deterministic cashback filter | guarantee requires payout floor + withdrawable cashback > cost | necessary-condition filter established |
-| Georgia Lottery July 2026 deposit match | 50% up to $125, nonwithdrawable/lottery-only; expired by checkpoint | no executable guarantee |
-| Azerlotereya current campaign index | no current deterministic subsidy on checkpoint | screened/closed for checkpoint |
-| Azerlotereya stale 10-play/10-bonus page | conflicting dates/index; even hypothetical bonus lacks all-outcome proof | stale-conflict / REJECTED current guarantee |
+| Georgia Lottery July 2026 deposit match | nonwithdrawable/lottery-only; expired | no executable guarantee |
+| Azerlotereya current campaign index | no current deterministic subsidy at checkpoint | screened/closed for checkpoint |
 | Virginia new-player bonus games | random bonus games; geofenced; bonus value not guaranteed cash | REJECTED guarantee |
 | New York NYL+ | points/second-chance; no deterministic withdrawable cash floor verified | no guarantee candidate |
 | Florida Bonus Play | chance-based promotion | REJECTED standalone guarantee |
-| Azerbaijan purchase-linked promo lotteries | near-zero marginal entry cost possible if purchase already desired, but no-prize outcome | not guarantee |
 
 ## Crowd / sharing
 | Test | Result | Status |
 |---|---|---|
 | Exact jackpot anti-popularity | reduces expected splitting but only conditional on win | validated optimizer, not standalone guarantee |
 | Lower-tier shared-pool competitor intensity | can materially improve shared payout if calibrated | mechanism promising / calibration pending |
-| Human choice biases: low/birthday, lucky/salient, sequences, visual patterns, representative spacing, form-position | documented in large real-ticket datasets | validated mechanism class |
-| Synthetic crowd simulator | implemented conditional competitor-intensity estimation | implementation validated |
-| Empirical Dutch anchor | 7/11 over-selected, 37/38 under-selected; visual pattern class ~100× random | sensitivity anchor only |
+| Human choice biases | documented in large real-ticket datasets | validated mechanism class |
+| Synthetic crowd simulator | conditional competitor-intensity estimation implemented | implementation validated |
 | Anti-crowd standalone guarantee | losing outcomes remain regardless of sharing optimization | **REJECTED terminal guarantee** |
+
+## H011 visible pre-purchase information
+| Channel | Result | Status |
+|---|---|---|
+| NY exposed scratch-ticket serial | separate `SCRATCH TO CASH` credential is under scratch area; no official pre-purchase serial→prize decoder found | **REJECTED as validated lawful decoder** |
+| Virginia front-barcode scan | official flow is purchase first; scanning an owned unplayed ticket can reveal winner/nonwinner | **POST-PURCHASE only; REJECTED for pre-purchase guarantee** |
+| Public scratch remaining-prize tables | game-level prize state, no unsold-ticket identity/location mapping | no deterministic ticket leak; overlaps H010 |
+| Pack/ticket number or retailer location | no current official causal mapping to prize; current NY material says prizes randomly distributed | no validated current edge |
+| Ordinary online instant games | outcome status follows paid play; demo has no cash entitlement | no pre-purchase outcome leak |
+| **H018 Virginia Lucky Contestant time-state** | operator publishes hidden daily target-time distribution and odds ramp to **1 in 1 at selected time**; target time itself is hidden | **NEW HIGH-PRIORITY state-dependent lead, not guarantee**; `research/h011_visible_prepurchase_information.md` |
 
 ## Randomness / predictive controls
 Permanent rejected standalone ideas unless extraordinary forward evidence appears:
@@ -94,17 +100,17 @@ Still open:
 
 ## Other still-open / blocked classes
 - H010 remaining-inventory instant-ticket state: blocked on public live denominator.
-- H011 lawful visible pre-purchase ticket information leak: untested.
 - H014 Azerbaijan 4+4 zero-winner carryover: data-blocked.
-- additional finite/final-draw games where a deterministic external subsidy or accumulated pool can exceed full acquisition cost.
-- lawful lottery-adjacent hedging/arbitrage where both sides of an outcome can be locked at positive net payout.
+- H018 Virginia Lucky Contestant hidden-time/survival-state EV model.
+- additional finite/final-draw games where deterministic external subsidy or accumulated pool can exceed full acquisition cost.
+- lawful lottery-adjacent hedging/arbitrage where both sides can be locked at positive net payout.
 
 ## Current priorities
-1. **H011 visible-ticket/pre-purchase information leakage** — search for lawful deterministic or strongly predictive information available before purchase; reject quickly if no observable causal channel exists.
+1. **H018 Lucky Contestant time-state model** — derive posterior target-time hazard from published prior and jackpot-survival state; determine whether any observable time/state can become +EV and whether any all-outcome hedge is possible.
 2. **H006/H007 randomness branches** — obtain reliable histories and run strict forward/multiple-testing controlled screens.
 3. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
 4. H010/H014 when new authoritative data routes appear.
-5. Advanced controls before EXHAUSTED: Bayesian hidden-state estimation, nonlinear portfolio optimization only where nonlinearity exists, strict out-of-sample ML/RNG tests, lawful lottery-adjacent arbitrage/hedging, additional current products.
+5. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, lawful lottery-adjacent arbitrage/hedging, additional current products.
 
 ## Rule for future work
 Every research packet must update this ledger or add a linked detailed note. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
