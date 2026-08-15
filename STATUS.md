@@ -21,87 +21,69 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# Validated structural benchmark
-## Cash WinFall
-Historical 2011 roll-down benchmark:
-- ticket $2;
-- expected payout **$2.2137120403**;
-- expected ROI **+10.6856%** before tax/execution.
+# H012 — full-space / buy-the-pot: active priority
+Files:
+- `src/loto_research/full_space.py`
+- `tests/test_full_space.py`
+- `data/derived/h012_full_space_screen.csv`
+- `research/h012_full_space_coverage.md`
 
-Structural +EV has existed without predicting numbers, but this is not a current guaranteed-profit strategy.
+## Azerbaijan Beşdə 5 — CLOSED
+Full coverage of all `C(36,5)=376,992` variants costs **376,992 AZN**.
+For every possible draw the exact full-space match counts are fixed:
+- 5 matches: 1
+- 4: 155
+- 3: 4,650
+- 2: 44,950.
 
-# Azerbaijan baseline games
-## Beşdə 5
-- jackpot odds **1 in 376,992**;
-- favorable gross baseline **0.535555131 AZN / 1-AZN variant**;
-- net before tax/sharing about **-46.44%**.
+Even granting the full 50,000-AZN jackpot and ignoring tax/sharing, deterministic gross payout is only **201,900 AZN**.
+Guaranteed pre-tax/pre-sharing net: **-175,092 AZN**; return **53.5555%**.
 
-## Super Keno — multiplier mechanics resolved
-Gross payout ratio is invariant **59.8556%** across 1x/2x/5x/10x scaling. Favorable after-tax ratios fall slightly as multiplier rises. Conclusion: **no multiplier EV edge**.
+Status: **REJECTED as guaranteed-profit coverage**.
 
-# Azerbaijan 4+4 — top local state-dependent target, data-blocked
-Strong empirical draw-table engine:
-- III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U;
-- draw #790 and #781 independently confirm structure;
-- eight samples: mean `U/N_hat≈0.01000654`, median `≈0.00995289`;
-- ordinary subtotal before II/jackpot ≈ **1.16215 AZN per assumed 2-AZN variant** (~58.11%).
+## Azerbaijan ONLOTO — all base types CLOSED
+Exact ordered-draw identity implemented: when every k-subset of 50 is bought once, the number of variants whose final selected number appears at position j is `C(j-1,k-1)`. This makes full-space payout deterministic from the published multiplier table.
 
-H014 zero-winner carryover remains testing. Hidden archive/API and Telegram-card routes are currently blocked with available tooling. Kazakhstan 4/20 remains the validated comparator for zero-winner-pool → next-superprize accounting.
+Guaranteed gross-return ratios for bet types 1–10:
+- 1: 78.0000%
+- 2: 77.5510%
+- 3: 77.5408%
+- 4: 77.6878%
+- 5: 77.5309%
+- 6: 76.5943%
+- 7: 77.3335%
+- 8: 77.3440%
+- 9: 77.3644%
+- 10: 77.2782%.
 
-# H010 — Poz-Qazan remaining-prize edge
-Initial sampled after-tax payout ratios remain ~63–70%, all negative. Registration-specific remaining-ticket denominator is not publicly recovered. Status: **testing / data-blocked**.
+All are guaranteed losses before tax/execution. Type-6 indexed table has one flagged local non-monotone parsed cell sequence, but the ~23% deficit is far too large for a plausible one-cell correction to reverse.
 
-# H015 — crowd-sharing / anti-popularity edge
-Files now include:
-- `src/loto_research/crowd_choice.py`
-- `src/loto_research/crowd_empirical.py`
-- `tests/test_crowd_choice.py`
-- `tests/test_crowd_empirical.py`
-- `data/derived/h015_empirical_anchor_summary.csv`
-- `data/derived/h015_synthetic_crowd_screen.csv`
-- `research/h015_crowd_sharing.md`
-- `research/h015_crowd_model_framework.md`
+Status: **REJECTED as guaranteed-profit coverage**.
 
-## Published-anchor calibration added
-Dutch 6/45 empirical anchors:
-- 11 = 16.5% vs uniform 13.333% => **1.2375×**;
-- 7 = 16.3% => **1.2225×**;
-- 37 = 10.3% => **0.7725×**;
-- 38 = 10.5% => **0.7875×**;
-- diagonal/vertical pattern class 0.9% actual vs 0.009% random => **~100× overrepresentation**.
+## Azerbaijan 4+4 — H012 still BLOCKED
+Full base space = `C(20,4)^2 = 23,474,025` variants.
+Exact guarantee theorem remains blocked by:
+- authoritative per-base/system-ticket pricing for 4+4 vs 5+5/6+6;
+- category-II/carryover rule;
+- pool response and jackpot sharing when our portfolio itself dominates sales.
+No evidence of a nonlinear cheap system-ticket discount has been found yet.
 
-Sparse independent sensitivity anchor:
-`weight(37,38) / weight(7,11) ≈ 0.402119353` with four other positions held neutral.
-
-Israeli 6/37 data independently confirms persistent crowd bias across 118 draws and also shows **bias attenuation toward uniform as jackpots/participation grow**. Static anti-crowd models therefore risk overstating benefit in the largest-jackpot states.
-
-## H015 terminal result
-Anti-crowd choice changes sharing conditional on a win; it does not remove losing draw outcomes. Therefore, with positive ticket cost and any zero-return outcome remaining, **anti-crowd selection alone cannot guarantee positive profit across all outcomes**.
-
-H015 status:
-- mechanism / EV overlay: **VALIDATED-MECHANISM, calibration still useful**;
-- standalone guaranteed-profit path: **REJECTED by necessary-condition proof**.
-
-This branch can return later only as an optimizer layered on top of H012/H005/H001-like structural states.
-
-# H002 — Powerball progressive threshold
-Current baseline already established in repo:
-- fixed lower-tier EV ≈ **$0.31987825 per $2 play**;
-- even under zero tax, zero sharing and full cash receipt, cash jackpot must exceed approximately **$490.934m** just to break even.
-
-Real threshold will be higher after sharing, tax, sales response and execution. H002 remains **testing**.
-
-# UK Lotto
-H016 Wednesday Must Be Won remains **inconclusive/materially weakened** after demand-response stress testing.
+# Other active/validated branches
+- Cash WinFall: historical +EV mechanism validated, not current guarantee.
+- H014 Azerbaijan 4+4 state-dependent pool/carryover: testing/data-blocked.
+- H017 Kazakhstan 4/20 zero-winner lower-pool → next-superprize: validated mechanism, sampled state strongly negative.
+- H015 anti-crowd: validated EV/share optimizer but **rejected as standalone guaranteed-profit path**.
+- H010 Poz-Qazan remaining-prize edge: data-blocked on live remaining-ticket denominator.
+- H002 Powerball progressive threshold: optimistic cash break-even floor already established; real threshold higher.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` is the user-requested master list of checked games/projects, test variants, failures, blockers and remaining branches. Every future packet must add/update it.
+`research/CHECKED_PROJECTS_AND_TESTS.md` contains the full checked-project / test-variant trail and remaining branches.
 
 # Safe next priorities
-1. **H012 full-space coverage / buy-the-pot**: highest-priority branch because it can in principle satisfy the user's guaranteed-profit terminal criterion.
-2. H012a/H004: partial covering / integer-programmed guaranteed payout floors.
+1. Continue **H012** with other current finite/final-draw games and search specifically for accumulated guaranteed pools or nonlinear system-ticket pricing.
+2. H012a/H004: partial covering / integer-programmed guaranteed lower-tier floors.
 3. H005: nonlinear portfolio/cap/guarantee interactions.
-4. H002/H009: progressive and promotional overlays that could make coverage profitable.
-5. H015: return only as sharing optimizer if another branch approaches break-even/guaranteed coverage.
+4. H009: current promotional subsidies that can combine with coverage.
+5. H002: progressive jackpots with all real sharing/tax/sales-response constraints.
 6. H014/H010 when new data routes appear.
 7. H006/H007 physical/RNG anomaly branches after reliable histories are collected.
