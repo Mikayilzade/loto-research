@@ -4,7 +4,7 @@ Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H025 Health Lottery fixed-space screens completed**
+**Stage 1 — structural/state-edge search; H026 Millionaire for Life fixed-space screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,39 +12,25 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H025 The Health Lottery — NEW
+# H026 Millionaire for Life — NEW / CLOSED
 Files:
-- `research/h025_health_lottery_full_coverage.md`
-- `data/derived/h025_health_lottery_full_coverage.csv`
+- `research/h026_millionaire_for_life_full_coverage.md`
+- `data/derived/h026_millionaire_for_life_full_coverage.csv`
+- `src/loto_research/special_ball_coverage.py`
+- `tests/test_special_ball_coverage.py`
 
-## Big Win + Wednesday/Saturday Free Prize Draw — CLOSED
-Current operator structure verified:
-- choose 5 of 50;
-- £1 per Big Win line;
-- fixed lower cash tiers plus shared £25,000 Match-5 top prize;
-- Wednesday/Saturday every paid Big Win line also receives a free second 5-of-50 entry for a £100,000 cash prize.
+Current operator structure verified from MUSL/Powerball and Georgia Lottery:
+- choose 5 of 58 white numbers + 1 of 5 Millionaire Balls;
+- $5 per play;
+- current top cash option $18m;
+- second-prize cash option $2.2m;
+- lower tiers $7,500/$500/$250/$50/$25/$8/$8;
+- top level is pari-mutuel in specified circumstances.
 
-Full Big Win space = `C(50,5)=2,118,760` lines, cost **£2,118,760**.
+Full space = `C(58,5)*5 = 22,910,580` plays; cost **$114,552,900**.
 
-For rejection the calculation is deliberately biased in the player's favor:
-- grant our Match-5 line the entire £25,000 despite external sharing;
-- value all **198,660** earned free-ticket outcomes at full £1 face value, despite not being withdrawable cash and being able to lose on replay;
-- grant our full-space portfolio the entire **£100,000** auxiliary Free Prize Draw prize, again ignoring possible sharing.
-
-Even then deterministic package value is only **£603,560 = 28.4865%** of cost.
-Optimistic guaranteed deficit = **£1,515,200** before execution.
-
-Status: **REJECTED guaranteed-profit full coverage**.
-
-## All Or Nothing — CLOSED
-Current structure verified: choose 12 of 24 for £1; prizes are symmetric for matching all/none and near-extreme match counts; top prize £25,000 is shared if multiple winners.
-
-Full space = `C(24,12)=2,704,156` lines; cost **£2,704,156**.
-For any winning 12-set, exact portfolio count with m matches is `C(12,m)^2`.
-
-Again use an intentionally favorable bound by granting both our 12-match and 0-match tickets a full £25,000 each despite the sharing rule.
-Optimistic deterministic gross = **£1,071,850 = 39.6371%**.
-Optimistic deficit = **£1,632,306**.
+Using a deliberately player-favorable rejection bound — full $18m for our 5+MB line, full $2.2m for each of our four 5-only lines, no external sharing reduction, no tax/execution cost — deterministic gross is only **$60,584,320 = 52.8876%**.
+Optimistic deterministic deficit = **$53,968,580**.
 
 Status: **REJECTED guaranteed-profit full coverage**.
 
@@ -60,7 +46,8 @@ Closed current finite/fixed-payout coverage cases now include:
 - UK Thunderball;
 - UK Health Lottery Big Win including deterministic free auxiliary draw;
 - UK Health Lottery All Or Nothing;
-- Austrian LottoPlus sampled fixed-pool promotion via H021 subsidy bound.
+- Austrian LottoPlus sampled fixed-pool promotion via H021 subsidy bound;
+- US Millionaire for Life.
 
 The strongest deterministic returns found among these remain materially below 100%; no terminal guarantee has emerged.
 
