@@ -13,7 +13,7 @@ User message `го` means: continue the next highest-value research packet witho
 3. update `research/CHECKED_PROJECTS_AND_TESTS.md`;
 4. update this file when the strategic conclusion changes.
 
-This file is the authoritative handoff checkpoint. Read `START_HERE.md`, `PROJECT_RULES.md`, `RESEARCH_PLAN.md`, `AGENTS.md` and `research/CHECKED_PROJECTS_AND_TESTS.md` before work.
+Hourly automation `Loto Research Loop` is active. Each run must resume from this checkpoint, avoid repeating closed tests, save progress before finishing, and stop research at terminal `SUCCESS` or `EXHAUSTED`.
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -21,64 +21,50 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H012 — full-space / buy-the-pot
+# NEW — H012a/H004 ordinary wheel/covering guarantee class CLOSED
 Files:
-- `src/loto_research/full_space.py`
-- `tests/test_full_space.py`
-- `data/derived/h012_full_space_screen.csv`
-- `research/h012_full_space_coverage.md`
+- `research/h012a_linear_portfolio_impossibility.md`
+- `src/loto_research/portfolio_bounds.py`
+- `tests/test_portfolio_bounds.py`
 
+Theorem: if ticket costs and payouts add linearly and every available ticket type has non-positive EV, then every non-negative portfolio of those tickets also has non-positive EV. A portfolio with strictly positive profit in every positive-probability outcome would necessarily have positive EV, contradiction.
+
+Therefore ordinary wheels, partial coverings, duplicate allocations and multi-ticket portfolios **cannot create a strict guaranteed profit** from negative-EV additive fixed-payout tickets. This closes H012a/H004 as a terminal guarantee path for ordinary Beşdə 5 / Super Keno / ONLOTO-type fixed-payout economics.
+
+They may still reshape variance or hit probability. Reopen combinatorial optimization only when another mechanism breaks linearity: accumulated roll-down money, progressive overlay, genuine system-ticket discount, promotion/cashback, shared-pool nonlinearity, pricing error, remaining-state instant inventory, or changed outcome probabilities.
+
+# H012 — full-space / buy-the-pot
 ## Azerbaijan Beşdə 5 — CLOSED
-Full coverage of all `C(36,5)=376,992` variants costs **376,992 AZN**.
-Even granting the full 50,000-AZN jackpot and ignoring tax/sharing, deterministic gross payout is only **201,900 AZN**.
-Guaranteed pre-tax/pre-sharing net: **-175,092 AZN**; return **53.5555%**.
-Status: **REJECTED as guaranteed-profit coverage**.
+Full coverage `C(36,5)=376,992` costs 376,992 AZN; favorable deterministic gross only 201,900 AZN. Guaranteed loss.
 
-## Azerbaijan ONLOTO — all base types CLOSED
-Exact full-space deterministic gross-return ratios for bet types 1–10 are approximately **76.59%–78.00%**.
-All are guaranteed losses before tax/execution.
-Status: **REJECTED as guaranteed-profit coverage**.
+## Azerbaijan ONLOTO — CLOSED for all base types 1–10
+Exact full-space deterministic gross returns ~76.59%–78.00%. Guaranteed loss.
 
-## Azerbaijan 4+4 — single system tickets CLOSED as guarantees
-Official current rules confirm system selections **5+5** and **6+6**.
+## Azerbaijan 4+4 single systems — CLOSED as guarantees
+- 5+5 contains 25 constituent base variants but has legal 0+0 draw outcomes.
+- 6+6 contains 225 constituent base variants but also has legal 0+0 draw outcomes.
+Thus neither single system can guarantee profit at positive price.
 
-Constituent base variants:
-- 5+5 => `C(5,4)^2 = 25`;
-- 6+6 => `C(6,4)^2 = 225`.
+## Azerbaijan 4+4 full-space — BLOCKED
+Space = `C(20,4)^2 = 23,474,025` base variants. Exact theorem still needs authoritative base/system pricing, category-II/carryover accounting and payout response when our portfolio dominates sales.
 
-But both systems leave at least 14 unselected numbers on each board, so a legal draw can select all four winning numbers outside the chosen set on both boards.
-
-Exact 0+0 draw-pair counts:
-- 5+5: **1,863,225 / 23,474,025** (~7.94%);
-- 6+6: **1,002,001 / 23,474,025** (~4.27%).
-
-0+0 is not a winning category, so payout can be **zero**. Therefore neither single 5+5 nor single 6+6 ticket can guarantee positive profit at any positive ticket price, even if system pricing were discounted.
-
-Status: **REJECTED as standalone guaranteed-profit paths**.
-
-## Azerbaijan 4+4 full-space — still BLOCKED
-Full base space = `C(20,4)^2 = 23,474,025` variants.
-Exact full-space guarantee theorem remains blocked by authoritative base/system pricing, category-II/carryover accounting and pool response/sharing when our own portfolio dominates sales.
-
-# H015 — crowd-sharing / anti-popularity
-Mechanism validated as sharing optimizer. Standalone guaranteed-profit path rejected because losing outcomes remain. Keep only as overlay if another structural/coverage branch approaches break-even.
-
-# H017 Kazakhstan 4/20
-Zero-winner lower-pool → next-superprize transition validated on three exact adjacent transitions. Sampled state remains strongly negative (~55% immediate return; static break-even superprize ~3.395bn KZT vs ~227m observed).
-
-# H010 Poz-Qazan
-Initial sampled after-tax payout ratios remain ~63–70%, all negative. Registration-specific remaining-ticket denominator is not publicly recovered. Status: **testing / data-blocked**.
-
-# H002 Powerball progressive threshold
-Optimistic cash break-even floor already established: fixed lower-tier EV ≈ **$0.31987825 per $2 play** and cash jackpot must exceed about **$490.934m** even before tax/sharing. Real threshold is higher.
+# Other important branches
+- Cash WinFall: historical +EV mechanism validated, not current guarantee.
+- H014 Azerbaijan 4+4 state-dependent pool/carryover: testing/data-blocked.
+- H017 Kazakhstan 4/20 zero-winner lower-pool -> next-superprize: validated active mechanism; sampled state strongly negative.
+- H015 anti-crowd: validated sharing optimizer, standalone guaranteed-profit path rejected.
+- H010 Poz-Qazan remaining-state edge: data-blocked on live remaining-ticket denominator.
+- H002 Powerball: optimistic cash break-even floor ~490.934m USD before tax/sharing; real threshold higher.
+- UK Lotto H016 Wednesday Must Be Won: materially weakened.
 
 # Permanent audit ledger
 `research/CHECKED_PROJECTS_AND_TESTS.md` contains the full checked-project / test-variant trail and remaining branches.
 
 # Safe next priorities
-1. **H012a/H004 multi-ticket covering designs / guaranteed lower-tier floors** — next direct guarantee branch.
-2. H005 nonlinear portfolio/cap/guarantee interactions, including system-ticket economics.
-3. H009 current promotional subsidies that can combine with coverage.
-4. H002 progressive jackpot thresholds with sharing/tax/sales-response constraints.
-5. H014/H010 when new data routes appear.
-6. H006/H007 physical/RNG anomaly branches after reliable histories are collected.
+1. **H005 nonlinear portfolio / pricing / cap / guarantee interactions** — highest-value remaining combinatorial path because it explicitly breaks the new linear impossibility theorem.
+2. **H009 promotions/subsidies**: cashback, free tickets, second chance, loyalty/coupons; test whether any bounded promotion creates an all-outcome or arbitrage floor.
+3. H012 current finite/final-draw games only where an accumulated pool or subsidy exists.
+4. H002 progressive jackpot thresholds with tax/sharing/sales response; then Mega Millions / EuroMillions.
+5. H008 cross-jurisdiction price/tax/payout differences.
+6. H014/H010 when new data routes appear.
+7. H006/H007 physical/RNG anomaly branches after reliable histories are collected.
