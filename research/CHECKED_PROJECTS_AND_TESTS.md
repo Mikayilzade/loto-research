@@ -19,6 +19,7 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 | Azerbaijan Super Keno | base 1-AZN table EV | ~59.86% gross before tax | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
 | Azerbaijan Super Keno | 1x/2x/5x/10x multiplier economics | proportional stake/payout; after-tax ROI slightly worsens as multiplier rises | no multiplier edge | `research/superkeno_multiplier_economics.md` |
 | Azerbaijan ONLOTO | **full-space coverage bet types 1–10** | exact deterministic gross-return range **~76.59%–78.00%** across all ten base types | **REJECTED as guaranteed-profit coverage** | `research/h012_full_space_coverage.md`; `data/derived/h012_full_space_screen.csv` |
+| H012a/H004 generic linear theorem | arbitrary wheel / partial covering / multi-ticket portfolio composed only of additive fixed-payout ticket types with EV≤0 | portfolio EV is the sum of non-positive ticket EVs; strict positive profit in every outcome would imply positive EV, contradiction | **REJECTED as guaranteed-profit class under linear/additive assumptions** | `research/h012a_linear_portfolio_impossibility.md`; `src/loto_research/portfolio_bounds.py` |
 | Azerbaijan 4+4 | exact combinatorics | jackpot 1/23,474,025; any listed prize ~18.61% | validated math | `research/4plus4_baseline.md` |
 | Azerbaijan 4+4 | draw-level payout-engine reconstruction | III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U | strongly reproduced; multiple out-of-sample rows | `research/4plus4_economics_inference.md` |
 | Azerbaijan 4+4 | V/VI hierarchy split | combined 2U reallocated when needed to protect prize order | strong empirical rule | `research/4plus4_economics_inference.md` |
@@ -55,13 +56,12 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 ## Hypothesis classes not yet fully tested
 
 ### Guaranteed-profit / combinatorial constructions — CURRENT PRIORITY
-- H012: extend full-space coverage screen to other current finite games / final-draw states. **Beşdə 5 and ONLOTO 1–10 are rejected; single 4+4 5+5/6+6 systems are rejected; 4+4 exact full-space theorem is data-blocked.**
-- H012a: partial-space / multi-ticket covering designs with a guaranteed lower-tier floor — **next priority**.
+- H012 full-space: extend only to current finite/final-draw states where an accumulated pool/subsidy can break ordinary negative economics. **Beşdə 5 and ONLOTO 1–10 rejected; single 4+4 5+5/6+6 rejected; 4+4 full-space remains data-blocked.**
+- H012a/H004 ordinary additive fixed-payout wheels/partial coverings: **CLOSED as terminal guarantee class by linear expectation theorem**. They may still reshape variance/hit probability, not create guaranteed profit.
+- H012a should reopen only when paired with a structural overlay/nonlinear pricing rule that breaks theorem assumptions.
 - H012b: real execution limits: printing speed, retailer/network caps, validation/claim logistics, capital lock-up.
 - H005: nonlinear portfolio/cap/guarantee effects, especially system-ticket pricing vs constituent variants.
 - H005a: own-ticket overlap minimization in shared/rolldown categories.
-- H004: covering designs / wheels as risk-profile optimization.
-- H004a: guaranteed `t`-match coverage for fixed bankroll.
 
 ### Progressive / structural payout states
 - H002: full Powerball progressive threshold including tax, sharing and sales response.
@@ -75,8 +75,6 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - H015g-validation: out-of-sample marginal-number, combination-feature and winner-count validation.
 - H015g-optimizer: search lines that minimize conditional competing-winner intensity, not merely crowd score.
 - H015g-EV: feed calibrated intensity into actual pool/share EV when combined with another structural overlay.
-- Layout-specific visual-pattern models for target ticket forms.
-- Cultural/local lucky-number effects for Azerbaijan / selected target jurisdiction.
 
 ### Randomness / implementation
 - H006: physical draw bias with multiple-testing controls.
@@ -98,7 +96,7 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 
 ### Advanced methods / controls before EXHAUSTED
 - Bayesian latent-state estimation for sales / carryover / hidden crowd intensity.
-- Genetic/evolutionary search for nonlinear payout portfolios.
+- Genetic/evolutionary search for **nonlinear** payout portfolios only; ordinary linear portfolios are theorem-closed.
 - ML crowd-choice prediction trained on human ticket data/proxies.
 - ML winning-number prediction only with reliable histories and strict random out-of-sample baseline.
 - Cross-product arbitrage among lawful lottery-adjacent prediction/raffle/promotional markets.
@@ -114,7 +112,8 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - ML fitted and tested on the same draws;
 - number-picking systems that do not alter probabilities or payout sharing;
 - brute-force enumeration where it cannot change the underlying expectation;
-- anti-crowd selection alone as a **guaranteed-profit** strategy when losing outcomes remain.
+- anti-crowd selection alone as a guaranteed-profit strategy when losing outcomes remain;
+- **ordinary wheels/covering designs built only from non-positive-EV additive fixed-payout tickets as a guaranteed-profit strategy**.
 
 ## Rule for future work
 Every new research packet must either:
