@@ -4,7 +4,7 @@ Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H023 UK fixed-prize full-space screen completed for Set For Life and Thunderball**
+**Stage 1 — structural/state-edge search; H025 Health Lottery fixed-space screens completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,68 +12,61 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H023 UK fixed-prize full coverage — NEW
-File:
-- `research/h023_uk_fixed_prize_full_coverage.md`
+# H025 The Health Lottery — NEW
+Files:
+- `research/h025_health_lottery_full_coverage.md`
+- `data/derived/h025_health_lottery_full_coverage.csv`
 
-## Set For Life — CLOSED
-Current structure verified from National Lottery: 5/47 + 1 Life Ball/10, £1.50 per line, fixed lower tiers plus £10,000/month for 30 years top prize.
+## Big Win + Wednesday/Saturday Free Prize Draw — CLOSED
+Current operator structure verified:
+- choose 5 of 50;
+- £1 per Big Win line;
+- fixed lower cash tiers plus shared £25,000 Match-5 top prize;
+- Wednesday/Saturday every paid Big Win line also receives a free second 5-of-50 entry for a £100,000 cash prize.
 
-Full space = `C(47,5)*10 = 15,339,390` lines.
-Acquisition cost = **£23,009,085**.
+Full Big Win space = `C(50,5)=2,118,760` lines, cost **£2,118,760**.
 
-Because every line is owned, winner counts by main-number matches and Life Ball status are deterministic for every draw. Even valuing the full top annuity at its undiscounted nominal **£3.6m** and the second tier at £120k, deterministic nominal gross is only **£12,949,100** = **56.2782%** of cost.
+For rejection the calculation is deliberately biased in the player's favor:
+- grant our Match-5 line the entire £25,000 despite external sharing;
+- value all **198,660** earned free-ticket outcomes at full £1 face value, despite not being withdrawable cash and being able to lose on replay;
+- grant our full-space portfolio the entire **£100,000** auxiliary Free Prize Draw prize, again ignoring possible sharing.
 
-Guaranteed nominal loss before execution = **-£10,059,985**. The real guarantee is weaker because top-prize rules contain a capped-prize mechanism for multiple winners.
+Even then deterministic package value is only **£603,560 = 28.4865%** of cost.
+Optimistic guaranteed deficit = **£1,515,200** before execution.
 
 Status: **REJECTED guaranteed-profit full coverage**.
 
-## Thunderball — CLOSED
-Current structure verified from National Lottery: 5/39 + 1 Thunderball/14, £1 per line, published fixed prizes from £3 to £500,000; top prize is not shared.
+## All Or Nothing — CLOSED
+Current structure verified: choose 12 of 24 for £1; prizes are symmetric for matching all/none and near-extreme match counts; top prize £25,000 is shared if multiple winners.
 
-Full space = `C(39,5)*14 = 8,060,598` lines.
-Deterministic full-space gross = **£4,262,568**.
-Return = **52.8815%**.
-Guaranteed loss before execution = **-£3,798,030**.
+Full space = `C(24,12)=2,704,156` lines; cost **£2,704,156**.
+For any winning 12-set, exact portfolio count with m matches is `C(12,m)^2`.
+
+Again use an intentionally favorable bound by granting both our 12-match and 0-match tickets a full £25,000 each despite the sharing rule.
+Optimistic deterministic gross = **£1,071,850 = 39.6371%**.
+Optimistic deficit = **£1,632,306**.
 
 Status: **REJECTED guaranteed-profit full coverage**.
 
-# H022 fixed-payout subset coverage
-Files:
-- `research/h022_irish_54321_full_coverage.md`
-- `src/loto_research/fixed_subset_coverage.py`
-- `tests/test_fixed_subset_coverage.py`
-- `data/derived/h022_irish_54321_full_coverage.csv`
+# Fast-screen program to date
+Closed current finite/fixed-payout coverage cases now include:
+- Beşdə 5;
+- ONLOTO bet types 1–10;
+- UK Lotto HotPicks;
+- EuroMillions HotPicks;
+- Irish Daily Million;
+- Irish Lotto 5-4-3-2-1;
+- UK Set For Life;
+- UK Thunderball;
+- UK Health Lottery Big Win including deterministic free auxiliary draw;
+- UK Health Lottery All Or Nothing;
+- Austrian LottoPlus sampled fixed-pool promotion via H021 subsidy bound.
 
-Generic identity: in an all-selected-numbers-must-hit game, if the universe has N numbers, the realized winning target has d numbers and we buy every k-subset, then exactly `C(d,k)` of our `C(N,k)` entries win for every legal outcome. Full-space return is deterministic.
-
-Irish Lotto 5-4-3-2-1 current 47-ball full-space returns remain only **48.89%–76.60%**; announced 45-ball sensitivity with today's payouts still maxes at **80%**. Closed.
-
-# H021 forced-distribution / subsidy bound
-General necessary condition for a full-space/final-draw guarantee:
-
-`B + E > (1-r)S + costs`
-
-where `S` is our spend, `r` the strongest defensible fraction of our own spend available to prizes, `B` guaranteed external subsidy/carryover, and `E` external-player prize contribution that our portfolio is legally guaranteed to capture net of sharing.
-
-UK Lotto Must-Be-Won and Austrian Lotto+LottoPlus fixed-pool promotion are already closed by this bound.
-
-# H020 lawful two-sided hedging/arbitrage — advanced but runtime-blocked
-Files:
-- `research/h020_two_sided_hedging_arbitrage.md`
-- `src/loto_research/two_sided_arb.py`
-- `src/loto_research/live_complete_set.py`
-- `tests/test_two_sided_arb.py`
-- `tests/test_live_complete_set.py`
-- `data/derived/h020_two_sided_arb_screen.csv`
-- `data/derived/h020_fee_aware_pair_thresholds.csv`
-
-For exhaustive mutually-exclusive outcomes with effective decimal odds `O_i`, equal-return dutching is strictly profitable iff `sum_i(1/O_i) < 1` after all costs. For binary complete-set tokens, `YES all-in + NO all-in < $1` is the equivalent gate.
-
-Post-fill deterministic profit mechanism: **VALIDATED**. Fee/depth scanner: **IMPLEMENTED**. Current reproducible pre-trade opportunity: **NOT ESTABLISHED** because arbitrary raw live books remain unavailable in this runtime.
+The strongest deterministic returns found among these remain materially below 100%; no terminal guarantee has emerged.
 
 # Other active / blocked branches
-- H019 capped fixed-prize competition saturation: mechanism valid in principle; sampled current/recent instances fail cash-floor/full-cap test.
+- H020 lawful two-sided hedging/arbitrage: post-fill surebet mechanism validated; fee/depth scanner implemented; current raw-book acquisition remains runtime/data blocked.
+- H019 capped fixed-prize competition saturation: mechanism valid in principle; sampled instances fail cash-floor/full-cap test.
 - H007 high-frequency RNG: data-gated; no trustworthy ordered bulk history recovered.
 - H018 Lucky Contestant: standalone guarantee rejected; conditional-EV overlay remains data-gated.
 - H014 Azerbaijan 4+4 carryover: data-blocked.
@@ -86,14 +79,13 @@ Post-fill deterministic profit mechanism: **VALIDATED**. Fee/depth scanner: **IM
 - EuroMillions terminal-cap full coverage: rejected because full coverage itself guarantees a 5+2 winner and prevents no-winner rolldown.
 - H008 cross-jurisdiction: EV differences validated; standalone guarantee rejected.
 - H012a/H004 ordinary additive wheels: closed by expectation theorem.
-- Beşdə 5 and ONLOTO full coverage: guaranteed losses.
 - 4+4 single 5+5/6+6 systems: zero-payout outcomes exist; full-space theorem remains data-blocked.
 - H015 anti-crowd standalone: closed as guarantee; useful overlay only.
 - H005/H009 ordinary system discounts/random promos/free-play: screened; no terminal deterministic guarantee.
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. Continue **H021/H022/H023 fast analytic screens** on additional current finite/final-draw/fixed-payout products; deep-dive only candidates approaching/exceeding 100% deterministic coverage return or with guaranteed external subsidy sufficient to cross takeout.
+1. Continue **fast analytic coverage/subsidy screens** on additional current fixed-payout/final-draw products; deep-dive only candidates approaching/exceeding 100% deterministic coverage return or with guaranteed external subsidy sufficient to cross takeout.
 2. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
 3. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
 4. H010/H014 if new authoritative data routes appear.
