@@ -32,12 +32,14 @@ Status legend:
 |---|---|---|---|
 | H003/H015 | Shared jackpots | Avoid exact popular combinations to reduce jackpot splitting | `VALIDATED-MECHANISM`: expected retained jackpot share improves; magnitude bounded and not standalone +EV. |
 | H015a | 6/59 generic | Exact-combination popularity sensitivity 0.2×..10× | `TESTED`: useful protection; theoretical perfect-uniqueness uplift only affects jackpot component. |
-| H015b | Shared lower tiers | Competitor-intensity reduction | `TESTING`: potentially much larger percentage payout effect; requires calibrated crowd-choice model. |
-| H015c | Crowd model | Birthday-number bias | `UNTESTED` |
-| H015d | Crowd model | Geometric/visual line patterns | `UNTESTED` |
-| H015e | Crowd model | Consecutive numbers / arithmetic patterns | `UNTESTED` |
-| H015f | Crowd model | Salient/lucky/cultural numbers | `UNTESTED` |
-| H015g | Crowd model | Human-like mixture model + anti-crowd optimizer, out-of-sample | `UNTESTED` — current highest-priority implementation. |
+| H015b | Shared lower tiers | Competitor-intensity reduction | `TESTING`: potentially much larger percentage payout effect; now has simulation framework but still needs real crowd calibration. |
+| H015c | Crowd model | Birthday / low-number bias | `VALIDATED-MECHANISM` in large empirical studies; target-game magnitude/calibration still `UNTESTED`. |
+| H015d | Crowd model | Geometric / visual line patterns | `VALIDATED-MECHANISM` in empirical studies; target-game magnitude/calibration still `UNTESTED`. |
+| H015e | Crowd model | Consecutive / numeric sequence and representative/even-spacing preference | `VALIDATED-MECHANISM` in empirical studies; target-game magnitude/calibration still `UNTESTED`. |
+| H015f | Crowd model | Salient/lucky/cultural/situational numbers | `VALIDATED-MECHANISM` in empirical studies; target-game magnitude/calibration still `UNTESTED`. |
+| H015g | Crowd model | Human-like mixture model + anti-crowd optimizer | `TESTING`: parameterized simulator implemented, 5 unit tests passed locally, synthetic conditional-sharing screen works; real calibration/out-of-sample validation missing. |
+| H015h | Crowd model | Entry-form position / center/row bias | `VALIDATED-MECHANISM` in Dutch/Israeli datasets; target layout model `UNTESTED`. |
+| H015i | Crowd model | Jackpot-size effect on crowd composition / bias becoming more uniform | `VALIDATED-MECHANISM` in Israeli data; target-game response model `UNTESTED`. |
 
 ## C. Portfolio / combinatorial construction
 | ID | Project | Test variant | Result / current status |
@@ -99,7 +101,7 @@ These are not assumed useful; each must eventually be tested or rejected with ra
 - Spectral / Fourier diagnostics where a causal periodic mechanism is plausible — `UNTESTED`.
 - Genetic/evolutionary search for portfolio construction under nonlinear payout sharing — `UNTESTED`.
 - Integer programming / covering-design optimization for guaranteed minimum prize floors — `UNTESTED`.
-- ML crowd-choice prediction trained on historical human tickets, not winning draws — `UNTESTED`.
+- ML crowd-choice prediction trained on historical human tickets, not winning draws — `TESTING` via H015g framework; no target dataset yet.
 - ML winning-number prediction — only test after reliable data collection; strict random out-of-sample baseline required — `UNTESTED`.
 - Cross-product arbitrage among lottery-adjacent prediction/raffle/promotional markets where legally/operationally available — `UNTESTED`.
 - Syndicate pooling / diversification to reduce ruin probability without confusing variance reduction with EV — `UNTESTED`.
@@ -107,4 +109,4 @@ These are not assumed useful; each must eventually be tested or rejected with ra
 ## Terminal audit
 - `SUCCESS` found: **NO**.
 - Registry exhausted: **NO**.
-- Current highest-value open branch: **H015g crowd-choice model**, followed by H014 exact state accounting when new data route appears.
+- Current highest-value open branch: **H015g target-game calibration / crowd data proxy**, followed by H014 exact state accounting when a new data route appears.
