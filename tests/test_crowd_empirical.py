@@ -20,7 +20,7 @@ class CrowdEmpiricalTests(unittest.TestCase):
         low_crowd = (1, 2, 3, 4, 37, 38)
         high_crowd = (1, 2, 3, 4, 7, 11)
         ratio = model.relative_weight(low_crowd, high_crowd)
-        self.assertAlmostEqual(ratio, 0.402345, places=5)
+        self.assertAlmostEqual(ratio, 0.4021193530, places=9)
 
     def test_pattern_class_anchor_is_100x(self):
         model = dutch_lotto_6of45_anchor()
