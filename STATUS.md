@@ -1,10 +1,10 @@
 # STATUS
 
-Updated: 2026-08-15
+Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H027 Lotto America full-space screen completed**
+**Stage 1 — structural/state-edge search; H028 Nebraska finite-game full-coverage screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,33 +12,53 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H027 Lotto America — NEW / CLOSED
+# H028 Nebraska finite-game coverage — NEW / CLOSED
 Files:
-- `research/h027_lotto_america_full_coverage.md`
-- `data/derived/h027_lotto_america_full_coverage.csv`
-- generic engine `src/loto_research/special_ball_coverage.py`
-- regression tests extended in `tests/test_special_ball_coverage.py`
+- `research/h028_nebraska_finite_coverage.md`
+- `data/derived/h028_nebraska_full_coverage.csv`
+- `src/loto_research/nebraska_coverage.py`
+- `tests/test_nebraska_coverage.py`
 
-Current official structure verified from Minnesota/Iowa Lottery:
-- 5 of 52 + Star Ball 1 of 10;
-- $1 base play;
-- $1 optional All Star Bonus, random 2x–5x on non-jackpot prizes;
-- jackpot divided among multiple jackpot winners;
-- lower-tier published prizes may be reduced pari-mutuel.
+## Nebraska 2by2
+Current official structure verified:
+- $1 play;
+- choose 2 red of 26 and 2 white of 26;
+- full space `C(26,2)^2 = 105,625` plays;
+- published top/set cash plus free-play lower tiers;
+- qualifying 7-draw packages get Double Tuesday;
+- regulations allow top-prize division above ten winning plays and broader set-prize pari-mutuel reductions if reserves are insufficient.
 
-Full base space = `C(52,5)*10 = 25,989,600` lines; cost **$25,989,600**.
-Deterministic published-table non-jackpot gross = **$6,991,428 = 26.9009%** before any pari-mutuel reduction.
-Sole-winner cash-jackpot break-even hurdle = **$18,998,172** before tax/execution/sharing.
+Even granting full published cash values and ignoring all reductions:
+- normal full-space gross = **$40,168 = 38.0289%** of $105,625 cost;
+- full-space across seven qualifying draws, including doubled Tuesday, gross = **$321,344 / $739,375 = 43.4616%**.
 
-Strong recent stress test:
-- July 18 2026 advertised jackpot: **$34.12m annuity**;
-- Minnesota Lottery reported cash option: **$15,154,248**;
-- even granting full cash jackpot to our portfolio plus unreduced lower tiers gives **$22,145,676 = 85.2098%** of full-space cost;
-- optimistic deficit **$3,843,924**.
+Status: **REJECTED guaranteed-profit coverage**.
 
-All Star Bonus full-space worst legal 2x state doubles cost to $51,979,200 and yields $13,982,856 non-jackpot floor; sole-winner cash hurdle rises to **$37,996,344**.
+## Nebraska MyDaY
+Current official structure verified:
+- $1 per valid MM-DD-YY date;
+- 36,525 valid combinations under published leap-year rule;
+- prize categories exact date / partial month-day-year matches.
 
-Status: **REJECTED guaranteed-profit full coverage**. A future high jackpot can create a conditional/EV lead, but strict guarantee remains blocked by external jackpot sharing, possible lower-tier pari-mutuel reduction, and execution friction.
+Exact all-state full-space calculation:
+- cost = **$36,525**;
+- minimum gross across every legal draw = **$17,580 = 48.1314%**;
+- maximum gross = **$21,357 = 58.4723%**.
+
+Status: **REJECTED guaranteed-profit coverage**.
+
+## Nebraska Pick 5
+Current official structure verified:
+- 5 of 40 at $1;
+- full space `C(40,5)=658,008`;
+- 4/5=$500, 3/5=$9, 2/5=free Quick Pick;
+- jackpot grows from $50,000 and is divided among multiple winners;
+- lower tiers may become pari-mutuel in unusual circumstances.
+
+Full-space published lower-tier cash = **$141,050 = 21.4359%** of cost.
+Even assuming our jackpot line were the sole winner, jackpot cash would need to exceed **$516,958** merely to break even before tax/execution. Strict guarantee cannot assume sole winner because external jackpot sharing has no useful pre-draw hard cap.
+
+Status: **REJECTED current guaranteed-profit coverage**; future very-large-jackpot states may be EV leads only.
 
 # Fast-screen program to date
 Closed current finite/fixed-payout coverage cases now include:
@@ -54,9 +74,12 @@ Closed current finite/fixed-payout coverage cases now include:
 - UK Health Lottery All Or Nothing;
 - Austrian LottoPlus sampled fixed-pool promotion via H021 subsidy bound;
 - US Millionaire for Life;
-- **US Lotto America**.
+- US Lotto America;
+- **Nebraska 2by2 including Double Tuesday**;
+- **Nebraska MyDaY**;
+- **Nebraska Pick 5 current full-space structure**.
 
-The strongest deterministic returns found among these remain materially below 100%; no terminal guarantee has emerged.
+No terminal guarantee has emerged.
 
 # Other active / blocked branches
 - H020 lawful two-sided hedging/arbitrage: post-fill surebet mechanism validated; fee/depth scanner implemented; current raw-book acquisition remains runtime/data blocked.
@@ -79,7 +102,7 @@ The strongest deterministic returns found among these remain materially below 10
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. Continue **fast analytic coverage/subsidy screens** on additional current finite/final-draw products; prioritize small spaces and real cash jackpots/subsidies, and deep-dive only candidates approaching/exceeding 100% deterministic coverage return.
+1. Continue **fast analytic coverage/subsidy screens** on additional current finite/final-draw products; prioritize unusually high fixed cash floors, compact spaces, and deterministic subsidies.
 2. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
 3. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
 4. H010/H014 if new authoritative data routes appear.
