@@ -51,22 +51,28 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 | H015 crowd-sharing | lower-tier competitor-intensity optimization | potentially useful when layered on structural +EV state | validated mechanism / target calibration pending | H015 notes |
 | Azerbaijan Poz-Qazan | initial-series after-tax EV | sampled games ~63–70% | ordinary initial states negative | `research/poz_qazan_remaining_prize_edge.md` |
 | Azerbaijan Poz-Qazan | remaining-prize conditional EV | live registration-specific denominator unavailable | data-blocked | H010 |
-| Powerball US 2026 | fixed lower-tier EV + optimistic cash-jackpot break-even floor | cash jackpot >~490.934m USD even before tax/sharing | threshold baseline | `research/powerball_progressive_threshold.md` |
+| Powerball US 2026 | fixed lower-tier EV + absolute optimistic cash threshold | `EV_lower≈$0.31987825`; no-tax/no-sharing cash break-even **$490.934m** | baseline validated | `research/powerball_progressive_threshold.md` |
+| Powerball H002 sharing curve | exact binomial expected jackpot share vs other-ticket count | no-tax cash threshold rises to ~$512.2m at 25m other lines, ~$579.7m at 100m, ~$785.3m at 300m, ~$1.025bn at 500m | quantitative threshold model implemented | `src/loto_research/powerball_threshold.py`; `data/derived/h002_powerball_sharing_threshold_curve.csv` |
+| Powerball H002 tax/withholding sensitivity | generic retained-jackpot fractions incl. 24% and 30% haircuts | thresholds rise materially; columns are sensitivity only, not universal final tax rates | quantitative filter implemented | `research/powerball_progressive_threshold.md` |
+| Powerball 2026 winner-count sales proxy | official aggregate winner counts × overall odds denominator 24.87 | sampled ~12.7m–26.5m play-scale; sharing-only break-even ~$501.7m–$513.6m vs observed cash $135.8m–$292.5m | sampled 2026 states conclusively negative; proxy noisy | `research/h002_powerball_demand_proxy.md`; `data/derived/h002_powerball_winner_count_sales_proxy.csv` |
+| Powerball full-space buy-the-pot | buy all 292,201,338 combos at $2 | cost $584.403m; deterministic lower-tier gross ~$93.469m; ideal no-sharing jackpot break-even again $490.934m | identity validated | `research/powerball_progressive_threshold.md` |
+| Powerball full-space guarantee | account for external jackpot-sharing tickets | sufficient jackpot scales as ~$490.934m×(K+1) if a hard cap K on external jackpot winners exists; no useful rule-based pre-draw K cap | **REJECTED as current terminal guarantee candidate**; execution scale also extreme | same note |
 
 ## Hypothesis classes not yet fully tested
 
 ### Current priority
-- H005: remaining genuine nonlinearity only — very large deterministic discounts/refunds, guaranteed payout floors, nonlinear pool/payout rules. Ordinary system packaging and modest discounted zero-floor bundles are now screened out.
-- H002: Powerball full threshold including tax, sharing and sales response; then Mega Millions / EuroMillions.
-- H009: revisit only when an official current source exposes a new deterministic cashback/discount or account-specific executable offer. **The 2026-08-15 official-source screen found no surviving terminal candidate.**
+- **H002a: Mega Millions current $5 format** — exact lower-tier EV, sharing/tax threshold, full-space guarantee bound.
+- **H002b: EuroMillions** — cap/rolldown, price/tax/claim differences, sharing and guarantee bound.
+- H008: cross-jurisdiction lawful pricing/tax/payout differences, especially US vs UK Powerball.
 - H012: finite/final-draw states only where accumulated pool/subsidy breaks ordinary negative economics.
 - H012b: execution limits for any candidate that survives economics.
+- H005/H009: revisit only if an unusually large deterministic refund/discount or nonzero guaranteed payout floor appears.
 
 ### Progressive / structural payout states
-- H002: full Powerball threshold including tax, sharing and sales response.
-- H002a: Mega Millions current $5 format.
-- H002b: EuroMillions jackpot cap/rolldown and country-specific tax/claim rules.
-- H008: cross-jurisdiction differences.
+- H002 Powerball: broader clean national sales/demand anchors may improve positive-EV threshold estimation, but **full-space guarantee path is now closed absent a guaranteed external-winner cap**.
+- H002a Mega Millions current $5 format.
+- H002b EuroMillions jackpot cap/rolldown and country-specific tax/claim rules.
+- H008 cross-jurisdiction differences.
 
 ### Randomness / implementation
 - H006: physical draw bias with multiple-testing controls.
@@ -96,7 +102,8 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - modest deterministic discounts on portfolios with legal zero-return outcomes;
 - random promotional entry alone;
 - nonwithdrawable free-play face value treated as cash;
-- stale campaign landing pages treated as live without current-index/rule consistency.
+- stale campaign landing pages treated as live without current-index/rule consistency;
+- Powerball full-space guarantee that assumes sole jackpot ownership without a guaranteed external-winner cap.
 
 ## Rule for future work
 Every new research packet must add/update this ledger. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
