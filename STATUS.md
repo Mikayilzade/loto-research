@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H028 Nebraska finite-game full-coverage screen completed**
+**Stage 1 — structural/state-edge search; H029 Virginia fixed-digit base-game class completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,53 +12,42 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H028 Nebraska finite-game coverage — NEW / CLOSED
+# H029 fixed-odds digit games — NEW / BASE CLASS CLOSED
 Files:
-- `research/h028_nebraska_finite_coverage.md`
-- `data/derived/h028_nebraska_full_coverage.csv`
-- `src/loto_research/nebraska_coverage.py`
-- `tests/test_nebraska_coverage.py`
+- `research/h029_fixed_digit_games_impossibility.md`
+- `data/derived/h029_virginia_digit_base_ev.csv`
 
-## Nebraska 2by2
-Current official structure verified:
-- $1 play;
-- choose 2 red of 26 and 2 white of 26;
-- full space `C(26,2)^2 = 105,625` plays;
-- published top/set cash plus free-play lower tiers;
-- qualifying 7-draw packages get Double Tuesday;
-- regulations allow top-prize division above ten winning plays and broader set-prize pari-mutuel reductions if reserves are insufficient.
+## General theorem
+For any finite uniform draw game with additive wagers, if every constituent wager has expected payout no greater than its stake, then no nonnegative portfolio of those wagers can produce strictly positive profit for every draw outcome. Otherwise the guaranteed positive profit would imply positive expected profit, contradicting linearity of expectation.
 
-Even granting full published cash values and ignoring all reductions:
-- normal full-space gross = **$40,168 = 38.0289%** of $105,625 cost;
-- full-space across seven qualifying draws, including doubled Tuesday, gross = **$321,344 / $739,375 = 43.4616%**.
+## Virginia Pick 3
+Current base menu checked: Exact, Any Order 3/6-way, 50/50, Combo, Pair.
+Gross EV ratios per $1-equivalent stake are only **48%–50%**.
+Full Exact coverage costs $1,000 and deterministically pays $500.
 
-Status: **REJECTED guaranteed-profit coverage**.
+Status: **REJECTED entire additive base-game guarantee class**.
 
-## Nebraska MyDaY
-Current official structure verified:
-- $1 per valid MM-DD-YY date;
-- 36,525 valid combinations under published leap-year rule;
-- prize categories exact date / partial month-day-year matches.
+## Virginia Pick 4
+Current base menu checked: Exact, Any Order 4/6/12/24-way, 50/50, Combo.
+Gross EV ratios are only **48%–50%**.
+Full Exact coverage costs $10,000 and deterministically pays $5,000.
 
-Exact all-state full-space calculation:
-- cost = **$36,525**;
-- minimum gross across every legal draw = **$17,580 = 48.1314%**;
-- maximum gross = **$21,357 = 58.4723%**.
+Status: **REJECTED entire additive base-game guarantee class**.
 
-Status: **REJECTED guaranteed-profit coverage**.
+## Virginia Pick 5
+Current base menu checked: Exact, Any Order 5/10/20/30/60/120-way, 50/50.
+Gross EV ratios are only **48%–50%**; 50/50 30-way = 49.75%.
+Full Exact coverage costs $100,000 and deterministically pays $50,000.
 
-## Nebraska Pick 5
-Current official structure verified:
-- 5 of 40 at $1;
-- full space `C(40,5)=658,008`;
-- 4/5=$500, 3/5=$9, 2/5=free Quick Pick;
-- jackpot grows from $50,000 and is divided among multiple winners;
-- lower tiers may become pari-mutuel in unusual circumstances.
+Status: **REJECTED entire additive base-game guarantee class**.
 
-Full-space published lower-tier cash = **$141,050 = 21.4359%** of cost.
-Even assuming our jackpot line were the sole winner, jackpot cash would need to exceed **$516,958** merely to break even before tax/execution. Strict guarantee cannot assume sole winner because external jackpot sharing has no useful pre-draw hard cap.
+## FIREBALL remains separate
+FIREBALL doubles the cost and adds replacement-number winning combinations; wins can stack with base payouts. H029 deliberately does not infer its exact EV from the base-game theorem. It remains **H029b OPEN** for exact joint-outcome analysis.
 
-Status: **REJECTED current guaranteed-profit coverage**; future very-large-jackpot states may be EV leads only.
+# H028 Nebraska finite-game coverage — CLOSED
+- Nebraska 2by2: optimistic full-space 38.03%; seven-draw Double Tuesday package 43.46%.
+- Nebraska MyDaY: exact full-space gross range 48.13%–58.47%.
+- Nebraska Pick 5: deterministic non-jackpot cash 21.44%; sole-winner jackpot hurdle $516,958; external sharing prevents strict guarantee.
 
 # Fast-screen program to date
 Closed current finite/fixed-payout coverage cases now include:
@@ -75,13 +64,15 @@ Closed current finite/fixed-payout coverage cases now include:
 - Austrian LottoPlus sampled fixed-pool promotion via H021 subsidy bound;
 - US Millionaire for Life;
 - US Lotto America;
-- **Nebraska 2by2 including Double Tuesday**;
-- **Nebraska MyDaY**;
-- **Nebraska Pick 5 current full-space structure**.
+- Nebraska 2by2 including Double Tuesday;
+- Nebraska MyDaY;
+- Nebraska Pick 5 current full-space structure;
+- **Virginia Pick 3 / Pick 4 / Pick 5 additive base wager families**.
 
 No terminal guarantee has emerged.
 
 # Other active / blocked branches
+- **H029b FIREBALL:** next local analytic target; exact joint-outcome EV/guarantee check can potentially close the entire Virginia Pick family including add-ons.
 - H020 lawful two-sided hedging/arbitrage: post-fill surebet mechanism validated; fee/depth scanner implemented; current raw-book acquisition remains runtime/data blocked.
 - H019 capped fixed-prize competition saturation: mechanism valid in principle; sampled instances fail cash-floor/full-cap test.
 - H007 high-frequency RNG: data-gated; no trustworthy ordered bulk history recovered.
@@ -102,11 +93,12 @@ No terminal guarantee has emerged.
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. Continue **fast analytic coverage/subsidy screens** on additional current finite/final-draw products; prioritize unusually high fixed cash floors, compact spaces, and deterministic subsidies.
-2. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
-3. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
-4. H010/H014 if new authoritative data routes appear.
-5. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
-6. Advanced controls before EXHAUSTED: additional current products, Bayesian hidden-state inference and causal implementation tests.
+1. **H029b Virginia FIREBALL exact joint-outcome analysis**; close full Pick 3/4/5 family if every paid add-on remains non-positive EV.
+2. Continue **fast analytic coverage/subsidy screens** on additional current finite/final-draw products; prioritize unusually high fixed cash floors, compact spaces, and deterministic subsidies.
+3. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
+4. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
+5. H010/H014 if new authoritative data routes appear.
+6. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
+7. Advanced controls before EXHAUSTED: additional current products, Bayesian hidden-state inference and causal implementation tests.
 
 Permanent audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
