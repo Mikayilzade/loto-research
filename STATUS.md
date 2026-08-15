@@ -4,7 +4,7 @@ Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H021 forced-distribution subsidy hurdle implemented and applied to UK Lotto Must-Be-Won + Austrian LottoPlus fixed-pool promotion**
+**Stage 1 — structural/state-edge search; H022 fixed-subset full-coverage theorem implemented and Irish Lotto 5-4-3-2-1 current/future regimes screened**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,7 +12,29 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H021 forced-distribution / subsidy bound — NEW
+# H022 fixed-payout subset coverage — NEW
+Files:
+- `research/h022_irish_54321_full_coverage.md`
+- `src/loto_research/fixed_subset_coverage.py`
+- `tests/test_fixed_subset_coverage.py`
+- `data/derived/h022_irish_54321_full_coverage.csv`
+
+Generic identity: in an all-selected-numbers-must-hit game, if the universe has N numbers, the realized winning target has d numbers and we buy every k-subset, then exactly `C(d,k)` of our `C(N,k)` entries win for every legal outcome. Full-space return is therefore deterministic:
+
+`C(d,k) * payout(k) / [C(N,k) * stake]`.
+
+## Irish Lotto 5-4-3-2-1 — CLOSED
+Current official 47-ball game, €1 base stake:
+- 6-number variant full-space returns across k=1..5: **76.60%, 62.44%, 67.84%, 50.46%, 48.89%**;
+- 7-number including Bonus returns: **74.47%, 62.16%, 59.36%, 58.87%, 54.76%**.
+
+Every current variant is therefore a strict deterministic loss under full coverage.
+
+The operator announced on 2026-07-16 that Lotto will move from 47 balls to 45 in autumn 2026. Holding today's 5-4-3-2-1 payout table fixed as a deliberately favorable sensitivity, the best full-space return rises only to **80%**. Therefore the announced pool-size reduction alone cannot create a guaranteed-profit coverage state.
+
+Status: **REJECTED guaranteed-profit full coverage**.
+
+# H021 forced-distribution / subsidy bound
 Files:
 - `research/h021_forced_distribution_subsidy_bound.md`
 - `src/loto_research/forced_distribution.py`
@@ -25,7 +47,7 @@ General necessary condition for a full-space/final-draw guarantee:
 
 where `S` is our spend, `r` the strongest defensible fraction of our own spend available to prizes, `B` guaranteed external subsidy/carryover, and `E` external-player prize contribution that our portfolio is legally guaranteed to capture net of sharing. Ordinary uncertain external sales do **not** count toward a strict guarantee.
 
-## UK Lotto Must-Be-Won
+## UK Lotto Must-Be-Won — CLOSED
 Verified current structure:
 - 6/59, £2 per line;
 - full space 45,057,474 lines => **£90,114,948** acquisition;
@@ -35,7 +57,7 @@ Even using favorable `r=0.50`, full coverage needs **>£45,057,474 guaranteed ex
 
 Status: **REJECTED as current standalone full-space guarantee**.
 
-## Austrian Lotto + LottoPlus fixed-pool promotion
+## Austrian Lotto + LottoPlus fixed-pool promotion — CLOSED
 Verified current/recent structure:
 - Lotto base €1.50 per 6/45 tip;
 - LottoPlus €0.80 add-on from 6 July 2026, entering two LottoPlus draws;
@@ -45,8 +67,6 @@ Verified current/recent structure:
 Full 6/45 coverage requires 8,145,060 tips and at least **€18,733,638** acquisition with LottoPlus. Price-weighted player-funded payout allocation is €1.08 per €2.30 line => **€8,796,664.80** optimistic own-funded return. Takeout hurdle = **€9,936,973.20**. Even granting the entire €1m promotion as external subsidy leaves **-€8,936,973.20** optimistic net before sharing/costs.
 
 Status: **REJECTED as guaranteed-profit full-space promotion**.
-
-Strategic consequence: future final-draw / forced-distribution products should first pass H021. Only candidates where guaranteed external money approaches/exceeds the takeout hurdle deserve expensive combinatorial analysis.
 
 # H020 lawful two-sided hedging/arbitrage — advanced but runtime-blocked
 Files:
@@ -83,7 +103,7 @@ Post-fill deterministic profit mechanism: **VALIDATED**. Fee/depth scanner: **IM
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. **Apply H021** to additional current finite/final-draw/forced-distribution products; deep-dive only candidates whose guaranteed external subsidy approaches/exceeds the computed takeout hurdle.
+1. **Apply H021/H022 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates approaching/exceeding 100% deterministic coverage return or whose guaranteed external subsidy can cross takeout.
 2. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
 3. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
 4. H010/H014 if new authoritative data routes appear.
