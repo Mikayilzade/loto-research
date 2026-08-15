@@ -16,12 +16,16 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 | Cash WinFall | historical roll-down, May 9 2011 cash-only EV | +10.69% expected ROI before tax/execution | validated historical +EV mechanism; not current guarantee | `research/cash_winfall_benchmark.md` |
 | Azerbaijan Beşdə 5 | exact probability + full displayed prize-table EV | ~53.56% gross return upper-bound | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
 | Azerbaijan Beşdə 5 | full-space buy every 5-of-36 combination | 376,992 AZN cost; deterministic gross 201,900 AZN even assuming full 50k jackpot and ignoring tax/sharing | REJECTED as guaranteed-profit coverage | `research/h012_full_space_coverage.md` |
-| Azerbaijan Super Keno | base 1-AZN table EV | ~59.86% gross before tax | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
+| Azerbaijan Super Keno | base 1-AZN table EV | ~59.86% gross return | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
 | Azerbaijan Super Keno | 1x/2x/5x/10x multiplier economics | proportional stake/payout; after-tax ROI slightly worsens as multiplier rises | no multiplier edge | `research/superkeno_multiplier_economics.md` |
 | Azerbaijan ONLOTO | full-space coverage bet types 1–10 | exact deterministic gross-return range ~76.59%–78.00% | REJECTED as guaranteed-profit coverage | `research/h012_full_space_coverage.md` |
 | H012a/H004 generic linear theorem | arbitrary additive wheel/partial covering/multi-ticket portfolio with EV≤0 tickets | strict all-outcome positive profit would imply positive EV, contradiction | REJECTED guarantee class under linear assumptions | `research/h012a_linear_portfolio_impossibility.md` |
 | H005 generic system packaging | system/bundle merely aggregates constituent variants at additive price/payout | does not break linear theorem | REJECTED unless genuine price/payout nonlinearity exists | `research/h005_nonlinear_overlay_screen.md` |
-| H005 random extra prize layer | second-chance/promotional draw with legal zero-prize outcome | cannot repair negative base floor in every outcome | REJECTED as standalone guarantee | same note |
+| H005 Australia Oz Lotto System 8 | 8 constituent games cost AUD 13.20; standard games cost AUD 1.65 each | exact constituent-linear price; no discount | REJECTED nonlinear-pricing edge | `research/h005_system_pricing_screen_2026-08-15.md` |
+| H005 Poland Lotto system packaging | System 7–12 explicitly consists of all underlying simple six-number bets | no verified below-constituent discount recovered; payout multiplication comes from constituent wins | no nonlinear edge established | `research/h005_system_pricing_screen_2026-08-15.md` |
+| H005 Poland fractional coupons | full underlying ticket must be paid before fractions issued; prize merely split by share | capital-sharing only, no total-cost reduction/arbitrage | REJECTED pricing arbitrage | same note |
+| H005 Poland current 13→12 PLN Quick Pick bundle | deterministic ~7.69% reference-price discount on 3-bet/1-draw bundle | real discount, but all-lines-losing outcome keeps payout floor at 0 while cash cost is 12 PLN | REJECTED as guaranteed-profit strategy; useful EV discount only | same note |
+| H005 random extra prize layer | second-chance/promotional draw with legal zero-prize outcome | cannot repair negative base floor in every outcome | REJECTED as standalone guarantee | `research/h005_nonlinear_overlay_screen.md` |
 | H005 nonwithdrawable free-play credit | bonus/rebate must be replayed and replay can lose | guaranteed cash value can be zero | REJECTED as standalone cash guarantee absent coverage | same note |
 | H005 deterministic cashback filter | base cost C, floor F, withdrawable cashback B | guarantee requires F+B>C after all costs | necessary-condition filter established | same note |
 | Lotto.com promotion archetype | first-order all-losing second chance, non-payable credit capped at $10 | state-dependent subsidy but terminal replay can lose; winning-but-subcost branch may receive no credit | REJECTED as guaranteed cash-profit offer | same note |
@@ -52,9 +56,9 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 ## Hypothesis classes not yet fully tested
 
 ### Current priority
-- H005: jurisdiction-specific genuine system-ticket discounts, payout caps/floors and nonlinear shared-pool rules.
+- H005: remaining genuine nonlinearity only — very large deterministic discounts/refunds, guaranteed payout floors, nonlinear pool/payout rules. Ordinary system packaging and modest discounted zero-floor bundles are now screened out.
 - H002: Powerball full threshold including tax, sharing and sales response; then Mega Millions / EuroMillions.
-- H009: revisit only when an official current source exposes a new deterministic cashback/discount or account-specific executable offer. **The 2026-08-15 official-source screen found no surviving candidate.**
+- H009: revisit only when an official current source exposes a new deterministic cashback/discount or account-specific executable offer. **The 2026-08-15 official-source screen found no surviving terminal candidate.**
 - H012: finite/final-draw states only where accumulated pool/subsidy breaks ordinary negative economics.
 - H012b: execution limits for any candidate that survives economics.
 
@@ -87,6 +91,9 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - blind brute force;
 - anti-crowd selection alone;
 - ordinary additive wheels/coverings;
+- ordinary system packages with constituent-linear pricing;
+- syndicate/fractional-ticket splitting that does not reduce full-ticket acquisition cost;
+- modest deterministic discounts on portfolios with legal zero-return outcomes;
 - random promotional entry alone;
 - nonwithdrawable free-play face value treated as cash;
 - stale campaign landing pages treated as live without current-index/rule consistency.
