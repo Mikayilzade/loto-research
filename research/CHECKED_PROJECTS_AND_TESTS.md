@@ -83,7 +83,16 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Public scratch remaining-prize tables | game-level prize state, no unsold-ticket identity/location mapping | no deterministic ticket leak; overlaps H010 |
 | Pack/ticket number or retailer location | no current official causal mapping to prize; current NY material says prizes randomly distributed | no validated current edge |
 | Ordinary online instant games | outcome status follows paid play; demo has no cash entitlement | no pre-purchase outcome leak |
-| **H018 Virginia Lucky Contestant time-state** | operator publishes hidden daily target-time distribution and odds ramp to **1 in 1 at selected time**; target time itself is hidden | **NEW HIGH-PRIORITY state-dependent lead, not guarantee**; `research/h011_visible_prepurchase_information.md` |
+
+## H018 Virginia Lucky Contestant hidden-time state
+| Test | Result | Status |
+|---|---|---|
+| Official causal odds schedule | hidden weighted daily selected time; 60m=1/150,000, 30m=1/30,000, selected time=1/1; jackpot may also be won earlier at standard odds | **VALIDATED mechanism**; `research/h018_lucky_contestant_time_state.md` |
+| Optimistic Bayesian/survival concentration | under uniform-within-published-bin and strongest `T>=now` truncation, late remaining-time mass concentrates sharply (e.g. at 23:00, 66.7% of remaining T mass in next 30m, 100% in next 60m) | **EV lead only; model assumption explicit**; `data/derived/h018_optimistic_time_state_screen.csv` |
+| $600 jackpot-only threshold | $0.20 stake needs jackpot p≥1/3000; published 30m anchor contributes only ~$0.02 jackpot EV, while T itself is 1/1 but hidden | quantified necessary condition, not executable EV proof |
+| Public winner-list sample | Jan 4–10 2026 page sample contains 8 deduplicated events and two distinct Jan 4 awards | reset/multiple-award mechanics must not be assumed from slogan alone |
+| Standalone strict guarantee | other player may legally win jackpot before hidden T; ordinary play has losing outcomes; therefore a legal branch exists with jackpot unavailable + our paid loss | **REJECTED terminal guarantee** |
+| Full EV strategy | exact interpolation, T resolution, standard odds, reset mechanics, stake scaling, live-state latency/player intensity not fully public | **OPEN/data-blocked overlay**, not SUCCESS |
 
 ## Randomness / predictive controls
 Permanent rejected standalone ideas unless extraordinary forward evidence appears:
@@ -101,16 +110,17 @@ Still open:
 ## Other still-open / blocked classes
 - H010 remaining-inventory instant-ticket state: blocked on public live denominator.
 - H014 Azerbaijan 4+4 zero-winner carryover: data-blocked.
-- H018 Virginia Lucky Contestant hidden-time/survival-state EV model.
+- H018 Lucky Contestant remains open only as a conditional-EV/data-acquisition overlay; standalone guarantee is closed.
 - additional finite/final-draw games where deterministic external subsidy or accumulated pool can exceed full acquisition cost.
 - lawful lottery-adjacent hedging/arbitrage where both sides can be locked at positive net payout.
 
 ## Current priorities
-1. **H018 Lucky Contestant time-state model** — derive posterior target-time hazard from published prior and jackpot-survival state; determine whether any observable time/state can become +EV and whether any all-outcome hedge is possible.
-2. **H006/H007 randomness branches** — obtain reliable histories and run strict forward/multiple-testing controlled screens.
-3. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+1. **H006/H007 randomness branches** — obtain reliable histories and run strict forward/multiple-testing controlled screens; focus on causal implementation effects, not folklore.
+2. **H012 additional finite/final-draw states** only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+3. **Lawful two-sided hedging/arbitrage** where both sides can be locked before outcome.
 4. H010/H014 when new authoritative data routes appear.
-5. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, lawful lottery-adjacent arbitrage/hedging, additional current products.
+5. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
+6. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products.
 
 ## Rule for future work
 Every research packet must update this ledger or add a linked detailed note. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
