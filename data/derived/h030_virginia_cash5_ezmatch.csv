@@ -1,0 +1,13 @@
+metric,value,unit,interpretation
+cash5_space,1221759,plays,C(45,5)
+full_space_cost,1221759,USD,$1 per play
+match4_count,200,plays,exact full-space count
+match3_count,7800,plays,exact full-space count
+match2_count,98800,plays,exact full-space count
+fixed_lower_tier_gross,177800,USD,deterministic excluding jackpot
+sole_winner_break_even_jackpot,1043959,USD,ignores tax execution and sharing
+checkpoint_advertised_jackpot,210000,USD,official page snapshot 2026-08-15
+checkpoint_optimistic_fullspace_gross,387800,USD,assumes entire jackpot to our line
+checkpoint_optimistic_fullspace_return,0.317400143,ratio,still far below break-even
+ez_match_ev,0.654615706,USD_per_$1_addon,sum published prize/odds rows
+ez_match_gross_return,0.654615706,ratio,negative EV add-on
