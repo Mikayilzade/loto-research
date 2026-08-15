@@ -1,6 +1,6 @@
 # HYPOTHESIS REGISTRY
 
-Updated: 2026-08-12
+Updated: 2026-08-15
 
 Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `validated`.
 
@@ -12,20 +12,20 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 
 ## H002 — Progressive jackpot threshold
 **Claim:** A progressive jackpot can reach a state where a ticket is +EV after cash-value, sharing, tax and sales response are included.
-- Targets: Powerball, Mega Millions, EuroMillions.
-- Status: `untested`.
+- Targets tested: Powerball, Mega Millions, EuroMillions.
+- Status: **quantified; terminal guaranteed-profit routes rejected for current screened forms because sharing/full-space/rolldown constraints prevent all-outcome guarantee**.
 
 ## H003 — Number-popularity avoidance
 **Claim:** Less-popular combinations do not increase draw probability but may improve conditional shared payout.
-- Status: **partially quantified under H015; useful sharing optimizer, not standalone +EV**.
+- Status: **partially quantified under H015; useful sharing optimizer, not standalone +EV/guarantee**.
 
 ## H004 — Covering designs improve risk profile
 **Claim:** Wheels/covering designs can improve target-tier hit probability or variance for fixed budget even when raw EV is unchanged.
-- Status: `untested`.
+- Status: **linear/additive terminal guarantee class rejected under H012a expectation theorem; still useful only as risk-profile optimization or with genuine nonlinearity**.
 
 ## H005 — Nonlinear payout portfolio edge
 **Claim:** Caps, guarantees, shared pools, duplicate-line effects or multipliers can make portfolio construction affect EV rather than only variance.
-- Status: `untested`.
+- Status: **screened; ordinary system packaging, random promos and small deterministic discounts do not create terminal guarantee; reopen only for a genuine nonlinearity large enough to cross cost**.
 
 ## H006 — Physical draw bias
 **Claim:** A physical machine/ball process may have persistent bias large enough to survive multiple-testing correction and forward validation.
@@ -38,12 +38,21 @@ Status values: `untested`, `testing`, `rejected`, `inconclusive`, `promising`, `
 
 ## H008 — Cross-jurisdiction same-jackpot EV difference
 **Claim:** Shared jackpot games can have materially different EV by jurisdiction because of price, lower tiers, tax and payout rules.
-- First target: US vs UK Powerball.
-- Status: `untested`.
+
+EuroMillions screen (Spain / France / Ireland / UK) completed:
+- Spain, France and Ireland all list a simple line at **€2.50**; UK lists **£2.50**.
+- national bundled raffles differ (El Millón / My Million / Ireland Only Raffle / UK Millionaire Maker), so total ticket EV differs even for the same common draw;
+- Spain withholds **20% of the portion of a qualifying lottery prize above €40,000** (El Millón exemption €24,000), whereas official French/UK material says the initial lottery win is not income-taxed and Irish Revenue lists lottery wins among exempt gains/receipts in the cited tax contexts;
+- at the same posted €2.50 price, France strictly dominates Spain on the common main-game net payout for prizes above €40k, subject to lawful access and the player's own cross-border tax position;
+- nevertheless every screened jurisdiction retains joint outcomes where the main line and national raffle both lose, so jurisdiction shopping cannot by itself create an all-outcome positive-profit guarantee.
+
+- Analysis: `research/h008_euromillions_cross_jurisdiction.md`.
+- Data: `data/derived/h008_euromillions_jurisdiction_screen.csv`.
+- Status: **material jurisdictional EV difference validated; standalone terminal guaranteed-profit arbitrage rejected**.
 
 ## H009 — Promotional overlay
 **Claim:** Cashback, free tickets, second-chance draws, loyalty rewards or bounded bonuses can turn a normally negative product +EV for a limited volume.
-- Status: `untested`.
+- Status: **current deterministic-subsidy screen found no executable all-outcome guarantee; random/replay bonuses rejected as terminal guarantee**.
 
 ## H010 — Instant-ticket remaining-prize edge
 **Claim:** If a physical instant-ticket series exposes both remaining after-tax prize value and a defensible remaining-purchasable-ticket denominator, late-stage conditional EV can differ materially from initial EV and may in principle cross positive.
@@ -66,7 +75,7 @@ All initial states negative. Legal/tax rules show sales and unsold inventory are
 
 ## H012 — Full-space coverage / buy-the-pot
 **Claim:** Finite spaces can become profitable to cover when retained payout exceeds acquisition, sharing, tax and execution cost.
-- Status: `untested`.
+- Status: **tested across Beşdə 5, ONLOTO and current large jackpot exemplars; several terminal routes rejected, 4+4 exact full-space theorem remains data-blocked**.
 
 ## H013 — Operator page/prize-table inconsistency signal
 **Claim:** Apparent operator-page inconsistencies can reveal multiplier/bonus mechanics that materially alter EV models.
@@ -129,7 +138,7 @@ The scientific bottleneck is now a pre-draw crowd-choice model that maps our cho
   - `data/derived/h015_jackpot_collision_screen_6of59.csv`
   - `data/derived/h015_shared_pool_intensity_sensitivity.csv`
 - Analysis: `research/h015_crowd_sharing.md`.
-- Status: **quantitatively promising as an overlay optimizer; jackpot benefit bounded, lower-tier sensitivity large but achievable crowd-intensity reduction unvalidated**.
+- Status: **quantitatively promising as an overlay optimizer; standalone guaranteed-profit path rejected**.
 
 ## H016 — Wednesday Must Be Won calendar edge
 **Claim:** A Wednesday sixth-draw UK Lotto state might benefit from inherited carryover meeting lower weekday demand.
