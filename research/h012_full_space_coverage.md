@@ -1,12 +1,12 @@
 # H012 — full-space coverage / buy-the-pot
 
 Updated: 2026-08-15
-Status: **tested for Beşdə 5 and all ONLOTO base bet types; guaranteed-profit full coverage rejected for these cases**
+Status: **tested for Beşdə 5, all ONLOTO base bet types, and single 4+4 system tickets 5+5/6+6; no guaranteed-profit construction found**
 
 ## Goal
-Test the most direct possible guarantee strategy: buy every possible base combination exactly once so that the realized draw cannot escape the portfolio.
+Test the most direct possible guarantee strategy: buy every possible base combination exactly once, or use a system ticket that compresses many base variants, so that the realized draw cannot escape the portfolio.
 
-This is stronger than ordinary positive-EV analysis. If the deterministic gross payout is below deterministic acquisition cost even before tax, sharing and execution friction, the guarantee path is rejected immediately.
+This is stronger than ordinary positive-EV analysis. If a deterministic gross payout is below deterministic acquisition cost, or if any legal draw can still produce zero payout at positive cost, the standalone guarantee path is rejected immediately.
 
 ## 1. Azerbaijan Beşdə 5
 Official current rules state:
@@ -104,7 +104,7 @@ Guaranteed return ratios by bet type:
 - type 7: **77.3335%**
 - type 8: **77.3440%**
 - type 9: **77.3644%**
-- type 10: **77.2782%**
+- type 10: **77.2782%**.
 
 Best of the ten is still only 78% deterministic gross return.
 
@@ -115,37 +115,83 @@ All ten ONLOTO full-space portfolios are **strict guaranteed losses before tax/e
 
 Status: **REJECTED as guaranteed-profit full-space strategy**.
 
-## 3. 4+4 status
+## 3. Azerbaijan 4+4 — single system tickets 5+5 and 6+6
+Current official rules confirm:
+- two independent A/B boards, each draw selects 4 of 20;
+- ordinary ticket display price 2 AZN;
+- system modes allow selecting **5+5** or **6+6**, which create multiple constituent base 4+4 variants;
+- minimum winning patterns include 1+2 / 2+1 / 0+3 / 3+0; therefore 0+0 is a losing outcome.
+
+Primary source:
+- https://www.azerlotereya.com/game/fourplus
+
+### Constituent base variants
+A system selecting n numbers on each board contains:
+
+`C(n,4)^2`
+
+base variants.
+
+Therefore:
+- 5+5 => `C(5,4)^2 = 25` base variants;
+- 6+6 => `C(6,4)^2 = 225` base variants.
+
+### Necessary-condition guarantee test
+A standalone positive-cost ticket can guarantee profit only if **every legal draw** pays more than its acquisition cost.
+
+For both 5+5 and 6+6 there are enough unselected numbers on each board to draw all four winning numbers outside the system selection:
+- 5+5 leaves 15 unselected numbers per board;
+- 6+6 leaves 14 unselected numbers per board.
+
+Thus legal 0+0 draw pairs exist.
+
+Exact number of 0+0 draw pairs:
+- 5+5: `C(15,4)^2 = 1,863,225` out of 23,474,025 total draw pairs (~7.94%);
+- 6+6: `C(14,4)^2 = 1,002,001` (~4.27%).
+
+Every constituent base variant then has zero matches on both boards, and 0+0 is not a prize category.
+
+Therefore the gross portfolio payout is **0** on those legal outcomes.
+
+### Conclusion
+A single 5+5 or 6+6 system ticket **cannot** be a guaranteed-positive-profit strategy at any positive ticket price, regardless of whether system pricing contains a discount.
+
+This closes the single-system-ticket guarantee path without needing the unresolved exact system price.
+
+Status: **REJECTED as standalone guaranteed-profit strategy**.
+
+## 4. 4+4 complete coverage remains separate
 A naive full-space base portfolio contains:
 
 `C(20,4)^2 = 23,474,025`
 
 base 4+4 variants.
 
-However a strict guarantee proof/rejection still requires:
-- authoritative per-base-variant cost for ordinary vs 5+5/6+6 system tickets;
+A strict full-space profit theorem/rejection still requires:
+- authoritative per-base/system-ticket cost;
 - category-II allocation/carryover rule;
 - exact treatment of jackpot sharing and state-dependent pools under a portfolio that itself materially changes sales.
 
-The public page confirms a 2-AZN ticket display and 5+5/6+6 system options but does not expose enough pricing/state accounting to certify a full-space profit guarantee.
+The single-ticket 5+5/6+6 rejection does **not** reject a large multi-ticket covering design. That moves to H012a/H004.
 
-Status: **BLOCKED for exact guaranteed-profit theorem; no evidence of a nonlinear system-ticket discount yet**.
+Status: **BLOCKED for exact full-space profit theorem; multi-ticket covering moves to next branch**.
 
 ## Code
 - `src/loto_research/full_space.py`
 - `tests/test_full_space.py`
 
+New exact helpers:
+- `two_board_system_variant_count`;
+- `two_board_zero_zero_outcome_count`.
+
 ## Data
 - `data/derived/h012_full_space_screen.csv`
 
 ## Strategic conclusion
-H012 remains open globally, but two highly relevant finite current Azerbaijan targets are now closed:
+Closed guaranteed-profit paths:
 - Beşdə 5 full-space: rejected;
-- ONLOTO bet types 1–10 full-space: rejected.
+- ONLOTO bet types 1–10 full-space: rejected;
+- 4+4 single 5+5 system: rejected;
+- 4+4 single 6+6 system: rejected.
 
-The next H012 work should target games with one or more of:
-- accumulated guaranteed prize pool / final draw;
-- bounded finite space small enough to cover;
-- promotional subsidy;
-- nonlinear system-ticket pricing cheaper than the sum of constituent variants;
-- guaranteed lower-tier floor exceeding portfolio acquisition cost.
+H012 remains open globally. The next direct guarantee branch is **H012a/H004 multi-ticket covering designs / guaranteed lower-tier floors**, especially constructions that cover every draw outcome with fewer purchased variants than full-space enumeration.
