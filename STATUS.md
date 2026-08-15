@@ -4,7 +4,7 @@ Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H020 two-sided arbitrage mechanism validated, live executable candidate still missing**
+**Stage 1 — structural/state-edge search; H020 post-fill arbitrage validated and fee/depth scanner implemented, but direct live executable quote acquisition is runtime-blocked**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,50 +12,42 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# NEW — H020 lawful two-sided hedging/arbitrage
+# H020 lawful two-sided hedging/arbitrage — advanced
 Files:
 - `research/h020_two_sided_hedging_arbitrage.md`
 - `src/loto_research/two_sided_arb.py`
+- `src/loto_research/live_complete_set.py`
 - `tests/test_two_sided_arb.py`
+- `tests/test_live_complete_set.py`
 - `data/derived/h020_two_sided_arb_screen.csv`
+- `data/derived/h020_fee_aware_pair_thresholds.csv`
 
-## Main theorem
-For exhaustive mutually-exclusive outcomes with effective decimal odds `O_i`, equal-return dutching is strictly profitable iff:
+## Mechanism
+For exhaustive mutually-exclusive outcomes with effective decimal odds `O_i`, equal-return dutching is strictly profitable iff `sum_i(1/O_i) < 1` after all costs. For binary complete-set tokens, `YES all-in + NO all-in < $1` is the equivalent gate.
 
-`sum_i(1/O_i) < 1`
+Smarkets official examples still validate genuine equal positive profit after both hedge legs are accepted. Kalshi/Polymarket same-market complete-set mechanics do not provide a structural subsidy.
 
-after all commissions/taxes/costs.
+## NEW — live acquisition math is no longer the blocker
+Current official Polymarket documentation exposes:
+- public active-market discovery and token IDs;
+- public full orderbooks;
+- per-market fee parameters;
+- taker fee formula `C * feeRate * p * (1-p)`.
 
-For binary complete-set token markets, the equivalent gate is:
+`live_complete_set.py` now:
+- walks executable ask depth;
+- includes per-level taker fees and external costs;
+- finds the largest profitable complete-set quantity at orderbook breakpoints;
+- models Kalshi bid-only YES/NO complement arithmetic.
 
-`Yes all-in cost + No all-in cost < $1 guaranteed redemption/merge value`.
+Important screening result at prices near 0.50/0.50: raw YES+NO asks must be below roughly 0.985 for 3% fee rate, 0.980 for 4%, 0.975 for 5%, and 0.965 for 7%, before builder/gas/FX costs. Thus many apparent `<1` crosses are false positives after fees.
 
-## Mechanism validation
-Smarkets' official documentation explicitly describes bookmaker/exchange arbitrage and gives back-to-lay examples where both outcome branches have equal positive profit. Reproduced published-style example:
-- back 2.20, stake £200;
-- lay 1.98, 2% exchange commission;
-- equalizing lay stake ≈ £224.4898;
-- profit = **£20 on either branch** after both legs are accepted.
+This runtime could verify current official API interfaces but could not retrieve arbitrary raw live Gamma/CLOB payloads through its network path. No current quote is fabricated. H020 is therefore **execution/data-access blocked in this environment, not modeling blocked**.
 
-This proves the mechanism class: **post-fill deterministic profit is real**.
-
-## Why not SUCCESS yet
-The cited odds are educational examples, not a live executable opportunity. Before both legs are fully matched, price movement, partial fills, bookmaker limits/rejection, liquidity, incompatible void/dead-heat rules, eligibility/geography, taxes and settlement mismatch can break the pre-trade guarantee.
-
-Therefore H020 distinction:
-- post-fill guarantee: **VALIDATED**;
-- current repeatable pre-trade executable guarantee: **NOT YET ESTABLISHED**.
-
-## Same-venue structural screens
-### Kalshi
-Official mechanics state opposing Yes/No participant investments combine to `$1`; fees are then charged. Buying both sides of one ordinary binary market therefore has no structural positive complete-set subsidy. Collateral return improves capital efficiency but does not increase payout.
-
-Status: **same-market buy-both structural arb rejected; cross-market/live discrepancies remain conditional only**.
-
-### Polymarket
-Official CTF mechanics state `$1 pUSD -> 1 Yes + 1 No`, and equal Yes/No pairs merge back to `$1`. Thus a pair acquired below `$1` all-in would be deterministic arbitrage, but split/merge itself anchors the complete set to `$1`; fees/gas only worsen a non-crossed book. Negative-risk conversion is capital-efficient, not a payout subsidy.
-
-Status: **complete-set arb condition validated; no structural same-market profit; live crossed-book opportunities require real-time screening**.
+Status:
+- post-fill deterministic profit mechanism: **VALIDATED**;
+- fee/depth execution filter: **IMPLEMENTED**;
+- current reproducible pre-trade opportunity: **NOT ESTABLISHED**.
 
 # H019 capped fixed-prize competition saturation
 A one-winner capped competition can be deterministic only if one entrant owns every valid entry, no external/free entry can survive, closure is atomic, and guaranteed cash floor exceeds full acquisition cost plus all costs. Current/recent UK sample cash-floor/full-cap ratios were only ~28.6%–53.3%; no SUCCESS.
@@ -81,8 +73,8 @@ Standalone guarantee rejected because another player may win before hidden selec
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. **H020 live-data arbitrage acquisition gate:** search public venues/APIs for a current price pair where all legs, fees and settlement definitions can be verified; avoid declaring SUCCESS until both-side executable conditions are proven.
-2. **H012 additional finite/final-draw states:** only products where deterministic accumulated pool/subsidy can exceed full acquisition cost.
+1. **H012 additional finite/final-draw states:** search current products only where deterministic accumulated pools, final-draw forced distribution, fixed cash floors, or external subsidies could exceed complete acquisition cost.
+2. **H020 live-data arbitrage:** resume immediately if a runtime gains direct public REST/WebSocket access; scanner is ready and should require real fillable depth + exact fee/settlement compatibility.
 3. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
 4. H010/H014 if new authoritative data routes appear.
 5. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
