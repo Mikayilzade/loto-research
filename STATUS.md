@@ -13,40 +13,55 @@ Resume from this checkpoint, avoid repeating closed tests, save every meaningful
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# NEW — H009 current deterministic subsidy screen completed
+# NEW — H005 system pricing / deterministic bundle-discount packet completed
+File: `research/h005_system_pricing_screen_2026-08-15.md`.
+
+## Australia Oz Lotto System 8
+Current displayed pricing gives an exact linear control:
+- standard games: AUD 1.65 each;
+- System 8: 8 constituent games for AUD 13.20 = AUD 1.65 each.
+
+Conclusion: system packaging adds coverage/convenience only; **no nonlinear price edge**.
+
+## Poland LOTTO systems / fractional tickets
+Official Lotto rules describe System 7–12 as all underlying six-number simple bets generated from selected numbers. No authoritative below-constituent system discount was recovered in the current screen.
+
+Fractional coupons also fail as arbitrage: the full underlying ticket must be paid before fractions are issued, then winnings are split by the same participation share. Capital sharing does not change total ticket economics.
+
+## NEW real nonlinear discount found — Poland lotto.pl
+Fresh official lotto.pl pages currently display:
+- Quick Pick;
+- 3 bets;
+- 1 draw;
+- reference price PLN 13;
+- discounted purchase price **PLN 12**.
+
+This is a real deterministic ~7.69% reference-price discount, so H005's discounted-acquisition class genuinely exists in current public lottery sales.
+
+However the bundle still has a legal branch where all lottery bets return zero cash. Therefore minimum payout `F=0` while discounted cash cost `C=12 PLN`; strict guaranteed profit is impossible.
+
+General filter strengthened: for any zero-floor portfolio, **no positive but sub-100% acquisition discount can create an all-outcome profit guarantee**. Discounts matter only when combined with a nonzero guaranteed payout floor large enough that `F > discounted cost`.
+
+# H009 current deterministic subsidy screen
 File: `research/h009_current_deterministic_subsidy_screen_2026-08-15.md`.
 
-Official-source screen covered Azerlotereya, Virginia Lottery, Georgia Lottery, New York Lottery and Florida Lottery promotion architectures.
+Official-source screen across Azerlotereya, Virginia, Georgia, New York and Florida found no current verified deterministic withdrawable subsidy sufficient for guaranteed profit. Stale/conflicting campaign pages are classified `STALE-CONFLICT` and not executable without direct confirmation.
 
-## Azerbaijan current result
-The official Azerlotereya current-campaign index at the checkpoint says **no current campaign**.
-
-The apparent `10 oyna, 10 qazan` welcome-bonus page is a stale/conflicting near-candidate:
-- landing page text says through 31 August and first 10,000 users;
-- page is indexed/labeled as a past campaign;
-- official FAQ says 14 April–31 July 2026;
-- current-campaign index says no campaign.
-
-New validation rule: inconsistent landing-page/index/FAQ dates => `STALE-CONFLICT`, never an executable current edge without direct operator confirmation.
-
-Even under hypothetical continuity, the 10-AZN subsidy does not prove guaranteed profit: qualification first requires >=10 AZN completed wagering; unused bonus withdrawal is subject to a 30% commission in the FAQ; wagering the bonus reintroduces losing outcomes. No <=10-AZN qualifying portfolio with a sufficient verified positive cash floor has been found.
-
-## Other official promotion classes
-- Virginia current/new-player bonus games: promotional value/non-deposit balances generally nonwithdrawable; only resulting prizes can be withdrawn; legal all-losing branch remains.
-- Georgia July 2026 50% deposit match: expired 2026-07-21 and nonwithdrawable lottery-only funds.
-- New York NYL+: points/exclusive games/second-chance architecture; no deterministic withdrawable cash floor found.
-- Florida current Bonus Play: random promotional chances, no-prize branch remains.
-
-Conclusion: **no current verified deterministic cashback/subsidy survived H005's guarantee filter in the screened official-source set.** H009 is not globally closed because promotions change, but this checkpoint set is closed.
-
-# H005 nonlinear portfolio/overlay screen
+# H005 nonlinear portfolio/overlay filters already established
 File: `research/h005_nonlinear_overlay_screen.md`.
 
-Necessary-condition filters already established:
-1. Random extra prize layer with a legal zero-prize outcome cannot by itself repair a negative base payoff floor.
-2. Nonwithdrawable free-play credit is not cash at face value; if mandatory replay can lose completely, guaranteed cash value can be zero absent separate coverage.
-3. Deterministic withdrawable cashback B can create a strict guarantee only when `base minimum payout F + B > total cost C` after fees/tax.
-4. System packaging matters only if price/payout is genuinely nonlinear versus constituent variants or unlocks an extra deterministic layer.
+Closed/filtered subclasses now include:
+1. ordinary additive system packaging;
+2. exact constituent-linear system pricing;
+3. fractional/syndicate splitting without total-cost reduction;
+4. random second-chance/promotional layers with zero-prize outcomes;
+5. nonwithdrawable replay credits whose replay can lose;
+6. modest deterministic discounts on portfolios with zero-return outcomes.
+
+H005 remains open only for:
+- unusually large deterministic cashback/discount/refund;
+- portfolio with a verified positive payout floor close enough to cost for discount to cross break-even;
+- nonlinear shared-pool/cap/rolldown rule that raises the minimum payoff rather than only EV.
 
 # Previously closed / blocked
 - H012a/H004 ordinary additive wheels: CLOSED by expectation theorem.
@@ -59,12 +74,12 @@ Necessary-condition filters already established:
 - H014 4+4 carryover: data-blocked.
 
 # Safe next priorities
-1. **H005 genuine nonlinear system-ticket pricing / deterministic payout floors** across current games and jurisdictions; search for system tickets priced below constituent combinations or guaranteed prize/refund mechanics.
-2. **H002 Powerball full threshold** with sharing + tax + sales response, then Mega Millions / EuroMillions; structural progressive states may be nearer to coverage than ordinary games.
-3. H008 cross-jurisdiction lawful arbitrage/hedge differences.
+1. **H002 Powerball full threshold** with sharing + tax + sales response and, separately, a full-space guarantee bound. This now outranks further generic system-package screening.
+2. H002a Mega Millions current $5 format, then H002b EuroMillions.
+3. H008 cross-jurisdiction lawful pricing/tax/payout differences.
 4. H012 finite/final-draw states only where accumulated guaranteed pools break ordinary negative economics.
-5. H009 revisit only on newly active deterministic cashback/discount offers.
-6. H012b execution constraints only after economics survives.
+5. H005/H009 revisit only when a genuinely large deterministic discount/refund or nonzero payout floor appears.
+6. H012b execution constraints for any candidate that survives economics.
 7. H006/H007 randomness branches after reliable histories are collected.
 
 Permanent audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
