@@ -1,0 +1,9 @@
+jurisdiction,wager,cover_all_cost,min_draw_prize,guaranteed_gross_ratio,guaranteed_net,draw_ev_per_play,draw_ev_ratio,random_instant_overlay
+Georgia,1,15,5,0.3333333333,-10,0.6296699134,0.6296699134,"retail: $2 at 1/100"
+Georgia,2,30,10,0.3333333333,-20,1.3038216264,0.6519108132,"retail: $4 at 1/70"
+Georgia,5,75,25,0.3333333333,-50,3.3940152050,0.6788030410,"retail: $10 at 1/65"
+Georgia,10,150,50,0.3333333333,-100,7.0473484848,0.7047348485,"retail: $20 at 1/50"
+Virginia,1,15,5,0.3333333333,-10,0.6098232846,0.6098232846,"none used in guarantee floor"
+Virginia,2,30,10,0.3333333333,-20,1.2806720791,0.6403360395,"none used in guarantee floor"
+Virginia,5,75,25,0.3333333333,-50,3.3613860503,0.6722772101,"none used in guarantee floor"
+Virginia,10,150,50,0.3333333333,-100,7.0006204876,0.7000620488,"none used in guarantee floor"
