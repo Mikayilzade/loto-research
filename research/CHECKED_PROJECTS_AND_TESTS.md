@@ -43,6 +43,7 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H025 Health Lottery Big Win + free £100k draw** | buy all `C(50,5)` Wednesday/Saturday lines; grant full £25k Match-5, value 198,660 free tickets at £1 face, grant full £100k auxiliary draw | cost £2,118,760; deliberately optimistic deterministic package value **£603,560 = 28.4865%** | **REJECTED guaranteed-profit full coverage**; `research/h025_health_lottery_full_coverage.md` |
 | **H025 Health Lottery All Or Nothing** | buy all `C(24,12)` lines; grant both 12-match and 0-match own winners full £25k each despite sharing rule | cost £2,704,156; optimistic deterministic gross **£1,071,850 = 39.6371%** | **REJECTED guaranteed-profit full coverage**; `research/h025_health_lottery_full_coverage.md` |
 | **H026 Millionaire for Life** | buy all `C(58,5)*5=22,910,580` plays at $5; grant full current $18m top cash and $2.2m to each of four 5-only winners, ignoring pari-mutuel deterioration | cost **$114,552,900**; optimistic deterministic gross **$60,584,320 = 52.8876%**; deficit $53,968,580 | **REJECTED guaranteed-profit full coverage**; `research/h026_millionaire_for_life_full_coverage.md` |
+| **H027 Lotto America** | buy all `C(52,5)*10=25,989,600` $1 plays; exact published-table non-jackpot gross $6,991,428; July 18 2026 $34.12m annuity had $15,154,248 cash option | optimistic full-share cash gross **$22,145,676 = 85.2098%**, deficit $3,843,924; sole-winner cash hurdle $18,998,172; jackpot sharing/lower-tier pari-mutuel can only worsen guarantee | **REJECTED guaranteed-profit full coverage**; `research/h027_lotto_america_full_coverage.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -147,7 +148,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. Apply **H021/H022/H023/H024/H025/H026 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+1. Apply **H021/H022/H023/H024/H025/H026/H027 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
 2. H020 live-data arbitrage if direct public raw-book access becomes available.
 3. H006/H007 only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
