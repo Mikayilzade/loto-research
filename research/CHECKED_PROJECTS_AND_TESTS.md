@@ -27,9 +27,11 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Mega Millions H002a | sharing curve | ~$1.147bn at 10m other lines; $1.227bn at 50m; $1.333bn at 100m; $1.808bn at 300m | modeled; `data/derived/h002a_megamillions_sharing_threshold_curve.csv` |
 | Mega Millions full-space | all 290,472,336 combinations at $5 | cost $1.45236168bn | exact |
 | Mega Millions full-space guarantee | worst legal 2x non-jackpot multiplier assignment + jackpot sharing | deterministic non-jackpot floor $216.59068m; sole-jackpot cash needed $1.235771bn; external jackpot-winner count unbounded by useful pre-draw rule | **REJECTED terminal guarantee**; `src/loto_research/megamillions_threshold.py` |
-| **EuroMillions H002b current** | current 5/50 + 2/12; €2.50 Spain price; cap €250m | full combination space **139,838,160**, full-space cost **€349,595,400** | quantified; `research/h002b_euromillions_cap_rolldown.md` |
-| **EuroMillions H002b terminal cap rolldown** | attempt to buy full space on terminal €250m cap draw | full coverage necessarily contains the realized 5+2 winner, so the required no-jackpot-winner condition for rolldown cannot occur | **REJECTED terminal guarantee by incompatibility theorem** |
-| **EuroMillions H002b sharing** | full/partial coverage under shared main-game pools | full coverage costs €99.5954m more than jackpot cap before lower tiers; external winning-bet counts have no useful pre-draw hard cap; partial coverage leaves uncovered outcomes | **REJECTED terminal guarantee**; code `src/loto_research/euromillions_coverage.py` |
+| EuroMillions H002b current | current 5/50 + 2/12; €2.50 Spain price; cap €250m | full combination space **139,838,160**, full-space cost **€349,595,400** | quantified; `research/h002b_euromillions_cap_rolldown.md` |
+| EuroMillions H002b terminal cap rolldown | attempt to buy full space on terminal €250m cap draw | full coverage necessarily contains the realized 5+2 winner, so the required no-jackpot-winner condition for rolldown cannot occur | **REJECTED terminal guarantee by incompatibility theorem** |
+| EuroMillions H002b sharing | full/partial coverage under shared main-game pools | full coverage costs €99.5954m more than jackpot cap before lower tiers; external winning-bet counts have no useful pre-draw hard cap; partial coverage leaves uncovered outcomes | **REJECTED terminal guarantee**; code `src/loto_research/euromillions_coverage.py` |
+| **EuroMillions H008 cross-jurisdiction** | Spain/France/Ireland/UK ticket price, bundled national raffle and tax treatment | ES/FR/IE list €2.50 line; UK £2.50. National add-ons differ. Spain taxes 20% of qualifying prize portion above €40k; FR/UK initial lottery wins not income-taxed per operator material; IE Revenue lists lottery wins among exempt gains/receipts | **material EV difference VALIDATED; standalone guaranteed arbitrage REJECTED**; `research/h008_euromillions_cross_jurisdiction.md` |
+| EuroMillions H008 France vs Spain main-game | same €2.50 posted price, same common draw, large-prize operator tax difference | for common main-game prizes >€40k, France strictly dominates Spain on operator-level net payout subject to lawful access/personal-tax caveat; €250m Spanish sole-prize net ≈€200.008m | valuation edge validated, not guarantee |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -90,11 +92,18 @@ Still open:
 - H006 physical-machine/ball bias with strict multiple-testing and regime controls;
 - H007 high-frequency RNG anomaly tests with reliable histories and causal implementation subtests.
 
+## Other still-open / blocked classes
+- H010 remaining-inventory instant-ticket state: blocked on public live denominator.
+- H011 lawful visible pre-purchase ticket information leak: untested.
+- H014 Azerbaijan 4+4 zero-winner carryover: data-blocked.
+- additional finite/final-draw games where a deterministic external subsidy or accumulated pool can exceed full acquisition cost.
+- lawful lottery-adjacent hedging/arbitrage where both sides of an outcome can be locked at positive net payout.
+
 ## Current priorities
-1. **H008 cross-jurisdiction** — lawful price/tax/payout differences for the same EuroMillions common jackpot and other shared-jackpot products.
-2. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
-3. H010/H014 when new authoritative data routes appear.
-4. H006/H007 after reliable histories are collected.
+1. **H011 visible-ticket/pre-purchase information leakage** — search for lawful deterministic or strongly predictive information available before purchase; reject quickly if no observable causal channel exists.
+2. **H006/H007 randomness branches** — obtain reliable histories and run strict forward/multiple-testing controlled screens.
+3. H012 finite/final-draw states only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
+4. H010/H014 when new authoritative data routes appear.
 5. Advanced controls before EXHAUSTED: Bayesian hidden-state estimation, nonlinear portfolio optimization only where nonlinearity exists, strict out-of-sample ML/RNG tests, lawful lottery-adjacent arbitrage/hedging, additional current products.
 
 ## Rule for future work
