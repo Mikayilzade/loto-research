@@ -1,0 +1,86 @@
+# H015 crowd-choice simulation framework
+
+Updated: 2026-08-15
+
+## Goal
+Estimate how a chosen line changes the expected number of **other** winners in a shared prize category, conditional on our own line hitting that category. This is the missing bridge between documented human number-selection bias and actual pari-mutuel EV.
+
+The framework does **not** predict winning numbers. It models the crowd.
+
+## Primary empirical basis
+1. Ding, *What Numbers to Choose for My Lottery Ticket? Behavior Anomalies in the Chinese Online Lottery Market* (2011): field evidence in a pari-mutuel lottery that players can be attracted toward numbers already shown as popular rather than strategically avoiding them.
+   - https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1926526
+2. Lien & Yuan, *The Cross-Sectional Gambler's Fallacy: Set Representativeness in Lottery Number Choices* (2015): >1.6m tickets; over-selection of representative/evenly-spread number sets creates a cost under pari-mutuel sharing.
+   - https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2636121
+3. Wang et al., *Number Preferences in Lotteries* (2016): proprietary datasets show personally meaningful and situationally available numbers, center-of-form attraction, and extremely popular numeric sequences/spatial patterns.
+   - https://www.cambridge.org/core/journals/judgment-and-decision-making/article/number-preferences-in-lotteries/47BA27051627CEED421AD3AEE255521E
+4. Polin, Ben Isaac & Aharon, *Patterns in manually selected numbers in the Israeli lottery* (2021): >800m manual selections; stable number preferences, strong low-number effect, form-position effect and demand-linked convergence toward more uniform selection.
+   - https://www.cambridge.org/core/journals/judgment-and-decision-making/article/patterns-in-manually-selected-numbers-in-the-israeli-lottery/F7167C1DD46E4876DAFCDDD6CE8F238C
+5. Crack, Whigham & Wisen, *Lotto Revealed* (2026): >70m played six-tuples / >400m individual played numbers; prize sharing is a first-order valuation feature and self-selected-number strategies can materially alter expected payoff.
+   - https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6572761
+
+## Implemented code
+`src/loto_research/crowd_choice.py`
+
+Features currently parameterized:
+- birthday/low-number attraction;
+- lucky-number attraction;
+- center-of-range attraction;
+- consecutive-pair attraction;
+- evenly-spaced / representative-set attraction.
+
+The sampler uses a candidate-batch softmax rather than enumerating the full combination space. This is an engineering approximation, not an empirical calibration.
+
+Core functions:
+- score a line for synthetic crowd attractiveness;
+- generate biased crowd lines;
+- sample winning draws conditional on our ticket obtaining exactly `k` matches;
+- estimate the probability an independently sampled crowd ticket hits a chosen competitor tier under that condition;
+- rank candidate lines by low synthetic crowd-attraction score.
+
+## Synthetic pipeline test — NOT a real-EV result
+A deliberately biased illustrative 6/59 model was used only to verify that the framework can express a meaningful anti-crowd effect.
+
+Parameters:
+- birthday weight 0.6;
+- lucky-number weight 0.8 (`7`);
+- center weight 0.3;
+- consecutive-pair weight 0.4;
+- even-spacing weight 0.3;
+- candidate batch 24.
+
+Example lines:
+- high crowd score: `3 7 12 18 24 30`, score ≈ 4.7372;
+- low crowd score candidate: `36 40 48 51 56 58`, score ≈ 0.1725.
+
+Conditional experiment:
+- assume our line hits exactly 3/6;
+- ask probability a crowd ticket also hits exactly 3/6;
+- 10 independent seeds × 10,000 simulations each.
+
+Observed synthetic probabilities:
+- high-score line mean competitor probability ≈ **0.01664**;
+- low-score line mean competitor probability ≈ **0.00682**;
+- mean relative intensity ≈ **0.414**; median run ratio ≈ **0.392**.
+
+Data: `data/derived/h015_synthetic_crowd_screen.csv`.
+
+Interpretation: the pipeline can produce the kind of 0.4× competitor-intensity state that would be economically important in a shared lower tier. **This does not establish that any real lottery permits a 0.4× reduction.** The weights were not fitted to a target crowd.
+
+## Scientific gate before EV claims
+H015 may advance beyond synthetic demonstration only after all of the following:
+1. Select a target lottery with genuinely shared lower-tier pools / rolldown money.
+2. Obtain player-choice data or an observable proxy rich enough to calibrate crowd behavior.
+3. Fit number-level and combination-level biases on a training period.
+4. Hold out later draws / ticket batches for out-of-sample validation.
+5. Validate not only marginal number frequencies but combination features and winner-count distributions.
+6. Compare anti-crowd candidate lines against uniform random and simple heuristics.
+7. Convert predicted competitor intensity into expected retained pool share using the actual sales volume and prize-pool rules.
+8. Only then combine the sharing uplift with the game's baseline structural EV.
+
+## Current conclusion
+- Human crowd bias and prize-sharing effects: **validated mechanism class**.
+- Parameterized simulator: **implemented and tested**.
+- Synthetic anti-crowd effect: **pipeline demonstration only**.
+- Real calibrated lower-tier edge: **not yet validated**.
+- Guaranteed profit: **not found**.
