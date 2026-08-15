@@ -1,0 +1,6 @@
+venue_or_category,fee_rate_per_leg,illustrative_yes_price,illustrative_no_price,fee_per_pair_at_prices,max_raw_pair_sum_before_extra_costs,notes
+Polymarket_geopolitics,0.00,0.50,0.50,0.0000,1.0000,fee-free category per current docs
+Polymarket_sports,0.03,0.50,0.50,0.0150,0.9850,taker fee both legs assumed
+Polymarket_politics_or_finance,0.04,0.50,0.50,0.0200,0.9800,taker fee both legs assumed
+Polymarket_general_economics_culture_weather,0.05,0.50,0.50,0.0250,0.9750,taker fee both legs assumed
+Polymarket_crypto,0.07,0.50,0.50,0.0350,0.9650,taker fee both legs assumed
