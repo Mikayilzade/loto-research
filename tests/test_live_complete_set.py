@@ -39,7 +39,7 @@ class LiveCompleteSetTests(unittest.TestCase):
         self.assertGreater(result.fees, 2.0)
 
     def test_depth_walking_prevents_top_quote_overstatement(self):
-        yes = [BookLevel(0.45, 10), BookLevel(0.52, 100)]
+        yes = [BookLevel(0.45, 10), BookLevel(0.56, 100)]
         no = [BookLevel(0.50, 100)]
         ten = fee_aware_binary_complete_set(yes, no, 10)
         self.assertTrue(ten.profitable)
@@ -47,7 +47,7 @@ class LiveCompleteSetTests(unittest.TestCase):
         self.assertFalse(twenty.profitable)
 
     def test_largest_profitable_quantity_found_on_depth_breakpoint(self):
-        yes = [BookLevel(0.45, 10), BookLevel(0.52, 100)]
+        yes = [BookLevel(0.45, 10), BookLevel(0.56, 100)]
         no = [BookLevel(0.50, 100)]
         best = max_profitable_quantity(yes, no)
         self.assertIsNotNone(best)
