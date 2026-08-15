@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H029 Virginia fixed-digit base-game class completed**
+**Stage 1 — structural/state-edge search; H029b Virginia FIREBALL and H030 Virginia Cash 5/EZ Match completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,45 +12,45 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H029 fixed-odds digit games — NEW / BASE CLASS CLOSED
+# H029 / H029b — Virginia Pick 3/4/5 family CLOSED
 Files:
 - `research/h029_fixed_digit_games_impossibility.md`
 - `data/derived/h029_virginia_digit_base_ev.csv`
+- `data/derived/h029b_virginia_fireball_ev_bounds.csv`
+- `src/loto_research/fireball_bounds.py`
+- `tests/test_fireball_bounds.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H029B_APPEND.md`
 
-## General theorem
-For any finite uniform draw game with additive wagers, if every constituent wager has expected payout no greater than its stake, then no nonnegative portfolio of those wagers can produce strictly positive profit for every draw outcome. Otherwise the guaranteed positive profit would imply positive expected profit, contradicting linearity of expectation.
+Base-game theorem: every checked Exact/Any/50-50/Combo/Pair wager has gross EV <=50%, so no nonnegative additive portfolio can guarantee positive profit in every outcome.
 
-## Virginia Pick 3
-Current base menu checked: Exact, Any Order 3/6-way, 50/50, Combo, Pair.
-Gross EV ratios per $1-equivalent stake are only **48%–50%**.
-Full Exact coverage costs $1,000 and deterministically pays $500.
+FIREBALL extension is now also closed. Virginia states FIREBALL doubles the play cost and pays separate additional prizes. Using published prize/odds rows and deliberately **double-counting overlapping 50/50 rows** to create a player-favorable EV upper bound:
+- Pick 3 max FIREBALL EV/stake upper bound: **65.5999%**;
+- Pick 4: **62.8960%**;
+- Pick 5: **60.3587%**.
 
-Status: **REJECTED entire additive base-game guarantee class**.
+With base EV <=50%, the best deliberately favorable combined base+FIREBALL EV ratio is below **57.8000%**. Therefore the entire current Pick 3/4/5 + FIREBALL paid additive family is **REJECTED as a guaranteed-profit path** by expectation linearity.
 
-## Virginia Pick 4
-Current base menu checked: Exact, Any Order 4/6/12/24-way, 50/50, Combo.
-Gross EV ratios are only **48%–50%**.
-Full Exact coverage costs $10,000 and deterministically pays $5,000.
+# H030 — Virginia Cash 5 with EZ Match CLOSED
+Files:
+- `research/h030_virginia_cash5_ezmatch.md`
+- `data/derived/h030_virginia_cash5_ezmatch.csv`
 
-Status: **REJECTED entire additive base-game guarantee class**.
+Current official structure:
+- 5/45; $1 per play;
+- full space `C(45,5)=1,221,759`;
+- deterministic fixed lower-tier cash under full coverage = **$177,800**;
+- sole-winner jackpot break-even = **$1,043,959** before tax/execution;
+- checkpoint advertised jackpot = **$210,000**;
+- optimistic full-space return granting our line the entire $210k jackpot = only **31.7400%**.
 
-## Virginia Pick 5
-Current base menu checked: Exact, Any Order 5/10/20/30/60/120-way, 50/50.
-Gross EV ratios are only **48%–50%**; 50/50 30-way = 49.75%.
-Full Exact coverage costs $100,000 and deterministically pays $50,000.
+The jackpot is explicitly split among multiple winning plays, so even a future jackpot above the sole-winner threshold does not create a strict guarantee without a useful hard pre-draw cap on external winners.
 
-Status: **REJECTED entire additive base-game guarantee class**.
+EZ Match costs an extra $1 and has approximate gross EV **$0.654615706 = 65.4616%** from the published prize/odds table. It is a paid random add-on and cannot rescue an additive guarantee.
 
-## FIREBALL remains separate
-FIREBALL doubles the cost and adds replacement-number winning combinations; wins can stack with base payouts. H029 deliberately does not infer its exact EV from the base-game theorem. It remains **H029b OPEN** for exact joint-outcome analysis.
-
-# H028 Nebraska finite-game coverage — CLOSED
-- Nebraska 2by2: optimistic full-space 38.03%; seven-draw Double Tuesday package 43.46%.
-- Nebraska MyDaY: exact full-space gross range 48.13%–58.47%.
-- Nebraska Pick 5: deterministic non-jackpot cash 21.44%; sole-winner jackpot hurdle $516,958; external sharing prevents strict guarantee.
+Status: **REJECTED current guaranteed-profit route**.
 
 # Fast-screen program to date
-Closed current finite/fixed-payout coverage cases now include:
+Closed current finite/fixed-payout or additive guarantee cases include:
 - Beşdə 5;
 - ONLOTO bet types 1–10;
 - UK Lotto HotPicks;
@@ -67,12 +67,12 @@ Closed current finite/fixed-payout coverage cases now include:
 - Nebraska 2by2 including Double Tuesday;
 - Nebraska MyDaY;
 - Nebraska Pick 5 current full-space structure;
-- **Virginia Pick 3 / Pick 4 / Pick 5 additive base wager families**.
+- Virginia Pick 3 / Pick 4 / Pick 5 **including FIREBALL**;
+- Virginia Cash 5 with EZ Match.
 
 No terminal guarantee has emerged.
 
 # Other active / blocked branches
-- **H029b FIREBALL:** next local analytic target; exact joint-outcome EV/guarantee check can potentially close the entire Virginia Pick family including add-ons.
 - H020 lawful two-sided hedging/arbitrage: post-fill surebet mechanism validated; fee/depth scanner implemented; current raw-book acquisition remains runtime/data blocked.
 - H019 capped fixed-prize competition saturation: mechanism valid in principle; sampled instances fail cash-floor/full-cap test.
 - H007 high-frequency RNG: data-gated; no trustworthy ordered bulk history recovered.
@@ -93,12 +93,13 @@ No terminal guarantee has emerged.
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. **H029b Virginia FIREBALL exact joint-outcome analysis**; close full Pick 3/4/5 family if every paid add-on remains non-positive EV.
-2. Continue **fast analytic coverage/subsidy screens** on additional current finite/final-draw products; prioritize unusually high fixed cash floors, compact spaces, and deterministic subsidies.
-3. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
-4. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
+1. Continue fast analytic screens on additional **current compact finite/fixed-payout products**, prioritizing unusually high guaranteed cash floors, fixed finite ticket inventories, deterministic subsidies, or payout ratios near 100%.
+2. H020 live-data arbitrage: resume immediately if direct public raw REST/WebSocket books become available.
+3. H019 capped competitions: search for zero-external-entry / atomic-close cases with cash floor exceeding effective cap cost.
+4. H006/H007: resume only if reliable ordered histories/machine metadata become obtainable.
 5. H010/H014 if new authoritative data routes appear.
 6. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
-7. Advanced controls before EXHAUSTED: additional current products, Bayesian hidden-state inference and causal implementation tests.
+7. Advanced controls before EXHAUSTED: additional current products, Bayesian hidden-state inference, causal implementation tests, and explicit scan for deterministic cash rebates/subsidies.
 
-Permanent audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
+Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
+H029b audit append saved separately as `research/CHECKED_PROJECTS_AND_TESTS_H029B_APPEND.md` to preserve the large ledger without destructive truncation; H030 details are in its dedicated research note and this checkpoint pending next safe ledger consolidation.
