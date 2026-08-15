@@ -25,8 +25,14 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 | H005 nonwithdrawable free-play credit | bonus/rebate must be replayed and replay can lose | guaranteed cash value can be zero | REJECTED as standalone cash guarantee absent coverage | same note |
 | H005 deterministic cashback filter | base cost C, floor F, withdrawable cashback B | guarantee requires F+B>C after all costs | necessary-condition filter established | same note |
 | Lotto.com promotion archetype | first-order all-losing second chance, non-payable credit capped at $10 | state-dependent subsidy but terminal replay can lose; winning-but-subcost branch may receive no credit | REJECTED as guaranteed cash-profit offer | same note |
-| Georgia Lottery July 2026 deposit match | 50% bonus up to $125 for never-deposit users, lottery-only/nonwithdrawable | real subsidy but expired by 2026-08-15 and no guaranteed cash conversion | not executable / no guarantee | same note |
-| Azerbaijan promotional lotteries | Kia Qızıl Açar / ABB Şanslı Fərdi Sahibkar | entries may have near-zero marginal cost if underlying purchase/action already desired, but no-prize outcome remains | positive incremental EV possible; not guarantee | same note |
+| Georgia Lottery July 2026 deposit match | 50% bonus up to $125 for never-deposit users, lottery-only/nonwithdrawable | real subsidy but expired by 2026-08-15 and no guaranteed cash conversion | not executable / no guarantee | `research/h009_current_deterministic_subsidy_screen_2026-08-15.md` |
+| Azerbaijan promotional lotteries | Kia Qızıl Açar / ABB Şanslı Fərdi Sahibkar | entries may have near-zero marginal cost if underlying purchase/action already desired, but no-prize outcome remains | positive incremental EV possible; not guarantee | `research/h005_nonlinear_overlay_screen.md` |
+| H009 Azerlotereya active-campaign index | official current-campaign page on checkpoint says no current campaign | no deterministic subsidy available from current index | SCREENED/CLOSED for checkpoint | `research/h009_current_deterministic_subsidy_screen_2026-08-15.md` |
+| H009 Azerlotereya 10-play/10-bonus | landing page says through Aug 31 but is labeled past; FAQ says Apr 14–Jul 31; current index says no campaign | `STALE-CONFLICT`; cannot treat as executable; even hypothetical 10-AZN bonus does not prove all-outcome profit | REJECTED as current proven guarantee | same note |
+| H009 Virginia new-player bonus games | >=$10 first deposit yields bonus games; promo value generally nonwithdrawable, only prizes withdrawable, Virginia geolocation required | random free-play branch can lose completely | REJECTED standalone guarantee | same note |
+| H009 New York NYL+ | eligible tickets earn points / exclusive games / second-chance entries | no verified deterministic withdrawable cash floor in current screen | no guarantee candidate | same note |
+| H009 Florida current Bonus Play | current portal lists bonus-play promotions | promotional chance/drawing retains no-prize branch | REJECTED standalone guarantee | same note |
+| H009 stale-promotion control | landing page date conflicts with official current index/FAQ | classify as `STALE-CONFLICT`; require consistent index+terms+dates or direct operator confirmation | validation rule established | same note |
 | Azerbaijan 4+4 | exact combinatorics | jackpot 1/23,474,025; any listed prize ~18.61% | validated math | `research/4plus4_baseline.md` |
 | Azerbaijan 4+4 | draw-level payout-engine reconstruction | III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U | strongly reproduced | `research/4plus4_economics_inference.md` |
 | Azerbaijan 4+4 | zero-winner II–VI carryover | potentially material; adjacent-state proof unavailable | testing/data-blocked | H014 |
@@ -46,8 +52,9 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 ## Hypothesis classes not yet fully tested
 
 ### Current priority
-- H009: current deterministic promotions/subsidies/cashback/free-play; apply H005 filters before portfolio optimization.
 - H005: jurisdiction-specific genuine system-ticket discounts, payout caps/floors and nonlinear shared-pool rules.
+- H002: Powerball full threshold including tax, sharing and sales response; then Mega Millions / EuroMillions.
+- H009: revisit only when an official current source exposes a new deterministic cashback/discount or account-specific executable offer. **The 2026-08-15 official-source screen found no surviving candidate.**
 - H012: finite/final-draw states only where accumulated pool/subsidy breaks ordinary negative economics.
 - H012b: execution limits for any candidate that survives economics.
 
@@ -81,7 +88,8 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - anti-crowd selection alone;
 - ordinary additive wheels/coverings;
 - random promotional entry alone;
-- nonwithdrawable free-play face value treated as cash.
+- nonwithdrawable free-play face value treated as cash;
+- stale campaign landing pages treated as live without current-index/rule consistency.
 
 ## Rule for future work
 Every new research packet must add/update this ledger. Detailed hypothesis registry remains `research/HYPOTHESES.md`.
