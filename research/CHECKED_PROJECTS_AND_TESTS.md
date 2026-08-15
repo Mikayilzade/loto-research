@@ -24,6 +24,8 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 | Azerbaijan 4+4 | V/VI hierarchy split | combined 2U reallocated when needed to protect prize order | strong empirical rule | `research/4plus4_economics_inference.md` |
 | Azerbaijan 4+4 | zero-winner II–VI carryover | potentially material; adjacent-state proof unavailable | testing/data-blocked | H014; `STATUS.md` |
 | Azerbaijan 4+4 | category II ≈20U | suggestive only; winner-story arithmetic alone insufficient | unvalidated | `research/4plus4_category2_lead.md` |
+| Azerbaijan 4+4 | **single 5+5 system as guarantee** | contains 25 base variants, but 1,863,225 legal draw pairs are 0+0 relative to selected sets (~7.94%); payout can be zero | **REJECTED as guaranteed-profit path regardless of positive system price** | `research/h012_full_space_coverage.md`; `tests/test_full_space.py` |
+| Azerbaijan 4+4 | **single 6+6 system as guarantee** | contains 225 base variants, but 1,002,001 legal draw pairs are 0+0 (~4.27%); payout can be zero | **REJECTED as guaranteed-profit path regardless of positive system price** | `research/h012_full_space_coverage.md`; `tests/test_full_space.py` |
 | Azerbaijan 4+4 | **full-space / buy-the-pot** | space = 23,474,025 base variants; exact guarantee theorem needs authoritative per-base/system pricing + II/carryover + pool response/sharing | **BLOCKED; no system-ticket discount evidence found** | `research/h012_full_space_coverage.md` |
 | Azerbaijan 4+4 | hidden archive/API search | archive client-rendered; authoritative endpoint not recovered | blocked; do not repeat blind URL guessing | `research/azerlotereya_archive_api_discovery.md` |
 | Azerbaijan 4+4 | Telegram result-card archive | official draw cards exist; current tooling cannot fetch Telegram CDN JPEG | blocked by tooling | `STATUS.md` |
@@ -53,8 +55,8 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 ## Hypothesis classes not yet fully tested
 
 ### Guaranteed-profit / combinatorial constructions — CURRENT PRIORITY
-- H012: extend full-space coverage screen to other current finite games / final-draw states. **Beşdə 5 and ONLOTO 1–10 are now rejected; 4+4 exact theorem is data-blocked.**
-- H012a: partial-space integer-programmed guaranteed lower-tier floor.
+- H012: extend full-space coverage screen to other current finite games / final-draw states. **Beşdə 5 and ONLOTO 1–10 are rejected; single 4+4 5+5/6+6 systems are rejected; 4+4 exact full-space theorem is data-blocked.**
+- H012a: partial-space / multi-ticket covering designs with a guaranteed lower-tier floor — **next priority**.
 - H012b: real execution limits: printing speed, retailer/network caps, validation/claim logistics, capital lock-up.
 - H005: nonlinear portfolio/cap/guarantee effects, especially system-ticket pricing vs constituent variants.
 - H005a: own-ticket overlap minimization in shared/rolldown categories.
