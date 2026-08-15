@@ -83,3 +83,32 @@ def ordered_last_hit_full_coverage(
     gross = gross_multiplier_units * stake_per_variant
     roi = gross / cost if cost else 0.0
     return variants, cost, gross, roi
+
+
+def two_board_system_variant_count(selected_each_board: int, base_picks: int = 4) -> int:
+    """Number of constituent base variants in an n+n two-board system ticket."""
+    if base_picks <= 0 or selected_each_board < base_picks:
+        raise ValueError("selected_each_board must be >= base_picks > 0")
+    return comb(selected_each_board, base_picks) ** 2
+
+
+def two_board_zero_zero_outcome_count(
+    pool_size: int,
+    draw_picks: int,
+    selected_each_board: int,
+) -> int:
+    """Count draw pairs having zero intersection with the selected system on both boards.
+
+    A positive count proves that the system ticket has a zero-return outcome
+    whenever the game's prize table pays nothing for 0+0. This is enough to
+    reject the ticket as a standalone guaranteed-positive-profit strategy at
+    any positive acquisition cost.
+    """
+    if pool_size <= 0 or draw_picks <= 0 or selected_each_board < 0:
+        raise ValueError("invalid arguments")
+    if draw_picks > pool_size or selected_each_board > pool_size:
+        raise ValueError("invalid arguments")
+    outside = pool_size - selected_each_board
+    if outside < draw_picks:
+        return 0
+    return comb(outside, draw_picks) ** 2
