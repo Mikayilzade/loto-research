@@ -15,13 +15,16 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 |---|---|---|---|---|
 | Cash WinFall | historical roll-down, May 9 2011 cash-only EV | +10.69% expected ROI before tax/execution | validated historical +EV mechanism; not current guarantee | `research/cash_winfall_benchmark.md` |
 | Azerbaijan Beşdə 5 | exact probability + full displayed prize-table EV | ~53.56% gross return upper-bound | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
+| Azerbaijan Beşdə 5 | **full-space buy every 5-of-36 combination** | 376,992 AZN cost; deterministic gross 201,900 AZN even assuming full 50k jackpot and ignoring tax/sharing; net -175,092 AZN | **REJECTED as guaranteed-profit coverage** | `research/h012_full_space_coverage.md` |
 | Azerbaijan Super Keno | base 1-AZN table EV | ~59.86% gross before tax | rejected as ordinary +EV | `research/azerbaijan_baseline.md` |
 | Azerbaijan Super Keno | 1x/2x/5x/10x multiplier economics | proportional stake/payout; after-tax ROI slightly worsens as multiplier rises | no multiplier edge | `research/superkeno_multiplier_economics.md` |
+| Azerbaijan ONLOTO | **full-space coverage bet types 1–10** | exact deterministic gross-return range **~76.59%–78.00%** across all ten base types | **REJECTED as guaranteed-profit coverage** | `research/h012_full_space_coverage.md`; `data/derived/h012_full_space_screen.csv` |
 | Azerbaijan 4+4 | exact combinatorics | jackpot 1/23,474,025; any listed prize ~18.61% | validated math | `research/4plus4_baseline.md` |
 | Azerbaijan 4+4 | draw-level payout-engine reconstruction | III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U | strongly reproduced; multiple out-of-sample rows | `research/4plus4_economics_inference.md` |
 | Azerbaijan 4+4 | V/VI hierarchy split | combined 2U reallocated when needed to protect prize order | strong empirical rule | `research/4plus4_economics_inference.md` |
 | Azerbaijan 4+4 | zero-winner II–VI carryover | potentially material; adjacent-state proof unavailable | testing/data-blocked | H014; `STATUS.md` |
 | Azerbaijan 4+4 | category II ≈20U | suggestive only; winner-story arithmetic alone insufficient | unvalidated | `research/4plus4_category2_lead.md` |
+| Azerbaijan 4+4 | **full-space / buy-the-pot** | space = 23,474,025 base variants; exact guarantee theorem needs authoritative per-base/system pricing + II/carryover + pool response/sharing | **BLOCKED; no system-ticket discount evidence found** | `research/h012_full_space_coverage.md` |
 | Azerbaijan 4+4 | hidden archive/API search | archive client-rendered; authoritative endpoint not recovered | blocked; do not repeat blind URL guessing | `research/azerlotereya_archive_api_discovery.md` |
 | Azerbaijan 4+4 | Telegram result-card archive | official draw cards exist; current tooling cannot fetch Telegram CDN JPEG | blocked by tooling | `STATUS.md` |
 | Kazakhstan 4/20 | zero-winner lower-pool -> next superprize transition | exact identity reproduced on 3 independent transitions | validated active mechanism | `research/kazakhstan_4x20_control.md` |
@@ -50,10 +53,10 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 ## Hypothesis classes not yet fully tested
 
 ### Guaranteed-profit / combinatorial constructions — CURRENT PRIORITY
-- H012: full-space coverage / buy-the-pot in current finite games.
+- H012: extend full-space coverage screen to other current finite games / final-draw states. **Beşdə 5 and ONLOTO 1–10 are now rejected; 4+4 exact theorem is data-blocked.**
 - H012a: partial-space integer-programmed guaranteed lower-tier floor.
 - H012b: real execution limits: printing speed, retailer/network caps, validation/claim logistics, capital lock-up.
-- H005: nonlinear portfolio/cap/guarantee effects.
+- H005: nonlinear portfolio/cap/guarantee effects, especially system-ticket pricing vs constituent variants.
 - H005a: own-ticket overlap minimization in shared/rolldown categories.
 - H004: covering designs / wheels as risk-profile optimization.
 - H004a: guaranteed `t`-match coverage for fixed bankroll.
