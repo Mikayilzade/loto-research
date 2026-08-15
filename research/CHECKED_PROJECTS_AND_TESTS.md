@@ -30,22 +30,33 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 | UK Lotto 2026 | two-round Must Be Won | July 18 2026 sampled state ~£1.53/£2 | negative sampled state | `research/uk_lotto_regime_2026.md` |
 | UK Lotto | Wednesday Must Be Won calendar edge | historical demand uplift usually exceeds break-even cushion | materially weakened | H016 |
 | Shared-pool number choice | jackpot collision / unpopular-combination bound | exact-jackpot component can improve, but bounded; not standalone cure | useful optimizer only | `research/h015_crowd_sharing.md` |
-| Shared-pool number choice | lower-tier competitor-intensity sensitivity | potentially large payout uplift if crowd intensity can be predictably reduced | mechanism promising; needs calibration | H015 |
+| Shared-pool number choice | lower-tier competitor-intensity sensitivity | potentially large payout uplift if crowd intensity can be predictably reduced | mechanism promising; needs target calibration | H015 |
 | H015 crowd behavior | birthday / low-number bias | repeatedly documented in large real-ticket datasets | validated mechanism class; target magnitude uncalibrated | `research/h015_crowd_model_framework.md` |
 | H015 crowd behavior | lucky/salient/situational numbers | repeatedly documented; number 7 and personally meaningful numbers are common examples | validated mechanism class; target magnitude uncalibrated | same note |
 | H015 crowd behavior | numeric sequences / visual patterns | strong over-selection documented | validated mechanism class; target magnitude uncalibrated | same note |
 | H015 crowd behavior | representative / evenly-spaced sets | over-selection documented and costly in pari-mutuel games | validated mechanism class; target magnitude uncalibrated | same note |
 | H015 crowd behavior | form-position / center / row bias | documented in Dutch/Israeli data | validated mechanism class; target-layout model uncalibrated | same note |
-| H015 crowd behavior | jackpot-size changes crowd composition | large-jackpot participation becomes more uniform in Israeli data | validated mechanism class; target response uncalibrated | same note |
-| H015 crowd simulator | parameterized human-like mixture / softmax generator | implemented; birthday/lucky/center/consecutive/even-spacing features | implementation validated locally | `src/loto_research/crowd_choice.py` |
-| H015 crowd simulator | conditional lower-tier competitor intensity | implemented: simulate draws conditional on our tier hit and estimate competing-ticket tier hits | implementation validated locally | `tests/test_crowd_choice.py` |
+| H015 crowd behavior | jackpot-size changes crowd composition | large-jackpot participation becomes more uniform in Israeli data | validated mechanism class; static anti-crowd estimates can overstate large-jackpot edge | `data/derived/h015_empirical_anchor_summary.csv` |
+| H015 crowd simulator | parameterized human-like mixture / softmax generator | implemented; birthday/lucky/center/consecutive/even-spacing features | implementation validated | `src/loto_research/crowd_choice.py` |
+| H015 crowd simulator | conditional lower-tier competitor intensity | implemented: simulate draws conditional on our tier hit and estimate competing-ticket tier hits | implementation validated | `tests/test_crowd_choice.py` |
 | H015 synthetic screen | popular-looking vs low-score 6/59 line, conditional 3/6 sharing | synthetic mean competitor intensity ~0.414× for low-score line under chosen uncalibrated weights | pipeline works; **not a real edge claim** | `data/derived/h015_synthetic_crowd_screen.csv` |
+| H015 empirical anchor | Dutch 6/45 published marginal/pattern frequencies | 7/11 above uniform, 37/38 below; pattern class ~100× random frequency; sparse low-vs-high pair ratio ~0.402 | empirical sensitivity anchor implemented; not target calibration | `src/loto_research/crowd_empirical.py` |
+| H015 standalone guarantee | anti-crowd number selection without coverage/overlay | positive-cost ticket still has losing outcomes; sharing optimization cannot remove them | **REJECTED as terminal guaranteed-profit path by necessary-condition proof** | `research/h015_crowd_model_framework.md` |
 | Azerbaijan Poz-Qazan | initial-series exact after-tax EV | Prestij ~69.91%; Meqa 7 ~66.88%; Qoşa 2 ~66.31%; 4 Fəsil ~62.98% | ordinary initial states negative | `research/poz_qazan_remaining_prize_edge.md` |
 | Azerbaijan Poz-Qazan | remaining-prize conditional EV | denominator exists institutionally but no public live registration-specific count found | testing/data-blocked | H010 |
 | Azerbaijan Poz-Qazan | infer inventory from winner carousel | invalid because carousel mixes different registrations/eras | rejected method | H010 note |
 | Powerball US 2026 | fixed lower-tier EV + no-sharing/no-tax cash-jackpot break-even floor | lower tiers ~0.31988 USD EV; cash jackpot must exceed ~490.93m USD even before tax/sharing | threshold baseline established; real threshold higher | `research/powerball_progressive_threshold.md` |
 
 ## Hypothesis classes not yet fully tested
+
+### Guaranteed-profit / combinatorial constructions — CURRENT PRIORITY
+- H012: full-space coverage / buy-the-pot in current finite games.
+- H012a: partial-space integer-programmed guaranteed lower-tier floor.
+- H012b: real execution limits: printing speed, retailer/network caps, validation/claim logistics, capital lock-up.
+- H005: nonlinear portfolio/cap/guarantee effects.
+- H005a: own-ticket overlap minimization in shared/rolldown categories.
+- H004: covering designs / wheels as risk-profile optimization.
+- H004a: guaranteed `t`-match coverage for fixed bankroll.
 
 ### Progressive / structural payout states
 - H002: full Powerball progressive threshold including tax, sharing and sales response.
@@ -54,22 +65,13 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - H008: same/shared jackpot cross-jurisdiction differences, especially US vs UK Powerball.
 - H009: promotions/cashback/free-ticket/second-chance/loyalty/coupon overlays.
 
-### Crowd / sharing
+### Crowd / sharing overlay — no longer standalone terminal path
 - H015g-calibration: choose a real shared-pool target and fit the crowd model on a training period.
 - H015g-validation: out-of-sample marginal-number, combination-feature and winner-count validation.
 - H015g-optimizer: search lines that minimize conditional competing-winner intensity, not merely crowd score.
-- H015g-EV: feed calibrated intensity into actual pool/share EV and determine whether uplift can cross break-even when combined with structural overlay.
+- H015g-EV: feed calibrated intensity into actual pool/share EV when combined with another structural overlay.
 - Layout-specific visual-pattern models for target ticket forms.
 - Cultural/local lucky-number effects for Azerbaijan / selected target jurisdiction.
-
-### Combinatorial / portfolio
-- H004: covering designs / wheels as risk-profile optimization.
-- H004a: guaranteed `t`-match coverage for fixed bankroll.
-- H005: nonlinear portfolio/cap/guarantee effects.
-- H005a: own-ticket overlap minimization in shared/rolldown categories.
-- H012: full-space coverage / buy-the-pot in current finite games.
-- H012a: partial-space integer-programmed guaranteed lower-tier floor.
-- H012b: real execution limits: printing speed, retailer/network caps, validation/claim logistics, capital lock-up.
 
 ### Randomness / implementation
 - H006: physical draw bias with multiple-testing controls.
@@ -106,7 +108,8 @@ Terminal status now: **NO SUCCESS; NOT EXHAUSTED**.
 - martingale/bet sizing on negative EV;
 - ML fitted and tested on the same draws;
 - number-picking systems that do not alter probabilities or payout sharing;
-- brute-force enumeration where it cannot change the underlying expectation.
+- brute-force enumeration where it cannot change the underlying expectation;
+- anti-crowd selection alone as a **guaranteed-profit** strategy when losing outcomes remain.
 
 ## Rule for future work
 Every new research packet must either:
