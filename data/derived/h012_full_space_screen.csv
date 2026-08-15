@@ -1,0 +1,12 @@
+game,variant,space_size,stake_per_variant,total_cost,guaranteed_gross,guaranteed_return_ratio,guaranteed_net_before_tax,status,notes
+Azerbaijan Beşdə 5,all 5-of-36 combinations,376992,1,376992,201900,0.5355551311,-175092,REJECTED,"Uses full 50,000 jackpot and ignores tax/sharing; therefore deliberately favorable."
+Azerbaijan ONLOTO,bet type 1,50,1,50,39,0.7800000000,-11,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 2,1225,1,1225,950,0.7755102041,-275,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 3,19600,1,19600,15198,0.7754081633,-4402,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 4,230300,1,230300,178915,0.7768779852,-51385,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 5,2118760,1,2118760,1642694,0.7753091431,-476066,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 6,15890700,1,15890700,12171372,0.7659430988,-3719328,REJECTED,"Uses operator-published parsed multiplier table as indexed; row-24/25 sequence contains a non-monotone 13/15 and should be rechecked if source presentation changes. Even correcting that local anomaly cannot plausibly close the ~23.4% gap."
+Azerbaijan ONLOTO,bet type 7,99884400,1,99884400,77244138,0.7733353557,-22640262,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 8,536878650,1,536878650,415243340,0.7734398453,-121635310,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 9,2505433700,1,2505433700,1938314745,0.7736443974,-567118955,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
+Azerbaijan ONLOTO,bet type 10,10272278170,1,10272278170,7938231510,0.7727819845,-2334046660,REJECTED,"Exact ordered-draw full coverage from official multiplier table."
