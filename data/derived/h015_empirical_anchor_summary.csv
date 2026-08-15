@@ -1,0 +1,12 @@
+anchor,uniform_reference,observed,relative_multiplier,interpretation,source
+Dutch 6/45 number 11,0.1333333333,0.165,1.2375,popular individual number,Wang et al. 2016
+Dutch 6/45 number 7,0.1333333333,0.163,1.2225,popular individual number,Wang et al. 2016
+Dutch 6/45 number 37,0.1333333333,0.103,0.7725,unpopular individual number,Wang et al. 2016
+Dutch 6/45 number 38,0.1333333333,0.105,0.7875,unpopular individual number,Wang et al. 2016
+Dutch diagonal/vertical pattern class,0.00009,0.009,100.0,pattern class strongly overrepresented,Wang et al. 2016
+Dutch low-vs-high two-number anchor ratio,,,0.4021193530,"(37,38) relative to (7,11), holding other four numbers fixed under sparse independent anchor",derived
+Israeli 6/37 number 7,,,qualitative,"most popular in every one of 118 draws",Polin et al. 2021
+Israeli 6/37 number 37,,,qualitative,"least popular in every one of 118 draws",Polin et al. 2021
+Israeli manual-pick mean,19.0,"17.5 to 17.75",qualitative,stable low-number preference across 118 draws,Polin et al. 2021
+Israeli demand response,+1m NIS jackpot,+33000 manual guesses,qualitative,larger jackpot increases demand,Polin et al. 2021
+Israeli bias homogenization,,,qualitative,"popular choices move toward uniform and unpopular choices become less unpopular as participation/jackpot grows",Polin et al. 2021
