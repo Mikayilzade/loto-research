@@ -1,0 +1,7 @@
+venue_or_structure,mechanism,example_or_identity,guaranteed_after_full_execution,structural_same_venue_profit,terminal_status
+Smarkets bookmaker+exchange,back then lay same outcome,"back 2.20 stake 200; lay 1.98; 2% commission; equal profit 20",yes,no,mechanism validated but current live executable quote not established
+Smarkets bookmaker+exchange,back then lay same outcome,"published example back 9.00 stake 500; lay 8.00; 2% commission; equal profit about 52.63",yes,no,mechanism validated but example is illustrative
+Kalshi binary same market,Yes/No collateral pair,"opposing participant investments combine to $1 before fees",no,no,structural buy-both arb rejected
+Kalshi collateral return,mutually exclusive/directional positions,"capital returned when worst-case payout is bounded",no,no,capital efficiency only; not payout subsidy
+Polymarket standard binary,Yes+No complete set,"$1 pUSD splits to 1 Yes + 1 No; equal pair merges back to $1",conditional,no,arb only if both tokens can be acquired below $1 after all fees/gas
+Polymarket neg-risk,multi-outcome conversion,"1 No can atomically convert to Yes in every other named outcome",conditional,no,conversion removes redundant collateral but does not itself create profit
