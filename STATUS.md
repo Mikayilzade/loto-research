@@ -4,7 +4,7 @@ Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural-edge search; nonlinear overlays**
+**Stage 1 — structural-edge search; progressive jackpots**
 
 ## GO-mode
 Resume from this checkpoint, avoid repeating closed tests, save every meaningful packet to GitHub. Terminal states:
@@ -13,73 +13,81 @@ Resume from this checkpoint, avoid repeating closed tests, save every meaningful
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# NEW — H005 system pricing / deterministic bundle-discount packet completed
-File: `research/h005_system_pricing_screen_2026-08-15.md`.
+# NEW — H002 Powerball full threshold packet completed
+Files:
+- `research/powerball_progressive_threshold.md`
+- `research/h002_powerball_demand_proxy.md`
+- `src/loto_research/powerball_threshold.py`
+- `tests/test_powerball_threshold.py`
+- `data/derived/h002_powerball_sharing_threshold_curve.csv`
+- `data/derived/h002_powerball_winner_count_sales_proxy.csv`
 
-## Australia Oz Lotto System 8
-Current displayed pricing gives an exact linear control:
-- standard games: AUD 1.65 each;
-- System 8: 8 constituent games for AUD 13.20 = AUD 1.65 each.
+## Exact baseline and sharing
+Current official Powerball structure remains $2, 5/69 + 1/26, `M=292,201,338`, jackpot pari-mutuel when multiple jackpot-winning tickets exist. UK sales began 2026-07-21 and share the common jackpot.
 
-Conclusion: system packaging adds coverage/convenience only; **no nonlinear price edge**.
+Existing fixed lower-tier EV: **$0.31987825/play**.
+Absolute no-tax/no-sharing cash break-even: **$490.934m**.
 
-## Poland LOTTO systems / fractional tickets
-Official Lotto rules describe System 7–12 as all underlying six-number simple bets generated from selected numbers. No authoritative below-constituent system discount was recovered in the current screen.
+Exact expected jackpot share conditional on our winning line when there are `n` other lines with exact-combination popularity multiplier `a`:
 
-Fractional coupons also fail as arbitrage: the full underlying ticket must be paid before fractions are issued, then winnings are split by the same participation share. Capital sharing does not change total ticket economics.
+`q=a/M`
 
-## NEW real nonlinear discount found — Poland lotto.pl
-Fresh official lotto.pl pages currently display:
-- Quick Pick;
-- 3 bets;
-- 1 draw;
-- reference price PLN 13;
-- discounted purchase price **PLN 12**.
+`S=[1-(1-q)^(n+1)]/((n+1)q)`.
 
-This is a real deterministic ~7.69% reference-price discount, so H005's discounted-acquisition class genuinely exists in current public lottery sales.
+Uniform-line sharing-only cash thresholds:
+- 25m other lines: **~$512.2m**;
+- 50m: **~$534.1m**;
+- 100m: **~$579.7m**;
+- 200m: **~$678.0m**;
+- 300m: **~$785.3m**;
+- 500m: **~$1.025bn**.
 
-However the bundle still has a legal branch where all lottery bets return zero cash. Therefore minimum payout `F=0` while discounted cash cost `C=12 PLN`; strict guaranteed profit is impossible.
+Illustrative 24%/30% jackpot haircuts push thresholds higher; these are sensitivity columns, not claims about universal final tax liability.
 
-General filter strengthened: for any zero-floor portfolio, **no positive but sub-100% acquisition discount can create an all-outcome profit guarantee**. Discounts matter only when combined with a nonzero guaranteed payout floor large enough that `F > discounted cost`.
+## Observed 2026 participation proxy
+Using official overall odds `1 in 24.87` and nationwide result winner counts gives noisy play-count scale anchors:
+- 2026-06-20: ~14.42m plays; $135.8m cash; sharing-only threshold ~$503.1m;
+- 2026-07-08: ~12.72m; $195.0m cash; threshold ~$501.7m;
+- 2026-07-25: ~26.55m; $268.4m cash; threshold ~$513.6m;
+- 2026-07-29: ~20.90m; $292.5m cash; threshold ~$508.7m.
 
-# H009 current deterministic subsidy screen
-File: `research/h009_current_deterministic_subsidy_screen_2026-08-15.md`.
+Post-UK winner-count proxies may understate the common-jackpot population because lower-tier administration differs. Even so, observed cash values were far below break-even.
 
-Official-source screen across Azerlotereya, Virginia, Georgia, New York and Florida found no current verified deterministic withdrawable subsidy sufficient for guaranteed profit. Stale/conflicting campaign pages are classified `STALE-CONFLICT` and not executable without direct confirmation.
+## NEW — Powerball full-space guarantee result
+Buying all combinations costs **$584,402,676**. Deterministic non-jackpot gross is about **$93,468,852.65**; therefore the ideal zero-tax/no-sharing jackpot break-even is again **$490,933,823.35**.
 
-# H005 nonlinear portfolio/overlay filters already established
-File: `research/h005_nonlinear_overlay_screen.md`.
+However full coverage guarantees only that we hold one jackpot-winning line, not that we are the sole jackpot winner. If at most `K` external jackpot-winning tickets were guaranteed, sufficient no-tax jackpot would scale as `490.934m*(K+1)`. The rules do not provide a useful pre-draw cap on exact-combination duplicates.
 
-Closed/filtered subclasses now include:
-1. ordinary additive system packaging;
-2. exact constituent-linear system pricing;
-3. fractional/syndicate splitting without total-cost reduction;
-4. random second-chance/promotional layers with zero-prize outcomes;
-5. nonwithdrawable replay credits whose replay can lose;
-6. modest deterministic discounts on portfolios with zero-return outcomes.
+Conclusion: **Powerball full-space is NOT a terminal guaranteed-profit strategy**. Sharing prevents a strict all-outcome guarantee absent a defensible external-winner cap; scale also requires 292.2m plays / $584.4m acquisition before execution costs.
 
-H005 remains open only for:
-- unusually large deterministic cashback/discount/refund;
-- portfolio with a verified positive payout floor close enough to cost for discount to cross break-even;
-- nonlinear shared-pool/cap/rolldown rule that raises the minimum payoff rather than only EV.
+H002 remains open as a **positive-EV extreme-jackpot** question, not as a current guarantee.
 
-# Previously closed / blocked
+# H005/H009 status
+System-package and deterministic-discount work already closed/filtered:
+- ordinary additive system packages: no edge;
+- Australia Oz Lotto System 8: exactly linear pricing;
+- Poland system/fractional structures: no verified constituent-price arbitrage;
+- real Poland 13→12 PLN bundle discount exists but has zero-payout outcome, so no guarantee;
+- random second chances / nonwithdrawable replay credits / modest zero-floor discounts cannot produce all-outcome profit;
+- current deterministic subsidy screen found no surviving terminal candidate.
+
+# Other closed / blocked
 - H012a/H004 ordinary additive wheels: CLOSED by expectation theorem.
 - Beşdə 5 full coverage: guaranteed loss.
 - ONLOTO types 1–10 full coverage: guaranteed loss.
 - 4+4 single 5+5/6+6 systems: zero-payout outcomes exist; no guarantee.
 - 4+4 full-space: BLOCKED on authoritative system/base pricing + category-II/carryover/pool response.
-- H015 anti-crowd standalone: CLOSED as guarantee; useful overlay only.
+- H015 anti-crowd standalone: CLOSED as guarantee; useful sharing optimizer only.
 - H010 Poz-Qazan remaining-state: data-blocked on live denominator.
 - H014 4+4 carryover: data-blocked.
 
 # Safe next priorities
-1. **H002 Powerball full threshold** with sharing + tax + sales response and, separately, a full-space guarantee bound. This now outranks further generic system-package screening.
-2. H002a Mega Millions current $5 format, then H002b EuroMillions.
-3. H008 cross-jurisdiction lawful pricing/tax/payout differences.
-4. H012 finite/final-draw states only where accumulated guaranteed pools break ordinary negative economics.
-5. H005/H009 revisit only when a genuinely large deterministic discount/refund or nonzero payout floor appears.
-6. H012b execution constraints for any candidate that survives economics.
+1. **H002a Mega Millions current $5 format**: exact lower-tier EV, sharing curve, cash-jackpot threshold, and full-space guarantee bound.
+2. **H002b EuroMillions**: jackpot cap/rolldown, country-specific price/tax/claim differences, sharing and full-space bound.
+3. H008 cross-jurisdiction lawful pricing/tax/payout differences, including US vs UK Powerball economics.
+4. Broaden Powerball demand anchors only if it materially changes the threshold band; do not repeat generic threshold math.
+5. H012 finite/final-draw states only where accumulated guaranteed pools or subsidies break ordinary economics.
+6. H012b execution constraints only for candidates that survive economic screening.
 7. H006/H007 randomness branches after reliable histories are collected.
 
 Permanent audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
