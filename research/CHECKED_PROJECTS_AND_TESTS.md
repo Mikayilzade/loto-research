@@ -1,6 +1,6 @@
 # Checked projects and test variants
 
-Updated: 2026-08-15
+Updated: 2026-08-16
 Purpose: permanent audit trail. Do not remove failed paths; preserve enough detail to avoid repeating closed work.
 
 Completion criterion:
@@ -44,6 +44,9 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H025 Health Lottery All Or Nothing** | buy all `C(24,12)` lines; grant both 12-match and 0-match own winners full £25k each despite sharing rule | cost £2,704,156; optimistic deterministic gross **£1,071,850 = 39.6371%** | **REJECTED guaranteed-profit full coverage**; `research/h025_health_lottery_full_coverage.md` |
 | **H026 Millionaire for Life** | buy all `C(58,5)*5=22,910,580` plays at $5; grant full current $18m top cash and $2.2m to each of four 5-only winners, ignoring pari-mutuel deterioration | cost **$114,552,900**; optimistic deterministic gross **$60,584,320 = 52.8876%**; deficit $53,968,580 | **REJECTED guaranteed-profit full coverage**; `research/h026_millionaire_for_life_full_coverage.md` |
 | **H027 Lotto America** | buy all `C(52,5)*10=25,989,600` $1 plays; exact published-table non-jackpot gross $6,991,428; July 18 2026 $34.12m annuity had $15,154,248 cash option | optimistic full-share cash gross **$22,145,676 = 85.2098%**, deficit $3,843,924; sole-winner cash hurdle $18,998,172; jackpot sharing/lower-tier pari-mutuel can only worsen guarantee | **REJECTED guaranteed-profit full coverage**; `research/h027_lotto_america_full_coverage.md` |
+| **H028 Nebraska 2by2** | buy all `C(26,2)^2=105,625` plays; also test required seven-draw package with free Double Tuesday | normal optimistic terminal cash **$40,168 = 38.0289%**; 7-draw package **$321,344/$739,375 = 43.4616%** | **REJECTED guaranteed-profit full coverage**; top/set-prize liability reductions ignored in player's favor; `research/h028_nebraska_finite_coverage.md` |
+| **H028 Nebraska MyDaY** | buy every valid MM-DD-YY calendar combination | 36,525 plays; exact all-state gross range **$17,580–$21,357 = 48.1314%–58.4723%** | **REJECTED guaranteed-profit full coverage**; `research/h028_nebraska_finite_coverage.md` |
+| **H028 Nebraska Pick 5** | buy all `C(40,5)=658,008` plays; full published 4/5 and 3/5 cash tiers | deterministic non-jackpot cash **$141,050 = 21.4359%**; sole-winner jackpot hurdle **$516,958**; jackpot sharing and possible lower-tier pari-mutuel remain | **REJECTED current guaranteed-profit full coverage**; `research/h028_nebraska_finite_coverage.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -148,7 +151,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. Apply **H021/H022/H023/H024/H025/H026/H027 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+1. Apply **H021–H028 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
 2. H020 live-data arbitrage if direct public raw-book access becomes available.
 3. H006/H007 only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
