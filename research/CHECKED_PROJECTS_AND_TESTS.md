@@ -65,6 +65,8 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Virginia new-player bonus games | random bonus games; geofenced; bonus value not guaranteed cash | REJECTED guarantee |
 | New York NYL+ | points/second-chance; no deterministic withdrawable cash floor verified | no guarantee candidate |
 | Florida Bonus Play | chance-based promotion | REJECTED standalone guarantee |
+| **H019 capped fixed-prize takeover** | buy every valid entry in one-winner capped competition | theorem: guarantee requires zero external entries, ability to own all entries, atomic closure, no unresolved free-entry channel, and fixed cash floor > full effective acquisition cost | **mechanism valid in principle; no current SUCCESS**; `research/h019_capped_fixed_prize_saturation.md` |
+| H019 current/recent UK screen | Coast/Hot Comps/7days/Urban Draw/UKCC examples | cash alternative / full-cap revenue only ~28.6%–53.3%; most also have personal caps/free postal routes/external entries | **REJECTED sampled instances**; `data/derived/h019_capped_competition_screen.csv` |
 
 ## Crowd / sharing
 | Test | Result | Status |
@@ -88,10 +90,10 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Test | Result | Status |
 |---|---|---|
 | Official causal odds schedule | hidden weighted daily selected time; 60m=1/150,000, 30m=1/30,000, selected time=1/1; jackpot may also be won earlier at standard odds | **VALIDATED mechanism**; `research/h018_lucky_contestant_time_state.md` |
-| Optimistic Bayesian/survival concentration | under uniform-within-published-bin and strongest `T>=now` truncation, late remaining-time mass concentrates sharply (e.g. at 23:00, 66.7% of remaining T mass in next 30m, 100% in next 60m) | **EV lead only; model assumption explicit**; `data/derived/h018_optimistic_time_state_screen.csv` |
+| Optimistic Bayesian/survival concentration | under uniform-within-published-bin and strongest `T>=now` truncation, late remaining-time mass concentrates sharply | **EV lead only; model assumption explicit**; `data/derived/h018_optimistic_time_state_screen.csv` |
 | $600 jackpot-only threshold | $0.20 stake needs jackpot p≥1/3000; published 30m anchor contributes only ~$0.02 jackpot EV, while T itself is 1/1 but hidden | quantified necessary condition, not executable EV proof |
 | Public winner-list sample | Jan 4–10 2026 page sample contains 8 deduplicated events and two distinct Jan 4 awards | reset/multiple-award mechanics must not be assumed from slogan alone |
-| Standalone strict guarantee | other player may legally win jackpot before hidden T; ordinary play has losing outcomes; therefore a legal branch exists with jackpot unavailable + our paid loss | **REJECTED terminal guarantee** |
+| Standalone strict guarantee | other player may legally win jackpot before hidden T; ordinary play has losing outcomes | **REJECTED terminal guarantee** |
 | Full EV strategy | exact interpolation, T resolution, standard odds, reset mechanics, stake scaling, live-state latency/player intensity not fully public | **OPEN/data-blocked overlay**, not SUCCESS |
 
 ## Randomness / predictive controls
@@ -107,17 +109,20 @@ Still open:
 - H006 physical-machine/ball bias with strict multiple-testing and regime controls;
 - H007 high-frequency RNG anomaly tests with reliable histories and causal implementation subtests.
 
+Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustworthy machine-readable bulk official history; public Ekspres Keno archive remains client-rendered/placeholder in retrieval. Do not run anomaly tests on incomplete samples.
+
 ## Other still-open / blocked classes
 - H010 remaining-inventory instant-ticket state: blocked on public live denominator.
 - H014 Azerbaijan 4+4 zero-winner carryover: data-blocked.
 - H018 Lucky Contestant remains open only as a conditional-EV/data-acquisition overlay; standalone guarantee is closed.
 - additional finite/final-draw games where deterministic external subsidy or accumulated pool can exceed full acquisition cost.
 - lawful lottery-adjacent hedging/arbitrage where both sides can be locked at positive net payout.
+- H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
 
 ## Current priorities
-1. **H006/H007 randomness branches** — obtain reliable histories and run strict forward/multiple-testing controlled screens; focus on causal implementation effects, not folklore.
+1. **Lawful two-sided hedging/arbitrage** where both sides can be locked before outcome.
 2. **H012 additional finite/final-draw states** only where accumulated guaranteed pool/subsidy can break ordinary negative economics.
-3. **Lawful two-sided hedging/arbitrage** where both sides can be locked before outcome.
+3. **H006/H007** only after reliable histories/machine metadata become available.
 4. H010/H014 when new authoritative data routes appear.
 5. H018 conditional-EV calibration if exact operator mechanics/live endpoint become recoverable.
 6. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products.
