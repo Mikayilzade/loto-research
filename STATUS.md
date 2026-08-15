@@ -4,7 +4,7 @@ Updated: 2026-08-15
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H026 Millionaire for Life fixed-space screen completed**
+**Stage 1 — structural/state-edge search; H027 Lotto America full-space screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,27 +12,33 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H026 Millionaire for Life — NEW / CLOSED
+# H027 Lotto America — NEW / CLOSED
 Files:
-- `research/h026_millionaire_for_life_full_coverage.md`
-- `data/derived/h026_millionaire_for_life_full_coverage.csv`
-- `src/loto_research/special_ball_coverage.py`
-- `tests/test_special_ball_coverage.py`
+- `research/h027_lotto_america_full_coverage.md`
+- `data/derived/h027_lotto_america_full_coverage.csv`
+- generic engine `src/loto_research/special_ball_coverage.py`
+- regression tests extended in `tests/test_special_ball_coverage.py`
 
-Current operator structure verified from MUSL/Powerball and Georgia Lottery:
-- choose 5 of 58 white numbers + 1 of 5 Millionaire Balls;
-- $5 per play;
-- current top cash option $18m;
-- second-prize cash option $2.2m;
-- lower tiers $7,500/$500/$250/$50/$25/$8/$8;
-- top level is pari-mutuel in specified circumstances.
+Current official structure verified from Minnesota/Iowa Lottery:
+- 5 of 52 + Star Ball 1 of 10;
+- $1 base play;
+- $1 optional All Star Bonus, random 2x–5x on non-jackpot prizes;
+- jackpot divided among multiple jackpot winners;
+- lower-tier published prizes may be reduced pari-mutuel.
 
-Full space = `C(58,5)*5 = 22,910,580` plays; cost **$114,552,900**.
+Full base space = `C(52,5)*10 = 25,989,600` lines; cost **$25,989,600**.
+Deterministic published-table non-jackpot gross = **$6,991,428 = 26.9009%** before any pari-mutuel reduction.
+Sole-winner cash-jackpot break-even hurdle = **$18,998,172** before tax/execution/sharing.
 
-Using a deliberately player-favorable rejection bound — full $18m for our 5+MB line, full $2.2m for each of our four 5-only lines, no external sharing reduction, no tax/execution cost — deterministic gross is only **$60,584,320 = 52.8876%**.
-Optimistic deterministic deficit = **$53,968,580**.
+Strong recent stress test:
+- July 18 2026 advertised jackpot: **$34.12m annuity**;
+- Minnesota Lottery reported cash option: **$15,154,248**;
+- even granting full cash jackpot to our portfolio plus unreduced lower tiers gives **$22,145,676 = 85.2098%** of full-space cost;
+- optimistic deficit **$3,843,924**.
 
-Status: **REJECTED guaranteed-profit full coverage**.
+All Star Bonus full-space worst legal 2x state doubles cost to $51,979,200 and yields $13,982,856 non-jackpot floor; sole-winner cash hurdle rises to **$37,996,344**.
+
+Status: **REJECTED guaranteed-profit full coverage**. A future high jackpot can create a conditional/EV lead, but strict guarantee remains blocked by external jackpot sharing, possible lower-tier pari-mutuel reduction, and execution friction.
 
 # Fast-screen program to date
 Closed current finite/fixed-payout coverage cases now include:
@@ -47,7 +53,8 @@ Closed current finite/fixed-payout coverage cases now include:
 - UK Health Lottery Big Win including deterministic free auxiliary draw;
 - UK Health Lottery All Or Nothing;
 - Austrian LottoPlus sampled fixed-pool promotion via H021 subsidy bound;
-- US Millionaire for Life.
+- US Millionaire for Life;
+- **US Lotto America**.
 
 The strongest deterministic returns found among these remain materially below 100%; no terminal guarantee has emerged.
 
@@ -72,7 +79,7 @@ The strongest deterministic returns found among these remain materially below 10
 - H011 lawful visible pre-purchase decoder: screened NY/Virginia channels closed.
 
 # Next priorities
-1. Continue **fast analytic coverage/subsidy screens** on additional current fixed-payout/final-draw products; deep-dive only candidates approaching/exceeding 100% deterministic coverage return or with guaranteed external subsidy sufficient to cross takeout.
+1. Continue **fast analytic coverage/subsidy screens** on additional current finite/final-draw products; prioritize small spaces and real cash jackpots/subsidies, and deep-dive only candidates approaching/exceeding 100% deterministic coverage return.
 2. **H020 live-data arbitrage:** resume immediately if direct public raw REST/WebSocket books become available.
 3. **H006/H007:** resume only if reliable ordered histories/machine metadata become obtainable.
 4. H010/H014 if new authoritative data routes appear.
