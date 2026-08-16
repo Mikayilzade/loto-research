@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H044 Azerbaijan-accessible promo + external hedge screen completed**
+**Stage 1 — structural/state-edge search; H045 eTopaz contract + settlement-equivalence gate completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,62 +12,48 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H044 — Azerbaijan-accessible promotion + external hedge
+# H045 — eTopaz contract + settlement gate
 Files:
-- `research/h044_azerbaijan_accessible_promo_hedge.md`
-- `data/derived/h044_azerbaijan_promo_contract_screen.csv`
+- `research/h045_etopaz_contract_settlement_gate.md`
+- `data/derived/h045_contract_settlement_gate.csv`
 
-## Strongest new local lead
-Current eTopaz promotion text states:
-- first-deposit new users receive a free bet equal to **15% of the first deposit**;
-- minimum deposit **20 AZN**;
-- first bet must settle, then the free bet is credited;
-- free-bet stake is not returned; winnings are returned;
-- free bet expires after 14 days;
-- operator can change/cancel the promotion.
+## Decisive contract result
+The current authoritative eTopaz Terms & Conditions have now been recovered.
 
-The indexed specific offer does not state a minimum qualifying first-bet amount or minimum odds. This creates a potentially favorable acquisition structure because token size is deposit-linked rather than explicitly stake-linked. Platform-level minimums/general terms are still unrecovered and therefore cannot be assumed away.
+Material clauses include:
+- account/services may not be used for commercial purposes, obtaining another income, or avoiding loss outside the agreement's permitted purpose (4.2.1);
+- operator may cancel a subscription without giving a reason (4.5.3);
+- operator/game rules and service scope can change (5.2.2 / 8.1 language);
+- operator may set betting limits (5.2.3);
+- the first-deposit promotion separately reserves the right to change/cancel the promotion at any time.
 
-## Hedge venue gate
-Betfair's current international Exchange page explicitly lists **Azerbaijan** among eligible countries and the ordinary Exchange supports peer-to-peer back/lay betting.
+Under this project's strict-guarantee standard, those clauses prevent treating a deliberately externally hedged 15% first-deposit free bet as an irrevocable guaranteed subsidy.
 
-Important separation:
-- Betfair's own risk-free promotion is **not** a terminal candidate because Betfair Standard Promotional Terms allow action where promotional play creates guaranteed/minimal-risk profit.
-- ordinary non-promotional Exchange hedging is a separate class; retrieved general terms prohibit self-matching/collusion/manipulation, not a blanket independent external hedge.
+## Settlement-equivalence proof also fails
+Current eTopaz football rules use a **48-hour** suspended-match continuation boundary. Betfair Exchange football/general rules use a materially different reschedule/completion framework extending up to **three days** in relevant branches.
 
-## New decisive execution gate — settlement equivalence
-Betfair's rules explicitly warn that related bets across Betfair products and/or third parties can diverge: one leg may be void while another stands.
+Concrete asymmetric state: event resumes after 48h but within the applicable Betfair continuation/reschedule window. eTopaz can void while Betfair stands.
 
-Therefore a two-operator hedge is not a strict guarantee merely because normal-event payoffs are balanced. A terminal proof must establish matching settlement behavior for every cancellation, postponement, correction, dead-heat and void branch for the exact selected market pair.
+The same mismatch class appears in table tennis/baseball screens, and Betfair explicitly warns that related third-party bets can have one leg void while another stands.
 
-## H044 economics
-Necessary condition for eTopaz first-deposit route:
+H045 result:
+- H044 eTopaz -> Betfair matched-promo architecture: **REJECTED as strict guaranteed-profit route**;
+- remains potentially relevant only as ordinary promotion/EV technique, not terminal SUCCESS.
 
-`rho * 0.15D > Cq + Cf`
+# H044 — Azerbaijan-accessible promotion + external hedge
+H044 previously identified:
+- current eTopaz first-deposit free bet = **15% of first deposit**, minimum deposit 20 AZN;
+- ordinary Betfair Exchange available as Azerbaijan-accessible hedge venue;
+- mechanical free-bet conversion can create a positive normal-outcome floor.
 
-where:
-- `D` = first deposit;
-- `rho` = worst-case cash conversion fraction of the free-bet token after hedge/commission;
-- `Cq` = worst-case acquisition/qualifying-bet hedge cost;
-- `Cf` = FX/withdrawal/fixed execution costs.
-
-This is necessary, not sufficient. Terminal gates still require:
-1. authoritative eTopaz general promo/account terms;
-2. platform minimum qualifying stake/odds;
-3. irrevocable entitlement after first bet settles;
-4. current cash-in/out route and fees from Azerbaijan;
-5. pre-exposure matched hedge liquidity;
-6. all-branch settlement equivalence;
-7. no applicable anti-hedge/clawback clause.
-
-H044 status: **PROMISING ARCHITECTURE; NOT SUCCESS**.
+H045 now closes the missing contract/settlement gates against strict guarantee.
 
 # H043 — acquisition-first free-bet / credit screen
 Files:
 - `research/h043_acquisition_first_freebet_screen.md`
 - `data/derived/h043_acquisition_contract_screen.csv`
 
-H043 established that zero-incremental-cost stake-not-returned tokens are real, but no current Azerbaijan-executable acquisition + contract combination had been found. H044 improves this by identifying a current local deterministic-looking deposit-linked free-bet source plus an Azerbaijan-accessible hedge venue; remaining blockers are narrower contractual/settlement gates.
+Zero-incremental-cost stake-not-returned tokens are real, but no current Azerbaijan-executable acquisition + contract combination satisfying the strict guarantee gates has been established.
 
 # H042 — contract-permitted matched-promotion scan
 Files:
@@ -76,7 +62,7 @@ Files:
 - `src/loto_research/commission_subsidy.py`
 - `tests/test_commission_subsidy.py`
 
-H042 established that the contract gate is not universally impossible. Exchange token mechanics and commission subsidies are valid classes, but no deterministic free-bet source satisfying all execution gates was established.
+Contract-permitted matched betting exists as a mechanism class, but no deterministic subsidy source satisfying all execution gates is established.
 
 # H041 — free-bet token matched conversion
 Files:
@@ -85,7 +71,7 @@ Files:
 - `src/loto_research/free_bet_conversion.py`
 - `tests/test_free_bet_conversion.py`
 
-Mechanical theorem remains valid: an already-earned stake-not-returned free-bet token can be converted into a positive all-outcome cash floor after compatible opposing liquidity is irrevocably matched. Promo clawback and settlement mismatch are independent terminal gates.
+Mechanical theorem remains valid: an already-earned stake-not-returned token can be converted into a positive all-outcome cash floor after compatible opposing liquidity is irrevocably matched. H045 reinforces that promo contract and settlement identity are independent mandatory gates.
 
 # Strongest non-terminal positive-EV result
 ## H037 Irish Lotto Plus Million Euro Raffle
@@ -100,19 +86,22 @@ Six recovered special-event raffle-winner counts remain far below the modeled br
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the permanent master trail. Because the connector cannot safely append to that already-large file without replacing/truncating unseen content, newest H041–H044 dedicated notes plus this STATUS remain authoritative supplements until a safe append route is available. Do not delete or overwrite older ledger rows to force an append.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the permanent master trail. Because connector writes require complete-file replacement and the ledger is already large, do not overwrite it from a truncated fetch. H045 dedicated note + data + this STATUS are authoritative until a safe full-file append route is available.
 
-# Test/runtime note
-Repository clone/network path remains unavailable from the local runtime, so GitHub connector writes are used directly. H044 is primarily a source/contract/jurisdiction classification packet; no live wager execution was attempted.
+# New general gate established by H045
+Any cross-operator matched-promotion SUCCESS must prove both:
+1. **contract permission / irrevocability** — no relevant anti-arbitrage, income-seeking, loss-avoidance, clawback or discretionary subsidy-cancellation branch;
+2. **settlement isomorphism** — every reachable event/void/resettlement state leaves combined payoff above total cost.
+
+Matching normal-result odds alone is insufficient.
 
 # Next priorities
-1. **H045 eTopaz terms/minimums gate:** recover authoritative eTopaz Terms & Conditions and determine minimum stake/odds, promo-clawback language, withdrawal/KYC/payment restrictions, and whether entitlement survives terms changes once qualification settles.
-2. **H045 settlement-equivalence proof:** identify one eTopaz market and matching Betfair Exchange market whose void/cancellation/settlement rules can be mapped exhaustively; reject any pair with asymmetric branches.
-3. Quantify current Betfair Exchange commission and realistic matched depth from Azerbaijan if public endpoints become retrievable; combine with H041 conversion math and the 15% token.
-4. Search deterministic **withdrawable cash** local rebates/rewards; cash removes the free-bet conversion gate.
-5. H020 if raw public order books become retrievable; apply commission/rebate overlays to executable depth.
-6. H037 broaden special-event controls / prepare autumn-2026 rule-change recalculation.
-7. H019 only if capped-entry cash-floor economics materially improve.
-8. H006/H007 only after reliable histories/machine metadata become obtainable.
-9. H010/H014 if new authoritative data routes appear.
-10. Before EXHAUSTED: additional current products, deterministic cash-rebate scans, Bayesian hidden-state inference, and causal implementation tests.
+1. **H046 deterministic withdrawable-cash subsidy screen:** search Azerbaijan-accessible rewards/rebates/referrals where cash is legally/contractually earned before any hedge and not conditional on risky replay.
+2. **H046 same-clearing-venue arbitrage:** prioritize structures where opposing legs settle under one rulebook/clearing system, reducing H045 cross-operator void risk.
+3. H020 live executable arbitrage if raw public order books become retrievable; combine fee/depth scanner with any deterministic cash/rebate overlay.
+4. Search regulated exchange/rebate/commission-credit structures whose consideration is contractual rather than discretionary promotion credit.
+5. H037 broaden special-event controls / prepare autumn-2026 rule-change recalculation.
+6. H019 only if capped-entry cash-floor economics materially improve.
+7. H006/H007 only after reliable histories/machine metadata become obtainable.
+8. H010/H014 if new authoritative data routes appear.
+9. Before EXHAUSTED: additional current products, deterministic cash-rebate scans, Bayesian hidden-state inference, and causal implementation tests.
