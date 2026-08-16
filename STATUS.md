@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H037 event-day calibration materially strengthened**
+**Stage 1 — structural/state-edge search; H037 six-event predictive calibration completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -22,30 +22,49 @@ Files:
 
 ## Strict guarantee — CLOSED
 Published mechanics still defeat terminal guarantee:
-- raffle numbers are assigned rather than chosen, so deterministic code coverage cannot be forced;
+- raffle numbers are assigned rather than chosen;
 - all tickets with the winning raffle number enter a second random draw and one ticket owner gets the extra €1m;
 - external qualifying tickets preserve a legal outcome where another player receives it.
 
 Status: **REJECTED as strictly guaranteed-profit strategy**.
 
-## Positive-EV overlay — materially strengthened by actual special-event data
-Pre-autumn-2026 6/47 Plus package baseline remains approximately:
-- Plus 1 fixed-prize EV: **€0.22902755/line**;
-- Plus 2 fixed-prize EV: **€0.13263705/line**;
-- normal €500 raffle EV: **€0.05/line**;
-- ordinary Plus package EV: **€0.41166460 per €1 Plus add-on**.
+## Positive-EV overlay — substantially strengthened
+Pre-autumn-2026 6/47 Plus-package baseline remains approximately **€0.41166460 expected payout per €1 Plus add-on** before the special million subsidy.
 
-Special €1m subsidy break-even is approximately **1,699,711 eligible Plus lines**, equivalent to about **170 ordinary raffle winners** at 1/10,000 odds.
+Break-even special-event participation remains about:
+- **1,699,711 eligible Plus lines**, or
+- **169.97 expected ordinary raffle winners** at 1/10,000 per line.
 
-Actual special-event calibration recovered:
-- **5 Jul 2025:** 104 raffle-winning ticketholders => MLE ≈ **1.04m Plus lines**; exact-Poisson 95% implied interval ≈ **0.850m–1.260m**. Even at the upper bound, modeled Plus EV ≈ **€1.205 per €1 add-on**.
-- **6 Sep 2025:** 81 raffle-winning ticketholders => MLE ≈ **0.81m Plus lines**; 95% implied interval ≈ **0.643m–1.007m**. At the upper bound, modeled Plus EV ≈ **€1.405 per €1 add-on**.
+Six recovered special-event raffle-winner counts:
+- 28 Sep 2024: **73**;
+- 5 Jul 2025: **104**;
+- 6 Sep 2025: **81**;
+- 20 Dec 2025: **82**;
+- 14 Mar 2026: **84**;
+- 30 May 2026: **72**.
 
-Both observed special-event counts are far below the ~170-winner break-even proxy. This is stronger than the prior generic 60–120 ordinary-draw statement because it directly samples promotion days.
+For every one of these six events, the exact-Poisson **95% upper implied Plus-line bound is still below 1.6997m break-even**. Modeled Plus EV at each event's 95% upper participation bound remains approximately **€1.205–€1.515 per €1 add-on**.
 
-Official promotion language also confirms **one four-digit raffle number per Lotto Plus line**. The final €1m stage is described in ticket/ticket-owner terms, so multi-line ticket handling still needs operative-rule confirmation before execution sizing.
+## Matched promotion-demand uplift
+Adjacent ordinary Wednesday raffle-winner counts were recovered around all six events. Event / mean-adjacent ratios:
+- 1.377x, 1.434x, 1.473x, 1.147x, 1.388x, 1.440x.
 
-Status: **strong live +EV overlay lead; NOT terminal SUCCESS because individual outcomes remain random**.
+Mean promotion uplift ≈ **1.3766x (+37.7%)**; median ≈ **1.4115x**.
+
+Interpretation: promotion-day demand does rise materially, but observed event demand remains far below the pre-change break-even threshold.
+
+## Bayesian predictive screen
+A transparent Gamma-Poisson helper is now implemented and tested.
+
+For the six event counts:
+- posterior common-rate mean = **82.75 raffle winners**;
+- 95% posterior interval for common mean ≈ **75.63–90.19**;
+- implied posterior-mean participation ≈ **827,500 Plus lines**;
+- common-rate posterior predictive `P(next event >=170 winners) ≈ 1.7e-14`.
+
+This is **model-conditional, not a guarantee**. Regime change, overdispersion, pricing/marketing changes and autumn-2026 Lotto changes can invalidate it.
+
+Status: **strongest live +EV lottery overlay currently found; NOT terminal SUCCESS**.
 
 # Recently closed branches
 - H036 Daily Million Plus / EuroMillions Plus: full coverage strongly negative; OLG targeted bonus is real but capped/lottery-credit, not cash guarantee.
@@ -71,13 +90,13 @@ Status: **strong live +EV overlay lead; NOT terminal SUCCESS because individual 
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Next priorities
-1. **H037 completion/calibration:** recover additional exact special-event counts (21 Dec 2024, 28 Sep 2024, 20 Dec 2025, 14 Mar 2026, 30 May 2026) and adjacent ordinary-draw counts; build predictive distribution for event-day Plus participation and promotion uplift.
-2. Recompute H037 after autumn-2026 Lotto/Lotto Plus regime change once operative tables/prices are published/effective.
-3. Continue deterministic subsidy/rebate scan, prioritizing **uncapped, repeatable, withdrawable cash** rather than lottery-only credit.
+1. **Deterministic subsidy/rebate scan:** prioritize uncapped, repeatable, withdrawable cash or guaranteed-value rebate mechanisms; H037 is +EV but cannot meet guarantee criterion.
+2. H037: recover 21 Dec 2024 underlying €500 raffle-winner count; expand ordinary matched controls; fit overdispersed/hierarchical event-demand model.
+3. H037: recompute immediately after autumn-2026 Lotto/Lotto Plus regime change becomes operative.
 4. Revisit H020 live arbitrage immediately if raw public order books become retrievable.
 5. H019 only when capped-entry cash-floor economics materially improve.
 6. H006/H007 only after reliable histories/machine metadata become obtainable.
 7. H010/H014 if new authoritative data routes appear.
 8. Before EXHAUSTED: additional current products, deterministic cash-rebate scan, Bayesian hidden-state inference, and causal implementation tests.
 
-Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. The H037 authoritative packet and `data/derived/h037_event_calibration.csv` contain this run's new evidence. The connector cannot safely replace the oversized ledger without risking truncation; preserve the ledger unchanged and merge this H037 packet into it on the next safe compaction/update path.
+Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. H037 authoritative evidence is in `research/h037_lotto_plus_million_raffle.md` and `data/derived/h037_event_calibration.csv`.
