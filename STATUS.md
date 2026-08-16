@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H034 Ontario DAILY KENO completed**
+**Stage 1 — structural/state-edge search; H035 Lotterywest compact-game screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,78 +12,57 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H034 — Ontario DAILY KENO CLOSED as guarantee
+# H035 — Lotterywest Super66 + Cash 3 CLOSED as guarantees
 Files:
-- `research/h034_ontario_daily_keno_full_coverage.md`
-- `data/derived/h034_ontario_daily_keno_full_coverage.csv`
-- `src/loto_research/ontario_daily_keno.py`
-- `tests/test_ontario_daily_keno.py`
+- `research/h035_lotterywest_compact_games.md`
+- `data/derived/h035_lotterywest_compact_screen.csv`
+- `src/loto_research/lotterywest_compact.py`
+- `tests/test_lotterywest_compact.py`
 
-Current official OLG mechanics:
-- 20 numbers drawn from 1–70;
-- Pick 2 through Pick 10;
-- CAD 1/2/5/10 stakes with linear published prize scaling;
-- fixed nominal prize table;
-- one prize per selection;
-- aggregate payout in each prize category capped at CAD 4,000,000, with proportional reduction if exceeded;
-- Advance Play exists, but no deterministic multi-draw discount was identified in current public mechanics.
+## Super66
+Current official mechanics:
+- AUD 1 per game;
+- six-digit 000000–999999 outcome space;
+- Division 1 minimum payout AUD 66,666;
+- lower fixed prizes AUD 6,666 / 666 / 66 / 6.60;
+- only the larger prize is paid when both ends / multiple divisions match;
+- selections are automatically randomly generated for the player.
 
-Exact full-coverage identity for Pick `k`:
-- variants = `C(70,k)`;
-- selections with exactly `m` matches = `C(20,m) * C(50,k-m)`.
+Hypothetical exact unique full-space counts:
+- D1: 1
+- D2: 18
+- D3: 180
+- D4: 1,800
+- D5: 17,901.
 
-Deliberately favorable **uncapped** full-space gross-return ratios:
-- Pick 2: **55.0725%**
-- Pick 3: **52.0643%**
-- Pick 4: **52.8414%**
-- Pick 5: **42.0329%**
-- Pick 6: **44.3424%**
-- Pick 7: **48.3379%**
-- Pick 8: **46.6006%**
-- Pick 9: **43.0412%**
-- Pick 10: **44.7615%**.
+At the minimum D1 payout, hypothetical unique full coverage costs AUD 1,000,000 and returns only **AUD 543,480.60 = 54.3481%**.
+More decisively, the operator does not let the player force the exact one-million-string unique cover: numbers are automatically random. Any finite random purchase can contain duplicates and omit a possible winner, so deterministic all-outcome coverage is not executable.
 
-Best favorable result is only 55.07%. The statutory category cap can only reduce large-portfolio payouts. By symmetry these ratios are also the uncapped gross EV/stake of a base selection in each Pick class. Therefore every nonnegative additive mixture has negative expectation; a strict all-outcome positive-profit portfolio would imply positive expectation and is impossible under the ordinary additive rules.
+Status: **REJECTED guaranteed-profit coverage**.
 
-Status: **REJECTED as guaranteed-profit additive/coverage class**.
+## Cash 3
+Official fixed-odds base menu:
+- Exact: AUD0.50 -> 250; AUD1 -> 500; odds 1/1000;
+- Any Order 3-way: AUD0.50 -> 80; AUD1 -> 160;
+- Any Order 6-way: AUD0.50 -> 40; AUD1 -> 80.
 
-# H033 — New Zealand Bullseye discounted multi-draw coverage CLOSED as guarantee
-Files:
-- `research/h033_nz_bullseye_discounted_coverage.md`
-- `data/derived/h033_nz_bullseye_full_space.csv`
-- `src/loto_research/nz_bullseye.py`
-- `tests/test_nz_bullseye.py`
+Exact all-outcome partition cover at AUD0.50:
+- 10 all-equal outcomes -> 10 Exact wagers;
+- 270 one-pair ordered outcomes -> 90 Any-Order-3 wagers;
+- 720 all-distinct ordered outcomes -> 120 Any-Order-6 wagers.
 
-Current official rules validate an unusually large deterministic pricing nonlinearity:
-- normal selection: NZ$2 per draw;
-- 7 consecutive draws: NZ$10 instead of NZ$14;
-- 14 consecutive draws: NZ$20 instead of NZ$28;
-- deterministic discount: **28.5714%**.
+Total cost **AUD110**. Guaranteed gross floor is only **AUD40 = 36.3636%** of cost. Expected gross is AUD52.90 = **48.0909%**. Negative additive expectation also rules out any strict positive-profit portfolio under ordinary linear wagers.
 
-Full Bullseye number space is exactly 1,000,000 six-digit selections. Owning all selections gives, every draw, exactly:
-- Division 1: 1 own winning selection;
-- Division 2: 10;
-- Division 3: 90;
-- Division 4: 900;
-- Division 5: 9,000;
-- Division 6: 90,000 bonus-ticket selections.
-
-7-draw full coverage therefore costs **NZ$10,000,000**; 14-draw coverage costs **NZ$20,000,000**.
-
-Despite the discount, strict guaranteed cash profit fails. Divisions 1–5 are shared/capped cash pools and the current rules provide no useful pre-draw hard cap on external duplicate winning selections. External duplicates can dilute our finite pool share arbitrarily; Division 6 is a bonus ticket, not guaranteed terminal cash. Full coverage also guarantees a Division-1 winner every covered draw, preventing continued no-winner jackpot accumulation during the coverage sequence.
-
-Status:
-- 28.57% multi-draw discount: **VALIDATED nonlinearity / EV overlay lead**;
-- strict standalone guaranteed-profit full coverage: **REJECTED**.
-
-# H032 — Canada DAILY GRAND CLOSED
-Full coverage of `C(49,5)*7 = 13,348,188` lines costs CAD 40,044,564. Favorable face-value gross was only 44.3472%; strict immediate-cash floor 36.2112%. Combo Play is linear pricing. **REJECTED guarantee.**
+Status: **REJECTED guaranteed-profit additive/coverage class**.
 
 # Recently closed branches
-- H031 Georgia/Virginia Cash Pop Cover All: guaranteed win but strict floor only 33.33% of coverage cost.
-- H029/H029b Virginia Pick 3/4/5 including FIREBALL: additive-family guarantee rejected by expectation upper bound.
-- H030 Virginia Cash 5 + EZ Match: current full-space route strongly negative; jackpot sharing prevents strict future guarantee without hard external-winner cap.
-- H021–H028 current compact/fixed/full-space screens: all sampled products rejected.
+- H034 Ontario DAILY KENO Pick 2–10: favorable uncapped full-space/EV return only 42.03%–55.07%; rejected additive guarantee class.
+- H033 New Zealand Bullseye: real 28.57% multi-draw discount, but shared/capped payouts and external duplicates destroy strict guarantee.
+- H032 Canada DAILY GRAND: favorable full coverage 44.35%, strict cash floor 36.21%.
+- H031 Georgia/Virginia Cash Pop Cover All: guaranteed win but floor 33.33% of coverage cost.
+- H029/H029b Virginia Pick 3/4/5 including FIREBALL: additive-family guarantee rejected by expectation bound.
+- H030 Virginia Cash 5 + EZ Match: current full-space route negative; jackpot sharing blocks strict guarantee.
+- H021–H028 compact/fixed/full-space screens: sampled products rejected.
 - Beşdə 5 and ONLOTO 1–10 full coverage: rejected.
 - Powerball/Mega Millions/EuroMillions full-space terminal guarantees: rejected.
 - H012a/H004 ordinary additive wheels: rejected by expectation theorem.
@@ -98,13 +77,13 @@ Full coverage of `C(49,5)*7 = 13,348,188` lines costs CAD 40,044,564. Favorable 
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Next priorities
-1. Continue fast analytic screen on **additional current compact finite/fixed-payout products**, but prioritize candidates with deterministic discounts/subsidies or optimistic coverage return materially above the now-common 40–60% range.
-2. Search specifically for **discount + non-shared fixed cash payouts**; H033 proves meaningful pricing nonlinearities exist, while H034 shows ordinary fixed-payout Keno without subsidy remains far from the hurdle.
-3. H020 live-data arbitrage immediately if raw public books become retrievable.
-4. H019 capped competitions only when cash floor/full-cap economics improve materially.
+1. Continue **H021–H035 fast analytic screens** on current finite/fixed-payout products, but favor candidates with deterministic discounts/rebates/subsidies or unusually high coverage return.
+2. Search specifically for **deterministic discount + fixed non-shared cash payouts**; this remains the strongest structural combination not yet exhausted.
+3. Revisit H020 live arbitrage immediately if raw public order books become retrievable.
+4. H019 only when capped-entry cash-floor economics materially improve.
 5. H006/H007 only after reliable histories/machine metadata become obtainable.
 6. H010/H014 if new authoritative data routes appear.
-7. H018 conditional-EV calibration if exact mechanics/live endpoint become recoverable.
-8. Advanced controls before EXHAUSTED: more current products, deterministic cash-rebate scan, Bayesian hidden-state inference, and causal implementation tests.
+7. H018 conditional-EV calibration if exact mechanics/live endpoint becomes recoverable.
+8. Before EXHAUSTED: additional current products, deterministic cash-rebate scan, Bayesian hidden-state inference, and causal implementation tests.
 
 Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
