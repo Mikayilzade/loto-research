@@ -1,0 +1,7 @@
+candidate,cash_like,withdrawable_or_real_cash,vested_before_event,void_preserves_payment,azerbaijan_fit,current_2026,strict_guarantee_result
+BETDAQ_DAQBACK,yes,yes,no,no,unclear,yes,rejected
+BETDAQ_Healthy_Betting_cashback,yes,yes,no,no,unclear,yes,rejected
+Betfair_Azerbaijan_risk_free_offer,yes,conditional_refund,no,no,yes,yes,rejected
+Smarkets_SailGP_predictor,yes,cash_credit,yes_after_prediction,not_wager_dependent,no,expired,rejected_not_executable
+Betfair_Back_It_or_Bin_It,prize_cash,yes,no_random_prize,n_a,eligibility_not_established,yes,rejected_random
+cTrader_Store_Football_Cup,no,no,no,n_a,non_US_only,yes,rejected_non_cash
