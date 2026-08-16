@@ -10,6 +10,14 @@ class HedgeResult:
     guaranteed_profit: float
 
 
+@dataclass(frozen=True)
+class SelectiveRefundHedgeResult:
+    win_profit: float
+    eligible_loss_profit: float
+    ineligible_loss_profit: float
+    guaranteed_profit: float
+
+
 def cash_refund_same_odds_hedge(
     *,
     back_stake: float,
@@ -44,6 +52,86 @@ def cash_refund_same_odds_hedge(
         win_profit=win_profit,
         lose_profit=lose_profit,
         guaranteed_profit=min(win_profit, lose_profit),
+    )
+
+
+def selective_cash_refund_back_lay_hedge(
+    *,
+    back_stake: float,
+    back_decimal_odds: float,
+    lay_decimal_odds: float,
+    lay_stake: float,
+    cash_refund: float,
+    exchange_commission_rate: float = 0.0,
+) -> SelectiveRefundHedgeResult:
+    """Evaluate a back/lay hedge when only some losing outcomes receive cash.
+
+    This models offers such as horse-racing money-back promotions where the
+    selection is refunded only for specified finishing positions. The exchange
+    lay wins whenever the backed selection does not win, so eligible and
+    ineligible losing branches have the same hedge payoff; only the eligible
+    branch receives the refund.
+
+    A crucial consequence is that, whenever an ineligible losing outcome
+    remains possible, the refund cannot improve the strict all-outcome floor:
+    the worst losing branch is the ineligible one. Any strictly positive floor
+    therefore already requires an ordinary back/lay arbitrage before counting
+    the promotion.
+    """
+    if back_stake <= 0:
+        raise ValueError("back_stake must be positive")
+    if back_decimal_odds <= 1 or lay_decimal_odds <= 1:
+        raise ValueError("decimal odds must exceed 1")
+    if lay_stake < 0 or cash_refund < 0:
+        raise ValueError("lay_stake and cash_refund must be non-negative")
+    if not 0 <= exchange_commission_rate < 1:
+        raise ValueError("exchange_commission_rate must be in [0, 1)")
+
+    win_profit = (
+        back_stake * (back_decimal_odds - 1.0)
+        - lay_stake * (lay_decimal_odds - 1.0)
+    )
+    lay_win_net = lay_stake * (1.0 - exchange_commission_rate)
+    ineligible_loss_profit = -back_stake + lay_win_net
+    eligible_loss_profit = ineligible_loss_profit + cash_refund
+
+    return SelectiveRefundHedgeResult(
+        win_profit=win_profit,
+        eligible_loss_profit=eligible_loss_profit,
+        ineligible_loss_profit=ineligible_loss_profit,
+        guaranteed_profit=min(
+            win_profit,
+            eligible_loss_profit,
+            ineligible_loss_profit,
+        ),
+    )
+
+
+def selective_refund_requires_underlying_arbitrage(
+    *,
+    back_decimal_odds: float,
+    lay_decimal_odds: float,
+    exchange_commission_rate: float = 0.0,
+) -> bool:
+    """Return whether a positive back/lay floor is even algebraically possible.
+
+    With at least one non-refunded losing outcome, a positive floor requires a
+    lay stake x satisfying simultaneously:
+
+        x > S/(1-c)
+        x < S*(O_back-1)/(O_lay-1)
+
+    for stake S and commission c. Such an x exists iff the inequality below is
+    true. This is precisely an underlying bookmaker-vs-exchange price edge; the
+    selective refund does not create it.
+    """
+    if back_decimal_odds <= 1 or lay_decimal_odds <= 1:
+        raise ValueError("decimal odds must exceed 1")
+    if not 0 <= exchange_commission_rate < 1:
+        raise ValueError("exchange_commission_rate must be in [0, 1)")
+    return (
+        (back_decimal_odds - 1.0) * (1.0 - exchange_commission_rate)
+        > (lay_decimal_odds - 1.0)
     )
 
 
