@@ -1,0 +1,9 @@
+id,candidate,date_status,azerbaijan_retail,deterministic_user_actions,withdrawable_or_cash,principal_makewhole,positive_yield,strict_guarantee_status,main_blocker
+H048-1,OKX Azerbaijan welcome,active_through_2026-12-31,yes,partly,no,no,no,rejected,"trading bonus; FCFS; discretionary exclusion/cancellation"
+H048-2,OKX CIS community,active_through_2026-10-10,yes,partly,no,no,no,rejected,"nonwithdrawable trading bonus; FCFS; giveaways random"
+H048-3,Bybit LATAM first-deposit airdrop,active_through_2026-09-30,no,yes,yes,no,no,rejected_for_user,"Azerbaijan not eligible; FCFS"
+H048-4,Bitget Card 10 USDT airdrop,expired_2026-06,unclear,partly,yes,no,no,rejected,"expired; card approval; FCFS"
+H049-1,Bitget USDGO retail makewhole_plus_APR,historical_overlap_ended_2026-08-01,likely_yes,yes,yes,yes,yes,promising_not_current_success,"APR overlap ended; promo can end/cancel; current simultaneous eligibility not proven"
+H049-2,Bitget USDGO convert slippage bonus,end_TBD,likely_yes,yes,yes,yes,no,incomplete,"make-whole remains but no proven current retail positive-yield companion"
+H049-3,Bitget USDGO Simple Earn up_to_10pct,end_TBD,unclear,yes,yes,no,variable,incomplete,"not proven compatible with Convert make-whole; yield is 'up to' not fixed floor"
+H049-4,Bitget institutional USDGO slippage plan,end_TBD,no_retail,yes,yes,yes,possible,rejected_for_user,"institutional eligibility only"
