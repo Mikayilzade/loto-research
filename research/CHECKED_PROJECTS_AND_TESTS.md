@@ -51,6 +51,7 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H031 Georgia/Virginia Cash Pop Cover All** | buy all 15 numbers at $1/$2/$5/$10; operator explicitly guarantees a prize | full cost `15w`; legal minimum draw prize `5w`; strict gross floor **33.3333%**; Georgia retail instant win has a no-win branch | **REJECTED guaranteed-profit coverage**; `research/h031_cash_pop_cover_all.md` |
 | **H032 Canada DAILY GRAND** | buy every `C(49,5)*7=13,348,188` line at CAD 3; account for internal top-category sharing and GN-only Free Plays | cost **CAD 40,044,564**; favorable no-external-winner + Free-Play-face gross **CAD 17,758,644 = 44.3472%**; strict immediate-cash floor **36.2112%**; even impossible overgenerous bound only 50.5902% | **REJECTED guaranteed-profit full coverage**; Combo Play costs exactly 7× base price, so no nonlinear discount; `research/h032_canada_daily_grand_compact_screen.md` |
 | **H033 New Zealand Bullseye** | exploit statutory 7/14-draw discount while owning all 1,000,000 six-digit selections | 7 draws cost NZ$10m vs NZ$14m standard; 14 draws NZ$20m vs NZ$28m; discount **28.5714%**. Exact own winners per draw = 1/10/90/900/9,000/90,000 across divisions 1–6 | **DISCOUNT VALIDATED, strict guarantee REJECTED**: divisions 1–5 remain shared/capped with no useful external-duplicate cap; division 6 is bonus-ticket replay; `research/h033_nz_bullseye_discounted_coverage.md` |
+| **H034 Ontario DAILY KENO Pick 2–10** | exact full-space identity `C(20,m)C(50,k-m)` under current fixed prize table; deliberately ignore CAD 4m/category cap | favorable uncapped full-space/EV return only **42.03%–55.07%**, best Pick 2 = **55.0725%**; cap can only worsen larger portfolios | **REJECTED entire ordinary additive/coverage guarantee class** by negative-expectation contradiction; `research/h034_ontario_daily_keno_full_coverage.md`, `data/derived/h034_ontario_daily_keno_full_coverage.csv` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -157,10 +158,10 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H030 Virginia Cash 5/EZ Match closed in dedicated note/checkpoint.
 
 ## Current priorities
-1. Apply **H021–H033 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
-2. Target **deterministic discount + fixed/non-shared cash payout** products: H033 proves meaningful pricing nonlinearities still exist, but shared pools destroy the guarantee.
+1. Apply **H021–H034 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+2. Target **deterministic discount + fixed/non-shared cash payout** products: H033 proves meaningful pricing nonlinearities still exist, but shared pools destroy the guarantee; H034 shows ordinary fixed-payout Keno without subsidy remains far below break-even.
 3. H020 live-data arbitrage if direct public raw-book access becomes available.
 4. H006/H007 only after reliable histories/machine metadata become available.
 5. H010/H014 when new authoritative data routes appear.
-6. H018 conditional-EV calibration if exact mechanics/live endpoint become recoverable.
+6. H018 conditional-EV calibration if exact mechanics/live endpoint becomes recoverable.
 7. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
