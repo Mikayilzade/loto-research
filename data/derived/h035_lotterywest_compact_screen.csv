@@ -1,0 +1,4 @@
+game,scenario,cost,gross_or_floor,return_ratio,status
+Super66,hypothetical unique full 000000-999999 cover at minimum Division 1 payout,1000000,543480.6,0.5434806,rejected theoretical floor; actual unique cover not executable because numbers auto-selected
+Cash 3,partition cover all 1000 ordered outcomes using Exact triples + Any3 one-pair + Any6 distinct at AUD0.50,110,40,0.36363636363636365,rejected guaranteed-profit floor
+Cash 3,expected gross of same partition cover,110,52.9,0.4809090909090909,rejected additive EV
