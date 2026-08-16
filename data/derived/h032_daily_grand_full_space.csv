@@ -1,0 +1,4 @@
+scenario,variants,cost_cad,gross_cad,roi,net_cad,notes
+strict_cash_floor,13348188,40044564,14500620,0.3621120709417638,-25543944,Grand-Number-only Free Plays valued at zero cash; top pools capped at 7m and 500k with no external winners
+face_value_free_play,13348188,40044564,17758644,0.4434720278138126,-22285920,Free Plays valued at full 3 CAD face; top pools capped at 7m and 500k with no external winners
+impossible_overgenerous_bound,13348188,40044564,20258644,0.5059024740536568,-19785920,Free Plays at face and each of six 5-only lines incorrectly granted full 500k headline; still loses
