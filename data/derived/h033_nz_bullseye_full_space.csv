@@ -1,0 +1,4 @@
+draws,selections,cost_nzd,standard_cost_nzd,discount_fraction,div1_per_draw,div2_per_draw,div3_per_draw,div4_per_draw,div5_per_draw,div6_per_draw,strict_cash_guarantee
+1,1000000,2000000,2000000,0,1,10,90,900,9000,90000,false
+7,1000000,10000000,14000000,0.2857142857142857,1,10,90,900,9000,90000,false
+14,1000000,20000000,28000000,0.2857142857142857,1,10,90,900,9000,90000,false
