@@ -4,13 +4,48 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H033 New Zealand Bullseye discounted coverage completed**
+**Stage 1 — structural/state-edge search; H034 Ontario DAILY KENO completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
 - `EXHAUSTED` = all defensible registered project/edge classes tested or closed without SUCCESS.
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
+
+# H034 — Ontario DAILY KENO CLOSED as guarantee
+Files:
+- `research/h034_ontario_daily_keno_full_coverage.md`
+- `data/derived/h034_ontario_daily_keno_full_coverage.csv`
+- `src/loto_research/ontario_daily_keno.py`
+- `tests/test_ontario_daily_keno.py`
+
+Current official OLG mechanics:
+- 20 numbers drawn from 1–70;
+- Pick 2 through Pick 10;
+- CAD 1/2/5/10 stakes with linear published prize scaling;
+- fixed nominal prize table;
+- one prize per selection;
+- aggregate payout in each prize category capped at CAD 4,000,000, with proportional reduction if exceeded;
+- Advance Play exists, but no deterministic multi-draw discount was identified in current public mechanics.
+
+Exact full-coverage identity for Pick `k`:
+- variants = `C(70,k)`;
+- selections with exactly `m` matches = `C(20,m) * C(50,k-m)`.
+
+Deliberately favorable **uncapped** full-space gross-return ratios:
+- Pick 2: **55.0725%**
+- Pick 3: **52.0643%**
+- Pick 4: **52.8414%**
+- Pick 5: **42.0329%**
+- Pick 6: **44.3424%**
+- Pick 7: **48.3379%**
+- Pick 8: **46.6006%**
+- Pick 9: **43.0412%**
+- Pick 10: **44.7615%**.
+
+Best favorable result is only 55.07%. The statutory category cap can only reduce large-portfolio payouts. By symmetry these ratios are also the uncapped gross EV/stake of a base selection in each Pick class. Therefore every nonnegative additive mixture has negative expectation; a strict all-outcome positive-profit portfolio would imply positive expectation and is impossible under the ordinary additive rules.
+
+Status: **REJECTED as guaranteed-profit additive/coverage class**.
 
 # H033 — New Zealand Bullseye discounted multi-draw coverage CLOSED as guarantee
 Files:
@@ -63,8 +98,8 @@ Full coverage of `C(49,5)*7 = 13,348,188` lines costs CAD 40,044,564. Favorable 
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Next priorities
-1. Continue H021–H033 analytic screen on **additional current compact finite/fixed-payout products**, prioritizing deterministic discounts/subsidies and products whose optimistic coverage return approaches 100%.
-2. Search specifically for **discount + non-shared fixed cash payouts**; H033 shows that large pricing nonlinearities still exist, so this sub-class deserves more targeted screening.
+1. Continue fast analytic screen on **additional current compact finite/fixed-payout products**, but prioritize candidates with deterministic discounts/subsidies or optimistic coverage return materially above the now-common 40–60% range.
+2. Search specifically for **discount + non-shared fixed cash payouts**; H033 proves meaningful pricing nonlinearities exist, while H034 shows ordinary fixed-payout Keno without subsidy remains far from the hurdle.
 3. H020 live-data arbitrage immediately if raw public books become retrievable.
 4. H019 capped competitions only when cash floor/full-cap economics improve materially.
 5. H006/H007 only after reliable histories/machine metadata become obtainable.
