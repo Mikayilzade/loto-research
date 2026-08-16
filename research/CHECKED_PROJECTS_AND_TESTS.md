@@ -95,6 +95,9 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H036 OLG targeted LOTTO MAX buy-18-get-6 bonus** | 33.33% face-value subsidy; targeted/capped/non-cash | **REJECTED standalone guarantee**; same note |
 | **H036 OLG birthday lottery bonus** | zero acquisition cost lottery-only bonus | targeted EV overlay, not guaranteed cash |
 | **H037 Irish Lotto Plus Million Euro Raffle** | six special-event counts `73,104,81,82,84,72`; break-even ≈170 raffle winners; matched adjacent promotion uplift mean **1.3766x**; every event's 95% upper implied participation remains below break-even | **STRONG LIVE +EV OVERLAY; STRICT GUARANTEE REJECTED** because raffle code/final €1m selection remain random and external tickets exist; Gamma-Poisson posterior mean 82.75, model-conditional predictive `P(K>=170)≈1.7e-14`; `research/h037_lotto_plus_million_raffle.md`, `data/derived/h037_event_calibration.csv` |
+| **H038 deterministic rebate / free-credit theorem** | cash spend `S`, minimum cash payout `m`, guaranteed cash rebate `R`, costs `C` | strict guarantee requires `m+R>S+C`; lottery-only credit keeps zero floor if downstream play can lose | theorem VALIDATED; sampled OLG/Virginia-style credits rejected as strict cash guarantees |
+| **H039 Betfair Azerbaijan EXCN10 cash refund** | first Exchange bet risks €10; losing qualifying bet refunded €10 in cash; mechanical same-odds hedge has positive all-outcome floor | **MECHANICAL ARBITRAGE VALIDATED; STRICT GUARANTEE REJECTED** because incorporated Standard Promotional Terms allow invalidation/withholding when play guarantees profit with no/minimal risk; `research/h039_cash_refund_matched_betting_gate.md` |
+| H039 general cash-refund matched-promo theorem | with full cash refund `R=S`, choose opposing lay `L=S-delta`; then win branch `delta(O-1)>0`, loss branch `S-delta>0` before costs | **VALIDATED constructive theorem**; future SUCCESS requires no anti-arbitrage clawback plus irrevocably matched compatible hedge legs |
 | H019 capped fixed-prize takeover | guarantee requires zero external entries, ability to own all entries, atomic closure, no free-entry channel, and fixed cash floor > acquisition cost | mechanism valid in principle; no current SUCCESS; `research/h019_capped_fixed_prize_saturation.md` |
 | H019 current/recent UK screen | sampled full-cap economics ~28.6%–53.3% | **REJECTED sampled instances** |
 
@@ -157,9 +160,10 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
 
 ## Current priorities
-1. Prioritize **uncapped/repeatable withdrawable cashback or guaranteed-value rebates** over random/free-play promotions.
-2. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
-3. H020 live-data arbitrage if direct public raw-book access becomes available.
-4. H006/H007 only after reliable histories/machine metadata become available.
-5. H010/H014 when new authoritative data routes appear.
-6. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+1. Search **withdrawable-cash refund/cashback promotions contract-first**. H039 already proves the hedge; only operators without guaranteed-profit/minimal-risk clawback language can become terminal candidates.
+2. Search zero-cost credits only when face value can completely cover a tiny outcome space with positive cash floor.
+3. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
+4. H020 live-data arbitrage if direct public raw-book access becomes available.
+5. H006/H007 only after reliable histories/machine metadata become available.
+6. H010/H014 when new authoritative data routes appear.
+7. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
