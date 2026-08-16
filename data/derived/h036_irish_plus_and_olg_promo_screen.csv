@@ -1,0 +1,6 @@
+case,space_or_spend,cost_or_spend,optimistic_value,strict_cash_floor,optimistic_return,strict_cash_return,status
+Daily Million Plus full 6/39 cover,3262623,3262623,961600,461600,0.294732183277075,0.141481256032340,rejected
+EuroMillions Plus full 5/50 cover,2118760,2118760,1148000,648000,0.541826351262059,0.305839264475448,rejected
+OLG Lotto Max targeted buy-6-get-6 face bonus,6,6,12,0,2.0,0.0,not cash rebate; targeted one-time bonus only
+OLG Lotto 6/49 targeted buy-3-get-3 face bonus,3,3,6,0,2.0,0.0,not cash rebate; targeted one-time bonus only
+OLG Lotto Max targeted buy-18-get-6 face bonus,18,18,24,0,1.333333333333333,0.0,not cash rebate; targeted one-time bonus only
