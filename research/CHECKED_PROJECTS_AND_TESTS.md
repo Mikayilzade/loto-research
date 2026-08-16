@@ -54,6 +54,8 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H034 Ontario DAILY KENO Pick 2–10** | exact full-space identity `C(20,m)C(50,k-m)` under current fixed prize table; deliberately ignore CAD 4m/category cap | favorable uncapped full-space/EV return only **42.03%–55.07%**, best Pick 2 = **55.0725%**; cap can only worsen larger portfolios | **REJECTED entire ordinary additive/coverage guarantee class** by negative-expectation contradiction; `research/h034_ontario_daily_keno_full_coverage.md`, `data/derived/h034_ontario_daily_keno_full_coverage.csv` |
 | **H035 Lotterywest Super66** | hypothetical unique cover of all 1,000,000 six-digit strings at AUD1; exact end-match counts with minimum Division-1 payout | deterministic minimum-payout gross **AUD543,480.60 = 54.3481%**; moreover player cannot force unique coverage because official selections are automatically random | **REJECTED executable guaranteed-profit coverage**; `research/h035_lotterywest_compact_games.md` |
 | **H035 Lotterywest Cash 3** | exact partition cover of all 1,000 ordered outcomes using Exact triples + 3-way one-pair + 6-way all-distinct wagers at AUD0.50 | cost **AUD110**; strict minimum gross **AUD40 = 36.3636%**; expected gross AUD52.90 = 48.0909% | **REJECTED guaranteed-profit additive/coverage class**; `research/h035_lotterywest_compact_games.md` |
+| **H036 Irish Daily Million Plus** | buy every `C(39,6)=3,262,623` Plus line at EUR1; exact 6-main+bonus coverage; grant full EUR500k top prize and value EUR2 scratch prizes at face | optimistic gross **EUR961,600 = 29.4732%**; strict non-top cash/face floor **EUR461,600 = 14.1481%** | **REJECTED guaranteed-profit full coverage**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
+| **H036 Irish EuroMillions Plus** | buy every `C(50,5)=2,118,760` Plus line at EUR1; exact own winners 1/225/9,900 for 5/4/3 matches | optimistic full-top gross **EUR1,148,000 = 54.1826%**; non-top fixed cash only **EUR648,000 = 30.5839%** | **REJECTED guaranteed-profit full coverage**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -88,6 +90,10 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Virginia new-player bonus games | random bonus games; geofenced; bonus value not guaranteed cash | REJECTED guarantee |
 | New York NYL+ | points/second-chance; no deterministic withdrawable cash floor verified | no guarantee candidate |
 | Florida Bonus Play | chance-based promotion | REJECTED standalone guarantee |
+| **H036 OLG targeted LOTTO MAX buy-6-get-6 bonus** | selected eligible account spends at least CAD6 and receives CAD6 LOTTO MAX-specific bonus; one-time/capped | **REAL 100% face-value subsidy at minimum spend, but bonus is lottery-use value and can return zero; REJECTED standalone cash guarantee**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
+| **H036 OLG targeted LOTTO 6/49 buy-3-get-3 bonus** | selected eligible account spends at least CAD3 and receives CAD3 game-specific bonus; one-time/capped | **REAL 100% face-value subsidy at minimum spend, but non-cash conversion risk remains; REJECTED standalone cash guarantee**; same note |
+| **H036 OLG targeted LOTTO MAX buy-18-get-6 bonus** | selected eligible account spends at least CAD18 and receives capped CAD6 LOTTO MAX bonus | **33.33% face-value subsidy; targeted/capped/non-cash; REJECTED standalone guarantee**; same note |
+| **H036 OLG birthday lottery bonus** | eligible invited account can receive free lottery-only bonus during current 2026 promotion period | zero acquisition cost EV overlay, but game-funded conversion can lose | **not guaranteed cash; retain as targeted EV overlay class** |
 | H019 capped fixed-prize takeover | buy every valid entry in one-winner capped competition | guarantee requires zero external entries, ability to own all entries, atomic closure, no unresolved free-entry channel, and fixed cash floor > full effective acquisition cost | mechanism valid in principle; no current SUCCESS; `research/h019_capped_fixed_prize_saturation.md` |
 | H019 current/recent UK screen | Coast/Hot Comps/7days/Urban Draw/UKCC examples | cash alternative/full-cap revenue only ~28.6%–53.3%; most also have personal caps/free postal routes/external entries | **REJECTED sampled instances**; `data/derived/h019_capped_competition_screen.csv` |
 
@@ -160,10 +166,11 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H030 Virginia Cash 5/EZ Match closed in dedicated note/checkpoint.
 
 ## Current priorities
-1. Apply **H021–H035 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
-2. Target **deterministic discount + fixed/non-shared cash payout** products: H033 proves meaningful pricing nonlinearities still exist, while H035 shows compact controllable fixed-odds coverage without subsidy remains far below break-even and automatic-random assignment can itself block deterministic coverage.
-3. H020 live-data arbitrage if direct public raw-book access becomes available.
-4. H006/H007 only after reliable histories/machine metadata become available.
-5. H010/H014 when new authoritative data routes appear.
-6. H018 conditional-EV calibration if exact mechanics/live endpoint becomes recoverable.
-7. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+1. Apply **H021–H036 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+2. Target **deterministic discount + fixed/non-shared cash payout** products. H036 confirms that 100% *face-value* lottery bonuses can exist, but targeted one-time lottery-only credit is not equivalent to withdrawable cashback and cannot scale to coverage.
+3. Prioritize **uncapped/repeatable withdrawable cashback or guaranteed-value rebates** over random/free-play promotions.
+4. H020 live-data arbitrage if direct public raw-book access becomes available.
+5. H006/H007 only after reliable histories/machine metadata become available.
+6. H010/H014 when new authoritative data routes appear.
+7. H018 conditional-EV calibration if exact mechanics/live endpoint becomes recoverable.
+8. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
