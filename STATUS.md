@@ -4,13 +4,57 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H038 deterministic rebate/free-credit theorem completed**
+**Stage 1 — structural/state-edge search; H039 cash-refund matched-betting contract gate completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
 - `EXHAUSTED` = all defensible registered project/edge classes tested or closed without SUCCESS.
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
+
+# H039 — cash-refund / matched-betting guarantee gate
+Files:
+- `research/h039_cash_refund_matched_betting_gate.md`
+- `data/derived/h039_cash_refund_promo_screen.csv`
+- `src/loto_research/promo_hedge.py`
+- `tests/test_promo_hedge.py`
+
+## Constructive theorem
+For a qualifying back bet `S` at odds `O`, an opposing lay stake `L`, and a withdrawable cash refund `R` paid only if the qualifying back bet loses:
+- backed outcome wins: `P_win = (S-L)(O-1)` before commission;
+- backed outcome loses: `P_lose = -S + L + R`.
+
+If `R=S`, choose `L=S-delta` for any `0<delta<S`:
+- `P_win = delta*(O-1) > 0`;
+- `P_lose = S-delta > 0`.
+
+Therefore a genuinely unconditional full-cash-refund promo can be mechanically converted into strict positive profit once both hedge legs are irrevocably matched and all costs/settlement branches are covered.
+
+## Live Betfair Azerbaijan offer — mechanism real, strict guarantee BLOCKED
+Fresh official page retrieved 2026-08-16 states:
+- Azerbaijan is explicitly eligible;
+- promo code `EXCN10`;
+- first Exchange bet within 30 days must risk at least €10 and settle;
+- if it loses, Betfair refunds €10 **in cash**.
+
+However Betfair General/Standard Promotional Terms contain an explicit irregular-play clause: if a promotion enables guaranteed wins/profits with no or minimal risk, Betfair may invalidate transactions, withhold winnings and/or close the account.
+
+Thus the precise hedge that creates mathematical sure profit also creates a contractual clawback branch. Under PROJECT_RULES this prevents terminal SUCCESS.
+
+Status:
+- cash-refund matched-betting arbitrage mechanism: **VALIDATED**;
+- current Betfair Azerbaijan offer as strict executable guarantee: **REJECTED/BLOCKED by anti-guarantee promo terms**.
+
+## Contract-first gate for future offers
+A future matched-promo candidate may qualify for SUCCESS only if:
+1. eligibility is deterministic and already satisfied;
+2. both hedge legs can be fully matched before event risk;
+3. void/settlement mismatch is eliminated or separately hedged;
+4. refund is withdrawable cash;
+5. refund amount/timing are fixed;
+6. no guaranteed-profit / minimal-risk / arbitrage clawback term applies;
+7. all commissions, taxes, FX and transfer costs leave every branch positive;
+8. no one-sided account/market limit can arise after the first leg is irrevocable.
 
 # H038 — deterministic rebate / lottery-credit guarantee screen
 Files:
@@ -42,17 +86,15 @@ Strict package floors:
 Status: **REJECTED as strict cash guarantees; EV subsidy only**.
 
 ## Strongest zero-cost subsidy found — OLG birthday bonus
-Current OLG page publishes a **CAD 10 Lottery Bonus Birthday Gift** for July 1–December 31 2026.
-No qualifying ticket purchase is stated; eligible account opts in and receives CAD 10 lottery-only bonus.
+Current OLG page publishes a lottery-only birthday bonus for July 1–December 31 2026.
+No qualifying ticket purchase is stated; eligible account opts in and receives lottery-only bonus value.
 
 This is a real **zero-cash-cost free-roll / positive-EV subsidy** for an eligible account, but terminal SUCCESS still fails because downstream lottery bets can all lose.
 
 Compact-conversion route checked:
-- POKER LOTTO: CAD 2 Quick Pick hands; five bonus-funded hands can all lose;
-- LIGHTNING LOTTO: CAD 2 gives three 5/49 selections; CAD 10 buys only 15 selections, nowhere near full coverage;
-- MEGADICE: Quick Pick with losing outcomes.
-
-No ≤CAD10 fully coverable current OLG product with positive cash floor was found in this screen.
+- POKER LOTTO: Quick Pick hands can all lose;
+- LIGHTNING LOTTO: bonus amount cannot fully cover the 5/49 space;
+- MEGADICE: losing outcomes remain.
 
 Status: **positive-EV/free-roll overlay validated; strict positive-profit guarantee not established**.
 
@@ -89,20 +131,13 @@ Six recovered special-event raffle-winner counts:
 
 For every one of these six events, the exact-Poisson **95% upper implied Plus-line bound is still below 1.6997m break-even**. Modeled Plus EV at each event's 95% upper participation bound remains approximately **€1.205–€1.515 per €1 add-on**.
 
-## Matched promotion-demand uplift
-Adjacent ordinary Wednesday raffle-winner counts were recovered around all six events. Event / mean-adjacent ratios:
-- 1.377x, 1.434x, 1.473x, 1.147x, 1.388x, 1.440x.
+Matched adjacent promotion-demand uplift mean ≈ **1.3766x (+37.7%)**; median ≈ **1.4115x**.
 
-Mean promotion uplift ≈ **1.3766x (+37.7%)**; median ≈ **1.4115x**.
-
-## Bayesian predictive screen
-For the six event counts:
+Gamma-Poisson posterior:
 - posterior common-rate mean = **82.75 raffle winners**;
 - 95% posterior interval for common mean ≈ **75.63–90.19**;
 - implied posterior-mean participation ≈ **827,500 Plus lines**;
-- common-rate posterior predictive `P(next event >=170 winners) ≈ 1.7e-14`.
-
-This remains model-conditional, not a guarantee.
+- model-conditional predictive `P(next event >=170 winners) ≈ 1.7e-14`.
 
 Status: **strongest live +EV lottery overlay currently found; NOT terminal SUCCESS**.
 
@@ -130,8 +165,8 @@ Status: **strongest live +EV lottery overlay currently found; NOT terminal SUCCE
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Next priorities
-1. **Zero-cost-credit conversion scan:** search current promotions/free-entry mechanisms where a deterministic free credit can completely cover a tiny outcome space and force positive withdrawable cash.
-2. **True withdrawable cashback scan:** prioritize rebates paid as cash/withdrawable balance rather than free play; apply H038 theorem immediately.
+1. **Contract-first cash-refund scan:** search other current cash-refund/cashback offers, prioritizing operators whose terms do NOT claw back guaranteed/minimal-risk play; H039 mechanical hedge theorem is ready.
+2. **Zero-cost-credit conversion scan:** only pursue credits large enough to completely cover a tiny outcome space with positive withdrawable cash floor.
 3. H037: recover remaining event count(s), broaden controls, and recompute after autumn-2026 rule change.
 4. H020 live arbitrage immediately if raw public order books become retrievable.
 5. H019 only when capped-entry cash-floor economics materially improve.
@@ -139,4 +174,4 @@ Status: **strongest live +EV lottery overlay currently found; NOT terminal SUCCE
 7. H010/H014 if new authoritative data routes appear.
 8. Before EXHAUSTED: additional current products, deterministic cash-rebate scan, Bayesian hidden-state inference, and causal implementation tests.
 
-Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`; H038 authoritative note: `research/h038_deterministic_rebate_guarantee.md`.
+Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`; newest authoritative research note: `research/h039_cash_refund_matched_betting_gate.md`.
