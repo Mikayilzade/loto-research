@@ -1,19 +1,23 @@
 # H037 — Irish Lotto Plus Million Euro Raffle
 
 Updated: 2026-08-16
-Status: **event-day data now supports a live positive-EV overlay; strict guaranteed-profit path rejected**
+Status: **six-event data strongly supports a live positive-EV overlay; strict guaranteed-profit path rejected**
 
 ## Why this branch matters
 The Irish National Lottery periodically runs a special Lotto Plus Million Euro Raffle. For every Lotto Plus line purchased, the player receives a four-digit raffle number. Tickets with the winning raffle number receive the ordinary €500 raffle prize; in the special event all such tickets enter a once-off random draw and one ticket owner receives an additional €1,000,000.
 
-Official current / historical sources:
-- Lotto Plus rules/info: https://www.lottery.ie/game-information/lotto-plus
-- Million Euro Raffle terms: https://www.lottery.ie/game-information/lotto-plus/million-euro-raffle
-- 2024 mechanics confirmation: https://www.lottery.ie/news/press-releases/4-millionaires-to-be-made-in-september-with-4-special-draws
-- 5 July 2025 event result: https://www.lottery.ie/news/winners-stories/tipp-top-win-clerihan-lotto-player-becomes-14th-national-lottery-millionaire-of-2025
-- 6 September 2025 event result: https://www.lottery.ie/news/winners-stories/treaty-county-triumph-limerick-lotto-player-becomes-irelands-18th-millionaire-of-2025
-- 30 May 2026 event result: https://www.lottery.ie/news/winners-stories/bank-holiday-joy-lotto-player-in-louth-becomes-14th-national-lottery-millionaire-of-2026
-- current pricing announcement confirms two Lotto lines cost €4 and two lines with Lotto Plus cost €6, so the Plus add-on is €1 per line.
+Primary mechanics / event sources:
+- https://www.lottery.ie/game-information/lotto-plus
+- https://www.lottery.ie/game-information/lotto-plus/million-euro-raffle
+- https://www.lottery.ie/news/press-releases/4-millionaires-to-be-made-in-september-with-4-special-draws
+- https://www.lottery.ie/news/winners-stories/tipp-top-win-clerihan-lotto-player-becomes-14th-national-lottery-millionaire-of-2025
+- https://www.lottery.ie/news/winners-stories/treaty-county-triumph-limerick-lotto-player-becomes-irelands-18th-millionaire-of-2025
+- https://www.lottery.ie/news/winners-stories/an-early-christmas-surprise-for-lotto-player-in-dublin-7-who-just-became-irelands-newest-millionaire
+- https://www.lottery.ie/news/winners-stories/lotto-player-in-cork-becomes-4th-national-lottery-millionaire-of-2026
+- https://www.lottery.ie/news/winners-stories/bank-holiday-joy-lotto-player-in-louth-becomes-14th-national-lottery-millionaire-of-2026
+
+Historical draw-count source used where the operator winner story confirms the event/code but does not print the underlying number of €500 raffle winners:
+- https://irish.national-lottery.com/irish-lotto/
 
 ## 1. Strict guarantee test — CLOSED
 A terminal guarantee fails for two independent reasons.
@@ -29,7 +33,7 @@ Therefore any external qualifying ticket preserves a legal outcome where another
 Conclusion: **H037 is REJECTED as a strict guaranteed-profit strategy.**
 
 ## 2. Incremental Plus EV baseline
-Current pre-autumn-2026 6/47 fixed prize tables imply approximately:
+Pre-autumn-2026 6/47 fixed prize tables imply approximately:
 - Plus 1 fixed-prize EV: **€0.22902755 per line**;
 - Plus 2 fixed-prize EV: **€0.13263705**;
 - ordinary €500 raffle EV at 1/10,000: **€0.05**;
@@ -53,70 +57,96 @@ Equivalent expected ordinary-raffle winner count:
 
 `T / 10,000 ≈ 169.97`.
 
-## 3. NEW — actual event-day calibration
-The earlier packet used the operator's generic statement that ordinary Lotto Plus Raffle draws typically produce 60–120 winners. We now have exact counts from two special €1m events:
+## 3. Six directly calibrated special events
+`data/derived/h037_event_calibration.csv` now contains six special events with recoverable raffle-winner counts:
 
-### 5 July 2025 special event
-Official winner story states **104 ticketholders** held the winning raffle number.
+| Event | Raffle winners | Implied Plus lines (MLE) | 95% upper implied lines | Plus EV at upper line bound |
+|---|---:|---:|---:|---:|
+| 28 Sep 2024 | 73 | 0.730m | 0.918m | **€1.501** |
+| 5 Jul 2025 | 104 | 1.040m | 1.260m | **€1.205** |
+| 6 Sep 2025 | 81 | 0.810m | 1.007m | **€1.405** |
+| 20 Dec 2025 | 82 | 0.820m | 1.018m | **€1.394** |
+| 14 Mar 2026 | 84 | 0.840m | 1.040m | **€1.373** |
+| 30 May 2026 | 72 | 0.720m | 0.907m | **€1.515** |
 
-With raffle hit probability `p≈1/10,000`, the maximum-likelihood participation proxy is:
-
-`T_hat = 104 / p ≈ 1,040,000 Plus lines`.
-
-Under a Poisson approximation to raffle-winner count, exact 95% confidence limits for the mean winner count are about **84.98 to 126.01**, corresponding to about **0.850m–1.260m Plus lines**.
-
-Even at the 95% upper participation bound, modeled incremental Plus payout is:
-
-`0.4116646 + 1,000,000 / 1,260,134 ≈ €1.2052 per €1 add-on`.
-
-### 6 September 2025 special event
-Official winner story states **81 ticketholders** held the winning raffle number.
-
-MLE participation proxy:
-
-`T_hat ≈ 810,000 Plus lines`.
-
-95% Poisson interval for the implied Plus-line count is about **0.643m–1.007m**.
-
-At the 95% upper participation bound, modeled incremental Plus payout is still about:
-
-`€1.4050 per €1 add-on`.
+Important source distinction:
+- 2025-07-05 and 2025-09-06 counts are explicitly stated in official National Lottery winner stories;
+- official pages confirm mechanics/date/winning code for the other events, while the archived result pages provide the underlying ordinary €500 raffle-winner count.
 
 ### Result
-Both directly observed special-event winner counts are materially below the approximately **170 raffle winners** corresponding to Plus break-even.
+All six observed special-event counts are far below the approximately **170** ordinary raffle winners corresponding to incremental Plus break-even.
 
-This is stronger than the previous heuristic because it uses special-event outcomes themselves rather than ordinary-draw marketing language. On these two observed event days, the participation proxy is consistent with the €1 Plus add-on being substantially positive EV.
+More strongly, for **each individual event**, the exact-Poisson 95% upper confidence limit for implied Plus entries remains below the 1.6997m break-even line count. Thus the positive-EV conclusion is no longer driven by one or two unusually quiet event days.
 
-Data:
-- `data/derived/h037_event_calibration.csv`
+## 4. Promotion-demand uplift from matched adjacent draws
+For each special Saturday event, compare raffle-winner count with the ordinary Wednesday draw immediately before and after it. Because the raffle code hit probability is fixed at 1/10,000 per Plus line, winner counts provide a direct noisy proxy for Plus participation.
 
-## 4. Line-level versus ticket-level mechanics — clarified
-Official 2024 promotion language explicitly states: **for every Lotto Plus line purchased, players get a four-digit Raffle number.** This confirms that raffle exposure is generated at the line level.
+Matched windows:
+- 28 Sep 2024: event **73** vs adjacent **55 / 51** -> **1.377x**;
+- 5 Jul 2025: **104** vs **69 / 76** -> **1.434x**;
+- 6 Sep 2025: **81** vs **56 / 54** -> **1.473x**;
+- 20 Dec 2025: **82** vs **62 / 81** -> **1.147x**;
+- 14 Mar 2026: **84** vs **59 / 62** -> **1.388x**;
+- 30 May 2026: **72** vs **48 / 52** -> **1.440x**.
 
-The special €1m selection, however, is described as selecting one **ticket** among tickets with the winning raffle number. Therefore multi-line tickets can create multiple qualifying line codes but the final selection unit is described as a ticket owner/ticket. Without the full rules implementation details, one should not assume that placing many qualifying lines on one physical/interactive ticket is exactly equivalent to spreading those lines across separate tickets for the second-stage million draw.
+Mean matched promotion uplift = **1.3766x**, or about **+37.7%** versus the local adjacent-draw average. Median uplift is about **1.4115x**.
 
-For the aggregate subsidy calculation this distinction does not alter the fact that exactly €1m is distributed across the eligible population, but it can matter for an individual execution strategy and must be resolved before real-money sizing.
+Interpretation:
+- promotion advertising does measurably raise Plus participation;
+- the uplift is large enough that ordinary-draw demand cannot simply be copied into a special-event model;
+- however observed promotion-day demand is still nowhere near the ~170-winner break-even threshold.
 
-## 5. Interpretation
-### Strong positive-EV lead
-H037 now has actual event-day evidence supporting `T < 1.70m` in at least two special draws. This makes it one of the strongest currently documented live +EV lottery overlays in the project.
+This matched comparison is observational, not causal proof: jackpot size, holidays, weekday effects and other promotions may also affect demand.
+
+## 5. Bayesian predictive screen
+Implemented in `src/loto_research/lotto_plus_raffle.py` using a transparent Gamma-Poisson model over the six observed special-event winner counts.
+
+Counts:
+
+`73, 104, 81, 82, 84, 72`
+
+With a Jeffreys-style Gamma(0.5, 0) prior for a common special-event Poisson mean:
+- posterior shape = **496.5**;
+- posterior rate = **6**;
+- posterior mean special-event raffle winners = **82.75**;
+- 95% posterior interval for the common mean ≈ **75.63–90.19** winners;
+- corresponding mean implied Plus participation ≈ **827,500 lines**.
+
+Under this deliberately simple common-rate model, posterior predictive probability that the next event reaches/exceeds **170 raffle winners** is about:
+
+`1.7e-14`.
+
+### Critical caveat
+That tiny probability is **model-conditional, not a real-world guarantee**. Six events cannot rule out regime shifts, marketing changes, jackpot effects, pricing changes or overdispersion. It should be read as: *the observed historical event regime is very far from the current break-even demand level*, not as a promise that a future event cannot cross it.
+
+## 6. Line-level versus ticket-level mechanics
+Official promotion language states that **for every Lotto Plus line purchased, players get a four-digit Raffle number**. This confirms raffle exposure is generated at line level.
+
+The special €1m selection is described in ticket/ticket-owner terms. Therefore multi-line ticket handling can matter for an execution strategy and should be confirmed from operative rules before real-money sizing.
+
+For aggregate subsidy EV, exactly €1m is still distributed across the eligible special-event population, so this distinction does not alter the total-subsidy calculation.
+
+## 7. Strategic interpretation
+### Strongest live +EV lottery overlay currently found
+H037 now has six observed special-event participation proxies across 2024–2026, all comfortably below the modeled pre-change break-even level. Matched ordinary draws show the promotion itself raises participation by roughly 38% on average, but the resulting special-event counts remain materially below break-even.
 
 ### Still not terminal SUCCESS
-Positive EV is not the project's terminal criterion. A particular Plus line can still lose everything, and the €1m recipient is selected randomly. Therefore no guaranteed positive net profit exists from this mechanism alone.
+The project requires **guaranteed positive net profit across all legal outcomes**, not merely positive expected value. A Plus line can lose and the €1m recipient is selected randomly. Therefore H037 remains non-terminal.
 
-### Remaining real-money caveats
-- only two event-day exact winner counts have been recovered so far;
-- special-event participation could vary materially across dates;
-- autumn-2026 Lotto/Lotto Plus rule changes may alter prize probabilities/prices, so the pre-change EV model must not be blindly carried forward;
-- ticket-level handling of the second-stage draw should be confirmed from the operative rules;
-- account/spend limits, residency/location requirements and execution constraints apply;
-- tax/prize-limit treatment must be checked for any deployable strategy.
+### Real-money caveats
+- sample is only six special events;
+- one event count source can be secondary even where official pages confirm the event and code;
+- autumn-2026 Lotto/Lotto Plus rule changes can alter price/probabilities and invalidate this pre-change break-even;
+- ticket-level second-stage handling requires operative-rule confirmation;
+- account/spend limits, residency/location and execution constraints apply;
+- any deployable strategy requires current tax/rule verification.
 
-## 6. Next high-value test
-1. Recover exact raffle-winner counts for additional special dates: 21 Dec 2024, 28 Sep 2024, 20 Dec 2025, 14 Mar 2026, 30 May 2026 and other events.
-2. Compare event-day winner counts with adjacent ordinary Wednesday/Saturday draws to estimate promotion-induced participation uplift.
-3. Build a Bayesian / predictive distribution for `T` and probability that incremental Plus EV exceeds €1 before ticket cutoff.
-4. Recompute under the announced autumn-2026 Lotto regime once exact new Lotto Plus tables/rules are effective.
+## 8. Next high-value tests
+1. Recover the missing underlying €500 raffle-winner count for the 21 Dec 2024 special event from an authoritative or independently consistent archive.
+2. Expand matched ordinary-draw controls beyond ±1 Wednesday to estimate weekday/jackpot/seasonality effects.
+3. Fit an overdispersed / hierarchical event-demand model rather than relying only on common-rate Poisson.
+4. Recompute immediately when the autumn-2026 Lotto/Lotto Plus regime becomes operative.
+5. Continue the broader search for **deterministic** subsidy/rebate mechanisms because H037 cannot meet the project's guarantee terminal condition.
 
 ## Files
 - `src/loto_research/lotto_plus_raffle.py`
@@ -125,4 +155,4 @@ Positive EV is not the project's terminal criterion. A particular Plus line can 
 - `data/derived/h037_event_calibration.csv`
 
 ## Current conclusion
-**No terminal SUCCESS.** Strict guarantee remains impossible under published mechanics. However two actual special-event counts — 104 winners on 5 July 2025 and 81 on 6 September 2025 — place event-day participation well below the modeled ~170-winner break-even threshold, materially strengthening H037 as a live positive-EV overlay.
+**No terminal SUCCESS.** Strict guarantee remains impossible under published mechanics. But six special-event counts and matched adjacent-draw controls now make H037 a much stronger positive-EV finding: observed event participation is consistently and materially below the pre-change break-even threshold even after promotion-induced demand uplift.
