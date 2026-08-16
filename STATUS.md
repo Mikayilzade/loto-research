@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H052 prepaid insured-interest candidate narrowed by adverse contract evidence**
+**Stage 1 — structural/state-edge search; H052 narrowed to VTB Avans product-specific Application-Agreement**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -17,7 +17,7 @@ File:
 - `research/h052_upfront_insured_interest.md`
 
 ## Current candidate
-Two current Azerbaijan bank products still explicitly combine **interest paid in advance** with deposit-insurance claims:
+Two current Azerbaijan bank products explicitly combine **interest paid in advance** with deposit-insurance claims:
 
 ### Expressbank — Əlavə fürsət
 - AZN;
@@ -32,34 +32,34 @@ Two current Azerbaijan bank products still explicitly combine **interest paid in
 - minimum 500 AZN;
 - 12–36 months;
 - interest available immediately after registration;
-- current page observed 2026-08-17: 9.0% / 9.25% / 8.5% / 7.5%;
-- page states statutory compensation is 100% of insured deposit up to 100,000 AZN.
+- current page observed 2026-08-17: **9.25% / 9.50% / 8.75% / 7.75%** for 12/18/24/36 months;
+- product remains listed on VTB's current retail-deposit page.
 
-## NEW — strong adverse contract precedent
-A publicly indexed Azerbaijan general-offer form for a **prepaid-interest fixed deposit** states that:
-- full-term interest is paid on placement day;
-- principal equal to that prepaid interest is **blocked/encumbered in the bank's favor**;
-- on early demand, prepaid interest is deducted from principal without separate consent.
+## NEW — current VTB general agreement recovered
+VTB's official documents page publishes the latest retail `Bank Xidmətlərinin Göstərilməsi haqqında Müqavilənin Ümumi Şərtləri`, effective **06.01.2025**.
 
-This is not proven to be the current Expressbank/VTB agreement, but it materially weakens the earlier favorable assumption that prepaid interest is independent of untouched principal.
+Deposit clauses materially narrow the H052 uncertainty:
+- 6.1: important product conditions live in the individual `Ərizə-Razılaşma`;
+- 6.11–6.13: customer-requested early withdrawal / early interest treatment;
+- **6.14:** when the early-payment/early-withdrawal case occurs, previously paid interest is deducted from principal;
+- 6.21: on insurance event, matured depositor obligations to the bank are deducted from protected deposit compensation.
 
-## Statutory interaction now clearer
-Current Deposit Insurance Law:
-- compensates 100% of insured deposit up to 100,000 AZN;
-- deducts any **due depositor obligation to the bank** before compensation;
-- compensates interest only through the insurance-event date;
-- deems unexpired deposits **matured** when compensation is announced.
+Crucially, the recovered recoupment clause is textually tied to **customer-requested early withdrawal**. The public general deposit section does **not** state that bank insolvency / Deposit Insurance statutory maturity automatically triggers the same prepaid-interest recoupment.
 
-Therefore `advertised insured deposit + prepaid interest` is not sufficient for SUCCESS. If the prepaid-interest security/recoupment claim becomes due on forced maturity/insolvency, recoverable principal can fall to `P-R` and the apparent guaranteed profit vanishes.
+The Deposit Insurance Law separately deems unexpired deposits **matured** when compensation is announced. Therefore statutory forced maturity is not textually identical to the customer `vaxtından əvvəl` withdrawal branch in VTB 6.11–6.14.
 
-## H052 terminal state
-**PROMISING / INCONCLUSIVE — not SUCCESS.**
+## H052 status after this run
+This materially strengthens VTB Avans relative to the prior checkpoint, but it is still **not SUCCESS** because clause 6.1 makes the product-specific `Avans` Application-Agreement decisive and that document was not publicly recovered.
 
-Strict guarantee still requires product-specific proof that an insurance event / forced maturity does **not** activate:
-- recoupment of prepaid unearned interest;
-- setoff against principal;
-- enforcement of a lien/encumbrance over principal;
-- any reduction of insured principal corresponding to the prepaid amount.
+Remaining possible disqualifiers in the missing Application-Agreement:
+- lien/block over principal equal to prepaid interest;
+- automatic recoupment on any termination/maturity event;
+- explicit treatment of statutory forced maturity as recoupment-triggering;
+- separate due obligation for unearned prepaid interest.
+
+If none exists, then within the insurance limit the candidate can potentially satisfy `C=P`, leaving upfront reward `R` as a strictly positive floor after bounded costs. At the 500-AZN minimum and current 12-month 9.25% VTB rate, gross upfront interest is about **46.25 AZN** before tax/costs.
+
+Current H052 state: **PROMISING / INCONCLUSIVE — decisive gap now mostly the Avans `Ərizə-Razılaşma` or explicit VTB/ADIF interpretation.**
 
 # H051 — prior packet
 Ordinary insured deposits protect principal strongly but fail strict guaranteed-profit status because an immediate insurance event can leave accrued interest arbitrarily close to zero.
@@ -95,13 +95,14 @@ Any SUCCESS must prove all of:
 11. where prepaid interest is secured by a principal lien/block, prove the lien cannot become an offsettable due obligation on the insurance-event branch.
 
 # Next priorities
-1. **H052 decisive contract test:** recover current Expressbank `Əlavə fürsət` or VTB `Avans` agreement and isolate forced-maturity/insurance-event treatment of the prepaid-interest lien/recoupment.
-2. Search additional current Azerbaijan prepaid-interest deposits with **public explicit insolvency accounting**; reject products whose advance is secured against principal in all relevant branches.
-3. If a product explicitly preserves full insured principal after the prepaid reward, immediately bound tax, account/card, cash-out/transfer and funding costs and test minimum-size terminal SUCCESS.
-4. Capture live subscription/order terms for any principal-guaranteed structured product with locked non-reducible minimum return.
-5. H020 live arbitrage only if paired with a vested subsidy.
-6. H037 broaden controls / recalculate after autumn-2026 rule change.
-7. H019 only if capped-entry economics materially improve.
-8. H006/H007 after reliable histories/machine metadata become obtainable.
-9. H010/H014 if new authoritative data routes appear.
-10. Before EXHAUSTED: additional deterministic action/rebate scans, Bayesian hidden-state inference and causal implementation tests.
+1. **H052 decisive VTB document:** recover current `Avans` `Ərizə-Razılaşma` / individual deposit agreement. This is now the highest-value single missing document.
+2. Recover current Expressbank `Əlavə fürsət` individual agreement / standard terms and compare forced-maturity accounting.
+3. Search authoritative VTB/ADIF interpretation of prepaid interest when an insurance event occurs before original contractual maturity.
+4. If a product explicitly preserves full insured principal after prepaid reward, immediately bound tax, account/card, cash-out/transfer and funding costs at minimum size and test terminal SUCCESS.
+5. Search additional current Azerbaijan prepaid-interest products only where product-specific terms are public enough to resolve the same branch.
+6. H020 live arbitrage only if paired with a vested subsidy.
+7. H037 broaden controls / recalculate after autumn-2026 rule change.
+8. H019 only if capped-entry economics materially improve.
+9. H006/H007 after reliable histories/machine metadata become obtainable.
+10. H010/H014 if new authoritative data routes appear.
+11. Before EXHAUSTED: additional deterministic action/rebate scans, Bayesian hidden-state inference and causal implementation tests.
