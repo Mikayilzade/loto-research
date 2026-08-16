@@ -4,13 +4,52 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H040 cash-refund operator screen completed**
+**Stage 1 — structural/state-edge search; H041 free-bet matched-conversion theorem completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
 - `EXHAUSTED` = all defensible registered project/edge classes tested or closed without SUCCESS.
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
+
+# H041 — free-bet token matched conversion
+Files:
+- `research/h041_free_bet_matched_conversion.md`
+- `data/derived/h041_free_bet_conversion_screen.csv`
+- `src/loto_research/free_bet_conversion.py`
+- `tests/test_free_bet_conversion.py`
+
+## Mechanical theorem
+For stake-not-returned free-bet token `F` at bookmaker odds `O_b`, exchange lay odds `O_l`, and commission `c`, equal-profit lay stake is:
+
+`x = F*(O_b-1)/(O_l-c)`
+
+and after both legs are irrevocably accepted the cash floor is:
+
+`P = F*(O_b-1)*(1-c)/(O_l-c) > 0`.
+
+This is stronger than ordinary +EV: a valid free-bet token can be mechanically converted into positive outcome-independent cash when the opposing lay is fully matched under compatible settlement rules.
+
+## Current Sky Bet + Smarkets screen
+Sky Bet currently offers new customers **3 x £10 Free Bets** after a £5 deposit and a first qualifying **5p** bet at odds 2.00+; free-bet stakes are not returned.
+
+Mechanical sensitivity for three £10 tokens plus the 5p qualifier:
+- bookmaker/lay 2.00, 0% exchange commission: ~**£15.00** floor;
+- bookmaker/lay 2.00, 2% commission: ~**£14.84798** floor;
+- bookmaker 2.00 / lay 2.20, 2% commission: ~**£13.48119** floor.
+
+Smarkets itself explicitly documents matched betting as using bookmaker free bets plus exchange lays to cover outcomes and lock in profit, independently validating the mechanism class.
+
+## Why H041 is not terminal SUCCESS
+Sky Bet's incorporated general promotion terms explicitly prohibit exploiting promotions through bets with **no or limited risk of loss**, except where absence of risk is a key feature of the promotion, and reserve power to withhold promotional amounts/free stakes/bonuses. The welcome offer also carries promotion-abuse discretion.
+
+Therefore the settlement floor is not yet a contractual floor: a clawback/denial branch remains. The verified Smarkets 0%-commission promotion is also jurisdiction-limited.
+
+H041 status:
+- mechanical free-bet conversion theorem: **VALIDATED**;
+- matched-betting operational mechanism: **VALIDATED**;
+- current Sky/Smarkets example: **positive mechanical floor but REJECTED as strict contractual guarantee**;
+- terminal SUCCESS: **NOT YET**.
 
 # H040 — expanded cash-refund contract screen
 Files:
@@ -19,47 +58,9 @@ Files:
 - `src/loto_research/promo_hedge.py`
 - `tests/test_promo_hedge.py`
 
-## New selective-refund theorem
-For a bookmaker back stake `S` at odds `O_b`, exchange lay stake `x` at lay odds `O_l`, and exchange commission `c`, if even one legal losing state receives **no refund**:
+Selective-refund theorem remains closed: if any legal losing state gets no cash refund, the promotion cannot create a surebet unless an ordinary bookmaker/exchange price arbitrage already exists.
 
-- win branch: `S*(O_b-1) - x*(O_l-1)`;
-- non-refunded loss branch: `-S + x*(1-c)`;
-- refunded loss branch: non-refunded branch + cash refund.
-
-A strict positive all-outcome floor therefore requires simultaneously:
-
-`x > S/(1-c)`
-
-and
-
-`x < S*(O_b-1)/(O_l-1)`.
-
-Such an `x` exists iff:
-
-`(O_b-1)*(1-c) > (O_l-1)`.
-
-That is already an ordinary bookmaker/exchange price arbitrage **before counting the promotion**.
-
-Conclusion: selected-place horse-racing money-back offers can improve EV/downside but cannot manufacture a surebet while any non-refunded losing finish remains.
-
-## Current operator screen
-- **bet365**: Azerbaijan-facing general terms explicitly prohibit arbitrage / all-outcome guaranteed-profit betting; promo value may be reclaimed. **REJECTED contract gate.**
-- **Paddy Power**: genuine Money Back as Cash first-bet offer exists for UK/ROI new customers, but irregular-play terms permit invalidation/withholding when promotion enables guaranteed/minimal-risk profit. **REJECTED contract/access gate.**
-- **Sky Bet**: current Money Back as Cash racing offers refund only selected finishing positions. Mechanical guarantee therefore fails by the theorem above. General promo terms are notable because they exclude no/limited-risk play **except where absence of risk is explicitly a key part of the promotion**; retain this wording as a future lead. **Current offer REJECTED.**
-- **BetVictor**: First Bet Shield returns Free Bets, not withdrawable cash. **REJECTED refund-form gate.**
-- **BetMGM**: losing first bet returns nonwithdrawable Bonus Bets. **REJECTED refund-form/access gate.**
-- **FanDuel**: No-Sweat/Bet Back refunds are nonwithdrawable Bonus Bets and jurisdiction-restricted. **REJECTED refund-form/access gate.**
-
-## H039/H040 strategic conclusion
-The constructive full-cash-refund hedge remains mathematically valid, but the viable live target is now much narrower:
-1. refund must cover **every losing outcome**;
-2. refund must be **withdrawable cash**;
-3. eligibility must be deterministic and lawful for the user;
-4. both hedge legs must be irrevocably executable;
-5. terms must explicitly permit the low-risk construction or omit any guaranteed-profit/arbitrage clawback;
-6. commissions/tax/FX/settlement mismatches must leave every branch positive.
-
-No currently verified offer in the expanded screen passes all gates.
+Current screened operators (bet365, Paddy Power, Sky Bet, BetVictor, BetMGM, FanDuel) either retain anti-guaranteed-profit/abuse discretion, refund only selected losing states, or pay nonwithdrawable bonus bets. No terminal candidate found.
 
 # Strongest non-terminal positive-EV result
 ## H037 Irish Lotto Plus Million Euro Raffle
@@ -74,14 +75,14 @@ Six recovered special-event raffle-winner counts remain far below the modeled br
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` updated with H040 theorem and operator screen.
+`research/CHECKED_PROJECTS_AND_TESTS.md` must include H041 before the next packet; if connector write limitations prevent the append in a run, `research/h041_free_bet_matched_conversion.md` and this STATUS are the authoritative H041 record until the ledger append succeeds.
 
 # Test/runtime note
-The new algebra was sanity-checked in the Python runtime. A full repository test invocation could not be run in this automation environment because direct `git clone` DNS resolution was blocked; this is a runtime-network limitation, not a known test failure.
+H041 formulas were independently sanity-checked in Python. Repository test execution remains dependent on a runnable checkout/network path; no known formula/test failure is present.
 
 # Next priorities
-1. Continue cash-refund search **only** for full-loss withdrawable-cash offers with contract wording that permits or cannot claw back low-risk matched play. Do not repeat partial/selective-refund offers closed by H040.
-2. Search zero-cost/free-credit conversions only where the credit is large enough to completely cover a tiny outcome space with a positive withdrawable cash floor.
+1. **H041 contract-first search:** free-bet/token offers whose own terms explicitly permit matched betting/hedging or lack a no-risk/arbitrage clawback, with deterministic eligibility and withdrawable winnings. Do not repeat Sky-style offers closed by general promotion-abuse language.
+2. Search zero-cost/free-credit awards only where the credit can be converted through a tiny fully hedgeable outcome space and the issuer contract permits the hedge.
 3. H037: broaden special-event controls / recover remaining event counts and prepare autumn-2026 rule-change recalculation.
 4. H020 immediately if raw public order books become retrievable.
 5. H019 only if capped-entry cash-floor economics materially improve.
