@@ -1,0 +1,5 @@
+case,jurisdiction,refund_type,stake,refund,mechanical_hedge_possible,strict_contract_guarantee,status,reason
+Betfair_EXCN10,Azerbaijan,withdrawable_cash,10,10,true,false,REJECTED_STRICT_GUARANTEE,"Standard Promotional Terms allow invalidation/withholding for guaranteed or minimal-risk profit patterns"
+Betfair_EXCN10_unconditional_counterfactual,generic,withdrawable_cash,10,10,true,true,THEORETICAL_SUCCESS_GATE,"Would pass only if both hedge legs are irrevocably matched, settlements align, all costs are covered, and no anti-arbitrage clawback exists"
+OLG_lottery_bonus,Ontario,lottery_only_credit,5,5,false,false,REJECTED_STRICT_GUARANTEE,"Credit itself is nonwithdrawable and downstream lottery play retains zero-cash outcomes"
+Virginia_rewards_free_play,Virginia,lottery_only_credit,0,0,false,false,REJECTED_STRICT_GUARANTEE,"Points redeem to free lottery play/draw entries rather than unconditional cash"
