@@ -48,22 +48,22 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H028 Nebraska MyDaY** | buy every valid MM-DD-YY calendar combination | 36,525 plays; exact all-state gross range **$17,580–$21,357 = 48.1314%–58.4723%** | **REJECTED guaranteed-profit full coverage**; `research/h028_nebraska_finite_coverage.md` |
 | **H028 Nebraska Pick 5** | buy all `C(40,5)=658,008` plays; full published 4/5 and 3/5 cash tiers | deterministic non-jackpot cash **$141,050 = 21.4359%**; sole-winner jackpot hurdle **$516,958**; jackpot sharing and possible lower-tier pari-mutuel remain | **REJECTED current guaranteed-profit full coverage**; `research/h028_nebraska_finite_coverage.md` |
 | **H029 Virginia fixed digit base games** | Pick 3 / Pick 4 / Pick 5 Exact, Any, 50/50, Combo/Pair menus under additive base rules | every checked base wager has gross EV only **48%–50%** (Pick 5 50/50 30-way 49.75%); full Exact coverage returns exactly 50%; any strict all-outcome positive portfolio would contradict expectation linearity | **REJECTED entire base-game additive guarantee class**; `research/h029_fixed_digit_games_impossibility.md`, `data/derived/h029_virginia_digit_base_ev.csv` |
-| **H031 Georgia/Virginia Cash Pop Cover All** | buy all 15 numbers at $1/$2/$5/$10; operator explicitly guarantees a prize | full cost `15w`; legal minimum draw prize `5w`; strict gross floor **33.3333%**; Georgia retail instant win has a no-win branch | **REJECTED guaranteed-profit coverage**; `research/h031_cash_pop_cover_all.md` |
-| **H032 Canada DAILY GRAND** | buy every `C(49,5)*7=13,348,188` line at CAD 3; account for internal top-category sharing and GN-only Free Plays | cost **CAD 40,044,564**; favorable no-external-winner + Free-Play-face gross **CAD 17,758,644 = 44.3472%**; strict immediate-cash floor **36.2112%**; even impossible overgenerous bound only 50.5902% | **REJECTED guaranteed-profit full coverage**; Combo Play costs exactly 7× base price, so no nonlinear discount; `research/h032_canada_daily_grand_compact_screen.md` |
-| **H033 New Zealand Bullseye** | exploit statutory 7/14-draw discount while owning all 1,000,000 six-digit selections | 7 draws cost NZ$10m vs NZ$14m standard; 14 draws NZ$20m vs NZ$28m; discount **28.5714%**. Exact own winners per draw = 1/10/90/900/9,000/90,000 across divisions 1–6 | **DISCOUNT VALIDATED, strict guarantee REJECTED**: divisions 1–5 remain shared/capped with no useful external-duplicate cap; division 6 is bonus-ticket replay; `research/h033_nz_bullseye_discounted_coverage.md` |
-| **H034 Ontario DAILY KENO Pick 2–10** | exact full-space identity `C(20,m)C(50,k-m)` under current fixed prize table; deliberately ignore CAD 4m/category cap | favorable uncapped full-space/EV return only **42.03%–55.07%**, best Pick 2 = **55.0725%**; cap can only worsen larger portfolios | **REJECTED entire ordinary additive/coverage guarantee class** by negative-expectation contradiction; `research/h034_ontario_daily_keno_full_coverage.md`, `data/derived/h034_ontario_daily_keno_full_coverage.csv` |
-| **H035 Lotterywest Super66** | hypothetical unique cover of all 1,000,000 six-digit strings at AUD1; exact end-match counts with minimum Division-1 payout | deterministic minimum-payout gross **AUD543,480.60 = 54.3481%**; moreover player cannot force unique coverage because official selections are automatically random | **REJECTED executable guaranteed-profit coverage**; `research/h035_lotterywest_compact_games.md` |
-| **H035 Lotterywest Cash 3** | exact partition cover of all 1,000 ordered outcomes using Exact triples + 3-way one-pair + 6-way all-distinct wagers at AUD0.50 | cost **AUD110**; strict minimum gross **AUD40 = 36.3636%**; expected gross AUD52.90 = 48.0909% | **REJECTED guaranteed-profit additive/coverage class**; `research/h035_lotterywest_compact_games.md` |
-| **H036 Irish Daily Million Plus** | buy every `C(39,6)=3,262,623` Plus line at EUR1; exact 6-main+bonus coverage; grant full EUR500k top prize and value EUR2 scratch prizes at face | optimistic gross **EUR961,600 = 29.4732%**; strict non-top cash/face floor **EUR461,600 = 14.1481%** | **REJECTED guaranteed-profit full coverage**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
-| **H036 Irish EuroMillions Plus** | buy every `C(50,5)=2,118,760` Plus line at EUR1; exact own winners 1/225/9,900 for 5/4/3 matches | optimistic full-top gross **EUR1,148,000 = 54.1826%**; non-top fixed cash only **EUR648,000 = 30.5839%** | **REJECTED guaranteed-profit full coverage**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
+| **H031 Georgia/Virginia Cash Pop Cover All** | buy all 15 numbers at $1/$2/$5/$10; operator explicitly guarantees a prize | full cost `15w`; legal minimum draw prize `5w`; strict gross floor **33.3333%** | **REJECTED guaranteed-profit coverage**; `research/h031_cash_pop_cover_all.md` |
+| **H032 Canada DAILY GRAND** | buy every `C(49,5)*7=13,348,188` line at CAD 3 | favorable no-external-winner + Free-Play-face gross **44.3472%**; strict immediate-cash floor **36.2112%** | **REJECTED guaranteed-profit full coverage**; `research/h032_canada_daily_grand_compact_screen.md` |
+| **H033 New Zealand Bullseye** | statutory 7/14-draw discount while owning all 1,000,000 selections | discount **28.5714%**, but divisions remain shared/capped and replay-based | **DISCOUNT VALIDATED, strict guarantee REJECTED**; `research/h033_nz_bullseye_discounted_coverage.md` |
+| **H034 Ontario DAILY KENO Pick 2–10** | exact full-space identity under current fixed prize table | favorable uncapped full-space/EV return only **42.03%–55.07%** | **REJECTED additive/coverage guarantee class**; `research/h034_ontario_daily_keno_full_coverage.md` |
+| **H035 Lotterywest Super66** | hypothetical unique cover all 1,000,000 six-digit strings | deterministic minimum-payout gross **54.3481%**; unique coverage not forceable | **REJECTED**; `research/h035_lotterywest_compact_games.md` |
+| **H035 Lotterywest Cash 3** | exact partition cover all ordered outcomes | strict minimum gross **36.3636%** | **REJECTED**; same note |
+| **H036 Irish Daily Million Plus** | full Plus-line coverage | optimistic gross **29.4732%**, strict non-top floor **14.1481%** | **REJECTED**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
+| **H036 Irish EuroMillions Plus** | full Plus-line coverage | optimistic full-top gross **54.1826%**, non-top fixed cash **30.5839%** | **REJECTED**; same note |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
 |---|---|---|---|
 | Beşdə 5 | exact displayed-table EV | ~53.56% gross | negative |
-| Beşdə 5 | buy every 5/36 combination | 376,992 AZN cost vs deterministic gross 201,900 AZN under favorable assumptions | **REJECTED guarantee**; `research/h012_full_space_coverage.md` |
+| Beşdə 5 | buy every 5/36 combination | 376,992 AZN cost vs deterministic gross 201,900 AZN | **REJECTED guarantee**; `research/h012_full_space_coverage.md` |
 | Super Keno | base EV | ~59.86% gross | negative |
-| Super Keno | 1x/2x/5x/10x | proportional stake/prize; larger multiplier slightly worse after tax | no multiplier edge |
+| Super Keno | 1x/2x/5x/10x | proportional stake/prize | no multiplier edge |
 | ONLOTO | full-space coverage types 1–10 | deterministic gross ~76.59%–78.00% | **REJECTED guarantee** |
 | 4+4 | exact combinatorics | jackpot 1/23,474,025; any listed prize ~18.61% | validated math |
 | 4+4 | payout-engine reconstruction | III=11U, IV=5U, VII=9U, VIII=14U, IX=7U, V+VI=2U | strongly reproduced |
@@ -90,55 +90,48 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | Virginia new-player bonus games | random bonus games; geofenced; bonus value not guaranteed cash | REJECTED guarantee |
 | New York NYL+ | points/second-chance; no deterministic withdrawable cash floor verified | no guarantee candidate |
 | Florida Bonus Play | chance-based promotion | REJECTED standalone guarantee |
-| **H036 OLG targeted LOTTO MAX buy-6-get-6 bonus** | selected eligible account spends at least CAD6 and receives CAD6 LOTTO MAX-specific bonus; one-time/capped | **REAL 100% face-value subsidy at minimum spend, but bonus is lottery-use value and can return zero; REJECTED standalone cash guarantee**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
-| **H036 OLG targeted LOTTO 6/49 buy-3-get-3 bonus** | selected eligible account spends at least CAD3 and receives CAD3 game-specific bonus; one-time/capped | **REAL 100% face-value subsidy at minimum spend, but non-cash conversion risk remains; REJECTED standalone cash guarantee**; same note |
-| **H036 OLG targeted LOTTO MAX buy-18-get-6 bonus** | selected eligible account spends at least CAD18 and receives capped CAD6 LOTTO MAX bonus | **33.33% face-value subsidy; targeted/capped/non-cash; REJECTED standalone guarantee**; same note |
-| **H036 OLG birthday lottery bonus** | eligible invited account can receive free lottery-only bonus during current 2026 promotion period | zero acquisition cost EV overlay, but game-funded conversion can lose | **not guaranteed cash; retain as targeted EV overlay class** |
-| H019 capped fixed-prize takeover | buy every valid entry in one-winner capped competition | guarantee requires zero external entries, ability to own all entries, atomic closure, no unresolved free-entry channel, and fixed cash floor > full effective acquisition cost | mechanism valid in principle; no current SUCCESS; `research/h019_capped_fixed_prize_saturation.md` |
-| H019 current/recent UK screen | Coast/Hot Comps/7days/Urban Draw/UKCC examples | cash alternative/full-cap revenue only ~28.6%–53.3%; most also have personal caps/free postal routes/external entries | **REJECTED sampled instances**; `data/derived/h019_capped_competition_screen.csv` |
+| **H036 OLG targeted LOTTO MAX buy-6-get-6 bonus** | 100% face-value subsidy at minimum spend but lottery-only value | **REJECTED standalone cash guarantee**; `research/h036_irish_plus_and_olg_targeted_bonus.md` |
+| **H036 OLG targeted LOTTO 6/49 buy-3-get-3 bonus** | 100% face-value subsidy at minimum spend but non-cash conversion risk | **REJECTED standalone cash guarantee**; same note |
+| **H036 OLG targeted LOTTO MAX buy-18-get-6 bonus** | 33.33% face-value subsidy; targeted/capped/non-cash | **REJECTED standalone guarantee**; same note |
+| **H036 OLG birthday lottery bonus** | zero acquisition cost lottery-only bonus | targeted EV overlay, not guaranteed cash |
+| **H037 Irish Lotto Plus Million Euro Raffle** | six special-event counts `73,104,81,82,84,72`; break-even ≈170 raffle winners; matched adjacent promotion uplift mean **1.3766x**; every event's 95% upper implied participation remains below break-even | **STRONG LIVE +EV OVERLAY; STRICT GUARANTEE REJECTED** because raffle code/final €1m selection remain random and external tickets exist; Gamma-Poisson posterior mean 82.75, model-conditional predictive `P(K>=170)≈1.7e-14`; `research/h037_lotto_plus_million_raffle.md`, `data/derived/h037_event_calibration.csv` |
+| H019 capped fixed-prize takeover | guarantee requires zero external entries, ability to own all entries, atomic closure, no free-entry channel, and fixed cash floor > acquisition cost | mechanism valid in principle; no current SUCCESS; `research/h019_capped_fixed_prize_saturation.md` |
+| H019 current/recent UK screen | sampled full-cap economics ~28.6%–53.3% | **REJECTED sampled instances** |
 
 ## H020 lawful two-sided hedging / arbitrage
 | Venue / structure | Test | Result | Status |
 |---|---|---|---|
-| Smarkets + bookmaker | back one outcome, lay same outcome, include 2% commission | official examples reproduce equal positive profit once both legs accepted; e.g. back 2.20 £200 / lay 1.98 gives £20 either way | **mechanism VALIDATED; no current live executable quote established**; `research/h020_two_sided_hedging_arbitrage.md` |
-| Complete-set dutching | exhaustive mutually exclusive outcomes | strict surebet iff `sum(1/O_i) < 1` after all costs | theorem implemented; `src/loto_research/two_sided_arb.py` |
-| Kalshi ordinary binary | buy both Yes and No | combined opposing participant investment `$1`; fees nonnegative | **same-market structural buy-both arb REJECTED** |
-| Kalshi collateral return | mutually exclusive/directional linked positions | lowers collateral requirement | capital efficiency only; not payout subsidy |
-| Polymarket standard binary | acquire Yes+No and merge | equal pair merges to `$1`; deterministic arb only if all-in pair acquisition cost `< $1` | condition VALIDATED, no structural same-market profit |
-| Polymarket negative risk | convert one No into Yes in all other mutually-exclusive outcomes | atomic capital-efficient conversion | not itself a profit subsidy; live mispricing only |
-| H020 fee-aware Polymarket gate | include current V2 fee `C*r*p*(1-p)` on both taker legs | near 0.50/0.50 raw pair must be below ~0.985 at r=.03, .980 at .04, .975 at .05, .965 at .07 before extra costs | quantified; `data/derived/h020_fee_aware_pair_thresholds.csv` |
-| H020 executable depth | walk both ask books and cap quantity at matched profitable depth | top-of-book `<1` can fail with deeper levels/fees; largest profitable depth solved at book breakpoints | **IMPLEMENTED**; `src/loto_research/live_complete_set.py` |
-| Kalshi crossed-book implication | derive market-buy YES+NO from bid-only complement book | complete-set cost `2-(best_yes_bid+best_no_bid)`; sub-$1 requires crossed `yes_bid+no_bid>1` | strengthened structural rejection |
-| H020 live API acquisition | current raw Gamma/CLOB books | official public interfaces verified, runtime could not retrieve arbitrary raw live payloads | **DATA/EXECUTION BLOCKED IN CURRENT RUNTIME; scanner ready** |
-| H020 terminal gate | current reproducible opportunity | requires all legs fully matched, compatible settlement, net min payout > capital, fees/tax/FX/limits/void risk cleared | **OPEN; post-fill guarantee validated, pre-trade repeatable guarantee not established** |
+| Smarkets + bookmaker | post-fill back/lay equal-profit construction | official examples validate surebet after both legs accepted | **mechanism VALIDATED; no current live executable quote established** |
+| Complete-set dutching | exhaustive mutually exclusive outcomes | strict surebet iff `sum(1/O_i) < 1` after costs | theorem implemented |
+| Kalshi ordinary binary | buy both Yes and No | combined opposing investment $1; fees nonnegative | **same-market structural buy-both arb REJECTED** |
+| Polymarket standard binary | acquire Yes+No and merge | deterministic arb only if all-in pair acquisition cost `< $1` | condition validated, no structural same-market profit |
+| H020 fee-aware / executable depth | fee-aware thresholds + depth walk | scanner implemented | raw live-book acquisition blocked in current runtime |
+| H020 terminal gate | fully matched compatible settlement with net min payout > capital | **OPEN; post-fill guarantee validated, pre-trade repeatable guarantee not established** |
 
 ## Crowd / sharing
 | Test | Result | Status |
 |---|---|---|
 | Exact jackpot anti-popularity | reduces expected splitting but only conditional on win | validated optimizer, not standalone guarantee |
-| Lower-tier shared-pool competitor intensity | can materially improve shared payout if calibrated | mechanism promising / calibration pending |
-| Human choice biases | documented in large real-ticket datasets | validated mechanism class |
-| Synthetic crowd simulator | conditional competitor-intensity estimation implemented | implementation validated |
-| Anti-crowd standalone guarantee | losing outcomes remain regardless of sharing optimization | **REJECTED terminal guarantee** |
+| Lower-tier shared-pool competitor intensity | can materially improve shared payout if calibrated | promising overlay |
+| Human choice biases | documented in large ticket datasets | validated mechanism class |
+| Anti-crowd standalone guarantee | losing outcomes remain | **REJECTED terminal guarantee** |
 
 ## H011 visible pre-purchase information
 | Channel | Result | Status |
 |---|---|---|
-| NY exposed scratch-ticket serial | separate credential is under scratch area; no official pre-purchase serial→prize decoder | **REJECTED as validated lawful decoder** |
-| Virginia front-barcode scan | purchase first; owned unplayed ticket scan can reveal winner/nonwinner | **POST-PURCHASE only; REJECTED for pre-purchase guarantee** |
-| Public scratch remaining-prize tables | game-level prize state, no unsold-ticket identity/location mapping | no deterministic ticket leak; overlaps H010 |
-| Pack/ticket number or retailer location | no current official causal mapping to prize; NY material says prizes randomly distributed | no validated current edge |
-| Ordinary online instant games | outcome status follows paid play; demo has no cash entitlement | no pre-purchase outcome leak |
+| NY exposed scratch-ticket serial | no official pre-purchase serial→prize decoder | **REJECTED** |
+| Virginia front-barcode scan | purchase first; scan only after ownership | **POST-PURCHASE; REJECTED** |
+| Public scratch remaining-prize tables | game-level state only | no deterministic ticket leak |
+| Pack/ticket number or retailer location | no current official causal mapping | no validated edge |
+| Ordinary online instant games | outcome follows paid play | no pre-purchase leak |
 
 ## H018 Virginia Lucky Contestant hidden-time state
 | Test | Result | Status |
 |---|---|---|
-| Official causal odds schedule | hidden weighted daily selected time; 60m=1/150,000, 30m=1/30,000, selected time=1/1; jackpot may also be won earlier | **VALIDATED mechanism**; `research/h018_lucky_contestant_time_state.md` |
-| Optimistic Bayesian/survival concentration | uniform-within-published-bin + strongest `T>=now` truncation concentrates late remaining-time mass | EV lead only; explicit assumption; `data/derived/h018_optimistic_time_state_screen.csv` |
-| $600 jackpot-only threshold | $0.20 stake needs jackpot p≥1/3000; 30m anchor contributes only ~$0.02 jackpot EV, T itself 1/1 but hidden | quantified necessary condition |
-| Public winner-list sample | Jan 4–10 2026 page sample contains 8 deduplicated events and two distinct Jan 4 awards | reset/multiple-award mechanics must not be assumed |
-| Standalone strict guarantee | other player may legally win jackpot before hidden T; ordinary play has losing outcomes | **REJECTED terminal guarantee** |
-| Full EV strategy | exact interpolation, T resolution, standard odds, reset mechanics, stake scaling, live latency/player intensity incomplete | **OPEN/data-blocked overlay**, not SUCCESS |
+| Official causal odds schedule | hidden weighted daily selected time; odds tighten to 1/1 at selected time | **VALIDATED mechanism** |
+| Bayesian/survival concentration | late-time conditional EV can rise under assumptions | overlay only |
+| Standalone strict guarantee | another player may win before hidden time; ordinary losing outcomes remain | **REJECTED terminal guarantee** |
+| Full EV strategy | exact interpolation/reset/live intensity incomplete | **OPEN/data-blocked overlay** |
 
 ## Randomness / predictive controls
 Permanent rejected standalone ideas unless extraordinary forward evidence appears:
@@ -153,7 +146,7 @@ Still open:
 - H006 physical-machine/ball bias with strict multiple-testing and regime controls;
 - H007 high-frequency RNG anomaly tests with reliable histories and causal implementation subtests.
 
-Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustworthy machine-readable bulk official history; public Ekspres Keno archive remains client-rendered/placeholder in retrieval. Do not run anomaly tests on incomplete samples.
+Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustworthy machine-readable bulk official history; do not run anomaly tests on incomplete samples.
 
 ## Other still-open / blocked classes
 - H010 remaining-inventory instant-ticket state: blocked on public live denominator.
@@ -161,16 +154,12 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H018 Lucky Contestant remains open only as conditional-EV/data-acquisition overlay; standalone guarantee closed.
 - additional finite/final-draw games where **guaranteed external subsidy exceeds the H021 takeout hurdle**.
 - H020 live executable arbitrage: scanner ready; resume where raw books/settlement can be fetched.
-- H019 monitor only when `guaranteed cash floor > full effective capped-entry acquisition cost` or deterministic subsidy changes that inequality.
-- H029b FIREBALL exact joint-outcome analysis closed in dedicated append/checkpoint; H029 base digit-game class is closed.
-- H030 Virginia Cash 5/EZ Match closed in dedicated note/checkpoint.
+- H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
 
 ## Current priorities
-1. Apply **H021–H036 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
-2. Target **deterministic discount + fixed/non-shared cash payout** products. H036 confirms that 100% *face-value* lottery bonuses can exist, but targeted one-time lottery-only credit is not equivalent to withdrawable cashback and cannot scale to coverage.
-3. Prioritize **uncapped/repeatable withdrawable cashback or guaranteed-value rebates** over random/free-play promotions.
-4. H020 live-data arbitrage if direct public raw-book access becomes available.
-5. H006/H007 only after reliable histories/machine metadata become available.
-6. H010/H014 when new authoritative data routes appear.
-7. H018 conditional-EV calibration if exact mechanics/live endpoint becomes recoverable.
-8. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+1. Prioritize **uncapped/repeatable withdrawable cashback or guaranteed-value rebates** over random/free-play promotions.
+2. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
+3. H020 live-data arbitrage if direct public raw-book access becomes available.
+4. H006/H007 only after reliable histories/machine metadata become available.
+5. H010/H014 when new authoritative data routes appear.
+6. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
