@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H032 Canada DAILY GRAND completed**
+**Stage 1 — structural/state-edge search; H033 New Zealand Bullseye discounted coverage completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,36 +12,37 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H032 — Canada DAILY GRAND CLOSED
+# H033 — New Zealand Bullseye discounted multi-draw coverage CLOSED as guarantee
 Files:
-- `research/h032_canada_daily_grand_compact_screen.md`
-- `data/derived/h032_daily_grand_full_space.csv`
-- `src/loto_research/daily_grand.py`
-- `tests/test_daily_grand.py`
+- `research/h033_nz_bullseye_discounted_coverage.md`
+- `data/derived/h033_nz_bullseye_full_space.csv`
+- `src/loto_research/nz_bullseye.py`
+- `tests/test_nz_bullseye.py`
 
-Current WCLC mechanics verified from official pages:
-- 5 main numbers from 1–49 + Grand Number 1–7;
-- CAD 3 per selection;
-- advertised lump sums CAD 7m top / CAD 500k second;
-- multiple winners split the top-category lump-sum pools;
-- GN-only prize is a Free Play.
+Current official rules validate an unusually large deterministic pricing nonlinearity:
+- normal selection: NZ$2 per draw;
+- 7 consecutive draws: NZ$10 instead of NZ$14;
+- 14 consecutive draws: NZ$20 instead of NZ$28;
+- deterministic discount: **28.5714%**.
 
-Full space:
-`C(49,5)*7 = 13,348,188` lines.
+Full Bullseye number space is exactly 1,000,000 six-digit selections. Owning all selections gives, every draw, exactly:
+- Division 1: 1 own winning selection;
+- Division 2: 10;
+- Division 3: 90;
+- Division 4: 900;
+- Division 5: 9,000;
+- Division 6: 90,000 bonus-ticket selections.
 
-Acquisition cost:
-**CAD 40,044,564**.
+7-draw full coverage therefore costs **NZ$10,000,000**; 14-draw coverage costs **NZ$20,000,000**.
 
-Important internal-sharing identity: full coverage itself creates one 5+GN line and six 5-main-only lines. The six second-prize lines therefore share at most the CAD 500k second-prize pool when no external winners exist.
+Despite the discount, strict guaranteed cash profit fails. Divisions 1–5 are shared/capped cash pools and the current rules provide no useful pre-draw hard cap on external duplicate winning selections. External duplicates can dilute our finite pool share arbitrarily; Division 6 is a bonus ticket, not guaranteed terminal cash. Full coverage also guarantees a Division-1 winner every covered draw, preventing continued no-winner jackpot accumulation during the coverage sequence.
 
-Results:
-- strict immediate-cash gross floor with Free Plays valued at zero cash: **CAD 14,500,620 = 36.2112%**;
-- generous face-value treatment of all Free Plays: **CAD 17,758,644 = 44.3472%**;
-- even an impossible overgenerous cross-check that grants each of the six second-prize lines the full CAD 500k headline amount reaches only **50.5902%**.
+Status:
+- 28.57% multi-draw discount: **VALIDATED nonlinearity / EV overlay lead**;
+- strict standalone guaranteed-profit full coverage: **REJECTED**.
 
-WCLC DAILY GRAND 5-Number Combo costs CAD 21 and simply creates seven CAD 3 Grand-Number selections, so there is **no nonlinear system-ticket discount**.
-
-Status: **REJECTED as guaranteed-profit full coverage / system-pricing path.**
+# H032 — Canada DAILY GRAND CLOSED
+Full coverage of `C(49,5)*7 = 13,348,188` lines costs CAD 40,044,564. Favorable face-value gross was only 44.3472%; strict immediate-cash floor 36.2112%. Combo Play is linear pricing. **REJECTED guarantee.**
 
 # Recently closed branches
 - H031 Georgia/Virginia Cash Pop Cover All: guaranteed win but strict floor only 33.33% of coverage cost.
@@ -62,8 +63,8 @@ Status: **REJECTED as guaranteed-profit full coverage / system-pricing path.**
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Next priorities
-1. Continue H021–H032 analytic screen on **additional current compact finite/fixed-payout products**, prioritizing products with guaranteed cash floor, fixed inventory, unusual liability caps, or deterministic external subsidy.
-2. Explicitly prioritize candidates whose optimistic deterministic coverage return approaches **100%**; reject low-return products quickly rather than over-investigate them.
+1. Continue H021–H033 analytic screen on **additional current compact finite/fixed-payout products**, prioritizing deterministic discounts/subsidies and products whose optimistic coverage return approaches 100%.
+2. Search specifically for **discount + non-shared fixed cash payouts**; H033 shows that large pricing nonlinearities still exist, so this sub-class deserves more targeted screening.
 3. H020 live-data arbitrage immediately if raw public books become retrievable.
 4. H019 capped competitions only when cash floor/full-cap economics improve materially.
 5. H006/H007 only after reliable histories/machine metadata become obtainable.
