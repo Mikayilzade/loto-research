@@ -1,0 +1,13 @@
+gate,source,observed_rule,strict_guarantee_effect,status
+promotion_change,eTopaz first-deposit promotion,"Company may change or cancel promotion at any time","Subsidy entitlement not immutable from pre-qualification viewpoint",FAIL
+account_use,eTopaz Terms 4.2.1,"Account/services not for commercial purpose / other income / avoiding loss outside permitted purpose","Deliberate matched-profit construction has direct contractual conflict risk",FAIL
+account_closure,eTopaz Terms 4.5.3,"Operator may cancel subscription without giving reason","Execution/continuity cannot be treated as unconditional",FAIL
+bet_limits,eTopaz Terms 5.2.3,"Operator may set game limits","Required stake may become unavailable",FAIL
+terms_change,eTopaz Terms 5.2.2 and 8.1,"Rules/service scope may change; no compensation claim for changes","Future execution conditions not immutable",FAIL
+withdrawal,eTopaz Terms 7.3-7.5,"Own-name bank account required; minimum bank withdrawal stated as 3 AZN and changeable","Operational cost/restriction must be included",OPEN_COST
+football_abandonment,eTopaz football,"Resume within 48h -> unsettled bets can stand; otherwise void","Differs from Betfair three-day/reschedule framework",FAIL
+football_abandonment,Betfair Exchange football/general,"Reschedule/completion can remain live within up to three days subject to rules","Creates branch where Betfair stands while eTopaz voids",FAIL
+table_tennis_abandonment,eTopaz table tennis,"Not resumed within 48h -> void","Potential mismatch with Betfair general three-day rule",FAIL
+baseball_postponement,eTopaz baseball,"Postponed generally void unless played on originally scheduled day; abandoned resume window 48h","Differs materially from Betfair MLB rules",FAIL
+baseball_postponement,Betfair Exchange baseball,"No-start scheduled date -> void; started MLB can await official result up to three days","Asymmetric branches vs eTopaz",FAIL
+betfair_third_party_warning,Betfair Exchange general rules,"One related bet may be void while another third-party bet stands","Operator explicitly disclaims hedge settlement identity",FAIL
