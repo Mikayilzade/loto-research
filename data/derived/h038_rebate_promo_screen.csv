@@ -1,0 +1,5 @@
+case,qualifying_spend_cad,bonus_face_cad,withdrawable_cash_rebate_cad,strict_bonus_cash_floor_cad,strict_package_net_floor_cad,status
+OLG LOTTO MAX buy-1-get-1,6,6,0,0,-6,rejected guarantee
+OLG LOTTO 6/49 buy-1-get-1,3,3,0,0,-3,rejected guarantee
+OLG birthday lottery bonus,0,10,0,0,0,free-roll positive EV but not strictly positive guarantee
+California SuperLotto Plus 2nd Chance bonus draw,NA,NA,0,0,NA,random second-chance; rejected guarantee class
