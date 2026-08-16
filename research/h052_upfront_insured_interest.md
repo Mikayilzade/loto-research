@@ -1,7 +1,7 @@
 # H052 — upfront interest + insured principal
 
 Updated: 2026-08-17
-Status: **PROMISING MECHANISM; strict guarantee not yet proven because insurance-event accounting for prepaid interest is unresolved**
+Status: **PROMISING MECHANISM, BUT STRICT GUARANTEE STILL UNPROVEN; new contract evidence materially weakens the favorable interpretation**
 
 ## Question
 Can a currently available Azerbaijan deposit pay a positive cash reward immediately while the original principal remains protected by the Deposit Insurance Fund, creating a deterministic `principal + reward` terminal floor?
@@ -13,40 +13,63 @@ Current official product material states:
 - minimum 500 AZN;
 - 12/18/24-month terms;
 - interest paid **in advance**;
-- current indexed rate about 9.5% (official page has recently shown 9.5–10% depending crawl date);
-- deposit amount is described as insured by the Deposit Insurance Fund, subject to statutory limits.
+- current rate table: 12m 9.50%, 18m 9.00%, 24m 9.00%;
+- product page expressly says the **deposit amount** is insured by the Deposit Insurance Fund up to the statutory limit.
 
-Official product page:
+Primary source:
 - https://www.expressbank.az/az/deposit/elave-furset
 
-The bank's official 2022 launch note explicitly says the customer can receive the annual income **on the day the deposit is opened**.
+The bank's launch note also states that the annual income can be taken **on the day the deposit is opened**:
+- https://www.expressbank.az/az/news/expressbank-in-elave-furset-emaneti-ile-pulunuz-derhal-gelir-getirsin
 
 ### VTB Azerbaijan — Avans
 Current official product material states:
 - AZN deposit;
 - minimum 500 AZN;
 - 12–36 months;
-- interest obtained immediately after the deposit is registered;
-- current table: 1y 9.25%, 1.5y 9.5%, 2y 8.75%, 3y 7.75%.
+- interest is available immediately after registration;
+- current page observed on 2026-08-17: 12m 9.0%, 18m 9.25%, 24m 8.5%, 36m 7.5%;
+- same page states compensation under the Deposit Insurance Law is 100% of the insured deposit, capped at 100,000 AZN.
 
-Official product page:
+Primary source:
 - https://vtb.az/personal/deposits/advance-savings/
 
-## Statutory insurance anchor
-Current Azerbaijan Deposit Insurance Law defines a protected deposit and provides compensation equal to 100% of the insured deposit balance, subject to the current 100,000-AZN cap. Interest is compensated only in the amount accrued up to the insurance-event date.
+## Statutory insurance anchor — strengthened
+The current Azerbaijan Deposit Insurance Law gives several exact constraints:
+
+1. `Deposit` means money accepted by the bank that it must repay under law/contract, including accrued interest.
+2. Compensation is **100% of the insured deposit**, capped at 100,000 AZN per participant bank.
+3. If, on the insurance-event date, the depositor has a **due obligation to the bank**, the unperformed amount is deducted from the protected deposit before compensation.
+4. Interest is compensated only to the amount accrued by the insurance-event date.
+5. Crucially, an unexpired deposit is deemed **matured** when the compensation announcement is first published.
 
 Primary sources:
-- https://www.cbar.az/law-5/law-on-deposit-insurance?language=en
 - https://frameworks.e-qanun.az/12/f_12137.html
+- https://www.cbar.az/page-73/questions-and-answers
 
-This fixes H051's ordinary-accrual problem only **if** the prepaid interest is already separately vested and the insured deposit balance remains the original principal.
+This is important because statutory forced maturity is not textually identical to a customer's voluntary early-withdrawal request. But it still does **not** prove that a product-specific prepaid-interest recoupment claim cannot become due at that point.
+
+## New decisive warning evidence — prepaid interest can be secured against principal
+A publicly indexed Azerbaijan general-offer form for a `Faizləri əvvəlcədən ödənilən müddətli əmanət` (prepaid-interest fixed deposit) contains a much stronger adverse mechanism than previously documented:
+
+- all interest for the whole term is paid on placement day;
+- an amount of principal equal to the prepaid interest is **blocked/encumbered in favor of the bank**;
+- if the depositor demands the deposit early, the prepaid interest is deducted from principal without separate consent.
+
+Indexed source:
+- https://www.lawinsider.com/az/contracts/c0UFCKlTrfH
+
+A related indexed general-offer version likewise states that already-paid interest is deducted from principal on early repayment:
+- https://www.lawinsider.com/az/contracts/kn7gZJIdTZS
+
+These documents are **not proven to be the current Expressbank or VTB contract**, so they cannot close those products directly. But they show that the favorable accounting assumption `upfront cash is independent of untouched principal` is not safe: Azerbaijan prepaid-interest products can legally implement the advance as a bank-secured amount against the deposit itself.
 
 ## Guarantee identity
 Let:
 - `P` = cash deposited;
-- `R` = net upfront cash interest actually credited and withdrawable at opening;
-- `C` = minimum insurance/maturity principal recovery across every allowed branch;
-- `F` = unavoidable fees/taxes/funding costs.
+- `R` = net upfront cash interest actually credited/withdrawable at opening;
+- `C` = minimum principal recovery across every allowed branch;
+- `F` = unavoidable tax/fees/funding/cash-out costs.
 
 Worst-case terminal net profit:
 
@@ -54,29 +77,46 @@ Worst-case terminal net profit:
 
 A strict guarantee requires `G > 0`.
 
-If the prepaid reward is separately vested and `C=P`, then any `R>F` creates a deterministic positive floor.
+### Favorable branch
+If prepaid interest is independently vested and the insurance event leaves `C=P`, then:
 
-If insolvency/early-termination accounting instead reduces the insured/recoverable balance to `P-R` (or permits clawback/setoff of `R`), then `G <= 0` before costs and the mechanism fails.
+`G = R - F > 0`
 
-## Illustrative minimum-size screen
-At 500 AZN:
-- 9.5% one-year upfront interest = 47.50 AZN gross;
-- even a hypothetical 10% tax on the reward leaves 42.75 AZN;
-- if full 500 AZN principal is independently recoverable in every insurance branch and the reward cannot be clawed back, this would satisfy the numerical positive-floor condition before any account/withdrawal fees.
+whenever reward exceeds costs.
 
-This is **not yet a SUCCESS claim** because the legal/accounting premise is unproven.
+### Adverse secured-advance branch
+If the contract makes an amount `R` of principal security for the prepaid interest and that recoupment/setoff becomes due on forced termination/insurance event, then at best:
 
-## Crucial unresolved contract question
-The public product pages say both “interest paid in advance” and “deposit insured,” but they do not publish enough product-specific liquidation language to prove whether, after the upfront payment:
-1. the bank ledger continues to show the full `P` as the protected deposit balance;
-2. the prepaid interest is irrevocably the depositor's separate property;
-3. an insurance event cannot trigger contractual/statutory setoff, recoupment, or a principal reduction equal to unearned prepaid interest.
+`C <= P-R`
 
-Older/general Azerbaijan deposit forms show that some prepaid-interest products deduct already-paid interest from principal when the **customer voluntarily terminates early**. That does not automatically prove the same treatment in an insurance event, but it is enough to block a strict theorem without the current product contract or an authoritative written interpretation.
+and therefore:
 
-Expressbank's current general conditions confirm deposit-insurance mechanics and ordinary early-withdrawal rights, but the public general document defers product-specific early-interest recalculation to the individual deposit agreement. Therefore the decisive clause remains outside the currently retrieved public material.
+`G <= R + (P-R) - P - F = -F`.
 
-## Result
-**H052 is the strongest current principal-protection lead so far, but remains INCONCLUSIVE rather than SUCCESS.**
+That branch destroys the strict guarantee even though the product is advertised as an insured deposit.
 
-The next decisive evidence is narrow and practical: obtain the current Expressbank `Əlavə fürsət` and/or VTB `Avans` deposit agreement / standard information form, specifically the clauses for prepaid interest under bank insolvency, forced liquidation, insurance compensation, setoff and early termination. If the full insured principal survives after the upfront cash has vested, H052 can be promoted immediately to a candidate terminal guarantee after fees/tax are bounded.
+## Current tax/cost observations
+Expressbank's current product page states:
+- up to 200 AZN of monthly calculated AZN deposit-interest income per bank is tax-exempt under the current rule;
+- AZN deposits of 18+ months have a broader exemption when principal is not paid earlier than 18 months;
+- the product page advertises a deposit-type bank card with the deposit.
+
+At the 500-AZN minimum, gross upfront interest is roughly 45–47.50 AZN depending product/rate. Even a 10% tax would not eliminate the numerical margin **if** full principal survival were proved. Therefore tax is secondary; the principal-recoupment clause remains decisive.
+
+## Current conclusion
+H052 is **not SUCCESS**.
+
+The new evidence changes the state from `purely unknown` to `material adverse precedent exists`:
+- prepaid interest can be legally implemented as an advance secured by a blocked portion of principal;
+- Deposit Insurance Law deducts due obligations to the bank from compensation;
+- therefore a strict theorem requires the **current product-specific Expressbank/VTB contract** to prove that forced maturity / bank insolvency does not activate recoupment, setoff, lien enforcement or principal reduction for prepaid unearned interest.
+
+The fact that the public product page says `deposit amount is insured` is not sufficient by itself because insurance compensation is calculated after statutory deductions for due bank claims.
+
+## Decisive next evidence
+Recover one of:
+1. current Expressbank `Əlavə fürsət` individual agreement / standard terms;
+2. current VTB `Avans` agreement / general conditions;
+3. written ADIF/bank interpretation explicitly answering whether full original principal remains compensable after prepaid interest has already been withdrawn and an insurance event occurs before contractual maturity.
+
+A favorable explicit clause can still promote H052 immediately. An explicit lien/recoupment clause triggered by bank insolvency/forced maturity would reject H052 as a terminal guarantee.
