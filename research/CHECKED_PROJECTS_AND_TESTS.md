@@ -172,19 +172,20 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 ## H052 prepaid/upfront protected reward
 | Test | Result | Status |
 |---|---|---|
-| Expressbank `Əlavə fürsət` | current AZN deposit, min 500 AZN, 12/18/24 months, interest paid **in advance**, product page states deposit amount is insured; current indexed rate ~9.5% (official page recently 9.5–10%) | **STRONG CURRENT CANDIDATE; strict insolvency accounting unresolved**; `research/h052_upfront_insured_interest.md` |
-| VTB Azerbaijan `Avans` | current AZN deposit, min 500 AZN, 12–36 months, interest credited immediately after registration; current table up to 9.5% | **STRONG CURRENT CANDIDATE; current product-specific insolvency/setoff clause not recovered**; same note |
+| Expressbank `Əlavə fürsət` | current AZN deposit, min 500 AZN, 12/18/24 months, interest paid **in advance**; current rate table 9.50/9.00/9.00%; page says deposit amount insured | **STRONG CURRENT CANDIDATE; strict insolvency accounting unresolved**; `research/h052_upfront_insured_interest.md` |
+| VTB Azerbaijan `Avans` | current AZN deposit, min 500 AZN, 12–36 months, interest credited immediately after registration; current observed rates 9.0/9.25/8.5/7.5% | **STRONG CURRENT CANDIDATE; current product-specific insolvency/setoff clause not recovered**; same note |
 | H052 guarantee identity | with principal `P`, vested upfront reward `R`, minimum principal recovery `C`, costs `F`, worst-case net `G=R+C-P-F` | **VALIDATED necessary/sufficient accounting gate** |
-| Deposit Insurance Law + prepaid interest | insurance pays protected deposit balance (100% up to 100k AZN) and only interest accrued through insurance-event date; public law does not itself state whether a previously prepaid-but-unearned amount reduces protected principal | **DECISIVE LEGAL/ACCOUNTING GAP** |
-| Expressbank current general deposit conditions | insurance mechanics confirmed; product-specific early-return interest recalculation deferred to individual deposit contract | **insufficient for SUCCESS** |
-| Historical/general prepaid-interest contracts | voluntary early termination can deduct prepaid interest from principal | **warning control: cannot assume `C=P` under insolvency without current contract** |
+| Deposit Insurance Law | compensation is 100% of insured deposit up to 100k AZN; due obligations to bank are deducted; interest only through event date; unexpired deposits are deemed matured at compensation announcement | **STATUTORY INTERACTION CLARIFIED** |
+| Public prepaid-interest general-offer precedent | full-term interest paid upfront; principal equal to prepaid interest is blocked/encumbered in bank's favor; early demand deducts prepaid interest from principal | **MATERIAL ADVERSE PRECEDENT — favorable `C=P` assumption unsafe** |
+| Secured-advance adverse branch | if recoupment/setoff of `R` becomes due on forced maturity/insurance event, `C<=P-R` and `G<=-F` | **STRICT GUARANTEE FAILS IN THIS BRANCH** |
+| Current Expressbank/VTB product-specific forced-maturity clause | not publicly recovered | **DECISIVE GAP; H052 remains INCONCLUSIVE, not SUCCESS** |
 
 ## Current priorities
-1. **H052 decisive contract test:** recover current Expressbank `Əlavə fürsət` and VTB `Avans` individual deposit agreement / standard information form and isolate treatment of prepaid interest under insurance event, insolvency, forced liquidation, setoff and early termination.
-2. If full insured principal survives after upfront reward, immediately bound tax, account/card, transfer/cash-out and funding costs at the 500-AZN minimum and test for terminal SUCCESS.
-3. Search additional current Azerbaijan prepaid-interest deposits whose full insolvency/accounting clauses are public.
+1. **H052 decisive contract test:** recover current Expressbank `Əlavə fürsət` or VTB `Avans` agreement and isolate forced-maturity/insurance-event treatment of prepaid-interest lien/recoupment.
+2. Search additional current Azerbaijan prepaid-interest deposits with public explicit insolvency accounting; reject products whose advance is secured against principal in all relevant branches.
+3. If full insured principal survives after upfront reward, immediately bound tax/account/card/cash-out/funding costs and test minimum-size terminal SUCCESS.
 4. Capture live subscription/order terms for any principal-guaranteed structured product with a locked non-reducible minimum return.
-5. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
+5. H037: broaden matched controls and recompute after autumn-2026 rule change.
 6. H020 live-data arbitrage if direct public raw-book access becomes available.
 7. H006/H007 only after reliable histories/machine metadata become available.
 8. H010/H014 when new authoritative data routes appear.
