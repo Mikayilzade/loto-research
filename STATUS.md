@@ -4,7 +4,7 @@ Updated: 2026-08-16
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H037 Irish Lotto Plus Million Euro Raffle quantified**
+**Stage 1 — structural/state-edge search; H037 event-day calibration materially strengthened**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -16,44 +16,39 @@ Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 Files:
 - `research/h037_lotto_plus_million_raffle.md`
 - `data/derived/h037_lotto_plus_million_raffle_screen.csv`
+- `data/derived/h037_event_calibration.csv`
 - `src/loto_research/lotto_plus_raffle.py`
 - `tests/test_lotto_plus_raffle.py`
 
 ## Strict guarantee — CLOSED
-Published mechanics defeat terminal guarantee in two ways:
-- each Plus line receives a four-digit raffle number rather than letting the player choose one, so finite purchases cannot force deterministic coverage of all 10,000 raffle codes;
-- in a Million Euro Raffle event, all tickets with the winning raffle number enter a second random draw and one ticket owner gets the extra €1m, so external qualifying tickets preserve a legal outcome where another player receives it.
+Published mechanics still defeat terminal guarantee:
+- raffle numbers are assigned rather than chosen, so deterministic code coverage cannot be forced;
+- all tickets with the winning raffle number enter a second random draw and one ticket owner gets the extra €1m;
+- external qualifying tickets preserve a legal outcome where another player receives it.
 
 Status: **REJECTED as strictly guaranteed-profit strategy**.
 
-## Strong positive-EV overlay lead
-Current pre-autumn-2026 6/47 Plus tables imply approximately:
+## Positive-EV overlay — materially strengthened by actual special-event data
+Pre-autumn-2026 6/47 Plus package baseline remains approximately:
 - Plus 1 fixed-prize EV: **€0.22902755/line**;
 - Plus 2 fixed-prize EV: **€0.13263705/line**;
 - normal €500 raffle EV: **€0.05/line**;
-- total ordinary Plus package EV: **€0.41166460 per €1 Plus add-on**.
+- ordinary Plus package EV: **€0.41166460 per €1 Plus add-on**.
 
-The special event adds a guaranteed-to-be-distributed external €1m. Under entry symmetry, event subsidy EV is `€1,000,000 / T` per eligible Plus line, where `T` is total Plus entries.
+Special €1m subsidy break-even is approximately **1,699,711 eligible Plus lines**, equivalent to about **170 ordinary raffle winners** at 1/10,000 odds.
 
-Incremental Plus break-even:
-- `T ≈ 1,699,710.73` eligible Plus lines;
-- equivalent expected ordinary-raffle winner count ≈ **169.97**.
+Actual special-event calibration recovered:
+- **5 Jul 2025:** 104 raffle-winning ticketholders => MLE ≈ **1.04m Plus lines**; exact-Poisson 95% implied interval ≈ **0.850m–1.260m**. Even at the upper bound, modeled Plus EV ≈ **€1.205 per €1 add-on**.
+- **6 Sep 2025:** 81 raffle-winning ticketholders => MLE ≈ **0.81m Plus lines**; 95% implied interval ≈ **0.643m–1.007m**. At the upper bound, modeled Plus EV ≈ **€1.405 per €1 add-on**.
 
-The operator says the Lotto Plus Raffle typically sees **60–120** €500 winners, heuristically corresponding to about **600k–1.2m** Plus entries. In that range modeled incremental Plus EV is approximately **€2.078–€1.245 per €1 add-on**.
+Both observed special-event counts are far below the ~170-winner break-even proxy. This is stronger than the prior generic 60–120 ordinary-draw statement because it directly samples promotion days.
 
-This is **not terminal SUCCESS** because payout is random and zero-return outcomes remain. It is now one of the strongest live +EV leads and merits event-specific participation calibration.
+Official promotion language also confirms **one four-digit raffle number per Lotto Plus line**. The final €1m stage is described in ticket/ticket-owner terms, so multi-line ticket handling still needs operative-rule confirmation before execution sizing.
 
-# H036 — Irish Plus coverage + current OLG targeted subsidy screen
-## Daily Million Plus — CLOSED
-Complete `C(39,6)=3,262,623` coverage at EUR1/line costs EUR3,262,623. Even granting our winner the entire EUR500,000 top prize and valuing each EUR2 Scratch Card at full EUR2 face value, gross is only **EUR961,600 = 29.4732%**. Removing the shareable top prize from the strict guaranteed cash floor leaves **EUR461,600 = 14.1481%**.
-
-## EuroMillions Plus — CLOSED
-Full 5/50 space = `C(50,5)=2,118,760` Plus entries. At an EUR1 Plus stake, cost is EUR2,118,760. Granting the full EUR500,000 top prize gives gross **EUR1,148,000 = 54.1826%**. Non-top fixed cash is only **EUR648,000 = 30.5839%**.
-
-## Current OLG targeted bonuses — REAL SUBSIDY, NO CASH GUARANTEE
-Fresh official terms show current targeted offers with deterministic face-value bonus funds after qualification, but they are targeted, generally one-time/tightly capped and lottery-use value rather than guaranteed withdrawable cash. A bonus-funded ticket can return zero.
+Status: **strong live +EV overlay lead; NOT terminal SUCCESS because individual outcomes remain random**.
 
 # Recently closed branches
+- H036 Daily Million Plus / EuroMillions Plus: full coverage strongly negative; OLG targeted bonus is real but capped/lottery-credit, not cash guarantee.
 - H035 Lotterywest Super66/Cash 3: 54.35% / 36.36% coverage floors; rejected.
 - H034 Ontario DAILY KENO Pick 2–10: favorable uncapped return only 42.03%–55.07%; rejected.
 - H033 New Zealand Bullseye: real 28.57% multi-draw discount, but shared/capped payouts destroy strict guarantee.
@@ -76,13 +71,13 @@ Fresh official terms show current targeted offers with deterministic face-value 
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # Next priorities
-1. **H037 calibration:** recover event-specific Lotto Plus Raffle winner counts / sales proxies for special €1m dates; estimate event-day participation uplift and test whether `T < 1.70m` holds.
-2. Confirm ticket-level versus line-level mechanics in the once-off €1m selection and quantify effect on multi-line entries.
-3. Continue deterministic subsidy/rebate scan, prioritizing uncapped/repeatable withdrawable cash rather than lottery-only credit.
+1. **H037 completion/calibration:** recover additional exact special-event counts (21 Dec 2024, 28 Sep 2024, 20 Dec 2025, 14 Mar 2026, 30 May 2026) and adjacent ordinary-draw counts; build predictive distribution for event-day Plus participation and promotion uplift.
+2. Recompute H037 after autumn-2026 Lotto/Lotto Plus regime change once operative tables/prices are published/effective.
+3. Continue deterministic subsidy/rebate scan, prioritizing **uncapped, repeatable, withdrawable cash** rather than lottery-only credit.
 4. Revisit H020 live arbitrage immediately if raw public order books become retrievable.
 5. H019 only when capped-entry cash-floor economics materially improve.
 6. H006/H007 only after reliable histories/machine metadata become obtainable.
 7. H010/H014 if new authoritative data routes appear.
 8. Before EXHAUSTED: additional current products, deterministic cash-rebate scan, Bayesian hidden-state inference, and causal implementation tests.
 
-Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. H037 must be reflected there; if connector-size limits prevent safe in-place replacement during a run, `research/h037_lotto_plus_million_raffle.md` is the authoritative packet until the next successful ledger compaction/update.
+Permanent master audit ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. The H037 authoritative packet and `data/derived/h037_event_calibration.csv` contain this run's new evidence. The connector cannot safely replace the oversized ledger without risking truncation; preserve the ledger unchanged and merge this H037 packet into it on the next safe compaction/update path.
