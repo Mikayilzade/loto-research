@@ -161,11 +161,20 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H020 live executable arbitrage: scanner ready; resume where raw books/settlement can be fetched.
 - H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
 
+## H051 regulated principal protection / fixed reward
+| Test | Result | Status |
+|---|---|---|
+| Azerbaijan Deposit Insurance Fund current framework | protected-deposit ceiling 12% AZN / 2.5% FX; insured compensation 100% up to 100,000 AZN, including interest accrued by insurance-event date | **STATUTORY PRINCIPAL-FLOOR MECHANISM VALIDATED**; `research/h051_regulated_deposit_fixed_reward_screen.md` |
+| Ordinary insured fixed-interest deposit | immediate insurance-event branch can leave accrued interest arbitrarily close to zero | **REJECTED terminal guaranteed-profit path** despite strong principal protection |
+| Current Azerbaijan bank/e-money/broker reward scan | card cashback, purchase bonuses, random/gamified rewards, fee waivers and trading/referral bonuses found; no unconditional separately vested withdrawable cash reward attached to protected principal found | **NO CURRENT TERMINAL CANDIDATE** |
+| Stronger reward-timing branch | prepaid interest, upfront deposit gift, protected discounted redemption, regulated signup/account-switch cash | **OPEN as H052** |
+
 ## Current priorities
-1. Continue contract-first cash-refund scan only for **full-loss withdrawable-cash offers** whose own terms explicitly allow the low-risk construction or lack a clawback branch. H040 closed partial/selective refunds as promo-created guarantees.
-2. Search zero-cost credits only when face value can completely cover a tiny outcome space with positive cash floor.
-3. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
-4. H020 live-data arbitrage if direct public raw-book access becomes available.
-5. H006/H007 only after reliable histories/machine metadata become available.
-6. H010/H014 when new authoritative data routes appear.
-7. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+1. **H052 prepaid/upfront protected reward:** search prepaid-interest deposits, interest-in-advance products, deposit-opening cash gifts, discounted government-backed savings instruments, and regulated signup/account-switch cash bonuses accessible from Azerbaijan.
+2. Capture live subscription/order terms for any principal-guaranteed structured product with a locked non-reducible minimum return.
+3. Bound Azerbaijan funding/withdrawal/tax/FX costs for candidates that pass the reward-timing gate.
+4. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
+5. H020 live-data arbitrage if direct public raw-book access becomes available.
+6. H006/H007 only after reliable histories/machine metadata become available.
+7. H010/H014 when new authoritative data routes appear.
+8. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
