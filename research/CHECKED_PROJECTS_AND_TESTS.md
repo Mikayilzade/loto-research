@@ -1,6 +1,6 @@
 # Checked projects and test variants
 
-Updated: 2026-08-16
+Updated: 2026-08-17
 Purpose: permanent audit trail. Do not remove failed paths; preserve enough detail to avoid repeating closed work.
 
 Completion criterion:
@@ -169,12 +169,23 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | Current Azerbaijan bank/e-money/broker reward scan | card cashback, purchase bonuses, random/gamified rewards, fee waivers and trading/referral bonuses found; no unconditional separately vested withdrawable cash reward attached to protected principal found | **NO CURRENT TERMINAL CANDIDATE** |
 | Stronger reward-timing branch | prepaid interest, upfront deposit gift, protected discounted redemption, regulated signup/account-switch cash | **OPEN as H052** |
 
+## H052 prepaid/upfront protected reward
+| Test | Result | Status |
+|---|---|---|
+| Expressbank `Əlavə fürsət` | current AZN deposit, min 500 AZN, 12/18/24 months, interest paid **in advance**, product page states deposit amount is insured; current indexed rate ~9.5% (official page recently 9.5–10%) | **STRONG CURRENT CANDIDATE; strict insolvency accounting unresolved**; `research/h052_upfront_insured_interest.md` |
+| VTB Azerbaijan `Avans` | current AZN deposit, min 500 AZN, 12–36 months, interest credited immediately after registration; current table up to 9.5% | **STRONG CURRENT CANDIDATE; current product-specific insolvency/setoff clause not recovered**; same note |
+| H052 guarantee identity | with principal `P`, vested upfront reward `R`, minimum principal recovery `C`, costs `F`, worst-case net `G=R+C-P-F` | **VALIDATED necessary/sufficient accounting gate** |
+| Deposit Insurance Law + prepaid interest | insurance pays protected deposit balance (100% up to 100k AZN) and only interest accrued through insurance-event date; public law does not itself state whether a previously prepaid-but-unearned amount reduces protected principal | **DECISIVE LEGAL/ACCOUNTING GAP** |
+| Expressbank current general deposit conditions | insurance mechanics confirmed; product-specific early-return interest recalculation deferred to individual deposit contract | **insufficient for SUCCESS** |
+| Historical/general prepaid-interest contracts | voluntary early termination can deduct prepaid interest from principal | **warning control: cannot assume `C=P` under insolvency without current contract** |
+
 ## Current priorities
-1. **H052 prepaid/upfront protected reward:** search prepaid-interest deposits, interest-in-advance products, deposit-opening cash gifts, discounted government-backed savings instruments, and regulated signup/account-switch cash bonuses accessible from Azerbaijan.
-2. Capture live subscription/order terms for any principal-guaranteed structured product with a locked non-reducible minimum return.
-3. Bound Azerbaijan funding/withdrawal/tax/FX costs for candidates that pass the reward-timing gate.
-4. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
-5. H020 live-data arbitrage if direct public raw-book access becomes available.
-6. H006/H007 only after reliable histories/machine metadata become available.
-7. H010/H014 when new authoritative data routes appear.
-8. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+1. **H052 decisive contract test:** recover current Expressbank `Əlavə fürsət` and VTB `Avans` individual deposit agreement / standard information form and isolate treatment of prepaid interest under insurance event, insolvency, forced liquidation, setoff and early termination.
+2. If full insured principal survives after upfront reward, immediately bound tax, account/card, transfer/cash-out and funding costs at the 500-AZN minimum and test for terminal SUCCESS.
+3. Search additional current Azerbaijan prepaid-interest deposits whose full insolvency/accounting clauses are public.
+4. Capture live subscription/order terms for any principal-guaranteed structured product with a locked non-reducible minimum return.
+5. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
+6. H020 live-data arbitrage if direct public raw-book access becomes available.
+7. H006/H007 only after reliable histories/machine metadata become available.
+8. H010/H014 when new authoritative data routes appear.
+9. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
