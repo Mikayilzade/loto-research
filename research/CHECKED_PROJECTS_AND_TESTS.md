@@ -98,6 +98,8 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H038 deterministic rebate / free-credit theorem** | cash spend `S`, minimum cash payout `m`, guaranteed cash rebate `R`, costs `C` | strict guarantee requires `m+R>S+C`; lottery-only credit keeps zero floor if downstream play can lose | theorem VALIDATED; sampled OLG/Virginia-style credits rejected as strict cash guarantees |
 | **H039 Betfair Azerbaijan EXCN10 cash refund** | first Exchange bet risks €10; losing qualifying bet refunded €10 in cash; mechanical same-odds hedge has positive all-outcome floor | **MECHANICAL ARBITRAGE VALIDATED; STRICT GUARANTEE REJECTED** because incorporated Standard Promotional Terms allow invalidation/withholding when play guarantees profit with no/minimal risk; `research/h039_cash_refund_matched_betting_gate.md` |
 | H039 general cash-refund matched-promo theorem | with full cash refund `R=S`, choose opposing lay `L=S-delta`; then win branch `delta(O-1)>0`, loss branch `S-delta>0` before costs | **VALIDATED constructive theorem**; future SUCCESS requires no anti-arbitrage clawback plus irrevocably matched compatible hedge legs |
+| **H040 selective cash-refund theorem** | cash refunded only for a subset of losing states while at least one non-refunded losing state remains | **REJECTED as promo-created surebet**: strict positive floor requires an ordinary bookmaker/exchange price arbitrage even before refund; `research/h040_cash_refund_operator_scan.md`, `src/loto_research/promo_hedge.py` |
+| **H040 operator contract screen** | bet365, Paddy Power, Sky Bet, BetVictor, BetMGM, FanDuel | true cash offers either retain anti-guaranteed-profit/abuse discretion or cover only selected loss states; several others pay nonwithdrawable free/bonus bets | **NO CURRENT TERMINAL CANDIDATE**; `data/derived/h040_cash_refund_contract_screen.csv` |
 | H019 capped fixed-prize takeover | guarantee requires zero external entries, ability to own all entries, atomic closure, no free-entry channel, and fixed cash floor > acquisition cost | mechanism valid in principle; no current SUCCESS; `research/h019_capped_fixed_prize_saturation.md` |
 | H019 current/recent UK screen | sampled full-cap economics ~28.6%–53.3% | **REJECTED sampled instances** |
 
@@ -160,7 +162,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
 
 ## Current priorities
-1. Search **withdrawable-cash refund/cashback promotions contract-first**. H039 already proves the hedge; only operators without guaranteed-profit/minimal-risk clawback language can become terminal candidates.
+1. Continue contract-first cash-refund scan only for **full-loss withdrawable-cash offers** whose own terms explicitly allow the low-risk construction or lack a clawback branch. H040 closed partial/selective refunds as promo-created guarantees.
 2. Search zero-cost credits only when face value can completely cover a tiny outcome space with positive cash floor.
 3. H037: recover remaining event count(s), broaden matched controls, fit overdispersed/hierarchical demand, and recompute after autumn-2026 rule change.
 4. H020 live-data arbitrage if direct public raw-book access becomes available.
