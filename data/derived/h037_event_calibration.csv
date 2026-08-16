@@ -1,3 +1,7 @@
-event_date,raffle_winners,implied_plus_lines_mle,poisson_95_low_lines,poisson_95_high_lines,break_even_lines,plus_ev_at_95_high_lines,source
-2025-07-05,104,1040000,849755.36,1260134.07,1699710.73,1.20523095,Irish National Lottery winner story 2025-07-06
-2025-09-06,81,810000,643256.92,1006756.04,1699710.73,1.40495389,Irish National Lottery winner story 2025-09-07
+event_date,raffle_winners,implied_plus_lines_mle,poisson_95_low_lines,poisson_95_high_lines,break_even_lines,plus_ev_at_95_high_lines,adjacent_before_winners,adjacent_after_winners,adjacent_mean_winners,promotion_uplift_ratio,source
+2024-09-28,73,730000,572203.47,917865.40,1699710.73,1.50114896,55,51,53.0,1.37735849,"National Lottery promotion mechanics + archived draw result count"
+2025-07-05,104,1040000,849755.36,1260134.07,1699710.73,1.20523095,69,76,72.5,1.43448276,"Irish National Lottery winner story + archived adjacent draw counts"
+2025-09-06,81,810000,643256.92,1006756.04,1699710.73,1.40495389,56,54,55.0,1.47272727,"Irish National Lottery winner story + archived adjacent draw counts"
+2025-12-20,82,820000,652170.33,1017836.21,1699710.73,1.39414094,62,81,71.5,1.14685315,"Irish National Lottery winner story/code + archived draw result count"
+2026-03-14,84,840000,670016.90,1039977.16,1699710.73,1.37322418,59,62,60.5,1.38842975,"Irish National Lottery winner story/code + archived draw result count"
+2026-05-30,72,720000,563355.66,906720.84,1699710.73,1.51453988,48,52,50.0,1.44000000,"Irish National Lottery winner story/code + archived draw result count"
