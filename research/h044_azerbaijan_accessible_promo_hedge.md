@@ -1,7 +1,7 @@
 # H044 — Azerbaijan-accessible promotion + external hedge screen
 
 Updated: 2026-08-16
-Status: **promising architecture; terminal guarantee NOT established**
+Status: **strict-guarantee route REJECTED by H045; retain only as EV/promotion architecture**
 
 ## Goal
 Search for a current promotion that is simultaneously:
@@ -23,20 +23,24 @@ Current operator promotion page states:
 Primary current source:
 - https://www.etopaz.az/eng/promotions
 
-The current page does **not** state a minimum qualifying first-bet amount or minimum odds in the indexed text. This is important because, if the qualifying stake can be kept very small relative to the 15% deposit-linked token, acquisition economics could be materially better than ordinary deposit-match offers.
+The current page does not state a minimum qualifying first-bet amount or minimum odds in the indexed offer text. That originally made this the strongest local acquisition lead because token size is deposit-linked rather than explicitly qualifying-stake-linked.
 
-However, the absence of a published minimum in indexed text is **not proof that no platform-level minimum stake applies**.
+## H045 contract result — decisive
+The current eTopaz general Terms & Conditions were subsequently recovered:
+- https://www.etopaz.az/eng/terms-conditions
 
-### Contract gate
-The first-deposit offer text does not explicitly say that external hedging/arbitrage voids the free bet. By contrast, the separate weekly-cashback offer on the same promotions page explicitly says promotion abuse is not permitted. That difference is noteworthy but insufficient for a strict guarantee because:
-- eTopaz retains an explicit right to change/cancel the promotion;
-- general account/betting terms may contain additional discretionary or abuse clauses not recovered in machine-readable form;
-- an operator-side void, market correction or settlement mismatch can leave the external hedge standing.
+Article 4.2.1 contains language preventing use of the account/services for commercial purposes, obtaining another income, or avoiding loss outside the agreement's permitted purpose. The terms also permit account cancellation without a stated reason, operator betting limits, and rule/service changes. The promotion itself can be changed/cancelled at any time.
 
-Status: **best local acquisition lead found so far, but contract certainty incomplete**.
+Under this project's strict SUCCESS definition, the 15% token therefore cannot be treated as an irrevocable subsidy for a deliberately externally hedged guaranteed-profit construction.
+
+Detailed closure:
+- `research/h045_etopaz_contract_settlement_gate.md`
+- `data/derived/h045_contract_settlement_gate.csv`
+
+Status: **REJECTED as strict guaranteed-profit route; may remain ordinary EV/promotion value for eligible users**.
 
 ## Candidate B — Betfair Exchange as independent hedge venue
-Betfair's current international new-customer Exchange page explicitly includes **Azerbaijan** among eligible countries for its Exchange offer and describes the Exchange as peer-to-peer, with both back and lay betting.
+Betfair's current international Exchange materials include Azerbaijan among eligible countries and the Exchange supports peer-to-peer back/lay betting.
 
 Sources:
 - https://www.betfair.com/be
@@ -44,42 +48,29 @@ Sources:
 - https://support.betfair.com/app/answers/detail/exchange-general-rules
 
 Important distinction:
-- **do not rely on the Betfair risk-free promotion itself** for a guarantee: Betfair Standard Promotional Terms allow action where a customer becomes able to guarantee wins/profits with no or minimal risk.
-- using the ordinary Exchange solely as an independent hedge venue is structurally different. Betfair's general terms prohibit self-matching/collusion/manipulation, but the retrieved ordinary Exchange rules do not create a blanket prohibition on an independently matched external hedge against another bookmaker.
+- Betfair's own risk-free promotion was already rejected because promotional terms allow action where play creates guaranteed/minimal-risk profit.
+- ordinary Exchange hedging is structurally different, but that alone does not solve the eTopaz contract gate.
 
-### Settlement mismatch gate
-Betfair's general sports rules explicitly warn that when related bets are placed across Betfair products and/or third parties, one bet can be voided while another stands.
+## H045 settlement result — independent second failure
+Betfair's rules explicitly warn that related third-party bets can have one leg void while another stands.
 
-Therefore even a perfectly sized pre-event hedge is **not a strict all-outcome guarantee** unless the two selected contracts have settlement rules that are proven compatible for every cancellation, postponement, dead-heat, correction and void branch.
+The obvious football pair fails an explicit equivalence check:
+- eTopaz suspended-match continuation boundary: **48 hours**;
+- Betfair Exchange football/general reschedule-completion framework: materially different, including relevant windows up to **three days**.
 
-This is now a first-class H044 execution gate.
+Therefore a match can occupy a legal branch where eTopaz voids and Betfair stands. Table-tennis/baseball rechecks show similar cross-rule asymmetries.
+
+Status: **cross-operator settlement identity not established; football pair explicitly FAILED**.
 
 ## Candidate C — Betfair risk-free €10 promo
-Current page states:
-- Azerbaijan is eligible;
-- first Exchange bet must risk at least €10 and settle within 30 days;
-- if it loses, Betfair refunds €10.
+Azerbaijan eligibility and cash-refund mechanics were real, but Betfair Standard Promotional Terms allow invalidation/withholding where promotional participation creates guaranteed profit with no/minimal risk.
 
-But Betfair Standard Promotional Terms state that if promotional participation lets a customer guarantee wins/profits with no or minimal risk, Betfair may invalidate transactions and/or withhold winnings.
-
-Status: **REJECTED as terminal surebet subsidy despite Azerbaijan eligibility**.
+Status: **REJECTED as terminal surebet subsidy**.
 
 ## Candidate D — eTopaz weekly cashback
-Current page states free-bet cashback of 5%/7%/10% based on weekly net losses, max 500 AZN, with x-freebet mechanics and an explicit no-abuse note.
+Free-bet cashback based on weekly net losses remains weaker than first-deposit acquisition for strict guarantees because acquisition itself requires losses and the reward is non-cash free-bet value.
 
-Because acquisition requires realized net losses and the reward itself is a free bet rather than cash, this is weaker than the first-deposit 15% route for strict guarantee research.
-
-Status: **not terminal; retain only as EV/rebate overlay**.
-
-## Candidate E — offshore/global comparison controls
-Search surfaced global operators with deposit matches/cashback, but many have one or more of:
-- explicit arbitrage/low-risk hedging prohibition;
-- high wagering requirements;
-- country restrictions;
-- bonus balances rather than immediately withdrawable cash;
-- discretionary/host-only allocation.
-
-These controls reinforce that H044 should prioritize **local deterministic acquisition + independent non-promotional hedge venue**, not another generic welcome-bonus list.
+Status: **retain only as EV/rebate overlay**.
 
 ## Mechanical economics
 Let:
@@ -87,32 +78,24 @@ Let:
 - `F = 0.15D` = eTopaz free-bet face value;
 - `q` = qualifying first-bet stake;
 - `Cq` = worst-case cash cost of hedging/settling the qualifying bet;
-- `rho` = guaranteed cash-conversion fraction of the free-bet token after external hedge, net of exchange commission/spread;
-- `Cf` = fixed execution/FX/withdrawal costs.
+- `rho` = cash-conversion fraction of the free-bet token after external hedge;
+- `Cf` = execution/FX/withdrawal costs.
 
-Then a necessary condition for a strict positive floor is:
+Necessary economics condition:
 
 `rho * 0.15D > Cq + Cf`.
 
-This is only a **necessary** economics condition. A terminal proof additionally needs:
-- deterministic token credit after a valid first bet;
-- current platform minimum qualifying stake/odds;
-- accepted deposit/withdrawal route from Azerbaijan;
-- two-way matched hedge liquidity before exposure;
-- compatible settlement/void rules across both legs;
-- no promo/general-term clause permitting clawback specifically because the combined structure is hedged/low-risk;
-- all commissions, FX and withdrawal fees included.
+This remains useful for EV screening, but H045 shows it is **not sufficient for strict guarantee**, because contract permission/irrevocability and all-branch settlement equivalence fail.
 
-## Current conclusion
-H044 produced the strongest Azerbaijan-specific acquisition architecture so far:
+## Final H044 conclusion
+The architecture
 
-**eTopaz deposit-linked 15% free bet → ordinary Betfair Exchange external hedge**.
+**eTopaz deposit-linked 15% free bet -> ordinary Betfair Exchange external hedge**
 
-It is **not yet SUCCESS**. The blocker is no longer basic country access or token existence. The remaining blockers are narrow and testable:
-1. recover authoritative eTopaz general terms and minimum-bet/odds rules;
-2. establish whether promotion entitlement is irrevocable once the first bet settles;
-3. choose a specific market pair and prove settlement equivalence across all void/cancel branches;
-4. verify current Betfair commission/liquidity and cash-in/out costs from Azerbaijan;
-5. compute the worst-case net floor with those real parameters.
+was the strongest Azerbaijan-specific matched-promotion lead found so far, but H045 closes it as a terminal strategy.
 
-If all five gates pass, this branch could move from `promising` to a genuine executable guarantee candidate. Until then terminal state remains **NO SUCCESS; NOT EXHAUSTED**.
+Two independent failures now exist:
+1. eTopaz general terms conflict with deliberate income-seeking/loss-avoiding account use and retain discretionary powers relevant to the subsidy/execution;
+2. cross-operator settlement rules are not isomorphic, with an explicit football 48h-vs-3-day asymmetric branch.
+
+Terminal state remains **NO SUCCESS; NOT EXHAUSTED**.
