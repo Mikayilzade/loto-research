@@ -52,6 +52,8 @@ Terminal status: **NO SUCCESS; NOT EXHAUSTED**.
 | **H032 Canada DAILY GRAND** | buy every `C(49,5)*7=13,348,188` line at CAD 3; account for internal top-category sharing and GN-only Free Plays | cost **CAD 40,044,564**; favorable no-external-winner + Free-Play-face gross **CAD 17,758,644 = 44.3472%**; strict immediate-cash floor **36.2112%**; even impossible overgenerous bound only 50.5902% | **REJECTED guaranteed-profit full coverage**; Combo Play costs exactly 7× base price, so no nonlinear discount; `research/h032_canada_daily_grand_compact_screen.md` |
 | **H033 New Zealand Bullseye** | exploit statutory 7/14-draw discount while owning all 1,000,000 six-digit selections | 7 draws cost NZ$10m vs NZ$14m standard; 14 draws NZ$20m vs NZ$28m; discount **28.5714%**. Exact own winners per draw = 1/10/90/900/9,000/90,000 across divisions 1–6 | **DISCOUNT VALIDATED, strict guarantee REJECTED**: divisions 1–5 remain shared/capped with no useful external-duplicate cap; division 6 is bonus-ticket replay; `research/h033_nz_bullseye_discounted_coverage.md` |
 | **H034 Ontario DAILY KENO Pick 2–10** | exact full-space identity `C(20,m)C(50,k-m)` under current fixed prize table; deliberately ignore CAD 4m/category cap | favorable uncapped full-space/EV return only **42.03%–55.07%**, best Pick 2 = **55.0725%**; cap can only worsen larger portfolios | **REJECTED entire ordinary additive/coverage guarantee class** by negative-expectation contradiction; `research/h034_ontario_daily_keno_full_coverage.md`, `data/derived/h034_ontario_daily_keno_full_coverage.csv` |
+| **H035 Lotterywest Super66** | hypothetical unique cover of all 1,000,000 six-digit strings at AUD1; exact end-match counts with minimum Division-1 payout | deterministic minimum-payout gross **AUD543,480.60 = 54.3481%**; moreover player cannot force unique coverage because official selections are automatically random | **REJECTED executable guaranteed-profit coverage**; `research/h035_lotterywest_compact_games.md` |
+| **H035 Lotterywest Cash 3** | exact partition cover of all 1,000 ordered outcomes using Exact triples + 3-way one-pair + 6-way all-distinct wagers at AUD0.50 | cost **AUD110**; strict minimum gross **AUD40 = 36.3636%**; expected gross AUD52.90 = 48.0909% | **REJECTED guaranteed-profit additive/coverage class**; `research/h035_lotterywest_compact_games.md` |
 
 ## Azerbaijan / finite-space coverage
 | Project | Test | Result | Status |
@@ -158,8 +160,8 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 - H030 Virginia Cash 5/EZ Match closed in dedicated note/checkpoint.
 
 ## Current priorities
-1. Apply **H021–H034 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
-2. Target **deterministic discount + fixed/non-shared cash payout** products: H033 proves meaningful pricing nonlinearities still exist, but shared pools destroy the guarantee; H034 shows ordinary fixed-payout Keno without subsidy remains far below break-even.
+1. Apply **H021–H035 fast analytic screens** to additional current finite/final-draw/fixed-payout products; deep-dive only candidates that approach or exceed 100% deterministic coverage return or have external subsidy sufficient to cross the takeout hurdle.
+2. Target **deterministic discount + fixed/non-shared cash payout** products: H033 proves meaningful pricing nonlinearities still exist, while H035 shows compact controllable fixed-odds coverage without subsidy remains far below break-even and automatic-random assignment can itself block deterministic coverage.
 3. H020 live-data arbitrage if direct public raw-book access becomes available.
 4. H006/H007 only after reliable histories/machine metadata become available.
 5. H010/H014 when new authoritative data routes appear.
