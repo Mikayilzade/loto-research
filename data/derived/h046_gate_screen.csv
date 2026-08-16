@@ -1,0 +1,6 @@
+mechanism,ordinary_state,strict_worst_state,terminal_result,reason
+same_market_exchange_dutch,"positive after all legs matched and sum reciprocal odds < 1 after commission","whole market void -> stakes returned -> 0 net profit",REJECTED,"strict SUCCESS requires positive profit in every reachable state"
+Betfair_points_discount,"reduces future exchange commission","no withdrawable cash; void branch remains 0",REJECTED,"fee reduction cannot create positive cash floor"
+My_Betfair_Rewards,"conditional bonuses after monthly wagering goal","region/package/activity dependent; not irrevocable pre-risk cash",REJECTED,"no deterministic Azerbaijan cash entitlement established"
+Betfair_refer_and_earn_UK_ROI,"GBP10 cash per qualified referral","UK/ROI only; third-party staking requirement; anti-guarantee/clawback terms",REJECTED,"not Azerbaijan-executable or solely controlled"
+Betfair_affiliate_CPA,"commercial CPA/revenue reward possible","approval and third-party acquisition required",OUT_OF_SCOPE_AS_GUARANTEE,"separate commercial referral income, not own-wager deterministic subsidy"
