@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H052 document-blocked, H053 deterministic cashback subsidy class screened**
+**Stage 1 — structural/state-edge search; H052 document-blocked, H054 principal-preserving funding-bonus class screened**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -43,38 +43,46 @@ H052 status: **PROMISING / INCONCLUSIVE — document-blocked, not SUCCESS**.
 File:
 - `research/h053_deterministic_cashback_subsidies.md`
 
-## Current verified mechanisms
-### ABB foreign-payment campaign
-Official current campaign runs **7 August–7 September 2026**:
-- 3% cashback on foreign/foreign-website payments;
-- cap 50 AZN;
-- requires ABB share ownership/order and TamKart Mastercard.
-
-Real deterministic subsidy, but the qualifying purchase principal is consumed and share eligibility has its own cost/risk. **Not standalone guaranteed cash profit.**
-
-### Yelo Welcome package
-First-time card customers receive a free 30-day cashback package. Current categories provide deterministic percentage cashback on eligible retail spending. This is guaranteed savings conditional on consumption, not a principal-returning arbitrage.
-
-### Leobank August 2026 cashback
-Current official page explicitly states:
-- cashback is **real money**, not points;
-- credited immediately after qualifying purchase;
-- August bank categories currently include 0.75%–10%;
-- bank cashback cap 50 AZN; partner cashback can be uncapped.
-
-This validates a current withdrawable/real-cash rebate mechanism, but qualifying retail spend still has no contractual cash-recovery floor.
-
-### Kapital Bank / BirKart 30-AZN indexed offer
-Official indexed page says 30 AZN after 100 AZN cashless turnover, but visible page lacks an explicit year and redirects when opened. Treat as freshness-unresolved, not a current executable candidate.
-
-## H053 theorem
-For qualifying spend `S`, vested bonus `B`, guaranteed cash-recoverable value `V_min`, and costs `F`:
-
-`G = B + V_min - S - F`.
-
-Ordinary retail consumption generally has no contractual `V_min=S`. Therefore cashback below 100% cannot establish standalone guaranteed cash profit. Refund/reversal cannot be assumed to preserve cashback; current campaign terms commonly reverse or exclude refunded transactions.
+Current deterministic retail cashbacks/bonuses are real, but qualifying purchase principal is consumed. The strict cash-floor identity remains `G=B+V_min-S-F`; ordinary retail spend has no contractual `V_min=S` floor.
 
 H053 status: **REAL CURRENT SUBSIDIES VALIDATED; standalone guaranteed-profit class REJECTED unless a principal-preserving qualifying action is found**.
+
+# H054 — principal-preserving deposit / funding bonuses
+Files:
+- `research/h054_principal_preserving_bonus_screen.md`
+- `data/derived/h054_principal_preserving_bonus_screen.csv`
+
+## Current screen
+### XalqKart balance yield
+Current campaign offers a free XalqKart and 7% annual return on eligible AZN card balances through 31 December 2026. Principal remains a balance, but reward accrues through time; immediate adverse-event branch can leave reward near zero. **Not terminal guarantee.**
+
+### Xalq Bank deposit lottery
+Principal may remain protected, but promotional cash reward is random and has a zero-prize branch. **Rejected as guaranteed bonus leg.**
+
+### IBKR Refer-a-Friend
+Current 2 July 2026 terms are a strong structural near-miss:
+- qualifying principal may remain cash;
+- referred client receives $1 of IBKR shares per $300 net deposit, up to $1,000;
+- Azerbaijan is not in the explicit excluded-residency list, though actual eligibility remains approval-dependent.
+
+Strict floor fails because awarded shares are locked for one year, cannot be sold/transferred/hedged, may be forfeited if the account closes or loses good standing, and have no fixed cash-value floor during the lock. **Rejected terminal guarantee.**
+
+### eToro current funding promos
+Current tiered deposit/free-asset and July–August crypto-deposit promotions validate real funding subsidies. But asset-valued rewards, lockups, crypto principal risk, withdrawal/net-deposit clawback, and promotion discretion prevent a strict all-outcome cash floor. **No terminal candidate.**
+
+### Trading 212 control
+Most recently indexed invite/free-share campaign expired 9 July 2026. Useful future control only; not executable now.
+
+## H054 theorem
+Principal preservation alone is insufficient. A strict funding-bonus guarantee additionally requires a reward that is:
+1. fixed in cash value;
+2. immediately or irrevocably vested;
+3. not clawed back when principal is recovered;
+4. not market-valued during a mandatory lock;
+5. not removable under a permitted discretionary/eligibility branch;
+6. larger than all bounded funding/FX/tax/withdrawal costs.
+
+H054 status: **MECHANISM CLASS REAL; NO CURRENT STRICT GUARANTEE FOUND**.
 
 # Other important branches
 - H051 ordinary insured deposits: rejected as terminal guarantee because immediate insurance event can leave accrued reward ≈0.
@@ -98,12 +106,13 @@ Any SUCCESS must prove all of:
 8. dynamic APR or vague `up to` yield is insufficient;
 9. ordinary post-opening accrued interest is insufficient if an immediate insurance event can reduce reward to ~0;
 10. for prepaid-interest deposits, prove prepaid reward remains separately vested and does not reduce/offset insured principal under insolvency/forced liquidation;
-11. for retail cashback, consumption value/resale value is not a cash guarantee; either qualifying principal must remain contractually recoverable or vested subsidy must exceed unrecoverable spend + costs.
+11. for retail cashback, consumption value/resale value is not a cash guarantee; either qualifying principal must remain contractually recoverable or vested subsidy must exceed unrecoverable spend + costs;
+12. for deposit/funding bonuses, reward must have a fixed positive cash floor after vesting/clawback/market-risk branches.
 
 # Next priorities
-1. Search **principal-preserving deterministic subsidies**: account-funding/deposit cash bonuses, salary/account-switch cash, regulated broker/bank bonuses where funded principal remains withdrawable/protected.
+1. **H055: immediately vested cash account-opening / salary-switch / transfer / funding credits** — search only fixed cash rewards triggered by a principal-preserving action, excluding generic points/free shares/random prizes.
 2. Recover H052 product-specific agreements only via a genuinely new route (bank document endpoint, direct indexed file, authoritative interpretation); do not repeat blind web queries.
-3. If any principal-preserving bonus is found, immediately prove eligibility, vesting/clawback, withdrawal, tax/fees and minimum all-outcome cash floor.
+3. If an H055 candidate is found, immediately prove eligibility, irrevocable vesting, principal withdrawal/protection, tax/fees/FX and minimum all-outcome cash floor.
 4. H020 live executable arbitrage: resume where raw books/settlement can be fetched.
 5. H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
 6. H006/H007 only after reliable histories/machine metadata become available.
