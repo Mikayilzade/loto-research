@@ -194,14 +194,32 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | Kapital Bank/BirKart indexed 30 AZN after 100 AZN turnover | strong 30% subsidy if current, but indexed page lacks explicit year and redirects on open | **NOT promoted to executable 2026 candidate; freshness unresolved** |
 | H053 retail-cashback theorem | strict cash floor `G=B+V_min-S-F`; ordinary retail spend has no contractual `V_min=S` cash floor, and refunds cannot be assumed to preserve cashback | **REJECTED standalone guarantee unless principal-preserving leg or >100% vested subsidy exists** |
 
+## H054 principal-preserving funding bonuses
+| Test | Result | Status |
+|---|---|---|
+| XalqKart balance yield | principal stays as card balance; 7% annual AZN return through 31 Dec 2026 | **principal-preserving but time-accrued; not terminal guarantee**; `research/h054_principal_preserving_bonus_screen.md` |
+| Xalq Bank deposit lottery | protected principal + random cash prizes | **REJECTED guaranteed bonus leg** because prize floor is zero |
+| IBKR Refer-a-Friend | deposited principal may remain cash; separate IBKR shares awarded | **strong near-miss; REJECTED strict cash floor** due one-year lock, market price risk and forfeiture/clawback branches |
+| eToro current funding promotions | real free-asset/crypto-deposit subsidy | **REJECTED strict guarantee** due market-valued reward, lockups/clawback and principal risk |
+| H054 class theorem | principal preservation insufficient unless reward is fixed cash, vested, non-clawed-back and above all bounded costs | **VALIDATED filter** |
+
+## H055 fixed-cash account-opening / transfer / funding credits
+| Test | Result | Status |
+|---|---|---|
+| Scotia iTRADE Summer Offer 2026 | transfer at least CAD 2,500 new cash/assets and maintain through 30 Jul 2027; **1% cash up to CAD 6,000** paid after qualification | **EXACT MECHANISM CLASS VALIDATED; not terminal** because Azerbaijan eligibility absent and long vesting/custody/tax/FX branches unresolved; `research/h055_fixed_cash_account_funding_credits.md` |
+| Oriental Bank Cuenta Elite 2026 | genuine payroll/pension/government direct deposits for 3 consecutive cycles produce **USD 200/300/400 fixed cash** | **principal-preserving salary-cash mechanism validated; jurisdiction/account eligibility blocks Azerbaijan execution** |
+| BMO / Old National current U.S. checking bonuses | employer/government direct-deposit cash incentives | **class evidence only; U.S. eligibility and genuine-income requirement** |
+| Swissquote transfer-bonus controls | fixed EUR cash after maintaining transferred assets | **mechanism evidence; current universal Azerbaijan-accessible offer not found; indexed offers expired/restricted** |
+| Azerbaijan current H055 screen | AccessBank/Yelo fee discounts and XalqKart yield found; no fixed withdrawable cash opening/salary/funding gift | **NO LOCAL TERMINAL CANDIDATE**; `data/derived/h055_fixed_cash_promo_screen.csv` |
+| H055 geography gate | foreign fixed-cash bonus does not count unless Azerbaijan-resident or otherwise lawful executable eligibility is proven | **NEW TERMINAL GATE** |
+
 ## Current priorities
-1. **Recover current VTB `Avans` `Ərizə-Razılaşma` / individual deposit agreement and determine whether unearned prepaid interest becomes a matured obligation under Article 26.2 at insurance event.**
-2. Recover current Expressbank `Əlavə fürsət` individual agreement and run the same test.
-3. Find authoritative ADIF/bank/court interpretation specifically on prepaid-interest forced maturity / Article 26.2 offset.
-4. Search **principal-preserving deterministic subsidies**: account-funding/deposit bonuses, salary/account-switch cash, broker/bank cash bonuses where funded principal remains withdrawable or contractually protected.
-5. If full insured principal survives after upfront reward, immediately bound tax/account/card/cash-out/funding costs and test minimum-size terminal SUCCESS.
-6. H020 live executable arbitrage: resume where raw books/settlement can be fetched.
-7. H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
-8. H006/H007 only after reliable histories/machine metadata become available.
-9. H010/H014 when new authoritative data routes appear.
-10. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+1. **H056 geography-compatible fixed-cash funding/account-switch scan:** regulated fintechs/brokers/banks that explicitly onboard Azerbaijan residents; fixed cash only.
+2. Screen nearby/executable jurisdictions (Türkiye/Georgia and cross-border regulated brokers) for salary/account-switch cash with lawful Azerbaijan-resident access.
+3. If a candidate appears, immediately prove `G=C_min+B_min-P-F>0`, including vesting, forced closure, tax, FX, transfer and custody/insolvency branches.
+4. Recover H052 product-specific agreements only through a genuinely new route.
+5. H020 live executable arbitrage where raw books/settlement can be fetched.
+6. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
+7. H006/H007 after reliable histories/machine metadata become available.
+8. H010/H014 when new authoritative data routes appear.
+9. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scans, and causal implementation tests.
