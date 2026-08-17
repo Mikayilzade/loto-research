@@ -171,7 +171,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 
 ## H052 prepaid/upfront protected reward
 | Test | Result | Status |
-|---|---|---|---|
+|---|---|---|
 | Expressbank `Əlavə fürsət` | current AZN deposit, min 500 AZN, 12/18/24 months, interest paid **in advance**; current rate table 9.50/9.00/9.00%; page says deposit amount insured | **STRONG CURRENT CANDIDATE; strict insolvency accounting unresolved**; `research/h052_upfront_insured_interest.md` |
 | VTB Azerbaijan `Avans` | current AZN deposit, min 500 AZN, 12–36 months, interest credited immediately; 2026-08-17 rates 9.25/9.50/8.75/7.75% | **STRONG CURRENT CANDIDATE**; current general agreement recovered; product-specific `Ərizə-Razılaşma` still missing |
 | H052 guarantee identity | with principal `P`, vested upfront reward `R`, minimum principal recovery `C`, costs `F`, worst-case net `G=R+C-P-F` | **VALIDATED necessary/sufficient accounting gate** |
@@ -196,7 +196,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 
 ## H054 principal-preserving funding bonuses
 | Test | Result | Status |
-|---|---|---|---|
+|---|---|---|
 | XalqKart balance yield | principal stays as card balance; 7% annual AZN return through 31 Dec 2026 | **principal-preserving but time-accrued; not terminal guarantee**; `research/h054_principal_preserving_bonus_screen.md` |
 | Xalq Bank deposit lottery | protected principal + random cash prizes | **REJECTED guaranteed bonus leg** because prize floor is zero |
 | IBKR Refer-a-Friend | deposited principal may remain cash; separate IBKR shares awarded | **strong near-miss for referred client; variable market reward not strict cash floor** |
@@ -224,10 +224,23 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | Payoneer 2025 Azerbaijan campaign control | Azerbaijan explicitly eligible; USD 300 after USD 25,000 qualifying outgoing volume | **HISTORICAL GEOGRAPHY/MECHANISM VALIDATION; expired** |
 | Freedom24 WELCOME 2026 | funding produces gift shares, not fixed cash | **REJECTED H056 fixed-cash filter** |
 
+## H057 irrevocably vested geography-compatible cash rewards
+| Test | Result | Status |
+|---|---|---|
+| Payoneer Prestige Club 2026 | real cash cashback, but invitation-only with privately communicated targets and jurisdiction/product eligibility | **NO UNIVERSAL EXECUTABLE FLOOR**; `research/h057_irrevocable_cash_reward_screen.md` |
+| Payoneer BLS 2.5% reward | genuine cash reward on eligible client-payment volume above personalized target; recovered offers ended earlier in 2026 | **MECHANISM VALIDATED; no live universal route** |
+| IBKR self-controlled onboarding | current referred-client reward is IBKR shares; older IMPACT fixed-cash program is U.S.-resident-only | **REJECTED H057 fixed-cash/geography filter** |
+| Freedom24 WELCOME through 31 Aug 2026 | current funding reward is 1/4/10/20 gift shares; operator explicitly warns value fluctuates and sale incurs fees | **REJECTED fixed-cash floor** |
+| XalqKart free card + 7% balance return | current Azerbaijan product, no issuance cost, principal remains liquid; reward accrues with time | **PRACTICAL YIELD LEAD; REJECTED terminal guarantee by H051 immediate-event gate** |
+| Mastercard Qazanç+ Azerbaijan | launched July 2026; up to 16% cashback through eligible digital-wallet spending | **REAL LOCAL SUBSIDY; consumption-dependent, no preserved qualifying principal** |
+| Bank Respublika NeoCard | up to 4,000 welcome NeoBonuses plus spend bonuses | **NON-CASH LOYALTY REWARD; rejected terminal filter** |
+| ABB targeted 10 AZN offer | fixed 10 AZN after ≥50 AZN first purchase, but only SMS/PUSH-selected customers and qualifying spend is consumed | **TARGETED/CONSUMPTION; no guarantee** |
+| H057 eight-gate filter | public Azerbaijan eligibility; no invite/first-N discretion; user-controlled action; recoverable principal; fixed cash; deterministic vesting; survival of clawback/cancellation/insolvency branches; positive net after costs | **NO CURRENT CANDIDATE PASSES ALL GATES** |
+
 ## Current priorities
-1. **H057 irrevocably-vested geography-compatible cash reward scan:** Azerbaijan-accessible regulated providers where fixed cash becomes vested after deterministic user-controlled actions, without one-year third-party dependency.
-2. Search current payment-provider campaigns with public Azerbaijan eligibility + public fixed reward/threshold, especially ordinary business-volume flows that do not consume principal.
-3. Search regulated cross-border brokers/banks for self-controlled funding/transfer cash bonuses rather than referral shares.
+1. **H058 business-volume/payment-rail rebate scan:** public Azerbaijan-compatible programs where cash reward attaches to independently owed business receipts/transfers, so qualifying economic principal is not consumed for the promotion.
+2. Search regulated payment providers for public fixed reward/threshold schedules without invitation/private targeting.
+3. Search self-controlled transfer/funding cash credits where cash becomes vested before material market/third-party exposure.
 4. Recover H052 product-specific agreements only through a genuinely new route.
 5. H020 live executable arbitrage where raw books/settlement can be fetched.
 6. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
