@@ -1,0 +1,2 @@
+observed_date,source,listing_id,listing_updated,asset_description,immediate_cash_azn,delayed_cash_azn,delay_description,gross_spread_azn,spread_pct_of_redemption,spread_pct_of_acquisition,status
+2026-08-17,Lalafo,73753310,2026-06-30,"utilization empty vehicle bodies; Baku",900,1050,"1 month",150,14.285714,16.666667,"market discount signal; not locked transaction"
