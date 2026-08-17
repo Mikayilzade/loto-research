@@ -175,22 +175,23 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | Expressbank `Əlavə fürsət` | current AZN deposit, min 500 AZN, 12/18/24 months, interest paid **in advance**; current rate table 9.50/9.00/9.00%; page says deposit amount insured | **STRONG CURRENT CANDIDATE; strict insolvency accounting unresolved**; `research/h052_upfront_insured_interest.md` |
 | VTB Azerbaijan `Avans` | current AZN deposit, min 500 AZN, 12–36 months, interest credited immediately; 2026-08-17 rates 9.25/9.50/8.75/7.75% | **STRONG CURRENT CANDIDATE**; current general agreement recovered; product-specific `Ərizə-Razılaşma` still missing |
 | H052 guarantee identity | with principal `P`, vested upfront reward `R`, minimum principal recovery `C`, costs `F`, worst-case net `G=R+C-P-F` | **VALIDATED necessary/sufficient accounting gate** |
-| Deposit Insurance Law | compensation is 100% of insured deposit up to 100k AZN; due obligations to bank are deducted; interest only through event date; unexpired deposits are deemed matured at compensation announcement | **STATUTORY INTERACTION CLARIFIED** |
-| Public prepaid-interest general-offer precedent | full-term interest paid upfront; principal equal to prepaid interest is blocked/encumbered in bank's favor; early demand deducts prepaid interest from principal | **MATERIAL ADVERSE PRECEDENT — favorable `C=P` assumption unsafe without product terms** |
-| **VTB current general deposit terms (effective 06.01.2025)** | clauses 6.11–6.14 tie prepaid-interest recoupment to **customer-requested early withdrawal**; 6.21 mirrors due-obligation deduction at insurance event; general section does not state insolvency itself triggers recoupment | **MAJOR GAP NARROWED; candidate materially strengthened** |
-| VTB statutory-maturity distinction | Deposit Insurance Law deems unexpired deposit matured when compensation announced; this is not textually identical to customer `vaxtından əvvəl` withdrawal in VTB 6.11–6.14 | **FAVORABLE LEGAL TEXT DISTINCTION, but not enough for terminal theorem** |
-| Current VTB `Avans` product-specific `Ərizə-Razılaşma` | not publicly recovered; clause 6.1 says important product conditions live there | **DECISIVE REMAINING GAP; H052 remains INCONCLUSIVE, not SUCCESS** |
-| Secured-advance adverse branch | if missing product terms make recoupment/setoff of `R` due on forced maturity/insurance event, `C<=P-R` and `G<=-F` | **STRICT GUARANTEE FAILS IN THIS BRANCH** |
-| Favorable VTB branch sensitivity | if no insurance-event recoupment obligation exists, insured `C=P`; at 500 AZN and current 12m 9.25%, gross upfront `R≈46.25 AZN` before bounded tax/fees | **NUMERIC MARGIN LARGE; contract proof remains bottleneck** |
+| Deposit Insurance current consolidated law | current Article 2 shows former 2.1.2.9 debtor-balance exclusion and 2.1.2.10 obligation-security exclusion **repealed/struck**; Article 26.2 still deducts depositor obligations that are **matured on insurance-event date** | **MAJOR LEGAL NARROWING: lien/security alone no longer closes candidate; matured recoupment is decisive** |
+| ADIF current compensation rule | 100% of insured deposit up to 100k AZN; matured depositor obligation deducted; interest compensated only through insurance-event date | **CURRENT STATUTORY INTERACTION CONFIRMED** |
+| Public prepaid-interest general-offer precedent | full-term interest paid upfront; principal equal to prepaid interest blocked/encumbered; early demand deducts prepaid interest from principal | **ADVERSE CONTRACT PRECEDENT, but old security structure alone is not a current blanket insurance exclusion** |
+| **VTB current general deposit terms (effective 06.01.2025)** | clauses 6.11–6.14 tie prepaid-interest recoupment to **customer-requested early withdrawal**; 6.21 mirrors matured-obligation deduction at insurance event | **CANDIDATE STRENGTHENED; no explicit insolvency recoupment in general terms** |
+| VTB statutory-maturity distinction | Deposit Insurance Law forced maturity is not textually identical to customer-requested `vaxtından əvvəl` withdrawal | **FAVORABLE TEXT DISTINCTION; product agreement still controls** |
+| Current VTB `Avans` product-specific `Ərizə-Razılaşma` | fresh current search did not recover it | **DECISIVE REMAINING GAP** |
+| Expressbank current individual `Əlavə fürsət` agreement | fresh current search did not recover it; general terms delegate early-return treatment to individual agreement | **DECISIVE REMAINING GAP** |
+| H052 Article 26.2 adverse branch | if missing product terms make unearned prepaid interest due/matured at insurance event, compensation can be reduced by that obligation | **STRICT GUARANTEE FAILS IN THIS BRANCH** |
+| Favorable branch sensitivity | if no insurance-event matured recoupment exists, insured `C=P`; at 500 AZN current 12m rewards are ~47.50 AZN Expressbank / ~46.25 AZN VTB before bounded costs | **NUMERIC MARGIN LARGE; contract proof remains bottleneck** |
 
 ## Current priorities
-1. **H052 decisive document:** recover current VTB `Avans` `Ərizə-Razılaşma` / individual deposit agreement and isolate insurance-event/forced-maturity treatment of prepaid interest.
-2. Recover current Expressbank `Əlavə fürsət` individual agreement / standard terms and compare forced-maturity accounting.
-3. Find authoritative VTB/ADIF interpretation of whether prepaid `Avans` interest becomes a due depositor obligation if an insurance event occurs before original contractual maturity.
+1. **Recover current VTB `Avans` `Ərizə-Razılaşma` / individual deposit agreement and determine whether unearned prepaid interest becomes a matured obligation under Article 26.2 at insurance event.**
+2. Recover current Expressbank `Əlavə fürsət` individual agreement and run the same test.
+3. Find authoritative ADIF/bank/court interpretation specifically on prepaid-interest forced maturity / Article 26.2 offset.
 4. If full insured principal survives after upfront reward, immediately bound tax/account/card/cash-out/funding costs and test minimum-size terminal SUCCESS.
 5. Search additional current Azerbaijan prepaid-interest deposits only where product-specific public terms can resolve this branch.
-6. H037: broaden matched controls and recompute after autumn-2026 rule change.
-7. H020 live-data arbitrage if direct public raw-book access becomes available.
-8. H006/H007 only after reliable histories/machine metadata become available.
-9. H010/H014 when new authoritative data routes appear.
-10. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+6. If H052 remains document-blocked, resume H037/H020/H019 and remaining deterministic action/rebate scans rather than repeating the same search.
+7. H006/H007 only after reliable histories/machine metadata become available.
+8. H010/H014 when new authoritative data routes appear.
+9. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
