@@ -185,13 +185,23 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | H052 Article 26.2 adverse branch | if missing product terms make unearned prepaid interest due/matured at insurance event, compensation can be reduced by that obligation | **STRICT GUARANTEE FAILS IN THIS BRANCH** |
 | Favorable branch sensitivity | if no insurance-event matured recoupment exists, insured `C=P`; at 500 AZN current 12m rewards are ~47.50 AZN Expressbank / ~46.25 AZN VTB before bounded costs | **NUMERIC MARGIN LARGE; contract proof remains bottleneck** |
 
+## H053 deterministic bank cashback / welcome subsidies
+| Test | Result | Status |
+|---|---|---|
+| ABB 3% foreign-payment campaign, 7 Aug–7 Sep 2026 | current deterministic 3% cashback, cap 50 AZN, requires ABB-share ownership/order + TamKart Mastercard; qualifying purchase principal is consumed | **REAL CURRENT SUBSIDY; REJECTED standalone cash guarantee**; `research/h053_deterministic_cashback_subsidies.md` |
+| Yelo first-card Welcome cashback package | free 30-day package; qualifying retail spend receives category cashback | **REAL CURRENT SUBSIDY; consumption discount, not standalone cash profit**; same note |
+| Leobank August 2026 cashback | official page explicitly states cashback is real money, credited immediately; August bank categories include 0.75%–10%, bank cashback cap 50 AZN | **REAL CASH REBATE VALIDATED; qualifying purchase principal not contractually returned**; same class theorem |
+| Kapital Bank/BirKart indexed 30 AZN after 100 AZN turnover | strong 30% subsidy if current, but indexed page lacks explicit year and redirects on open | **NOT promoted to executable 2026 candidate; freshness unresolved** |
+| H053 retail-cashback theorem | strict cash floor `G=B+V_min-S-F`; ordinary retail spend has no contractual `V_min=S` cash floor, and refunds cannot be assumed to preserve cashback | **REJECTED standalone guarantee unless principal-preserving leg or >100% vested subsidy exists** |
+
 ## Current priorities
 1. **Recover current VTB `Avans` `Ərizə-Razılaşma` / individual deposit agreement and determine whether unearned prepaid interest becomes a matured obligation under Article 26.2 at insurance event.**
 2. Recover current Expressbank `Əlavə fürsət` individual agreement and run the same test.
 3. Find authoritative ADIF/bank/court interpretation specifically on prepaid-interest forced maturity / Article 26.2 offset.
-4. If full insured principal survives after upfront reward, immediately bound tax/account/card/cash-out/funding costs and test minimum-size terminal SUCCESS.
-5. Search additional current Azerbaijan prepaid-interest deposits only where product-specific public terms can resolve this branch.
-6. If H052 remains document-blocked, resume H037/H020/H019 and remaining deterministic action/rebate scans rather than repeating the same search.
-7. H006/H007 only after reliable histories/machine metadata become available.
-8. H010/H014 when new authoritative data routes appear.
-9. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
+4. Search **principal-preserving deterministic subsidies**: account-funding/deposit bonuses, salary/account-switch cash, broker/bank cash bonuses where funded principal remains withdrawable or contractually protected.
+5. If full insured principal survives after upfront reward, immediately bound tax/account/card/cash-out/funding costs and test minimum-size terminal SUCCESS.
+6. H020 live executable arbitrage: resume where raw books/settlement can be fetched.
+7. H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
+8. H006/H007 only after reliable histories/machine metadata become available.
+9. H010/H014 when new authoritative data routes appear.
+10. Advanced controls before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scan, and causal implementation tests.
