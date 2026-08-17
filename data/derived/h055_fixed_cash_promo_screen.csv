@@ -1,0 +1,9 @@
+candidate,region,current_as_of_2026_08_17,qualifying_action,reward,principal_preserving_structure,main_blocker,status
+Scotia iTRADE Summer Offer,Canada,yes,"transfer >= CAD 2500 new cash/assets and maintain through 2027-07-30","1% cash up to CAD 6000",yes,"Azerbaijan eligibility not established; long vesting/hold; custody/tax/FX/forced-closure proof missing",mechanism_validated_not_terminal
+Oriental Bank Cuenta Elite,Puerto Rico/US,yes,"3 consecutive cycles genuine payroll/pension/government direct deposit >= USD 1500","USD 200-400 fixed cash",yes,"jurisdiction/account eligibility; genuine salary origin required",mechanism_validated_not_executable
+BMO checking bonus,United States,yes,"qualifying employer/government direct deposits",fixed_cash,yes,"US eligibility; self-transfers excluded; product/account closure terms",class_evidence_only
+Old National checking offer,United States,yes,"recurring ACH employer/government direct deposit",fixed_cash,yes,"US eligibility; self-transfers excluded",class_evidence_only
+Swissquote transfer bonus,EU/Luxembourg,restricted_or_expired,"transfer and maintain cash/securities",fixed_EUR_cash,yes,"current universal offer not found; partner/employee restrictions or expired; 12m clawback",control_only
+AccessBank new business,Azerbaijan,yes,"open new business account",fee_discount,no,"no withdrawable cash reward",rejected_as_cash_bonus
+Yelo Welcome to Business,Azerbaijan,yes,"open first online business account",fee_waiver_and_free_card,no,"no withdrawable cash reward",rejected_as_cash_bonus
+XalqKart balance yield,Azerbaijan,yes,"hold AZN card balance",7_percent_annual_yield,yes,"time-accrued yield; no immediate fixed vested cash",not_terminal
