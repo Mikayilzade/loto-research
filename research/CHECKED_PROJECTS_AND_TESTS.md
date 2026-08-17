@@ -171,7 +171,7 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 
 ## H052 prepaid/upfront protected reward
 | Test | Result | Status |
-|---|---|---|
+|---|---|---|---|
 | Expressbank `Əlavə fürsət` | current AZN deposit, min 500 AZN, 12/18/24 months, interest paid **in advance**; current rate table 9.50/9.00/9.00%; page says deposit amount insured | **STRONG CURRENT CANDIDATE; strict insolvency accounting unresolved**; `research/h052_upfront_insured_interest.md` |
 | VTB Azerbaijan `Avans` | current AZN deposit, min 500 AZN, 12–36 months, interest credited immediately; 2026-08-17 rates 9.25/9.50/8.75/7.75% | **STRONG CURRENT CANDIDATE**; current general agreement recovered; product-specific `Ərizə-Razılaşma` still missing |
 | H052 guarantee identity | with principal `P`, vested upfront reward `R`, minimum principal recovery `C`, costs `F`, worst-case net `G=R+C-P-F` | **VALIDATED necessary/sufficient accounting gate** |
@@ -196,10 +196,10 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 
 ## H054 principal-preserving funding bonuses
 | Test | Result | Status |
-|---|---|---|
+|---|---|---|---|
 | XalqKart balance yield | principal stays as card balance; 7% annual AZN return through 31 Dec 2026 | **principal-preserving but time-accrued; not terminal guarantee**; `research/h054_principal_preserving_bonus_screen.md` |
 | Xalq Bank deposit lottery | protected principal + random cash prizes | **REJECTED guaranteed bonus leg** because prize floor is zero |
-| IBKR Refer-a-Friend | deposited principal may remain cash; separate IBKR shares awarded | **strong near-miss; REJECTED strict cash floor** due one-year lock, market price risk and forfeiture/clawback branches |
+| IBKR Refer-a-Friend | deposited principal may remain cash; separate IBKR shares awarded | **strong near-miss for referred client; variable market reward not strict cash floor** |
 | eToro current funding promotions | real free-asset/crypto-deposit subsidy | **REJECTED strict guarantee** due market-valued reward, lockups/clawback and principal risk |
 | H054 class theorem | principal preservation insufficient unless reward is fixed cash, vested, non-clawed-back and above all bounded costs | **VALIDATED filter** |
 
@@ -211,12 +211,23 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | BMO / Old National current U.S. checking bonuses | employer/government direct-deposit cash incentives | **class evidence only; U.S. eligibility and genuine-income requirement** |
 | Swissquote transfer-bonus controls | fixed EUR cash after maintaining transferred assets | **mechanism evidence; current universal Azerbaijan-accessible offer not found; indexed offers expired/restricted** |
 | Azerbaijan current H055 screen | AccessBank/Yelo fee discounts and XalqKart yield found; no fixed withdrawable cash opening/salary/funding gift | **NO LOCAL TERMINAL CANDIDATE**; `data/derived/h055_fixed_cash_promo_screen.csv` |
-| H055 geography gate | foreign fixed-cash bonus does not count unless Azerbaijan-resident or otherwise lawful executable eligibility is proven | **NEW TERMINAL GATE** |
+| H055 geography gate | foreign fixed-cash bonus does not count unless Azerbaijan-resident or otherwise lawful executable eligibility is proven | **TERMINAL GATE** |
+
+## H056 Azerbaijan-compatible fixed-cash referral / funding rewards
+| Test | Result | Status |
+|---|---|---|
+| **IBKR available-country gate** | current official country list explicitly includes **Azerbaijan** | **PASSED platform geography gate**; `research/h056_azerbaijan_fixed_cash_referral.md` |
+| **IBKR referrer cash reward** | current 2 Jul 2026 terms: flat **USD 200** to referrer if referred client deposits ≥USD 10,000 within 30 days and maintains ≥USD 10,000 for one year | **STRONG CURRENT FIXED-CASH LEAD** |
+| IBKR referral exclusions | named resident exclusions are China/Spain/Portugal/Japan/Denmark/Israel/Poland; Azerbaijan not named | favorable, but residual local-law/eligibility discretion remains |
+| IBKR terminal guarantee gate | agreement permits program amendment/termination, anti-abuse denial and jurisdictional eligibility decisions; referred person must act independently | **NOT SUCCESS — cash mechanism validated but entitlement not irrevocable across all allowed branches** |
+| Payoneer Prestige Club 2026 | real cashback to Payoneer balance; invite-only, private target and reward category | **NO PUBLIC ARBITRARY-USER FIXED FLOOR** |
+| Payoneer 2025 Azerbaijan campaign control | Azerbaijan explicitly eligible; USD 300 after USD 25,000 qualifying outgoing volume | **HISTORICAL GEOGRAPHY/MECHANISM VALIDATION; expired** |
+| Freedom24 WELCOME 2026 | funding produces gift shares, not fixed cash | **REJECTED H056 fixed-cash filter** |
 
 ## Current priorities
-1. **H056 geography-compatible fixed-cash funding/account-switch scan:** regulated fintechs/brokers/banks that explicitly onboard Azerbaijan residents; fixed cash only.
-2. Screen nearby/executable jurisdictions (Türkiye/Georgia and cross-border regulated brokers) for salary/account-switch cash with lawful Azerbaijan-resident access.
-3. If a candidate appears, immediately prove `G=C_min+B_min-P-F>0`, including vesting, forced closure, tax, FX, transfer and custody/insolvency branches.
+1. **H057 irrevocably-vested geography-compatible cash reward scan:** Azerbaijan-accessible regulated providers where fixed cash becomes vested after deterministic user-controlled actions, without one-year third-party dependency.
+2. Search current payment-provider campaigns with public Azerbaijan eligibility + public fixed reward/threshold, especially ordinary business-volume flows that do not consume principal.
+3. Search regulated cross-border brokers/banks for self-controlled funding/transfer cash bonuses rather than referral shares.
 4. Recover H052 product-specific agreements only through a genuinely new route.
 5. H020 live executable arbitrage where raw books/settlement can be fetched.
 6. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
