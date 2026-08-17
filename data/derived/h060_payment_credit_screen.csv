@@ -1,0 +1,9 @@
+provider,program,current_on_2026_08_17,azerbaijan_sender_evidenced,self_controlled_action,withdrawable_cash_reward,principal_recovery_hard_floor,zero_or_discretion_branch,strict_guarantee_status,main_reason
+Paysend,Back to School 2026,yes,no,yes,no,no,yes,rejected,"$5-equivalent bonus on first two $100+ international transfers; non-cash bonus, FX/third-party costs, Azerbaijan not evidenced as sending country"
+Paysend,Global Summer 2026,yes,no,yes,no,no,yes,rejected,"$6.50 per $200 transfer up to $26; residence list excludes Azerbaijan; non-cash; global $500k pool can exhaust"
+Paysend,Standard referral bonus,yes,no,no,yes,not_applicable,yes,rejected,"withdrawable bonus is real but eligible-country list excludes Azerbaijan and reward depends on independent referral activity"
+Wise,Standard invite program,yes,partial,no,region_dependent,no,yes,rejected,"reward requires referral; invited user mainly receives transfer fee discount; Azerbaijan can use Wise generally but not hold balance under current country list"
+Remitly,New customer / welcome transfer offer,yes,receiver_only_evidenced,yes,no,no,yes,rejected,"fee/FX discount only; no fixed withdrawable positive cash reward"
+Western Union,Refer a Friend 2026,yes,no,no,no,not_applicable,yes,rejected,"rewards explicitly have no monetary value / cannot be redeemed for cash; referral-dependent and modifiable"
+MoneyGram,Invite Friends US,yes,no,no,no,not_applicable,yes,rejected,"$25 reward is transfer discount on next $50+ transfer; US-only checked program and third-party dependent"
+Skrill,Money Transfer promotions,partial,no,partial,partial,no,yes,rejected,"public promo-code batch expired 2026-08-05; other cash campaigns invitation-only/discretionary"
