@@ -100,13 +100,24 @@ Fresh indexed search reconfirmed the active Lalafo search result containing:
 
 The broader `boş kuza` marketplace also exposes cheap shell listings, including a 300-AZN empty-body listing in Shirvan. That 300-AZN listing is **not yet an arbitrage candidate**, because the public ad does not prove current registration/title, permanent-deregistration eligibility or that the shell can generate a confirmation document. It is evidence only that raw bodies can trade far below redemption face value.
 
+A fresh titled/damaged-vehicle screen further narrows the acquisition route:
+- a July-2026 Lalafo VAZ 2106 listing explicitly says `sənədləri var` and asks **2,000 AZN**;
+- current indexed `qəzalı` passenger-car search exposes low examples around **1,900 AZN**;
+- both are already above the 1,050-AZN M1/N1 cash redemption before transport/deregistration costs.
+
+Therefore **buying an entire documented vehicle at ordinary classified-market prices is not the promising arbitrage leg**. The economically plausible route is seller-authorized surrender / revenue-sharing: the owner retains no need to sell the entire vehicle asset to us, but agrees to transfer the official certificate after issuance for an amount below face value.
+
+Derived screen:
+- `data/derived/h067b_live_asset_screen.csv`
+
 ## What is now proven
 - transferable certificate mechanism: **PROVEN by statute**;
 - certificate issuance after accepted private-vehicle surrender: **PROVEN**, within 2 working days;
 - presenter can redeem for one-time payment via NVU/operator: **PROVEN operator workflow**;
 - registered utilizers currently exist in Baku/Absheron/Ganja/Sumgait: **PROVEN current registry**;
 - below-face immediate market valuation (900 vs 1,050): **OBSERVED live market signal**;
-- issuance-contingent structure removes unknown-paper authenticity as a necessary pre-payment risk: **PROVEN transaction-design improvement**.
+- issuance-contingent structure removes unknown-paper authenticity as a necessary pre-payment risk: **PROVEN transaction-design improvement**;
+- ordinary documented-vehicle acquisition at current indexed prices is **economically inferior** to certificate/revenue-sharing acquisition.
 
 ## What still blocks SUCCESS
 1. No specific vehicle owner has agreed to a price below `1,050 - all bounded costs` under **payment-after-official-issuance** terms.
@@ -117,6 +128,6 @@ The broader `boş kuza` marketplace also exposes cheap shell listings, including
 ## Decision
 H067 remains the strongest current deterministic-cash path, and its verification problem is now substantially reduced.
 
-The next highest-value step is no longer blind serial-number validation research. It is **counterparty/asset discovery for an owner willing to accept <=900–950 AZN only after a registered utilizer has accepted the vehicle and issued the certificate**, plus a hard transaction-cost/tax confirmation.
+The next highest-value step is no longer blind serial-number validation research or outright vehicle purchase. It is **counterparty discovery for a private owner willing to exchange the post-issuance certificate for <=900–950 AZN**, ideally using payment only after the registered utilizer has issued the original, plus a hard transaction-cost/tax confirmation.
 
 Terminal state remains **NO SUCCESS; NOT EXHAUSTED**.
