@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H063 Azerbaijan POS-linked tax subsidy completed**
+**Stage 1 — structural/state-edge search; H064 Azerbaijan statutory/state-backed subsidy screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,37 +12,41 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H063 — Azerbaijan POS-linked tax subsidy / merchant-acquiring economics
+# H064 — Azerbaijan statutory/state-backed business subsidies
 Files:
-- `research/h063_azerbaijan_pos_tax_subsidy.md`
-- `data/derived/h063_pos_tax_subsidy_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H063_APPEND.md`
+- `research/h064_azerbaijan_state_business_subsidies.md`
+- `data/derived/h064_state_subsidy_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H064_APPEND.md`
 
-## Strong validated mechanism
-Azerbaijan's State Tax Service confirmed in March 2026 that qualifying public-catering taxpayers receive a statutory POS-linked tax preference for three years. For the relevant VAT treatment, 50% of turnover formed through qualifying integrated POS payments is removed from taxable general turnover; income obtained from the VAT reduction is also exempt from profit/income tax.
+## Class theorem added
+For a pure reimbursement paying fraction `r<=100%` of qualifying cost `C` and no separate cash bounty:
 
-Official worked example:
-- total monthly catering revenue: 50,000 AZN;
-- POS turnover: 40,000 AZN;
-- input VAT credit: 3,000 AZN;
-- VAT payable before change: 6,000 AZN;
-- VAT payable after change: 2,400 AZN;
-- deterministic tax saving: **3,600 AZN = 9.0% of POS turnover**.
+`net = rC - C = -(1-r)C <= 0`.
 
-ABB's current ordinary restaurant card-acquiring tariff is **2.5%**. On the same 40,000 AZN POS turnover:
-- acquiring fee: 1,000 AZN;
-- tax saving: 3,600 AZN;
-- net incremental benefit: **+2,600 AZN = +6.5% of POS turnover** before fixed/other business costs.
+Therefore percentage reimbursement alone cannot create strictly positive standalone cash profit. This closes a broad class without confusing business cost reduction with arbitrage.
 
-This is the strongest deterministic current Azerbaijan business-flow subsidy found so far: **a statutory incremental-profit mechanism on genuine independently owed merchant receipts**.
+## Strong current Azerbaijan mechanisms validated
+1. **Wage co-financing / social workplaces:** 50% of salary + specified payroll charges funded for eligible hires; current 2026 Ministry reporting confirms one-year support.
+2. **2026 vulnerable-group employment pilot:** 100% of wages + employer/employee taxes/social contributions first 3 months, then 50% for the following 3 months for covered Employment Support Project beneficiaries.
+3. **Liberated-territory employer social insurance:** 80% subsidy in 2026–2028 for qualifying activity.
+4. **Liberated-territory covered self-employed social insurance:** 100% subsidy of own mandatory contribution for 10 years; isolated cash cycle is at best zero before overhead.
+5. **Fixed 600-AZN specialist allowance:** genuine one-time cash for qualifying specialists working/settling in liberated territories, but requires a >=1-year employment/settlement state and experience conditions; net obligation cost is not hard-bounded below 600 AZN.
+6. **KOBIA market research:** 80% micro / 50% small support, up to 20,000 AZN.
+7. **Export-support reimbursement:** documented 50% of incurred expenses, up to 10,000 AZN on a current Ministry route.
+8. **Startup / investment incentives:** meaningful tax/customs reductions, but only on qualifying profitable/investment activity.
+9. **KOBIA grants:** up to 20,000 AZN, but competitive Expert Commission selection means no pre-commitment guarantee.
 
-### Simplified-tax control
-The official 8%→6% POS-rate example saves 800 AZN on 40,000 AZN POS turnover (=2%). Against ABB's 2.5% sampled restaurant acquiring fee, isolated net is **-200 AZN / -0.5%**. Therefore the edge is regime-specific, not universal.
+### H064 terminal result
+Multiple deterministic incremental-profit/cost-saving mechanisms are real, but every screened route either:
+- reimburses at most the underlying cost;
+- requires independently economic employment/business/investment activity;
+- has a competitive/program-specific selection gate; or
+- provides fixed cash whose qualifying obligation cost is not bounded below the payment.
 
-### Why this is not terminal SUCCESS
-The tax relief does not create a standalone zero-state arbitrage. It requires a real catering business and genuine customer revenue. Starting such a business solely for the relief leaves uncontrolled demand, gross margin, operating cost, chargeback/reversal and compliance branches. The mechanism guarantees incremental savings only after an independently owed qualifying sale exists.
+H064 status: **VALIDATED subsidy mechanisms; standalone guaranteed-profit path REJECTED for screened programs**.
 
-H063 status: **VALIDATED deterministic incremental-profit mechanism; NOT terminal standalone SUCCESS**.
+# H063 — Azerbaijan POS-linked tax subsidy / merchant-acquiring economics
+Validated statutory deterministic incremental-profit mechanism on genuine independently owed catering receipts. Official worked example implies 9% POS-turnover VAT saving; against sampled ABB 2.5% restaurant acquiring fee, isolated incremental benefit is +6.5% of POS turnover. Not standalone because underlying business demand/margin/cost branches remain uncontrolled.
 
 # H062 — business-account onboarding / merchant activation grants
 Current Azerbaijan screen remains closed at public-offer level. Yelo's active 0% business-fee campaign is a real deterministic subsidy but no fixed withdrawable cash; ABB Biz entrepreneur promotion is random; other sampled bank campaigns are fee discounts/expired/credit-linked.
@@ -92,18 +96,21 @@ Any SUCCESS must prove all of:
 18. cross-border payment promotions require hard-bounded principal recovery/FX/external costs and a withdrawable cash reward; non-cash transfer credits are insufficient;
 19. same-currency account rewards must be fixed withdrawable cash, self-controlled, principal-preserving, non-quota/non-discretionary, Azerbaijan-eligible, with bounded fees and no ordinary clawback branch;
 20. business onboarding / merchant activation fee waivers count as terminal profit only if a separate fixed cash/reimbursement component makes final cash strictly exceed starting capital on every allowed branch; ordinary fee avoidance alone is insufficient;
-21. statutory merchant tax incentives may count as deterministic incremental profit only on independently owed genuine receipts; they are not standalone terminal arbitrage while underlying business demand/margin/cost branches remain uncontrolled.
+21. statutory merchant tax incentives may count as deterministic incremental profit only on independently owed genuine receipts; they are not standalone terminal arbitrage while underlying business demand/margin/cost branches remain uncontrolled;
+22. pure percentage reimbursement `r<=100%` of a required cost cannot be standalone positive-cash arbitrage without a separate deterministic payment;
+23. fixed state cash allowances tied to employment/relocation/business obligations need a hard upper bound on all incremental obligation costs below the allowance before they can qualify as terminal profit.
 
 # Permanent audit ledger
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest:
 - `research/CHECKED_PROJECTS_AND_TESTS_H061_APPEND.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H062_APPEND.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H063_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H064_APPEND.md`
 
 # Next priorities
-1. **H064 statutory/state-backed fixed business subsidies** — employment/wage subsidies, export reimbursements, digitalization grants, energy-efficiency reimbursements, refundable tax credits and entrepreneur grants available in Azerbaijan. Require objective/formulaic eligibility where possible; reject competitive-selection grants as guarantees.
-2. Quantify only programs where the subsidy amount is fixed/bounded and can exceed required incremental costs on every allowed branch.
-3. Search Azerbaijan state employment/self-employment and SME support programs first, then export/payment digitalization incentives.
+1. **H065 Azerbaijan fixed-cash state/business bounty screen** — search per-hire cash bounties beyond wage reimbursement, relocation/creation grants, refundable credits, scrappage/energy/digitalization rebates, producer/export bonuses and other formulaic payments where cash can exceed a hard-bounded incremental cost.
+2. Prioritize objective statutory entitlements over competitions; immediately reject pure `r<=100%` reimbursements unless paired with a separate cash component.
+3. Test whether the 600-AZN liberated-territory allowance can combine with any independently already-planned employment state so that all incremental qualifying costs are zero/hard-bounded; do not count ordinary salary as arbitrage.
 4. Recover H052 product-specific agreements only through a genuinely new route.
 5. H020 live executable arbitrage where raw books/settlement can be fetched.
 6. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
