@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H059 marketplace / creator / freelancer bonus screen completed**
+**Stage 1 — structural/state-edge search; H060 regulated cross-border payment/funding cash-credit screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,66 +12,70 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H059 — marketplace / creator / freelancer payout bonuses
+# H060 — regulated cross-border payment / funding cash credits
 Files:
-- `research/h059_marketplace_creator_freelancer_bonuses.md`
-- `data/derived/h059_marketplace_creator_bonus_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H059_APPEND.md`
+- `research/h060_crossborder_payment_cash_credits.md`
+- `data/derived/h060_payment_credit_screen.csv`
+- `src/loto_research/payment_credit_gate.py`
+- `tests/test_payment_credit_gate.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H060_APPEND.md`
 
 ## Current result
-The mechanism class is real: creator/freelancer marketplaces currently or recently offer cash/credit rewards linked to genuine completed work, creator earnings or referred marketplace revenue. But the current public screen did not produce a strict guaranteed-profit candidate.
+The mechanism class is real: regulated money-transfer providers currently offer fixed transfer credits, fee waivers, referral cash/credits, and promotional top-ups. No current public candidate passes the strict guaranteed-cash gate for the target execution context.
 
-### Strongest controls
-**AZDO Guaranteed Deal**
-- genuine local completed-work/payment activity can trigger 3% Umico bonus value;
-- current FAQ states bonus cannot be cashed out;
-- therefore useful subsidy, not a fixed cash floor.
+### Strongest live lead — Paysend Back to School 2026
+Official terms run **14 Aug–30 Sep 2026**. New customers in supported sending countries outside UK/EEA/Canada can enter `SEPT5` on each of their first two eligible international transfers of at least USD 100 and receive:
+- no Paysend transfer fee; and
+- USD 5-equivalent Paysend bonus on each transfer, max USD 10.
 
-**Fiverr Freelancer Reward Program**
-- fixed cash mechanism validated: $10,000 over four years, $2,500 annually, subject to annual earnings/growth criteria;
-- enrollment currently closed and eligibility limited to U.S. persons;
-- proves that genuine creator revenue + fixed cash bonus exists structurally, but not as a current executable route for this project.
+But terminal guarantee fails because:
+- reward cannot be exchanged for cash;
+- same-currency transfers are excluded;
+- Paysend FX may include a margin and third-party fees may apply;
+- failed/reversed/refunded/compliance-blocked transfers do not qualify;
+- Azerbaijan is currently documented as a **receiving** country, not one of Paysend's sending countries.
 
-**YouTube Affiliate Partnerships Boost Bonus 2026**
-- $200 cash per eligible new Short if selected/boosted by an eligible brand;
-- invitation-only, U.S./South Korea only, and brand selection is uncontrolled;
-- no deterministic positive pre-commitment floor.
+### Other H060 controls
+- Paysend Global Summer: USD 6.50 per USD 200 transfer up to USD 26, but residence excludes Azerbaijan, reward non-cash, global USD 500k prize pool can exhaust.
+- Paysend standard referral: genuine withdrawable bonus exists, but published eligible-country list excludes Azerbaijan and reward depends on independent referred-user activity.
+- Wise: invite reward/fee discount is referral-dependent; Azerbaijan can use Wise generally but is absent from current balance-holding residence list.
+- Remitly: current Azerbaijan routes provide fee/FX discounts, not a fixed withdrawable positive cash reward.
+- Western Union 2026 referral: rewards explicitly have no monetary value and cannot be redeemed for cash; third-party/referral dependency and modification rights remain.
+- MoneyGram US Invite Friends: USD 25 reward is a discount toward a later transfer, US-only in the checked program and referral-dependent.
+- Skrill: public transfer promo-code batch found expired 5 Aug 2026; other current cash reward campaigns are invitation-only/discretionary.
 
-**Fiverr referrals / Adobe Stock / Upwork**
-- Fiverr referral rewards are non-cash Fiverr Credits and third-party dependent;
-- Adobe Stock 2026 contributor bonus is a non-cash Creative Cloud subscription;
-- Upwork officially states no freelancer-referral incentive.
+## H060 necessary-condition gate
+For committed transfer principal `P`:
 
-## H059 terminal result
-No current public candidate passes all strict gates simultaneously:
-1. current public availability;
-2. lawful target-jurisdiction eligibility;
-3. independently earned underlying revenue/work;
-4. fixed positive cash;
-5. deterministic qualification/vesting;
-6. no uncontrolled third-party selection/referral dependency;
-7. no cancellation/clawback zero branch;
-8. positive net after fees/tax/FX.
+`guaranteed_net_floor = R_min + B_min - P - C_max`
 
-H059 status: **REAL MECHANISM CLASS; CURRENT PUBLIC SCREEN CLOSED; NO TERMINAL GUARANTEE**.
+where:
+- `R_min` = guaranteed cash principal recovery after all legal branches;
+- `B_min` = guaranteed **withdrawable cash** reward surviving all legal branches;
+- `C_max` = hard-bounded worst-case fees, FX loss, external fees, tax and withdrawal costs.
 
-Note: the large master audit ledger could not be safely patched with the available contents-replacement connector during this run; H059 rows were therefore saved in `research/CHECKED_PROJECTS_AND_TESTS_H059_APPEND.md` as a permanent append to be merged when a patch-capable route is available.
+Strict SUCCESS requires this floor to be `> 0` before commitment. Non-cash, discretionary, first-N/pool-exhaustible, referral-dependent or cancellation-zero rewards contribute `B_min=0` to the terminal proof.
 
-# H058 — business-volume / payment-rail cash rebates
-H058 remains closed at current public-screen level:
-- WorldFirst Global 2026: real USD 50 cash after qualifying business receipts/payments, but first-600, discretion/clawback and no explicit target-jurisdiction campaign eligibility prevent strict guarantee.
-- Payoneer 2026 programs: real cash/cashback mechanics, but invitation/private targets and jurisdiction-specific eligibility prevent universal public floor.
+H060 status: **MECHANISM REAL; CURRENT PUBLIC SCREEN CLOSED; NO TERMINAL GUARANTEE**.
 
-# H052 — upfront insured interest remains strongest unresolved local candidate
+# H059 — marketplace / creator / freelancer bonuses
+H059 remains closed at current public-screen level:
+- AZDO Guaranteed Deal: 3% Umico bonus, not cash-withdrawable.
+- Fiverr Freelancer Reward: real fixed cash, but enrollment closed and U.S.-only.
+- YouTube Affiliate Partnerships Boost Bonus: invitation/brand-selection dependent and U.S./South Korea only.
+- Fiverr referral / Adobe Stock / Upwork controls: non-cash or no applicable reward.
+
+# H052 — upfront insured interest remains strongest unresolved local contract lead
 File:
 - `research/h052_upfront_insured_interest.md`
 
-Expressbank and VTB Azerbaijan still provide the strongest unresolved local principal-preserving lead. Strict success remains blocked on product-specific contract language proving that prepaid interest does not become a matured depositor obligation/offset against insured principal on an insurance event or forced maturity. Do not repeat blind search for the same agreements without a new route.
+Expressbank and VTB Azerbaijan remain the strongest unresolved local principal-preserving lead. Strict success is still blocked on product-specific contract language proving prepaid interest does not become a matured depositor obligation/offset against insured principal on an insurance event or forced maturity. Do not repeat blind searches without a genuinely new route.
 
 # Other important branches
+- H058 business-volume/payment-rail rebates: current public screen closed.
 - H057 fixed-cash geography-compatible rewards: current public screen closed.
-- H056 IBKR USD 200 referrer cash: strong conditional mechanism, but third-party dependency/amendment/anti-abuse discretion prevent strict guarantee.
-- H053 deterministic cashback: qualifying retail spend consumes principal.
+- H056 IBKR USD 200 referrer cash: conditional mechanism; third-party dependency/amendment/anti-abuse discretion prevent strict guarantee.
+- H053 deterministic retail cashback: qualifying spend consumes principal.
 - H054 principal-preserving funding bonuses: market/vesting risk remains.
 - H051 ordinary insured deposits: immediate-event gate rejects strict reward floor.
 - H049/H050 principal-protected yield: no current fixed retail reward proven.
@@ -93,19 +97,27 @@ Any SUCCESS must prove all of:
 7. principal redemption/make-whole and positive reward simultaneously fixed before capital commitment;
 8. dynamic APR or vague `up to` yield is insufficient;
 9. ordinary post-opening accrued interest is insufficient if an immediate insurance event can reduce reward to ~0;
-10. for prepaid-interest deposits, prove prepaid reward remains separately vested and does not reduce/offset insured principal under insolvency/forced liquidation;
-11. for retail cashback, consumption value/resale value is not a cash guarantee;
-12. for deposit/funding bonuses, reward must have a fixed positive cash floor after vesting/clawback/market-risk branches;
-13. foreign fixed-cash reward must have explicit lawful executable eligibility;
-14. referral rewards must survive program amendment/termination/anti-abuse branches and cannot rely on control of an independent referred account;
-15. business-volume rebates count only when the underlying payment/receipt is independently economically owed and the promotion does not manufacture circular/self-payment volume;
-16. first-N quotas, invitation-only status, private reward targets or sole-discretion eligibility prevent a strict pre-commitment guarantee unless entitlement is already irrevocably locked;
-17. creator/marketplace bonuses must be withdrawable cash rather than internal credits/subscriptions and must not require uncontrolled brand/referral selection after commitment.
+10. prepaid-interest deposit reward must remain separately vested and not reduce/offset insured principal under insolvency/forced liquidation;
+11. retail cashback consumption/resale value is not a cash guarantee;
+12. funding bonus must have a fixed positive cash floor after vesting/clawback/market-risk branches;
+13. foreign fixed-cash reward needs explicit lawful executable eligibility;
+14. referral rewards cannot rely on control of an independent referred account and must survive amendment/anti-abuse branches;
+15. business-volume rebates count only when underlying payment/receipt is independently economically owed;
+16. first-N quotas, invitation-only status, private targets or sole-discretion eligibility prevent strict pre-commitment guarantee unless entitlement is irrevocably locked;
+17. creator/marketplace bonuses must be withdrawable cash and not require uncontrolled selection;
+18. cross-border payment promotions require hard-bounded principal recovery/FX/external costs and a withdrawable cash reward; non-cash transfer credits are insufficient.
+
+# Permanent audit ledger
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Because the connector still lacks safe append/patch semantics for the large file, the H059 and H060 rows are preserved in:
+- `research/CHECKED_PROJECTS_AND_TESTS_H059_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H060_APPEND.md`
+
+These are authoritative append packets until merged through a safe patch route.
 
 # Next priorities
-1. **H060 regulated cross-border payment-provider transaction/funding cash credits** — search current public programs where a self-controlled transfer/funding action mechanically earns fixed cash and entitlement vests before material market/event risk.
-2. Search payment-provider campaigns with explicit public target-jurisdiction reward/threshold schedules and no private targeting.
-3. Search deterministic transfer-fee rebates where the underlying transfer principal remains recoverable and reward is withdrawable cash.
+1. **H061 same-currency/no-FX account-opening or funding cash rewards** — search regulated bank/e-wallet programs where principal remains in the user's own account and a fixed cash reward vests after deterministic self-controlled funding/direct-deposit/account-opening actions.
+2. Prioritize public Azerbaijan-eligible or globally eligible programs with fixed cash, no referral dependency and hard-bounded withdrawal conditions.
+3. Search same-currency transfer-fee rebates that are cash-withdrawable and do not require consumption or third-party activity.
 4. Recover H052 product-specific agreements only through a genuinely new route.
 5. H020 live executable arbitrage where raw books/settlement can be fetched.
 6. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
