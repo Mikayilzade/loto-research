@@ -1,7 +1,7 @@
 # H052 — upfront interest + insured principal
 
 Updated: 2026-08-17
-Status: **PROMISING MECHANISM, NOT SUCCESS; both VTB and Expressbank are now narrowed mainly to product-specific agreements**
+Status: **PROMISING MECHANISM, NOT SUCCESS; current law materially narrows the unresolved branch to product-specific matured recoupment at insurance event**
 
 ## Question
 Can a currently available Azerbaijan deposit pay a positive cash reward immediately while the original principal remains protected by the Deposit Insurance Fund, creating a deterministic `principal + reward` terminal floor?
@@ -39,84 +39,80 @@ VTB's official documents page publishes the latest retail `Bank Xidmətlərinin 
 
 Primary source:
 - https://vtb.az/about-bank/documents/
-- linked PDF: `Bank Xidmətlərinin Göstərilməsi haqqında Müqavilənin Ümumi Şərtləri`, effective 06.01.2025.
 
-### Clauses that matter
-The deposit section says:
+Material clauses already recovered:
 - **6.1**: deposit amount, rate, term, product and other important conditions are specified in the individual Application-Agreement (`Ərizə-Razılaşma`).
-- **6.11**: the customer may demand the deposit before maturity; in that case it is returned according to law.
-- **6.12**: the procedure and amount for paying deposit interest **early at the customer's request** are determined by the Application-Agreement.
-- **6.13**: when the customer requests early return of the deposit, interest is recalculated according to the relevant Application-Agreement.
-- **6.14**: when the 6.12 case occurs — explicitly described as **early withdrawal of the deposit** — previously paid deposit interest is deducted from the deposit amount under the General Terms/Application-Agreement, then the Application-Agreement is terminated.
-- **6.18**: the deposit-account agreement is cancelled after the deposit is fully returned to the depositor.
-- **6.21**: on an insurance event, if the depositor has a matured obligation to the bank, compensation is paid on the protected-deposit remainder after that unperformed matured obligation is deducted.
+- **6.11**: customer may demand the deposit before maturity.
+- **6.12–6.14**: early-return interest accounting is governed by the Application-Agreement; previously paid interest may be deducted when the **customer requests early withdrawal**.
+- **6.21**: on an insurance event, a matured obligation owed by the depositor to the bank is deducted before compensation.
 
-### VTB distinction
-The recovered recoupment language is tied to **customer-requested early withdrawal**. It is not written as a general clause automatically recouping prepaid interest whenever the bank enters insolvency or whenever Deposit Insurance statutory maturity occurs.
+The public VTB recoupment branch is textually tied to customer-requested early withdrawal, not expressly to statutory insurance-event maturity. That distinction remains favorable but not sufficient without the Avans Application-Agreement.
 
-The Deposit Insurance Law separately says an unexpired deposit is deemed **matured** on first publication of the compensation announcement. Statutory forced maturity is therefore not textually identical to the customer `vaxtından əvvəl` withdrawal branch in VTB 6.11–6.14.
+## Expressbank — current general terms recovered
+Expressbank's current official `Sənədlər toplusu` page links a general banking-terms document with a dedicated deposit section.
 
-This materially weakens the worst-case assumption that VTB necessarily has an insolvency-triggered claim for the entire unearned advance.
-
-## NEW — Expressbank current publicly linked general terms recovered
-Expressbank's official `Sənədlər toplusu` page currently links `Kredit və qeyri-kredit bank xidmətlərinin göstərilməsinin ümumi şərtləri`. The linked 30-page PDF contains a dedicated bank-deposit section.
-
-Primary sources:
+Primary source:
 - https://www.expressbank.az/az/page/senedler-toplusu
-- current linked PDF under `Kredit və qeyri-kredit bank xidmətlərinin göstərilməsinin ümumi şərtləri`.
 
-### Expressbank clauses that matter
-The publicly linked general deposit section states:
-- **3.3.1–3.3.2**: the bank accepts the deposit and undertakes to return principal and pay interest; deposit type, amount, term and other necessary conditions are governed by the General Terms **and the relevant individual Agreement**.
-- **3.3.4**: interest is ordinarily accrued from the day after funds enter the bank through the day before the principal is returned/removed, and is transferred to the customer's current account based on the customer's application.
-- **3.3.6**: the bank must return at least one quarter of principal immediately on first demand and the balance within five bank days.
-- **3.3.9–3.3.16**: the document describes Deposit Insurance participation, insurance-event compensation and the 100,000-AZN compensation ceiling; it also states that insurance compensates interest only through the insurance-event date.
-- **3.3.17**: if principal is demanded before contractual maturity, interest is calculated according to the **relevant deposit Agreement**.
+Material clauses already recovered:
+- **3.3.1–3.3.2**: principal/interest obligations plus product-specific Agreement controls necessary conditions;
+- **3.3.4**: ordinary deposit interest is accrued daily until return/removal of principal;
+- **3.3.6**: principal-return obligation on demand;
+- **3.3.9–3.3.16**: Deposit Insurance mechanics;
+- **3.3.17**: early-return interest treatment is delegated to the relevant individual deposit Agreement.
 
-### Expressbank implication
-The public general terms do **not** contain a general clause saying that a bank insolvency / Deposit Insurance event automatically makes already-paid advance interest repayable by the depositor, nor do they publicly create a lien equal to prepaid interest in the general deposit section.
+The public general deposit section does not state that insolvency itself automatically claws back prepaid interest, but the individual agreement remains decisive.
 
-However, they expressly delegate early-return interest accounting and other material product conditions to the relevant individual deposit Agreement. Therefore the same decisive uncertainty remains as at VTB: the `Əlavə fürsət` product-specific agreement could contain a recoupment, lien, block or set-off obligation that is absent from the public general terms.
+## NEW 2026-08-17 — current Deposit Insurance Law removes two older blanket exclusions
+Fresh review of the current consolidated official law (`Əmanətlərin sığortalanması haqqında`, e-qanun) materially improves the legal map.
 
-The document also defines ordinary interest on a daily-accrual basis. This reinforces that the upfront payment is economically an advance against future accrual rather than proof that the entire annual interest is legally earned on day one. Without the individual agreement, it would be unsafe to assume the unearned part survives forced maturity.
+Current Article 2 shows old clauses **2.1.2.9** and **2.1.2.10** struck/repealed:
+- old 2.1.2.9 had excluded deposits to the extent of a depositor's debt principal + interest regardless of maturity;
+- old 2.1.2.10 had excluded deposits serving as security for obligations to the bank.
 
-## Deposit Insurance Law interaction
-Current ADIF public material states:
-- protected-deposit annual-rate ceiling: 12% in AZN;
-- compensation: 100% of insured deposit up to 100,000 AZN;
-- if the depositor has a matured obligation to the bank on the insurance-event date, that unperformed obligation is deducted from the protected amount;
-- interest is compensated only through the insurance-event date.
+These are **not current blanket exclusions** in the consolidated text.
+
+Primary current law:
+- https://frameworks.e-qanun.az/12/f_12137.html
+
+This matters because the historical adverse prepaid-interest precedent involved a blocked/encumbered principal amount. Under the current statute, mere existence of a lien/security-style structure is no longer, by itself, enough to prove the deposit is outside protection.
+
+### What still survives and is decisive
+Current Article **26.2** remains: if, on the insurance-event date, the depositor has a **matured obligation** to the participant bank, the unperformed portion is deducted from the protected deposit (including calculated interest) before compensation.
+
+ADIF's current public insured-deposit page repeats the same rule and states that compensation is 100% of insured deposit up to 100,000 AZN; deposit interest is compensated only through the insurance-event date.
 
 Primary sources:
 - https://adif.gov.az/az/insured-deposit
-- https://adif.gov.az/az/secured-and-non-secured-deposit
 - https://frameworks.e-qanun.az/12/f_12137.html
 
-## NEW — minimum-size tax margin is not the bottleneck
-Azerbaijan State Tax Service guidance on Tax Code article 102.1.22-3 states that up to **200 AZN of calculated monthly interest income per bank** on AZN deposits is exempt from income tax.
+Therefore the H052 legal decision tree is now narrower:
 
-Primary source:
-- https://taxes.gov.az/az/page/suallar-ve-cavablar (30.07.2025 answer concerning deposit-interest exemptions).
+1. **If prepaid interest does not become a matured depositor obligation on insurance-event/forced maturity**, the old security/debt blanket exclusions no longer independently destroy coverage, and `C=P` remains plausible within the insurance limit.
+2. **If the product-specific agreement makes unearned prepaid interest immediately due from the depositor on insurance-event/forced maturity**, Article 26.2 permits that matured obligation to reduce compensation, destroying the strict positive floor to that extent.
+
+This is a materially stronger and more precise result than the earlier generic “lien may destroy insurance” concern.
+
+## Fresh product-agreement search result
+Broad current searches for:
+- VTB `Avans` + `Ərizə-Razılaşma` / contract / PDF;
+- Expressbank `Əlavə fürsət` + individual agreement / contract;
+- ADIF interpretation specifically addressing prepaid interest on insurance event
+
+still did **not** surface either current product-specific agreement or an authoritative published interpretation resolving forced-maturity recoupment.
+
+Current official product pages continue to confirm immediate/prepaid interest and insured-deposit marketing, but not the missing clause.
+
+A historical secondary source on Expressbank states that early withdrawal carried a penalty. This is consistent with the general-term delegation to product-specific early-return accounting, but it is not current authoritative evidence about insurance-event treatment and is not used as a terminal conclusion.
+
+## Tax margin at minimum size
+State Tax Service guidance says up to 200 AZN of calculated monthly interest income per bank on AZN deposits is exempt under Tax Code 102.1.22-3.
 
 At the 500-AZN minimum:
-- Expressbank 12m at 9.50% => gross advance ≈ **47.50 AZN**;
-- VTB 12m at 9.25% => gross advance ≈ **46.25 AZN**.
+- Expressbank 12m 9.50% => ~47.50 AZN gross upfront;
+- VTB 12m 9.25% => ~46.25 AZN gross upfront.
 
-Both are far below 200 AZN even if the whole annual amount is treated as received/calculated in a single month. Thus the minimum-size candidate has a large tax-exemption cushion; tax is unlikely to be the terminal blocker at the 500-AZN test size.
-
-This does not prove the exact bank withholding implementation for prepaid interest, but even a hypothetical 10% withholding would leave ~41.6–42.8 AZN gross margin before other costs if full principal recovery were proven. Contractual recoupment remains overwhelmingly the decisive branch.
-
-## Prior adverse precedent retained
-A publicly indexed Azerbaijan general-offer form for a `Faizləri əvvəlcədən ödənilən müddətli əmanət` states that:
-- full-term interest is paid on placement day;
-- principal equal to prepaid interest is blocked/encumbered in the bank's favor;
-- on early demand, prepaid interest is deducted from principal without separate consent.
-
-Indexed sources:
-- https://www.lawinsider.com/az/contracts/c0UFCKlTrfH
-- https://www.lawinsider.com/az/contracts/kn7gZJIdTZS
-
-These are not proven to be current Expressbank/VTB agreements. They remain a warning that product-specific terms cannot be inferred from marketing pages or generic terms alone.
+Both sit far below the 200-AZN monthly exemption threshold. Tax remains secondary to contractual recoupment.
 
 ## Guarantee identity
 Let:
@@ -136,14 +132,14 @@ If the product-specific agreement does **not** create a matured recoupment oblig
 
 `G = R - F`.
 
-At the minimum size, `R≈46.25–47.50 AZN` before any applicable cost. The numerical margin is large relative to ordinary retail account/card friction. Contract treatment — not arithmetic — is the bottleneck.
+At the minimum size, `R≈46.25–47.50 AZN` before applicable costs.
 
-### Adverse secured/recoupment branch
-If product-specific terms make `R` (or the unearned part) a due obligation at insurance event, then potentially:
+### Adverse matured-obligation branch
+If product-specific terms make all or part of `R` a due obligation at insurance event, then Article 26.2 permits compensation offset. If the full advance becomes due:
 
 `C <= P-R`
 
-and:
+and
 
 `G <= R + (P-R) - P - F = -F`.
 
@@ -153,18 +149,16 @@ That branch destroys strict guarantee.
 H052 remains **PROMISING / INCONCLUSIVE — not SUCCESS**.
 
 New result this run:
-- Expressbank's current publicly linked general deposit terms were recovered and reviewed;
-- like VTB's general terms, they do not themselves state a blanket insolvency-triggered clawback of prepaid interest;
-- Expressbank explicitly delegates early-return interest treatment to the individual deposit Agreement;
-- therefore **both live Azerbaijan candidates have now collapsed to essentially the same product-specific-document gate**;
-- the minimum 500-AZN tax arithmetic is favorable and not the main blocker.
-
-The absence of a recoupment clause in generic terms is not evidence that none exists in the individual product contract.
+- current consolidated Deposit Insurance Law was re-checked;
+- old blanket exclusions for depositor debt and deposits serving as security (former 2.1.2.9/2.1.2.10) are repealed in the current text;
+- therefore a security/lien structure alone no longer closes H052;
+- the decisive statutory risk is now specifically **Article 26.2 matured-obligation offset at the insurance-event date**;
+- current web-accessible sources still do not expose the VTB Avans or Expressbank Əlavə fürsət individual agreement needed to decide whether prepaid interest becomes such an obligation.
 
 ## Decisive next evidence
 Recover one of:
 1. current VTB `Avans` `Ərizə-Razılaşma` / individual deposit agreement;
 2. current Expressbank `Əlavə fürsət` individual agreement / standard terms;
-3. written VTB/Expressbank/ADIF interpretation explicitly answering whether previously paid advance interest becomes a due depositor obligation when an insurance event occurs before original contractual maturity.
+3. written VTB/Expressbank/ADIF interpretation explicitly answering whether previously paid advance interest becomes a matured depositor obligation when an insurance event occurs before original contractual maturity.
 
-A favorable explicit clause preserving full compensable principal after the prepaid cash has vested would immediately trigger the final fee/cash-out bound and could promote H052 to terminal SUCCESS. An insolvency/forced-maturity recoupment or principal-lien clause would reject that candidate.
+A favorable explicit clause preserving full compensable principal after the prepaid cash has vested would immediately trigger the final fee/cash-out bound and could promote H052 to terminal SUCCESS. An insurance-event/forced-maturity recoupment clause would reject that candidate.
