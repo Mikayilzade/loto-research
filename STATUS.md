@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H052 now narrowed to product-specific matured-obligation treatment under Deposit Insurance Article 26.2**
+**Stage 1 — structural/state-edge search; H052 document-blocked, H053 deterministic cashback subsidy class screened**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,7 +12,7 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H052 — newest packet
+# H052 — upfront insured interest remains strongest unresolved candidate
 File:
 - `research/h052_upfront_insured_interest.md`
 
@@ -29,36 +29,52 @@ File:
 - current rates 9.25% / 9.50% / 8.75% / 7.75%;
 - current general retail agreement recovered.
 
-## NEW — current Deposit Insurance Law materially strengthens/narrows H052
-Fresh review of the current consolidated official law shows former Article **2.1.2.9** (depositor debt exclusion) and **2.1.2.10** (deposit securing bank obligations exclusion) are repealed/struck from the current text.
+Current Deposit Insurance Law no longer contains the old blanket debtor/security exclusions, but Article **26.2** still deducts any depositor obligation that is **matured on the insurance-event date**. Therefore strict H052 success still depends on the missing product-specific agreement proving that unearned prepaid interest does not become a matured depositor obligation on insurance-event/forced maturity.
 
-This means an old-style principal lien/block for prepaid interest is **not by itself a current blanket loss of deposit protection**.
+Fresh web search again did not recover the VTB `Avans` `Ərizə-Razılaşma`, Expressbank individual `Əlavə fürsət` agreement, or an authoritative ADIF interpretation resolving that exact branch. Do not repeat the same document search without a new route.
 
-The decisive surviving rule is Article **26.2**: if the depositor has a **matured obligation to the bank on the insurance-event date**, the unperformed amount is deducted from the protected deposit before compensation. ADIF's current insured-deposit page repeats this rule.
+Minimum-size favorable branch remains large enough to matter if `C=P`:
+- Expressbank 500 AZN × 9.50% ≈ **47.50 AZN** upfront;
+- VTB 500 AZN × 9.25% ≈ **46.25 AZN** upfront.
 
-Therefore the H052 terminal branch is now specifically:
-- if prepaid interest does **not** become a matured depositor obligation at insurance-event/forced maturity, `C=P` remains legally plausible within insurance limits;
-- if the missing product-specific agreement makes the unearned advance immediately due, compensation can be offset and strict guarantee fails.
+H052 status: **PROMISING / INCONCLUSIVE — document-blocked, not SUCCESS**.
 
-## Fresh search outcome
-Current web-accessible searches still did **not** recover:
-1. VTB `Avans` product-specific `Ərizə-Razılaşma`;
-2. Expressbank `Əlavə fürsət` individual agreement;
-3. an authoritative ADIF/bank interpretation explicitly resolving prepaid-interest recoupment on insurance-event forced maturity.
+# H053 — deterministic bank cashback / welcome subsidies
+File:
+- `research/h053_deterministic_cashback_subsidies.md`
 
-A historical secondary source says Expressbank early withdrawal carried a penalty, but this does not resolve the insurance-event branch and is not terminal evidence.
+## Current verified mechanisms
+### ABB foreign-payment campaign
+Official current campaign runs **7 August–7 September 2026**:
+- 3% cashback on foreign/foreign-website payments;
+- cap 50 AZN;
+- requires ABB share ownership/order and TamKart Mastercard.
 
-## Minimum-size arithmetic remains favorable if `C=P`
-At 500 AZN:
-- Expressbank 12m 9.50% => ~47.50 AZN upfront;
-- VTB 12m 9.25% => ~46.25 AZN upfront.
+Real deterministic subsidy, but the qualifying purchase principal is consumed and share eligibility has its own cost/risk. **Not standalone guaranteed cash profit.**
 
-Tax is not the main blocker at this size; contractual forced-maturity recoupment remains decisive.
+### Yelo Welcome package
+First-time card customers receive a free 30-day cashback package. Current categories provide deterministic percentage cashback on eligible retail spending. This is guaranteed savings conditional on consumption, not a principal-returning arbitrage.
 
-## H052 status
-**PROMISING / INCONCLUSIVE — not SUCCESS.**
+### Leobank August 2026 cashback
+Current official page explicitly states:
+- cashback is **real money**, not points;
+- credited immediately after qualifying purchase;
+- August bank categories currently include 0.75%–10%;
+- bank cashback cap 50 AZN; partner cashback can be uncapped.
 
-The candidate is stronger than before because the old blanket debt/security exclusions are no longer current law. But absence of the product-specific agreement prevents proving the all-outcome principal floor.
+This validates a current withdrawable/real-cash rebate mechanism, but qualifying retail spend still has no contractual cash-recovery floor.
+
+### Kapital Bank / BirKart 30-AZN indexed offer
+Official indexed page says 30 AZN after 100 AZN cashless turnover, but visible page lacks an explicit year and redirects when opened. Treat as freshness-unresolved, not a current executable candidate.
+
+## H053 theorem
+For qualifying spend `S`, vested bonus `B`, guaranteed cash-recoverable value `V_min`, and costs `F`:
+
+`G = B + V_min - S - F`.
+
+Ordinary retail consumption generally has no contractual `V_min=S`. Therefore cashback below 100% cannot establish standalone guaranteed cash profit. Refund/reversal cannot be assumed to preserve cashback; current campaign terms commonly reverse or exclude refunded transactions.
+
+H053 status: **REAL CURRENT SUBSIDIES VALIDATED; standalone guaranteed-profit class REJECTED unless a principal-preserving qualifying action is found**.
 
 # Other important branches
 - H051 ordinary insured deposits: rejected as terminal guarantee because immediate insurance event can leave accrued reward ≈0.
@@ -82,13 +98,14 @@ Any SUCCESS must prove all of:
 8. dynamic APR or vague `up to` yield is insufficient;
 9. ordinary post-opening accrued interest is insufficient if an immediate insurance event can reduce reward to ~0;
 10. for prepaid-interest deposits, prove prepaid reward remains separately vested and does not reduce/offset insured principal under insolvency/forced liquidation;
-11. for H052 specifically, prove no product clause makes unearned prepaid interest a **matured depositor obligation** deductible under Article 26.2 at insurance event.
+11. for retail cashback, consumption value/resale value is not a cash guarantee; either qualifying principal must remain contractually recoverable or vested subsidy must exceed unrecoverable spend + costs.
 
 # Next priorities
-1. **Recover current VTB `Avans` product-specific agreement.**
-2. **Recover current Expressbank `Əlavə fürsət` product-specific agreement.**
-3. Search authoritative ADIF/bank/court interpretation of prepaid-interest treatment under Article 26.2 at insurance event.
-4. If favorable, immediately bound account/card/transfer/cash-out/funding costs at 500 AZN and test terminal SUCCESS.
-5. Screen other current Azerbaijan prepaid-interest products only where public product contracts can resolve the same branch.
-6. If H052 remains document-blocked, resume H020/H037/H019 and remaining deterministic action/rebate scans rather than repeating the same search.
-7. Before EXHAUSTED: Bayesian hidden-state inference, additional current products, and causal implementation tests.
+1. Search **principal-preserving deterministic subsidies**: account-funding/deposit cash bonuses, salary/account-switch cash, regulated broker/bank bonuses where funded principal remains withdrawable/protected.
+2. Recover H052 product-specific agreements only via a genuinely new route (bank document endpoint, direct indexed file, authoritative interpretation); do not repeat blind web queries.
+3. If any principal-preserving bonus is found, immediately prove eligibility, vesting/clawback, withdrawal, tax/fees and minimum all-outcome cash floor.
+4. H020 live executable arbitrage: resume where raw books/settlement can be fetched.
+5. H019 monitor only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
+6. H006/H007 only after reliable histories/machine metadata become available.
+7. H010/H014 when new authoritative data routes appear.
+8. Before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic account-switch/funding rebate scans, and causal implementation tests.
