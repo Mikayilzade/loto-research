@@ -1,0 +1,10 @@
+candidate,geography,current_2026,reward_type,user_controlled,principal_preserved,public_noninvite,fixed_cash_floor,terminal_status
+Payoneer Prestige Club,multi-jurisdiction,yes,cashback,partial,yes for transfers/withdrawals,no,yes if eligible,no guarantee
+Payoneer BLS 2.5%,multi-jurisdiction,expired/current-class,cash reward,partial,yes for real client receipts,no,yes if eligible,not live universal
+IBKR referred-client award,Azerbaijan-accessible platform,yes,IBKR shares,yes,yes,yes,no,reject fixed-cash filter
+IBKR IMPACT cash,US only,legacy/current terms,cash,yes,yes,yes,yes,geography reject
+Freedom24 WELCOME,not proven Azerbaijan,yes,gift shares,yes,yes,yes,no,reject fixed-cash floor
+XalqKart 7% balance,Azerbaijan,yes,accrued interest,yes,yes,yes,no immediate positive floor,H051 gate
+Mastercard Qazanc+,Azerbaijan,yes,cashback,yes,no,yes,percentage only,consumption-dependent
+Bank Respublika NeoCard,Azerbaijan,yes,loyalty bonuses,yes,no,yes,no,reject fixed-cash filter
+ABB targeted 10 AZN,Azerbaijan,yes/targeted,cashback,yes,no,no,10 AZN if invited,consumption+targeted
