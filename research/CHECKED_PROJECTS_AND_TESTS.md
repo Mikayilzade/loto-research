@@ -237,9 +237,18 @@ Fresh H007 acquisition recheck on 2026-08-15 still failed to recover a trustwort
 | ABB targeted 10 AZN offer | fixed 10 AZN after ≥50 AZN first purchase, but only SMS/PUSH-selected customers and qualifying spend is consumed | **TARGETED/CONSUMPTION; no guarantee** |
 | H057 eight-gate filter | public Azerbaijan eligibility; no invite/first-N discretion; user-controlled action; recoverable principal; fixed cash; deterministic vesting; survival of clawback/cancellation/insolvency branches; positive net after costs | **NO CURRENT CANDIDATE PASSES ALL GATES** |
 
+## H058 business-volume / payment-rail cash rebates
+| Test | Result | Status |
+|---|---|---|
+| WorldFirst Global 2026 USD 50 bonus | current 1 May–31 Dec 2026; ≥USD 1,000 qualifying marketplace/payment-processor/freelancer receipts OR supplier payments triggers USD 50 cash | **REAL PRINCIPAL-LIGHT BUSINESS-REVENUE BONUS; NOT TERMINAL** because first-600 cap, sole-discretion eligibility/delay/clawback and no explicit Azerbaijan campaign eligibility; `research/h058_business_volume_payment_rail_rebates.md` |
+| Payoneer Prestige Club 2026 | current cashback can count withdrawals to local bank, supplier payments and card spend | **REAL BUSINESS-VOLUME REBATE; NOT TERMINAL** because invite-only and target/reward privately allocated |
+| Payoneer APAC Prestige Club 2026 | incoming payment volume counts except Connected Account transfers; Q3/Q4 windows; cash/USD reward | **MECHANISM VALIDATED; exact target/reward and Azerbaijan eligibility not public** |
+| Payoneer Azerbaijan 2025 control | Azerbaijan explicitly eligible; USD 300 after USD 25,000 eligible outgoing volume including withdrawal-to-bank route | **GEOGRAPHY-COMPATIBLE MECHANISM VALIDATED HISTORICALLY; expired** |
+| H058 terminal filter | independently owed business volume + fixed cash + explicit Azerbaijan + public access + no first-N/invite/private target + deterministic vesting/no discretionary clawback + positive net after fees/tax/FX | **NO CURRENT PUBLIC CANDIDATE PASSES ALL GATES** |
+
 ## Current priorities
-1. **H058 business-volume/payment-rail rebate scan:** public Azerbaijan-compatible programs where cash reward attaches to independently owed business receipts/transfers, so qualifying economic principal is not consumed for the promotion.
-2. Search regulated payment providers for public fixed reward/threshold schedules without invitation/private targeting.
+1. **H059 marketplace / creator / freelancer payout bonuses:** current public programs where independently earned revenue mechanically triggers fixed cash, with explicit Azerbaijan eligibility and no invitation/first-N race.
+2. Search payment providers for public Azerbaijan reward/threshold schedules without invitation/private targeting.
 3. Search self-controlled transfer/funding cash credits where cash becomes vested before material market/third-party exposure.
 4. Recover H052 product-specific agreements only through a genuinely new route.
 5. H020 live executable arbitrage where raw books/settlement can be fetched.
