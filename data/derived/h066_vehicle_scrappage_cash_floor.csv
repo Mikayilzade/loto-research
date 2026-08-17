@@ -1,0 +1,9 @@
+case,class,discount_azn,cash_payment_azn,purchase_price_azn,known_notary_transfer_azn,spread_after_known_notary_azn,status,source
+M1_generic,M1,1500,1050,,,969.50,acquisition ceiling before other costs,https://www.tamizshahar.az/az/neqliyyat-utilizasiyasi/fond/guzest-ve-birdefelik-odenisler
+N1_generic,N1,1500,1050,,,969.50,acquisition ceiling before other costs,https://www.tamizshahar.az/az/neqliyyat-utilizasiyasi/fond/guzest-ve-birdefelik-odenisler
+M2_generic,M2,2000,1400,,,1319.50,acquisition ceiling before other costs,https://www.tamizshahar.az/az/neqliyyat-utilizasiyasi/fond/guzest-ve-birdefelik-odenisler
+N2_generic,N2,2000,1400,,,1319.50,acquisition ceiling before other costs,https://www.tamizshahar.az/az/neqliyyat-utilizasiyasi/fond/guzest-ve-birdefelik-odenisler
+M3_generic,M3,3000,2100,,,2019.50,acquisition ceiling before other costs,https://www.tamizshahar.az/az/neqliyyat-utilizasiyasi/fond/guzest-ve-birdefelik-odenisler
+N3_generic,N3,3000,2100,,,2019.50,acquisition ceiling before other costs,https://www.tamizshahar.az/az/neqliyyat-utilizasiyasi/fond/guzest-ve-birdefelik-odenisler
+Daewoo_Damas_2007_sample,M1_or_N1_to_verify,1500,1050,900,80.50,69.50,title defect owner deceased; not executable guarantee,https://tap.az/elanlar/neqliyyat/avtomobiller/47867278
+LADA_2106_1991_shell_sample,M1,1500,1050,1000,80.50,-30.50,already negative before other costs,https://tap.az/elanlar/neqliyyat/avtomobiller/47620075
