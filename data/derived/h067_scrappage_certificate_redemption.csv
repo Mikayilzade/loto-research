@@ -1,0 +1,10 @@
+class,discount_azn,cash_redemption_azn,max_purchase_before_costs_azn,max_purchase_for_25_margin_before_costs_azn,max_purchase_for_50_margin_before_costs_azn
+L,200,140,140,115,90
+M1_M1G,1500,1050,1050,1025,1000
+N1_N1G,1500,1050,1050,1025,1000
+M2_M2G,2000,1400,1400,1375,1350
+N2_N2G,2000,1400,1400,1375,1350
+T_TK_TT,2000,1400,1400,1375,1350
+M3_M3G,3000,2100,2100,2075,2050
+N3_N3G,3000,2100,2100,2075,2050
+H_HT_HK,3000,2100,2100,2075,2050
