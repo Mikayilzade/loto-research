@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage arbitrage remains top priority, now with a live 950-AZN documented M1 candidate and stronger statutory support for incomplete-vehicle acceptance**
+**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage arbitrage remains top priority, now narrowed to documented/deregisterable M1/N1 at <=900–930 AZN or an already-issued unused certificate below face**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -19,13 +19,10 @@ Files now include:
 - `research/h067b_issuance_contingent_arbitrage.md`
 - `research/h067c_live_titled_asset_screen.md`
 - `research/h067d_live_950_candidate_and_acceptance_gate.md`
+- `research/h067e_live_execution_thresholds.md`
 - `data/derived/h067_scrappage_certificate_redemption.csv`
 - `data/derived/h067a_live_market_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067_APPEND.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067A_APPEND.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067B_APPEND.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067C_APPEND.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067D_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H067E_APPEND.md`
 
 ## Validated legal/economic mechanism
 Azerbaijan's utilization confirmation document is valid 3 years, single-use, **unnamed and usable by another person**. Current fixed one-time redemption includes:
@@ -33,47 +30,46 @@ Azerbaijan's utilization confirmation document is valid 3 years, single-use, **u
 - M2/N2/T: **1,400 AZN**;
 - M3/N3/H: **2,100 AZN**.
 
-## NEW — H067d live documented M1 at 950 AZN
-Fresh current Tap.az candidate:
-- LADA (VAZ) 2106, 1980;
-- Bakı;
-- asking **950 AZN**;
-- description states `Seneti var`.
+Registered-utilizer acceptance is free. Before utilization the vehicle must be permanently deregistered. Statutory acceptance documents expressly record technical condition/completeness and missing parts, so incompleteness alone is not evidenced as a categorical rejection ground.
 
-Against the 1,050-AZN M1 redemption face it gives a **100-AZN gross spread** before execution costs. Using the previously observed Bakı towing market floor of 20 AZN leaves **80 AZN** before all remaining document/bank/tax/route-specific costs. This is materially better than the previous 1,000-AZN shell, but is not yet a strict guaranteed-profit transaction.
+## H067e fresh live market result
+Fresh current screen added two important controls:
 
-## NEW — incomplete-vehicle acceptance gate materially strengthened
-Primary utilization law states:
-- registered-utilizer acceptance is **free**;
-- vehicle must first be permanently deregistered;
-- utilizer requires the utilization application, disposal authority where applicable, written deregistration information, and identity/legal-person document;
-- when those documents contain no deficiency/inconsistency, an acceptance act is prepared;
-- the act expressly records technical condition/completeness and **missing parts**;
-- confirmation document is issued within 2 working days after acceptance.
+1. A Bakı Lalafo utilization listing advertises `hemin gun 900m 1 ay 1050m`. Conservatively this is **market-liquidity/time-value evidence around 900 AZN immediate realization**, not a guaranteed quote to buy our future certificate.
+2. A current Tap.az LADA 2106 at **800 AZN** explicitly says `Seneti yoxdu`; it therefore fails the ownership/permanent-deregistration gate and is rejected as an executable candidate.
 
-Therefore incompleteness/missing parts are expressly contemplated by the statutory workflow and are not evidenced as a categorical rejection ground. Exact identity markers, title/disposal authority and permanent-deregistration eligibility remain gates for each candidate.
+This sharpens the search: cheap price without title is worthless for H067.
+
+## Exact execution economics
+For an M1/N1 certificate:
+
+`profit_floor = 1050 - acquisition_price - towing - deregistration/document costs - bank/payment costs - tax/mandatory leakage`
+
+At the live 950-AZN documented ask and a 20-AZN towing benchmark, only **80 AZN** remains for every other mandatory cost and safety margin.
+
+Preferred search band is therefore:
+- **<=900 AZN** if residual mandatory costs could approach ~80 AZN while preserving a margin;
+- **<=930 AZN** if residual mandatory costs can be hard-bounded near 50 AZN;
+- 950 AZN remains viable only if remaining leakage is proven very low.
 
 ## Preferred transaction design remains issuance-contingent
 For a private eligible vehicle:
 1. seller/authorized representative verifies disposal authority and permanent-deregistration eligibility;
 2. seller takes the utilizer queue before deregistration;
-3. seller permanently deregisters the vehicle and surrenders it to a registered utilizer;
-4. registered utilizer accepts it and issues the official confirmation document within 2 working days;
-5. buyer pays only after official issuance and receives the original unnamed confirmation document;
-6. buyer submits the original through NVU/Təmiz Şəhər for the one-time payment.
+3. seller permanently deregisters and surrenders the vehicle;
+4. registered utilizer issues the official confirmation document;
+5. buyer pays only after official issuance/verification and receives the original unnamed unused document;
+6. buyer applies for the one-time payment.
 
-Because the certificate is unnamed and usable by another person, **the buyer does not need to buy/re-register the physical vehicle first** if the seller agrees to this structure. That potentially avoids ordinary vehicle-sale/re-registration/notarial costs on the buyer leg.
+This avoids assuming ordinary buyer-side vehicle re-registration/notarial costs when the seller can remain owner through utilization.
 
 ## Current H067 blockers
-1. seller-specific commitment that the 950-AZN candidate can be handled as a post-issuance certificate transfer at <=950 AZN;
-2. verify owner/disposal authority, identity markers and permanent-deregistration eligibility;
-3. lock route-specific transport if towing is needed;
-4. hard-bound permanent-deregistration/document/bank/tax costs;
-5. verify original certificate unused and exchange payment only after issuance/verification;
-6. require `1,050 - all locked costs - purchase price > 0` with safety margin.
-
-## Stronger legal control on permanent deregistration
-Current Road Traffic law provides a specific utilization deregistration process: decision within 3 working days and enumerated refusal grounds including confiscation, unpaid final traffic/transport fines, arrest/encumbrance, and state-asset write-off requirements. This makes the title/encumbrance check a concrete pre-transaction gate rather than an undefined risk.
+1. find a **documented, deregisterable M1/N1 <=900–930 AZN** or an already-issued unused confirmation document below face;
+2. authoritative utilization-specific permanent-deregistration fee treatment;
+3. tax treatment / hard upper bound for the one-time payment;
+4. route-specific towing if physical movement is required;
+5. seller-specific post-issuance transfer commitment and atomic verification/payment;
+6. prove `1,050 - all locked costs > 0` with safety margin before irreversible payment.
 
 # Other important open branches
 - H065 2026 fallow-land subsidy: conditional lead; cashability/current entry unresolved.
@@ -88,11 +84,11 @@ Current Road Traffic law provides a specific utilization deregistration process:
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all necessary eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest now includes `research/CHECKED_PROJECTS_AND_TESTS_H067D_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H067E_APPEND.md`.
 
 # Next priorities
-1. **H067e-live execution gate** — search for explicit already-issued unused M1/N1 confirmation documents <=950 AZN or sellers explicitly offering post-issuance transfer.
-2. **H067 deregistration-cost gate** — locate authoritative fee treatment for utilization-specific permanent deregistration/çıxdaş rather than ordinary registration charges.
-3. **H067 tax/bank gate** — locate utilization-specific Tax Service treatment or establish conservative hard upper bound.
-4. Route-specific towing bound for the 950-AZN Bakı candidate if the physical vehicle must move.
+1. **H067f deregistration-cost gate** — locate authoritative state-fee treatment for utilization-specific permanent deregistration/çıxdaş.
+2. **H067 tax gate** — authoritative tax treatment of the one-time utilization payment to a natural person.
+3. Fresh live search for `sənəti var`, `çıxdaş`, `utilizasiya`, `boş kuza` candidates <=900–930 AZN.
+4. Search for already-issued unused confirmation documents or explicit post-issuance transfer offers below face.
 5. If H067 cannot be locked, continue the next highest-value deterministic-cash class.
