@@ -4,7 +4,7 @@ Updated: 2026-08-18
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage certificate arbitrage remains top priority. H067h found a substantially stronger direct tax-exemption route under Tax Code 102.1.4.**
+**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage certificate arbitrage remains top priority. H067i closes operator-side transferee redemption entitlement by primary law.**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -23,9 +23,10 @@ Files now include:
 - `research/h067f_deregistration_and_tax_gate.md`
 - `research/h067g_tax_basis_and_deregistration_fee.md`
 - `research/h067h_state_budget_tax_exemption_lead.md`
+- `research/h067i_transferee_redemption_closure.md`
 - `data/derived/h067_scrappage_certificate_redemption.csv`
 - `data/derived/h067a_live_market_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067H_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H067I_APPEND.md`
 
 ## Validated legal/economic mechanism
 Azerbaijan's utilization confirmation document is valid 3 years, single-use, **unnamed and usable by another person**. Current fixed one-time redemption includes:
@@ -35,42 +36,50 @@ Azerbaijan's utilization confirmation document is valid 3 years, single-use, **u
 
 Registered-utilizer acceptance is free. Before utilization the vehicle must be permanently deregistered. The operator transfers the one-time payment within 30 working days after the holder submits the confirmation document.
 
-## H067h — NEW strongest tax result
-Authoritative legal chain now established:
-1. Waste Law Article 14-8 expressly calls the holder payment a **`birdəfəlik ödəniş`** and pays it from the Vehicle Utilization Fund.
-2. Presidential Order dated 27 January 2024 explicitly creates the **Vehicle Utilization Fund within the state budget of Azerbaijan**.
-3. Budget System Law defines targeted budget funds as budget components and routes their financial operations through Treasury.
-4. Current Tax Code Article 102.1.4 exempts from personal income tax individual one-time payments/material aid paid from state-budget funds on the basis of Azerbaijani laws / qualifying executive decisions.
-5. State Tax Service applies Article 102.1.4 to state-budget one-time support payments as tax-exempt.
+## H067i — NEW operator-side transferee closure
+Primary Waste Law Article 14-8 now closes the key legal transferability/redemption question:
+1. confirmation document is **unnamed and may be used by another person**;
+2. **a person holding the document** may choose the one-time cash payment;
+3. operator pays the one-time amount to the account of the **person presenting the document** within 30 working days.
 
-This is materially stronger than H067g's prior 14%-of-net-gain analogy. If Article 102.1.4 applies to the transferee/holder of a purchased unused confirmation document, the full **1,050 AZN** redemption is tax-exempt.
+Təmiz Şəhər independently publishes a matching cash-redemption procedure: applicant enters document data in their nvu.gov.az personal account, then presents the original document, applicant identity card and applicant bank details. The published checklist does not require proof that the applicant was the original vehicle surrenderer.
+
+Conclusion: **operator-side transferee cash-redemption entitlement is VALIDATED by primary law/current operator procedure.**
+
+## H067h/H067i — tax case
+Authoritative chain remains strong:
+1. Waste Law expressly calls the redemption a **`birdəfəlik ödəniş`**;
+2. Vehicle Utilization Fund was created **within the state budget of Azerbaijan**;
+3. current Tax Code Article 102.1.4 exempts individual one-time payments/material aid paid from state-budget funds on the basis of Azerbaijani laws / qualifying executive decisions;
+4. State Tax Service applies Article 102.1.4 to qualifying state-budget support paid to natural persons / individual entrepreneurs.
+
+This supports tax exemption as a property of the qualifying payment itself. However no published State Tax Service ruling was found for the exact fact pattern where a natural person purchases an unused unnamed confirmation document from another person and redeems it.
 
 ### Exemption-case economics
 For M1/N1:
 `profit = 1,050 - acquisition price - locked execution costs`.
 
-With 20 AZN execution cost + required 50 AZN safety margin:
-- maximum acquisition price = **980 AZN**.
-
-Examples:
-- A=900 -> 130 AZN profit after 20 AZN execution;
+With 20 AZN execution cost:
+- A=900 -> 130 AZN;
 - A=950 -> 80 AZN;
 - A=970 -> 60 AZN;
 - A=980 -> 50 AZN.
 
-The previously observed 900–950 AZN live market band is therefore materially actionable **if** transferee-specific exemption and document redemption are locked before payment.
+Prefer <=950 AZN until exact tax treatment and all execution costs are locked.
 
 ## Why this is still not SUCCESS
-No published State Tax Service ruling was found for the exact case of a natural person who **buys/transfers into possession** an unused unnamed confirmation document and then redeems it. Strict guarantee still requires:
-1. transferee-specific confirmation that Tax Code 102.1.4 applies (or price low enough to survive adverse fallback tax);
-2. operator confirmation that a transferee/holder can redeem the original unused document without being the original vehicle surrenderer;
-3. reliable unused/validity verification before payment;
-4. atomic transfer/payment structure;
-5. all fees/bank/verification costs locked;
-6. worst-case cash floor >0 with safety margin.
+The strategy is now blocked mainly by **live execution**, not statutory transferability:
+1. find a currently available already-issued unused original confirmation document at a price leaving a positive worst-case floor;
+2. verify document series/number, 3-year validity and unused status before irreversible payment;
+3. verify that the transferred document is accepted in the buyer's own nvu.gov.az one-time-payment workflow or obtain operator verification;
+4. lock Article 102.1.4 application for this exact transferee case, or buy sufficiently cheaply to survive an adverse tax fallback;
+5. lock bank/verification/transaction costs;
+6. exchange payment only after all above gates pass.
+
+Fresh broad indexed-web search in this run did not surface a current already-issued document listing <=950–980 AZN. That is not evidence no private/off-index market exists.
 
 ## Best transaction design
-Prefer **post-issuance purchase of an already-issued unused original confirmation document** rather than buying a questionable vehicle first. No irreversible payment until official validity/unused status, holder redemption entitlement, tax treatment, and all costs are locked.
+Prefer **post-issuance purchase of an already-issued unused original confirmation document**. Seller exposes series/number and original for verification; buyer does not make irreversible payment until operator/portal recognition and unused status are confirmed. Then exchange payment against the physical original and immediately submit for redemption.
 
 # Other important open branches
 - H065 2026 fallow-land subsidy: conditional lead; cashability/current entry unresolved.
@@ -85,11 +94,11 @@ Prefer **post-issuance purchase of an already-issued unused original confirmatio
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all necessary eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H067H_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H067I_APPEND.md`.
 
 # Next priorities
-1. **H067i transferee-specific closure** — official State Tax Service/operator evidence on whether Article 102.1.4 applies when an unused unnamed confirmation document is acquired from another person and redeemed by the new holder.
-2. Fresh live search for already-issued unused confirmation documents **<=950–980 AZN**, while retaining a lower adverse-tax-safe band until tax treatment is locked.
-3. Formal operator-side validity/unused-status verification procedure and atomic transaction design.
-4. Exact permanent-deregistration/other execution fee closure where relevant.
+1. **H067j execution-lock research** — identify an official pre-payment validity/unused-status verification method and whether a transferred document can be added to the buyer's own nvu.gov.az cash-redemption workflow before surrendering the original.
+2. Fresh live/off-index market search for already-issued unused documents **<=950 AZN**, retaining a lower adverse-tax-safe band until tax treatment is locked.
+3. Seek product-specific State Tax Service clarification on Article 102.1.4 for a transferee holder.
+4. Lock exact incidental fees and atomic transaction mechanics.
 5. If H067 cannot be locked, continue the next highest-value deterministic-cash class.
