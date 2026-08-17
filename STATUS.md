@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H061 same-currency account-opening/funding cash-reward screen completed**
+**Stage 1 — structural/state-edge search; H062 business onboarding / merchant activation grant screen completed**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,45 +12,42 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H061 — same-currency account-opening / funding cash rewards
+# H062 — business-account onboarding / payroll / merchant activation grants
 Files:
-- `research/h061_same_currency_account_rewards.md`
-- `data/derived/h061_account_reward_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H061_APPEND.md`
+- `research/h062_business_onboarding_merchant_grants.md`
+- `data/derived/h062_business_onboarding_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H062_APPEND.md`
 
 ## Current result
-The desired mechanism class is real: regulated providers can pay fixed cash while account principal remains in the user's own account. The current public screen found no Azerbaijan-executable candidate satisfying all strict terminal gates.
+The Azerbaijan SME promotion class is real, but the current public screen found no fixed withdrawable-cash grant satisfying the strict terminal gates.
 
-### Azerbaijan screen
-- Birbank: recent 50-bonus new-installment-card offer expired 31 Jul 2026 and required a 500-AZN installment purchase; consumption/clawback branch.
-- ABB: 5-AZN Open Banking campaign was first-2,000 + pre-selected + retail-spend and expired 9 May 2026; Tam Visa 100% bus cashback expired 30 Jun and reimbursed consumed transport spend.
-- Yelo: Welcome cashback category expired 31 Jul and requires merchant spending.
-- Leobank: cashback is explicitly real money and immediate, validating local cash settlement, but it is purchase-linked and therefore consumes principal.
+### Active / current findings
+- **Yelo Bank `Welcome to Business`**: extended through **2026-09-30**. Eligible first-time online business accounts receive 3 months of 0% commission on selected AZN domestic transfers, AZN cash withdrawal and salary-project transfers, up to 100,000 AZN turnover, plus a complimentary one-year business card. This is a genuine deterministic current subsidy, but it is **fee avoidance rather than positive cash**.
+- **ABB Biz `Lucky Individual Entrepreneur`**: active through **2026-08-18**, but reward allocation is random among ten winners. Explicit zero-prize branch => strict guarantee rejected.
+- **AccessBank new-business tariff offer**: current public page shows free/discounted account, transfer, payroll and card fees; again fee savings, not fixed withdrawable cash.
 
-### Global controls
-- Mox 2026 promotions validate strong fixed-cash mechanics, including an HKD200 instant new-customer cash rebate with no minimum spend and a time-deposit cash reward, but are Hong-Kong-specific and quota/product gated.
-- Payoneer historically ran a USD300 reward explicitly including Azerbaijan, but registrations ended Aug 2025, self-funding was excluded and terms retained change/termination discretion.
-- Current 2026 Payoneer USD130 campaigns found in India/Philippines require genuine client Request-a-Payment volume and are geography/first-N dependent.
-- Skrill/Neteller 2026 credits remain invitation/geography/spend/expiry gated.
+### Recent controls
+- PAŞA Bank, Unibank, Bank Respublika and Rabitabank all ran 2026 business-onboarding fee-waiver/discount campaigns. Sampled offers are expired and/or credit-linked, and none creates a principal-preserving fixed-cash floor.
 
-H061 status: **MECHANISM REAL; CURRENT PUBLIC SCREEN CLOSED; NO TERMINAL GUARANTEE**.
+### Necessary-condition result
+A pure fee waiver on a self-created transfer cannot generate positive absolute cash profit: if starting principal is `P` and the qualifying operation merely returns that principal while reducing a fee from `f` to `0`, terminal cash is at most `P` absent a separate cash grant/rebate. Fee waivers can create real incremental savings on independently required business flows, but are not a self-starting terminal arbitrage.
 
-# H060 — regulated cross-border payment / funding cash credits
-H060 remains closed at current public-screen level. Transfer credits/rebates exist, but non-cash reward, FX/external fees, geography, first-N/invite and reversal branches prevent a strict guaranteed cash floor.
+H062 status: **MECHANISM REAL; CURRENT PUBLIC AZERBAIJAN SCREEN CLOSED; NO TERMINAL GUARANTEE**.
+
+# H061 — same-currency account-opening / funding cash rewards
+H061 remains closed at current public-screen level. Fixed-cash principal-preserving mechanisms exist globally, but current candidates fail Azerbaijan eligibility, quota/discretion, genuine-client-volume or other strict gates.
 
 # H052 — upfront insured interest remains strongest unresolved local contract lead
-File:
-- `research/h052_upfront_insured_interest.md`
-
-Expressbank and VTB Azerbaijan remain the strongest unresolved local principal-preserving lead. Strict success is still blocked on product-specific contract language proving prepaid interest does not become a matured depositor obligation/offset against insured principal on an insurance event or forced maturity. Do not repeat blind searches without a genuinely new route.
+Expressbank and VTB Azerbaijan remain unresolved only on product-specific contract language proving prepaid interest does not reduce/offset insured principal under insurance-event/forced-maturity branches. Do not repeat blind searches without a genuinely new contract route.
 
 # Other important branches
-- H059 marketplace / creator / freelancer bonuses: current public screen closed.
+- H060 cross-border payment/funding cash credits: current public screen closed.
+- H059 creator/freelancer bonuses: current public screen closed.
 - H058 business-volume/payment-rail rebates: current public screen closed.
 - H057 fixed-cash geography-compatible rewards: current public screen closed.
-- H056 IBKR USD200 referrer cash: third-party dependency/amendment/anti-abuse discretion prevent strict guarantee.
+- H056 IBKR referrer reward: third-party + discretion gates.
 - H053 deterministic retail cashback: qualifying spend consumes principal.
-- H054 principal-preserving funding bonuses: market/vesting risk remains.
+- H054 principal-preserving funding bonuses: market/vesting risk.
 - H051 ordinary insured deposits: immediate-event gate rejects strict reward floor.
 - H049/H050 principal-protected yield: no current fixed retail reward proven.
 - H037 Irish Lotto Plus Million Euro Raffle: strong +EV overlay, strict guarantee rejected.
@@ -80,21 +77,22 @@ Any SUCCESS must prove all of:
 16. first-N quotas, invitation-only status, private targets or sole-discretion eligibility prevent strict pre-commitment guarantee unless entitlement is irrevocably locked;
 17. creator/marketplace bonuses must be withdrawable cash and not require uncontrolled selection;
 18. cross-border payment promotions require hard-bounded principal recovery/FX/external costs and a withdrawable cash reward; non-cash transfer credits are insufficient;
-19. same-currency account rewards must be fixed withdrawable cash, self-controlled, principal-preserving, non-quota/non-discretionary, Azerbaijan-eligible, with bounded fees and no ordinary clawback branch.
+19. same-currency account rewards must be fixed withdrawable cash, self-controlled, principal-preserving, non-quota/non-discretionary, Azerbaijan-eligible, with bounded fees and no ordinary clawback branch;
+20. business onboarding / merchant activation fee waivers count as terminal profit only if a separate fixed cash/reimbursement component makes final cash strictly exceed starting capital on every allowed branch; ordinary fee avoidance alone is insufficient.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged:
-- `research/CHECKED_PROJECTS_AND_TESTS_H059_APPEND.md`
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest:
 - `research/CHECKED_PROJECTS_AND_TESTS_H060_APPEND.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H061_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H062_APPEND.md`
 
 # Next priorities
-1. **H062 regulated business-account onboarding / payroll / merchant-acquiring activation grants** — fixed cash paid for account activation or independently owed business receipts, avoiding consumer-spend destruction of principal.
-2. Prioritize Azerbaijan banks/payment providers and globally available business platforms; reject first-N, referral, lottery, invite-only and discretionary schemes immediately.
-3. Search deterministic same-currency fee rebates only where the underlying transfer/payment is independently required, so principal consumption is not created merely to earn the reward.
+1. **H063 government / card-network / payment-scheme merchant-acquiring subsidies and guaranteed reimbursements** — Visa/Mastercard SME programs, state digitalization grants, acquiring-fee reimbursements and tax rebates available in Azerbaijan; require fixed cash/reimbursement tied to independently owed merchant receipts.
+2. Reject lotteries, ordinary consumer spend cashback, first-N, invite-only and discretionary programs immediately.
+3. Search active Azerbaijani tax/payment digitalization incentives where a legal business receipt already exists independently; quantify cash floor after tax and acquiring fees.
 4. Recover H052 product-specific agreements only through a genuinely new route.
 5. H020 live executable arbitrage where raw books/settlement can be fetched.
 6. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
 7. H006/H007 after reliable histories/machine metadata become available.
 8. H010/H014 when new authoritative data routes appear.
-9. Before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scans, and causal implementation tests.
+9. Before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scans and causal implementation tests.
