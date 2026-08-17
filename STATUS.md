@@ -4,7 +4,7 @@ Updated: 2026-08-17
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H066 Azerbaijan vehicle-scrappage fixed-cash screen completed**
+**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage certificate arbitrage discovered and screened**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,42 +12,45 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H066 — Azerbaijan vehicle-utilization fixed-cash bounty
+# H067 — transferable scrappage confirmation document: TOP PRIORITY
 Files:
-- `research/h066_azerbaijan_vehicle_scrappage_cash_floor.md`
-- `data/derived/h066_vehicle_scrappage_cash_floor.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H066_APPEND.md`
+- `research/h067_transferable_scrappage_certificate_arbitrage.md`
+- `data/derived/h067_scrappage_certificate_redemption.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H067_APPEND.md`
 
-## Strongest new mechanism
-Official Təmiz Şəhər rules confirm:
-- a person may voluntarily surrender a vehicle at any time;
-- **any vehicle can be surrendered regardless of technical condition** (new, old, crashed, serviceable, etc.);
-- acceptance by a registered utilizer is free and queue-based;
-- one confirmation document is issued per accepted vehicle;
-- the holder can choose a one-time payment equal to **70% of the class discount**.
+## Strongest discovery
+Azerbaijan's vehicle-utilization confirmation document is legally **unnamed and usable by another person**. It is valid for 3 years and one use. The waste law states that the one-time payment is transferred to the account of the person presenting the confirmation document; Təmiz Şəhər instructs the applicant to submit the certificate, ID and the applicant's own bank details.
 
-Current deterministic cash schedule:
-- M1/M1G or N1/N1G: discount 1,500 AZN -> **1,050 AZN cash**;
-- M2/N2/T etc.: 2,000 -> 1,400;
-- M3/N3/H/HK etc.: 3,000 -> 2,100.
+Current fixed one-time redemption:
+- M1/M1G or N1/N1G: **1,050 AZN**;
+- M2/N2/T: **1,400 AZN**;
+- M3/N3/H/HK: **2,100 AZN**.
 
-No minimum ownership holding period was found in the public FAQ/process. This keeps a buy-cheap-and-scrap path alive in principle.
+Therefore a genuine deterministic-cash arbitrage exists **in principle** if a valid unused certificate can be irrevocably verified and acquired for:
 
-## M1/N1 acquisition theorem
-`net_floor = 1,050 - purchase_price - transfer - registration/deregistration - transport - tax - other required costs`.
+`purchase_price + all costs < fixed redemption`.
 
-Known ASAN unrelated-party notarial vehicle-transfer cost:
-- state duty 70 AZN;
-- service charge 10.50 AZN;
-- total **80.50 AZN**.
+This route is materially stronger than buying the underlying vehicle because it eliminates post-acquisition title transfer, registration, plate, inspection, deregistration and towing costs.
 
-Therefore the purchase ceiling is already only **969.50 AZN before every other cost**.
+Fresh indexed-web search on 2026-08-17 did not find a concrete current secondary-market certificate offered below redemption value. Therefore **NOT SUCCESS yet**.
 
-## Current market samples
-- Daewoo Damas 2007 advertised at **900 AZN**: face spread 150; after known notarial transfer only **69.50 AZN** remains before all other costs. Listing says owner died/title must be changed, so it is not a clean executable candidate.
-- LADA 2106 shell around **1,000 AZN** with documents stated in order: after the known 80.50 transfer cost the spread is already **-30.50 AZN** before other costs.
+## H067 fallback — seller-authorized surrender
+The waste law permits a non-owner with disposal authority to surrender a vehicle. Current ASAN non-relative vehicle-disposal POA = **34.50 AZN**. The certificate is issued to the surrendering person and is unnamed/transferable.
 
-Conclusion: **payment mechanism validated and materially stronger than H065, but no currently locked positive all-in vehicle has been proven. NOT SUCCESS.**
+Potential structure: owner grants disposal authority; seller payment is contingent on successful certificate issuance; authorized person surrenders vehicle and receives certificate; certificate is redeemed for fixed cash. This can bypass ordinary ownership-transfer costs. No live enforceable owner transaction is locked yet.
+
+# H066 — ordinary buy-cheap-and-scrap refined
+Current law confirms the registration plate normally remains with the vehicle after transfer, so a new standard plate is not automatically required.
+
+For a >10-year-old ~1,300cc passenger car, current minimum ordinary-transfer subtotal before transport/other costs is approximately:
+- unrelated-party notary: 80.50 AZN;
+- ownership-transfer registration duty: 19.50;
+- registration certificate: 30;
+- inspection: 30;
+- retained plate: 0 incremental;
+- subtotal: **160 AZN**.
+
+Thus a 900-AZN vehicle reaches 1,060 AZN before transport and already exceeds the 1,050-AZN M1 cash bounty. Ordinary title transfer at that price is rejected; H067 certificate/authorized-surrender paths dominate.
 
 # H065 — Azerbaijan fixed-cash agricultural/state bounties
 2026 fallow-land subsidy remains a promising conditional lead at 220 AZN/ha, with implied 55 AZN/ha cash only if the ordinary 25/75 Farmer Card split applies. Current-entry timing/cashability still unresolved.
@@ -100,7 +103,8 @@ Any SUCCESS must prove all of:
 24. fixed agricultural bounty paid only after a biological success event is not pre-commitment guaranteed profit;
 25. per-unit production subsidy counts as terminal profit only if the underlying output/delivery is independently locked and all incremental production/compliance costs are bounded below the subsidy;
 26. fallow/idle-asset subsidy is a terminal candidate only when entitlement is currently lockable, cashability is explicit, and all incremental compliance + opportunity costs are hard-bounded below cash payment;
-27. scrappage/utilization bounty can qualify only when the acquired asset has clean transferable title, all ownership-change/deregistration/transport/tax costs are hard-bounded, acceptance entitlement is lockable, and fixed cash exceeds the entire acquisition stack on every allowed branch.
+27. scrappage/utilization bounty can qualify only when the acquired asset has clean transferable title, all ownership-change/deregistration/transport/tax costs are hard-bounded, acceptance entitlement is lockable, and fixed cash exceeds the entire acquisition stack on every allowed branch;
+28. transferable scrappage certificate qualifies only when authenticity, unused status and eligibility are verifiable before irreversible payment, transfer is legally effective, seller cannot double-spend/revoke, and fixed cash redemption strictly exceeds acquisition + all fees/taxes.
 
 # Permanent audit ledger
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest:
@@ -110,15 +114,17 @@ Any SUCCESS must prove all of:
 - `research/CHECKED_PROJECTS_AND_TESTS_H064_APPEND.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H065_APPEND.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H066_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H067_APPEND.md`
 
 # Next priorities
-1. **H066b exact scrappage execution economics** — recover exact DYP ownership-change/certificate/plate/deregistration charges, determine whether retained plates change cost, and establish transport/inspection path for non-running cars.
-2. **H066c live clean-title candidate screen** — search <=850 AZN M1/N1 vehicles with owner available and clean transferable documents near registered utilizers; build all-in transaction sheet and require positive conservative margin before any SUCCESS claim.
-3. Determine whether seller-authorized surrender can legally transfer the one-time payment to the economic buyer without full ownership transfer; do not assume it.
-4. Recheck the **2027 fallow-land decision** when published; resolve fallow-specific cashability and exact compliance cost.
-5. Recover H052 product-specific agreements only through a genuinely new route.
-6. H020 live executable arbitrage where raw books/settlement can be fetched.
-7. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
-8. H006/H007 after reliable histories/machine metadata become available.
-9. H010/H014 when new authoritative data routes appear.
-10. Before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scans and causal implementation tests.
+1. **H067a live certificate market** — search local/non-indexed channels for valid unused confirmation documents priced below fixed redemption.
+2. **H067b pre-purchase verification** — determine whether `nvu.gov.az`/operator can verify certificate serial, unused state, class and cash eligibility before payment; recover current certificate form and serial workflow.
+3. **H067c atomic transfer** — design an enforceable handover/payment sequence preventing seller double-spend/revocation.
+4. **H067d seller-authorized surrender** — find owner willing to accept payment contingent on certificate issuance; bound POA, deregistration and transport costs.
+5. Recheck the 2027 fallow-land decision when published; resolve fallow-specific cashability and exact compliance cost.
+6. Recover H052 product-specific agreements only through a genuinely new route.
+7. H020 live executable arbitrage where raw books/settlement can be fetched.
+8. H019 only when guaranteed cash floor exceeds full effective capped-entry acquisition cost.
+9. H006/H007 after reliable histories/machine metadata become available.
+10. H010/H014 when new authoritative data routes appear.
+11. Before EXHAUSTED: Bayesian hidden-state inference, additional current products, deterministic cash-rebate scans and causal implementation tests.
