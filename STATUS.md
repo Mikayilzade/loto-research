@@ -1,10 +1,10 @@
 # STATUS
 
-Updated: 2026-08-17
+Updated: 2026-08-18
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage arbitrage remains top priority, but tax stress tightens the executable M1/N1 search band to roughly <=800–830 AZN unless exemption is proven**
+**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage certificate arbitrage remains top priority. H067g materially improved the tax model: 14% of the entire 1,050 AZN is now only a harsh fallback, while general State Tax Service guidance supports taxing net gain after deductible acquisition cost if the certificate is treated as an asset/right.**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -21,10 +21,10 @@ Files now include:
 - `research/h067d_live_950_candidate_and_acceptance_gate.md`
 - `research/h067e_live_execution_thresholds.md`
 - `research/h067f_deregistration_and_tax_gate.md`
+- `research/h067g_tax_basis_and_deregistration_fee.md`
 - `data/derived/h067_scrappage_certificate_redemption.csv`
 - `data/derived/h067a_live_market_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067E_APPEND.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H067F_APPEND.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H067G_APPEND.md`
 
 ## Validated legal/economic mechanism
 Azerbaijan's utilization confirmation document is valid 3 years, single-use, **unnamed and usable by another person**. Current fixed one-time redemption includes:
@@ -32,55 +32,58 @@ Azerbaijan's utilization confirmation document is valid 3 years, single-use, **u
 - M2/N2/T: **1,400 AZN**;
 - M3/N3/H: **2,100 AZN**.
 
-Registered-utilizer acceptance is free. Before utilization the vehicle must be permanently deregistered. The current `Yol hərəkəti haqqında` Article 27 IX-I gives the registration authority 3 working days to decide and specifies refusal gates including certain unpaid final fines and vehicle arrest/encumbrance. The utilization act records technical condition/completeness and missing parts, so incompleteness alone is not evidenced as a categorical rejection ground.
+Registered-utilizer acceptance is free. Before utilization the vehicle must be permanently deregistered. The current utilization law requires the operator to transfer the one-time payment within 30 working days after the holder submits the confirmation document.
 
-## H067e live market controls
-1. A Bakı Lalafo utilization listing advertised `hemin gun 900m 1 ay 1050m`; this is market-liquidity/time-value evidence around 900 AZN immediate realization, not a guaranteed quote to buy our certificate.
-2. A Tap.az LADA 2106 at 800 AZN explicitly said `Seneti yoxdu`; it fails the ownership/deregistration gate and is rejected.
-3. Cheap parts/body listings without a registered-vehicle identity remain invalid inputs.
+A June 19, 2026 program statement reports that more than 1m AZN has already been paid as one-time payments, so the redemption route is operational in practice.
 
-## H067f — NEW dominant tax gate
-Authoritative sources confirm:
-- permanent deregistration is mandatory before utilization;
-- registered-utilizer acceptance itself is free;
-- no separate explicit utilization-specific permanent-deregistration state-duty line was located in the current State Duty Law/MIA schedules searched, but zero fee is **not yet proven**.
+## H067g — NEW tax-basis result
+Authoritative current tax sources establish:
+- Tax Code 101.2: **14%** tax rate for annual non-business income;
+- State Tax Service guidance: for non-business income not taxed at source, taxable income is generally receipts minus deductible expenses under Chapter X;
+- State Tax Service securities and crypto examples tax the **gain / increase over acquisition value**, not gross sale proceeds.
 
-The current Tax Code broadly includes residual income and applies a **14% rate to annual non-business income** unless a specific exemption applies. This run did **not** locate an explicit exemption or official State Tax Service clarification specifically for the vehicle-utilization one-time payment.
+Therefore the previous model `1,050 * 0.86 = 903` must remain only a deliberately adverse fallback unless the exact utilization payment is specifically classified as fully taxable gross income.
 
-Therefore 14% must be carried as a conservative stress case, **not claimed as the actual tax treatment**:
+For a purchased unused confirmation document at acquisition price `A`, the stronger general-law analogy is:
 
-`1,050 * 0.86 = 903 AZN stressed net redemption`.
+`tax = 14% * max(1,050 - A, 0)`
 
-At this stress level:
-- 900 acquisition leaves only 3 AZN before any costs;
-- 850 leaves 53 AZN;
-- 800 leaves 103 AZN.
+`post-tax redemption = 903 + 0.14A`
 
-With a 20-AZN towing benchmark and 50-AZN safety margin, acquisition must be roughly **<=833 AZN before any additional leakage**.
+Examples:
+- A=900 -> tax 21; post-tax redemption **1,029**; spread **129 AZN** before other costs;
+- A=950 -> tax 14; post-tax redemption **1,036**; spread **86 AZN**;
+- A=1,000 -> tax 7; post-tax redemption **1,043**; spread **43 AZN**.
 
-### Updated search bands
-- **<=900–930 AZN** only if authoritative evidence proves the 1,050 payment is received without 14% income-tax leakage and residual fees are tightly bounded;
-- **<=800–830 AZN** documented/deregisterable M1/N1 under the conservative tax-stress case.
+With 20 AZN execution cost + 50 AZN required safety margin, gain-basis threshold is approximately **968.60 AZN**.
 
-This demotes the prior 950-AZN candidate from near-terminal to non-executable unless tax exemption is proven.
+Under the harsh gross-tax fallback, the old <=833 AZN threshold remains.
 
-## Preferred transaction design remains issuance-contingent
-For a private eligible vehicle:
-1. seller/authorized representative verifies disposal authority and permanent-deregistration eligibility;
-2. seller takes utilizer queue before deregistration;
-3. seller permanently deregisters and surrenders the vehicle;
-4. registered utilizer issues the official confirmation document;
-5. buyer pays only after official issuance/verification and receives the original unnamed unused document;
-6. buyer applies for the one-time payment.
+### Meaning
+The prior 800–830 AZN live-search band should **not** be treated as the only economically plausible band. Roughly 900–950 AZN certificates become materially interesting again if State Tax Service/operator confirms that documented acquisition cost of a transferred confirmation document is deductible, or confirms exemption/no withholding.
 
-This avoids irreversible acquisition before the legal/issuance gates are locked.
+## Deregistration-fee update
+Current State Duty Law enumerates fees for technical inspection/registration actions, but the searched current schedule contains no distinct utilization-specific permanent-deregistration duty. Traffic/DYP deregistration rules likewise describe the removal process without identifying a separate utilization deregistration fee.
+
+This **strengthens**, but does not formally prove, a zero-separate-duty interpretation. Retain a residual execution-cost reserve until officially confirmed.
+
+## Best transaction design
+Prefer **post-issuance purchase of an already-issued unused original confirmation document** rather than buying a questionable vehicle first.
+
+Before irreversible payment require:
+1. original unused document exists;
+2. validity/unused status is verified with operator/utilizer as far as the official process permits;
+3. transfer is atomic against payment;
+4. purchase price and related costs are documented;
+5. tax treatment is confirmed in writing, or price is low enough to survive the gross-tax fallback;
+6. redemption application is immediately executable.
 
 ## Current H067 blockers
-1. **authoritative tax treatment** of the 1,050-AZN one-time payment to an ordinary natural person;
-2. exact utilization-specific permanent-deregistration fee or explicit zero-fee authority;
-3. find a **documented, deregisterable M1/N1 <=800–830 AZN** under tax stress, or <=900–930 only after tax exemption is proven;
-4. route-specific towing if movement is required;
-5. seller-specific post-issuance transfer commitment and atomic verification/payment;
+1. **product-specific tax classification** of redemption by a natural person who purchased the transferable confirmation document;
+2. explicit written confirmation whether certificate acquisition cost/related costs are deductible against the 1,050-AZN receipt;
+3. formal zero/exact permanent-deregistration duty confirmation;
+4. fresh live already-issued unused certificate or issuance-contingent seller within the appropriate price band;
+5. seller-specific atomic verification/payment structure;
 6. prove `net redemption - all locked costs > 0` with safety margin before irreversible payment.
 
 # Other important open branches
@@ -96,11 +99,11 @@ This avoids irreversible acquisition before the legal/issuance gates are locked.
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all necessary eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H067F_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H067G_APPEND.md`.
 
 # Next priorities
-1. **H067g tax clarification** — official State Tax Service/operator evidence on whether the one-time utilization payment is taxable to an ordinary natural person and whether any withholding applies.
-2. **H067 deregistration-fee closure** — explicit authority for zero or exact charge.
-3. Fresh live search for `sənəti var`, `çıxdaş`, `utilizasiya`, `boş kuza` candidates <=800–830 AZN under tax stress.
-4. Search for already-issued unused confirmation documents below the stressed redemption floor.
+1. **H067h product-specific tax clarification** — official State Tax Service/operator evidence on whether redemption of a purchased transferable confirmation document is taxed on gross receipt, net gain, or exempt, and whether withholding applies.
+2. Fresh live search for **already-issued unused confirmation documents around 900–950 AZN**, now economically relevant under the gain-basis model, while preserving <=833 AZN as the gross-tax-safe band.
+3. Formal deregistration-fee closure.
+4. Search issuance-contingent sellers willing to transfer only after document issuance/verification.
 5. If H067 cannot be locked, continue the next highest-value deterministic-cash class.
