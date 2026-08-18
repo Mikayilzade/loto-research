@@ -1,0 +1,8 @@
+candidate,source,ask_azn,observed_type,screen_result,reason
+BMW 2008 indexed exhaust item,https://lalafo.az/baku/ads/avtomobil-sssizlsdiricisi-id-45726156,80,muffler,REJECTED_FALSE_POSITIVE,Opened listing is a silencer/muffler not a catalytic converter
+Priora removed-from-car catalyst,https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar/46601505,130,catalytic converter,STALE_CANDIDATE,Description identifies catalyst but listing is inactive
+Katalizator N1 Lada iron public buy range,https://katalizator-n1.ru/,20-50,buyer range,REFERENCE_ONLY,Range is not a binding exact-unit quote
+Katalizator N1 Lada ceramic public buy range,https://katalizator-n1.ru/,50-100,buyer range,REFERENCE_ONLY,Range is not a binding exact-unit quote
+Katalizator N1 foreign iron public buy range,https://katalizator-n1.ru/,50-200,buyer range,REFERENCE_ONLY,Range is not a binding exact-unit quote
+Katalizator N1 foreign ceramic public buy range,https://katalizator-n1.ru/,100-1000,buyer range,REFERENCE_ONLY,Range is not a binding exact-unit quote
+Dukata exact-unit quotation process,https://dukatarecycling.com/en/catalytic-converter-buying-recycling/,,buyer process,VALIDATED_MECHANISM,Free initial quote plus local logistics and immediate payment but final lab analysis means quote finality must be locked
