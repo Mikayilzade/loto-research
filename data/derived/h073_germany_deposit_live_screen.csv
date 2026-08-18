@@ -1,0 +1,3 @@
+offer,units,deposit_per_unit_eur,face_refund_eur,ask_eur,gross_spread_eur,ask_to_face_ratio,notes
+A_600_beer_cans,600,0.25,150.00,30.00,120.00,0.2000,"Seller states all cans have 0.25 EUR deposit and are not dented; current Kleinanzeigen search result"
+B_300_redbull_cokezero,300,0.25,75.00,48.00,27.00,0.6400,"Listing explicitly states deposit value 75 EUR; current Kleinanzeigen search result"
