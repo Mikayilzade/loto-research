@@ -12,6 +12,34 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
+# H068 — CBAR investment-coin mandatory buyback: NEW PROMISING CLASS, current market negative
+Key files:
+- `research/h068_cbar_investment_coin_buyback_arbitrage.md`
+- `data/derived/h068_coin_buyback_market_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H068_APPEND.md`
+
+Official CBAR material establishes a strong deterministic-redemption mechanism for CBAR investment coins:
+- appointed agents Bank of Baku and TuranBank must repurchase eligible investment coins from the public;
+- agent organizes examination/authentication;
+- repurchase value is paid **the same day**;
+- repurchase price is tied to the official gold rate with a maximum **3% haircut**.
+
+This creates a potentially strict secondary-market arbitrage if an authentic eligible coin can be acquired at all-in cost below a locked same-day agent repurchase quote.
+
+Fresh indexed market screen did **not** cross the threshold:
+- 1 oz Heydar Aliyev-series ask: **9,950 AZN**, versus official historical/rule reference around **6.65–6.73k AZN**;
+- 1/10 oz ask: **880 AZN**, versus reference around **665–673 AZN**.
+
+Therefore the observed live candidates are negative, not SUCCESS.
+
+Remaining terminal gates:
+1. contemporaneous live coin priced materially below the same-day buyback quote;
+2. authenticity/condition and repurchase eligibility locked **before irreversible seller payment** (or enforceable conditional sale);
+3. all transport/payment/agent costs;
+4. transaction-specific tax treatment — current Tax Service guidance treats ongoing gold-sale activity as entrepreneurship.
+
+Do not repeat generic gold-market searches. Reopen H068 only on a materially underpriced live CBAR investment coin or direct appointed-agent confirmation that authentication/quote can precede irreversible purchase.
+
 # H067 — transferable scrappage confirmation document: TOP LEAD, execution-blocked
 Key files:
 - `research/h067_transferable_scrappage_certificate_arbitrage.md`
@@ -85,12 +113,13 @@ Reopen only for a future 2027 program/window, official late-entry route, or tran
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest relevant additions include `research/CHECKED_PROJECTS_AND_TESTS_H052B_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H065B_APPEND.md`, and the H067 append chain.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest relevant additions include `research/CHECKED_PROJECTS_AND_TESTS_H068_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H052B_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H065B_APPEND.md`, and the H067 append chain.
 
 # Next priorities
-1. **H020/H019 only with genuinely new live executable instances**; do not re-prove the already validated mechanisms.
-2. H067 only on genuinely new execution evidence as defined above.
-3. H052 only on a newly surfaced product-specific contract or authoritative written interpretation; do not repeat broad web searches.
-4. Watch for a 2027 fallow-subsidy decision/window; do not repeat the closed 2026 H065 test.
-5. Data-gated H007/H014/H010 only when new data routes appear.
-6. If the above remain blocked, expand to a new defensible deterministic-cash / state-dependent edge class rather than cycling blocked branches.
+1. **H068 only on genuinely new execution evidence**: a live CBAR investment coin below same-day agent buyback after margin/costs, or direct appointed-agent pre-payment authentication/quote confirmation.
+2. **H020/H019 only with genuinely new live executable instances**; do not re-prove already validated mechanisms.
+3. H067 only on genuinely new execution evidence as defined above.
+4. H052 only on a newly surfaced product-specific contract or authoritative written interpretation; do not repeat broad web searches.
+5. Watch for a 2027 fallow-subsidy decision/window; do not repeat the closed 2026 H065 test.
+6. Data-gated H007/H014/H010 only when new data routes appear.
+7. If the above remain blocked, expand to another new defensible deterministic-cash / state-dependent edge class rather than cycling blocked branches.
