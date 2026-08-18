@@ -12,7 +12,25 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H068 — CBAR investment-coin mandatory buyback: NEW PROMISING CLASS, current market negative
+# H069 — damaged AZN statutory face redemption: NEW VALIDATED MECHANISM, execution-blocked
+Key files:
+- `research/h069_damaged_azn_face_redemption_arbitrage.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H069_APPEND.md`
+
+Current CBAR rules establish a deterministic face-value redemption floor for qualifying authentic damaged national banknotes:
+- damaged national notes may be presented to banks or CBAR;
+- qualifying non-counterfeit paper notes retaining at least the required surface (generally >=60% under the stated conditions) are paid at nominal value;
+- CBAR replacement is free of charge and payable notes are exchanged without quantity limit.
+
+Therefore a real arbitrage would exist if an already-damaged authentic current-AZN note can be acquired at an all-in price below face **after redemption eligibility is locked before irreversible seller payment**.
+
+Fresh indexed Azerbaijan-market searches found no current damaged-AZN note offered below face. The indexed banknote market is dominated by collectibles/old/foreign notes. Official material also does not expose a public pre-purchase anonymous eligibility checker or binding reservation mechanism.
+
+Status: **MECHANISM VALIDATED / NO LIVE EXECUTABLE INSTANCE / NOT SUCCESS**.
+
+Do not repeat generic H069 searches. Reopen only on a live discounted current-AZN note, a conditional/escrow transaction route at the redemption point, or direct bank/CBAR confirmation that eligibility can be established before purchase.
+
+# H068 — CBAR investment-coin mandatory buyback: PROMISING CLASS, current market negative
 Key files:
 - `research/h068_cbar_investment_coin_buyback_arbitrage.md`
 - `data/derived/h068_coin_buyback_market_screen.csv`
@@ -113,13 +131,14 @@ Reopen only for a future 2027 program/window, official late-entry route, or tran
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest relevant additions include `research/CHECKED_PROJECTS_AND_TESTS_H068_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H052B_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H065B_APPEND.md`, and the H067 append chain.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest relevant additions include `research/CHECKED_PROJECTS_AND_TESTS_H069_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H068_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H052B_APPEND.md`, `research/CHECKED_PROJECTS_AND_TESTS_H065B_APPEND.md`, and the H067 append chain.
 
 # Next priorities
-1. **H068 only on genuinely new execution evidence**: a live CBAR investment coin below same-day agent buyback after margin/costs, or direct appointed-agent pre-payment authentication/quote confirmation.
-2. **H020/H019 only with genuinely new live executable instances**; do not re-prove already validated mechanisms.
-3. H067 only on genuinely new execution evidence as defined above.
-4. H052 only on a newly surfaced product-specific contract or authoritative written interpretation; do not repeat broad web searches.
-5. Watch for a 2027 fallow-subsidy decision/window; do not repeat the closed 2026 H065 test.
-6. Data-gated H007/H014/H010 only when new data routes appear.
-7. If the above remain blocked, expand to another new defensible deterministic-cash / state-dependent edge class rather than cycling blocked branches.
+1. **H069 only on genuinely new execution evidence**: live current-AZN note below face with a redeemability lock, or a conditional/escrow exchange route.
+2. **H068 only on genuinely new execution evidence**: live CBAR investment coin below same-day agent buyback after margin/costs, or appointed-agent pre-payment authentication/quote confirmation.
+3. **H020/H019 only with genuinely new live executable instances**; do not re-prove already validated mechanisms.
+4. H067 only on genuinely new execution evidence as defined above.
+5. H052 only on a newly surfaced product-specific contract or authoritative written interpretation; do not repeat broad web searches.
+6. Watch for a 2027 fallow-subsidy decision/window; do not repeat the closed 2026 H065 test.
+7. Data-gated H007/H014/H010 only when new data routes appear.
+8. If the above remain blocked, expand to another new defensible deterministic-cash / state-dependent edge class rather than cycling blocked branches.
