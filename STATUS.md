@@ -12,7 +12,33 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H075 — Germany branded gas-bottle Pfand arbitrage: NEW LIVE DETERMINISTIC REDEMPTION LEAD
+# H076 — zero-cost salvage -> deterministic scrap-cash arbitrage: NEW CLASS VALIDATED
+Key files:
+- `research/h076_zero_cost_salvage_to_scrap_arbitrage.md`
+- `data/derived/h076_salvage_scrap_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H076_APPEND.md`
+
+Current Germany control validates the mechanism:
+- live old/defective starter batteries exist free or near-free on Kleinanzeigen;
+- A.V.M. Autoverwertung Meermann currently publishes **EUR 5 cash per car battery** on delivery;
+- Schrott24 publishes weight-based lead-battery bids around **EUR 0.30/kg from 50 kg**, increasing with scale.
+
+The statutory German **EUR 7.50 starter-battery Pfand is not an independent extra exit** for arbitrary salvaged batteries: BattDG section 19 ties refund to the dealer that collected the deposit / return-proof chain.
+
+Strict formula:
+`profit_floor = locked_scrap_cash_bid - acquisition_price - pickup/transport/executor/payment/other_locked_costs`.
+
+Why NOT SUCCESS:
+- a single free battery creates only about EUR 5 gross at the checked fixed buyer;
+- batteries are heavy/regulated and ordinary parcel shipping is not available through the checked scrap channel;
+- no Azerbaijan-local source+buyer pair or Germany local executor with locked cost below the spread has been fixed;
+- exact buyer acceptance must be locked before irreversible acquisition.
+
+Status: **MECHANISM VALIDATED / LIVE FREE INVENTORY VALIDATED / REMOTE EXECUTION NOT LOCKED / NOT SUCCESS**.
+
+Reopen H076 only for dense/co-located free batches, higher-value salvage, Azerbaijan-local inventory plus binding buyer bid, or a local executor quote that leaves a strictly positive net floor.
+
+# H075 — Germany branded gas-bottle Pfand arbitrage: LIVE DETERMINISTIC REDEMPTION LEAD
 Key files:
 - `research/h075_germany_gas_bottle_deposit_arbitrage.md`
 - `data/derived/h075_gas_bottle_spread_screen.csv`
@@ -92,15 +118,16 @@ Status: **LOCAL DETERMINISTIC MECHANISM VALIDATED / LIVE ANOMALIES FOUND / EXACT
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H075_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H076_APPEND.md`.
 
 # Next priorities
-1. H075 only with **exact execution evidence**: seller price/availability + receiving-dealer exact payout + legal/contract ownership/possession resolution. Generic gas-bottle searching is closed.
-2. H073 only with interaction-level seller/executor/remittance evidence. Generic searching is closed.
-3. H074 only with exact assay-before-payment candidate + binding buyer bid.
-4. Expand to another new deterministic principal-preserving / statutory-redemption / fixed-cash edge class.
-5. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
-6. H070 only on new synchronized/live executable bank quotes or lockable feed.
-7. H020/H019 only with genuinely new live executable instances.
-8. Data-gated H007/H014/H010 only when new data routes appear.
-9. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+1. H076 only with **co-located batch / binding buyer / locked executor** evidence; generic single-battery searches are closed.
+2. H075 only with exact seller/dealer/legal execution evidence; generic gas-bottle searching is closed.
+3. H073 only with interaction-level seller/executor/remittance evidence. Generic searching is closed.
+4. H074 only with exact assay-before-payment candidate + binding buyer bid.
+5. Expand to another new deterministic principal-preserving / statutory-redemption / fixed-cash edge class, especially higher-value salvage/core-return assets where logistics are small relative to redemption value.
+6. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
+7. H070 only on new synchronized/live executable bank quotes or lockable feed.
+8. H020/H019 only with genuinely new live executable instances.
+9. Data-gated H007/H014/H010 only when new data routes appear.
+10. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
