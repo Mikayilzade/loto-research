@@ -4,7 +4,7 @@ Updated: 2026-08-18
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; strongest deterministic-cash leads are narrowed to transaction-level execution gates, while new local redemption/salvage classes continue to be screened.**
+**Stage 1 — structural/state-edge search; strongest deterministic-cash leads are now mostly transaction-level execution gates.**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,64 +12,61 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H080 — Baku silver-contact contactor screen: NEW STRONG LOCAL LEAD
+# H081 — Baku contactor execution route: ACTIVE STRONG LOCAL LEAD
 Key files:
-- `research/h080_baku_contactor_silver_contact_screen.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H080_APPEND.md`
+- `research/h081_baku_contactor_execution_route.md`
+- `data/derived/h081_contactor_break_even_mass.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H081_APPEND.md`
 
-Fresh 2026-08-18 Baku inventory materially improves the industrial-contact screen:
-- Telemecanique/Schneider LC1D09-10 offered at **4 AZN** each;
-- LC1D32-10 offered at **7 AZN**;
-- seller states further bundle discount is possible.
+H080's fresh candidates remain:
+- Schneider/Telemecanique LC1D09-10 at **4 AZN** each;
+- LC1D32-10 at **7 AZN**;
+- bundle discount possible.
 
-Schneider officially confirms:
-- LC1D09–LC1D18 power contacts = **90% silver / 10% nickel**;
-- LC1D25+ power contacts = **88% silver / 12% tin oxide**.
+Manufacturer-confirmed contact alloys remain:
+- LC1D09–18: **90% Ag / 10% Ni**;
+- LC1D25+: **88% Ag / 12% SnO2**.
 
-At 2026-08-18 spot silver **$64.82/oz**, theoretical contained-metal break-even contact-alloy masses are only about:
-- **1.25 g** for the 4-AZN LC1D09;
-- **2.25 g** for the 7-AZN LC1D32;
-before refining payout haircuts and all execution costs.
+New H081 evidence:
+- replacement-contact data independently confirms **3 movable + 6 stationary = 9 silver-alloy main contacts** for the relevant LC1D families;
+- a current Baku recycler/collector explicitly advertises handling **magnetic starters / `пускатель, магнитный`** and pickup, so a local buyer/executor route exists;
+- exhaustive public search in this packet did **not** recover a defensible original LC1D09/LC1D32 silver-tip gram mass. Whole-device weight must not be used as a proxy.
 
-This is not yet executable arbitrage because exact recoverable contact mass / binding Baku refiner payout for these exact units is not fixed. Reopen only on model-specific contact-tip mass or a buyer/refiner pre-quote that survives all deductions and costs before seller payment.
+Break-even alloy-mass sensitivity, before fixed costs:
+- LC1D09 4 AZN: **~1.568 g** at 80% contained-Ag-spot payout; **~1.792 g** at 70%;
+- LC1D32 7 AZN: **~2.807 g** at 80%; **~3.208 g** at 70%.
 
-Status: **PROMISING LIVE LOCAL EXECUTION LEAD / NOT SUCCESS**.
+Strategic conclusion: H080/H081 is now **one transaction-level buyer quote away from falsification or execution**. Generic web searching for exact tip mass should not repeat unless genuinely new manufacturer/teardown evidence appears. A fixed whole-unit buyer quote would remove the need to know tip mass at all.
+
+Status: **PROMISING / NOT SUCCESS**.
 
 # H079 — Baku salvage component density screen
-Key files:
-- `research/h079_baku_component_density_screen.md`
-- `data/derived/h079_baku_component_density_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H079_APPEND.md`
+Ordinary CPU/RAM/small motors screened weak. Carry forward only exact high-grade lots with locked buyer quote or copper-rich transformers with measured yield and fixed payout.
 
-Screened ordinary CPU/RAM/small motors; generic paths are weak. Carry forward only exact high-grade lots with locked buyer quote or copper-rich transformers with measured yield and fixed payout.
+# H078 — Baku e-scrap PCB pre-quote arbitrage
+Local buyer mechanism validated and low-ask board inventory exists, but no exact board is yet paired with buyer-side classification/weight + fixed payout above ask and all costs before seller payment.
 
-# H078 — Baku e-scrap PCB pre-quote arbitrage: LOW-CAPITAL LOCAL LEAD
-Local buyer mechanism is validated and live/recent 5-AZN broken-board inventory exists, but no exact active board has yet been paired with buyer-side classification/weight + fixed payout above seller ask and all costs before seller payment. Generic searching is closed; reopen only on transaction-level evidence.
+# H077 — Baku catalytic-converter pre-quote arbitrage
+Local recycler infrastructure and low-ask marketplace inventory validated; exact binding recycler payout + provenance + condition before seller payment remains unlocked.
 
-# H077 — Baku catalytic-converter pre-quote arbitrage: LOCAL HIGH-VALUE/WEIGHT LEAD
-Local recycler infrastructure and low-ask marketplace inventory are validated, but exact binding recycler payout + provenance + condition before seller payment remains unlocked. Reopen only with transaction-level evidence.
+# H076 — zero-cost salvage -> deterministic scrap cash
+Class validated; remote execution economics weak except for co-located batches/higher-value salvage or Azerbaijan-local inventory with locked buyer bid.
 
-# H076 — zero-cost salvage -> deterministic scrap-cash arbitrage: CLASS VALIDATED
-Germany control validates zero/low-cost salvage -> published scrap cash, but single starter-battery spread is too thin for remote execution. Reopen only for co-located batches, higher-value salvage, Azerbaijan-local inventory + binding buyer bid, or locked low-cost executor.
-
-# H075 — Germany branded gas-bottle Pfand arbitrage
-Deterministic redemption + live discount validated, but exact dealer payout/legal possession/atomic execution not locked. Generic searches closed.
-
-# H073 / H073b — Germany mandatory beverage Pfand arbitrage
-600 DPG cans for €30 vs €150 face redemption validated; remote infrastructure exists, but seller/executor/remittance quote-level execution remains unlocked. Generic searches closed.
+# H075 / H073 — Germany Pfand classes
+Deterministic redemption + live discounts validated, but local executor/remittance/all-in execution remains unlocked.
 
 # H074 — Baku local gold-scrap arbitrage
-Local deterministic mechanism validated; requires seller pre-payment assay + binding immediate-cash buyer bid for exact item + capped costs.
+Requires seller pre-payment assay + binding immediate-cash buyer bid for exact item + capped costs.
 
 # Other deterministic leads
 - H072 Azerbaijan stored-value/e-money redemption: mechanism validated, no issuer-permitted discounted source with atomic acquisition.
-- H071 California statutory gift-card cash redemption: mechanism validated, current execution-gated.
+- H071 California gift-card cash redemption: mechanism validated, execution-gated.
 - H070 Azerbaijan interbank FX cross-arbitrage: sampled synchronized state negative.
-- H069 damaged AZN face redemption: mechanism validated, no live discounted note with pre-purchase eligibility lock.
-- H068 CBAR investment-coin mandatory buyback: mechanism validated, sampled asks above buyback.
-- H067 transferable scrappage document: transferee right/fixed redemption validated, unused-status + live margin execution blocked.
-- H052 upfront insured interest: promising but product-specific contract is public-web data-blocked.
-- H065 2026 fallow subsidy: new-entry path rejected because prior-history/application gates have passed.
+- H069 damaged AZN face redemption: no live discounted note with pre-purchase eligibility lock.
+- H068 CBAR investment-coin mandatory buyback: sampled asks above buyback.
+- H067 transferable scrappage document: fixed redemption/transferee right validated, unused-status + live margin execution blocked.
+- H052 upfront insured interest: product-specific contract public-web data-blocked.
+- H065 2026 fallow subsidy: new-entry path rejected.
 
 # Other important open branches
 - H020 two-sided arbitrage: mechanism validated; no fully vested live setup.
@@ -82,19 +79,18 @@ Local deterministic mechanism validated; requires seller pre-payment assay + bin
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H080_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H081_APPEND.md`.
 
 # Next priorities
-1. **H080 first:** exact LC1D09/LC1D32 contact-tip mass or binding buyer/refiner pre-quote for the fresh 4–7 AZN Baku units. No acquisition before payout lock.
-2. Search another local high-value/weight salvage or mandatory/core-return class where exact asset identity can be valued before acquisition: power modules/IGBTs, telecom/server boards, precious-metal electrical contacts, copper-rich transformers.
-3. H079 transformer/copper only with exact item + measured recoverable copper + fixed buyer payout + capped preparation/transport before seller payment.
-4. H078 only with exact active board + buyer-side weight/category + fixed immediate payout before seller payment.
-5. H077 only with exact active catalyst + serial/photos/provenance + binding recycler bid or pre-payment physical assay.
+1. **H081 first:** seek a public fixed-payout table or exact-model buyer/refiner pre-quote evidence for LC1D09/LC1D32. Do not infer silver mass from device mass.
+2. Expand to a new local high-value/weight salvage class where model identity can determine value before acquisition: Soviet precious-metal relays with passported content, telecom/server boards, industrial silver contacts, or copper-rich transformers.
+3. H079 transformer/copper only with exact item + measured recoverable copper + fixed buyer payout + capped prep/transport before seller payment.
+4. H078 only with exact active board + buyer-side weight/category + fixed payout before seller payment.
+5. H077 only with exact active catalyst + serial/photos/provenance + binding recycler bid or pre-payment assay.
 6. H076 only with co-located batch / binding buyer / locked executor evidence.
 7. H075/H073 only with exact seller/dealer/executor evidence.
 8. H074 only with exact assay-before-payment candidate + binding buyer bid.
 9. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
-10. H070 only on new synchronized/live executable bank quotes or lockable feed.
-11. H020/H019 only with genuinely new live executable instances.
-12. Data-gated H007/H014/H010 only when new data routes appear.
-13. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+10. H020/H019 only with genuinely new live executable instances.
+11. Data-gated H007/H014/H010 only when new data routes appear.
+12. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
