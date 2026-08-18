@@ -1,0 +1,2 @@
+candidate,location,ask_azn_per_unit,quantity_hint,reference_au_g,reference_pd_g,gold_anchor_azn_g,palladium_anchor_azn_g,theoretical_basis_azn_per_unit,theoretical_to_ask_ratio,status
+KEM-1 / KEM-1 zA,Baku,2.0,250,0.002,0.002,175,58,0.466,0.233,REJECT_AT_CURRENT_ASK
