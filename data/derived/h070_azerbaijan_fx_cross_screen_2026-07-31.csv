@@ -1,0 +1,9 @@
+channel,currency,best_bid_azn,lowest_ask_azn,spread_azn,gross_return_pct,best_bid_source,lowest_ask_source,quote_date
+cash,USD,1.6970,1.7020,-0.0050,-0.293772,"ABB/PAŞA Bank","ABB/PAŞA Bank",2026-07-31
+cash,EUR,1.9250,1.9650,-0.0400,-2.035623,"PAŞA Bank","Bank Respublika",2026-07-31
+cash,GBP,2.2510,2.3200,-0.0690,-2.974138,"PAŞA Bank","PAŞA Bank",2026-07-31
+cash,RUB100,2.0500,2.1500,-0.1000,-4.651163,"Bank Respublika","ABB",2026-07-31
+cashless,USD,1.6975,1.7025,-0.0050,-0.293686,"PAŞA Bank","PAŞA Bank/AccessBank",2026-07-31
+cashless,EUR,1.9368,1.9820,-0.0452,-2.280525,"AccessBank","PAŞA Bank",2026-07-31
+cashless,GBP,2.2560,2.3086,-0.0526,-2.278437,"PAŞA Bank","AccessBank",2026-07-31
+cashless,RUB100,1.9200,2.3500,-0.4300,-18.297872,"AccessBank","AccessBank",2026-07-31
