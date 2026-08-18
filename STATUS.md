@@ -12,33 +12,36 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H081 — Baku contactor execution route: ACTIVE STRONG LOCAL LEAD
+# H082 — Soviet relay passport/value arbitrage: NEW ACTIVE LOCAL LEAD
 Key files:
-- `research/h081_baku_contactor_execution_route.md`
-- `data/derived/h081_contactor_break_even_mass.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H081_APPEND.md`
+- `research/h082_soviet_relay_passport_arbitrage.md`
+- `data/derived/h082_soviet_relay_value_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H082_APPEND.md`
 
-H080's fresh candidates remain:
-- Schneider/Telemecanique LC1D09-10 at **4 AZN** each;
-- LC1D32-10 at **7 AZN**;
-- bundle discount possible.
+Why H082 is stronger than H081:
+- qualifying Soviet relays can be valued from **model + passport + production date**, avoiding the unknown contact-tip-mass problem;
+- current Baku buyer infrastructure explicitly accepts radio-electronic scrap / precious-metal-bearing relays;
+- current indexed local quote indications provide a first conservative sensitivity screen.
 
-Manufacturer-confirmed contact alloys remain:
-- LC1D09–18: **90% Ag / 10% Ni**;
-- LC1D25+: **88% Ag / 12% SnO2**.
+Reference screens, **not executable buyer payouts**:
+- RES-7: 0.8 g PLI-10 -> theoretical local quote basis **69.36 AZN/unit**;
+- RES-8 passports 050/051/052 through 12/1971: 0.55 g PLI-10 -> **47.685 AZN/unit**;
+- RES-9 passports 201/202/208: 0.165 g PLI-10 -> **14.3055 AZN/unit**;
+- REN-33 silver-only reference: ~**10.7991 AZN/unit** on current indexed Ag quote basis.
 
-New H081 evidence:
-- replacement-contact data independently confirms **3 movable + 6 stationary = 9 silver-alloy main contacts** for the relevant LC1D families;
-- a current Baku recycler/collector explicitly advertises handling **magnetic starters / `пускатель, магнитный`** and pickup, so a local buyer/executor route exists;
-- exhaustive public search in this packet did **not** recover a defensible original LC1D09/LC1D32 silver-tip gram mass. Whole-device weight must not be used as a proxy.
+Fresh Azerbaijan marketplace search did not recover an active exact RES-7/qualifying RES-8/RES-9 listing with readable passport/year and fixed ask. Therefore H082 remains one exact live seller lot + pre-payment buyer quote away from falsification/execution.
 
-Break-even alloy-mass sensitivity, before fixed costs:
-- LC1D09 4 AZN: **~1.568 g** at 80% contained-Ag-spot payout; **~1.792 g** at 70%;
-- LC1D32 7 AZN: **~2.807 g** at 80%; **~3.208 g** at 70%.
-
-Strategic conclusion: H080/H081 is now **one transaction-level buyer quote away from falsification or execution**. Generic web searching for exact tip mass should not repeat unless genuinely new manufacturer/teardown evidence appears. A fixed whole-unit buyer quote would remove the need to know tip mass at all.
+Strict execution gate:
+1. exact relay model/passport/year visible and authentic;
+2. buyer accepts exact classification;
+3. binding immediate-cash payout or fixed formula locked before seller payment;
+4. payout > ask + all transport/prep/assay/tax/fees;
+5. seller payment only after buyer-side eligibility/payout gate is locked.
 
 Status: **PROMISING / NOT SUCCESS**.
+
+# H081 — Baku Schneider contactor route
+Still promising but public exact silver-tip gram mass is blocked. Do not repeat generic mass searches. Reopen only on a fixed whole-unit buyer quote or genuinely new exact-model teardown/manufacturer evidence.
 
 # H079 — Baku salvage component density screen
 Ordinary CPU/RAM/small motors screened weak. Carry forward only exact high-grade lots with locked buyer quote or copper-rich transformers with measured yield and fixed payout.
@@ -79,18 +82,19 @@ Requires seller pre-payment assay + binding immediate-cash buyer bid for exact i
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H081_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H082_APPEND.md`.
 
 # Next priorities
-1. **H081 first:** seek a public fixed-payout table or exact-model buyer/refiner pre-quote evidence for LC1D09/LC1D32. Do not infer silver mass from device mass.
-2. Expand to a new local high-value/weight salvage class where model identity can determine value before acquisition: Soviet precious-metal relays with passported content, telecom/server boards, industrial silver contacts, or copper-rich transformers.
-3. H079 transformer/copper only with exact item + measured recoverable copper + fixed buyer payout + capped prep/transport before seller payment.
-4. H078 only with exact active board + buyer-side weight/category + fixed payout before seller payment.
-5. H077 only with exact active catalyst + serial/photos/provenance + binding recycler bid or pre-payment assay.
-6. H076 only with co-located batch / binding buyer / locked executor evidence.
-7. H075/H073 only with exact seller/dealer/executor evidence.
-8. H074 only with exact assay-before-payment candidate + binding buyer bid.
-9. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
-10. H020/H019 only with genuinely new live executable instances.
-11. Data-gated H007/H014/H010 only when new data routes appear.
-12. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+1. **H082 first:** search exact local/Azerbaijan-accessible Soviet relay lots with readable model + passport + production year. Highest-value first targets: RES-7 and early RES-8 050/051/052. Reject listings without readable markings. Require model-specific buyer payout before purchase.
+2. H081 only if a fixed whole-unit LC1D09/LC1D32 buyer quote appears; do not repeat generic tip-mass search.
+3. Expand H082 to other passport-valued Soviet components where documentation fixes precious-metal content before acquisition: RPS/RPN/REN relays, KM capacitors, high-grade connectors/switches.
+4. H079 transformer/copper only with exact item + measured recoverable copper + fixed buyer payout + capped prep/transport before seller payment.
+5. H078 only with exact active board + buyer-side weight/category + fixed payout before seller payment.
+6. H077 only with exact active catalyst + serial/photos/provenance + binding recycler bid or pre-payment assay.
+7. H076 only with co-located batch / binding buyer / locked executor evidence.
+8. H075/H073 only with exact seller/dealer/executor evidence.
+9. H074 only with exact assay-before-payment candidate + binding buyer bid.
+10. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
+11. H020/H019 only with genuinely new live executable instances.
+12. Data-gated H007/H014/H010 only when new data routes appear.
+13. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
