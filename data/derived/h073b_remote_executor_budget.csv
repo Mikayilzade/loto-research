@@ -1,0 +1,10 @@
+candidate,containers,refund_eur,purchase_eur,executor_and_transfer_budget_eur,pretax_profit_floor_eur,status
+Loehne_600_cans,600,150,30,20,100,positive_if_locked
+Loehne_600_cans,600,150,30,30,90,positive_if_locked
+Loehne_600_cans,600,150,30,40,80,positive_if_locked
+Loehne_600_cans,600,150,30,50,70,positive_if_locked
+Loehne_600_cans,600,150,30,60,60,positive_if_locked
+Loehne_600_cans,600,150,30,75,45,positive_if_locked
+Loehne_600_cans,600,150,30,90,30,positive_if_locked
+Loehne_600_cans,600,150,30,100,20,positive_if_locked
+Loehne_600_cans,600,150,30,119,1,strict_break_even_ceiling_minus_1
