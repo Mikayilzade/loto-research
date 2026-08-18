@@ -4,7 +4,7 @@ Updated: 2026-08-18
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage certificate arbitrage remains top deterministic-cash lead, but is now execution-blocked rather than law-blocked.**
+**Stage 1 — structural/state-edge search; H067 transferable vehicle-scrappage certificate arbitrage remains top deterministic-cash lead but is execution-blocked, while H065 2026 fallow new-entry route is now closed.**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,7 +12,7 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H067 — transferable scrappage confirmation document: TOP LEAD
+# H067 — transferable scrappage confirmation document: TOP LEAD, execution-blocked
 Key files:
 - `research/h067_transferable_scrappage_certificate_arbitrage.md`
 - `research/h067h_state_budget_tax_exemption_lead.md`
@@ -20,67 +20,40 @@ Key files:
 - `research/h067j_execution_lock_and_live_market_recheck.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H067J_APPEND.md`
 
-## Closed in favor of the mechanism
-Primary Waste Law Article 14-8 establishes that the confirmation document is:
-- valid 3 years;
-- single-use;
-- unnamed;
-- usable by another person;
-- redeemable by the holder for the one-time payment;
-- paid by operator to the person presenting the document.
+Primary Waste Law Article 14-8 establishes that the confirmation document is valid 3 years, single-use, unnamed, transferable, and redeemable by the holder for the fixed one-time payment.
 
-Current fixed one-time redemption includes:
+Current fixed redemption includes:
 - M1/M1G or N1/N1G: **1,050 AZN**;
 - M2/N2/T: **1,400 AZN**;
 - M3/N3/H: **2,100 AZN**.
 
-Operator-side transferee cash-redemption entitlement is therefore **VALIDATED**.
+Operator-side transferee cash-redemption entitlement is validated. The remaining terminal blocker is execution locking: no public anonymous unused-status checker, binding pre-sale reservation, or currently indexed already-issued unused certificate with enough locked margin has been found.
 
-Tax-exemption case under Tax Code Article 102.1.4 remains strongly supported because the Waste Law expressly defines a `birdəfəlik ödəniş` from the Vehicle Utilization Fund and that fund is within the state budget. Exact purchased-document transferee treatment still lacks a product-specific tax ruling.
+Do **not** repeat broad H067 searches without a genuinely new route. Meaningful evidence must be direct portal behavior, written operator confirmation of pre-payment lock/verification, a live already-issued original certificate with sufficient margin, or product-specific tax clarification.
 
-## H067j — NEW execution-lock result
-Təmiz Şəhər confirms that cash redemption begins in the **applicant's own `nvu.gov.az` account**, where the applicant adds the confirmation-document data before presenting the original document, ID and bank details.
+# H065 — 2026 fallow subsidy: NEW-ENTRY ROUTE CLOSED
+New files:
+- `research/h065b_fallow_cashability_current_entry_closure.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H065B_APPEND.md`
 
-This buyer-side portal step is the strongest candidate for a pre-payment verification gate.
+Official 2026 rule:
+- only rain-fed parcels in Shamakhi, Sheki, Gobustan and Yardimli;
+- parcel must have wheat or barley planted and declared in EKTIS in each of the prior 3 consecutive years;
+- subsidy = **220 AZN/ha**.
 
-However fresh official/web search did **not** find:
-- a public anonymous series/number status checker;
-- an official promise of binding pre-sale validity/unused-status verification;
-- an official reservation/lock preventing a race/double-use after portal recognition;
-- a live indexed listing explicitly offering an already-issued unused original certificate <=950 AZN.
+Current AKIA Farmer Card rules allow **25% cash / 75% restricted agricultural use** for planting-subsidy payments. For 220 AZN/ha the cash-only component is therefore **55 AZN/ha**; the remaining 165 AZN/ha is not counted as standalone cash profit.
 
-A current indexed private listing still advertises roughly **900 AZN now vs 1,050 AZN after one month** for vehicle-utilization/body-shell intake, supporting that a real time-value spread exists. It is not itself an already-issued-certificate sale.
+As of 2026-08-18, ordinary 2026 autumn and spring declaration/application windows have passed. Buying or leasing land today cannot manufacture the required 3-year EKTIS history. Therefore a new entrant cannot now create a fresh 2026 fallow entitlement.
 
-## Best transaction design
-Do not pay for a photo/claim alone. Preferred sequence:
-1. seller presents physical original;
-2. buyer records series/number/date/category;
-3. buyer attempts to add the document into buyer's own `nvu.gov.az` one-time-payment workflow while seller is present;
-4. obtain operator validation where possible;
-5. only then exchange payment against original;
-6. immediately submit original under buyer identity/bank account;
-7. retain written acquisition/payment evidence.
+Status:
+- mechanism: **VALIDATED**;
+- existing timely applicant: may have a positive vested subsidy receipt;
+- current new-entry guaranteed-profit strategy: **REJECTED**.
 
-Until portal/operator behavior is directly observed to provide a reliable unused-status lock, this is an execution design, **not a terminal guarantee**.
-
-### Conditional M1/N1 economics
-If tax exemption applies and locked incidental cost is 20 AZN:
-- A=900 -> 130 AZN;
-- A=950 -> 80 AZN;
-- A=980 -> 50 AZN.
-
-These figures are conditional because the execution race/status lock remains unresolved.
-
-## H067 next-evidence rule
-Do **not** repeat broad indexed searches without a new route. Meaningful next H067 evidence must be one of:
-- direct observation of transferred-document behavior in `nvu.gov.az`;
-- written operator confirmation of pre-payment unused-status verification / reservation;
-- live already-issued unused original certificate with enough margin;
-- product-specific State Tax Service clarification.
+Reopen only for a future 2027 program/window, official late-entry route, or transferable already-approved entitlement with locked acquisition economics.
 
 # Other important open branches
-- H065 2026 fallow-land subsidy: conditional lead; cashability/current entry unresolved.
-- H052 upfront insured interest: product-specific agreement still missing.
+- H052 upfront insured interest: product-specific agreement still missing; **next active research priority**.
 - H020 two-sided arbitrage: mechanism validated; no fully vested live setup.
 - H019 capped fixed-prize saturation: valid in principle; sampled instances fail economics.
 - H007 high-frequency RNG: data-gated.
@@ -91,11 +64,11 @@ Do **not** repeat broad indexed searches without a new route. Meaningful next H0
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H067J_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; latest is `research/CHECKED_PROJECTS_AND_TESTS_H065B_APPEND.md` alongside the H067 append chain.
 
 # Next priorities
-1. H067 only on genuinely new execution evidence as defined above.
-2. In parallel move to the next deterministic-cash lead rather than spending runs repeating H067 web search: **H065 fallow-land subsidy cashability/current-entry closure**.
-3. H052 product-specific upfront-interest agreement if obtainable.
-4. Revisit H020/H019 only with new live executable instances.
+1. **H052 product-specific upfront-interest agreement**: search only for authoritative current Expressbank/VTB product contract/offer documents that resolve principal offset/clawback after upfront interest.
+2. H067 only on genuinely new execution evidence as defined above.
+3. H020/H019 only with new live executable instances.
+4. Watch for a 2027 fallow-subsidy decision/window; do not repeat the closed 2026 H065 test.
 5. Data-gated H007/H014/H010 only when new data routes appear.
