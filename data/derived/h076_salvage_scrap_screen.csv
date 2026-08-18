@@ -1,0 +1,5 @@
+case,acquisition_eur,exit_basis,exit_eur,gross_spread_eur,strict_status
+free_single_battery,0,published_fixed_per_battery_AVM,5,5,execution_not_locked
+three_free_batteries,0,published_fixed_per_battery_AVM,15,15,execution_not_locked
+five_euro_battery,5,published_fixed_per_battery_AVM,5,0,rejected_before_execution
+fifty_kg_battery_batch_unknown_cost,,Schrott24_0.30_per_kg,15,,requires_acquisition_and_transport_lock
