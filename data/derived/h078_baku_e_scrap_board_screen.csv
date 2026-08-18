@@ -1,0 +1,8 @@
+case,ask_azn,buyer_rate_azn_per_kg,extra_locked_cost_azn,break_even_weight_kg,break_even_weight_g,status
+5AZN_board_at_61,5,61,0,0.0819672131,81.97,market-anchor-only
+5AZN_board_at_50,5,50,0,0.1,100.00,sensitivity
+5AZN_board_at_30,5,30,0,0.1666666667,166.67,sensitivity
+5AZN_board_at_20,5,20,0,0.25,250.00,sensitivity
+5AZN_board_at_61_plus_3_cost,5,61,3,0.1311475410,131.15,market-anchor-only
+5AZN_board_at_50_plus_3_cost,5,50,3,0.16,160.00,sensitivity
+5AZN_board_at_30_plus_3_cost,5,30,3,0.2666666667,266.67,sensitivity
