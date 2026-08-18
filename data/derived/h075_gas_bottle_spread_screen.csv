@@ -1,0 +1,5 @@
+candidate,observed_secondary_ask_eur,published_refund_guidance_eur,gross_spread_eur,strict_status,notes
+Westfalen 11kg Hattgenstein low-index,10,30,20,NOT_SUCCESS,"pickup-only; exact dealer refund must be bound; ownership remains Westfalen"
+Westfalen 11kg Hattgenstein cached ask,15,30,15,NOT_SUCCESS,"same candidate/cache discrepancy; use accepted seller price only at execution"
+Westfalen 11kg Waltrop generic Pfandflasche,28,30,2,REJECT_MARGIN,"brand/type not sufficiently locked; spread too thin"
+Westfalen 19kg Ahaus,NA,50,NA,OPEN_PRICE_GATE,"live/current VB listing; accepted price unknown"
