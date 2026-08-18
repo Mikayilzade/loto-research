@@ -12,7 +12,22 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H070 — Azerbaijan interbank FX cross-arbitrage: NEW CLASS, synchronized sample negative
+# H071 — statutory gift-card cash redemption: NEW VALIDATED MECHANISM, execution-gated
+Key files:
+- `research/h071_statutory_giftcard_cash_redemption.md`
+- `src/loto_research/giftcard_cash_redemption.py`
+- `tests/test_giftcard_cash_redemption.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H071_APPEND.md`
+
+California SB 22 makes qualifying closed-loop gift cards/e-gift cards with balance **< $15** mandatorily cash-redeemable from **2026-04-01**. Therefore if a valid in-scope balance `B` is acquired only after all validity/redemption gates are locked, with all-in irreversible cost `P+C < B`, deterministic cash profit is `B-P-C > 0`.
+
+The discounted secondary market is real and current, but this run did **not** prove a live qualifying `<$15` card at sufficient discount together with a pre-payment non-revocation/validity lock and a practical low-cost California redemption route from Azerbaijan. A 45-day marketplace buyer guarantee is risk mitigation, not the all-branches certainty required for terminal SUCCESS.
+
+Status: **MECHANISM VALIDATED / CURRENT EXECUTION-GATED / NOT SUCCESS**.
+
+Reopen H071 only with a current small-balance candidate, lockable validity/escrow, or a jurisdiction/operator that supports guaranteed remote statutory cash redemption.
+
+# H070 — Azerbaijan interbank FX cross-arbitrage: synchronized sample negative
 Key files:
 - `research/h070_azerbaijan_interbank_fx_cross_arbitrage.md`
 - `src/loto_research/fx_cross_arbitrage.py`
@@ -70,10 +85,10 @@ Status: **MECHANISM VALIDATED / 2026 NEW-ENTRY GUARANTEE REJECTED**.
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H070_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H071_APPEND.md`.
 
 # Next priorities
-1. Do **not** repeat H067/H068/H069/H052 generic searches without genuinely new execution evidence.
+1. Do **not** repeat H067/H068/H069/H052/H071 generic searches without genuinely new execution evidence.
 2. H070 only on new synchronized/live bank quotes or a lockable feed; no stale-rate comparisons.
 3. Expand to another **new deterministic principal-preserving / statutory-redemption / fixed-cash edge class**.
 4. H020/H019 only with genuinely new live executable instances.
