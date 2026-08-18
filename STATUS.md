@@ -12,83 +12,66 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H083 — Baku KEM-1 live Soviet-component screen: CLOSED AT CURRENT ASK
+# H084 — current Soviet-relay cash-price targeting: ACTIVE SEARCH REFINEMENT
 Key files:
-- `research/h083_kem1_local_screen.md`
-- `data/derived/h083_kem1_local_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H083_APPEND.md`
+- `research/h084_current_relay_cash_price_targeting.md`
+- `data/derived/h084_current_relay_cash_price_targets.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H084_APPEND.md`
 
-Fresh marketplace evidence recovered an active Baku Lalafo listing for **KЭМ-1 / `КЭМ-1 зА` at 2 AZN/unit**, with a 250-unit package indication.
+A fresh buyer table explicitly dated **18.08.2026** materially improves H082 target selection. Highest published external buyer rows recovered:
+- DP-12 902/903/906 through 1990: **6,384.10 RUB/unit**;
+- RES-22 unified 200–299 through 1974: **4,788.08 RUB/unit**;
+- RES-32 unified 354/355 through 1982: **3,830.46 RUB/unit**;
+- RPS-36 254/255/256/264 through 12/1979: **3,724.06 RUB/unit**;
+- RES-7 all passports/years: **2,647.38 RUB/unit**;
+- RES-8 050/051/052 through 12/1966: **2,470.89 RUB/unit**;
+- RES-8 050/051/052 through 12/1971: **1,976.71 RUB/unit**.
 
-Ordinary KEM-1 reference content (~0.002 g Au + ~0.002 g Pd) combined with fresh Baku indicative anchors (175 AZN/g Au, 58 AZN/g Pd) gives only:
-- theoretical contained-metal basis ≈ **0.466 AZN/unit**;
-- theoretical/ask ratio ≈ **23.3%**;
-- 250-unit acquisition = **500 AZN** vs ordinary-reference basis ≈ **116.5 AZN** before recycler discounts/costs.
+Critical finding: passport/year can change buyer value by more than an order of magnitude inside the same family. RES-9 examples range from **55.88 RUB/unit** for some later 01/02/06 units to **1,384.16 RUB/unit** for higher-value passport subsets. Generic model-only acquisition is therefore unsafe.
 
-A separate higher-content `Контакт КЭМ-1` reference exists, but exact identity cannot be safely mapped to the listing; project rules prohibit using that favorable row without exact technical proof.
+Fresh Azerbaijan searches still did not recover an index-visible exact qualifying unit with readable passport/year + fixed ask. Current Tap.Az mixed Soviet/radio-part listings at low starting asks are lead pools only because search-index text does not expose enough markings. Current Baku buyer infrastructure exists, including explicit acceptance of RES-8/RES-9/RPS-36 by quote, but no binding exact-unit payout has been locked.
 
-Status: **REJECTED AT CURRENT ASK; do not repeat generic KEM-1 searches unless a model-specific buyer quote independently exceeds ask + costs.**
+New priority order:
+1. DP-12 902/903/906;
+2. early RES-22 200–299;
+3. RES-32 354/355;
+4. early RPS-36 254/255/256/264;
+5. RES-7;
+6. early RES-8 050/051/052;
+7. only high-value RES-9 passport subsets.
 
-# H082 — Soviet relay passport/value arbitrage: ACTIVE LOCAL LEAD
-Key files:
-- `research/h082_soviet_relay_passport_arbitrage.md`
-- `data/derived/h082_soviet_relay_value_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H082_APPEND.md`
-
-Why H082 remains stronger than H081/H083:
-- qualifying Soviet relays can be valued from **model + passport + production date**, avoiding unknown contact-tip mass;
-- current Baku buyer infrastructure explicitly accepts radio-electronic scrap / precious-metal-bearing relays;
-- high-content reference families have much larger theoretical margins than KEM reed contacts.
-
-Reference screens, **not executable buyer payouts**:
-- RES-7: 0.8 g PLI-10 -> theoretical local quote basis **69.36 AZN/unit**;
-- RES-8 passports 050/051/052 through 12/1971: 0.55 g PLI-10 -> **47.685 AZN/unit**;
-- RES-9 passports 201/202/208: 0.165 g PLI-10 -> **14.3055 AZN/unit**;
-- REN-33 silver-only reference: ~**10.7991 AZN/unit** on indexed Ag quote basis.
-
-Fresh exact local searches still did not recover an active RES-7/qualifying RES-8/RES-9 listing with readable passport/year and fixed ask. A generic Soviet electromagnetic-relay lot exists but remains model/price ambiguous and therefore cannot satisfy the execution theorem.
-
-Strict execution gate:
-1. exact relay model/passport/year visible and authentic;
-2. buyer accepts exact classification;
-3. binding immediate-cash payout or fixed formula locked before seller payment;
-4. payout > ask + all transport/prep/assay/tax/fees;
-5. seller payment only after buyer-side eligibility/payout gate is locked.
+Strict execution gate remains: exact model/passport/year visible -> local buyer classification + binding payout before seller payment -> payout > ask + all transport/prep/assay/tax/fees.
 
 Status: **PROMISING / NOT SUCCESS**.
 
+# H083 — Baku KEM-1 screen: CLOSED AT CURRENT ASK
+Active Baku KEM-1 at 2 AZN/unit was screened against ordinary reference content and local metal indications; theoretical basis only ~0.466 AZN/unit. Do not repeat unless exact identity + binding buyer quote independently exceeds ask + costs.
+
+# H082 — Soviet relay passport/value arbitrage
+Still the umbrella local lead. H084 replaces the old theoretical-metal target order with a current buyer-price ranking. Require readable markings and local binding payout before purchase.
+
 # H081 — Baku Schneider contactor route
-Still promising but public exact silver-tip gram mass is blocked. Do not repeat generic mass searches. Reopen only on a fixed whole-unit buyer quote or genuinely new exact-model teardown/manufacturer evidence.
+Still execution-gated by unknown exact precious-metal payout. Reopen only on fixed whole-unit LC1D09/LC1D32 buyer quote or new exact technical evidence.
 
-# H079 — Baku salvage component density screen
-Ordinary CPU/RAM/small motors screened weak. Carry forward only exact high-grade lots with locked buyer quote or copper-rich transformers with measured yield and fixed payout.
-
-# H078 — Baku e-scrap PCB pre-quote arbitrage
-Local buyer mechanism validated and low-ask board inventory exists, but no exact board is yet paired with buyer-side classification/weight + fixed payout above ask and all costs before seller payment.
-
-# H077 — Baku catalytic-converter pre-quote arbitrage
-Local recycler infrastructure and low-ask marketplace inventory validated; exact binding recycler payout + provenance + condition before seller payment remains unlocked.
-
-# H076 — zero-cost salvage -> deterministic scrap cash
-Class validated; remote execution economics weak except for co-located batches/higher-value salvage or Azerbaijan-local inventory with locked buyer bid.
-
-# H075 / H073 — Germany Pfand classes
-Deterministic redemption + live discounts validated, but local executor/remittance/all-in execution remains unlocked.
-
-# H074 — Baku local gold-scrap arbitrage
-Requires seller pre-payment assay + binding immediate-cash buyer bid for exact item + capped costs.
+# H079 / H078 / H077
+- transformer/copper: only exact item + measured recoverable copper + fixed buyer payout;
+- PCB/e-scrap: only exact active board + buyer-side classification/weight + fixed payout;
+- catalysts: only exact serial/photos/provenance + binding recycler bid or pre-payment assay.
 
 # Other deterministic leads
-- H072 Azerbaijan stored-value/e-money redemption: mechanism validated, no issuer-permitted discounted source with atomic acquisition.
-- H071 California gift-card cash redemption: mechanism validated, execution-gated.
-- H070 Azerbaijan interbank FX cross-arbitrage: sampled synchronized state negative.
-- H069 damaged AZN face redemption: no live discounted note with pre-purchase eligibility lock.
-- H068 CBAR investment-coin mandatory buyback: sampled asks above buyback.
-- H067 transferable scrappage document: fixed redemption/transferee right validated, unused-status + live margin execution blocked.
+- H076 zero-cost salvage -> scrap cash: class valid, logistics usually kill margin unless co-located.
+- H075/H073 Germany Pfand: deterministic redemption and discounts validated; executor/remittance/all-in route not locked.
+- H074 Baku gold-scrap: requires seller pre-payment assay + binding buyer bid.
+- H072 Azerbaijan stored-value/e-money redemption: no issuer-permitted discounted source with atomic acquisition.
+- H071 California gift-card cash redemption: execution-gated.
+- H070 interbank FX: sampled synchronized state negative.
+- H069 damaged AZN redemption: no live discounted note with pre-purchase eligibility lock.
+- H068 CBAR coin mandatory buyback: sampled asks above buyback.
+- H067 scrappage document: fixed redemption/transferee right validated; unused-status + live margin execution blocked.
 - H052 upfront insured interest: product-specific contract public-web data-blocked.
-- H065 2026 fallow subsidy: new-entry path rejected.
+- H065 fallow subsidy: new-entry path rejected.
 
-# Other important open branches
+# Other open branches
 - H020 two-sided arbitrage: mechanism validated; no fully vested live setup.
 - H019 capped fixed-prize saturation: valid in principle; sampled instances fail economics.
 - H007 high-frequency RNG: data-gated.
@@ -99,20 +82,18 @@ Requires seller pre-payment assay + binding immediate-cash buyer bid for exact i
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H083_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H084_APPEND.md`.
 
 # Next priorities
-1. **H082 first:** search exact local/Azerbaijan-accessible high-value Soviet relay lots with readable model + passport + production year. Highest-value first targets: RES-7 and early RES-8 050/051/052. Reject listings without readable markings. Require model-specific buyer payout before purchase.
-2. Expand H082 beyond RES into passport-valued RPS/RPN/REN families and marked KM5/KM6 ceramic capacitors where documentation fixes precious-metal content before acquisition.
-3. Explicitly skip generic KEM-1/KEM-1A at current ~2 AZN asks unless exact identity + binding buyer quote proves otherwise; H083 already screened this path.
-4. H081 only if a fixed whole-unit LC1D09/LC1D32 buyer quote appears; do not repeat generic tip-mass search.
-5. H079 transformer/copper only with exact item + measured recoverable copper + fixed buyer payout + capped prep/transport before seller payment.
-6. H078 only with exact active board + buyer-side weight/category + fixed payout before seller payment.
-7. H077 only with exact active catalyst + serial/photos/provenance + binding recycler bid or pre-payment assay.
-8. H076 only with co-located batch / binding buyer / locked executor evidence.
-9. H075/H073 only with exact seller/dealer/executor evidence.
-10. H074 only with exact assay-before-payment candidate + binding buyer bid.
-11. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
-12. H020/H019 only with genuinely new live executable instances.
-13. Data-gated H007/H014/H010 only when new data routes appear.
-14. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+1. **H084/H082 first:** search exact Azerbaijan-accessible DP-12, early RES-22, RES-32 354/355, early RPS-36, RES-7 and early RES-8 lots with readable markings and fixed ask.
+2. For any exact candidate, obtain/locate a **local binding buyer payout before seller payment**. No theoretical-metal substitution.
+3. Expand exact marked-component search into high-value KM5/KM6 ceramic capacitors and other passport-valued radio components only when markings are readable.
+4. Skip generic KEM-1/KEM-1A at ~2 AZN asks; H083 closed it.
+5. H081 only if fixed whole-unit buyer quote appears.
+6. H079/H078/H077 only with exact item + binding pre-purchase payout evidence.
+7. H075/H073 only with exact seller/dealer/executor evidence.
+8. H074 only with assay-before-payment + binding buyer bid.
+9. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
+10. H020/H019 only with genuinely new live executable instances.
+11. Data-gated H007/H014/H010 only when new data routes appear.
+12. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
