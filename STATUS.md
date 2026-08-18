@@ -12,7 +12,31 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H088 — K52/K53 material-classification correction: COMPLETED THIS PACKET
+# H089 — BakıKart refundable-balance secondary market: COMPLETED THIS PACKET
+Files:
+- `research/h089_bakikart_refundable_balance_secondary_market.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H089_APPEND.md`
+
+Operator terms validate immediate refund of unlimited-use BakıKart balance at Card Analysis Centers. A live indexed Baku listing advertised **23 AZN stored balance for 20 AZN**, a naive 3 AZN / 15% spread.
+
+However the same governing terms explicitly prohibit resale and acquisition outside prescribed channels. Therefore `buy discounted card -> redeem face balance` is not accepted as a contract-compliant guaranteed arbitrage.
+
+Status: **REDEMPTION MECHANISM VALIDATED / LIVE SPREAD OBSERVED / EXECUTABLE GUARANTEE REJECTED**.
+
+# H090 — ƏDV cashback + merchandise-return loop: COMPLETED THIS PACKET
+Files:
+- `research/h090_vat_cashback_return_cycle.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H090_APPEND.md`
+
+Current official Azerbaijan VAT-cashback rules explicitly offset already-paid cashback against a later merchandise refund. Exact identity:
+
+`cashback R + adjusted refund (P-R) = original purchase price P`.
+
+Therefore `buy -> collect cashback -> return item` has exactly zero gross profit before friction; returning before cashback also leaves no retained rebate.
+
+Status: **CIRCULAR ARBITRAGE REJECTED BY EXACT ACCOUNTING IDENTITY**.
+
+# H088 — K52/K53 material-classification correction
 Files:
 - `research/h088_k52_k53_material_classification.md`
 - `data/derived/h088_k52_k53_material_classification.csv`
@@ -73,13 +97,14 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. **Systematic class expansion**: move beyond repeated component-scrap searches and identify a genuinely new deterministic redemption/buyback/subsidy class with a published or contractually bindable payout.
-2. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
-3. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
-4. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
-5. H075/H073 only with exact seller/dealer/executor evidence.
-6. H074 only with assay-before-payment + binding buyer bid.
-7. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without new execution evidence.
-8. H020/H019 only with genuinely new live executable instances.
-9. Data-gated H007/H014/H010 only when new data routes appear.
-10. Continue until strict executable SUCCESS or defensible classes are exhausted.
+1. **Systematic class expansion**: continue beyond component-scrap searches. Highest-value next screen: contract-permitted transferable stored-value/refund instruments or mandatory buyback/redemption classes where acquisition below redemption value is lawful.
+2. Search reversible-purchase subsidy classes only where refund and subsidy are legally independent; H090 closes the ordinary Azerbaijan VAT-return loop.
+3. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
+4. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
+5. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
+6. H075/H073 only with exact seller/dealer/executor evidence.
+7. H074 only with assay-before-payment + binding buyer bid.
+8. Do not repeat H067/H068/H069/H052/H071/H072/H089 generic searches without new execution evidence.
+9. H020/H019 only with genuinely new live executable instances.
+10. Data-gated H007/H014/H010 only when new data routes appear.
+11. Continue until strict executable SUCCESS or defensible classes are exhausted.
