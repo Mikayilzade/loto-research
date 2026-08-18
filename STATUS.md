@@ -12,60 +12,51 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H071 — statutory gift-card cash redemption: NEW VALIDATED MECHANISM, execution-gated
+# H072 — Azerbaijan stored-value / electronic-money redemption: NEW VALIDATED MECHANISM, execution-gated
 Key files:
-- `research/h071_statutory_giftcard_cash_redemption.md`
-- `src/loto_research/giftcard_cash_redemption.py`
-- `tests/test_giftcard_cash_redemption.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H071_APPEND.md`
+- `research/h072_azerbaijan_stored_value_redemption.md`
+- `src/loto_research/stored_value_redemption.py`
+- `tests/test_stored_value_redemption.py`
+- `data/derived/h072_azerbaijan_stored_value_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H072_APPEND.md`
 
-California SB 22 makes qualifying closed-loop gift cards/e-gift cards with balance **< $15** mandatorily cash-redeemable from **2026-04-01**. Therefore if a valid in-scope balance `B` is acquired only after all validity/redemption gates are locked, with all-in irreversible cost `P+C < B`, deterministic cash profit is `B-P-C > 0`.
+Azerbaijan Payment Services law Article 13.5 requires an electronic-money issuer to return residual value immediately on holder request. This creates a deterministic face-redemption anchor: if valid redeemable balance `B` can be acquired only after ownership/validity is locked for total irreversible cost `P+C < B`, then cash profit floor is `B-P-C > 0`.
 
-The discounted secondary market is real and current, but this run did **not** prove a live qualifying `<$15` card at sufficient discount together with a pre-payment non-revocation/validity lock and a practical low-cost California redemption route from Azerbaijan. A 45-day marketplace buyer guarantee is risk mitigation, not the all-branches certainty required for terminal SUCCESS.
+Current m10 mechanics strengthen the class: wallet-to-wallet transfer is free; the dedicated rate page publishes wallet-to-card transfers free up to 5,000 AZN/month; QR cash-out costs 0.5% with 1 AZN minimum. Mechanical examples: a 100-AZN balance acquired below 99 AZN survives QR cash-out before other costs; 500 AZN must be acquired below 497.50 AZN.
+
+However terminal SUCCESS fails because no current public lawful discounted e-money source with atomic/escrow settlement was found, and m10 terms preserve blocking/refusal branches for business use, unusual/non-standard transactions and other stated compliance cases. BakıKart has immediate unlimited-card balance refund and anonymous possession transfer, but its terms expressly prohibit paid resale.
+
+Status: **DETERMINISTIC REDEMPTION MECHANISM VALIDATED / NO STRICT EXECUTABLE INSTANCE**.
+
+Reopen H072 only with an issuer-permitted discounted source, atomic/escrow acquisition, or a promotion that creates redeemable e-money above irreversible cost without a clawback/business-use branch.
+
+# H071 — statutory gift-card cash redemption: VALIDATED MECHANISM, execution-gated
+California SB 22 makes qualifying closed-loop gift cards/e-gift cards with balance < $15 mandatorily cash-redeemable from 2026-04-01. A current qualifying discounted card plus pre-payment validity lock and practical low-cost redemption route has not been proven.
 
 Status: **MECHANISM VALIDATED / CURRENT EXECUTION-GATED / NOT SUCCESS**.
 
-Reopen H071 only with a current small-balance candidate, lockable validity/escrow, or a jurisdiction/operator that supports guaranteed remote statutory cash redemption.
-
 # H070 — Azerbaijan interbank FX cross-arbitrage: synchronized sample negative
-Key files:
-- `research/h070_azerbaijan_interbank_fx_cross_arbitrage.md`
-- `src/loto_research/fx_cross_arbitrage.py`
-- `data/derived/h070_azerbaijan_fx_cross_screen_2026-07-31.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H070_APPEND.md`
-
-Mechanism: a strict same-currency cross-bank arbitrage exists if a simultaneously executable bank bid exceeds another bank's ask after all fees/costs.
-
-Synchronized official-bank screen for **31.07.2026** found no pre-fee cross:
-- cash USD: **-0.294%** best round-trip gap;
-- cash EUR: **-2.036%**;
-- cash GBP: **-2.974%**;
-- cash RUB: **-4.651%**;
-- synchronized cashless rows were also negative.
-
-A false-positive control was added: mixing bank quotes from different dates can superficially create a RUB arbitrage, so the scanner hard-buckets by exact date/channel/currency.
+Synchronized official-bank screen for 31.07.2026 found no pre-fee cross: USD -0.294%, EUR -2.036%, GBP -2.974%, RUB -4.651%; synchronized cashless rows were also negative.
 
 Status: **VALID MECHANISM CLASS / SAMPLED STATE NEGATIVE / NOT SUCCESS**.
 
-Reopen H070 only with genuinely synchronized/live executable quotes or a feed/API that allows both legs to be locked before execution. Do not infer profit from cached search-index rates.
-
-# H069 — damaged AZN statutory face redemption: VALIDATED MECHANISM, execution-blocked
-CBAR rules provide deterministic face-value redemption for qualifying authentic damaged national banknotes. A real arbitrage requires acquiring a qualifying current-AZN note below face only after redemption eligibility is locked. No live discounted note or public binding pre-purchase eligibility route has been found.
+# H069 — damaged AZN statutory face redemption
+CBAR rules provide deterministic face-value redemption for qualifying authentic damaged national banknotes, but no live discounted note or binding pre-purchase eligibility route has been found.
 
 Status: **MECHANISM VALIDATED / NO LIVE EXECUTABLE INSTANCE**.
 
-# H068 — CBAR investment-coin mandatory buyback: PROMISING CLASS, sampled market negative
-Appointed agents must repurchase eligible CBAR investment coins, with same-day payment and price tied to official gold value subject to the published haircut. Sampled secondary-market asks were above buyback reference levels.
+# H068 — CBAR investment-coin mandatory buyback
+Appointed agents must repurchase eligible CBAR investment coins with same-day payment tied to official gold value subject to published haircut. Sampled asks were above buyback reference levels.
 
 Status: **VALIDATED REDEMPTION MECHANISM / NO POSITIVE LIVE INSTANCE**.
 
 # H067 — transferable scrappage confirmation document: TOP EXECUTION-GATED LEAD
-Waste Law Article 14-8 establishes a 3-year, single-use, unnamed, transferable confirmation document redeemable by the holder for fixed cash. Current M1/M1G or N1/N1G redemption is **1,050 AZN**. Transferee entitlement is validated; remaining blocker is locking unused validity before irreversible payment and finding enough margin.
+Waste Law Article 14-8 establishes a 3-year, single-use, unnamed, transferable confirmation document redeemable by the holder for fixed cash. Current M1/M1G or N1/N1G redemption is 1,050 AZN. Transferee entitlement is validated; remaining blocker is locking unused validity before irreversible payment and finding enough margin.
 
 Status: **MECHANISM/TRANSFEREE RIGHT VALIDATED / LIVE EXECUTION BLOCKED**.
 
 # H052 — upfront insured interest: PUBLIC-WEB DATA-BLOCKED
-Expressbank `Əlavə fürsət` and VTB `Avans` confirm advance-interest deposit products, but the decisive product-specific agreement needed to resolve insolvency/offset treatment is not public. Generic web searching is closed until genuinely new contract or authoritative interpretation appears.
+Expressbank `Əlavə fürsət` and VTB `Avans` confirm advance-interest deposit products, but the decisive product-specific agreement needed to resolve insolvency/offset treatment is not public.
 
 Status: **PROMISING / DATA-BLOCKED**.
 
@@ -85,12 +76,12 @@ Status: **MECHANISM VALIDATED / 2026 NEW-ENTRY GUARANTEE REJECTED**.
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H071_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H072_APPEND.md`.
 
 # Next priorities
-1. Do **not** repeat H067/H068/H069/H052/H071 generic searches without genuinely new execution evidence.
-2. H070 only on new synchronized/live bank quotes or a lockable feed; no stale-rate comparisons.
-3. Expand to another **new deterministic principal-preserving / statutory-redemption / fixed-cash edge class**.
+1. Do **not** repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
+2. Expand to another new deterministic principal-preserving / statutory-redemption / fixed-cash edge class.
+3. H070 only on new synchronized/live executable bank quotes or a lockable feed.
 4. H020/H019 only with genuinely new live executable instances.
 5. Data-gated H007/H014/H010 only when new data routes appear.
-6. Continue systematic class expansion until either a strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+6. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
