@@ -1,0 +1,6 @@
+instrument,face_or_balance_azn,acquisition_mode,redemption_route,published_fee,max_acquisition_for_nominal_profit,terminal_gate,status
+m10 e-money,100,discounted P2P transfer,wallet-to-card,"0 within published <=5000 AZN monthly tier",<100,"live discounted lawful source + settled-transfer-before-payment + no block/business-use branch",MECHANISM_ONLY
+m10 e-money,100,discounted P2P transfer,QR cashout,"0.5% min 1 AZN",<99,"same plus ATM execution",MECHANISM_ONLY
+m10 e-money,500,discounted P2P transfer,QR cashout,"0.5%",<497.5,"same plus ATM execution",MECHANISM_ONLY
+BakiKart unlimited,balance B,free/gift transfer,Card-Analysis Center,not identified on refund page,<B,"card resale expressly prohibited; reproducible paid acquisition fails terms",NOT_REPRODUCIBLE
+BakiKart unlimited,balance B,paid resale,Card-Analysis Center,not identified on refund page,<B,"terms expressly prohibit resale",REJECTED_CONTRACT_GATE
