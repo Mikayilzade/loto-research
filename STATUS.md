@@ -4,7 +4,7 @@ Updated: 2026-08-19
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; strongest deterministic-cash leads are now mostly transaction-level execution gates.**
+**Stage 1 — structural/state-edge search; strongest deterministic-cash leads are mostly transaction-level execution gates.**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,47 +12,37 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H086 — Baku tantalum-capacitor break-even: ACTIVE TOP PRIORITY
-Key files:
-- `research/h086_baku_tantalum_capacitor_break_even.md`
-- `data/derived/h086_tantalum_break_even_mass.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H086_APPEND.md`
+# H088 — K52/K53 material-classification correction: COMPLETED THIS PACKET
+Files:
+- `research/h088_k52_k53_material_classification.md`
+- `data/derived/h088_k52_k53_material_classification.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H087_APPEND.md`
 
-Fresh current evidence converts H085 from a generic cheap-capacitor lead into a quantitative acquisition screen:
-- Tap.Az listing #45905589 in Baku currently shows a nominal **0.20 AZN** ask and explicitly advertises tantalum among available capacitor types;
-- Baku buyer-side price discovery for tantalum capacitors is currently about **174–187 AZN/kg**;
-- zero-fixed-cost break-even accepted mass at 0.20 AZN is only **1.070–1.149 g per unit**.
+Fresh primary-source manufacturer evidence invalidates the shortcut `K53 => tantalum`:
+- confirmed tantalum: K53-1A, K53-65, K53-68, K53-69;
+- confirmed niobium counterexample: K53-4.
+Checked K52 examples remain tantalum.
 
-Exact identity:
-`m_break_even_g = 1000 * ask_per_unit / buyer_rate_per_kg`.
+Operational rule now: never apply a tantalum buyer rate from a generic K53 marking. Require exact subtype + primary material classification or a binding buyer classification for the exact photographed lot.
 
-At 174 AZN/kg, break-even mass is:
-- 0.20 AZN ask -> **1.149 g/unit**;
-- 1 AZN -> 5.747 g/unit;
-- 3 AZN -> 17.241 g/unit;
-- 5 AZN -> 28.736 g/unit.
+Fresh exact-subtype Azerbaijan searches still found no indexed lot with readable exact Soviet subtype + fixed exact-unit ask + count/weight. Generic K52/K53 search remains polluted by ASUS laptop model identifiers.
 
-For bulk with fixed cost F and n units:
-`m_avg_g > 1000 * (A + F/n) / P`.
-Example A=0.20, P=174, F=2 AZN: threshold falls from 2.299 g/unit at n=10 to 1.264 g/unit at n=100.
+Status: **VALIDATED PROCESS HARDENING / NO LIVE TRANSACTION / NOT SUCCESS**.
 
-Critical unresolved gates:
-1. indexed seller text does not prove that the tantalum units themselves are sold at 0.20 AZN or are cherry-pickable;
-2. the public Baku buyer rate is indicative/dynamic, not a binding exact-lot offer;
-3. exact marking, count and weight remain unbound.
+# H086/H087 — Baku tantalum capacitor route: EXECUTION QUEUE
+H086 break-even remains attractive only for exact classified units. H087 established that current indexed web discovery is exhausted for the exact transaction layer.
 
-Strict execution gate:
-exact unit/marking -> exact seller ask -> count/weight -> local buyer classification + binding payout -> all costs/tax/transport -> payout strictly above total cost -> only then purchase.
+Strongest seller/buyer route remains:
+1. seller exact marking/photo/count/weight + fixed ask;
+2. exact material classification;
+3. Baku buyer binding payout for same lot;
+4. all costs bounded;
+5. seller payment only if payout > all-in cost.
 
-Status: **PROMISING / EXECUTION-GATED / NOT SUCCESS**.
-
-# H085 — precious-capacitor umbrella
-Still active, now superseded operationally by H086 for tantalum. Qualifying KM/Pd/Pt classes remain quote-only; generic ceramic/KM identification is unsafe. Exact subtype + binding payout required.
-
-# H084/H082 — Soviet relay passport/value arbitrage
-Still active in parallel. Highest current external buyer target classes include DP-12, early RES-22, RES-32 354/355, early RPS-36, RES-7 and early RES-8. No indexed Azerbaijan lot with readable exact marking/passport/year + fixed ask has yet been recovered. Require local binding payout before purchase.
+Current public web does not supply the final pair of binding numbers. Do not repeat generic K52/K53 searches without a genuinely new indexed Azerbaijan source or exact subtype listing.
 
 # Other deterministic leads
+- H084/H082 Soviet relay passport/value arbitrage: exact Azerbaijan lot + binding buyer quote still missing.
 - H081 Schneider contactors: execution-gated by exact precious-metal payout.
 - H079 transformer/copper: exact item + measured recoverable copper + fixed buyer payout only.
 - H078 PCB/e-scrap: exact board classification/weight + fixed payout only.
@@ -80,18 +70,16 @@ Still active in parallel. Highest current external buyer target classes include 
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Because direct replacement of the large master file is connector-limited, connector-safe append packets are authoritative additions; H086 is recorded in `research/CHECKED_PROJECTS_AND_TESTS_H086_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. **H086 first:** search exact Azerbaijan seller lots with readable `K52`/`K53` markings, fixed per-unit ask, and count/weight evidence.
-2. For the same exact candidate, obtain/locate a **binding Baku buyer payout before seller payment**; public indicative rates are insufficient.
-3. Expand from Baku to Sumqayit/nearby only if transport remains below deterministic margin.
-4. H085 KM/Pd/Pt only with readable exact subtype and binding buyer classification.
-5. H084/H082 relay targets in parallel, but no generic model-family searches without readable markings.
-6. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
-7. H075/H073 only with exact seller/dealer/executor evidence.
-8. H074 only with assay-before-payment + binding buyer bid.
-9. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
-10. H020/H019 only with genuinely new live executable instances.
-11. Data-gated H007/H014/H010 only when new data routes appear.
-12. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+1. **Systematic class expansion**: move beyond repeated component-scrap searches and identify a genuinely new deterministic redemption/buyback/subsidy class with a published or contractually bindable payout.
+2. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
+3. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
+4. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
+5. H075/H073 only with exact seller/dealer/executor evidence.
+6. H074 only with assay-before-payment + binding buyer bid.
+7. Do not repeat H067/H068/H069/H052/H071/H072 generic searches without new execution evidence.
+8. H020/H019 only with genuinely new live executable instances.
+9. Data-gated H007/H014/H010 only when new data routes appear.
+10. Continue until strict executable SUCCESS or defensible classes are exhausted.
