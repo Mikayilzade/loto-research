@@ -1,0 +1,5 @@
+relay,passport_year_gate,metal_content_per_unit,local_quote_basis_azn_per_g,theoretical_local_metal_value_azn,interpretation
+RES-7,all passports/years,"0.8 g PLI-10 = 0.72 g Pt + 0.08 g Ir","Pt 68; Ir 255",69.36,"reference-content screen only; actual buyer quote required"
+RES-8,"050/051/052 through 12-1971","0.55 g PLI-10 = 0.495 g Pt + 0.055 g Ir","Pt 68; Ir 255",47.685,"reference-content screen only; exact passport/year mandatory"
+RES-9,"201/202/208","0.165 g PLI-10 = 0.1485 g Pt + 0.0165 g Ir","Pt 68; Ir 255",14.3055,"reference-content screen only; exact passport mandatory"
+REN-33,"to 1992 example secondary reference","5.07 g Ag","Ag 2.13",10.7991,"silver-only benchmark; actual accepted type/passport must be pre-quoted"
