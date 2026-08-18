@@ -12,7 +12,27 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H072 — Azerbaijan stored-value / electronic-money redemption: NEW VALIDATED MECHANISM, execution-gated
+# H073 — Germany mandatory container-deposit arbitrage: LIVE BELOW-FACE INVENTORY FOUND
+Key files:
+- `research/h073_germany_container_deposit_arbitrage.md`
+- `data/derived/h073_germany_deposit_live_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H073_APPEND.md`
+
+Current VerpackDG §46 (effective after the 2026-08-12 replacement of VerpackG) preserves the mandatory **€0.25** one-way beverage-container deposit and retailer refund duty. This creates a deterministic bearer-like redemption anchor after each container is validated as a qualifying unit.
+
+Two current marketplace examples materially strengthen the class:
+- **600 empty deposit cans for €30**, seller states €0.25 deposit each and not dented -> **€150 face refund / €120 gross spread** before execution/tax;
+- **300 cans for €48**, listing states **€75 deposit value** -> **€27 gross spread**.
+
+Strict formula: `profit_floor = 0.25*N - purchase_price - irreversible_execution_costs` after pre-payment inspection of DPG marking, condition and count.
+
+This is the strongest newly found live deterministic below-face redemption instance in the project. However terminal SUCCESS is **not** claimed because the observed inventory requires physical German inspection/pickup or a trusted local executor, while the current user context is Azerbaijan. No locked shipping/local-executor route preserving the spread has yet been proven.
+
+Status: **DETERMINISTIC REDEMPTION MECHANISM VALIDATED + LIVE POSITIVE LOCAL-GERMANY INSTANCE / USER-EXECUTION GEOGRAPHY GATED**.
+
+Reopen/advance only with pre-payment validation and a locked all-in execution budget below the spread, or a locally accessible equivalent.
+
+# H072 — Azerbaijan stored-value / electronic-money redemption: VALIDATED MECHANISM, execution-gated
 Key files:
 - `research/h072_azerbaijan_stored_value_redemption.md`
 - `src/loto_research/stored_value_redemption.py`
@@ -76,12 +96,13 @@ Status: **MECHANISM VALIDATED / 2026 NEW-ENTRY GUARANTEE REJECTED**.
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H072_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative until merged; newest append: `research/CHECKED_PROJECTS_AND_TESTS_H073_APPEND.md`.
 
 # Next priorities
-1. Do **not** repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
-2. Expand to another new deterministic principal-preserving / statutory-redemption / fixed-cash edge class.
-3. H070 only on new synchronized/live executable bank quotes or a lockable feed.
-4. H020/H019 only with genuinely new live executable instances.
-5. Data-gated H007/H014/H010 only when new data routes appear.
-6. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
+1. H073 only if a genuinely new execution route appears: local trusted executor, cost-locked shipping/escrow, or Azerbaijan-accessible equivalent. Do not repeat generic German Pfand searches.
+2. Do **not** repeat H067/H068/H069/H052/H071/H072 generic searches without genuinely new execution evidence.
+3. Expand to another new deterministic principal-preserving / statutory-redemption / fixed-cash edge class.
+4. H070 only on new synchronized/live executable bank quotes or a lockable feed.
+5. H020/H019 only with genuinely new live executable instances.
+6. Data-gated H007/H014/H010 only when new data routes appear.
+7. Continue systematic class expansion until either strict executable SUCCESS is proven or remaining defensible classes are exhausted.
