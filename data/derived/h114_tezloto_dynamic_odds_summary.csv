@@ -1,0 +1,6 @@
+bet_type,min_gross_return,max_gross_return,mean_gross_return
+next_exact_ball,0.714285714,0.780487805,0.761451627
+exact_two_within_next_2,0.750000000,0.781609195,0.771409000
+one_selected_within_next_6,0.769565217,0.782608696,0.776659000
+two_selected_within_next_6,0.745614035,0.781512605,0.768023000
+three_selected_within_next_6,0.752136752,0.782361309,0.771023000
