@@ -12,7 +12,29 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H092 — Azerbaijan utility / returnable-container mandatory-redemption screen: COMPLETED THIS PACKET
+# H093 — pre-funded assigned-claim arbitrage: COMPLETED THIS PACKET
+Files:
+- `research/h093_prefunded_assigned_claim_arbitrage.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H093_APPEND.md`
+
+Azerbaijan law generally allows assignment of monetary claims, with associated security rights passing to the transferee. This does **not** make ordinary factoring a guarantee: debtor defenses/set-off survive and the assignor does not normally guarantee debtor performance.
+
+A stronger deterministic sub-class was identified:
+- money is already placed on notary/court deposit for the creditor;
+- the exact deposited amount is independently verified;
+- assignment is legally permitted and completed in the required form;
+- notary/court acknowledges the transferee's right to receive the deposit;
+- any return/condition/set-off exposure is locked or bounded before seller payment;
+- acquisition price + all costs are strictly below the verified cash entitlement.
+
+Exact floor:
+`profit_floor = F - R - P - C`.
+
+The Law on Notary materially strengthens the pre-funded case because deposited money/securities may be returned to the debtor only with the beneficiary creditor's written consent or a court decision. However no current indexed Azerbaijan below-face claim was found with deposited value + assignment + transferee payout all verifiable before payment.
+
+Status: **MECHANISM VALIDATED / EXECUTION-GATED / NOT SUCCESS**. Do not repeat generic factoring searches; reopen only on a concrete below-face funded claim/auction/settlement receivable.
+
+# H092 — Azerbaijan utility / returnable-container mandatory-redemption screen
 Files:
 - `research/h092_azerbaijan_utility_container_deposit_redemption_screen.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H092_APPEND.md`
@@ -122,14 +144,15 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. **Systematic class expansion**: next screen transferable coupons/vouchers, statutory bounty/recycling certificates, refundable commercial-container deposits with explicit bearer redemption, and regulated security-deposit claims that can transfer independently of the underlying service contract.
-2. Search reversible-purchase subsidy classes only where refund and subsidy are legally independent; H090 closes the ordinary Azerbaijan VAT-return loop.
-3. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
-4. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
-5. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
-6. H075/H073 only with exact seller/dealer/executor evidence.
-7. H074 only with assay-before-payment + binding buyer bid.
-8. Do not repeat H067/H068/H069/H052/H071/H072/H089/H091/H092 generic searches without new execution evidence.
-9. H020/H019 only with genuinely new live executable instances.
-10. Data-gated H007/H014/H010 only when new data routes appear.
-11. Continue until strict executable SUCCESS or defensible classes are exhausted.
+1. **Continue systematic class expansion**: statutory bounties/recycling certificates beyond vehicle scrappage; refundable commercial-container deposits with explicit holder cash redemption; transferable coupons/vouchers only where issuer owes cash rather than merchandise; regulated claims already funded in escrow/notary/court custody.
+2. H093 only on a concrete below-face funded claim/auction/settlement receivable with pre-payment custodian confirmation; do not repeat generic factoring.
+3. Search reversible-purchase subsidy classes only where refund and subsidy are legally independent; H090 closes the ordinary Azerbaijan VAT-return loop.
+4. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
+5. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
+6. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
+7. H075/H073 only with exact seller/dealer/executor evidence.
+8. H074 only with assay-before-payment + binding buyer bid.
+9. Do not repeat H067/H068/H069/H052/H071/H072/H089/H091/H092 generic searches without new execution evidence.
+10. H020/H019 only with genuinely new live executable instances.
+11. Data-gated H007/H014/H010 only when new data routes appear.
+12. Continue until strict executable SUCCESS or defensible classes are exhausted.
