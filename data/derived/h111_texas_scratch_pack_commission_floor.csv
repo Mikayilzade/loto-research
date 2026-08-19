@@ -1,0 +1,8 @@
+game,game_no,ticket_price,pack_size,face_cost,guaranteed_prize,pack_floor,retailer_commission_rate,buyer_favorable_floor_with_commission,break_even_subsidy_rate
+X,2590,50,20,1000,625,0.625,0.05,0.675,0.375
+Extreme Multiplier,2655,20,25,500,280,0.56,0.05,0.61,0.44
+Diamond 7s,2685,20,25,500,270,0.54,0.05,0.59,0.46
+500X,2349,20,25,500,270,0.54,0.05,0.59,0.46
+Loteria Azul,2765,5,75,375,200,0.5333333333,0.05,0.5833333333,0.4666666667
+20Xtra,2355,2,125,250,145,0.58,0.05,0.63,0.42
+500X Loteria Spectacular,2659,50,20,1000,400,0.4,0.05,0.45,0.6
