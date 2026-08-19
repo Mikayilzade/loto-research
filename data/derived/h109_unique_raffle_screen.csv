@@ -1,0 +1,4 @@
+case,supply_or_space,ticket_cost,total_cost,total_guaranteed_prizes,optimistic_full_takeover_gross,gross_return_ratio,status
+Irish Millionaire Raffle 2025,600000,25 EUR,15000000 EUR,6342500 EUR,6342500 EUR,0.4228333333,REJECTED fixed-supply full takeover
+Canada LOTTO 6/49 Gold Ball current,13983816 Classic combinations,3 CAD,41951448 CAD,Gold Ball side variable,21055750.9683 CAD optimistic Classic upper bound when external Gold Ball entry wins,0.5019076092,REJECTED dynamic-issued-number strict guarantee
+OLG WINTARIO50 2025 control,dynamic unique 8-digit issued plays,5 CAD one play or 10 CAD three plays,depends on issued plays,5980000 CAD,5980000 CAD fixed prize pool,NA,historical structural control
