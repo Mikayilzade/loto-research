@@ -12,7 +12,28 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H096 — Azerbaijan employment / self-employment subsidy screen: COMPLETED THIS PACKET
+# H097 — self-employment asset-package residual screen: COMPLETED THIS PACKET
+Files:
+- `research/h097_selfemployment_asset_package_residual_screen.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H097_APPEND.md`
+
+Current official State Employment Agency package contents were screened for residual-value / low-unavoidable-cost potential.
+
+Strongest public-data candidates:
+1. **small photo studio** — color printer + laptop + camera + light; portable/liquid assets and comparatively low infrastructure burden;
+2. **phone repair** — laptop + microscope + soldering/hot-air + screen oven + tools/testers; portable durable equipment;
+3. **printing services** — printer + laptop + laminator + cutter + binding equipment/furniture;
+4. **auto mechanic / wheel alignment** — potentially higher gross asset value, but premises/installation/utilities create much larger one-year cost uncertainty.
+
+Official program rule remains decisive: assets are supplied under contract for one year and ownership transfers only after compliant monitored business-plan activity. Public pages do **not** fix exact models for most assets, minimum allowed annual activity, full required premises/utility/maintenance cost, exact failure-risk allocation, or a guaranteed post-transfer buyer price.
+
+Necessary execution gate:
+`post-transfer realizable value + guaranteed operating inflows - participant cash costs - taxes/fees - one-year compliance costs > 0`
+for every permitted outcome, locked before irreversible participant cost.
+
+Status: **PACKAGE COMPOSITION VALIDATED / BEST SUBGROUPS IDENTIFIED / EXECUTION-GATED / NOT SUCCESS**.
+
+# H096 — Azerbaijan employment / self-employment subsidy screen
 Files:
 - `research/h096_azerbaijan_employment_selfemployment_subsidy_screen.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H096_APPEND.md`
@@ -26,7 +47,7 @@ Current official programs screened:
 
 Necessary-condition result: reimbursement-only schemes with rate `r<=1` on the same mandatory cost `C` have direct cash floor `-(1-r)C<=0`. Therefore the 100% social-insurance and first-three-month payroll mechanisms can at best reduce the reimbursed cost itself to zero; 80%/50%/20% variants remain negative before productive output.
 
-The **self-employment asset-transfer program is the strongest H096 lead** because it can confer positive-value assets without a stated matching purchase payment. Strict SUCCESS still fails today because entry is approval-dependent, one year of compliant business operation/monitoring is mandatory, operating costs vary by package, and the post-transfer liquidation value is not fixed. Reopen only on a specific approved participant + signed contract + exact package + locked one-year cost floor + conservative realizable asset value.
+The **self-employment asset-transfer program remains the strongest H096 lead**, now refined by H097 to specific packages. Strict SUCCESS still requires specific approved participant + signed contract + exact delivered assets + locked one-year cost floor + conservative realizable value.
 
 Status: **CURRENT SUBSIDY CLASSES VALIDATED / REIMBURSEMENT-ONLY LOOPS REJECTED STANDALONE / SELF-EMPLOYMENT ASSET TRANSFER EXECUTION-GATED / NOT SUCCESS**.
 
@@ -46,7 +67,7 @@ Mechanism validated in principle: buy a legally assignable claim to money alread
 Status: **MECHANISM VALIDATED / EXECUTION-GATED / NOT SUCCESS**.
 
 # Strong deterministic execution leads already preserved in ledger
-- H096 self-employment assets: approved contract + exact package + one-year cost/value floor required.
+- H097/H096 self-employment assets: approved contract + exact package/model + one-year cost/value floor required.
 - H086/H087/H088 Baku tantalum capacitors: exact subtype + binding buyer payout required.
 - H084/H082 Soviet relays: exact passport/year + fixed seller ask + buyer quote required.
 - H081 Schneider contactors: exact precious-metal payout required.
@@ -75,10 +96,10 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. Search current Azerbaijan **non-reimbursement transfers/bounties** that can produce value above participant cost: self-employment asset packages, statutory awards, recycling/return certificates, transferable entitlement instruments, or approved grants with fixed asset delivery.
-2. For H096 self-employment, screen published 2026 asset packages for unusually high transferable residual value and low unavoidable one-year operating cost; do not call SUCCESS without an approved contract/participant and fixed execution floor.
-3. Search statutory bounties/recycling certificates, explicit bearer cash-redemption deposits, transferable funded claims, and deterministic reimbursements legally independent of risky economic activity.
-4. Reopen H095 only on a concrete approved/signed project with locked subsidy + supplier price and a strictly positive worst-case floor.
+1. Search current Azerbaijan **non-reimbursement transfers/bounties** not yet screened: statutory awards, recycling/return certificates, transferable entitlement instruments, and approved asset grants with explicit transfer terms.
+2. For H097, reopen only on a specific approved participant/contract or newly published exact asset models/contract terms; do not repeat generic package searches.
+3. Search current deterministic public/private **bounty or buyback programs** where a qualifying item can be acquired below a fixed redemption amount and eligibility can be verified before payment.
+4. H095 only on a concrete approved/signed project with locked subsidy + supplier price and a strictly positive worst-case floor.
 5. H094 on/after final export-support implementation rules plus a concrete locked export trade.
 6. H093 only on a concrete below-face funded claim with pre-payment custodian confirmation.
 7. Re-open component/scrap leads only on exact-item + binding payout evidence; do not repeat generic searches.
