@@ -12,6 +12,23 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
+# H105 — private-enforcement advance deterministic-refund control: CLOSED AS STANDALONE GUARANTEE
+Files:
+- `research/h105_private_enforcement_advance_control.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H105_APPEND.md`
+
+The new 2026 Azerbaijan private-enforcement regime was tested as a possible cleaner analogue of H103. It fails that role.
+
+Current law makes the claimant's advance an advance against the private enforcement officer's standard fee. The Ministry of Justice states that, for money claims, the advance is **20% of the fixed standard-fee component**. Article 26.4 makes return depend on how much of the standard fee is actually recovered from the debtor; where collection is impossible, some or all of the advance can remain consumed rather than refunded.
+
+Therefore an unresolved `xüsusi icra məmuru` advance is **not** an independently prefunded deterministic refund claim. It preserves debtor-credit risk and cannot support a strict all-outcome profit theorem merely because the claimant paid an advance.
+
+A matured subtype may still be interesting only after debtor fee collection is already complete and the refund amount has become final, assignable and redirectable. No public below-face live instance of that subtype was found in this packet.
+
+Status: **REJECTED AS STANDALONE PREFUNDED GUARANTEED-REFUND CLASS / MATURED SUBTYPE ONLY REOPENABLE UNDER H101/H103 EXECUTION GATES**.
+
+Strategic effect: keep search focused on **cash already segregated + refund/proceeds already matured + successor payout lockable before seller payment**. Do not confuse unresolved private-enforcement advances with H103 state-enforcement refunds.
+
 # H104 — Azerbaijan sovereign fixed-income control: CLOSED AS TERMINAL GUARANTEE
 Files:
 - `research/h104_azerbaijan_sovereign_fixed_income_control.md`
@@ -126,10 +143,10 @@ Real schemes, but useful only after signed approval/locked underlying trade.
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical. Latest addition: `research/CHECKED_PROJECTS_AND_TESTS_H104_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical. Latest addition: `research/CHECKED_PROJECTS_AND_TESTS_H105_APPEND.md`.
 
 # Next priorities
-1. Search specifically for a claimant whose **enforcement advance refund has already matured** under Article 80.3 / 23.4, with amount confirmed by enforcement body and willingness to accept less than face.
+1. Search specifically for a claimant whose **state-enforcement advance refund has already matured** under Article 80.3 / 23.4, with amount confirmed by enforcement body and willingness to accept less than face. H105 shows unresolved private-enforcement advances are not substitutes.
 2. Verify on a real case that Article-31 substitution changes the refund recipient before seller payment, ideally with written enforcement-officer confirmation or escrow/notarial conditional release.
 3. In parallel search for an ordinary H101 case where debt proceeds are already cleared into the enforcement-service deposit account and creditor will sell below the confirmed distributable amount.
 4. Search court/notary/auction-refund/custodian equivalents with the same `prefunded + explicit successor-recognition + payout-before-release` property.
