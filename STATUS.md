@@ -12,6 +12,19 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
+# H104 — Azerbaijan sovereign fixed-income control: CLOSED AS TERMINAL GUARANTEE
+Files:
+- `research/h104_azerbaijan_sovereign_fixed_income_control.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H104_APPEND.md`
+
+A current local fixed-income control has now been explicitly closed so it is not repeatedly rediscovered as 'guaranteed profit': the 26 May 2026 Azerbaijan Ministry of Finance 3600-day bond auction (ISIN AZ0301250012) cleared around **7% yield**, with 100 AZN nominal, 7% coupon, cut-off price 100.0000 and weighted-average price 100.0043. Current tax guidance also gives a 1 February 2023-to-31 January 2028 exemption window for dividend/discount/interest income on qualifying publicly offered regulated-market securities.
+
+Budget rules create a strong state-debt payment obligation, but ordinary sovereign fixed income still fails this project's absolute terminal theorem because payment is an issuer obligation rather than irrevocably segregated buyer-specific cash; auction/secondary execution price, broker/custody costs and early-sale market risk also remain.
+
+Status: **CONTRACTUAL POSITIVE YIELD VALIDATED / ORDINARY FIXED-INCOME CLASS REJECTED AS TERMINAL GUARANTEE**.
+
+Strategic rule: do not spend more cycles trying to relabel ordinary coupon/deposit yield as `SUCCESS` unless a new structure adds a genuinely prefunded/segregated all-outcome cash floor.
+
 # H103 — prefunded enforcement-advance refund assignment: NEW STRONG LEAD
 Files:
 - `research/h103_prefunded_enforcement_advance_refund_assignment.md`
@@ -113,7 +126,7 @@ Real schemes, but useful only after signed approval/locked underlying trade.
 Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical. Latest addition: `research/CHECKED_PROJECTS_AND_TESTS_H103_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical. Latest addition: `research/CHECKED_PROJECTS_AND_TESTS_H104_APPEND.md`.
 
 # Next priorities
 1. Search specifically for a claimant whose **enforcement advance refund has already matured** under Article 80.3 / 23.4, with amount confirmed by enforcement body and willingness to accept less than face.
@@ -126,4 +139,5 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 8. Re-open component/scrap leads only on exact-item + binding payout evidence.
 9. H020/H019 only with genuinely new live executable instances.
 10. Data-gated H007/H014/H010 only when new data routes appear.
-11. Continue until strict executable SUCCESS or defensible classes are exhausted.
+11. Ordinary sovereign/corporate bonds, deposits and other positive-yield fixed income are now H104-closed as terminal guarantees unless a genuinely prefunded all-outcome structure appears.
+12. Continue until strict executable SUCCESS or defensible classes are exhausted.
