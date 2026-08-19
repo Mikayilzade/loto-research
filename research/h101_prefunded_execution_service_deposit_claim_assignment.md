@@ -27,7 +27,16 @@ The Ministry of Justice FAQ independently confirms that debtors may pay the enfo
 Source:
 - https://justice.gov.az/index.php/az/faq?tab=4
 
-### 3. General civil-law assignment layer still applies
+### 3. 2025 amendment adds an explicit three-working-day payout clock
+A later amendment inserted Article 74.1-1: money already transferred by the debtor to the relevant enforcement-service deposit account, or collected by the enforcement body, **and payable to the claimant must be transferred to the claimant's supplied bank account within 3 working days**.
+
+Sources:
+- https://president.az/az/articles/view/68886/print
+- consolidated law: https://frameworks.e-qanun.az/1/f_1406.html — Article 74.1-1.
+
+This materially improves H101. Once successor substitution is complete and the amount is legally classified as payable to the claimant, the remaining payout timing is no longer an open-ended administrative assumption; the statute supplies a short deadline.
+
+### 4. General civil-law assignment layer still applies
 Civil Code Articles 193–194 provide that assignable claims/rights can be transferred to another owner; the claim passes in the condition held by the old owner, and (subject to exceptions) a creditor may assign without debtor consent.
 
 Source:
@@ -60,11 +69,11 @@ SUCCESS condition:
 4. Execute assignment agreement in legally sufficient form.
 5. Submit assignment to enforcement officer.
 6. **Enforcement officer issues Article-31 substitution decision naming buyer as successor claimant.**
-7. Buyer provides own bank details under Article 81-1.3 and obtains written confirmation that the credited `D-S` will be disbursed to buyer.
+7. Buyer provides own bank details under Articles 74.1-1/81-1.3 and obtains written confirmation that the credited `D-S` is payable to buyer.
 8. Only after steps 2–7 are locked, release seller payment `P` from escrow/notary/bank-controlled closing.
-9. Receive deposit-account payout.
+9. Statutory payout clock is then up to 3 working days for money already classified as payable to claimant.
 
-This is stronger than H100 because the enforcement statute explicitly supplies both the **procedural substitution rule** and the **case-specific deposit-account payout mechanism**.
+This is stronger than H100 because the enforcement statute explicitly supplies the **procedural substitution rule**, the **case-specific deposit-account payout mechanism**, and now a **short payout deadline** for payable claimant funds.
 
 ## Remaining failure branches that must be eliminated per deal
 - Article 31 says substitution is done by enforcement-officer decision; there may be processing delay or a challenge to the assignment.
@@ -74,22 +83,31 @@ This is stronger than H100 because the enforcement statute explicitly supplies b
 - Taxes and legal/notarial/bank costs are case-specific.
 - No public API/marketplace was found that exposes `already funded + distributable + offered below face` status.
 
-## Live-market search
-A current Azerbaijan example confirms that **claims themselves are actively sold by formal competitive process**: Aqrarkredit announced sale of the United Textiles FZE debt claim in July–August 2026, with applications open through 19 August 2026 and winner determination scheduled for 25 August 2026. This proves an institutional claim-sale market exists, but the advertised claim is not shown to be already prefunded in an enforcement-service deposit account and therefore is **not H101 SUCCESS**.
+## Live-market evidence — claim discounts are institutionally real
+Aqrarkredit's public 2026 claim-sale competitions demonstrate that debt claims are actually sold as assets in Azerbaijan. The United Textiles FZE claim was advertised in May 2026 with an initial sale value of USD **23,109,412.64**, and a later July–August 2026 competition advertised USD **19,643,000**. That is an announced price reduction of roughly **15%** from the earlier sale value.
 
-Source:
+Sources:
+- https://xalqqazeti.az/az/reklam-ve-elan/265099-aqrarkredit-qapali-sehmdar-cemiyyeti-bank
 - https://www.xalqqazeti.az/az/reklam-ve-elan/269331-aqrarkredit-qapali-sehmdar-cemiyyeti-bank
 
+Cabinet rules for these Aqrarkredit claim sales expressly permit first-competition pricing down to 70% of initial value and second-competition pricing down to 50%, while a third competition may use different pricing when recovery prospects are weak.
+
+Source:
+- https://xalqqazeti.az/az/nazirler-kabinetinin-qerarlari/134989-azerbaycan-respublikasi-nazirler-kabinetinin-qerari
+
+This is important market evidence: **below-prior-value claim acquisition is not merely hypothetical**. However, the advertised United Textiles claim is not shown to be already prefunded into the enforcement-service deposit account, so it does not satisfy the H101 cash-floor theorem.
+
 ## Strategic conclusion
-H101 is currently the strongest legal deterministic-cash structure in the project:
+H101 remains the strongest legal deterministic-cash structure in the project:
 
-`already-funded state enforcement deposit + legally assignable claim + Article-31 successor substitution + payout to successor + below-face price`.
+`already-funded state enforcement deposit + legally assignable claim + Article-31 successor substitution + payout to successor + statutory short payout clock + below-face price`.
 
-The legal mechanism is stronger than H100, but terminal SUCCESS still requires one concrete live transaction where the enforcement service confirms **cleared distributable funds and successor payout before buyer money is released**.
+The legal mechanism is strong, and institutional claim discounting is now independently evidenced. Terminal SUCCESS still requires one concrete live transaction where the enforcement service confirms **cleared distributable funds and successor payout before buyer money is released**.
 
 ## Next action
 Search specifically for:
 1. claims already paid into state enforcement deposit accounts but not yet distributed;
 2. creditors willing to sell those claims below distributable face value for immediate liquidity;
 3. a closing structure where enforcement-officer Article-31 substitution is completed before seller payment;
-4. court/private-executor equivalents with the same prefunding + successor-recognition property.
+4. court/notary/auction-refund equivalents with the same prefunding + successor-recognition property;
+5. operator-specific refund/escrow systems with explicit assignee payout rules.
