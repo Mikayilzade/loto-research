@@ -12,21 +12,28 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H094 — Azerbaijan SME export-cost compensation: COMPLETED THIS PACKET
+# H095 — Azerbaijan Energy Efficiency Fund: COMPLETED THIS PACKET
 Files:
-- `research/h094_azerbaijan_export_cost_compensation.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H094_APPEND.md`
+- `research/h095_azerbaijan_energy_efficiency_fund.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H095_APPEND.md`
 
+A current 2026 Azerbaijan subsidy class was validated:
+- Energy Efficiency Fund grants and subsidies;
+- pilot-project financing;
+- preferential loans up to 5% annual interest through authorized banks.
+
+The mechanism is live and available to physical/legal persons for qualifying energy-efficiency projects. However, grants/subsidies require project evaluation/selection and a financing contract; annual ceilings are determined by the Agency. There is therefore no unconditional fixed cash entitlement merely from incurring eligible spend.
+
+Strict guarantee construction now requires a **specific signed grant/subsidy contract before irreversible supplier spend**, fixed procurement/install cost, no compliant clawback branch, and deterministic project value/savings sufficient to leave a strictly positive all-in floor. No such fully locked public instance was found in this packet.
+
+Status: **VALIDATED CURRENT SUBSIDY CLASS / EXECUTION-GATED / NOT SUCCESS**.
+
+# H094 — Azerbaijan SME export-cost compensation
 Two 2026 state-budget export-support mechanisms were screened as deterministic subsidies:
 1. customs-clearance fee compensation for qualifying Azerbaijan-origin non-oil/gas exports by SMEs; operative from **2026-09-01**, paid after quarter-end, with eligible goods/destinations, per-declaration caps, application rules and exclusions delegated to implementing acts;
 2. export transport-cost support, including a published **70%** support basis for qualifying cashlessly paid rail/air/sea and Azerbaijan-registered road transport costs, subject to the detailed product/destination/value/mode framework.
 
-Exact accounting:
-`profit = sale proceeds + support - goods cost - transport - customs - other costs`.
-
-These subsidies are **real deterministic cost offsets but not standalone arbitrage**, because they require a genuine qualifying export and reimbursement follows prior qualifying expenditure. They become strategically important only if combined with a binding/prepaid/escrowed buyer sale whose normal margin is near zero and the final support amount pushes the worst-case cash floor strictly positive.
-
-As of 2026-08-19, the customs-compensation operative date is still in the future and the delegated final lists/caps/application/exclusion rules were not found published in indexed official sources. Therefore exact executable guarantee cannot yet be certified.
+These subsidies are real deterministic cost offsets but not standalone arbitrage. Exact executable guarantee requires final implementing rules plus a locked buyer trade whose normal all-in margin is near zero and state support pushes the worst-case floor positive.
 
 Status: **VALIDATED SUBSIDY MECHANISM / NOT SUCCESS / REOPEN ON FINAL RULES + CONCRETE LOCKED EXPORT TRADE**.
 
@@ -64,10 +71,12 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. **H094 execution preparation:** on/after publication of final export-support rules, screen exact eligible products/destinations/caps and search only for binding buyer trades where support can flip a locked all-in margin positive.
-2. Continue systematic class expansion into statutory bounties/recycling certificates, explicit bearer cash-redemption deposits, transferable funded claims, and deterministic reimbursements that are legally independent of risky economic activity.
-3. H093 only on a concrete below-face funded claim with pre-payment custodian confirmation.
-4. Re-open component/scrap leads only on exact-item + binding payout evidence; do not repeat generic searches.
-5. H020/H019 only with genuinely new live executable instances.
-6. Data-gated H007/H014/H010 only when new data routes appear.
-7. Continue until strict executable SUCCESS or defensible classes are exhausted.
+1. **Expand current Azerbaijan deterministic subsidies/reimbursements** beyond H094/H095, prioritizing programs where entitlement or subsidy amount can be locked by contract/approval before irreversible spend.
+2. Search statutory bounties/recycling certificates, explicit bearer cash-redemption deposits, transferable funded claims, and deterministic reimbursements legally independent of risky economic activity.
+3. Reopen H095 only on a concrete approved/signed project with locked subsidy + supplier price and a strictly positive worst-case floor.
+4. H094 on/after final export-support implementation rules plus a concrete locked export trade.
+5. H093 only on a concrete below-face funded claim with pre-payment custodian confirmation.
+6. Re-open component/scrap leads only on exact-item + binding payout evidence; do not repeat generic searches.
+7. H020/H019 only with genuinely new live executable instances.
+8. Data-gated H007/H014/H010 only when new data routes appear.
+9. Continue until strict executable SUCCESS or defensible classes are exhausted.
