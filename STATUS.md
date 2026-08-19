@@ -72,8 +72,28 @@ Files:
 - `data/derived/h113_4plus4_carryover_hurdle.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H113_APPEND.md`
 
+### H114 — Azerbaijan TezLoto exact dynamic odds
+The current official TezLoto page publishes a complete state-dependent odds table for a 35-of-48 virtual-ball draw while betting remains open after each ball.
+
+Exact uniform-without-replacement fair odds were derived for all five bet classes and all **159 published state × bet-type cells**. The best published cell returns only **78.2609% gross**; means by bet type are ~76.1%–77.7%.
+
+Complete coverage is also exactly negative:
+- cover every remaining next-ball number -> one winner, return ratio equals published/fair odds <1;
+- cover every next-two pair -> one winning pair, ratio <1;
+- cover all next-six singles/pairs/triples -> exactly 6/15/20 winners, respectively, and each deterministic gross ratio <1.
+
+Thus the dynamic odds themselves contain no current positive-EV or guaranteed-coverage arbitrage. The only remaining TezLoto route is **H007 empirical RNG/virtual-lototron bias**. Even the best published base cell requires >**27.78% multiplicative probability lift above uniform** merely to cross EV=1, so a very large persistent bias would be needed and must survive out-of-sample testing.
+
+Status: **BASE ODDS + COMPLETE-COVERAGE ROUTES CLOSED / BIAS DATA BRANCH OPEN / NO SUCCESS**.
+Files:
+- `research/h114_tezloto_dynamic_odds_exact_screen.md`
+- `src/loto_research/tezloto_dynamic.py`
+- `data/derived/h114_tezloto_dynamic_odds_summary.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H114_APPEND.md`
+
 ### Azerbaijan live branches
 - **4+4 / H014:** payout-unit engine strongly reconstructed. Full-space purchase now faces H113 multi-million external-subsidy hurdle; remaining high-value branch is **selective** category-II/zero-winner carryover reconstruction and whether a visible pre-draw state can produce positive EV or a bounded guarantee without buying the whole space.
+- **TezLoto / H007/H114:** published dynamic odds and complete coverage are negative. High-frequency virtual-draw bias remains open only if a reliable bulk history can be collected; hot/cold displays are not evidence by themselves.
 - Poz-Qazan scratch: ordinary initial states negative; remaining-prize conditional edge remains data-blocked because exact live unsold denominator/registration state is unavailable. H110/H112 strengthen the rule not to infer a guarantee from game-level remaining-prize/RTP data.
 - Beşdə 5 / Super Keno / ONLOTO: ordinary/full-space screens negative; no guarantee found.
 
@@ -88,10 +108,11 @@ Files:
 - H111 Texas exact pack floors: ordinary retailer commission far too small.
 - H112 non-Texas high-RTP/public instant-ticket screen: no current official high sealed-pack guarantee found in screened Massachusetts/NC/California/Florida routes.
 - H113 Azerbaijan 4+4 naive full-space: minimum external subsidy hurdle >9.3896m AZN even at 80% current-sales return, before costs.
+- H114 TezLoto: all 159 published dynamic-odds cells and all five full-coverage constructions are negative under the registered uniform draw model.
 
 ## NEXT ACTION
-1. **4+4 Azerbaijan H014 selective state edge:** continue category-II/zero-winner transition reconstruction, but focus on whether accumulated value is observable pre-draw and can be captured with a selective portfolio rather than full-space purchase.
-2. **RNG/physical bias H007:** collect high-frequency games/draw hardware or RNG data where persistent bias can be tested out-of-sample; do not proceed on anecdotal patterns.
+1. **H007 TezLoto / high-frequency RNG history:** seek a reliable bulk draw-history/API route for registered virtual-ball games. If obtained, test conditional number/position bias out-of-sample against the >27.78% best-case lift hurdle; do not use anecdotal hot/cold patterns.
+2. **4+4 Azerbaijan H014 selective state edge:** continue category-II/zero-winner transition reconstruction, focusing on whether accumulated value is observable pre-draw and capturable with a selective portfolio rather than full-space purchase.
 3. **Global buy-the-pot / rolldown search:** reopen only where fixed/capped eligible supply can legally be acquired in full AND guaranteed external subsidy clears the H021/H113 takeout hurdle after sharing/taxes/limits.
 4. **Lottery promotions:** pursue only deterministic rebates/discounts that alter worst-case cash floor; random second-chance/free-play value is zero for strict guarantee unless its conversion is itself deterministic.
 5. **Fixed-pack instant tickets:** reopen H111/H112 only with official current evidence of an unusually high per-pack minimum or a deterministic subsidy above the exact break-even hurdle.
@@ -99,5 +120,5 @@ Files:
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md` plus connector-safe authoritative append files. The large master file is preserved; append packets are authoritative additions when connector replacement is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H113_APPEND.md`.
-Latest case: `research/h113_4plus4_statutory_carryover_hurdle.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H114_APPEND.md`.
+Latest case: `research/h114_tezloto_dynamic_odds_exact_screen.md`.
