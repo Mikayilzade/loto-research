@@ -4,7 +4,7 @@ Updated: 2026-08-19
 Branch: `research-work`
 
 ## Current stage
-**Stage 1 — structural/state-edge search; strongest deterministic-cash leads are prefunded state-custody claims with explicit successor recognition, statutory subsidies, fixed-redemption instruments, or transfer of positive-value assets/claims after locked eligibility.**
+**Stage 1 — structural/state-edge search; strongest deterministic-cash leads are now prefunded/segregated state-custody claims with successor recognition, especially H106/H103/H101.**
 
 Terminal definitions:
 - `SUCCESS` = strictly proven guaranteed positive net profit under explicit executable conditions after all costs/outcome branches.
@@ -12,122 +12,81 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H105 — private-enforcement advance deterministic-refund control: CLOSED AS STANDALONE GUARANTEE
+# H106 — bank-liquidation prefunded payout claim: NEW TOP-TIER LEAD
 Files:
-- `research/h105_private_enforcement_advance_control.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H105_APPEND.md`
+- `research/h106_bank_liquidation_prefunded_payout_claim_assignment.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H106_APPEND.md`
 
-The new 2026 Azerbaijan private-enforcement regime was tested as a possible cleaner analogue of H103. It fails that role.
+Current Azerbaijan `Banklar haqqında` Article 87 creates a particularly strong deterministic-cash state after ordinary insolvency uncertainty is already resolved:
+1. confirmed creditor claims enter a distribution/payment schedule;
+2. court approval of that schedule is **final and non-appealable** under Article 87.3;
+3. where the scheduled creditor cannot be contacted, Article 87.4 requires the unpaid scheduled amount to be deposited in a **special Central Bank account**;
+4. Article 87.4 states that the money may be collected by the creditor or its `hüquq varisi` before limitation expires.
 
-Current law makes the claimant's advance an advance against the private enforcement officer's standard fee. The Ministry of Justice states that, for money claims, the advance is **20% of the fixed standard-fee component**. Article 26.4 makes return depend on how much of the standard fee is actually recovered from the debtor; where collection is impossible, some or all of the advance can remain consumed rather than refunded.
+General Civil Code Articles 193–196 strongly support assignment: assignable claims pass to the new creditor, and Article 196 expressly lets the new creditor exercise the claim's priority in **forced enforcement and insolvency**. Constitutional Court guidance also identifies claim assignment as a form of singular legal succession.
 
-Therefore an unresolved `xüsusi icra məmuru` advance is **not** an independently prefunded deterministic refund claim. It preserves debtor-credit risk and cannot support a strict all-outcome profit theorem merely because the claimant paid an advance.
+Strict target:
+`final court-approved payout + exact cash already segregated at CBA + assignee formally recognized before seller payment + purchase price below net confirmed payout`.
 
-A matured subtype may still be interesting only after debtor fee collection is already complete and the refund amount has become final, assignable and redirectable. No public below-face live instance of that subtype was found in this packet.
+Required theorem:
+`G = R - P - C - T - X > 0`, with `R` exact segregated payout, `P` seller price, `C` execution costs, `T` tax reserve and `X` residual encumbrance/administrative reserve.
 
-Status: **REJECTED AS STANDALONE PREFUNDED GUARANTEED-REFUND CLASS / MATURED SUBTYPE ONLY REOPENABLE UNDER H101/H103 EXECUTION GATES**.
+Current blockers:
+- no concrete public Article-87.4 already-segregated payout right offered below face was found;
+- no public ADIF/CBA procedure was found that expressly guarantees how a civil assignee is substituted as payout recipient for already-segregated Article-87.4 cash before purchase-price release;
+- live case must also lock limitation, attachments/set-off, competing assignment and tax.
 
-Strategic effect: keep search focused on **cash already segregated + refund/proceeds already matured + successor payout lockable before seller payment**. Do not confuse unresolved private-enforcement advances with H103 state-enforcement refunds.
+Status: **STRONG MECHANISM VALIDATED / FINAL SCHEDULE + SEGREGATED CASH PRESENT / ASSIGNEE-RECOGNITION + LIVE DISCOUNT INSTANCE GATED / NOT SUCCESS**.
+
+# H105 — private-enforcement advance control: CLOSED AS STANDALONE GUARANTEE
+The 2026 private-enforcement advance is an advance against the private enforcement officer's fee and refund depends on fee recovery from the debtor. Unresolved private-enforcement advances therefore retain debtor-credit risk.
+
+Status: **REJECTED AS STANDALONE PREFUNDED GUARANTEED-REFUND CLASS; only fully matured/refundable subtype may reopen under H101/H103 execution gates.**
 
 # H104 — Azerbaijan sovereign fixed-income control: CLOSED AS TERMINAL GUARANTEE
-Files:
-- `research/h104_azerbaijan_sovereign_fixed_income_control.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H104_APPEND.md`
-
-A current local fixed-income control has now been explicitly closed so it is not repeatedly rediscovered as 'guaranteed profit': the 26 May 2026 Azerbaijan Ministry of Finance 3600-day bond auction (ISIN AZ0301250012) cleared around **7% yield**, with 100 AZN nominal, 7% coupon, cut-off price 100.0000 and weighted-average price 100.0043. Current tax guidance also gives a 1 February 2023-to-31 January 2028 exemption window for dividend/discount/interest income on qualifying publicly offered regulated-market securities.
-
-Budget rules create a strong state-debt payment obligation, but ordinary sovereign fixed income still fails this project's absolute terminal theorem because payment is an issuer obligation rather than irrevocably segregated buyer-specific cash; auction/secondary execution price, broker/custody costs and early-sale market risk also remain.
+Current sovereign bonds validate positive fixed yield, but ordinary issuer obligations are not irrevocably segregated buyer-specific cash and retain execution/market/default structure incompatible with this project's absolute guaranteed-profit theorem.
 
 Status: **CONTRACTUAL POSITIVE YIELD VALIDATED / ORDINARY FIXED-INCOME CLASS REJECTED AS TERMINAL GUARANTEE**.
 
-Strategic rule: do not spend more cycles trying to relabel ordinary coupon/deposit yield as `SUCCESS` unless a new structure adds a genuinely prefunded/segregated all-outcome cash floor.
-
-# H103 — prefunded enforcement-advance refund assignment: NEW STRONG LEAD
+# H103 — prefunded enforcement-advance refund assignment: TOP-TIER LEAD
 Files:
 - `research/h103_prefunded_enforcement_advance_refund_assignment.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H103_APPEND.md`
 
-Current Azerbaijan enforcement law now gives a particularly strong deterministic-cash structure:
-1. Article 80.1 allows the claimant to pre-fund enforcement actions by paying an advance into the enforcement-service deposit account.
-2. Article 80.3 says the advance is returned **in full** when enforcement actions are completed; in specified document-return cases the unused surplus is refunded.
-3. Article 23.4 separately requires return of the advance when the claimant itself requests return of the enforcement document; Article 23.7 requires a formal officer decision on return/refund, checked by the enforcement-body head.
-4. Article 31 expressly provides party substitution when the claim is assigned (`tələb güzəşt edildikdə`).
-5. Civil Code Articles 193–194 independently support assignment of assignable claims unless prohibited by the nature of the obligation, contract, or law.
+Validated:
+- Article 80.1 prefunds advance into enforcement-service deposit account;
+- Article 80.3 / 23.4 create statutory refund states;
+- Article 31 expressly substitutes a successor when the claim is assigned;
+- Civil Code supports assignment.
 
-This is stronger than H102 because **prefunding + statutory refund + explicit in-proceeding successor recognition** are all present in one legal framework.
-
-Strict theorem:
-`G = R - D - P - C - T - X > 0`, where `R` is confirmed refundable cash already in the enforcement system, `D` fixed surviving deductions, `P` purchase price, `C` execution costs, `T` tax reserve and `X` residual reversal/administrative reserve.
-
-Required atomic closing:
+Best atomic sequence:
 `verify deposit -> verify final refundable amount -> conditional assignment -> Article-31 successor decision -> written successor payout confirmation -> release seller payment -> receive refund`.
 
-Best variant: **completed-enforcement full refund**, because Article 80.3 makes the entire advance refundable after completion. Claimant-requested document return is a second potentially controllable maturity trigger. Surplus-only refunds are weaker because deductions must be frozen first.
+Status: **MECHANISM VALIDATED / EXPLICIT SUCCESSOR ROUTE / LIVE DISCOUNT INSTANCE GATED / NOT SUCCESS**.
 
-Current blocker:
-- no concrete public `matured refundable advance + confirmed amount + seller willing below face` instance found;
-- real case still needs written successor-payout confirmation before buyer funds become irreversible;
-- buyer-side tax treatment of the discount/spread must be bounded on the specific structure.
-
-Status: **MECHANISM VALIDATED IN PRINCIPLE / EXPLICIT SUCCESSOR ROUTE / LIVE INSTANCE GATED / NOT SUCCESS**.
-
-# H101 — prefunded execution-service deposit claim assignment: STRONGEST ORDINARY CLAIM LEAD
-Files:
-- `research/h101_prefunded_execution_service_deposit_claim_assignment.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H101_APPEND.md`
-
-Validated mechanics remain:
+# H101 — prefunded execution-service debt proceeds: TOP-TIER LEAD
+Validated:
 - Article 31 successor substitution for assigned claims;
 - Article 81-1 case-linked enforcement-service deposit account;
-- Article 81-1.3 claimant bank-account payout routing;
-- Article 74.1-1 requires claimant money already transferred/collected through enforcement to be sent to claimant bank account within **3 working days**.
+- Article 74.1-1 three-working-day payout once claimant money is already collected/transferred.
 
-Aqrarkredit 2026 claim-sale competitions validate a real discounted claim-right market, including an announced ~15% price reduction on the United Textiles FZE claim, but no sampled institutional claim was shown already prefunded/distributable.
+Discounted claim-right markets are institutionally real, but no sampled claim has yet been shown simultaneously prefunded/distributable and offered below its confirmed cash amount.
 
 Status: **MECHANISM VALIDATED / LIVE PREFUNDED BELOW-FACE INSTANCE GATED / NOT SUCCESS**.
 
-# H102 — prefunded statutory refund receivables
-Validated classes:
-- enforcement e-auction losing-bid refunds;
-- state-property auction deposit refunds;
-- excess/incorrect state-duty refunds.
+# H102/H100 — other prefunded statutory/notary claims
+H102 auction/state-duty refunds and H100 notary-deposit claims remain valid mechanism classes but are weaker than H106/H103/H101 because a specific assignee-recognition/payout workflow has not been locked on a live case.
 
-These have fixed/prefunded refund mechanics but public processes generally identify the original payer as recipient. H103 is now stronger because Article 31 gives an explicit successor route inside the same enforcement proceeding.
-
-Status: **MECHANISM CLASS VALIDATED / TRANSFERABILITY + LIVE DISCOUNT INSTANCE GATED / NOT SUCCESS**.
-
-# H100 — prefunded notary-deposit claim assignment
-Valid in principle but weaker than H101/H103 because no equally explicit operational successor-payout sequence has been established on a live case.
-
-# H099 — cultural export mandatory payment
-Real owner/status-specific mandatory payment; ordinary buyer cannot lock entitlement/value pre-acquisition. Reopen only on transferable binding valuation/payout claim.
-
-# H098 — statutory finder / archive rewards
-Real reward mechanisms preserved. Strongest blocker remains absence of binding pre-acquisition valuation/eligibility.
-
-# H097/H096 — self-employment / employment subsidies
-Potentially valuable only with a specific approved contract, exact package/models, one-year compliant activity cost floor and conservative resale floor.
-
-# H095/H094 — project/export subsidies
-Real schemes, but useful only after signed approval/locked underlying trade.
-
-# Strong deterministic execution leads already preserved
-- **H103 enforcement-advance refund claims:** prefunded + statutory refund + explicit successor route; live discounted matured refund missing.
-- **H101 prefunded enforcement-service debt proceeds:** strongest ordinary claim; live below-face prefunded claim + atomic Article-31 substitution missing.
-- **H102 prefunded statutory refunds:** fixed/short-maturity refunds validated; assignee-recognition + discounted live instance missing.
-- H100 prefunded notary-deposit claims: live below-face claim + atomic assignee recognition missing.
+# Other preserved deterministic execution leads
 - H099 cultural export mandatory payment: owner/status-specific; transferability/pre-acquisition lock missing.
-- H098 archive documents: full official appraised value reward; binding pre-purchase valuation/eligibility missing.
-- H097/H096 self-employment assets: approved contract + exact package/model + one-year cost/value floor required.
-- H086/H087/H088 Baku tantalum capacitors: exact subtype + binding buyer payout required.
-- H084/H082 Soviet relays: exact passport/year + fixed seller ask + buyer quote required.
-- H081 Schneider contactors: exact precious-metal payout required.
-- H079 transformer/copper; H078 PCB/e-scrap; H077 catalysts: exact-item pre-purchase binding payout required.
-- H075/H073 Germany Pfand/container deposits: deterministic redemption validated; executor/remittance/all-in route not locked.
-- H074 Baku gold scrap: assay-before-payment + binding buyer bid required.
-- H072 Azerbaijan e-money redemption: no issuer-permitted discounted source with atomic acquisition.
-- H071 California gift-card cash redemption: execution-gated.
-- H069 damaged AZN redemption: no live discounted note with pre-purchase eligibility lock.
+- H098 archive documents: official appraisal reward; binding pre-purchase valuation missing.
+- H097/H096 self-employment assets: approved contract + one-year compliant activity/value floor required.
+- H086/H087/H088 tantalum capacitors; H084/H082 relays; H081 contactors; H079/H078/H077 scrap/catalyst routes: exact item + binding buyer payout required.
+- H075/H073 Germany Pfand/container deposits: deterministic redemption validated; executor/remittance route not locked.
+- H074 Baku gold scrap: assay-before-payment + binding bid required.
+- H072 Azerbaijan e-money redemption: no permitted discounted source with atomic acquisition.
+- H071 California gift-card redemption: execution-gated.
+- H069 damaged AZN redemption: no discounted note with pre-purchase eligibility lock.
 - H068 CBAR coin mandatory buyback: sampled asks above buyback.
 - H067 vehicle-scrappage certificate: fixed redemption/transferee right validated; unused-status + live-margin execution blocked.
 - H052 upfront insured interest: product-specific contract public-web data-blocked.
@@ -140,21 +99,18 @@ Real schemes, but useful only after signed approval/locked underlying trade.
 - H010 Poz-Qazan remaining inventory: data-blocked.
 
 # General terminal gates
-Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after all eligibility gates are locked.
+Any SUCCESS must prove contract/legal entitlement, complete execution, strictly positive worst-case cash floor, all taxes/fees/limits, and irreversibility only after every eligibility/recipient gate is locked.
 
 # Permanent audit ledger
-`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical. Latest addition: `research/CHECKED_PROJECTS_AND_TESTS_H105_APPEND.md`.
+`research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical. Latest addition: `research/CHECKED_PROJECTS_AND_TESTS_H106_APPEND.md`.
 
 # Next priorities
-1. Search specifically for a claimant whose **state-enforcement advance refund has already matured** under Article 80.3 / 23.4, with amount confirmed by enforcement body and willingness to accept less than face. H105 shows unresolved private-enforcement advances are not substitutes.
-2. Verify on a real case that Article-31 substitution changes the refund recipient before seller payment, ideally with written enforcement-officer confirmation or escrow/notarial conditional release.
-3. In parallel search for an ordinary H101 case where debt proceeds are already cleared into the enforcement-service deposit account and creditor will sell below the confirmed distributable amount.
-4. Search court/notary/auction-refund/custodian equivalents with the same `prefunded + explicit successor-recognition + payout-before-release` property.
-5. Search current sellers of already-accrued refundable claims at a discount where operator redirection can be locked before purchase.
-6. Search current Azerbaijan fixed-schedule surrender/acquisition/bounty/buyback programs whose payout survives change of holder and can be verified before acquisition.
-7. Reopen H098/H099 only with binding valuation/eligibility or proven transferable claim language.
-8. Re-open component/scrap leads only on exact-item + binding payout evidence.
-9. H020/H019 only with genuinely new live executable instances.
-10. Data-gated H007/H014/H010 only when new data routes appear.
-11. Ordinary sovereign/corporate bonds, deposits and other positive-yield fixed income are now H104-closed as terminal guarantees unless a genuinely prefunded all-outcome structure appears.
-12. Continue until strict executable SUCCESS or defensible classes are exhausted.
+1. **H106 live execution:** locate a creditor of a bank in liquidation whose exact court-scheduled payout is already segregated under Article 87.4 and who will sell below face.
+2. Determine the exact ADIF/liquidator/CBA procedure for recognizing a Civil-Code assignee as the Article-87.4 payout recipient; require written recognition before seller payment.
+3. H103: locate a matured state-enforcement advance refund with confirmed amount and seller discount; lock Article-31 successor payout before payment.
+4. H101: locate ordinary enforcement proceeds already cleared into the enforcement-service deposit account and a creditor willing to sell below the confirmed distributable amount.
+5. Search bank-liquidation/notary/court/auction equivalents with the same `cash already segregated + final amount + explicit successor recognition + payout before seller release` property.
+6. Search current sellers of already-accrued refundable claims at discounts where operator redirection can be locked before acquisition.
+7. Reopen H098/H099 or scrap/component leads only with genuinely new binding pre-acquisition evidence.
+8. H020/H019 only with new live executable instances; H007/H014/H010 only when new data routes appear.
+9. Continue until strict executable SUCCESS or defensible classes are exhausted.
