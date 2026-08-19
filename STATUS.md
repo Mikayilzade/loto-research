@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-**Structural/state-edge search + scratch exact-inventory search + Azerbaijan 4+4 carryover + RNG/bias + deterministic lottery promotions.**
+**Structural/state-edge search + scratch exact-pack/inventory search + Azerbaijan 4+4 carryover + RNG/bias + deterministic lottery promotions.**
 
 ### Strong validated historical controls
 - Cash WinFall rolldown: historical positive-EV mechanism validated (~+10.69% conservative pre-tax sample ROI), but not a current guaranteed-profit route.
@@ -37,13 +37,33 @@ Three closing-state controls were tested using the deliberately buyer-favorable 
 
 Because outstanding liability also includes prizes on tickets already sold but not yet claimed, actual prize value in unsold inventory is no greater than these ceilings. The percent-sold figure is operator-estimated from pack settlements, so this is a strong rejection screen rather than an exact inventory theorem; all three deficits are nevertheless large.
 
-General consequence: public remaining-prize counts alone are not enough. A future scratch SUCCESS requires an **exact purchasable unsold denominator + prize liability tied to that set**, or a fixed pack/book whose guaranteed cash return exceeds cost after a deterministic discount/subsidy.
-
 Status: **H110 TEXAS PUBLIC CLOSING-STATE SCRATCH ROUTE MATERIALLY CLOSED / NO SUCCESS**.
 Files:
 - `research/h110_texas_scratch_closing_inventory_bound.md`
 - `data/derived/h110_texas_scratch_closing_screen.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H110_APPEND.md`
+
+### H111 — fixed sealed-pack guarantee + retailer commission
+H111 tested a stronger exact-denominator scratch route: Texas publishes a **guaranteed total prize amount per sealed pack**. Seven pack structures were screened, then the full current 5% Texas retailer sales commission was deliberately granted to the buyer as if it were a deterministic rebate.
+
+Sampled pack guaranteed returns before commission: **40.0%–62.5%** of face value.
+After granting the full 5% commission: **45.0%–67.5%**.
+Best sampled case, X #2590:
+- pack face = $1,000;
+- guaranteed pack prizes = $625;
+- favorable 5% commission = $50;
+- strict recovered floor = **$675 = 67.5%**;
+- guaranteed deficit = **$325** before any other costs.
+
+This rejection does not require resolving whether self-purchase commission capture is permitted: the calculation already grants the entire commission in the buyer's favor. Conditional retailer winner bonuses have zero worst-case value and discretionary incentives cannot support a strict floor.
+
+General consequence: a Texas-style fixed pack would need a deterministic external subsidy of roughly **37.5%–60% of face** merely to reach break-even in the sampled set. Ordinary 5–10% retailer commissions/discounts cannot create a guarantee unless another jurisdiction has a pack floor already near 90–95%.
+
+Status: **H111 FIXED-PACK + ORDINARY RETAILER-COMMISSION ROUTE MATERIALLY CLOSED / NO SUCCESS**.
+Files:
+- `research/h111_texas_scratch_pack_commission_floor.md`
+- `data/derived/h111_texas_scratch_pack_commission_floor.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H111_APPEND.md`
 
 ### Azerbaijan live branches
 - 4+4: combinatorics + payout-unit engine strongly reconstructed; category II/carryover remains data-blocked and high priority.
@@ -58,9 +78,10 @@ Files:
 - Additive wheels/partial covering: strict all-outcome positive guarantee impossible when constituent tickets are all nonpositive-EV and payoff/cost remain linear.
 - H109 fixed/dynamic unique-number raffles: fixed supply fails prize-pool hurdle in tested recurring control; dynamic issued-number games fail ownership lock when external entries exist.
 - H110 ordinary remaining-prize scratch ranking: materially closed unless exact unsold inventory/prize mapping or deterministic pack subsidy exists.
+- H111 Texas-style sealed-pack guarantees: exact pack floor exists, but ordinary retailer commission is far too small to bridge the pack takeout.
 
 ## NEXT ACTION
-1. **Scratch exact-state search, narrower after H110:** search only lotteries/retailer systems exposing exact unsold ticket count/book inventory and prize liability attributable specifically to that purchasable set, or fixed pack composition plus deterministic discount/rebate. Do not repeat generic remaining-prize ranking.
+1. **Cross-jurisdiction fixed-pack search after H111:** only pursue jurisdictions where sealed-book/pack minimum payout is published and unusually high, or where a deterministic lottery-specific discount/rebate exceeds the exact break-even subsidy hurdle. Do not repeat ordinary 5% retailer-commission overlays.
 2. **Global buy-the-pot search:** reopen only where fixed/capped eligible supply can legally be acquired in full AND total guaranteed cash/external subsidy exceeds acquisition cost.
 3. **4+4 Azerbaijan H014:** continue category-II/carryover reconstruction and exact per-variant pricing/pool state.
 4. **RNG/physical bias H007:** collect high-frequency games/draw hardware or RNG data where persistent bias can be tested out-of-sample.
@@ -69,5 +90,5 @@ Files:
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md` plus connector-safe authoritative append files.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H110_APPEND.md`.
-Latest case: `research/h110_texas_scratch_closing_inventory_bound.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H111_APPEND.md`.
+Latest case: `research/h111_texas_scratch_pack_commission_floor.md`.
