@@ -1,0 +1,4 @@
+game,game_no,analysis_date,ticket_price,printed_tickets,percent_sold,outstanding_prize_liability,estimated_unsold_face_cost,optimistic_liability_cost_ceiling,optimistic_deficit,pack_size,pack_cost,guaranteed_pack_prize,guaranteed_pack_floor
+X,2590,2026-07-16,50,6119700,0.6246,89882600,114866769.00,0.782494,24984169.00,20,1000,625,0.625000
+Crazy 8s,2656,2026-06-22,2,9052375,0.5000,6342053,9052375.00,0.700595,2710322.00,125,250,124,0.496000
+Lucky No. 7,2622,2026-06-29,2,9293500,0.6438,5058796,6620689.40,0.764089,1561893.40,125,250,139,0.556000
