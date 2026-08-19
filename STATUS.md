@@ -12,7 +12,21 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H091 — Azerbaijan prepaid mobile balance cash-redemption screen: COMPLETED THIS PACKET
+# H092 — Azerbaijan utility / returnable-container mandatory-redemption screen: COMPLETED THIS PACKET
+Files:
+- `research/h092_azerbaijan_utility_container_deposit_redemption_screen.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H092_APPEND.md`
+
+Systematic local screen covered electricity/water customer accounts, LPG cylinders, pallets and reusable crates.
+
+Result:
+- electricity/water accounts are identity/property/right-of-use linked service relationships, not bearer-style transferable cash claims;
+- LPG empty→full exchange is live in Baku, but no fixed mandatory cash refund to any lawful holder was found;
+- pallets/crates have active local resale markets, but no statutory/operator fixed bearer cash-redemption obligation was found.
+
+Status: **NO NEW GUARANTEED-CASH REDEMPTION CLASS**. Do not repeat these generic searches without evidence of a fixed cash floor + transferee entitlement + live below-floor ask + pre-payment validity lock.
+
+# H091 — Azerbaijan prepaid mobile balance cash-redemption screen
 Files:
 - `research/h091_azerbaijan_prepaid_mobile_balance_redemption.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H091_APPEND.md`
@@ -108,14 +122,14 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. **Systematic class expansion**: continue beyond telecom prepaid balances. Highest-value next screen: mandatory cash redemption/buyback of deposits, returnable packaging, utility/customer deposits, or other transferable instruments where lawful acquisition below redemption value is possible.
+1. **Systematic class expansion**: next screen transferable coupons/vouchers, statutory bounty/recycling certificates, refundable commercial-container deposits with explicit bearer redemption, and regulated security-deposit claims that can transfer independently of the underlying service contract.
 2. Search reversible-purchase subsidy classes only where refund and subsidy are legally independent; H090 closes the ordinary Azerbaijan VAT-return loop.
 3. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
 4. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
 5. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
 6. H075/H073 only with exact seller/dealer/executor evidence.
 7. H074 only with assay-before-payment + binding buyer bid.
-8. Do not repeat H067/H068/H069/H052/H071/H072/H089/H091 generic searches without new execution evidence.
+8. Do not repeat H067/H068/H069/H052/H071/H072/H089/H091/H092 generic searches without new execution evidence.
 9. H020/H019 only with genuinely new live executable instances.
 10. Data-gated H007/H014/H010 only when new data routes appear.
 11. Continue until strict executable SUCCESS or defensible classes are exhausted.
