@@ -12,7 +12,18 @@ Terminal definitions:
 
 Current terminal state: **NO SUCCESS; NOT EXHAUSTED**.
 
-# H089 — BakıKart refundable-balance secondary market: COMPLETED THIS PACKET
+# H091 — Azerbaijan prepaid mobile balance cash-redemption screen: COMPLETED THIS PACKET
+Files:
+- `research/h091_azerbaijan_prepaid_mobile_balance_redemption.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H091_APPEND.md`
+
+Current operator terms close prepaid telecom balance as a mandatory-cash-redemption arbitrage class:
+- Azercell explicitly states carried prepaid AZN balance cannot be used as cash and is only usable against postpaid invoice debt;
+- Bakcell allows subscriber-to-subscriber balance transfer, but published small-denomination fees are 20–25%, and current lifecycle wording provides balance restoration rather than a fixed cash/bank redemption right.
+
+Status: **REJECTED guaranteed-cash redemption class**.
+
+# H089 — BakıKart refundable-balance secondary market
 Files:
 - `research/h089_bakikart_refundable_balance_secondary_market.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H089_APPEND.md`
@@ -23,7 +34,7 @@ However the same governing terms explicitly prohibit resale and acquisition outs
 
 Status: **REDEMPTION MECHANISM VALIDATED / LIVE SPREAD OBSERVED / EXECUTABLE GUARANTEE REJECTED**.
 
-# H090 — ƏDV cashback + merchandise-return loop: COMPLETED THIS PACKET
+# H090 — ƏDV cashback + merchandise-return loop
 Files:
 - `research/h090_vat_cashback_return_cycle.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H090_APPEND.md`
@@ -97,14 +108,14 @@ Any SUCCESS must prove contract/legal entitlement, complete execution, strictly 
 `research/CHECKED_PROJECTS_AND_TESTS.md` remains the master ledger. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
 
 # Next priorities
-1. **Systematic class expansion**: continue beyond component-scrap searches. Highest-value next screen: contract-permitted transferable stored-value/refund instruments or mandatory buyback/redemption classes where acquisition below redemption value is lawful.
+1. **Systematic class expansion**: continue beyond telecom prepaid balances. Highest-value next screen: mandatory cash redemption/buyback of deposits, returnable packaging, utility/customer deposits, or other transferable instruments where lawful acquisition below redemption value is possible.
 2. Search reversible-purchase subsidy classes only where refund and subsidy are legally independent; H090 closes the ordinary Azerbaijan VAT-return loop.
 3. Re-open H086/H087 only on new exact-lot evidence; use H088 exact material gate.
 4. H084/H082 only with readable marking/passport/year + fixed seller ask + buyer quote.
 5. H081/H079/H078/H077 only with exact-item + pre-purchase binding payout evidence.
 6. H075/H073 only with exact seller/dealer/executor evidence.
 7. H074 only with assay-before-payment + binding buyer bid.
-8. Do not repeat H067/H068/H069/H052/H071/H072/H089 generic searches without new execution evidence.
+8. Do not repeat H067/H068/H069/H052/H071/H072/H089/H091 generic searches without new execution evidence.
 9. H020/H019 only with genuinely new live executable instances.
 10. Data-gated H007/H014/H010 only when new data routes appear.
 11. Continue until strict executable SUCCESS or defensible classes are exhausted.
