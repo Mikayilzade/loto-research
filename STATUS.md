@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-Structural/state-edge search, live fixed-prize undersubscription monitoring (including cohort-local early-bird/weekly overlays), rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
+Structural/state-edge search, live fixed-prize undersubscription monitoring (including cumulative early-ticket, cohort-local early-bird/weekly overlays), rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
 
 ## Strong historical / structural controls
 - Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), not current guaranteed route.
@@ -124,6 +124,20 @@ If the game eventually sells all 500,000 tickets, a weekly cohort must be below 
 Status: **NEW COHORT-LOCAL OVERLAY MONITOR CLASS VALIDATED / RECOVERED HISTORICAL STATES NEGATIVE / STRICT GUARANTEE REJECTED**. Positive EV could still occur in a future unusually weak weekly cohort even if the full game later sells out, but incomplete ownership retains a zero-payout branch.
 Files: `research/h127_pennsylvania_weekly_cohort_overlay.md`, `data/derived/h127_pennsylvania_weekly_cohort_overlay.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H127_APPEND.md`.
 
+## H128 — cumulative early-ticket overlay
+Florida's 2026 rules created a stronger duration effect than H122's last-window calculation captured. A ticket bought before the first interim drawing remained eligible for **all four $704,500 interim boards plus the $10m final board**, and prior winners stayed alive through continuation tickets.
+
+Using the final `N=369,180` denominator for every interim draw gives a conservative lower bound because earlier denominators were <= final sales:
+- before draw 1: **$34.7202 EV on $20 = +73.6010% pre-tax ROI**, break-even final denominator **640,900**;
+- before draw 2: **$32.8119 = +64.0595%**;
+- before draw 3: **$30.9036 = +54.5181%**;
+- before draw 4: **$28.9953 = +44.9767%**.
+
+This validates a reusable **cumulative fixed-board / early-ticket duration overlay**: monitor the total remaining fixed board a ticket enters, not only the next or final draw. It still fails terminal guarantee because external tickets can occupy every winning slot; complete launch ownership remains negative ($40m cost vs $22.818m max board).
+
+Status: **STRONG HISTORICAL +EV EARLY-BIRD OVERLAY VALIDATED / STRICT GUARANTEE REJECTED / MONITOR CLASS STRENGTHENED**.
+Files: `research/h128_florida_early_ticket_cumulative_overlay.md`, `data/derived/h128_florida_early_ticket_overlay.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H128_APPEND.md`.
+
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
 - **TezLoto:** only bulk-history RNG/bias testing remains; public bulk archive/API still unresolved.
@@ -131,7 +145,7 @@ Files: `research/h127_pennsylvania_weekly_cohort_overlay.md`, `data/derived/h127
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Live fixed-prize / cohort-local undersubscription monitor:** search current/upcoming official state/national/regulated raffles with fixed boards, public sold/remaining counts, deadline drawings, and especially ring-fenced weekly/early-bird cash boards. Compute cash/tax-adjusted `EV(N,w)` where cohort-local prizes exist; only pursue candidates materially above break-even.
+1. **Live cumulative fixed-prize / cohort-local undersubscription monitor:** search current/upcoming official state/national/regulated raffles with fixed boards, public sold/remaining counts, deadline drawings, and especially cumulative early-ticket, ring-fenced weekly or early-bird cash boards. Compute cash/tax-adjusted `remaining_board(t)/N` and `EV(N,w)`; only pursue candidates materially above break-even.
 2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash-equivalent board, or where every sufficiently large purchased block receives a deterministic minimum prize.
 3. **Historical support reconstruction:** where official final sold counts are missing but complete winning-number support exists, use order-statistic bounds only as a secondary reconstruction, then seek primary confirmation before claiming a live edge.
 4. **Deterministic loyalty/coupon scan:** only pursue published discounts large enough to cross an already-computed coverage deficit; H124 closes ordinary low-rate points.
@@ -143,5 +157,5 @@ Files: `research/h127_pennsylvania_weekly_cohort_overlay.md`, `data/derived/h127
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H127_APPEND.md`.
-Latest case: `research/h127_pennsylvania_weekly_cohort_overlay.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H128_APPEND.md`.
+Latest case: `research/h128_florida_early_ticket_cumulative_overlay.md`.
