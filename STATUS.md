@@ -71,6 +71,16 @@ Files:
 - `data/derived/h118_current_capped_raffle_screen.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H118_APPEND.md`
 
+## H119 — EuroDreams Ireland guaranteed-winner promotion
+Current EuroDreams uses `C(40,6)*5 = 19,191,900` lines at €2.50, so full-space spend is **€47,979,750**. The Ireland-only event adds one extra €2,000/month for 5 years prize to one normal Irish winner.
+
+A deliberately buyer-favorable full-space upper bound values the Tier 1 annuity at its full undiscounted €7.2m cashflow, all four Tier 2 annuities at €120k each, treats displayed average lower-tier prizes as exact, and grants the entire extra €120k promotional annuity to the buyer. Even then total gross is only **€21,431,110 = 44.66699%** of spend. The promotion itself contributes at most **0.2501%** of full-space cost.
+
+Status: **GUARANTEED-WINNER FIXED TOP-UP PROMOTION REJECTED AS FULL-SPACE GUARANTEE / NO SUCCESS**.
+Files:
+- `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`
+- `data/derived/h119_eurodreams_guaranteed_winner_fullspace.csv`
+
 ## Azerbaijan live branches
 - **4+4 / H014/H115/H116:** ordinary II-only and realistic II+III carryover states are economically too weak absent extreme observable sales contraction. Reopen only on >=3 prior zero categories, a two-zero state plus >2.25x observable contraction, major operator-funded external addition, or materially more favorable primary registration rules.
 - **TezLoto / H007/H114:** only bulk-history RNG/bias testing remains; no dependable public bulk archive/API has yet been recovered.
@@ -78,17 +88,17 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## Global lottery branches already screened
-Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, recurring 50%-boost fixed-prize promotions, current Canadian capped hospital/charity takeovers, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
+Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, recurring 50%-boost fixed-prize promotions, current Canadian capped hospital/charity takeovers, guaranteed-winner fixed top-up promotions, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
 
 ## NEXT ACTION
 1. **Primary-rule closure for 4+4:** continue searching only for the actual detailed registration no. 336 conditions. If recovered, verify exact percentages and zero-category redistribution; reopen economics only if materially more favorable than H115/H116 bounds.
 2. **H007 TezLoto / high-frequency RNG history:** pursue only if a reliable bulk draw-history/API route becomes available; then run pre-registered out-of-sample bias tests against the >27.78% lift hurdle.
-3. **Global rolldown / buy-the-pot search:** target current games with legally acquirable fixed/capped eligible supply and an observable external subsidy large enough to clear the H021/H113 takeout hurdle after sharing/taxes/limits. H118 closes ordinary current Canadian hospital/charity capped-supply examples; prioritize operator/sponsor-funded final-draw overlays, must-be-won fixed pools, and unsold-inventory structures where prior tickets are excluded from the relevant prize pool.
-4. **Lottery promotions:** H117 closes recurring +50% Multi Multi prize-table boosts. Continue only with promotions whose deterministic subsidy can raise the exact worst-case/full-space floor above 100%, especially cash rebates, >~2.4x fixed-prize boosts, or fixed external pools allocated across a capped purchasable supply.
+3. **Global rolldown / buy-the-pot search:** target current games with legally acquirable fixed/capped eligible supply and an observable external subsidy large enough to clear the H021/H113 takeout hurdle after sharing/taxes/limits. H118 closes ordinary current Canadian hospital/charity capped-supply examples; H119 closes small fixed winner-top-up promotions. Prioritize operator/sponsor-funded final-draw overlays, must-be-won fixed pools, and unsold-inventory structures where prior tickets are excluded from the relevant prize pool.
+4. **Lottery promotions:** H117 closes recurring +50% Multi Multi prize-table boosts and H119 closes a €120k winner-top-up against ~€48m full-space cost. Continue only with promotions whose deterministic subsidy can raise the exact worst-case/full-space floor above 100%, especially cash rebates, >~2.4x fixed-prize boosts, or fixed external pools allocated across a capped purchasable supply.
 5. **Fixed-pack instant tickets:** reopen only with official current evidence of an unusually high per-pack guaranteed minimum or deterministic subsidy above exact break-even.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when full master replacement is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H118_APPEND.md`.
-Latest case: `research/h118_current_capped_charity_raffle_takeover.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`.
+Latest case: `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`.
