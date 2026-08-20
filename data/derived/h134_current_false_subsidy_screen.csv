@@ -1,0 +1,5 @@
+case,external_cash_cost,deterministic_cash_floor,nominal_promo_face,strict_promo_cash_floor,guaranteed_profit_floor,guaranteed_return_ratio,status
+The Scotto 12-month guaranteed prize,138.00,12.00,12.00,12.00,-126.00,0.0869565,rejected
+Hoosier Murphy buy two $5 get $1 scratch,10.00,0.00,1.00,0.00,-10.00,0.0000000,rejected
+Hoosier Village Pantry buy $10 get $1 scratch,10.00,0.00,1.00,0.00,-10.00,0.0000000,rejected
+Hoosier Lottery Day free $1 scratch,0.00,0.00,1.00,0.00,0.00,,positive_EV_free_roll_not_strict_positive_guarantee
