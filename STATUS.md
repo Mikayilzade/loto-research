@@ -1,6 +1,6 @@
 # STATUS
 
-Updated: 2026-08-20
+Updated: 2026-08-21
 Branch: `research-work`
 Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is preserved for history but is OUT OF SCOPE and must not drive NEXT ACTION.
 
@@ -11,46 +11,45 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H135 — Washington Happy Hour scalable subsidy + compact fixed-prize coverage**.
+Latest completed lottery packet: **H136 — Kentucky 100% first-deposit bonus + Pick 3 deterministic coverage**.
 
-### H135 result
-Washington's Lottery provides a rare validated promotion class with all the right structural properties: player-owned, deterministic free ticket value and explicit scaling in fixed purchase increments.
+### H136 major result
+A current Kentucky Lottery promotion provides a **100% first-deposit match up to $250**. This finally crosses the exact subsidy threshold for a compact fixed-prize game.
 
-Strongest test used historical Match 4 Happy Hour:
-- buy **$10 Match 4**, receive **$4 Match 4 free**;
-- multiple offers expressly allowed in $10 increments;
-- Match 4 is compact `4/24`, costs $2/play, and its $10,000 top prize is explicitly **not divided among winners**.
+Kentucky Pick 3 Straight full-cover identity:
+- 1,000 ordered outcomes;
+- $0.50 Straight per outcome;
+- face coverage cost **$500**;
+- exactly one winning Straight every draw;
+- guaranteed gross payout **$300**;
+- base deterministic cover ratio **60%**.
 
-Exact full-cover identity:
-- `C(24,4)=10,626` plays;
-- face cost **$21,252**;
-- deterministic payout **$13,880** (`1×$10,000 + 80×$20 + 1,140×$2`);
-- base deterministic return **65.3115%**.
+Under the current 100% match:
+- external cash deposit **$250**;
+- Bonus **$250**;
+- purchasing power **$500**;
+- if all 1,000 distinct Straight wagers for one draw are accepted, guaranteed payout **$300**;
+- conditional guaranteed pre-tax surplus = **+$50 / +20% on external cash**.
 
-Under the deliberately strongest interpretation that every free promo play can be directed to a distinct uncovered selection, effective cash cost is:
+A smaller equivalent Pair-position cover gives the same 60% identity: $25 cash + $25 Bonus covers $50 face and guarantees $30, i.e. **+$5 pre-tax conditional**.
 
-`$21,252 × 10/14 = $15,180`.
+This is the first current lottery packet in the project where a live operator subsidy mathematically converts an exact fixed-prize full-cover portfolio into a positive deterministic result before tax/execution uncertainty.
 
-Strict promo-covered return:
+### Why this is NOT SUCCESS
+Kentucky iLottery terms create a fatal ex-ante execution branch:
+- qualifying deposit is non-withdrawable and must occur before the Bonus/coverage attempt;
+- the operator reserves the right to refuse an attempted purchase and to limit purchases or a wager on a particular set of numbers at any time without notice.
 
-`$13,880 / $15,180 = 91.4361%`.
+Therefore complete coverage is **not locked before external cash becomes irreversible**. A lawful branch exists where the deposit is committed but one or more required selections are refused, destroying the all-outcome payout floor.
 
-Guaranteed pre-cost loss remains **$1,300**.
+Additionally, 2026 U.S. federal wagering-loss rules can materially change the after-tax result; the +$50 margin is not a universal net-of-tax floor without taxpayer-specific treatment.
 
-New fast screen for Match 4:
-- required face discount to break even: **>34.6885%**;
-- equivalent required free-ticket bonus on paid spend: **>53.1124%**.
-
-Observed Match 4 Happy Hour bonus was only 40% of spend, so even this unusually favorable non-shareable compact game fails.
-
-Current controls:
-- Washington Lotto Happy Hour Jun 14–27 2026: buy $5, get $1 free; scalable but only 16.67% effective discount and jackpot sharing remains.
-- OLG current 2026 LOTTO 6/49 / LOTTO MAX BOGO: real player-account bonuses but targeted and capped to one bonus, therefore not scalable into full coverage.
+Status: **PRE-TAX POSITIVE COVER VALIDATED / TERMINAL GUARANTEE REJECTED ON PRE-COMMITMENT ACCEPTANCE + TAX GATES**.
 
 Files:
-- `research/h135_washington_happy_hour_compact_coverage.md`
-- `data/derived/h135_washington_happy_hour_compact_coverage.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H135_APPEND.md`
+- `research/h136_kentucky_100pct_bonus_pick3_cover.md`
+- `data/derived/h136_kentucky_bonus_pick3_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H136_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -67,7 +66,8 @@ Files:
 - H132 purchase-local deterministic free-ticket subsidy: ownership problem solved structurally, but Mega Millions still fails because of unbounded jackpot sharing.
 - H133 current capped wallet bonuses: deterministic player-owned subsidy confirmed, but Georgia Cash Pop and WV Daily 3 remain well below strict coverage break-even.
 - H134 free random tickets / second-chance entries cannot be counted at face value toward a guaranteed coverage floor; guaranteed-prize subscriptions must be netted against vesting cost.
-- H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Match 4 package still only reaches **91.4361%** strict return.
+- H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Washington Match 4 package reaches only **91.4361%** strict return.
+- **H136 current 100% deposit match + fixed-prize Pick 3 crosses break-even mathematically (+20% pre-tax conditional), but complete-basket acceptance is not pre-committed and tax is not universally bounded.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -76,17 +76,18 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search recurring/scalable deterministic lottery subsidies above exact compact-game thresholds.** Prioritize promotions with >50% bonus-on-spend, direct ticket discounts, unrestricted wallet credit, fixed per-block cash coupons, or guaranteed retailer-local awards.
-2. Pair subsidies first with compact games having fixed, non-shareable payouts. Compute exact deterministic cover ratio `r` and reject immediately unless bonus-on-spend exceeds `1/r - 1` after costs.
-3. Specifically monitor Washington Happy Hour and analogous retailer-local offers for Match 4 or other compact games where the subsidy exceeds H135's **53.1124%** threshold or the game has a stronger base coverage ratio.
-4. Continue current/upcoming fixed-board raffle monitor with H129 exact worst-case floor and H122/H128 +EV denominator math, prioritizing unusually flat boards and high winner-count/cap ratios.
-5. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-6. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister test and require >27.78% out-of-sample probability lift in the best published state.
-7. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
-8. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
-9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: find >=100% deterministic lottery wallet/deposit bonuses where the player's external deposit remains withdrawable OR the complete wager basket can be reserved/atomically accepted before cash becomes irreversible.** H136 proves this class can cross strict coverage break-even.
+2. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%** and pair them with current player-owned subsidies; larger margin may survive tax/friction and reduce wager count.
+3. Search official batch/system/advance-purchase interfaces that guarantee acceptance of every Pick 3/Pick 4 selection before funding; reopen H136 only with a true pre-commitment execution lock and confirmed treatment of Bonus-funded winnings.
+4. Continue recurring/scalable subsidy monitor: direct ticket discounts, unrestricted wallet credit, fixed retailer-local awards and >=100% BOGO/match offers.
+5. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math, prioritizing flat prize boards and high winner-count/cap ratios.
+6. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+7. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
+8. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
+9. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
+10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H135_APPEND.md`.
-Latest case: `research/h135_washington_happy_hour_compact_coverage.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H136_APPEND.md`.
+Latest case: `research/h136_kentucky_100pct_bonus_pick3_cover.md`.
