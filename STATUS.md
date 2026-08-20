@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-Structural/state-edge search, live fixed-prize undersubscription monitoring, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
+Structural/state-edge search, live fixed-prize undersubscription monitoring (including cohort-local early-bird/weekly overlays), rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
 
 ## Strong historical / structural controls
 - Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), not current guaranteed route.
@@ -107,6 +107,23 @@ Files: `research/h126_michigan_super_raffle_undersubscription_reconstruction.md`
 
 Critical monitor upgrade: fixed-board raffles must now pass a **cash-equivalent, tax/cost-adjusted** denominator threshold, not merely a headline annuity threshold.
 
+## H127 — Pennsylvania weekly-cohort overlay
+Pennsylvania Millionaire Raffle XXXV adds a second denominator that ordinary whole-game undersubscription monitors miss:
+- final fixed lump-sum cash board **$5,089,200** at **$20** per ticket;
+- final-board-only break-even denominator **254,460 tickets**;
+- eight weekly drawings each add **$100,000** and, in the ordinary unsold state, draw only from tickets sold during that weekly entry period.
+
+For eventual final sold count `N` and weekly cohort size `w`:
+
+`EV(N,w) = 5,089,200/N + 100,000/w`.
+
+If the game eventually sells all 500,000 tickets, a weekly cohort must be below **10,181.6 tickets** for positive pre-tax EV. Recovered 2025 cohorts were much larger:
+- week 2: **44,200** tickets -> **62.2042% gross** at final N=500,000;
+- week 3: **>47,500** tickets -> **<=61.4183% gross**.
+
+Status: **NEW COHORT-LOCAL OVERLAY MONITOR CLASS VALIDATED / RECOVERED HISTORICAL STATES NEGATIVE / STRICT GUARANTEE REJECTED**. Positive EV could still occur in a future unusually weak weekly cohort even if the full game later sells out, but incomplete ownership retains a zero-payout branch.
+Files: `research/h127_pennsylvania_weekly_cohort_overlay.md`, `data/derived/h127_pennsylvania_weekly_cohort_overlay.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H127_APPEND.md`.
+
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
 - **TezLoto:** only bulk-history RNG/bias testing remains; public bulk archive/API still unresolved.
@@ -114,7 +131,7 @@ Critical monitor upgrade: fixed-board raffles must now pass a **cash-equivalent,
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Live fixed-prize undersubscription monitor:** search current/upcoming official state/national/regulated raffles with fixed boards, public sold/remaining counts and deadline drawings. Compute both `N*_nominal` and **cash-equivalent/tax-adjusted `N*_cash`** first; only pursue candidates materially below the latter.
+1. **Live fixed-prize / cohort-local undersubscription monitor:** search current/upcoming official state/national/regulated raffles with fixed boards, public sold/remaining counts, deadline drawings, and especially ring-fenced weekly/early-bird cash boards. Compute cash/tax-adjusted `EV(N,w)` where cohort-local prizes exist; only pursue candidates materially above break-even.
 2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash-equivalent board, or where every sufficiently large purchased block receives a deterministic minimum prize.
 3. **Historical support reconstruction:** where official final sold counts are missing but complete winning-number support exists, use order-statistic bounds only as a secondary reconstruction, then seek primary confirmation before claiming a live edge.
 4. **Deterministic loyalty/coupon scan:** only pursue published discounts large enough to cross an already-computed coverage deficit; H124 closes ordinary low-rate points.
@@ -126,5 +143,5 @@ Critical monitor upgrade: fixed-board raffles must now pass a **cash-equivalent,
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H126_APPEND.md`.
-Latest case: `research/h126_michigan_super_raffle_undersubscription_reconstruction.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H127_APPEND.md`.
+Latest case: `research/h127_pennsylvania_weekly_cohort_overlay.md`.
