@@ -81,6 +81,19 @@ Files:
 - `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`
 - `data/derived/h119_eurodreams_guaranteed_winner_fullspace.csv`
 
+## H120 — FDJ Grand LOTO forced-distribution screen
+The 26 June 2026 Grand LOTO used 5/49 + 1/10 at €5 per line, a €20m jackpot that was redistributed to lower ranks if no rank-1 winner existed, and 100 fixed code prizes of €20k each.
+
+Full-space size is `C(49,5)*10 = 19,068,840`, costing **€95,344,200**. Full coverage itself creates a rank-1 winner, so it removes the no-rank-1 forced-redistribution branch. Under an intentionally buyer-favorable screen that grants the portfolio the full current 54.35% LOTO-family return benchmark on all spend **plus the entire €20m jackpot and all €2m code prizes**, total gross is only **€73,819,572.70 = 77.4243%**, a deficit of **€21,524,627.30** before taxes, sharing or execution.
+
+Equivalent reopen hurdle: player-funded return would need to exceed about **76.925% of total spend in addition to the €22m headline board**, or primary rules must reveal materially more guaranteed external value/capped ownership.
+
+Status: **RECENT REAL FORCED-DISTRIBUTION MECHANISM VALIDATED / FULL-SPACE GUARANTEE REJECTED / NO SUCCESS**.
+Files:
+- `research/h120_fdj_grand_loto_forced_distribution_bound.md`
+- `data/derived/h120_fdj_grand_loto_forced_distribution.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H120_APPEND.md`
+
 ## Azerbaijan live branches
 - **4+4 / H014/H115/H116:** ordinary II-only and realistic II+III carryover states are economically too weak absent extreme observable sales contraction. Reopen only on >=3 prior zero categories, a two-zero state plus >2.25x observable contraction, major operator-funded external addition, or materially more favorable primary registration rules.
 - **TezLoto / H007/H114:** only bulk-history RNG/bias testing remains; no dependable public bulk archive/API has yet been recovered.
@@ -93,12 +106,12 @@ Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fi
 ## NEXT ACTION
 1. **Primary-rule closure for 4+4:** continue searching only for the actual detailed registration no. 336 conditions. If recovered, verify exact percentages and zero-category redistribution; reopen economics only if materially more favorable than H115/H116 bounds.
 2. **H007 TezLoto / high-frequency RNG history:** pursue only if a reliable bulk draw-history/API route becomes available; then run pre-registered out-of-sample bias tests against the >27.78% lift hurdle.
-3. **Global rolldown / buy-the-pot search:** target current games with legally acquirable fixed/capped eligible supply and an observable external subsidy large enough to clear the H021/H113 takeout hurdle after sharing/taxes/limits. H118 closes ordinary current Canadian hospital/charity capped-supply examples; H119 closes small fixed winner-top-up promotions. Prioritize operator/sponsor-funded final-draw overlays, must-be-won fixed pools, and unsold-inventory structures where prior tickets are excluded from the relevant prize pool.
+3. **Global rolldown / buy-the-pot search:** H120 now also closes the recent FDJ Grand-Loto-style €20m forced-distribution + €2m code board full-space route. Continue only with games where verified external subsidy is much larger relative to full-space spend, or where ticket supply/prize rights can be capped and atomically acquired.
 4. **Lottery promotions:** H117 closes recurring +50% Multi Multi prize-table boosts and H119 closes a €120k winner-top-up against ~€48m full-space cost. Continue only with promotions whose deterministic subsidy can raise the exact worst-case/full-space floor above 100%, especially cash rebates, >~2.4x fixed-prize boosts, or fixed external pools allocated across a capped purchasable supply.
 5. **Fixed-pack instant tickets:** reopen only with official current evidence of an unusually high per-pack guaranteed minimum or deterministic subsidy above exact break-even.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when full master replacement is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`.
-Latest case: `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H120_APPEND.md`.
+Latest case: `research/h120_fdj_grand_loto_forced_distribution_bound.md`.
