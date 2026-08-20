@@ -65,6 +65,39 @@ Files:
 - `data/derived/h122_florida_raffle_overlay.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H122_APPEND.md`
 
+## H123 — fixed-prize raffle monitor calibration
+H122 was generalized and calibrated against three additional official-lottery architectures.
+
+### Maryland Holiday Raffle 2025/26
+- maximum 325,000 sequential tickets at $20;
+- actual final sales only **237,206**;
+- fixed final prize board **$3,100,000**;
+- late-ticket expected gross at realized denominator **$13.0688 on $20 = 65.3440%**;
+- final-draw break-even denominator only **155,000**.
+
+Result: **negative control**. Material undersubscription alone does not create an edge when the fixed board is too small.
+
+### Virginia Commanders / Capitals 2026 raffles
+- each had 150,000 tickets at $20 and a deadline-or-sellout drawing from tickets actually sold;
+- fixed headline board nominally **$1,550,000** including a non-transferable $950,000 experiential prize;
+- nominal break-even sales count **77,500**; cash-only lower-tier break-even **30,000**;
+- both official game pages show **0 tickets left / sold out**, so realized nominal gross was only **51.6667%** at sellout.
+
+Result: **negative realized controls, but useful future live-monitor architecture** because a deadline drawing can proceed from fewer-than-cap sold tickets.
+
+### Michigan online raffles
+Official FAQ confirms limited supply, fixed price, predetermined prizes, deadline-or-sellout drawing and no aggregate purchase cap (250/cart, repeat carts). No favorable current crawlable live state was found in this packet.
+
+Reusable monitor identity:
+`break-even eligible denominator N* = remaining fixed cash-value prize board / ticket price`.
+A live EV signal exists only below the cost/tax-adjusted threshold. This does **not** create terminal guarantee unless the portfolio has a strictly positive minimum payout in every legal draw outcome.
+
+Status: **MONITOR CLASS VALIDATED / FLORIDA POSITIVE CONTROL / MARYLAND+VIRGINIA NEGATIVE CONTROLS / NO CURRENT SUCCESS**.
+Files:
+- `research/h123_fixed_prize_raffle_monitor_calibration.md`
+- `data/derived/h123_fixed_prize_raffle_calibration.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H123_APPEND.md`
+
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
 - **TezLoto:** only bulk-history RNG/bias testing remains; public bulk archive/API still unresolved.
@@ -72,15 +105,16 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Fixed-prize undersubscription monitor:** search current/upcoming official state/national lottery raffles with fixed minimum prize boards, public live sales counts and late-entry eligibility. Prioritize states where current denominator can fall below exact post-tax/cost break-even. Treat as EV-only unless complete eligible ownership or deterministic portfolio minimum payout can be enforced.
-2. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
-3. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
-4. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
-5. Lottery promotions: prioritize fixed cash rebates, unusually large deterministic multipliers, guaranteed added-value per purchased block, or fixed external pools over capped purchasable eligible supply.
-6. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
-7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Live fixed-prize undersubscription monitor:** search current/upcoming official state/national lottery raffles with fixed cash boards, public `tickets remaining` or sold-count data, and deadline drawings from the actually sold pool. Compute `N*` before doing deeper work; prioritize cases materially below break-even with late-entry eligibility.
+2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash board, or where every sufficiently large block receives a deterministic minimum prize.
+3. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
+4. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
+5. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
+6. Lottery promotions: prioritize fixed cash rebates, unusually large deterministic multipliers, guaranteed added-value per purchased block, or fixed external pools over capped purchasable eligible supply.
+7. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
+8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H122_APPEND.md`.
-Latest case: `research/h122_florida_millionaire_raffle_undersubscription_overlay.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H123_APPEND.md`.
+Latest case: `research/h123_fixed_prize_raffle_monitor_calibration.md`.
