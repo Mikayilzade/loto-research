@@ -57,6 +57,26 @@ Files:
 - `data/derived/h116_4plus4_multizero_bounds.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H116_APPEND.md`
 
+### H117 — Poland Multi Multi recurring +50% promotions
+A current deterministic promotion was screened because Multi Multi allows a mathematically exact full-space portfolio: for a fixed k, owning all `C(80,k)` subsets fixes the count of j-hit tickets under every possible 20-of-80 draw.
+
+Current official supplemental rules for **19–22 August 2026** boost the k=9 prize column by 50%. Exact full-space results:
+- k=9 ordinary Multi Multi: **61.3579%** deterministic gross;
+- k=9 with Plus: **62.9251%** deterministic gross.
+
+The entire recurring promotion class was then closed prospectively by granting the same 1.5x boost to every prize in each k=1..10 column:
+- best ordinary promoted full-space return: **61.7421%** at k=5;
+- best Plus promoted full-space return: **63.7187%** at k=6.
+
+Therefore the current and same-structure future `win 50% more` rotations remain far below break-even even under complete coverage. Reopen only for a materially larger boost (~2.35x–2.60x depending on k/Plus), a deterministic cash rebate, or a major price/payout redesign.
+
+Status: **CURRENT LIVE PROMOTION + RECURRING 50%-BOOST CLASS CLOSED / NO SUCCESS**.
+Files:
+- `research/h117_poland_multimulti_50pct_promo_fullspace.md`
+- `data/derived/h117_multimulti_promo_fullspace.csv`
+- `src/loto_research/multimulti_promo_coverage.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H117_APPEND.md`
+
 ### Azerbaijan live branches
 - **4+4 / H014/H115/H116:** ordinary II-only and realistic II+III carryover states are economically too weak absent extreme observable sales contraction. Reopen only on >=3 prior zero categories, a two-zero state plus >2.25x observable contraction, major operator-funded external addition, or materially more favorable primary registration rules.
 - **TezLoto / H007/H114:** only bulk-history RNG/bias testing remains; no dependable public bulk archive/API has yet been recovered.
@@ -64,17 +84,17 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ### Global lottery branches already screened
-Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
+Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, recurring 50%-boost fixed-prize promotions, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
 
 ## NEXT ACTION
 1. **Primary-rule closure for 4+4:** continue searching only for the actual detailed registration no. 336 conditions. If recovered, verify exact percentages and zero-category redistribution; reopen economics only if materially more favorable than H115/H116 bounds.
 2. **H007 TezLoto / high-frequency RNG history:** pursue only if a reliable bulk draw-history/API route becomes available; then run pre-registered out-of-sample bias tests against the >27.78% lift hurdle.
 3. **Global rolldown / buy-the-pot search:** target only current games with legally acquirable fixed/capped eligible supply and observable external subsidy large enough to clear the H021/H113 takeout hurdle after sharing/taxes/limits.
-4. **Lottery promotions:** pursue only deterministic rebates/discounts that improve the worst-case cash floor; random second-chance/free-play has zero strict guarantee value unless deterministic conversion exists.
+4. **Lottery promotions:** H117 closes recurring +50% Multi Multi prize-table boosts. Continue only with promotions whose deterministic subsidy can raise the exact worst-case/full-space floor above 100%, especially cash rebates, >~2.4x fixed-prize boosts, or fixed external pools allocated across a capped purchasable supply.
 5. **Fixed-pack instant tickets:** reopen only with official current evidence of an unusually high per-pack guaranteed minimum or deterministic subsidy above exact break-even.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when full master replacement is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H116_APPEND.md`.
-Latest case: `research/h116_4plus4_exceptional_multizero_bound.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H117_APPEND.md`.
+Latest case: `research/h117_poland_multimulti_50pct_promo_fullspace.md`.
