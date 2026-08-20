@@ -1,0 +1,4 @@
+case,ticket_price,prize_board,cap_or_sold_state,break_even_denominator,implied_sold,ev_per_ticket,gross_return_pct,pre_tax_roi_pct,status,notes
+Jersey_Hospice_2026_sensitivity,300,1300000,7000_cap_assumption_2500_remaining,4333.333333,4500,288.888889,96.296296,-3.703704,near_threshold_negative,"2026 board/price/2500 remaining verified; 7000 cap is continuity sensitivity from 2021/2023/2025 architecture, not directly verified for 2026"
+Minnesota_Millionaire_Raffle_2026,10,5149150,1000000_sold_out,514915,1000000,5.14915,51.4915,-48.5085,negative_soldout,"official exact board; sold out in 14 days"
+Michigan_online_raffle_architecture,,,,,,, , ,monitor_open,"current FAQ confirms limited supply + predetermined prizes + deadline-or-sellout draws; no crawlable live measurable state recovered"
