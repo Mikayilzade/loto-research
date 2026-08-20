@@ -1,0 +1,8 @@
+case,ticket_price,observed_or_capacity_tickets,remaining_or_total_board,break_even_tickets,gross_return_ratio,status
+Florida_2026_final_window,20,369180,10704500,535225,1.449767,positive_EV_control
+Maryland_2026_final_draw,20,237206,3100000,155000,0.653440,negative_control
+Maryland_2026_all_board_upper_bound,20,237206,3250000,162500,0.685059,negative_control
+Virginia_Commanders_2026_nominal,20,150000,1550000,77500,0.516667,sold_out_negative
+Virginia_Commanders_2026_cash_only,20,150000,600000,30000,0.200000,sold_out_negative
+Virginia_Capitals_2026_nominal,20,150000,1550000,77500,0.516667,sold_out_negative
+Virginia_Capitals_2026_cash_only,20,150000,600000,30000,0.200000,sold_out_negative
