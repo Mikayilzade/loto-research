@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-Structural/state-edge search, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions, capped/fixed-supply raffle economics, and **fixed-prize undersubscription overlays**.
+Structural/state-edge search, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions, capped/fixed-supply raffle economics, fixed-prize undersubscription overlays, and official lottery loyalty/rebate nonlinearities.
 
 ## Strong historical / structural controls
 - Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), not current guaranteed route.
@@ -98,6 +98,19 @@ Files:
 - `data/derived/h123_fixed_prize_raffle_calibration.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H123_APPEND.md`
 
+## H124 — official lottery loyalty/reward rebate nonlinearity
+Ohio MyLotto Rewards currently gives deterministic points on **non-winning** tickets: Scratch-Offs 1 point per $1; draw tickets 5 points per ticket, capped at **1,200 points/month**. The official FAQ documents Lottery Cash examples of $5/400 points and $10/800 points, while warning catalog prices can change.
+
+Exact current controls using Ohio `The Lucky One`:
+- cover all 36 Lucky Numbers: $36 spend -> one $24 winner + 175 points from 35 losers; valuing points at the documented example rate gives **72.7431%** package gross;
+- cover Odd+Even or Low+High: $2 spend -> $1.50 winner + 5 points -> **78.125%** package gross;
+- monthly cap corresponds to at most **$15** Lottery Cash at the documented example rate, so the subsidy cannot scale into large-space coverage.
+
+Status: **DETERMINISTIC LOTTERY-CREDIT REBATE VALIDATED / GUARANTEED-PROFIT COVERAGE REJECTED**. Reopen only on a much deeper official coupon, uncapped cash-equivalent reward, reward on all tickets, or fixed added cash per purchased block.
+Files:
+- `research/h124_ohio_mylotto_rewards_deterministic_rebate.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H124_APPEND.md`
+
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
 - **TezLoto:** only bulk-history RNG/bias testing remains; public bulk archive/API still unresolved.
@@ -105,16 +118,17 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Live fixed-prize undersubscription monitor:** search current/upcoming official state/national lottery raffles with fixed cash boards, public `tickets remaining` or sold-count data, and deadline drawings from the actually sold pool. Compute `N*` before doing deeper work; prioritize cases materially below break-even with late-entry eligibility.
+1. **Live fixed-prize undersubscription monitor:** keep searching current/upcoming official state/national lottery raffles with fixed cash boards, public `tickets remaining` or sold-count data, and deadline drawings from the actually sold pool. Compute `N*` before deeper work; prioritize cases materially below break-even with late-entry eligibility.
 2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash board, or where every sufficiently large block receives a deterministic minimum prize.
-3. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
-4. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
-5. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
-6. Lottery promotions: prioritize fixed cash rebates, unusually large deterministic multipliers, guaranteed added-value per purchased block, or fixed external pools over capped purchasable eligible supply.
-7. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
-8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+3. **Deterministic loyalty/coupon scan:** only pursue official lottery coupons/rebates if the published discount is large enough to cross an already-computed coverage deficit; H124 closes ordinary low-rate loyalty points.
+4. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
+5. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
+6. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
+7. Lottery promotions: prioritize fixed cash rebates, unusually large deterministic multipliers, guaranteed added-value per purchased block, or fixed external pools over capped purchasable eligible supply.
+8. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
+9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H123_APPEND.md`.
-Latest case: `research/h123_fixed_prize_raffle_monitor_calibration.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H124_APPEND.md`.
+Latest case: `research/h124_ohio_mylotto_rewards_deterministic_rebate.md`.
