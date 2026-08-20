@@ -11,26 +11,26 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H133 — current lottery-wallet bonus + compact fixed-coverage screen**.
+Latest completed lottery packet: **H134 — guaranteed-prize subscription and free-ticket false-subsidy screen**.
 
-### H133 deterministic wallet subsidy
-Two current official player-owned funding subsidies were combined with compact/fixed lottery coverage:
+### H134 screening theorem
+H133's subsidy inequality has been extended so promo assets are not overvalued:
 
-1. **Georgia Lottery 50% first-deposit bonus, max $125 (through 2026-09-10)** + Cash Pop.
-   - Cash Pop full 15-number $1 cover costs $15 and guarantees only $5.
-   - Repeating 25 covers uses $375 nominal spend; after max $125 bonus external cash is at least $250; guaranteed cash is $125.
-   - strict external-cash floor = **50%**.
+- only a deterministic player-owned subsidy that can be directed into the target cover counts as `B_d`;
+- a free random lottery ticket has strict guaranteed cash value **0** unless every legal ticket state pays positive cash;
+- a future guaranteed prize `G` must be reduced by every mandatory vesting/subscription cost `K`;
+- random second-chance/sweepstakes benefits have strict floor **0**.
 
-2. **West Virginia $10 deposit -> $10 Free Play** + online Daily 3.
-   - 1000-outcome 50c Exact full coverage costs $500 and guarantees $250.
-   - current bonus is capped at $10, so external cash is at least $490.
-   - strict guaranteed profit = **-$240** before other costs.
-
-Reusable theorem: for nominal complete-cover cost `C`, deterministic minimum cash payout `P`, and deterministic game-eligible bonus `B`, strict pre-tax profit requires `P > C-B`, equivalently `B > C-P`.
+Current live examples checked:
+1. **The Scotto Play Free Until September + guaranteed prize**: 12 paid months at £11.50 = £138 mandatory cost for a guaranteed prize floor of £12; strict return **8.6957%**, profit floor **-£126**.
+2. **Hoosier Murphy USA**: buy two $5 scratch tickets, may receive a free $1 Scratch-off; the free ticket can lose, so strict promo cash subsidy = **$0**.
+3. **Hoosier Village Pantry**: buy one $10 Scratch-off, may receive a free $1 Scratch-off; same strict promo cash subsidy = **$0**.
+4. **Hoosier Lottery Day free $1 Scratch-off**: genuine zero-cost positive-EV free-roll, but strict profit floor = **$0**, not terminal SUCCESS.
 
 Files:
-- `research/h133_wallet_bonus_compact_coverage.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H133_APPEND.md`
+- `research/h134_guaranteed_prize_and_free_ticket_subsidy_screen.md`
+- `data/derived/h134_current_false_subsidy_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H134_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -46,6 +46,7 @@ Files:
 - H131 statewide `Nth` cash coupon: subsidy inversion validated but ownership rejected because unrelated purchases can take coupon-bearing positions.
 - H132 purchase-local deterministic free-ticket subsidy: ownership problem solved structurally, but Mega Millions still fails because of unbounded jackpot sharing.
 - H133 current capped wallet bonuses: deterministic player-owned subsidy confirmed, but Georgia Cash Pop and WV Daily 3 remain well below strict coverage break-even.
+- H134 free random tickets / second-chance entries cannot be counted at face value toward a guaranteed coverage floor; guaranteed-prize subscriptions must be netted against vesting cost.
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -54,9 +55,9 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: continue deterministic subsidy + compact non-shareable coverage search using H133 threshold `B > C-P`.** Search current official lottery promos for player-owned buy-X-get-Y, deposit/free-play, coupon or guaranteed-per-block benefits where exact bonus exceeds the complete-cover deficit.
-2. Prioritize games with deterministic full/complementary floor >50% and promotions providing >50% effective own-purchase subsidy, or any game where a guaranteed block prize adds directly to `P`.
-3. Search player-local counters, serial/ring-fenced tranches, retailer-local exclusive blocks, or one-prize-per-purchased-block guarantees where allocation cannot be taken by unrelated players.
+1. **Highest priority: continue deterministic subsidy + compact non-shareable coverage search using H133/H134.** Search current official lottery promos only for benefits whose strict player-owned value is deterministic before the draw: direct ticket discounts, unrestricted lottery wallet credits, fixed cash coupons, guaranteed per-block cash awards, or free plays with a nonzero guaranteed payout floor.
+2. Apply the threshold immediately: for exact cover cost `C`, deterministic base payout `P`, deterministic subsidy `B_d`, and any guaranteed vesting prize `G` with mandatory cost `K`, require `P + G > C + K - B_d` before deeper execution work.
+3. Prioritize player-local counters, serial/ring-fenced tranches, retailer-local exclusive blocks, or one-prize-per-purchased-block guarantees where unrelated players cannot take the subsidy/prize allocation.
 4. Continue current/upcoming fixed-board raffle monitor with H129 exact worst-case floor and H122/H128 +EV denominator math, prioritizing unusually flat boards and high winner-count/cap ratios.
 5. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 6. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister test and require >27.78% out-of-sample probability lift in the best published state.
@@ -66,5 +67,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H133_APPEND.md`.
-Latest case: `research/h133_wallet_bonus_compact_coverage.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H134_APPEND.md`.
+Latest case: `research/h134_guaranteed_prize_and_free_ticket_subsidy_screen.md`.
