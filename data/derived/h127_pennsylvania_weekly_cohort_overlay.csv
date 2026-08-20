@@ -1,0 +1,11 @@
+section,final_sold_N,weekly_sold_w,final_ev_per_ticket,weekly_ev_per_ticket,total_ev_per_ticket,gross_return,roi,weekly_break_even_w,notes
+threshold,500000,,10.1784,,,,,10181.6405,"weekly cohort threshold for positive pre-tax EV"
+threshold,450000,,11.3093333333,,,,,11506.6011,"weekly cohort threshold for positive pre-tax EV"
+threshold,400000,,12.723,,,,,13741.9318,"weekly cohort threshold for positive pre-tax EV"
+threshold,350000,,14.5405714286,,,,,18316.9386,"weekly cohort threshold for positive pre-tax EV"
+threshold,300000,,16.964,,,,,32938.0764,"weekly cohort threshold for positive pre-tax EV"
+threshold,275000,,18.5061818182,,,,,66942.5532,"weekly cohort threshold for positive pre-tax EV"
+threshold,260000,,19.5738461538,,,,,234657.0397,"weekly cohort threshold for positive pre-tax EV"
+observed_2025_week2,500000,44200,10.1784,2.2624434389,12.4408434389,0.6220421719,-0.3779578281,10181.6405,"official-reported weekly cohort; negative"
+observed_2025_week3_lower_bound,500000,47500,10.1784,2.1052631579,12.2836631579,0.6141831579,-0.3858168421,10181.6405,"actual weekly cohort reported as more than 47,500, so actual EV is slightly lower"
+historical_2024_sample,500000,54400,10.1784,1.8382352941,12.0166352941,0.6008317647,-0.3991682353,10181.6405,"historical comparable weekly cohort sample"
