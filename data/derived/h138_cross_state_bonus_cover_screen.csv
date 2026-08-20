@@ -1,0 +1,5 @@
+jurisdiction,game,base_cover_ratio,validated_bonus_rate,external_cash_multiplier_gross,pre_tax_result,execution_status
+Kentucky,Pick 3 Pair,0.60,1.00,1.20,+20% conditional,positive arithmetic but deposit/acceptance/tax gates
+Kentucky,Pick 3 Pair stacked referral scenario,0.60,conditional >1.00,2.00 at $15 cash if $20 referral stacks,+100% conditional,stackability and timing unproven
+Delaware,Play 3 Straight or Pair,0.50,1.00,1.00,break-even before friction,bonus/iLottery architecture not suitable for strict draw cover
+New Hampshire,Pick 3 Straight or Pair,0.50,not-authoritatively-validated-currently,NA,NA,no current official >100% one-pass subsidy validated
