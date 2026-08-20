@@ -11,45 +11,37 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H136 — Kentucky 100% first-deposit bonus + Pick 3 deterministic coverage**.
+Latest completed lottery packet: **H137 — Kentucky stacked referral + 100% first-deposit match + Pick 3 Pair deterministic coverage**.
 
-### H136 major result
-A current Kentucky Lottery promotion provides a **100% first-deposit match up to $250**. This finally crosses the exact subsidy threshold for a compact fixed-prize game.
+### H137 major result
+Kentucky Lottery currently lists two simultaneous August 2026 player-owned offers:
+- a qualifying newly referred player who deposits at least $10 receives **$20 in Bonuses**;
+- a first-ever deposit receives a **100% match up to $250**.
 
-Kentucky Pick 3 Straight full-cover identity:
-- 1,000 ordered outcomes;
-- $0.50 Straight per outcome;
-- face coverage cost **$500**;
-- exactly one winning Straight every draw;
-- guaranteed gross payout **$300**;
-- base deterministic cover ratio **60%**.
+If both awards stack on the same referred first-depositor, the H136 Pick 3 Pair full-cover can be funded with only **$15 external cash**:
+- external deposit $15;
+- first-deposit Bonus $15;
+- referral Bonus $20;
+- total purchasing power $50;
+- 100 Pair outcomes × $0.50 = complete cover;
+- deterministic gross payout $30;
+- conditional pre-tax surplus **+$15 / +100% on external cash**.
 
-Under the current 100% match:
-- external cash deposit **$250**;
-- Bonus **$250**;
-- purchasing power **$500**;
-- if all 1,000 distinct Straight wagers for one draw are accepted, guaranteed payout **$300**;
-- conditional guaranteed pre-tax surplus = **+$50 / +20% on external cash**.
-
-A smaller equivalent Pair-position cover gives the same 60% identity: $25 cash + $25 Bonus covers $50 face and guarantees $30, i.e. **+$5 pre-tax conditional**.
-
-This is the first current lottery packet in the project where a live operator subsidy mathematically converts an exact fixed-prize full-cover portfolio into a positive deterministic result before tax/execution uncertainty.
+This materially strengthens H136 and is the best current lottery subsidy arithmetic in the project.
 
 ### Why this is NOT SUCCESS
-Kentucky iLottery terms create a fatal ex-ante execution branch:
-- qualifying deposit is non-withdrawable and must occur before the Bonus/coverage attempt;
-- the operator reserves the right to refuse an attempted purchase and to limit purchases or a wager on a particular set of numbers at any time without notice.
+Four ex-ante gates remain:
+1. retrieved official public material confirms both promotions are simultaneously live, but does **not yet explicitly guarantee stackability** on one account;
+2. the referral Bonus may be credited only after qualifying actions (current page says within up to 5 business days), while deposited cash is already non-withdrawable;
+3. Kentucky iLottery retains the right to limit/refuse purchases or wagers on particular number sets, so the complete 100-selection Pair basket is not pre-committed before cash becomes irreversible;
+4. after-tax profit remains taxpayer-specific.
 
-Therefore complete coverage is **not locked before external cash becomes irreversible**. A lawful branch exists where the deposit is committed but one or more required selections are refused, destroying the all-outcome payout floor.
-
-Additionally, 2026 U.S. federal wagering-loss rules can materially change the after-tax result; the +$50 margin is not a universal net-of-tax floor without taxpayer-specific treatment.
-
-Status: **PRE-TAX POSITIVE COVER VALIDATED / TERMINAL GUARANTEE REJECTED ON PRE-COMMITMENT ACCEPTANCE + TAX GATES**.
+Status: **PROMISING STACKED-SUBSIDY MECHANISM / TERMINAL GUARANTEE NOT ESTABLISHED**.
 
 Files:
-- `research/h136_kentucky_100pct_bonus_pick3_cover.md`
-- `data/derived/h136_kentucky_bonus_pick3_cover.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H136_APPEND.md`
+- `research/h137_kentucky_stacked_referral_match_pair_cover.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H137_APPEND.md`
+- previous foundation: `research/h136_kentucky_100pct_bonus_pick3_cover.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -67,7 +59,8 @@ Files:
 - H133 current capped wallet bonuses: deterministic player-owned subsidy confirmed, but Georgia Cash Pop and WV Daily 3 remain well below strict coverage break-even.
 - H134 free random tickets / second-chance entries cannot be counted at face value toward a guaranteed coverage floor; guaranteed-prize subscriptions must be netted against vesting cost.
 - H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Washington Match 4 package reaches only **91.4361%** strict return.
-- **H136 current 100% deposit match + fixed-prize Pick 3 crosses break-even mathematically (+20% pre-tax conditional), but complete-basket acceptance is not pre-committed and tax is not universally bounded.**
+- H136 current 100% deposit match + fixed-prize Pick 3 crosses break-even mathematically (+20% pre-tax conditional), but complete-basket acceptance is not pre-committed and tax is not universally bounded.
+- **H137 concurrent $20 referral Bonus + 100% first-deposit match would reduce the Pair-cover cash requirement to $15 and conditionally yield +$15 pre-tax, but stackability/timing/acceptance/tax are not locked ex ante.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -76,9 +69,9 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: find >=100% deterministic lottery wallet/deposit bonuses where the player's external deposit remains withdrawable OR the complete wager basket can be reserved/atomically accepted before cash becomes irreversible.** H136 proves this class can cross strict coverage break-even.
-2. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%** and pair them with current player-owned subsidies; larger margin may survive tax/friction and reduce wager count.
-3. Search official batch/system/advance-purchase interfaces that guarantee acceptance of every Pick 3/Pick 4 selection before funding; reopen H136 only with a true pre-commitment execution lock and confirmed treatment of Bonus-funded winnings.
+1. **Highest priority: resolve H137 stackability from an authoritative August 2026 Refer-a-Friend rule/account source and search for an official atomic/batch mechanism for all 100 Pick 3 Pair selections.** Reopen only on genuinely new evidence.
+2. Search >=100% deterministic lottery wallet/deposit bonuses where the player's external deposit remains withdrawable OR the complete wager basket can be reserved/atomically accepted before cash becomes irreversible.
+3. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%** and pair them with current player-owned subsidies; larger margin may survive tax/friction and reduce wager count.
 4. Continue recurring/scalable subsidy monitor: direct ticket discounts, unrestricted wallet credit, fixed retailer-local awards and >=100% BOGO/match offers.
 5. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math, prioritizing flat prize boards and high winner-count/cap ratios.
 6. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
@@ -89,5 +82,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H136_APPEND.md`.
-Latest case: `research/h136_kentucky_100pct_bonus_pick3_cover.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H137_APPEND.md`.
+Latest case: `research/h137_kentucky_stacked_referral_match_pair_cover.md`.
