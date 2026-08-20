@@ -11,37 +11,32 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H137 — Kentucky stacked referral + 100% first-deposit match + Pick 3 Pair deterministic coverage**.
+Latest completed lottery packet: **H138 — cross-state >=100% lottery-bonus + compact fixed-prize coverage screen**.
 
-### H137 major result
-Kentucky Lottery currently lists two simultaneous August 2026 player-owned offers:
-- a qualifying newly referred player who deposits at least $10 receives **$20 in Bonuses**;
-- a first-ever deposit receives a **100% match up to $250**.
+### H138 major result
+H136/H137 remain the strongest current subsidy arithmetic, but the execution problem was tested more broadly.
 
-If both awards stack on the same referred first-depositor, the H136 Pick 3 Pair full-cover can be funded with only **$15 external cash**:
-- external deposit $15;
-- first-deposit Bonus $15;
-- referral Bonus $20;
-- total purchasing power $50;
-- 100 Pair outcomes × $0.50 = complete cover;
-- deterministic gross payout $30;
-- conditional pre-tax surplus **+$15 / +100% on external cash**.
+Fresh Kentucky checks show:
+- Pick 3 exposes `Add to cart`, Shopping Cart and Favorites, so a multi-wager basket can be assembled before final confirmation;
+- however KLC still expressly reserves the right to refuse any attempted purchase and to limit wagers on a particular set of numbers at any time without notice;
+- therefore a cart is not an atomic contractual reservation and does not cure the pre-commitment gate.
 
-This materially strengthens H136 and is the best current lottery subsidy arithmetic in the project.
+Cross-state screen:
+- **Delaware iLottery** currently publishes a **100% welcome deposit bonus up to $100**, but Delaware Play 3 exact/Pair partition coverage returns only **50%** of face spend. A pure 100% match therefore reaches only break-even before tax/friction, and the iLottery bonus architecture is eInstant/playthrough oriented rather than a clean one-pass draw-game credit.
+- **New Hampshire Pick 3** also has an exact **50%** partition ratio (Straight, Front Pair, Back Pair, Single Digit). No authoritative current >100% one-pass draw-game subsidy was validated in this packet.
 
-### Why this is NOT SUCCESS
-Four ex-ante gates remain:
-1. retrieved official public material confirms both promotions are simultaneously live, but does **not yet explicitly guarantee stackability** on one account;
-2. the referral Bonus may be credited only after qualifying actions (current page says within up to 5 business days), while deposited cash is already non-withdrawable;
-3. Kentucky iLottery retains the right to limit/refuse purchases or wagers on particular number sets, so the complete 100-selection Pair basket is not pre-committed before cash becomes irreversible;
-4. after-tax profit remains taxpayer-specific.
+General subsidy threshold theorem:
+`r*(1+b) > 1`, so strict pre-tax positivity requires `b > 1/r - 1`.
+- Kentucky Pair `r=.60` -> bonus must exceed **66.6667%**.
+- Delaware/NH digit cover `r=.50` -> bonus must exceed **100%**.
 
-Status: **PROMISING STACKED-SUBSIDY MECHANISM / TERMINAL GUARANTEE NOT ESTABLISHED**.
+Status: **NO SUCCESS / KENTUCKY STILL UNIQUE VALIDATED POSITIVE-COVER CASE / CROSS-STATE 100% MATCHES DO NOT YET IMPROVE EXECUTABILITY**.
 
 Files:
-- `research/h137_kentucky_stacked_referral_match_pair_cover.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H137_APPEND.md`
-- previous foundation: `research/h136_kentucky_100pct_bonus_pick3_cover.md`
+- `research/h138_cross_state_100pct_bonus_compact_cover_screen.md`
+- `data/derived/h138_cross_state_bonus_cover_screen.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H138_APPEND.md`
+- previous foundation: `research/h136_kentucky_100pct_bonus_pick3_cover.md`, `research/h137_kentucky_stacked_referral_match_pair_cover.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -60,7 +55,8 @@ Files:
 - H134 free random tickets / second-chance entries cannot be counted at face value toward a guaranteed coverage floor; guaranteed-prize subscriptions must be netted against vesting cost.
 - H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Washington Match 4 package reaches only **91.4361%** strict return.
 - H136 current 100% deposit match + fixed-prize Pick 3 crosses break-even mathematically (+20% pre-tax conditional), but complete-basket acceptance is not pre-committed and tax is not universally bounded.
-- **H137 concurrent $20 referral Bonus + 100% first-deposit match would reduce the Pair-cover cash requirement to $15 and conditionally yield +$15 pre-tax, but stackability/timing/acceptance/tax are not locked ex ante.**
+- H137 concurrent $20 referral Bonus + 100% first-deposit match would reduce the Pair-cover cash requirement to $15 and conditionally yield +$15 pre-tax, but stackability/timing/acceptance/tax are not locked ex ante.
+- **H138 shows Kentucky cart UI does not create an acceptance lock; Delaware/NH 50% compact-cover ratios mean a 100% match is only break-even.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -69,18 +65,19 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: resolve H137 stackability from an authoritative August 2026 Refer-a-Friend rule/account source and search for an official atomic/batch mechanism for all 100 Pick 3 Pair selections.** Reopen only on genuinely new evidence.
-2. Search >=100% deterministic lottery wallet/deposit bonuses where the player's external deposit remains withdrawable OR the complete wager basket can be reserved/atomically accepted before cash becomes irreversible.
-3. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%** and pair them with current player-owned subsidies; larger margin may survive tax/friction and reduce wager count.
-4. Continue recurring/scalable subsidy monitor: direct ticket discounts, unrestricted wallet credit, fixed retailer-local awards and >=100% BOGO/match offers.
-5. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math, prioritizing flat prize boards and high winner-count/cap ratios.
-6. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-7. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
-8. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
-9. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
-10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: search official current state-lottery offers with >100% deterministic one-pass wallet/deposit bonus usable on draw games, or >=67% subsidy on compact fixed-prize games with deterministic cover ratio >=60%.**
+2. Prioritize operators where deposited principal remains withdrawable until wager acceptance, or where the complete wager basket is contractually reserved/atomically accepted before funding.
+3. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%**; this lowers the subsidy threshold and increases tax/friction margin.
+4. Reopen H137 only with explicit official stackability or a true pre-acceptance lock.
+5. Continue recurring/scalable subsidy monitor: direct ticket discounts, unrestricted wallet credit, fixed retailer-local awards and >100% BOGO/match offers.
+6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math, prioritizing flat prize boards and high winner-count/cap ratios.
+7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
+9. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
+10. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
+11. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H137_APPEND.md`.
-Latest case: `research/h137_kentucky_stacked_referral_match_pair_cover.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H138_APPEND.md`.
+Latest case: `research/h138_cross_state_100pct_bonus_compact_cover_screen.md`.
