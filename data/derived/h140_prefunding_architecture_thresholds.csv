@@ -1,0 +1,7 @@
+case,cover_ratio,required_bonus_to_cash_ratio,external_cash_example,bonus_example,usable_face,guaranteed_gross,pre_tax_floor,status
+Kentucky Pick3 Pair base threshold,0.60,0.6666667,25,16.6667,41.6667,25.0000,0.0000,break-even theorem
+Kentucky Pick3 Pair with 100pct match,0.60,0.6666667,25,25,50,30,5,conditional positive math only
+Kentucky Pick3 Pair H139 triple-stack discrete optimum,0.60,0.6666667,240,310,550,330,90,conditional positive math only
+Generic 2/3 cover,0.6666667,0.50,100,50,150,100,0,break-even theorem
+Generic 75pct cover,0.75,0.3333333,100,33.3333,133.3333,100,0,break-even theorem
+Virginia direct-debit draw cart,NA,NA,NA,NA,NA,NA,NA,prefunding cart architecture exists but no qualifying deterministic subsidy found in H140
