@@ -1,0 +1,17 @@
+metric,value,unit,notes
+final_tickets_sold,369180,tickets,Official promotion page final count
+ticket_price,20,USD,Rule 53ER26-16
+final_revenue,7383600,USD,369180*20
+interim_prize_pool_per_draw,704500,USD,Four interim drawings
+number_interim_draws,4,draws,Rule 53ER26-16
+final_prize_pool_observed_tier,10000000,USD,10 x 1m because sales below 1m
+full_nominal_prize_board,12818000,USD,4*704500+10000000
+aggregate_nominal_overlay,5434400,USD,prize board minus final revenue
+last_window_remaining_pool,10704500,USD,4th interim + final
+last_window_ev_per_ticket,28.9953410261,USD,10704500/369180
+last_window_pre_tax_roi,0.4497670513,ratio,EV/20-1
+last_window_break_even_sales,535225,tickets,10704500/20
+sellout_full_acquisition_cost,40000000,USD,2m*20
+sellout_full_fixed_board,22818000,USD,20m final + all 4 interims
+sellout_full_acquisition_gross_return,0.57045,ratio,22818000/40000000
+strict_floor_incomplete_portfolio,0,USD,External tickets can legally take all winning numbers
