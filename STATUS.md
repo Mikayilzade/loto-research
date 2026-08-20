@@ -95,6 +95,18 @@ Exact favorable nominal break-even common-jackpot thresholds from sampled curren
 Status: **FINITE-GRID TAKEOVER REJECTED / HIGH-JACKPOT +EV MONITOR ONLY / NO GUARANTEE**.
 Files: `research/h130_nj_fast_play_progressive_grid.md`, `src/loto_research/fastplay_progressive.py`, `data/derived/h130_nj_fastplay_thresholds.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H130_APPEND.md`.
 
+## H131 — statewide `Nth` cash-coupon allocation
+Florida 2026 promotions provide a genuine deterministic-subsidy size inversion **conditional on receiving the coupon**:
+- Lotto Love: one base 52-draw FLORIDA LOTTO Advance Play purchase costs **$104**; the `Nth` qualifying statewide ticket receives a **$208 cash coupon**. Coupon alone = **200% gross / +$104 net** before underlying draw winnings.
+- PICK Midday: minimum **$1** qualifying purchase can receive **$5 cash**; 200,000 coupons / $1m total.
+- Fantasy 5 More Money March: **$5** qualifying purchase can receive **$10 cash**.
+- X THE CASH / 500X: **$100** cash coupons are officially described as **randomly generated** for every `Nth` non-winning ticket entered statewide; odds depend on entries.
+
+Structural result: `every Nth statewide` is not a player-owned block. With unrestricted external qualifying purchases between the player's transactions, external buyers can occupy every coupon-bearing position. Therefore the player's strict coupon floor is **0** unless rules provide a player-local counter, explicit one-per-block guarantee, ring-fenced serial tranche, retailer-local exclusive counter, or observable phase plus atomic acquisition.
+
+Status: **CONDITIONAL CASH INVERSION VALIDATED / GLOBAL-NTH BLOCK GUARANTEE REJECTED / NO SUCCESS**.
+Files: `research/h131_global_nth_coupon_allocation.md`, `src/loto_research/nth_coupon.py`, `tests/test_nth_coupon.py`, `data/derived/h131_nth_coupon_screen.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H131_APPEND.md`.
+
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
 - **TezLoto:** only bulk-history RNG/bias testing remains; public bulk archive/API still unresolved.
@@ -102,7 +114,7 @@ Files: `research/h130_nj_fast_play_progressive_grid.md`, `src/loto_research/fast
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Deterministic block/tranche allocation:** search lottery promotions/raffles where every purchased block/tranche receives a guaranteed minimum prize, rebate, free-ticket bundle, or ring-fenced allocation. This is now the highest-value escape from the external-ticket zero-floor theorem.
+1. **Player-owned deterministic allocation:** search official lottery promotions/raffles for a player-local counter, explicit one-prize-per-purchased-block guarantee, serial-range/ring-fenced tranche, retailer-local exclusive block, or otherwise contractually owned minimum allocation. H131 proves subsidy size can exceed ticket cost; ownership of the winning allocation is now the key missing condition.
 2. **Prize-board inversion monitor using H129 theorem:** search current/upcoming official fixed-board raffles with public remaining counts and compute both +EV denominator thresholds and exact all-remaining worst-case floor. Prioritize unusually flat boards, very high winner-count/cap ratios, and operator-funded boards near/above ticket revenue.
 3. **Live cumulative/cohort-local undersubscription monitor:** search current official raffles with cumulative early-ticket eligibility, weekly/ring-fenced boards, or early-bird cash pools; compute cash/tax-adjusted remaining-board and cohort EV.
 4. **Progressive instant/Fast Play monitor:** only reopen H130 if a common jackpot approaches exact game-specific +EV thresholds or if primary rules reveal a non-replenishing finite grid.
@@ -115,5 +127,5 @@ Files: `research/h130_nj_fast_play_progressive_grid.md`, `src/loto_research/fast
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H130_APPEND.md`.
-Latest case: `research/h130_nj_fast_play_progressive_grid.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H131_APPEND.md`.
+Latest case: `research/h131_global_nth_coupon_allocation.md`.
