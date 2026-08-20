@@ -78,30 +78,34 @@ Status: **DETERMINISTIC LOTTERY-CREDIT REBATE VALIDATED / GUARANTEED-PROFIT COVE
 Files: `research/h124_ohio_mylotto_rewards_deterministic_rebate.md`, `research/CHECKED_PROJECTS_AND_TESTS_H124_APPEND.md`.
 
 ## H125 — fixed-board raffle near-threshold calibration
-Fresh monitor packet added three controls.
-
-### Jersey Hospice Care Million Pound Lottery 2026
-Verified 2026 price **£300**, fixed cash board **£1.3m**, and an indexed Jersey Hospice update saying **2,500 tickets remaining**. A crawlable 2026 total cap was not recovered, so the following is explicitly a continuity sensitivity using the recent **7,000-ticket** architecture documented in 2021/2023/2025.
-
-- break-even denominator: `£1.3m / £300 = 4,333.33` tickets;
-- 7,000-cap sensitivity with 2,500 remaining => 4,500 sold;
-- EV/ticket = **£288.8889**;
-- gross = **96.2963%**;
-- pre-tax ROI = **-3.7037%**.
-
-This is a useful **near-threshold miss**: under a 7,000 cap the edge would appear only while more than about **2,666 tickets remained**, assuming the full fixed board was guaranteed at deadline and only sold tickets were eligible.
-
-### Minnesota Millionaire Raffle 2026
-Official exact board = **$5,149,150** against 1,000,000 × $10 tickets; `N*=514,915`. It sold out in 14 days, so realized sellout gross was only **51.4915%**. High-demand negative control.
-
-### Michigan online raffles
-Current official FAQ continues to confirm the desired monitor architecture, but no crawlable active raffle with both a live denominator and prize board was recovered in this packet.
+- Jersey Hospice Care Million Pound Lottery 2026: under recent 7,000-ticket architecture and indexed 2,500 remaining state, nominal gross sensitivity **96.2963%**; near-threshold miss.
+- Minnesota Millionaire Raffle 2026: exact board **$5,149,150** against 1,000,000 × $10; sellout gross **51.4915%**, sold out in 14 days.
+- Michigan online raffles: current FAQ confirms limited supply, fixed price, predetermined prizes, and deadline-or-sellout drawing architecture.
 
 Status: **MONITOR CLASS STRENGTHENED / NO CURRENT POSITIVE LIVE STATE / NO GUARANTEE**.
-Files:
-- `research/h125_fixed_board_raffle_near_threshold_calibration.md`
-- `data/derived/h125_fixed_board_raffle_calibration.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H125_APPEND.md`
+Files: `research/h125_fixed_board_raffle_near_threshold_calibration.md`, `data/derived/h125_fixed_board_raffle_calibration.csv`.
+
+## H126 — Michigan Super Raffle 2025 undersubscription reconstruction
+Official 2025 Super Raffle architecture:
+- cap **350,000** tickets × **$50**;
+- advertised fixed board **$12.45m**;
+- nominal break-even denominator **249,000**;
+- Nov. 5 official update said fewer than 160,000 tickets remained and the draw would proceed on Nov. 19 even without sellout.
+
+A complete published results list contains all **18,515** advertised winning numbers and has maximum winning number **219,210**. Under uniform sampling from sequential sold numbers, the winner-support maximum reconstructs the final eligible denominator near **219.2k**; approximate one-sided upper bounds are ~219,245 (95%), ~219,265 (99%), and ~219,292 (99.9%). This is overwhelmingly below the 249,000 nominal break-even threshold.
+
+At `N=219,210`:
+- headline nominal EV/ticket **$56.7949 on $50 = +13.5897% expected ROI**.
+
+But contemporary winner reports show the annuity headlines had materially lower lump-sum cash options (~$4.1m for $6m; ~$693k for $1m). Using those values:
+- approximate immediate-cash board **$9.936m**;
+- cash-equivalent break-even denominator **198,720**;
+- reconstructed cash EV/ticket **$45.3264 = -9.3472% ROI** before tax.
+
+Status: **SECOND MAJOR HISTORICAL UNDERSUBSCRIPTION OVERLAY VALIDATED ON HEADLINE NOMINAL VALUE / IMMEDIATE-CASH +EV REJECTED / STRICT GUARANTEE REJECTED**.
+Files: `research/h126_michigan_super_raffle_undersubscription_reconstruction.md`, `data/derived/h126_michigan_super_raffle_thresholds.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H126_APPEND.md`.
+
+Critical monitor upgrade: fixed-board raffles must now pass a **cash-equivalent, tax/cost-adjusted** denominator threshold, not merely a headline annuity threshold.
 
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
@@ -110,9 +114,9 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Live fixed-prize undersubscription monitor:** keep searching current/upcoming official state/national/regulated raffles with fixed cash boards, public `tickets remaining` or sold-count data, and deadline drawings from the actually sold pool. Compute `N*` first; prioritize states materially below tax/cost-adjusted break-even with late-entry eligibility.
-2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash board, or where every sufficiently large purchased block receives a deterministic minimum prize.
-3. **Jersey-style near-threshold scan:** prioritize fixed-board products where the live denominator can cross break-even before deadline; H125 shows a real architecture can come within ~4% of break-even.
+1. **Live fixed-prize undersubscription monitor:** search current/upcoming official state/national/regulated raffles with fixed boards, public sold/remaining counts and deadline drawings. Compute both `N*_nominal` and **cash-equivalent/tax-adjusted `N*_cash`** first; only pursue candidates materially below the latter.
+2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash-equivalent board, or where every sufficiently large purchased block receives a deterministic minimum prize.
+3. **Historical support reconstruction:** where official final sold counts are missing but complete winning-number support exists, use order-statistic bounds only as a secondary reconstruction, then seek primary confirmation before claiming a live edge.
 4. **Deterministic loyalty/coupon scan:** only pursue published discounts large enough to cross an already-computed coverage deficit; H124 closes ordinary low-rate points.
 5. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
 6. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
@@ -122,5 +126,5 @@ Files:
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H125_APPEND.md`.
-Latest case: `research/h125_fixed_board_raffle_near_threshold_calibration.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H126_APPEND.md`.
+Latest case: `research/h126_michigan_super_raffle_undersubscription_reconstruction.md`.
