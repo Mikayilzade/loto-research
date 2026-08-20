@@ -11,32 +11,34 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H138 — cross-state >=100% lottery-bonus + compact fixed-prize coverage screen**.
+Latest completed lottery packet: **H139 — Kentucky concurrent deposit-promotion stacking + Pick 3 Pair coverage**.
 
-### H138 major result
-H136/H137 remain the strongest current subsidy arithmetic, but the execution problem was tested more broadly.
+### H139 major result
+H136-H138 established that Kentucky's current August 2026 100% first-deposit match is the first live subsidy found that can make a compact fixed-prize full-cover mathematically positive, but complete basket acceptance is not locked before the non-withdrawable deposit.
 
-Fresh Kentucky checks show:
-- Pick 3 exposes `Add to cart`, Shopping Cart and Favorites, so a multi-wager basket can be assembled before final confirmation;
-- however KLC still expressly reserves the right to refuse any attempted purchase and to limit wagers on a particular set of numbers at any time without notice;
-- therefore a cart is not an atomic contractual reservation and does not cure the pre-commitment gate.
+H139 found two additional **simultaneously live deposit promotions** on the official Kentucky Lottery promotions page:
+- **Tiki Tuesday:** $50 Bonus for a single deposit of $150+ on specified Tuesdays, with Aug 25 still listed in the current promotion period.
+- **Summer Fridays:** 25% deposit match up to $50 on Aug 7 and Aug 21, 3:00-5:00 PM ET.
 
-Cross-state screen:
-- **Delaware iLottery** currently publishes a **100% welcome deposit bonus up to $100**, but Delaware Play 3 exact/Pair partition coverage returns only **50%** of face spend. A pure 100% match therefore reaches only break-even before tax/friction, and the iLottery bonus architecture is eInstant/playthrough oriented rather than a clean one-pass draw-game credit.
-- **New Hampshire Pick 3** also has an exact **50%** partition ratio (Straight, Front Pair, Back Pair, Single Digit). No authoritative current >100% one-pass draw-game subsidy was validated in this packet.
+The current page also lists the **$20 Referred Friend Bonus** concurrently with the 100% first-deposit match.
 
-General subsidy threshold theorem:
-`r*(1+b) > 1`, so strict pre-tax positivity requires `b > 1/r - 1`.
-- Kentucky Pair `r=.60` -> bonus must exceed **66.6667%**.
-- Delaware/NH digit cover `r=.50` -> bonus must exceed **100%**.
+Using the exact Kentucky Pick 3 Pair cover unit (`$50 face -> guaranteed $30 gross`):
+- first-match + either capped $50 deposit promo, if stackable: `$250 external -> $550 usable balance -> 11 full Pair covers -> $330 guaranteed gross -> +$80 pre-tax conditional floor`;
+- first-match + capped $50 deposit promo + $20 referral, if all three stack: discrete optimum tested is `$240 external -> $550 balance -> 11 covers -> $330 gross -> +$90 pre-tax / +37.5%`.
 
-Status: **NO SUCCESS / KENTUCKY STILL UNIQUE VALIDATED POSITIVE-COVER CASE / CROSS-STATE 100% MATCHES DO NOT YET IMPROVE EXECUTABILITY**.
+The current $5 Registration Offer was **excluded** from the Pick 3 theorem because its specific current description says it is for **Instant Play games**.
+
+No explicit anti-stacking clause was located in the retrieved current promotion summaries/rules, but no affirmative KLC statement guaranteeing that one deposit receives multiple concurrent awards was located either. Therefore the +$80/+90 results remain conditional.
+
+Most importantly, the larger subsidy **does not cure the fatal H136/H138 execution gate**: deposits are non-withdrawable and KLC retains the contractual right to refuse/limit attempted number wagers after funding. A lawful branch still exists where one required Pair selection is refused after cash is committed, eliminating the all-outcome payout floor.
+
+Status: **NO SUCCESS / CONDITIONAL KENTUCKY FLOOR IMPROVED TO +$90 PRE-TAX / STACKABILITY + PRE-ACCEPTANCE STILL UNLOCKED**.
 
 Files:
-- `research/h138_cross_state_100pct_bonus_compact_cover_screen.md`
-- `data/derived/h138_cross_state_bonus_cover_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H138_APPEND.md`
-- previous foundation: `research/h136_kentucky_100pct_bonus_pick3_cover.md`, `research/h137_kentucky_stacked_referral_match_pair_cover.md`
+- `research/h139_kentucky_concurrent_deposit_promo_stack.md`
+- `data/derived/h139_kentucky_concurrent_promo_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H139_APPEND.md`
+- previous foundation: `research/h136_kentucky_100pct_bonus_pick3_cover.md`, `research/h137_kentucky_stacked_referral_match_pair_cover.md`, `research/h138_cross_state_100pct_bonus_compact_cover_screen.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -55,8 +57,9 @@ Files:
 - H134 free random tickets / second-chance entries cannot be counted at face value toward a guaranteed coverage floor; guaranteed-prize subscriptions must be netted against vesting cost.
 - H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Washington Match 4 package reaches only **91.4361%** strict return.
 - H136 current 100% deposit match + fixed-prize Pick 3 crosses break-even mathematically (+20% pre-tax conditional), but complete-basket acceptance is not pre-committed and tax is not universally bounded.
-- H137 concurrent $20 referral Bonus + 100% first-deposit match would reduce the Pair-cover cash requirement to $15 and conditionally yield +$15 pre-tax, but stackability/timing/acceptance/tax are not locked ex ante.
-- **H138 shows Kentucky cart UI does not create an acceptance lock; Delaware/NH 50% compact-cover ratios mean a 100% match is only break-even.**
+- H137 concurrent $20 referral Bonus + 100% first-deposit match conditionally reduces the Pair-cover cash requirement to $15, but stackability/timing/acceptance/tax are not locked ex ante.
+- H138 shows Kentucky cart UI does not create an acceptance lock; Delaware/NH 50% compact-cover ratios mean a 100% match is only break-even.
+- **H139 raises the conditional Kentucky pre-tax floor to as much as +$90 through concurrently live deposit/referral offers, but explicit stacking and pre-funding basket acceptance remain unproven.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -65,10 +68,10 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search official current state-lottery offers with >100% deterministic one-pass wallet/deposit bonus usable on draw games, or >=67% subsidy on compact fixed-prize games with deterministic cover ratio >=60%.**
-2. Prioritize operators where deposited principal remains withdrawable until wager acceptance, or where the complete wager basket is contractually reserved/atomically accepted before funding.
-3. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%**; this lowers the subsidy threshold and increases tax/friction margin.
-4. Reopen H137 only with explicit official stackability or a true pre-acceptance lock.
+1. **Highest priority: recover exact Tiki Tuesday / Summer Friday rules or another official KLC source that explicitly answers whether concurrent deposit offers stack with the 100% first-deposit match.** Do not infer stacking merely from concurrent listing.
+2. Search official state-lottery systems where deposited principal remains withdrawable until wager acceptance or where the complete Pick 3/Pick 4 basket can be atomically reserved/accepted before funding; this is now the main terminal blocker, not subsidy size.
+3. Search compact fixed-prize, non-shareable games with deterministic full-cover ratio **>60%**, especially in states with live deterministic wallet/deposit bonuses. Higher `r` lowers the subsidy threshold and wager count.
+4. Search current player-owned >100% effective draw-game subsidies created by overlapping official deposit promos, but require explicit stacking language before counting the overlap in a guarantee.
 5. Continue recurring/scalable subsidy monitor: direct ticket discounts, unrestricted wallet credit, fixed retailer-local awards and >100% BOGO/match offers.
 6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math, prioritizing flat prize boards and high winner-count/cap ratios.
 7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
@@ -79,5 +82,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H138_APPEND.md`.
-Latest case: `research/h138_cross_state_100pct_bonus_compact_cover_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H139_APPEND.md`.
+Latest case: `research/h139_kentucky_concurrent_deposit_promo_stack.md`.
