@@ -94,6 +94,24 @@ Files:
 - `data/derived/h120_fdj_grand_loto_forced_distribution.csv`
 - `research/CHECKED_PROJECTS_AND_TESTS_H120_APPEND.md`
 
+## H121 — micro-capped / donated-prize raffle takeover
+H118 left a distinct possibility: very small capped raffles where donated/sponsored prizes might exceed ticket revenue. Six 2026 micro-capped structures were screened under deliberately buyer-favorable full-takeover assumptions.
+
+Results:
+- Lancaster Rotary Mustang: **71.725%** optimistic gross, even valuing the car at full $67,125 MSRP and capturing all secondary prizes;
+- St. Catherine Keep the Dream Alive: **50.0%** including all early-bird prizes and the $5k seller award;
+- Flagler Lucky Draw: **50.0%**;
+- Elmhurst Greek Fest: about **22.13%** even after a favorable 12-free-ticket adjustment;
+- Kosair Sportsman: **20.0%**;
+- Step-Up SA Fuel-for-a-Year: **10.0%**.
+
+This extends the capped-raffle closure from large hospital lotteries to **small supply, donated-prize, reverse-raffle and sponsored-prize structures**. A tiny ticket cap does not remove the fundraising takeout.
+
+Status: **MICRO-CAPPED / DONATED-PRIZE TAKEOVER SUBCLASS MATERIALLY CLOSED / NO SUCCESS**.
+Files:
+- `research/h121_micro_capped_donated_prize_raffle_takeover.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H121_APPEND.md`
+
 ## Azerbaijan live branches
 - **4+4 / H014/H115/H116:** ordinary II-only and realistic II+III carryover states are economically too weak absent extreme observable sales contraction. Reopen only on >=3 prior zero categories, a two-zero state plus >2.25x observable contraction, major operator-funded external addition, or materially more favorable primary registration rules.
 - **TezLoto / H007/H114:** only bulk-history RNG/bias testing remains; no dependable public bulk archive/API has yet been recovered.
@@ -101,17 +119,17 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## Global lottery branches already screened
-Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, recurring 50%-boost fixed-prize promotions, current Canadian capped hospital/charity takeovers, guaranteed-winner fixed top-up promotions, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
+Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, recurring 50%-boost fixed-prize promotions, large and micro capped charity raffles, donated-prize/reverse raffles, guaranteed-winner fixed top-up promotions, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
 
 ## NEXT ACTION
 1. **Primary-rule closure for 4+4:** continue searching only for the actual detailed registration no. 336 conditions. If recovered, verify exact percentages and zero-category redistribution; reopen economics only if materially more favorable than H115/H116 bounds.
 2. **H007 TezLoto / high-frequency RNG history:** pursue only if a reliable bulk draw-history/API route becomes available; then run pre-registered out-of-sample bias tests against the >27.78% lift hurdle.
-3. **Global rolldown / buy-the-pot search:** H120 now also closes the recent FDJ Grand-Loto-style €20m forced-distribution + €2m code board full-space route. Continue only with games where verified external subsidy is much larger relative to full-space spend, or where ticket supply/prize rights can be capped and atomically acquired.
+3. **Global rolldown / buy-the-pot search:** H120 closes the recent FDJ Grand-Loto-style €20m forced-distribution + €2m code board full-space route; H118/H121 now close both large and micro capped charity-raffle takeover variants absent a genuine prize-board inversion. Continue only with games where verified external subsidy is much larger relative to full-space spend or a fixed prize board actually exceeds complete-supply cost.
 4. **Lottery promotions:** H117 closes recurring +50% Multi Multi prize-table boosts and H119 closes a €120k winner-top-up against ~€48m full-space cost. Continue only with promotions whose deterministic subsidy can raise the exact worst-case/full-space floor above 100%, especially cash rebates, >~2.4x fixed-prize boosts, or fixed external pools allocated across a capped purchasable supply.
 5. **Fixed-pack instant tickets:** reopen only with official current evidence of an unusually high per-pack guaranteed minimum or deterministic subsidy above exact break-even.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when full master replacement is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H120_APPEND.md`.
-Latest case: `research/h120_fdj_grand_loto_forced_distribution_bound.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H121_APPEND.md`.
+Latest case: `research/h121_micro_capped_donated_prize_raffle_takeover.md`.
