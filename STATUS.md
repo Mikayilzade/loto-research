@@ -11,125 +11,76 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-**Structural/state-edge search + Azerbaijan 4+4 exceptional carryover closure + TezLoto/RNG bias + deterministic lottery promotions + capped-supply raffle takeover.**
+Structural/state-edge search, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions, capped/fixed-supply raffle economics, and **fixed-prize undersubscription overlays**.
 
-## Strong historical controls
-- Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), but not a current guaranteed route.
+## Strong historical / structural controls
+- Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), not current guaranteed route.
 - Kazakhstan 4/20: lower-category zero-winner carryover mechanism validated; sampled state negative.
-- Lotto Texas 2023 / H108: syndicate operationally acquired virtually all 25.8m combinations and guaranteed possession of the jackpot line; actual draw profitable, but strict all-outcome guarantee failed due external duplicate-winner sharing. Texas now prohibits all/substantially-all combination purchase facilitation.
+- Lotto Texas 2023 / H108: near-full combination acquisition operationally validated and actual draw profitable; strict guarantee fails on external duplicate jackpot sharing; Texas now blocks all/substantially-all combination facilitation.
 
-## H109–H112 — fixed supply / scratch / sealed-pack routes
-- H109 unique-number raffle takeover: Irish fixed raffle full takeover returned only 42.2833% deterministic gross; dynamic raffles retain external-entry ownership risk.
-- H110 Texas scratch closing-state bound: buyer-favorable ceiling max 78.2494%.
-- H111 Texas guaranteed sealed-pack floor + full 5% retailer commission: max 67.5% strict recovery.
-- H112 cross-jurisdiction high-RTP/fixed-pack screen: no current official non-Texas sealed-pack minimum remotely high enough to bridge takeout.
+## H109-H112 — fixed supply / scratch / sealed-pack
+- H109 unique-number raffle full takeover: Irish fixed raffle only **42.2833%** deterministic gross; dynamic raffles retain external-entry ownership risk.
+- H110 Texas scratch closing-state buyer-favorable ceiling: **78.2494%**.
+- H111 Texas sealed-pack floor + full 5% retailer commission: max **67.5%** strict recovery.
+- H112 non-Texas fixed-pack/high-RTP screen: no official guaranteed per-pack minimum near break-even.
 
 Status: **MATERIALLY CLOSED / NO SUCCESS**.
 
-## H113–H116 — Azerbaijan 4+4 carryover economics
-- H113 full-space: current 2 AZN price makes `C(20,4)^2 = 23,474,025` variants cost **46,948,050 AZN**. Even at a maximally favorable 80% sales-linked prize-fund assumption, external pre-existing value must exceed **9,389,610 AZN** before tax/execution. Observed jackpot around early August 2026 (~1.9m AZN) was far below this.
-- H115 ordinary II-only one-step carryover: requires roughly **4.49–4.54x** prior/current sales contraction under deliberately maximum-favorable assumptions.
-- H116 II+III zero: still requires ~**2.25–2.27x** contraction. Three-zero states remain extremely rare and still require ~1.50x contraction. All II–VI zero is effectively negligible under iid selection and is the only maximized state capable of bridging the gap without a sales collapse.
+## H113-H116 — Azerbaijan 4+4 carryover
+- Full space `C(20,4)^2 = 23,474,025`; at 2 AZN cost = **46,948,050 AZN**.
+- Even under favorable 80% sales-linked prize-fund assumption, external value hurdle exceeds **9,389,610 AZN**.
+- Ordinary II-only one-step carryover needs ~**4.5x** prior/current sales contraction.
+- II+III zero still needs ~**2.25x** contraction; >=3 zero categories become very rare.
 
-Status: **NAIVE FULL-SPACE + ORDINARY/REALISTIC MULTI-ZERO ROUTES MATERIALLY CLOSED / ONLY VERY RARE HIGH-ORDER STATES, EXTREME OBSERVABLE SALES COLLAPSE, OR MATERIALLY BETTER PRIMARY RULES REMAIN**.
+Status: **ORDINARY/REALISTIC CARRYOVER GUARANTEE ROUTES MATERIALLY CLOSED**. Reopen only on detailed registration no. 336 rules materially better than modeled bounds, >=3 prior zero categories, extreme observable sales collapse, or explicit operator-funded external additions.
+Files: `research/h116_4plus4_exceptional_multizero_bound.md`, `data/derived/h116_4plus4_multizero_bounds.csv`.
+
+## H114 — TezLoto
+All 159 published state × bet-type cells checked against exact fair odds. Best published gross return only **78.2609%**. Complete coverage negative. Remaining branch is H007 empirical RNG/virtual-lototron bias; required probability lift is >**27.78%** in best state and must survive preregistered out-of-sample testing. Reliable bulk history/API still missing.
+
+## H117-H121 — promotion / raffle takeover closure
+- H117 Poland Multi Multi +50% prize boosts: best full-space promoted return **63.7187%**.
+- H118 six current capped hospital/charity products: best buyer-favorable full takeover **85.4135%**.
+- H119 EuroDreams guaranteed-winner top-up: buyer-favorable full-space **44.6670%**.
+- H120 FDJ Grand LOTO forced distribution: buyer-favorable full-space **77.4243%**; full coverage itself removes the no-jackpot redistribution branch.
+- H121 micro-capped/donated-prize raffles: best optimistic full takeover **71.725%**.
+
+Status: **STANDARD CAPPED-SUPPLY/FIXED-BOARD TAKEOVER CLASS MATERIALLY CLOSED unless a genuine prize-board inversion or deterministic portfolio floor appears**.
+
+## H122 — Florida Millionaire Raffle 2026 undersubscription overlay
+Official 2026 rules fixed four interim prize pools at **$704,500 each** and a minimum final board of **10 × $1m** for <=1,000,000 sales. Final official sales were only **369,180 tickets at $20**.
+
+Exact observed economics:
+- ticket revenue: **$7,383,600**;
+- fixed nominal prize board: **$12,818,000**;
+- aggregate operator-funded overlay: **+$5,434,400**;
+- a ticket eligible for the fourth interim + final draw at the final denominator had pre-tax EV **$28.9953 on $20 = +44.9767% expected ROI**;
+- pre-tax break-even sales count for that last-window structure: **535,225 tickets**.
+
+This is one of the strongest modern structural +EV lottery overlays found. It is **NOT terminal SUCCESS** because any incomplete portfolio has a legal zero-payout branch: external sold tickets can contain all winning numbers. Buying all 2,000,000 tickets from launch costs $40m while maximum fixed board at sellout is only $22.818m (**57.045% gross**).
+
+Status: **STRONG +EV OVERLAY VALIDATED / STRICT GUARANTEE REJECTED / REUSABLE LIVE-MONITOR CLASS OPEN**.
 Files:
-- `research/h116_4plus4_exceptional_multizero_bound.md`
-- `data/derived/h116_4plus4_multizero_bounds.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H116_APPEND.md`
-
-## H114 — TezLoto exact dynamic odds
-All 159 published state × bet-type cells were checked against exact uniform-without-replacement fair odds. Best published cell returns only **78.2609% gross**; all complete-coverage constructions are negative. The only remaining TezLoto branch is empirical RNG/virtual-lototron bias, which needs >27.78% multiplicative probability lift merely to cross EV=1 in the best published state and must survive pre-registered out-of-sample testing.
-
-Status: **BASE ODDS + COMPLETE COVERAGE CLOSED / H007 BIAS DATA BRANCH OPEN / NO SUCCESS**.
-
-## H117 — Poland Multi Multi recurring +50% promotions
-Current official supplemental rules for 19–22 August 2026 were screened with exact full-space identities. Current k=9 promotion yields only **61.3579%** deterministic gross ordinary and **62.9251%** with Plus. Granting the same 1.5x boost to every prize in every k=1..10 column gives a best promoted full-space return of only **63.7187%**.
-
-Status: **CURRENT LIVE PROMOTION + RECURRING 50%-BOOST CLASS CLOSED / NO SUCCESS**.
-Files:
-- `research/h117_poland_multimulti_50pct_promo_fullspace.md`
-- `data/derived/h117_multimulti_promo_fullspace.csv`
-- `src/loto_research/multimulti_promo_coverage.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H117_APPEND.md`
-
-## H118 — current capped charity/hospital raffle takeover
-A current 2026 screen tested six fixed-supply products under deliberately buyer-favorable assumptions: buy the entire authorized supply at the cheapest published unit price and grant the buyer the entire fixed advertised prize board at full value, ignoring taxes and execution costs.
-
-Results:
-- Roughrider & Children Main Lottery: **85.4135%** favorable gross (closest case; current new buyer is actually worse because VIP deadline already passed);
-- SickKids 2026 Main: **63.9489%**;
-- Alberta Cancer Foundation Main: **59.3469%**;
-- SickKids Cash Calendar: **54.4916%**;
-- Alberta Win Daily Cash: **34.8941%**;
-- Roughrider & Children Cash Calendar: **19.8525%**.
-
-A hard cap alone therefore does not create a buy-the-pot guarantee; the fixed external prize board must exceed minimum all-ticket acquisition cost. Open 50/50 draws remain unsuitable because external eligible tickets are uncapped and the prize is sales-linked.
-
-Status: **CURRENT CAPPED HOSPITAL/CHARITY TAKEOVER CLASS MATERIALLY CLOSED / NO SUCCESS**.
-Files:
-- `research/h118_current_capped_charity_raffle_takeover.md`
-- `data/derived/h118_current_capped_raffle_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H118_APPEND.md`
-
-## H119 — EuroDreams Ireland guaranteed-winner promotion
-Current EuroDreams uses `C(40,6)*5 = 19,191,900` lines at €2.50, so full-space spend is **€47,979,750**. The Ireland-only event adds one extra €2,000/month for 5 years prize to one normal Irish winner.
-
-A deliberately buyer-favorable full-space upper bound values the Tier 1 annuity at its full undiscounted €7.2m cashflow, all four Tier 2 annuities at €120k each, treats displayed average lower-tier prizes as exact, and grants the entire extra €120k promotional annuity to the buyer. Even then total gross is only **€21,431,110 = 44.66699%** of spend. The promotion itself contributes at most **0.2501%** of full-space cost.
-
-Status: **GUARANTEED-WINNER FIXED TOP-UP PROMOTION REJECTED AS FULL-SPACE GUARANTEE / NO SUCCESS**.
-Files:
-- `research/CHECKED_PROJECTS_AND_TESTS_H119_APPEND.md`
-- `data/derived/h119_eurodreams_guaranteed_winner_fullspace.csv`
-
-## H120 — FDJ Grand LOTO forced-distribution screen
-The 26 June 2026 Grand LOTO used 5/49 + 1/10 at €5 per line, a €20m jackpot that was redistributed to lower ranks if no rank-1 winner existed, and 100 fixed code prizes of €20k each.
-
-Full-space size is `C(49,5)*10 = 19,068,840`, costing **€95,344,200**. Full coverage itself creates a rank-1 winner, so it removes the no-rank-1 forced-redistribution branch. Under an intentionally buyer-favorable screen that grants the portfolio the full current 54.35% LOTO-family return benchmark on all spend **plus the entire €20m jackpot and all €2m code prizes**, total gross is only **€73,819,572.70 = 77.4243%**, a deficit of **€21,524,627.30** before taxes, sharing or execution.
-
-Equivalent reopen hurdle: player-funded return would need to exceed about **76.925% of total spend in addition to the €22m headline board**, or primary rules must reveal materially more guaranteed external value/capped ownership.
-
-Status: **RECENT REAL FORCED-DISTRIBUTION MECHANISM VALIDATED / FULL-SPACE GUARANTEE REJECTED / NO SUCCESS**.
-Files:
-- `research/h120_fdj_grand_loto_forced_distribution_bound.md`
-- `data/derived/h120_fdj_grand_loto_forced_distribution.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H120_APPEND.md`
-
-## H121 — micro-capped / donated-prize raffle takeover
-H118 left a distinct possibility: very small capped raffles where donated/sponsored prizes might exceed ticket revenue. Six 2026 micro-capped structures were screened under deliberately buyer-favorable full-takeover assumptions.
-
-Results:
-- Lancaster Rotary Mustang: **71.725%** optimistic gross, even valuing the car at full $67,125 MSRP and capturing all secondary prizes;
-- St. Catherine Keep the Dream Alive: **50.0%** including all early-bird prizes and the $5k seller award;
-- Flagler Lucky Draw: **50.0%**;
-- Elmhurst Greek Fest: about **22.13%** even after a favorable 12-free-ticket adjustment;
-- Kosair Sportsman: **20.0%**;
-- Step-Up SA Fuel-for-a-Year: **10.0%**.
-
-This extends the capped-raffle closure from large hospital lotteries to **small supply, donated-prize, reverse-raffle and sponsored-prize structures**. A tiny ticket cap does not remove the fundraising takeout.
-
-Status: **MICRO-CAPPED / DONATED-PRIZE TAKEOVER SUBCLASS MATERIALLY CLOSED / NO SUCCESS**.
-Files:
-- `research/h121_micro_capped_donated_prize_raffle_takeover.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H121_APPEND.md`
+- `research/h122_florida_millionaire_raffle_undersubscription_overlay.md`
+- `data/derived/h122_florida_raffle_overlay.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H122_APPEND.md`
 
 ## Azerbaijan live branches
-- **4+4 / H014/H115/H116:** ordinary II-only and realistic II+III carryover states are economically too weak absent extreme observable sales contraction. Reopen only on >=3 prior zero categories, a two-zero state plus >2.25x observable contraction, major operator-funded external addition, or materially more favorable primary registration rules.
-- **TezLoto / H007/H114:** only bulk-history RNG/bias testing remains; no dependable public bulk archive/API has yet been recovered.
-- **Poz-Qazan:** ordinary initial states negative; remaining-prize conditional edge remains data-blocked because exact live unsold denominator/registration state is unavailable.
+- **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
+- **TezLoto:** only bulk-history RNG/bias testing remains; public bulk archive/API still unresolved.
+- **Poz-Qazan:** remaining-prize conditional edge data-blocked because exact live unsold denominator/registration state unavailable.
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
-## Global lottery branches already screened
-Powerball, Mega Millions, EuroMillions, UK Lotto Must Be Won, numerous finite fixed-prize games, additive wheels, anti-crowd selection, unique raffles, scratch closing-inventory, sealed-pack guarantees, recurring 50%-boost fixed-prize promotions, large and micro capped charity raffles, donated-prize/reverse raffles, guaranteed-winner fixed top-up promotions, and current full-space constructions have all failed strict all-outcome net-profit guarantees under current rules/economics. Historical Cash WinFall and Lotto Texas remain proof that structural lottery edges can exist, but neither supplies a current executable guarantee.
-
 ## NEXT ACTION
-1. **Primary-rule closure for 4+4:** continue searching only for the actual detailed registration no. 336 conditions. If recovered, verify exact percentages and zero-category redistribution; reopen economics only if materially more favorable than H115/H116 bounds.
-2. **H007 TezLoto / high-frequency RNG history:** pursue only if a reliable bulk draw-history/API route becomes available; then run pre-registered out-of-sample bias tests against the >27.78% lift hurdle.
-3. **Global rolldown / buy-the-pot search:** H120 closes the recent FDJ Grand-Loto-style €20m forced-distribution + €2m code board full-space route; H118/H121 now close both large and micro capped charity-raffle takeover variants absent a genuine prize-board inversion. Continue only with games where verified external subsidy is much larger relative to full-space spend or a fixed prize board actually exceeds complete-supply cost.
-4. **Lottery promotions:** H117 closes recurring +50% Multi Multi prize-table boosts and H119 closes a €120k winner-top-up against ~€48m full-space cost. Continue only with promotions whose deterministic subsidy can raise the exact worst-case/full-space floor above 100%, especially cash rebates, >~2.4x fixed-prize boosts, or fixed external pools allocated across a capped purchasable supply.
-5. **Fixed-pack instant tickets:** reopen only with official current evidence of an unusually high per-pack guaranteed minimum or deterministic subsidy above exact break-even.
-6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Fixed-prize undersubscription monitor:** search current/upcoming official state/national lottery raffles with fixed minimum prize boards, public live sales counts and late-entry eligibility. Prioritize states where current denominator can fall below exact post-tax/cost break-even. Treat as EV-only unless complete eligible ownership or deterministic portfolio minimum payout can be enforced.
+2. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
+3. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
+4. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
+5. Lottery promotions: prioritize fixed cash rebates, unusually large deterministic multipliers, guaranteed added-value per purchased block, or fixed external pools over capped purchasable eligible supply.
+6. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
+7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
-Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when full master replacement is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H121_APPEND.md`.
-Latest case: `research/h121_micro_capped_donated_prize_raffle_takeover.md`.
+Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H122_APPEND.md`.
+Latest case: `research/h122_florida_millionaire_raffle_undersubscription_overlay.md`.
