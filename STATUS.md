@@ -11,26 +11,46 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H134 — guaranteed-prize subscription and free-ticket false-subsidy screen**.
+Latest completed lottery packet: **H135 — Washington Happy Hour scalable subsidy + compact fixed-prize coverage**.
 
-### H134 screening theorem
-H133's subsidy inequality has been extended so promo assets are not overvalued:
+### H135 result
+Washington's Lottery provides a rare validated promotion class with all the right structural properties: player-owned, deterministic free ticket value and explicit scaling in fixed purchase increments.
 
-- only a deterministic player-owned subsidy that can be directed into the target cover counts as `B_d`;
-- a free random lottery ticket has strict guaranteed cash value **0** unless every legal ticket state pays positive cash;
-- a future guaranteed prize `G` must be reduced by every mandatory vesting/subscription cost `K`;
-- random second-chance/sweepstakes benefits have strict floor **0**.
+Strongest test used historical Match 4 Happy Hour:
+- buy **$10 Match 4**, receive **$4 Match 4 free**;
+- multiple offers expressly allowed in $10 increments;
+- Match 4 is compact `4/24`, costs $2/play, and its $10,000 top prize is explicitly **not divided among winners**.
 
-Current live examples checked:
-1. **The Scotto Play Free Until September + guaranteed prize**: 12 paid months at £11.50 = £138 mandatory cost for a guaranteed prize floor of £12; strict return **8.6957%**, profit floor **-£126**.
-2. **Hoosier Murphy USA**: buy two $5 scratch tickets, may receive a free $1 Scratch-off; the free ticket can lose, so strict promo cash subsidy = **$0**.
-3. **Hoosier Village Pantry**: buy one $10 Scratch-off, may receive a free $1 Scratch-off; same strict promo cash subsidy = **$0**.
-4. **Hoosier Lottery Day free $1 Scratch-off**: genuine zero-cost positive-EV free-roll, but strict profit floor = **$0**, not terminal SUCCESS.
+Exact full-cover identity:
+- `C(24,4)=10,626` plays;
+- face cost **$21,252**;
+- deterministic payout **$13,880** (`1×$10,000 + 80×$20 + 1,140×$2`);
+- base deterministic return **65.3115%**.
+
+Under the deliberately strongest interpretation that every free promo play can be directed to a distinct uncovered selection, effective cash cost is:
+
+`$21,252 × 10/14 = $15,180`.
+
+Strict promo-covered return:
+
+`$13,880 / $15,180 = 91.4361%`.
+
+Guaranteed pre-cost loss remains **$1,300**.
+
+New fast screen for Match 4:
+- required face discount to break even: **>34.6885%**;
+- equivalent required free-ticket bonus on paid spend: **>53.1124%**.
+
+Observed Match 4 Happy Hour bonus was only 40% of spend, so even this unusually favorable non-shareable compact game fails.
+
+Current controls:
+- Washington Lotto Happy Hour Jun 14–27 2026: buy $5, get $1 free; scalable but only 16.67% effective discount and jackpot sharing remains.
+- OLG current 2026 LOTTO 6/49 / LOTTO MAX BOGO: real player-account bonuses but targeted and capped to one bonus, therefore not scalable into full coverage.
 
 Files:
-- `research/h134_guaranteed_prize_and_free_ticket_subsidy_screen.md`
-- `data/derived/h134_current_false_subsidy_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H134_APPEND.md`
+- `research/h135_washington_happy_hour_compact_coverage.md`
+- `data/derived/h135_washington_happy_hour_compact_coverage.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H135_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -47,6 +67,7 @@ Files:
 - H132 purchase-local deterministic free-ticket subsidy: ownership problem solved structurally, but Mega Millions still fails because of unbounded jackpot sharing.
 - H133 current capped wallet bonuses: deterministic player-owned subsidy confirmed, but Georgia Cash Pop and WV Daily 3 remain well below strict coverage break-even.
 - H134 free random tickets / second-chance entries cannot be counted at face value toward a guaranteed coverage floor; guaranteed-prize subscriptions must be netted against vesting cost.
+- H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Match 4 package still only reaches **91.4361%** strict return.
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -55,9 +76,9 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: continue deterministic subsidy + compact non-shareable coverage search using H133/H134.** Search current official lottery promos only for benefits whose strict player-owned value is deterministic before the draw: direct ticket discounts, unrestricted lottery wallet credits, fixed cash coupons, guaranteed per-block cash awards, or free plays with a nonzero guaranteed payout floor.
-2. Apply the threshold immediately: for exact cover cost `C`, deterministic base payout `P`, deterministic subsidy `B_d`, and any guaranteed vesting prize `G` with mandatory cost `K`, require `P + G > C + K - B_d` before deeper execution work.
-3. Prioritize player-local counters, serial/ring-fenced tranches, retailer-local exclusive blocks, or one-prize-per-purchased-block guarantees where unrelated players cannot take the subsidy/prize allocation.
+1. **Highest priority: search recurring/scalable deterministic lottery subsidies above exact compact-game thresholds.** Prioritize promotions with >50% bonus-on-spend, direct ticket discounts, unrestricted wallet credit, fixed per-block cash coupons, or guaranteed retailer-local awards.
+2. Pair subsidies first with compact games having fixed, non-shareable payouts. Compute exact deterministic cover ratio `r` and reject immediately unless bonus-on-spend exceeds `1/r - 1` after costs.
+3. Specifically monitor Washington Happy Hour and analogous retailer-local offers for Match 4 or other compact games where the subsidy exceeds H135's **53.1124%** threshold or the game has a stronger base coverage ratio.
 4. Continue current/upcoming fixed-board raffle monitor with H129 exact worst-case floor and H122/H128 +EV denominator math, prioritizing unusually flat boards and high winner-count/cap ratios.
 5. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 6. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister test and require >27.78% out-of-sample probability lift in the best published state.
@@ -67,5 +88,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H134_APPEND.md`.
-Latest case: `research/h134_guaranteed_prize_and_free_ticket_subsidy_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H135_APPEND.md`.
+Latest case: `research/h135_washington_happy_hour_compact_coverage.md`.
