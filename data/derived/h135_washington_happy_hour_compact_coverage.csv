@@ -1,0 +1,5 @@
+case,paid_face,free_face,total_face,effective_discount,full_cover_face_cost,deterministic_payout,effective_cash_cost,deterministic_return,guaranteed_loss,budget_bonus_on_spend,break_even_bonus_on_spend
+Washington Match4 HappyHour 2025,10,4,14,0.285714286,21252,13880,15180,0.914361001,1300,0.4,0.531123919
+Washington Lotto HappyHour 2026,5,1,6,0.166666667,,, ,,,0.2,
+OLG Lotto649 BOGO 2026 targeted,3,3,6,0.5,,, ,,,1.0,
+OLG LottoMax BOGO 2026 targeted,6,6,12,0.5,,, ,,,1.0,
