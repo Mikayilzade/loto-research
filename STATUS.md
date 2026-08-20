@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-Structural/state-edge search, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions, capped/fixed-supply raffle economics, fixed-prize undersubscription overlays, and official lottery loyalty/rebate nonlinearities.
+Structural/state-edge search, live fixed-prize undersubscription monitoring, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, deterministic lottery promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
 
 ## Strong historical / structural controls
 - Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), not current guaranteed route.
@@ -40,7 +40,7 @@ All 159 published state × bet-type cells checked against exact fair odds. Best 
 
 ## H117-H121 — promotion / raffle takeover closure
 - H117 Poland Multi Multi +50% prize boosts: best full-space promoted return **63.7187%**.
-- H118 six current capped hospital/charity products: best buyer-favorable full takeover **85.4135%**.
+- H118 six capped hospital/charity products: best buyer-favorable full takeover **85.4135%**.
 - H119 EuroDreams guaranteed-winner top-up: buyer-favorable full-space **44.6670%**.
 - H120 FDJ Grand LOTO forced distribution: buyer-favorable full-space **77.4243%**; full coverage itself removes the no-jackpot redistribution branch.
 - H121 micro-capped/donated-prize raffles: best optimistic full takeover **71.725%**.
@@ -60,56 +60,48 @@ Exact observed economics:
 This is one of the strongest modern structural +EV lottery overlays found. It is **NOT terminal SUCCESS** because any incomplete portfolio has a legal zero-payout branch: external sold tickets can contain all winning numbers. Buying all 2,000,000 tickets from launch costs $40m while maximum fixed board at sellout is only $22.818m (**57.045% gross**).
 
 Status: **STRONG +EV OVERLAY VALIDATED / STRICT GUARANTEE REJECTED / REUSABLE LIVE-MONITOR CLASS OPEN**.
-Files:
-- `research/h122_florida_millionaire_raffle_undersubscription_overlay.md`
-- `data/derived/h122_florida_raffle_overlay.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H122_APPEND.md`
+Files: `research/h122_florida_millionaire_raffle_undersubscription_overlay.md`, `data/derived/h122_florida_raffle_overlay.csv`.
 
 ## H123 — fixed-prize raffle monitor calibration
-H122 was generalized and calibrated against three additional official-lottery architectures.
+H122 was generalized and calibrated against Maryland, Virginia and Michigan architectures.
+- Maryland Holiday Raffle 2025/26: actual final sales **237,206**; fixed board **$3.1m**; realized late-ticket gross **65.3440%**; break-even denominator only **155,000**.
+- Virginia Commanders / Capitals 2026: both sold out; nominal fixed-board gross only **51.6667%** at sellout.
+- Michigan online raffles: official FAQ confirms limited supply, fixed price, predetermined prizes, and deadline-or-sellout drawing architecture.
 
-### Maryland Holiday Raffle 2025/26
-- maximum 325,000 sequential tickets at $20;
-- actual final sales only **237,206**;
-- fixed final prize board **$3,100,000**;
-- late-ticket expected gross at realized denominator **$13.0688 on $20 = 65.3440%**;
-- final-draw break-even denominator only **155,000**.
-
-Result: **negative control**. Material undersubscription alone does not create an edge when the fixed board is too small.
-
-### Virginia Commanders / Capitals 2026 raffles
-- each had 150,000 tickets at $20 and a deadline-or-sellout drawing from tickets actually sold;
-- fixed headline board nominally **$1,550,000** including a non-transferable $950,000 experiential prize;
-- nominal break-even sales count **77,500**; cash-only lower-tier break-even **30,000**;
-- both official game pages show **0 tickets left / sold out**, so realized nominal gross was only **51.6667%** at sellout.
-
-Result: **negative realized controls, but useful future live-monitor architecture** because a deadline drawing can proceed from fewer-than-cap sold tickets.
-
-### Michigan online raffles
-Official FAQ confirms limited supply, fixed price, predetermined prizes, deadline-or-sellout drawing and no aggregate purchase cap (250/cart, repeat carts). No favorable current crawlable live state was found in this packet.
-
-Reusable monitor identity:
-`break-even eligible denominator N* = remaining fixed cash-value prize board / ticket price`.
-A live EV signal exists only below the cost/tax-adjusted threshold. This does **not** create terminal guarantee unless the portfolio has a strictly positive minimum payout in every legal draw outcome.
-
+Reusable identity: `N* = remaining fixed cash-value prize board / ticket price`.
 Status: **MONITOR CLASS VALIDATED / FLORIDA POSITIVE CONTROL / MARYLAND+VIRGINIA NEGATIVE CONTROLS / NO CURRENT SUCCESS**.
-Files:
-- `research/h123_fixed_prize_raffle_monitor_calibration.md`
-- `data/derived/h123_fixed_prize_raffle_calibration.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H123_APPEND.md`
 
 ## H124 — official lottery loyalty/reward rebate nonlinearity
-Ohio MyLotto Rewards currently gives deterministic points on **non-winning** tickets: Scratch-Offs 1 point per $1; draw tickets 5 points per ticket, capped at **1,200 points/month**. The official FAQ documents Lottery Cash examples of $5/400 points and $10/800 points, while warning catalog prices can change.
+Ohio MyLotto Rewards gives deterministic points on non-winning tickets but is capped at 1,200 points/month. Exact complementary-cover controls top out at **78.125%** package gross, and the cap is too small to scale into profitable coverage.
 
-Exact current controls using Ohio `The Lucky One`:
-- cover all 36 Lucky Numbers: $36 spend -> one $24 winner + 175 points from 35 losers; valuing points at the documented example rate gives **72.7431%** package gross;
-- cover Odd+Even or Low+High: $2 spend -> $1.50 winner + 5 points -> **78.125%** package gross;
-- monthly cap corresponds to at most **$15** Lottery Cash at the documented example rate, so the subsidy cannot scale into large-space coverage.
+Status: **DETERMINISTIC LOTTERY-CREDIT REBATE VALIDATED / GUARANTEED-PROFIT COVERAGE REJECTED**.
+Files: `research/h124_ohio_mylotto_rewards_deterministic_rebate.md`, `research/CHECKED_PROJECTS_AND_TESTS_H124_APPEND.md`.
 
-Status: **DETERMINISTIC LOTTERY-CREDIT REBATE VALIDATED / GUARANTEED-PROFIT COVERAGE REJECTED**. Reopen only on a much deeper official coupon, uncapped cash-equivalent reward, reward on all tickets, or fixed added cash per purchased block.
+## H125 — fixed-board raffle near-threshold calibration
+Fresh monitor packet added three controls.
+
+### Jersey Hospice Care Million Pound Lottery 2026
+Verified 2026 price **£300**, fixed cash board **£1.3m**, and an indexed Jersey Hospice update saying **2,500 tickets remaining**. A crawlable 2026 total cap was not recovered, so the following is explicitly a continuity sensitivity using the recent **7,000-ticket** architecture documented in 2021/2023/2025.
+
+- break-even denominator: `£1.3m / £300 = 4,333.33` tickets;
+- 7,000-cap sensitivity with 2,500 remaining => 4,500 sold;
+- EV/ticket = **£288.8889**;
+- gross = **96.2963%**;
+- pre-tax ROI = **-3.7037%**.
+
+This is a useful **near-threshold miss**: under a 7,000 cap the edge would appear only while more than about **2,666 tickets remained**, assuming the full fixed board was guaranteed at deadline and only sold tickets were eligible.
+
+### Minnesota Millionaire Raffle 2026
+Official exact board = **$5,149,150** against 1,000,000 × $10 tickets; `N*=514,915`. It sold out in 14 days, so realized sellout gross was only **51.4915%**. High-demand negative control.
+
+### Michigan online raffles
+Current official FAQ continues to confirm the desired monitor architecture, but no crawlable active raffle with both a live denominator and prize board was recovered in this packet.
+
+Status: **MONITOR CLASS STRENGTHENED / NO CURRENT POSITIVE LIVE STATE / NO GUARANTEE**.
 Files:
-- `research/h124_ohio_mylotto_rewards_deterministic_rebate.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H124_APPEND.md`
+- `research/h125_fixed_board_raffle_near_threshold_calibration.md`
+- `data/derived/h125_fixed_board_raffle_calibration.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H125_APPEND.md`
 
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
@@ -118,17 +110,17 @@ Files:
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Live fixed-prize undersubscription monitor:** keep searching current/upcoming official state/national lottery raffles with fixed cash boards, public `tickets remaining` or sold-count data, and deadline drawings from the actually sold pool. Compute `N*` before deeper work; prioritize cases materially below break-even with late-entry eligibility.
-2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash board, or where every sufficiently large block receives a deterministic minimum prize.
-3. **Deterministic loyalty/coupon scan:** only pursue official lottery coupons/rebates if the published discount is large enough to cross an already-computed coverage deficit; H124 closes ordinary low-rate loyalty points.
-4. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
-5. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
-6. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
-7. Lottery promotions: prioritize fixed cash rebates, unusually large deterministic multipliers, guaranteed added-value per purchased block, or fixed external pools over capped purchasable eligible supply.
+1. **Live fixed-prize undersubscription monitor:** keep searching current/upcoming official state/national/regulated raffles with fixed cash boards, public `tickets remaining` or sold-count data, and deadline drawings from the actually sold pool. Compute `N*` first; prioritize states materially below tax/cost-adjusted break-even with late-entry eligibility.
+2. **Prize-board inversion search:** find any fixed raffle/promotion where complete eligible ownership cost is below a rule-guaranteed cash board, or where every sufficiently large purchased block receives a deterministic minimum prize.
+3. **Jersey-style near-threshold scan:** prioritize fixed-board products where the live denominator can cross break-even before deadline; H125 shows a real architecture can come within ~4% of break-even.
+4. **Deterministic loyalty/coupon scan:** only pursue published discounts large enough to cross an already-computed coverage deficit; H124 closes ordinary low-rate points.
+5. **Primary-rule closure for Azerbaijan 4+4:** continue searching specifically for detailed registration no. 336 conditions; reopen economics only if rules materially improve H115/H116 bounds.
+6. **H007 TezLoto/RNG history:** pursue only on recovery of reliable bulk draw history/API, then run preregistered out-of-sample bias tests against >27.78% lift hurdle.
+7. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a prize-board inversion / deterministic minimum allocation exists.
 8. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
 9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H124_APPEND.md`.
-Latest case: `research/h124_ohio_mylotto_rewards_deterministic_rebate.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H125_APPEND.md`.
+Latest case: `research/h125_fixed_board_raffle_near_threshold_calibration.md`.
