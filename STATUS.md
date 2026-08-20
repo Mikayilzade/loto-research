@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Current lottery stage
-Structural/state-edge search, live fixed-prize undersubscription monitoring, cumulative early-ticket/cohort-local overlays, deterministic late-takeover floors, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, lottery-specific promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
+Structural/state-edge search, live fixed-prize undersubscription monitoring, cumulative early-ticket/cohort-local overlays, deterministic late-takeover floors, deterministic block/tranche allocation, rare Azerbaijan 4+4 carryover closure, TezLoto/RNG-bias data recovery, lottery-specific promotions/loyalty, capped/fixed-supply raffle economics, and global rolldown/buy-the-pot screens only where external subsidy can plausibly cross the exact coverage deficit.
 
 ## Strong historical / structural controls
 - Cash WinFall rolldown: historical +EV mechanism validated (~+10.69% conservative pre-tax sample ROI), not current guaranteed route.
@@ -63,29 +63,37 @@ Status: **STRONG +EV MONITOR CLASS VALIDATED / STRICT GUARANTEE REJECTED**.
 Ohio MyLotto Rewards gives deterministic points on non-winning tickets but is capped at 1,200 points/month. Exact complementary-cover controls top out at **78.125%** package gross. Status: **GUARANTEED-PROFIT COVERAGE REJECTED**.
 
 ## H129 — deterministic late-takeover floor
-New exact theorem for buying **all unsold tickets** in a fixed-board raffle after `E` tickets are already externally owned.
-
-For prize values sorted high-to-low, external tickets can occupy the `E` highest-value winning slots in a worst-case outcome. Therefore:
+Exact theorem for buying **all unsold tickets** in a fixed-board raffle after `E` tickets are already externally owned:
 
 `G(E) = max(0, total_board - sum(E highest prize values))`
 
-and takeover cost is `(cap-E)*ticket_price`. If `E >= number_of_prize_slots`, strict floor is zero.
+Takeover cost is `(cap-E)*ticket_price`. If `E >= number_of_prize_slots`, strict floor is zero.
 
 ### North Carolina Celebrate America Raffle 2026
-Official architecture:
 - cap **25,000** tickets × **$10**;
 - board: **20×$2,500 + 250×$250 + 2,000×$25 = $162,500**;
-- **2,270** total winning slots;
-- fixed deadline or sellout; remaining-ticket count publicly shown; no global purchase limit (250 per cart, repeated purchases allowed).
-
-Exact result:
-- best possible all-remaining takeover is at launch: **$162,500/$250,000 = 65.0% strict gross**;
-- strict floor declines as external ownership grows;
-- at `E>=2,270`, strict floor is **0**;
-- random-ticket pre-tax +EV threshold would be final sales `<16,250`, but a reliable official final 2026 sold denominator was not recovered in this run.
+- **2,270** winning slots;
+- best all-remaining takeover at launch: **65.0% strict gross**;
+- strict floor falls to zero once external ownership reaches 2,270 tickets;
+- random-ticket +EV threshold: final sales `<16,250`, but reliable official final sold denominator was not recovered.
 
 Status: **LATE-TAKEOVER THEOREM VALIDATED / NC GUARANTEE REJECTED / MONITOR UPGRADED**.
 Files: `research/h129_nc_raffle_late_takeover_floor.md`, `src/loto_research/raffle_takeover_floor.py`, `data/derived/h129_nc_raffle_takeover_floor.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H129_APPEND.md`.
+
+## H130 — NJ Fast Play Progressive finite-grid interpretation
+The published `500,000-ticket jackpot grid` initially looked like a possible finite-deck buy-the-pot path. Official game pages explicitly state that prizes **instantly replenish after every purchase** and every ticket retains the same odds. Therefore the grid is a probability denominator, not depleting inventory; buying 500,000 tickets does **not** guarantee the jackpot.
+
+Exact favorable nominal break-even common-jackpot thresholds from sampled current games:
+- $10 U.S. Soccer: **$1.948m**;
+- $20 Max Win: **$3.797m**;
+- $30 Jersey Jackpot: **$5.555m** despite the +$25k jackpot bonus;
+- $5 Perfectly Pear: **$2.107m** common jackpot at 50% share;
+- $1 Jersey Jackpot: **$2.313m** common jackpot at 10% share.
+
+2026 scale control: official indexed jackpot **$459,619** on July 26; a July 29 $30 ticket then won **$160,474** (100% jackpot state). These are far below the sampled +EV thresholds.
+
+Status: **FINITE-GRID TAKEOVER REJECTED / HIGH-JACKPOT +EV MONITOR ONLY / NO GUARANTEE**.
+Files: `research/h130_nj_fast_play_progressive_grid.md`, `src/loto_research/fastplay_progressive.py`, `data/derived/h130_nj_fastplay_thresholds.csv`, `research/CHECKED_PROJECTS_AND_TESTS_H130_APPEND.md`.
 
 ## Azerbaijan live branches
 - **4+4:** only rare high-order carryover states / material primary-rule improvement remain.
@@ -94,17 +102,18 @@ Files: `research/h129_nc_raffle_late_takeover_floor.md`, `src/loto_research/raff
 - **Beşdə 5 / Super Keno / ONLOTO:** ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Prize-board inversion monitor using H129 theorem:** search current/upcoming official fixed-board raffles with public remaining counts and compute both +EV denominator thresholds and the exact all-remaining worst-case floor `G(E)`. Prioritize unusually flat prize boards, very high winner-count/cap ratios, and operator-funded boards near or above total possible ticket revenue.
-2. **Live cumulative/cohort-local undersubscription monitor:** search current official raffles with deadline drawings, cumulative early-ticket eligibility, weekly/ring-fenced boards, or early-bird cash pools; compute cash/tax-adjusted `remaining_board(t)/N` and `EV(N,w)`.
-3. **Deterministic block/tranche allocation:** search lottery promotions where every purchased block/tranche is guaranteed a minimum prize or subsidy; this could bypass the external-ticket zero-floor problem.
-4. **Historical support reconstruction:** where final sold counts are missing but complete winning-number support exists, use order-statistic bounds only as secondary evidence, then seek primary confirmation.
-5. **Azerbaijan 4+4:** search specifically for detailed registration no. 336 conditions; reopen only if rules materially improve H115/H116 bounds.
-6. **H007 TezLoto/RNG:** pursue only on recovery of reliable bulk draw history/API, then preregister and run out-of-sample bias tests against >27.78% probability-lift hurdle.
-7. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a deterministic minimum allocation exists.
-8. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
-9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Deterministic block/tranche allocation:** search lottery promotions/raffles where every purchased block/tranche receives a guaranteed minimum prize, rebate, free-ticket bundle, or ring-fenced allocation. This is now the highest-value escape from the external-ticket zero-floor theorem.
+2. **Prize-board inversion monitor using H129 theorem:** search current/upcoming official fixed-board raffles with public remaining counts and compute both +EV denominator thresholds and exact all-remaining worst-case floor. Prioritize unusually flat boards, very high winner-count/cap ratios, and operator-funded boards near/above ticket revenue.
+3. **Live cumulative/cohort-local undersubscription monitor:** search current official raffles with cumulative early-ticket eligibility, weekly/ring-fenced boards, or early-bird cash pools; compute cash/tax-adjusted remaining-board and cohort EV.
+4. **Progressive instant/Fast Play monitor:** only reopen H130 if a common jackpot approaches exact game-specific +EV thresholds or if primary rules reveal a non-replenishing finite grid.
+5. **Historical support reconstruction:** where final sold counts are missing but complete winning-number support exists, use order-statistic bounds only as secondary evidence, then seek primary confirmation.
+6. **Azerbaijan 4+4:** search specifically for detailed registration no. 336 conditions; reopen only if rules materially improve H115/H116 bounds.
+7. **H007 TezLoto/RNG:** pursue only on recovery of reliable bulk draw history/API, then preregister and run out-of-sample bias tests against >27.78% probability-lift hurdle.
+8. Continue global rolldown/buy-the-pot search only where verified external subsidy is large relative to full-space spend, or a deterministic minimum allocation exists.
+9. Fixed-pack instant tickets: reopen only with official evidence of guaranteed per-pack minimum or deterministic subsidy above exact break-even.
+10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master: `research/CHECKED_PROJECTS_AND_TESTS.md`; connector-safe append packets are authoritative additions when direct replacement of the very large master ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H129_APPEND.md`.
-Latest case: `research/h129_nc_raffle_late_takeover_floor.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H130_APPEND.md`.
+Latest case: `research/h130_nj_fast_play_progressive_grid.md`.
