@@ -1,0 +1,7 @@
+scenario,external_deposit,first_deposit_match,extra_deposit_bonus,referral_bonus,strict_draw_balance,complete_pair_covers,guaranteed_gross_payout,pre_tax_surplus,roi_on_external_cash,status
+first_match_only,25,25,0,0,50,1,30,5,0.20,validated_conditional_on_complete_acceptance
+first_match_plus_referral,15,15,0,20,50,1,30,15,1.00,stackability_unproven
+first_match_plus_tiki_min,150,150,50,0,350,7,210,60,0.40,stackability_unproven
+first_match_plus_tiki_max_margin_test,250,250,50,0,550,11,330,80,0.32,stackability_unproven
+first_match_plus_summer_cap,250,250,50,0,550,11,330,80,0.32,stackability_unproven
+first_match_plus_50promo_plus_referral_discrete_optimum,240,240,50,20,550,11,330,90,0.375,stackability_unproven
