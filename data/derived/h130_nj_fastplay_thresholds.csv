@@ -1,0 +1,6 @@
+game,ticket_price,fixed_grid_average,fixed_gross_ratio,jackpot_share,jackpot_bonus,nominal_break_even_jackpot
+US Soccer $10,10,6.1033333333,0.6103333333,1.0,0,1948333.3333
+Max Win $20,20,12.4066666667,0.6203333333,1.0,0,3796666.6667
+Jersey Jackpot $30,30,18.84,0.628,1.0,25000,5555000
+Perfectly Pear $5,5,2.8933333333,0.5786666667,0.5,0,2106666.6667
+Jersey Jackpot $1,1,0.5375,0.5375,0.1,0,2312500
