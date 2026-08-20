@@ -1,0 +1,5 @@
+case,qualifying_cost_usd,coupon_usd,conditional_coupon_net_usd,conditional_coupon_gross_pct,allocation,strict_coupon_floor_usd,status
+Florida Lotto Love 2026,104,208,104,200.0,statewide every Nth qualifying ticket,0,conditional inversion only
+Florida PICK Midday 2026,1,5,4,500.0,statewide every Nth qualifying ticket,0,no guarantee
+Florida Fantasy 5 More Money March 2026,5,10,5,200.0,statewide every Nth qualifying ticket,0,no guarantee
+Florida X THE CASH 500X 2026,50,100,50,200.0,randomly generated every Nth non-winning entered statewide,0,no guarantee
