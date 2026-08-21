@@ -11,31 +11,39 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H153 — major state-lottery Keno cross-jurisdiction deterministic-cover screen**.
+Latest completed lottery packet: **H154 — KenoGO Jackpot hidden-state deterministic-cover screen**.
 
-### H153 major result
-The H149 exact fixed-paytable complete-cover theorem was extended beyond Nebraska to current official state-lottery Keno paytables.
+### H154 major result
+A new raw Keno paytable state above deterministic break-even was found.
 
-Exact best full-cover ratios found:
-- Ohio Lottery KENO: **66.1392%** (Pick 2), subsidy hurdle **33.8608%**;
-- Maryland Keno: **62.4391%** (Pick 3), hurdle **37.5609%**;
-- New York Quick Draw: **60.3194%** (Pick 5), hurdle **39.6806%**.
+Current KenoGO Jackpot 1-Spot complete cover:
+- 80 possible numbers;
+- AUD 2 per Jackpot ticket;
+- full one-spot cover cost **AUD 160**;
+- exactly 20 one-spot tickets win every draw.
 
-West Virginia KENO GO low-spot payouts were also screened and remain structurally in the same weaker ordinary-paytable range.
+Current published 1-Spot top prizes imply:
+- Regular: 20 × AUD 3 = **AUD 60 = 37.5%**;
+- Minor: 20 × AUD 10 = **AUD 200 = 125%**, nominal conditional surplus **+AUD 40**;
+- Major: 20 × AUD 25 = **AUD 500 = 312.5%**, nominal conditional surplus **+AUD 340**.
 
-These current major state-lottery base tables are materially inferior to:
-- H142 Virginia Keno 1-Spot: **75.0000%**;
-- H151 La Vista Quarter Madness: **81.0636%**.
+This initially looks like the first direct Keno paytable arbitrage: buy all 80 one-spot tickets only when Minor/Major is active.
 
-Conclusion: ordinary state-lottery Keno base paytables are unlikely to be the next source of a strict deterministic overlay. The highest-value Keno branch remains **special/promotional/community paytables**, especially Pick-1/Pick-2 tables with small absolute coverage cost and deterministic subsidies.
+However the Victorian Government's formal KenoGO Jackpot approval closes that route. It states that the Top Prize level is **determined at the conclusion of the game from the sum of the 20 drawn numbers**, while entries for the next draw close up to five seconds **before** that draw starts. Thus Minor/Major is not a pre-purchase observable state for the same draw.
 
-Status: **NO SUCCESS / ORDINARY STATE-LOTTERY KENO BASE-PAYTABLE BRANCH MATERIALLY WEAKENED**.
+Therefore an unconditional full cover must survive the lawful Regular state and has only a **37.5% strict floor**.
+
+Secondary blocker: current KenoGO FAQ states Tier One top prizes can be prorated if total draw-wide payout exceeds the maximum payout, so even a future pre-announced enhanced state would need cap/external-winner exposure bounded.
+
+KenoGO Classic 1-Spot was also confirmed at **75% deterministic cover** (AUD 80 cost → AUD 60 gross). Historical targeted 100% deposit matches would make that conditional arithmetic positive, but no public universally claimable August-2026 100% offer was found and current T&C retain eligibility, stake-limit and bonus-abuse discretion.
+
+Status: **NO SUCCESS / FIRST >100% CONDITIONAL KENO PAYTABLE STATE FOUND, BUT STATE RESOLVES AFTER SALES CUTOFF**.
 
 Files:
-- `research/h153_state_lottery_keno_crossjurisdiction_screen.md`
-- `src/loto_research/h153_state_lottery_keno_cover.py`
-- `data/derived/h153_state_lottery_keno_cover.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H153_APPEND.md`
+- `research/h154_kenogo_jackpot_hidden_state_cover.md`
+- `src/loto_research/h154_kenogo_jackpot_cover.py`
+- `data/derived/h154_kenogo_jackpot_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H154_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -61,7 +69,8 @@ Files:
 - H150 generalizes deterministic coverage to one/two specially marked winning balls; current Missouri Bulls-Eye/Double Bulls-Eye/Multiplier all remain below 75%.
 - H151 raises the standard fixed-paytable Keno benchmark to **81.0636%** via La Vista Quarter Madness.
 - H152 closes Omaha/Lincoln Quarter Mania as inferior cross-city benchmarks and rejects the current La Vista $5 free-play as far too small to bridge the H151 compact-cover deficit.
-- **H153 screens major ordinary state-lottery Keno tables: Ohio 66.1392%, Maryland 62.4391%, New York 60.3194%; none approaches H151.**
+- H153 screens major ordinary state-lottery Keno tables: Ohio 66.1392%, Maryland 62.4391%, New York 60.3194%; none approaches H151.
+- **H154 finds KenoGO Jackpot Minor/Major 1-Spot full-cover states at 125%/312.5%, but the regulator defines that state only after the draw, after sales cutoff; unconditional strict floor is 37.5%.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -70,12 +79,12 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: recover more current Nebraska/community special-rate Keno paytables and run every complete numeric table through H149, prioritizing Pick-1/Pick-2 structures with small absolute full-cover deficits.**
-2. Search current special/promotional Keno tables outside Nebraska only when they materially differ from ordinary base tables; H153 shows ordinary base-table scans are low-value.
-3. Search deterministic player-owned Keno subsidies at least **$172.51 per $790 La Vista Pick-2 cover**, or equivalent discount >21.8354%, fixed before purchase.
-4. Search compact special-rate Keno tables where a $5-$25 deterministic promotion is enough to cross the exact full-cover deficit.
-5. Continue recovery of current August 2026 numeric community specials from Lincoln, Fremont, Norfolk, Kearney, La Vista and smaller communities; do not infer current paytables from stale cached material.
-6. If a table/subsidy crosses 100%, immediately test ticket-count limits, batch entry, app saved-ticket execution, void/rollback, per-ticket/per-spot payout caps, taxes and promotional-funds restrictions.
+1. **Highest priority: search Keno/lottery products where an enhanced fixed paytable or jackpot tier is observable and contractually fixed BEFORE ticket sales close.** H154 proves that pre-announced Minor/Major-like states can cross deterministic break-even by a very large margin.
+2. Prioritize scheduled double/triple-prize Keno draws, future game-ID specials, venue/community promotional paytables and pre-announced boosted periods where `boost known -> basket accepted -> draw` is the execution order.
+3. Continue current Nebraska/community special-rate recovery and H149 screening, prioritizing Pick-1/Pick-2 structures with small cover deficits and future-dated specials.
+4. Search deterministic player-owned Keno subsidies at least **AUD 20 per AUD 80 KenoGO Classic 1-Spot cover**, **$172.51 per $790 La Vista Pick-2 cover**, or equivalent exact hurdle, fixed before purchase.
+5. Monitor KenoGO only for a publicly claimable/current deterministic deposit or ticket subsidy; historical personalised 100% offers are not enough. Any candidate must survive current bonus-abuse, stake-limit, eligibility and withdrawal terms.
+6. If any pre-announced enhanced state crosses 100%, immediately test batch-entry limits, complete-basket acceptance, cancellation/rollback, top-prize payout caps, external winner prorating, tax and location eligibility.
 7. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 8. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
@@ -84,5 +93,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H153_APPEND.md`.
-Latest case: `research/h153_state_lottery_keno_crossjurisdiction_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H154_APPEND.md`.
+Latest case: `research/h154_kenogo_jackpot_hidden_state_cover.md`.
