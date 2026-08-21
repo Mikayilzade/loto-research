@@ -11,32 +11,34 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H151 — La Vista Quarter Madness deterministic full-cover screen + Penny Keno zero-floor test**.
+Latest completed lottery packet: **H152 — Nebraska Quarter Mania cross-city screen + La Vista subsidy check**.
 
-### H151 major result
-A current La Vista Keno special materially improves the best fixed-paytable deterministic Keno benchmark found so far.
+### H152 major result
+The H149 exact complete-cover theorem was applied to official operator-hosted Omaha and Lincoln Quarter Mania 25-cent paytables as cross-city benchmarks.
 
-`Quarter Madness` is advertised as **all day every day**, with $1 minimum ticket and **$0.25 per way**. The current official page publishes complete 2-15 Spot fixed paytables.
+Results:
+- Omaha best Pick 1-16 deterministic full-cover ratio: **75.0000%**;
+- Lincoln best Pick 1-16 deterministic full-cover ratio: **75.0000%**;
+- neither beats H151 La Vista Quarter Madness **81.0636%**.
 
-Exact H149 full-cover evaluation of every k-subset gives:
-- best overall: **8-Spot = 81.0636% deterministic gross return**;
-- 4-Spot = **80.9456%**;
-- 3-Spot = **80.4771%**;
-- compact 2-Spot = **78.1646%**.
+Current La Vista event advertising also provides **$5 FREE Keno Play** on a qualifying burger promotion. Even granting the full $5 as cash-equivalent subsidy against the compact H151 Quarter Madness Pick-2 cover:
+- face cost = **$790.00**;
+- effective external cost = **$785.00**;
+- deterministic gross = **$617.50**;
+- deterministic net = **-$167.50**;
+- effective return = **78.6624%**.
 
-This exceeds the previous Virginia 1-Spot benchmark of 75% and reduces the deterministic subsidy needed for break-even to:
-- **18.9364%** at the theoretical best 8-Spot;
-- **19.5229%** for the 3-Spot cover ($20,540 face cost);
-- **21.8354%** for the compact 2-Spot cover (3,160 ways, $790 cost, $617.50 guaranteed gross).
+Thus the current $5 subsidy is only 0.6329% of face cost versus the exact **21.8354%** hurdle.
 
-La Vista Penny Keno was also checked. Its 20 Four Spots + 190 Eight Spots ticket has an explicit legal zero-payout draw: select one drawn number from each of the twenty 4-number groups. Then no 4-Spot reaches 4 hits and no 8-Spot reaches 7/8 hits. Therefore its strict standalone floor is $0.
+Big Red Keno app execution architecture remains favorable for any future overlay: Play+ funds can be transferred out, pre-start tickets can be voided with funds returning to balance, and tickets can be saved/replayed. This solves several execution issues but does not create an edge by itself.
 
-Status: **NEW BEST CURRENT STANDARD FIXED-PAYTABLE KENO COVER / EXTERNAL SUBSIDY STILL REQUIRED / NO SUCCESS**.
+Status: **NO NEW PAYTABLE ABOVE H151 / CURRENT $5 FREE-PLAY FAR BELOW BREAK-EVEN / NO SUCCESS**.
 
 Files:
-- `research/h151_lavista_quarter_madness_full_cover.md`
-- `data/derived/h151_lavista_quarter_madness_cover.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H151_APPEND.md`
+- `research/h152_nebraska_quarter_crosscity_and_lavista_subsidy.md`
+- `src/loto_research/h152_nebraska_quarter_crosscity.py`
+- `data/derived/h152_nebraska_quarter_crosscity.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H152_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -60,7 +62,8 @@ Files:
 - H143 confirms no >25% pre-locked Virginia subsidy was found.
 - H144-H149 establish Nebraska dynamic-special screening, withdrawable Play+ funding, pre-start void architecture and exact fixed-paytable cover theorem.
 - H150 generalizes deterministic coverage to one/two specially marked winning balls; current Missouri Bulls-Eye/Double Bulls-Eye/Multiplier all remain below 75%.
-- **H151 raises the standard fixed-paytable Keno benchmark to 81.0636% via current La Vista Quarter Madness; standalone still loses, but only an 18.9364%-21.8354% deterministic subsidy is now needed depending on execution scale.**
+- H151 raises the standard fixed-paytable Keno benchmark to **81.0636%** via La Vista Quarter Madness.
+- **H152 closes Omaha/Lincoln Quarter Mania as inferior cross-city benchmarks and rejects the current La Vista $5 free-play as far too small to bridge the H151 compact-cover deficit.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -69,11 +72,11 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search La Vista/Nebraska for deterministic player-owned free-play, coupons, ticket discounts or purchase-linked awards that reduce effective Quarter Madness 2-Spot cost by >21.8354% or 3-Spot cost by >19.5229%.** Count only subsidy value that is fixed before the coverage purchase and survives all required conditions.
-2. Search other current quarter/penny/special-rate Keno paytables and run every complete table through H149; prioritize any fixed non-shareable cover above **81.0636%**.
-3. Resume recovery of current August 2026 numeric Nebraska community specials (Lincoln, Fremont, Norfolk, Kearney, La Vista and smaller communities); do not infer current paytables from stale cached images.
-4. If a table/subsidy crosses 100%, immediately test ticket-count limits, batch entry, app saved-ticket execution, void/rollback, per-ticket/per-spot payout caps, taxes and promotional-funds restrictions.
-5. Search single-ticket/way-ticket constructions that reduce complete-cover transaction count without changing the deterministic payout theorem.
+1. **Highest priority: recover more current Nebraska/community special-rate Keno paytables and run every complete numeric table through H149, prioritizing Pick-1/Pick-2 structures with small absolute full-cover deficits.**
+2. Search deterministic player-owned Keno subsidies at least **$172.51 per $790 La Vista Pick-2 cover**, or equivalent discount >21.8354%, fixed before purchase.
+3. Search compact special-rate Keno tables where a $5-$25 deterministic promotion is enough to cross the exact full-cover deficit.
+4. Continue recovery of current August 2026 numeric community specials from Lincoln, Fremont, Norfolk, Kearney, La Vista and smaller communities; do not infer current paytables from stale cached material.
+5. If a table/subsidy crosses 100%, immediately test ticket-count limits, batch entry, app saved-ticket execution, void/rollback, per-ticket/per-spot payout caps, taxes and promotional-funds restrictions.
 6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
@@ -82,5 +85,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H151_APPEND.md`.
-Latest case: `research/h151_lavista_quarter_madness_full_cover.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H152_APPEND.md`.
+Latest case: `research/h152_nebraska_quarter_crosscity_and_lavista_subsidy.md`.
