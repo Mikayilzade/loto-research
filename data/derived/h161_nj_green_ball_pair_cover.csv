@@ -1,0 +1,8 @@
+white_balls_removed,green_trigger_probability,strict_draw_count_floor,pair_cover_face_cost_usd,strict_prize_gross_usd,strict_gross_ratio,sales_commission_5pct_usd,payout_commission_1_25pct_usd,retailer_pre_tax_net_if_self_commission_applies_usd
+0,0.1428571429,1,50,25,0.5,2.5,0.3125,-22.1875
+1,0.1666666667,1,50,25,0.5,2.5,0.3125,-22.1875
+2,0.2,1,50,25,0.5,2.5,0.3125,-22.1875
+3,0.25,1,50,25,0.5,2.5,0.3125,-22.1875
+4,0.3333333333,1,50,25,0.5,2.5,0.3125,-22.1875
+5,0.5,1,50,25,0.5,2.5,0.3125,-22.1875
+6,1.0,2,50,50,1.0,2.5,0.625,3.125
