@@ -11,35 +11,31 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H147 — Nebraska rollback execution + current-special surface**.
+Latest completed lottery packet: **H148 — Omaha August 2026 $2 Monthly Special exact 3-Spot coverage**.
 
-### H147 major result
-Nebraska execution architecture is stronger than previously recorded:
-- Big Red/La Vista FAQ says Play+ funds can be transferred out;
-- a purchased app ticket can be voided before the game starts and its funds return to account balance;
-- saved/practice tickets can be prepared outside the licensed location for later play;
-- current Monthly Keno Specials and Official Rules are exposed in the app;
-- Big Red paybook rules also state a player may request a refund before the games on that ticket are closed.
+### H148 major result
+The current official Big Red Keno Omaha promotion image was recovered, solving part of H147's live-special data gap. It advertises an **August 1–31, 2026 $2 Monthly Special**, **3 Spot**, **Hit 3 = $102**.
 
-This creates a conditional **sequential-cover-with-rollback** route:
-`withdrawable balance -> verify active special -> buy/verify cover legs -> if complete, allow draw; if incomplete, void/refund all legs before closure`.
+Exact full-cover arithmetic:
+- `C(80,3) = 82,160` possible 3-Spot selections;
+- full-cover cost at $2 = **$164,320**;
+- every 20-number draw contains exactly `C(20,3)=1,140` winning 3-subsets;
+- guaranteed gross = `1,140 × $102 = $116,280`;
+- deterministic gross return = **70.7644%**;
+- deterministic deficit = **-$48,040**.
 
-That materially reduces the H145/H146 non-atomic acceptance risk and is structurally much better than Kentucky H136-H140, where cash became nonwithdrawable before coverage could be locked.
+General fast-screen theorem validated for a single-tier k-Spot special:
+`R_k = (P/s) × C(20,k)/C(80,k)`.
+For k=3, standalone break-even requires payout multiplier `>72.0702x`; at $2 stake the Hit-3 payout must exceed **$144.14**. Omaha's $102 is therefore decisively negative despite the promotional headline.
 
-However strict execution is still unproven because no public rule establishes a single atomic/batch 80-number Pick-1 order or a bulk-void operation, and a five-minute game window may not permit certain rollback of many separately accepted tickets.
+The exact deterministic subsidy needed to invert this Omaha special is **>29.2356% of face spend**, worse than the 25% deficit of the already-known 75% Pick-1 target. H147 execution/rollback analysis is therefore unnecessary for this specific special.
 
-A fresh current-special search again did not recover a reliable August 2026 Pick-1 numeric special above the H146 boundary. Current public surfaces now include Big Red Promos, the app Monthly Specials/Official Rules, La Vista Keno Specials (numeric paytables rendered as images), and municipal agenda attachments.
-
-Fresh controls:
-- Pennsylvania Keno Pick 1: $2.50/$1 -> **62.5% deterministic full-cover return**;
-- BCLC Keno Pick 1: $2/$1 -> **50% deterministic full-cover return**;
-therefore neither improves on Virginia/Nebraska targets.
-
-Status: **ROLLBACK ARCHITECTURE VALIDATED CONDITIONALLY / LIVE NUMERIC SPECIAL STILL DATA-GATED / NO SUCCESS**.
+Status: **CURRENT NUMERIC SPECIAL RECOVERED / EXACT FULL-COVER GUARANTEE REJECTED / NO SUCCESS**.
 
 Files:
-- `research/h147_nebraska_rollback_execution_and_current_special_surface.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H147_APPEND.md`
+- `research/h148_omaha_august_2026_3spot_special_full_cover.md`
+- `data/derived/h148_omaha_august_2026_3spot_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H148_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -64,7 +60,8 @@ Files:
 - H144 validates Nebraska municipal Keno periodic special paytables + free-play coupons as a dynamic search class.
 - H145 validates withdrawable Play+ funding + pre-start void execution architecture and the coupon-adjusted Pick-1 trigger `>3.00x` with a $5 credit on a $20 cover.
 - H146 recovers an actual 2026 Kearney Pick-1 special at exactly 3.00x: 75% face return and exact break-even under the hypothetical $5 coupon; also proves scheduled promo dates are not enough because specials may be withdrawn early.
-- **H147 validates sequential cover with pre-close rollback as a real risk-control mechanism, but bulk/atomic rollback for an 80-number cover remains unproven; current August threshold-crossing numeric special remains unrecovered.**
+- H147 validates sequential cover with pre-close rollback as a real risk-control mechanism, but bulk/atomic rollback for an 80-number cover remains unproven.
+- **H148 recovers the current Omaha August $2 3-Spot special and closes it at only 70.7644% deterministic full-cover return; generalized k-Spot threshold formula now enables immediate screening of future special images.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -73,10 +70,10 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: recover current numeric Big Red/La Vista specials from app-linked assets, current promo-linked images, or municipal attachments.**
-2. Search for a single-ticket/way-ticket or batch construction that represents all 80 Pick-1 selections, or a documented bulk-void command; this could convert H147 rollback from conditional to strict.
-3. Trigger full execution/tax analysis on any active Pick-1 `p>4.00`, or `p>3.00` with a genuinely pre-owned applicable subsidy.
-4. Verify single-game ticket-level paytable designation, minimum wager, complete cover acceptance, aggregate payout limits, coupon applicability, refund deadline, Play+ withdrawal and taxes before SUCCESS.
+1. **Highest priority: recover other current August 2026 numeric Nebraska specials from Big Red community images/pages (Lincoln, Fremont, Norfolk, Kearney, La Vista and smaller communities) and apply H148's exact k-Spot screen immediately.**
+2. Prioritize active Pick-1 `p>4.00`, or any k-Spot special with exact standalone `R_k>1`; only escalate execution/tax work after arithmetic crosses threshold.
+3. For `0.75<R_k<=1`, search for genuinely pre-owned deterministic coupon/discount exceeding the exact deficit; do not spend execution effort on weaker specials.
+4. Search for a single-ticket/way-ticket or batch construction that represents all 80 Pick-1 selections, or a documented bulk-void command; this can convert H147 rollback from conditional to strict once a threshold-crossing paytable exists.
 5. Continue scan outside Nebraska for compact non-shareable games with deterministic coverage ratio >75% or checkout-level subsidies above exact deficit.
 6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
@@ -86,5 +83,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H147_APPEND.md`.
-Latest case: `research/h147_nebraska_rollback_execution_and_current_special_surface.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H148_APPEND.md`.
+Latest case: `research/h148_omaha_august_2026_3spot_special_full_cover.md`.
