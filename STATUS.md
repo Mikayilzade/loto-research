@@ -11,44 +11,32 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H140 — Kentucky discretionary-promotion gate + pre-funding acceptance architecture**.
+Latest completed lottery packet: **H141 — North Carolina checkout-level Lottery Offer architecture**.
 
-### H140 major result
-H136-H139 found the first current lottery subsidy large enough to turn a compact fixed-prize full cover mathematically positive: Kentucky's August 2026 100% first-deposit match combined with Pick 3 Pair coverage (`$50 face -> guaranteed $30 gross`). H139 conditionally raised the pre-tax margin to as much as +$90 if concurrent Kentucky deposit/referral offers stack.
+### H141 major result
+H140 identified the required ordering for a strict subsidy-backed lottery cover:
 
-H140 found a stronger upstream blocker in the current official Kentucky iLottery terms:
-- promotional offers are explicitly **discretionary**;
-- the player has **no right to receive or redeem any specific offer**;
-- offers may be cancelled at any time without notice;
-- KLC disclaims loss from delay/error/failure to make or accept an offer;
-- ordinary deposited funds are nonwithdrawable/nonrefundable;
-- KLC may refuse attempted purchases and limit a wager on a particular number set at any time without notice.
+`lock complete basket + lock subsidy -> commit external cash`.
 
-Therefore the lawful sequence remains:
+H141 found the strongest official state-lottery architecture match so far in North Carolina. Current NCEL Online Play Terms explicitly define `Lottery Offers` that can apply to a single game **or the whole shopping cart**, and state that upon qualifying for a **Discount Offer, the ticket is immediately discounted**. A 2026 official campaign (`M4LDEAL26`) separately proves that a lottery promo code can be entered on the Shopping Cart page before completing the purchase.
 
-`irreversible deposit -> discretionary Bonus outcome -> attempted cover acceptance`.
+This materially validates the checkout-level subsidy class and solves the harmful Kentucky-style sequencing **in principle**: a player can potentially verify a purchase-level discount before committing the checkout.
 
-A strict SUCCESS theorem requires:
+However, no current August 2026 public NCEL purchase-level Discount Offer was found that crosses a compact game's deterministic break-even threshold.
 
-`locked subsidy + locked complete basket -> external cash commitment`.
+Current NC Pick 3 is also weaker than Kentucky for full coverage:
+- Exact: 1,000 × $0.50 = $500 face; one winning Exact pays $250 -> **50% deterministic cover**.
+- Pair: 100 × $0.50 = $50 face; one winning Pair pays $25 -> **50% deterministic cover**.
 
-Thus **Kentucky H136-H139 is now CLOSED as a terminal guarantee under current published terms even if future evidence proves promo stacking**. Stackability is no longer the decisive blocker and should not consume more runs unless Kentucky's terms/process materially change.
+Therefore a subsidy must be **strictly greater than 100% of external cash**, equivalently a checkout discount **strictly greater than 50% of face price**, for positive pre-tax Pick 3 coverage. NCEL's current 100% first-deposit Welcome Offer reaches only theoretical pre-tax break-even and remains a deposit/promo mechanism subject to the same execution/discretion issues already rejected in H140.
 
-H140 also formalized the subsidy threshold for any deterministic fixed-prize complete cover with ratio `r`:
-
-`profit = r(D+B) - D`, so positive pre-tax floor requires `B/D > 1/r - 1`.
-
-For Kentucky Pick 3 Pair (`r=.60`) the deterministic subsidy threshold is **>66.6667%**, not necessarily 100%.
-
-A useful architecture control was found in the current Virginia Lottery FAQ: draw-game tickets can be assembled in a shopping cart and paid at checkout by one-time debit, and the cart can be cleared before purchase. This proves that **pre-funding basket construction is a real state-lottery architecture**, but H140 did not find a current Virginia deterministic draw-game subsidy large enough to cross the exact coverage threshold.
-
-Status: **NO SUCCESS / KENTUCKY CURRENT PROMO GUARANTEE CLOSED / CHECKOUT-LEVEL SUBSIDY CLASS PRIORITIZED**.
+Status: **CHECKOUT-LEVEL SUBSIDY ARCHITECTURE VALIDATED / CURRENT SUITABLE >BREAK-EVEN OFFER NOT FOUND / NO SUCCESS**.
 
 Files:
-- `research/h140_kentucky_discretionary_promo_gate_and_prefunding_architecture.md`
-- `data/derived/h140_prefunding_architecture_thresholds.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H140_APPEND.md`
-- previous foundation: `research/h136_kentucky_100pct_bonus_pick3_cover.md` through `research/h139_kentucky_concurrent_deposit_promo_stack.md`
+- `research/h141_north_carolina_checkout_offer_architecture.md`
+- `data/derived/h141_nc_checkout_thresholds.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H141_APPEND.md`
+- prior architecture foundation: `research/h140_kentucky_discretionary_promo_gate_and_prefunding_architecture.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -66,7 +54,8 @@ Files:
 - H133 current capped wallet bonuses: deterministic player-owned subsidy confirmed, but tested compact games remain below strict break-even.
 - H134 free random tickets / second-chance entries cannot be counted at face value toward guaranteed floor.
 - H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Washington Match 4 package reaches only 91.4361% strict return.
-- H136-H139 Kentucky current 100%/stacked deposit promos create positive **conditional** cover arithmetic, but H140 now closes the current terminal-guarantee route because promo entitlement itself is discretionary before nonwithdrawable funding and wager acceptance is not locked.
+- H136-H139 Kentucky current 100%/stacked deposit promos create positive conditional cover arithmetic, but H140 closes the current terminal-guarantee route because promo entitlement itself is discretionary before nonwithdrawable funding and wager acceptance is not locked.
+- **H141 validates a better state-lottery checkout architecture: whole-cart immediate Discount Offers exist in NCEL terms and a 2026 promo used Shopping Cart code entry before purchase; no current >break-even compact-game offer found.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -75,10 +64,10 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search current state-lottery checkout-level deterministic promos/discounts where the full draw-game basket is assembled before payment and the subsidy is automatically applied in the same transaction.** This directly solves the H140 ordering problem.
-2. Search compact fixed-prize non-shareable games with deterministic full-cover ratio **>60%**. Use threshold theorem `required bonus/cash > 1/r - 1`; e.g. `r=2/3` needs >50%, `r=.75` needs >33.33%.
-3. Search lottery wallets where unused cash principal is withdrawable after Bonus award; acceptable order is `deposit -> Bonus lock -> basket test -> withdraw principal if coverage fails`.
-4. Search player-owned BOGO/direct-ticket promotions that apply automatically at checkout rather than discretionary post-deposit Bonus credit.
+1. **Highest priority: search current player-owned checkout-level Discount/BOGO offers that are visible/applied before payment, and pair them with compact non-shareable games having deterministic full-cover ratio >60%.** Required face discount is `q > 1-r`.
+2. Prioritize games with `r >= 2/3` (discount >33.33%) or `r >= .75` (discount >25%); this dramatically widens the set of ordinary checkout promotions that can cross break-even.
+3. Search NCEL and other state lotteries for purchase-level offers explicitly applying to Pick 3/4/5 or whole cart, especially repeated `buy X get Y free` campaigns where free numbers are player-selectable.
+4. Search for wallet systems where unused external cash remains withdrawable after Bonus award; acceptable sequence is `deposit -> lock Bonus -> test basket -> withdraw principal if basket fails`.
 5. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 6. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 7. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
@@ -88,5 +77,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H140_APPEND.md`.
-Latest case: `research/h140_kentucky_discretionary_promo_gate_and_prefunding_architecture.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H141_APPEND.md`.
+Latest case: `research/h141_north_carolina_checkout_offer_architecture.md`.
