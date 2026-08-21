@@ -1,0 +1,17 @@
+field,value
+special_date_range,2026-08-01_to_2026-08-31
+community,Omaha
+spot_count,3
+draw_pool_N,80
+drawn_d,20
+stake_per_selection_usd,2
+hit_all_prize_usd,102
+full_selection_count,82160
+guaranteed_hit_all_winners,1140
+full_cover_cost_usd,164320
+guaranteed_gross_usd,116280
+guaranteed_profit_usd,-48040
+guaranteed_return_ratio,0.7076436222005842
+required_discount_fraction_to_break_even,0.2923563777994158
+break_even_payout_multiplier,72.07017543859649
+break_even_hit3_payout_usd,144.14035087719299
