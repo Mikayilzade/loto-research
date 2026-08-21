@@ -11,42 +11,49 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H163 — New Jersey Pick-3 Green Ball atomicity lower bound**.
+Latest completed lottery packet: **H164 — North Carolina Pick 3 forced Double Draw + 7% retailer commission overlay**.
 
-### H163 major result
-H162's multi-ticket execution problem is now proven structural under the current official Pick-3 bet menu.
+### H164 major result
+North Carolina now provides a stronger recurring analogue to the NJ Green Ball lead.
 
-Current official Pick-3 rules give maximum positive-prize support per Play:
-- Straight: 1 of 1,000 ordered outcomes;
-- 3-way Box/Wheel: <=3;
-- 6-way Box/Wheel: <=6;
-- Pair: **10**.
+Current Carolina Pick 3 Pair economics:
+- 100 ordered Pair outcomes;
+- $0.50 per Pair;
+- full Pair cover cost **$50**;
+- one drawing guarantees exactly one $25 Pair prize.
 
-Therefore any portfolio that guarantees at least one positive-prize Play for every Pick-3 outcome needs at least:
+NC Pick 3 Double Draw uses a depleting white-ball mechanism. Official NC Lottery announcements have identified nights where only the Yellow Ball remains and a second Pick-3 drawing is therefore **guaranteed**. The latest verified 2026 promotion ran in July 2026.
 
-`ceil(1000 / 10) = 100 Plays`.
+On such a forced Double Draw evening:
+- full Pair cover cost = **$50**;
+- first Pick-3 draw guarantees **$25**;
+- second Pick-3 draw guarantees **$25**;
+- prize-only deterministic gross = **$50 = 100%**.
 
-The 100 ordered Pair bets used in H161/H162 attain this bound exactly, so the cover is play-count optimal.
+North Carolina statute G.S. 18C-142 and the current NCEL retailer contract (v. 05-27-2026) set retailer compensation at **7% of the retail price/face value of tickets or shares sold by the retailer**.
 
-Because a Pick-3 Ticket can contain at most **10 Plays**, any exact all-outcome cover requires at least:
+If a licensed retailer owner's own otherwise-valid $50 Pick-3 purchase is commission-bearing sales:
+- guaranteed prizes = $50;
+- retailer commission = **$3.50**;
+- conditional deterministic pre-tax total = **$53.50 = 107%**;
+- conditional pre-tax profit = **+$3.50**.
 
-`ceil(100 / 10) = 10 Tickets`.
-
-Thus no published Straight/Wheel/Box/Pair redesign can compress the forced Green Ball deterministic cover into one ticket or fewer than ten tickets. The second forced Green Ball draw cannot cure this: one ticket covers at most 100 outcomes and leaves at least 900 uncovered.
+Execution is materially stronger than New Jersey because NC Lottery's official FAQ says a retail Pick-3 ticket may be canceled on the issuing terminal, at the purchaser's request, **within 15 minutes of purchase or before draw break, whichever occurs first**. This creates a plausible rollback protocol if any required cover selection fails.
 
 ### Why this is NOT SUCCESS
-1. **Atomicity remains unresolved and is now structural.** At least 10 tickets are required. Official rules allow liability-based refusal of later wagers and only say a Ticket may be cancelled `at the time of purchase`; they do not guarantee rollback of all earlier completed tickets if a later required ticket fails.
-2. **Self-sale commission is still not explicit.** Public evidence remains strong: NJ Lottery says retailers earn 5% on every ticket sold; Pick-3 rules mandate 5% on gross sales; retailer owners may lawfully play and NJ Lottery has documented an owner buying for himself at his own store. But no public accounting/audit sentence explicitly classifies an owner-personal ticket at the owner's licensed entity as commission-bearing gross sales.
-3. **Green Ball is not currently active.** Latest cycle ended August 2, 2026.
-4. **Promotion irrevocability and tax/entity floor remain unresolved.**
+1. **No active forced state today.** Latest identified 2026 Double Draw promotion ended July 31; the mechanism is recurring but currently dormant.
+2. **Self-sale commission is not explicit.** Public contract/statute says 7% on tickets sold by retailer, but no public sentence yet confirms that an owner-personal ticket at the owner's licensed store remains commission-bearing sales.
+3. **Rollback is not atomic.** The 15-minute cancellation right is strong, but public rules do not guarantee an all-prior-ticket basket rollback under terminal/system outage or similar operational failure.
+4. **After-tax floor is unresolved.** The edge is only $3.50/$50 and may involve separate player/retailer tax persons plus 2026 wagering-loss treatment.
+5. **Future promotion rules must be revalidated each cycle.**
 
-Status: **ONE-TICKET COMPRESSION REJECTED / 10-TICKET MINIMUM PROVEN / H162 COMMISSION OVERLAY STILL PROMISING BUT NON-TERMINAL**.
+Status: **PROMISING RECURRING DETERMINISTIC OVERLAY / TERMINAL GUARANTEE NOT YET PROVEN**.
 
 Files:
-- `research/h163_nj_green_ball_atomicity_lower_bound.md`
-- `src/loto_research/h163_nj_pick3_support_bound.py`
-- `data/derived/h163_nj_pick3_support_bound.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H163_APPEND.md`
+- `research/h164_nc_pick3_double_draw_retailer_overlay.md`
+- `src/loto_research/h164_nc_pick3_double_draw.py`
+- `data/derived/h164_nc_pick3_double_draw.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H164_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -70,8 +77,9 @@ Files:
 - H159 fixed-board residual takeover theorem: if `e<W`, exact strict floor is the sum of the `W-e` cheapest prizes; if `e>=W`, floor is zero.
 - H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly **100% gross**, making any compatible subsidy sufficient before tax/friction.
 - H161 New Jersey Green Ball: publicly observable forced state + 100-Pair/$50 exact cover reaches **100% prize gross**.
-- H162 official Pick-3 rules lock ordinary retailer economics at 5% of gross sales and 1.25% qualifying prize cashing; conditional forced-state cover becomes 105%-106.25%.
-- **H163 proves the 100-Pair construction is play-count optimal and requires at least 10 tickets, so NJ Green Ball atomicity cannot be solved by a different published Pick-3 bet type.**
+- H162 official NJ Pick-3 rules lock ordinary retailer economics at 5% of gross sales and 1.25% qualifying prize cashing; conditional forced-state cover becomes 105%-106.25%.
+- H163 proves the NJ 100-Pair construction is play-count optimal and requires at least 10 tickets, so atomicity cannot be solved by another published Pick-3 bet type.
+- **H164 NC Pick 3 forced Double Draw reaches 100% prize gross and conditionally 107% with the statutory 7% retailer commission; NC also supplies an explicit 15-minute retail cancellation window, making this the strongest current recurring execution architecture, but self-sale/atomic-outage/tax/current-state gates remain.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -80,18 +88,19 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search official NJ terminal/retailer manuals or written retailer-support material for a true multi-ticket batch transaction/reservation or explicit guaranteed rollback of all earlier tickets in the same requested basket.** Do not repeat bet-type compression; H163 closed it.
-2. Search another cumulative-trigger lottery promotion whose forced-state exact coverage fits in one ticket or one atomic system transaction.
-3. Search lottery jurisdictions where licensed retailers may personally play and where commission on owner/employee self-purchased valid tickets is explicitly stated.
-4. During future NJ Green Ball cycles monitor the publicly displayed remaining-white-ball count; reopen only at `k=6` and only if atomicity/self-sale gates are solved.
-5. Continue H159 live/announced fixed-board raffle monitor, especially flat boards whose exact worst-case residual floor approaches or exceeds 100%.
-6. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-7. Continue Nebraska/community scheduled-special recovery where enhanced paytable is fixed before purchase.
-8. Search compatible deterministic discounts/free-play around Michigan forced-red Daily 3 and other forced-second-draw promotions.
-9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
-10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: investigate NCEL retailer rules/reference material for explicit treatment of retailer-owner self-purchases and whether those valid own-store sales receive the statutory 7% commission.** Do not repeat Pair-cover arithmetic.
+2. Search current NC terminal/reference rules for cancellation after intervening ticket transactions: can all earlier Pick-3 tickets still be cancelled within the 15-minute window, and what happens under terminal outage/recovery?
+3. Monitor for the next NC Pick 3 Double Draw cycle; reopen immediately as white-ball count approaches zero and verify the current promotion wording before execution.
+4. Solve H164 tax/entity floor for plausible lawful retailer structures only after self-sale commission is confirmed.
+5. Continue searching cumulative-trigger lottery promotions where forced-state exact coverage reaches 100% and execution can be canceled/rolled back before draw.
+6. Continue NJ Green Ball only if batch/rollback or explicit self-sale evidence appears; H163 closed bet-type compression.
+7. Continue H159 live/announced fixed-board raffle monitor, especially flat boards whose exact worst-case residual floor approaches or exceeds 100%.
+8. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
+9. Continue Nebraska/community scheduled-special recovery where enhanced paytable is fixed before purchase.
+10. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
+11. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H163_APPEND.md`.
-Latest case: `research/h163_nj_green_ball_atomicity_lower_bound.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H164_APPEND.md`.
+Latest case: `research/h164_nc_pick3_double_draw_retailer_overlay.md`.
