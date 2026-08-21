@@ -11,33 +11,37 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H158 — Emirates Draw deterministic cart promos + SURE residual takeover**.
+Latest completed lottery packet: **H159 — fixed-board raffle residual takeover forced-slot floor**.
 
-### H158 major result
-A fresh 2026 scan found a genuinely deterministic player-owned cart subsidy in Emirates Draw: the current Onam EASY6 promotion (published August 16, valid through August 30, 2026) automatically discounts five EASY6 entries from USD 30 to USD 21, i.e. **30% off**, repeatable during the promotion. Recent August EASY6 offers also reached buy-6-get-3-free (**33.3333% effective subsidy**).
+### H159 major result
+H158's residual-raffle zero-floor test has been strengthened into an exact worst-case theorem for the only interesting regime where the number of already-sold external tickets `e` is still below the number of guaranteed winning slots `W`.
 
-Exact EASY6 full-cover math, however, decisively rejects the route:
-- space `C(39,6)=3,262,623`;
-- face cost **$19,575,738**;
-- even granting our cover the entire advertised shared Match-6/5/4 pools plus every fixed Match-3 payout, favorable gross is only **$4,138,120**;
-- current 30%-discount cover cost **$13,703,016.60**, favorable ratio **30.198606%**;
-- hypothetical/scalable buy-6-get-3 cost **$13,050,492**, favorable ratio **31.708536%**.
+For a fixed board with prizes sorted ascending `p1 <= ... <= pW`, if a buyer acquires **every remaining ticket** after `e` external sales:
+- if `e >= W`, strict buyer prize floor is **0**;
+- if `e < W`, the exact strict payout floor is the sum of the **`W-e` cheapest prizes**, because the external tickets may occupy the `e` most valuable winner slots;
+- strict margin is `G(e) = sum(cheapest W-e prizes) - ticket_price*(T-e)`.
 
-The same packet tested a more deceptive live state in Emirates SURE raffles. On the August 21 snapshot, the cost of **all currently remaining tickets** was below the advertised prize board in SURE1, SURE2 and SURE3. This is not a guarantee because already-sold external tickets remain eligible and can occupy every winner slot:
-- SURE1: 2,377 external tickets vs 1 winner;
-- SURE2: 2,334 external tickets vs 1 winner;
-- SURE3: 12,143 external tickets vs 5 winners.
-Therefore buying every remaining ticket still has a legal **$0 strict prize floor**.
+This closes misleading cases where `remaining ticket cost < headline prize board` but the buyer cannot force the valuable prizes.
 
-H158 reinforces a reusable residual-raffle theorem: for total tickets `T`, remaining `R`, and `W` winning slots, if `T-R >= W`, then absent another structural constraint, all `W` winners can be external and a residual buyer has zero strict prize floor. Apply this before any `remaining cost < headline prize pool` arithmetic.
+Virginia's 2026 Commanders Golden Pass / Capitals Career In A Year design was screened exactly:
+- `T=150,000`, ticket price `$20`, `W=3,506`;
+- board = `3,000 x $100 + 500 x $500 + 5 x $10,000 + 1 x $950,000-value top prize`;
+- full acquisition cost = **$3,000,000**;
+- entire advertised board = **$1,550,000**;
+- best strict state is already `e=0`: **-$1,450,000 / 51.6667%**;
+- every `e>0` worsens the guarantee because each external ticket saves only $20 while it can remove a forced prize worth at least $100 (and the first can remove the $950k top prize).
 
-Status: **NO SUCCESS / CURRENT DETERMINISTIC EMIRATES PROMOS SCREENED NEGATIVE; CURRENT SURE RESIDUAL BUYOUTS REJECTED BY EXTERNAL-WINNER FLOOR**.
+Therefore this high-winner raffle design is **rejected for every possible sales state**, not just after sellout.
+
+Michigan's official online-raffle architecture remains worth monitoring because it explicitly permits unlimited aggregate ticket purchases (250 per cart, repeated carts), but a fresh August 2026 public screen did not surface a current active board/live state with `G(e)>0`.
+
+Status: **NO SUCCESS / H159 FORCED-SLOT THEOREM VALIDATED / VIRGINIA 2026 HIGH-WINNER RESIDUAL TAKEOVER CLOSED FOR ALL SALES STATES**.
 
 Files:
-- `research/h158_emirates_draw_deterministic_promos_and_sure_residual_takeover.md`
-- `data/derived/h158_emirates_promo_screen.csv`
-- `src/loto_research/h158_emirates_promo_screen.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H158_APPEND.md`
+- `research/h159_residual_raffle_forced_slot_floor.md`
+- `src/loto_research/h159_residual_raffle_floor.py`
+- `data/derived/h159_virginia_residual_raffle_floor.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H159_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -64,7 +68,8 @@ Files:
 - H155 proves a universal pre-announced no-cost 2x on current PA 4-SPOT would yield 129.743674% deterministic gross, but current PA/MD promotions assign boosts probabilistically/Nth-ticket, CT resolves its multiplier too late, and Oregon fixed Special Keno remains below break-even.
 - H156 proves that paid multiplier add-ons must be judged net of surcharge: Ohio's universal Double BOOSTER solves ownership but leaves the guaranteed cover ratio unchanged; BCLC/Michigan free Doublers remain randomly assigned.
 - H157 proves BCLC Value Bundles are the right deterministic ownership architecture. A future buy-3-get-2-free (or stronger) bundle would cross the current Pick-2/Pick-3 exact coverage threshold, while current 2026 BCLC promotion is random Doubler and does not qualify.
-- **H158 validates a current deterministic cart-discount architecture at Emirates Draw, but EASY6 remains far below break-even even with 30–33.33% subsidy. It also closes the current SURE residual-buyout illusion: `remaining cost < prize board` is insufficient when already-sold external tickets can occupy all winner slots.**
+- H158 validates a current deterministic cart-discount architecture at Emirates Draw, but EASY6 remains far below break-even; current SURE residual buyouts have zero strict floor once external sold tickets can occupy all winner slots.
+- **H159 generalizes residual raffle screening: when `e<W`, use the `W-e` cheapest forced prizes, not the whole board. Virginia's 2026 150k-ticket/3,506-winner design fails at every possible `e`.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -73,18 +78,18 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search fixed-board raffles with many guaranteed winner slots and live remaining inventory where `external sold < W`.** Only these can force at least one residual-buyer prize; compute the exact worst-case allocation of the cheapest winning slots before purchase cost.
-2. Continue current/announced Keno Value Bundle / deterministic free-draw monitor. For BCLC reopen immediately on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-3. Search other state/provincial Keno products for deterministic `X paid + Y free` bundles and universal no-cost multipliers, prioritizing base cover ratios >67–75% and liability-safe ticket volumes.
+1. **Apply H159 `G(e)` to any live/announced fixed-board raffle with many guaranteed winners and visible remaining inventory.** Prioritize boards with full-board payout ratio near/above 100% or an explicit external subsidy; reject immediately when the cheapest forced slots cannot cover remaining cost.
+2. Monitor Michigan online raffles specifically: its no-aggregate-ticket-limit architecture is unusually compatible with an all-remaining takeover if a subsidized/high-payout board appears.
+3. Continue BCLC/current Keno deterministic `X paid + Y free` monitor; reopen immediately on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
 4. Continue Nebraska/community scheduled-special recovery where the enhanced paytable is fixed before purchase.
-5. For any qualifying candidate, immediately test complete-basket transaction limits, liability/proration caps, cancellation/rollback, taxes, geographic eligibility and timing.
-6. Continue fixed-board raffle monitor using H129/H158 worst-case winner-slot allocation before EV arithmetic; do not treat headline residual prize pool as guaranteed.
+5. Search other state/provincial Keno products for deterministic bundles and universal no-cost multipliers, prioritizing base cover ratios >67–75%.
+6. For any candidate, test complete-basket limits, liability/proration, cancellation/rollback, taxes, geographic eligibility and timing before terminal promotion.
 7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
 9. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
 10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
-Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H158_APPEND.md`.
-Latest case: `research/h158_emirates_draw_deterministic_promos_and_sure_residual_takeover.md`.
+Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H159_APPEND.md`.
+Latest case: `research/h159_residual_raffle_forced_slot_floor.md`.
