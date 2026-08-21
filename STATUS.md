@@ -11,33 +11,53 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H160 — Michigan Red Ball forced extra-draw state + deterministic Daily 3 coverage**.
+Latest completed lottery packet: **H161 — New Jersey Pick-3 Green Ball forced-state + retailer commission corollary**.
 
-### H160 major result
-Michigan's recurring `Red Ball Double Draw` promotion contains a previously under-screened deterministic state. The promo uses five white balls plus one red ball; a selected white ball is removed until the red ball appears, then all balls reset. Therefore after **five white balls have already been removed**, only the red ball remains and the next eligible promo day has a **guaranteed second Daily 3 evening draw before ticket purchase**.
+### H161 major result
+New Jersey provides a stronger recurring implementation of the forced-second-draw idea from H160.
 
-Exact full-cover arithmetic for current Daily 3 Straight:
-- 1,000 ordered outcomes;
-- $0.50 per Straight;
-- complete cover cost = **$500**;
-- one draw guarantees one $250 Straight winner = **50%** gross;
-- on the forced-red (`k=5`) day the same complete cover participates in two draws and guarantees **$250 + $250 = $500**, i.e. exactly **100% pre-tax gross**.
+Official 2026 Pick-3 Green Ball rules use **six white balls + one green ball**; each white ball is removed after selection. When the green ball is selected, the same Pick-3 wager gets a second full-prize Pick-3 draw and the machine resets. Official 2025 material says the NJ Lottery homepage displays the **number of white balls remaining**, so the state is observable before purchase.
 
-This is not standalone profit, but it collapses the deterministic subsidy hurdle to any strictly positive compatible benefit before tax/friction. A pre-locked free-play/coupon/rebate `B>0` would give pre-tax arithmetic `500 gross - (500-B) external cost = +B` if the full basket is accepted and the subsidy is legally compatible.
+At `k=6` (all six whites already removed), the next Green Ball draw is certain before betting closes.
 
-Why NOT SUCCESS today:
-1. the 2026 Red Ball promotion ran in **July** and is not active on 2026-08-21;
-2. current August Michigan Club Keno `Tripler Time` assigns Doubler/Tripler status randomly rather than universally before purchase;
-3. Michigan has bonus-credit/coupon/Daily-Spin reward architectures, but no current universally documented Daily 3-compatible deterministic subsidy + full-basket lock was found;
-4. complete 1,000-line acceptance/liability and after-tax treatment remain execution gates.
+Current Pick-3 Pair full-cover arithmetic:
+- 100 ordered Pair outcomes;
+- $0.50 per Pair;
+- full-cover face cost **$50**;
+- one draw guarantees one $25 Pair winner = **50% gross**;
+- forced Green Ball state guarantees two full draws, hence **$25 + $25 = $50 = 100% gross**.
 
-Status: **FORCED PROMO STATE VALIDATED / EXACT 100% GROSS COVER / RECURRING SUBSIDY MONITOR / NO CURRENT SUCCESS**.
+This is operationally much smaller than H160's 1,000-line/$500 Straight cover.
+
+New lottery-specific subsidy layer:
+- NJ Full Service Retailer terms publicly advertise **5% commission on every ticket sold**;
+- retailers also receive **1.25% payout commission on prizes up to $600**;
+- an official 2023 NJ Lottery release documents licensed retailer owner Jay Shortway purchasing a lottery ticket for himself at his own restaurant/lottery location and being recognized as the winner.
+
+If ordinary commissions apply to a retailer owner's own forced-Green Pair-cover purchases:
+- prize gross = $50;
+- sales commission = $2.50;
+- payout commission = $0.625;
+- face spend = $50;
+- conditional pre-tax deterministic surplus = **+$3.125 = +6.25%**.
+
+This is the first forced-second-draw branch where an ordinary lottery retailer compensation layer can mathematically push exact deterministic coverage above 100% without a separate player coupon.
+
+### Why this is NOT SUCCESS
+1. Public rules do not expressly state that the 5% sales and 1.25% payout commissions are guaranteed on a retailer owner's own strategically purchased basket; self-purchase is demonstrated, commission entitlement on self-sale is not.
+2. 2026 Green Ball rules let the Lottery cancel/terminate/modify/suspend the promotion without prior notice, including for payout-budget reasons; strict post-ticket irrevocability is not proven.
+3. Pick-3 rules allow further wagers on a number to be refused when internal liability limits are reached; whole-basket acceptance still must be locked.
+4. Green Ball rules expressly prohibit combination with another NJ Lottery promotion/coupon, closing the obvious coupon-stacking route.
+5. The +$3.125 pre-tax margin is small enough that 2026 federal/state tax treatment can erase it in some taxpayer/entity configurations.
+6. Latest Green Ball cycle ran July 6-August 2, 2026 and is not active today, although official releases show the architecture has recurred repeatedly in 2025-2026.
+
+Status: **FORCED STATE + 100% PAIR COVER VALIDATED / RETAILER OVERLAY PROMISING / COMMISSION-ENTITLEMENT + IRREVOCABILITY + TAX GATED / NO CURRENT SUCCESS**.
 
 Files:
-- `research/h160_michigan_red_ball_forced_double_draw_cover.md`
-- `src/loto_research/h160_red_ball_state.py`
-- `data/derived/h160_red_ball_state_cover.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H160_APPEND.md`
+- `research/h161_nj_green_ball_forced_state_retailer_commission.md`
+- `src/loto_research/h161_nj_green_ball_pair_cover.py`
+- `data/derived/h161_nj_green_ball_pair_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H161_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -59,7 +79,8 @@ Files:
 - H157 BCLC deterministic `X paid + Y free` architecture is structurally correct; current offer not strong enough.
 - H158 Emirates Draw deterministic cart discount validated but EASY6/SURE economics fail strict floor.
 - H159 fixed-board residual takeover theorem: if `e<W`, exact strict floor is the sum of the `W-e` cheapest prizes; if `e>=W`, floor is zero.
-- **H160 cumulative-trigger promotions can become deterministic before purchase; Michigan forced-red Daily 3 reaches exactly 100% gross, making any future compatible deterministic subsidy high priority.**
+- H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly **100% gross**, making any compatible subsidy sufficient before tax/friction.
+- **H161 New Jersey Green Ball provides a publicly observable forced state and a much smaller 100-Pair/$50 exact cover; published retailer compensation conditionally lifts it to +6.25% pre-tax if self-sale commissions are contractually earned.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -68,18 +89,19 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Search other free-second-draw / cumulative-trigger promotions where the bonus event becomes certain before betting closes and the base compact-game deterministic cover is >50%.** A guaranteed second draw then crosses 100% without needing a large subsidy.
-2. Monitor future Michigan Red Ball cycles: when five white balls have been removed, check for already-credited deterministic in-store/online free play, coupon or cashback and verify all 1,000 Daily 3 selections can be accepted before close.
-3. Continue H159 live/announced fixed-board raffle monitor, especially Michigan online raffles with unlimited aggregate purchasing and boards whose full-board payout ratio is near/above 100%.
-4. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-5. Continue Nebraska/community scheduled-special recovery where the enhanced paytable is fixed before purchase.
-6. Search other state/provincial Keno products for deterministic bundles and universal no-cost multipliers, prioritizing base cover ratios >67-75%.
-7. For every candidate verify whole-basket acceptance, liability/proration, cancellation/rollback, taxes, geography and timing before terminal promotion.
-8. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
-10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: obtain official NJ retailer agreement/manual/rule evidence on whether the 5% sales and 1.25% payout commissions apply to tickets personally purchased by the licensed retailer/owner/employee.** Self-purchase is already officially demonstrated; commission entitlement is the missing structural lock.
+2. Determine whether an already-issued Green Ball-eligible ticket has an irrevocable contractual right to the bonus draw if the Lottery later cancels/modifies the promotion under its discretionary clause.
+3. During future NJ Green Ball cycles monitor the publicly displayed remaining-white-ball count; reopen immediately at `k=6` and test whole-basket Pair acceptance before cutoff.
+4. Search other cumulative-trigger Pick-3/number-game promotions where the forced state is observable before purchase and retailer/player discounts are expressly non-discretionary.
+5. Search lottery jurisdictions whose licensed retailers may personally play and where commissions on self-purchased tickets are expressly covered in public contracts/manuals.
+6. Continue H159 live/announced fixed-board raffle monitor, especially boards whose full-board payout ratio is near/above 100%.
+7. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
+8. Continue Nebraska/community scheduled-special recovery where enhanced paytable is fixed before purchase.
+9. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+10. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
+11. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H160_APPEND.md`.
-Latest case: `research/h160_michigan_red_ball_forced_double_draw_cover.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H161_APPEND.md`.
+Latest case: `research/h161_nj_green_ball_forced_state_retailer_commission.md`.
