@@ -11,37 +11,35 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H146 — Nebraska Kearney 2026 special boundary + ticket/paytable lock**.
+Latest completed lottery packet: **H147 — Nebraska rollback execution + current-special surface**.
 
-### H146 major result
-A fresh public-record recovery found a real **Kearney Big Red Keno July 2026 Pick-1 special** in Kearney City Council records:
-- Pick 1 / Hit 1 pays **3.00x**;
-- the special is time/community specific;
-- promotion payouts supersede the normal Playbook during the active window;
-- the special may be withdrawn early;
-- multigame tickets whose games occur after the special ends revert to the regular paytable.
+### H147 major result
+Nebraska execution architecture is stronger than previously recorded:
+- Big Red/La Vista FAQ says Play+ funds can be transferred out;
+- a purchased app ticket can be voided before the game starts and its funds return to account balance;
+- saved/practice tickets can be prepared outside the licensed location for later play;
+- current Monthly Keno Specials and Official Rules are exposed in the app;
+- Big Red paybook rules also state a player may request a refund before the games on that ticket are closed.
 
-Exact deterministic test:
-- 80-number Pick-1 full cover has exactly 20 winners;
-- with payout multiple `p`, full-cover ratio is `p/4`;
-- at `p=3.00`, deterministic gross is **75% of face spend**;
-- on a $20 quarter-stake cover, gross is $15;
-- even with the H145 hypothetical of a genuinely pre-owned usable $5 free-play credit, external cash becomes $15 and the result is **exact pre-tax break-even, not profit**.
+This creates a conditional **sequential-cover-with-rollback** route:
+`withdrawable balance -> verify active special -> buy/verify cover legs -> if complete, allow draw; if incomplete, void/refund all legs before closure`.
 
-Current Nebraska regulations materially strengthen the execution lock:
-- potential payout must be known before number selection;
-- accepted wagers are documented by outside ticket / transaction record;
-- when multiple paytables exist, the outside ticket references the applicable paytable.
+That materially reduces the H145/H146 non-atomic acceptance risk and is structurally much better than Kentucky H136-H140, where cash became nonwithdrawable before coverage could be locked.
 
-But the recovered promotion also proves that **calendar scheduling alone is not a lock**: specials can be withdrawn early and future games on multigame tickets can revert to regular payout. A viable sequence must therefore verify the active paytable on every accepted single-game cover ticket before game close.
+However strict execution is still unproven because no public rule establishes a single atomic/batch 80-number Pick-1 order or a bulk-void operation, and a five-minute game window may not permit certain rollback of many separately accepted tickets.
 
-Fresh public-web searching did not recover reliable numeric **August 2026** monthly specials above threshold for Kearney/Omaha/Lincoln/Fremont/Norfolk/Blair/Beatrice. Big Red's current FAQ still directs users to the app for Monthly Keno Specials and community paybooks.
+A fresh current-special search again did not recover a reliable August 2026 Pick-1 numeric special above the H146 boundary. Current public surfaces now include Big Red Promos, the app Monthly Specials/Official Rules, La Vista Keno Specials (numeric paytables rendered as images), and municipal agenda attachments.
 
-Status: **REAL 2026 NUMERIC SPECIAL VALIDATED / JULY PICK-1 CLOSED AT BREAK-EVEN / TICKET-LEVEL LOCK STRENGTHENED / CURRENT AUGUST SPECIAL REMAINS APP-IN-LOCATION DATA-GATED / NO SUCCESS**.
+Fresh controls:
+- Pennsylvania Keno Pick 1: $2.50/$1 -> **62.5% deterministic full-cover return**;
+- BCLC Keno Pick 1: $2/$1 -> **50% deterministic full-cover return**;
+therefore neither improves on Virginia/Nebraska targets.
+
+Status: **ROLLBACK ARCHITECTURE VALIDATED CONDITIONALLY / LIVE NUMERIC SPECIAL STILL DATA-GATED / NO SUCCESS**.
 
 Files:
-- `research/h146_nebraska_kearney_special_boundary_and_ticket_lock.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H146_APPEND.md`
+- `research/h147_nebraska_rollback_execution_and_current_special_surface.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H147_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -65,7 +63,8 @@ Files:
 - H143 confirms Virginia as best screened standard state-Keno target; no >25% pre-locked subsidy found.
 - H144 validates Nebraska municipal Keno periodic special paytables + free-play coupons as a dynamic search class.
 - H145 validates withdrawable Play+ funding + pre-start void execution architecture and the coupon-adjusted Pick-1 trigger `>3.00x` with a $5 credit on a $20 cover.
-- **H146 recovers an actual 2026 Kearney Pick-1 special at exactly 3.00x: 75% face return and exact break-even under the hypothetical $5 coupon; also proves scheduled promo dates are not enough because specials may be withdrawn early.**
+- H146 recovers an actual 2026 Kearney Pick-1 special at exactly 3.00x: 75% face return and exact break-even under the hypothetical $5 coupon; also proves scheduled promo dates are not enough because specials may be withdrawn early.
+- **H147 validates sequential cover with pre-close rollback as a real risk-control mechanism, but bulk/atomic rollback for an 80-number cover remains unproven; current August threshold-crossing numeric special remains unrecovered.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -74,11 +73,11 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: capture current Big Red Nebraska app/in-location Monthly Keno Specials / Official Rules numeric schedules**, prioritizing Kearney, Omaha, Lincoln, Fremont, Norfolk, Blair and Beatrice.
-2. Trigger deep analysis on any Pick-1 `p>3.00` while a usable pre-owned free-play credit is simultaneously live; any fixed `p>4.00` is a direct pre-tax overlay candidate without subsidy.
-3. Use municipal agenda/minutes repositories as a second recovery channel for current promotional sheets; H146 proves official city records can expose numeric specials missed by ordinary operator web pages.
-4. For any threshold-crossing candidate verify single-game ticket-level paytable designation, minimum wager, complete 80-number acceptance, aggregate payout limits, coupon applicability, Play+ withdrawal and taxes before SUCCESS.
-5. Continue search outside Nebraska for compact non-shareable games with deterministic coverage ratio >75% or checkout-level subsidies above the exact deficit.
+1. **Highest priority: recover current numeric Big Red/La Vista specials from app-linked assets, current promo-linked images, or municipal attachments.**
+2. Search for a single-ticket/way-ticket or batch construction that represents all 80 Pick-1 selections, or a documented bulk-void command; this could convert H147 rollback from conditional to strict.
+3. Trigger full execution/tax analysis on any active Pick-1 `p>4.00`, or `p>3.00` with a genuinely pre-owned applicable subsidy.
+4. Verify single-game ticket-level paytable designation, minimum wager, complete cover acceptance, aggregate payout limits, coupon applicability, refund deadline, Play+ withdrawal and taxes before SUCCESS.
+5. Continue scan outside Nebraska for compact non-shareable games with deterministic coverage ratio >75% or checkout-level subsidies above exact deficit.
 6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
@@ -87,5 +86,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H146_APPEND.md`.
-Latest case: `research/h146_nebraska_kearney_special_boundary_and_ticket_lock.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H147_APPEND.md`.
+Latest case: `research/h147_nebraska_rollback_execution_and_current_special_surface.md`.
