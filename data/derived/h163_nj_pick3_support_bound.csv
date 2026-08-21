@@ -1,0 +1,8 @@
+bet_type,max_outcomes_supported_per_play
+Straight,1
+Box/Wheel 3-way,3
+Box/Wheel 6-way,6
+Pair,10
+SUMMARY_MIN_PLAYS_FOR_1000_OUTCOMES,100
+SUMMARY_MAX_PLAYS_PER_TICKET,10
+SUMMARY_MIN_TICKETS,10
