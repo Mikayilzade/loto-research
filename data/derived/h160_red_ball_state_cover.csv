@@ -1,0 +1,7 @@
+white_removed,balls_remaining,p_red_next,guaranteed_extra_draw,strict_gross,strict_cover_ratio,expected_gross,expected_cover_ratio
+0,6,0.1666666667,false,250,0.5,291.6666667,0.5833333333
+1,5,0.2,false,250,0.5,300,0.6
+2,4,0.25,false,250,0.5,312.5,0.625
+3,3,0.3333333333,false,250,0.5,333.3333333,0.6666666667
+4,2,0.5,false,250,0.5,375,0.75
+5,1,1,true,500,1.0,500,1.0
