@@ -11,30 +11,35 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H155 — pre-announced Keno boost / multiplier timing screen**.
+Latest completed lottery packet: **H156 — universal Keno doubler / paid-add-on screen**.
 
-### H155 major result
-The search after H154 found a current August-2026 Pennsylvania Keno promotion with scheduled Doubler/Tripler windows. Pennsylvania 4-SPOT is mathematically strong enough that a **universal no-cost 2x** would create a deterministic overlay:
+### H156 major result
+H155's promising trigger was refined into an exact subsidy theorem.
 
-- current base 4-SPOT full-cover ratio = **64.871837%**;
-- universal 2x = **129.743674%**;
-- universal 3x = **194.615511%**.
+For a base deterministic full-cover ratio `r`, mandatory add-on surcharge `a` times base spend, and guaranteed promo multiplier `m_min`, the strict promoted ratio is:
 
-This is an important trigger because it proves that we no longer need an exotic >100% raw paytable: a fixed pre-announced doubler on a normal >50% compact Keno table is enough.
+`R = m_min * r / (1 + a)`.
 
-But the current Pennsylvania promotion only gives each eligible ticket a **chance** to have prizes doubled or tripled. The enhanced state is not guaranteed for every required ticket before purchase, so a lawful unboosted branch remains.
+A no-cost universal 2x therefore crosses break-even whenever `r > 50%`. But an equal-cost paid multiplier whose guaranteed minimum is only 2x gives `R=r`: the extra payout is exactly cancelled by the extra ticket cost.
 
-Three control jurisdictions were also tested:
-- Maryland Keno Sprinkler: Doubler/Tripler assigned on **Nth-ticket** basis, so player ownership is not pre-locked;
-- Connecticut KENO BONUS: multiplier is selected as part of the drawing after ticket purchase; full 1-Spot BONUS cover has only **31.25%** strict 1x floor;
-- Oregon Special Keno: correct player-selectable/pre-fixed architecture, but current economics remain sub-100% (1-Spot cover **62.5%**, overall Special Keno payout ~64.09%).
+Official controls:
+- **BCLC Keno Doubler, July 27–September 7, 2026:** free 2x exists, but ticket selection is random and replay does not guarantee another Doubler — no strict cover ownership.
+- **Michigan Club Keno Doubler Days:** same random-message structure historically.
+- **Ohio KENO Double BOOSTER, September 2025:** all BOOSTERS were universally doubled in fixed time windows, solving ownership, but BOOSTER costs another $1 per $1 wager. Minimum `1X→2X` therefore leaves the deterministic cover ratio unchanged.
 
-Status: **NO SUCCESS / UNIVERSAL PRE-ANNOUNCED KENO DOUBLER CLASS NOW QUANTITATIVELY VALIDATED, BUT NO CURRENT GUARANTEED INSTANCE FOUND**.
+Exact current Ohio full-cover ratios for Spots 1–10 are ~50.00% to 66.14%; Double BOOSTER strict floors are identical. Best checked is Ohio 2-Spot at **66.1392%**, still below 100%.
+
+Useful thresholds for future paid equal-cost multiplier specials:
+- Pennsylvania 4-Spot (`r≈64.8718%`): needs guaranteed multiplier **>3.083x**; 4x works, 3x does not.
+- Virginia 1-Spot (`r=75%`): needs **>2.6667x**; guaranteed 3x works.
+- La Vista benchmark (`r≈81.0636%`): needs **>2.4672x**; guaranteed 3x works.
+
+Status: **NO SUCCESS / UNIVERSAL-BOOST CLASS SHARPLY FILTERED; SEARCH NOW TARGETS TRUE NO-COST 2x OR PAID GUARANTEED 3x/4x ABOVE EXACT THRESHOLD**.
 
 Files:
-- `research/h155_preannounced_keno_boost_screen.md`
-- `src/loto_research/h155_pa_keno4_cover.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H155_APPEND.md`
+- `research/h156_universal_keno_doubler_paid_addon_screen.md`
+- `src/loto_research/h156_ohio_double_booster_cover.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H156_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -58,7 +63,8 @@ Files:
 - H144-H149 establish Nebraska dynamic-special screening, withdrawable Play+ funding, pre-start void architecture and exact fixed-paytable cover theorem.
 - H150-H153 screen additional Keno structures; La Vista remains a strong ordinary/special benchmark at **81.0636%** while major ordinary state tables stay below it.
 - H154 finds KenoGO Jackpot Minor/Major 1-Spot full-cover states at 125%/312.5%, but the state resolves after sales cutoff; unconditional floor 37.5%.
-- **H155 proves a universal pre-announced no-cost 2x on current PA 4-SPOT would yield 129.743674% deterministic gross, but current PA/MD promotions assign boosts probabilistically/Nth-ticket, CT resolves its multiplier too late, and Oregon fixed Special Keno remains below break-even.**
+- H155 proves a universal pre-announced no-cost 2x on current PA 4-SPOT would yield 129.743674% deterministic gross, but current PA/MD promotions assign boosts probabilistically/Nth-ticket, CT resolves its multiplier too late, and Oregon fixed Special Keno remains below break-even.
+- **H156 proves that paid multiplier add-ons must be judged net of surcharge: Ohio's universal Double BOOSTER solves ownership but leaves the guaranteed cover ratio unchanged; BCLC/Michigan free Doublers remain randomly assigned.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -67,18 +73,19 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search official future-dated Keno promotions explicitly stating that ALL prizes/every eligible ticket are doubled or multiplied for a known draw/time window at no additional cost.** PA 4-SPOT proves 2x is enough.
-2. Prioritize base deterministic covers >50%: Pennsylvania 4-SPOT **64.87%**, Virginia 1-Spot **75%**, La Vista benchmark **81.06%**, and comparable community Keno tables.
-3. Continue Nebraska/community scheduled-special recovery, especially future game/time-ID specials where the exact enhanced paytable is fixed before purchase.
-4. For any universal doubler candidate, immediately test complete-basket transaction limits, liability/proration caps, cancellation/rollback, tax, and geographic eligibility.
-5. Search deterministic player-owned Keno subsidies that bridge exact deficits rather than random/Nth-ticket coupons.
-6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
-7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
-9. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
-10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: search official current/future Keno promotions where every eligible wager in a known time window receives a no-cost 2x+ multiplier.** Random/Nth-ticket messages are already closed.
+2. Search universal paid multiplier specials only if the guaranteed minimum clears the exact theorem: target guaranteed **3x on ≥75% base covers** or **4x on ~65% covers**.
+3. Prioritize base deterministic covers >50%: Virginia 1-Spot 75%, La Vista 81.06%, Pennsylvania 4-Spot 64.87%, and similar community Keno tables.
+4. Continue Nebraska/community scheduled-special recovery where the enhanced paytable itself is fixed before purchase.
+5. For any qualifying candidate, immediately test complete-basket transaction limits, liability/proration caps, cancellation/rollback, tax, and geographic eligibility.
+6. Search deterministic player-owned Keno subsidies that bridge exact deficits rather than random coupons.
+7. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
+8. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
+10. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
+11. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H155_APPEND.md`.
-Latest case: `research/h155_preannounced_keno_boost_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H156_APPEND.md`.
+Latest case: `research/h156_universal_keno_doubler_paid_addon_screen.md`.
