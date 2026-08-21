@@ -11,35 +11,25 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H156 — universal Keno doubler / paid-add-on screen**.
+Latest completed lottery packet: **H157 — BCLC Keno Value Bundle deterministic subsidy threshold**.
 
-### H156 major result
-H155's promising trigger was refined into an exact subsidy theorem.
+### H157 major result
+BCLC's current Keno game conditions preserve a structurally stronger promotion class than random Doubler/Tripler: **Keno Value Bundles**, where the purchaser buys `X` advance draws and receives `Y` free draws. This solves the random/Nth-ticket ownership problem because the subsidy is attached to the player's own ticket once a bundle is publicly offered.
 
-For a base deterministic full-cover ratio `r`, mandatory add-on surcharge `a` times base spend, and guaranteed promo multiplier `m_min`, the strict promoted ratio is:
+Exact current-paytable full-cover screening gives:
+- Pick 2: `C(80,2)=3,160` tickets; guaranteed gross 1,900 per draw; base ratio **60.1266%**; requires `Y/X > 66.3158%`.
+- Pick 3: `C(80,3)=82,160`; guaranteed gross 51,300; base ratio **62.4391%**; requires `Y/X > 60.1559%`.
+- Therefore a deterministic **buy 3 get 2 free** Value Bundle would cross break-even for both: Pick 2 ≈ **100.211%**, Pick 3 ≈ **104.065%** conditional gross before tax/execution costs.
+- Pick 5 has a better uncapped base ratio (**67.1718%**) and a buy-2-get-1 bundle would appear to reach **100.758%**, but its full-cover gross is ~CAD 16.15m per draw, above the current BCLC combined-liability statement of CAD 2m. The apparent overlay is therefore invalid as a strict theorem.
 
-`R = m_min * r / (1 + a)`.
+Current public 2026 BCLC retail promotion (July 27-September 7) is **Keno Doubler**, where tickets are randomly selected and replay does not guarantee another Doubler. No current 2026 Value Bundle with a published qualifying `X:Y` schedule was found.
 
-A no-cost universal 2x therefore crosses break-even whenever `r > 50%`. But an equal-cost paid multiplier whose guaranteed minimum is only 2x gives `R=r`: the extra payout is exactly cancelled by the extra ticket cost.
-
-Official controls:
-- **BCLC Keno Doubler, July 27–September 7, 2026:** free 2x exists, but ticket selection is random and replay does not guarantee another Doubler — no strict cover ownership.
-- **Michigan Club Keno Doubler Days:** same random-message structure historically.
-- **Ohio KENO Double BOOSTER, September 2025:** all BOOSTERS were universally doubled in fixed time windows, solving ownership, but BOOSTER costs another $1 per $1 wager. Minimum `1X→2X` therefore leaves the deterministic cover ratio unchanged.
-
-Exact current Ohio full-cover ratios for Spots 1–10 are ~50.00% to 66.14%; Double BOOSTER strict floors are identical. Best checked is Ohio 2-Spot at **66.1392%**, still below 100%.
-
-Useful thresholds for future paid equal-cost multiplier specials:
-- Pennsylvania 4-Spot (`r≈64.8718%`): needs guaranteed multiplier **>3.083x**; 4x works, 3x does not.
-- Virginia 1-Spot (`r=75%`): needs **>2.6667x**; guaranteed 3x works.
-- La Vista benchmark (`r≈81.0636%`): needs **>2.4672x**; guaranteed 3x works.
-
-Status: **NO SUCCESS / UNIVERSAL-BOOST CLASS SHARPLY FILTERED; SEARCH NOW TARGETS TRUE NO-COST 2x OR PAID GUARANTEED 3x/4x ABOVE EXACT THRESHOLD**.
+Status: **NO SUCCESS / DETERMINISTIC VALUE-BUNDLE CLASS VALIDATED; FUTURE TRIGGER IS >=2 FREE DRAWS PER 3 PAID FOR BCLC PICK 2/3, SUBJECT TO EXECUTION/TAX CHECKS**.
 
 Files:
-- `research/h156_universal_keno_doubler_paid_addon_screen.md`
-- `src/loto_research/h156_ohio_double_booster_cover.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H156_APPEND.md`
+- `research/h157_bclc_keno_value_bundle_threshold.md`
+- `src/loto_research/h157_bclc_value_bundle_cover.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H157_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -64,7 +54,8 @@ Files:
 - H150-H153 screen additional Keno structures; La Vista remains a strong ordinary/special benchmark at **81.0636%** while major ordinary state tables stay below it.
 - H154 finds KenoGO Jackpot Minor/Major 1-Spot full-cover states at 125%/312.5%, but the state resolves after sales cutoff; unconditional floor 37.5%.
 - H155 proves a universal pre-announced no-cost 2x on current PA 4-SPOT would yield 129.743674% deterministic gross, but current PA/MD promotions assign boosts probabilistically/Nth-ticket, CT resolves its multiplier too late, and Oregon fixed Special Keno remains below break-even.
-- **H156 proves that paid multiplier add-ons must be judged net of surcharge: Ohio's universal Double BOOSTER solves ownership but leaves the guaranteed cover ratio unchanged; BCLC/Michigan free Doublers remain randomly assigned.**
+- H156 proves that paid multiplier add-ons must be judged net of surcharge: Ohio's universal Double BOOSTER solves ownership but leaves the guaranteed cover ratio unchanged; BCLC/Michigan free Doublers remain randomly assigned.
+- **H157 proves BCLC Value Bundles are the right deterministic ownership architecture. A future buy-3-get-2-free (or stronger) bundle would cross the current Pick-2/Pick-3 exact coverage threshold, while current 2026 BCLC promotion is random Doubler and does not qualify.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -73,12 +64,12 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search official current/future Keno promotions where every eligible wager in a known time window receives a no-cost 2x+ multiplier.** Random/Nth-ticket messages are already closed.
-2. Search universal paid multiplier specials only if the guaranteed minimum clears the exact theorem: target guaranteed **3x on ≥75% base covers** or **4x on ~65% covers**.
-3. Prioritize base deterministic covers >50%: Virginia 1-Spot 75%, La Vista 81.06%, Pennsylvania 4-Spot 64.87%, and similar community Keno tables.
-4. Continue Nebraska/community scheduled-special recovery where the enhanced paytable itself is fixed before purchase.
-5. For any qualifying candidate, immediately test complete-basket transaction limits, liability/proration caps, cancellation/rollback, tax, and geographic eligibility.
-6. Search deterministic player-owned Keno subsidies that bridge exact deficits rather than random coupons.
+1. **Highest priority: monitor/search current or announced Keno Value Bundles / deterministic free-draw bundles.** For BCLC immediately reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3; buy-3-get-2 qualifies mathematically.
+2. Search other state/provincial Keno products for deterministic `X paid + Y free` advance-draw bundles and apply exact cover thresholds, prioritizing small-space covers that stay below liability caps.
+3. Continue search for official current/future Keno promotions where every eligible wager in a known time window receives a no-cost 2x+ multiplier. Random/Nth-ticket messages are closed.
+4. Search universal paid multiplier specials only if guaranteed minimum clears the exact H156 theorem: target guaranteed 3x on >=75% base covers or 4x on ~65% covers.
+5. Continue Nebraska/community scheduled-special recovery where the enhanced paytable itself is fixed before purchase.
+6. For any qualifying candidate, immediately test complete-basket transaction limits, liability/proration caps, cancellation/rollback, tax, geographic eligibility and purchase timing.
 7. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 8. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
@@ -87,5 +78,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H156_APPEND.md`.
-Latest case: `research/h156_universal_keno_doubler_paid_addon_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H157_APPEND.md`.
+Latest case: `research/h157_bclc_keno_value_bundle_threshold.md`.
