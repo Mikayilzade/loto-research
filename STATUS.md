@@ -11,85 +11,75 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H159 — fixed-board raffle residual takeover forced-slot floor**.
+Latest completed lottery packet: **H160 — Michigan Red Ball forced extra-draw state + deterministic Daily 3 coverage**.
 
-### H159 major result
-H158's residual-raffle zero-floor test has been strengthened into an exact worst-case theorem for the only interesting regime where the number of already-sold external tickets `e` is still below the number of guaranteed winning slots `W`.
+### H160 major result
+Michigan's recurring `Red Ball Double Draw` promotion contains a previously under-screened deterministic state. The promo uses five white balls plus one red ball; a selected white ball is removed until the red ball appears, then all balls reset. Therefore after **five white balls have already been removed**, only the red ball remains and the next eligible promo day has a **guaranteed second Daily 3 evening draw before ticket purchase**.
 
-For a fixed board with prizes sorted ascending `p1 <= ... <= pW`, if a buyer acquires **every remaining ticket** after `e` external sales:
-- if `e >= W`, strict buyer prize floor is **0**;
-- if `e < W`, the exact strict payout floor is the sum of the **`W-e` cheapest prizes**, because the external tickets may occupy the `e` most valuable winner slots;
-- strict margin is `G(e) = sum(cheapest W-e prizes) - ticket_price*(T-e)`.
+Exact full-cover arithmetic for current Daily 3 Straight:
+- 1,000 ordered outcomes;
+- $0.50 per Straight;
+- complete cover cost = **$500**;
+- one draw guarantees one $250 Straight winner = **50%** gross;
+- on the forced-red (`k=5`) day the same complete cover participates in two draws and guarantees **$250 + $250 = $500**, i.e. exactly **100% pre-tax gross**.
 
-This closes misleading cases where `remaining ticket cost < headline prize board` but the buyer cannot force the valuable prizes.
+This is not standalone profit, but it collapses the deterministic subsidy hurdle to any strictly positive compatible benefit before tax/friction. A pre-locked free-play/coupon/rebate `B>0` would give pre-tax arithmetic `500 gross - (500-B) external cost = +B` if the full basket is accepted and the subsidy is legally compatible.
 
-Virginia's 2026 Commanders Golden Pass / Capitals Career In A Year design was screened exactly:
-- `T=150,000`, ticket price `$20`, `W=3,506`;
-- board = `3,000 x $100 + 500 x $500 + 5 x $10,000 + 1 x $950,000-value top prize`;
-- full acquisition cost = **$3,000,000**;
-- entire advertised board = **$1,550,000**;
-- best strict state is already `e=0`: **-$1,450,000 / 51.6667%**;
-- every `e>0` worsens the guarantee because each external ticket saves only $20 while it can remove a forced prize worth at least $100 (and the first can remove the $950k top prize).
+Why NOT SUCCESS today:
+1. the 2026 Red Ball promotion ran in **July** and is not active on 2026-08-21;
+2. current August Michigan Club Keno `Tripler Time` assigns Doubler/Tripler status randomly rather than universally before purchase;
+3. Michigan has bonus-credit/coupon/Daily-Spin reward architectures, but no current universally documented Daily 3-compatible deterministic subsidy + full-basket lock was found;
+4. complete 1,000-line acceptance/liability and after-tax treatment remain execution gates.
 
-Therefore this high-winner raffle design is **rejected for every possible sales state**, not just after sellout.
-
-Michigan's official online-raffle architecture remains worth monitoring because it explicitly permits unlimited aggregate ticket purchases (250 per cart, repeated carts), but a fresh August 2026 public screen did not surface a current active board/live state with `G(e)>0`.
-
-Status: **NO SUCCESS / H159 FORCED-SLOT THEOREM VALIDATED / VIRGINIA 2026 HIGH-WINNER RESIDUAL TAKEOVER CLOSED FOR ALL SALES STATES**.
+Status: **FORCED PROMO STATE VALIDATED / EXACT 100% GROSS COVER / RECURRING SUBSIDY MONITOR / NO CURRENT SUCCESS**.
 
 Files:
-- `research/h159_residual_raffle_forced_slot_floor.md`
-- `src/loto_research/h159_residual_raffle_floor.py`
-- `data/derived/h159_virginia_residual_raffle_floor.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H159_APPEND.md`
+- `research/h160_michigan_red_ball_forced_double_draw_cover.md`
+- `src/loto_research/h160_red_ball_state.py`
+- `data/derived/h160_red_ball_state_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H160_APPEND.md`
 
 ## Preserved lottery conclusions
-- Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
-- H108 Lotto Texas 2023 near-full acquisition: operationally real; current Texas route legally closed and duplicate jackpot sharing defeats strict guarantee.
-- H109-H112 fixed raffle/scratch/sealed-pack standard takeover class materially closed.
-- H113-H116 Azerbaijan 4+4 ordinary/realistic carryover guarantee routes materially closed; reopen only on rare high-order zero-category states, major primary-rule improvement, extreme observable sales collapse, or explicit operator-funded addition.
+- Cash WinFall: genuine historical rolldown +EV, not current guarantee.
+- H108 Lotto Texas 2023: near-full acquisition operationally real; current Texas route legally closed and jackpot sharing blocks strict guarantee.
+- H109-H112 fixed raffle/scratch/sealed-pack standard takeover materially closed.
+- H113-H116 Azerbaijan `4+4` ordinary/realistic carryover guarantee routes materially closed; reopen only on rare high-order zero-category states, major rule change, extreme observable sales collapse, or explicit external subsidy.
 - H114 TezLoto published-state full coverage negative; empirical RNG/bias route remains only with reliable bulk history and >27.78% out-of-sample probability lift.
-- H117-H121 ordinary fixed-board/promo full-takeover screens materially closed.
-- H122/H128 Florida fixed-board undersubscription: strong +EV class validated, but no strict guarantee because external tickets can occupy all winning slots.
-- H124 lottery loyalty rebate deterministic but insufficient for guaranteed coverage.
-- H129 deterministic all-unsold takeover theorem validated; sampled NC board fails strict floor.
-- H130 replenishing Fast Play grids are not depleting inventories; buy-the-pot rejected.
-- H131 statewide Nth-ticket coupon ownership rejected because unrelated purchases can take coupon positions.
-- H132 purchase-local deterministic free-ticket subsidy ownership solved structurally, but Mega Millions fails because of unbounded jackpot sharing.
-- H133 capped wallet bonuses confirmed but tested compact games remain below strict break-even.
-- H134 random free tickets / second-chance entries cannot be counted at face value toward a guaranteed floor.
-- H135 scalable BOGO + non-shareable compact coverage: best tested Washington Match 4 reaches 91.4361% strict return.
-- H136-H140 Kentucky deposit-promo + Pick 3: positive conditional arithmetic exists, but promo entitlement and wager acceptance are not locked before nonwithdrawable funding.
-- H141 North Carolina checkout architecture validates whole-cart immediate discount mechanics, but no current offer crosses break-even.
-- H142 validates Virginia Keno 1-Spot at **75% fixed deterministic cover**; H143 found no >25% pre-locked Virginia subsidy.
-- H144-H149 establish Nebraska dynamic-special screening, withdrawable Play+ funding, pre-start void architecture and exact fixed-paytable cover theorem.
-- H150-H153 screen additional Keno structures; La Vista remains a strong ordinary/special benchmark at **81.0636%** while major ordinary state tables stay below it.
-- H154 finds KenoGO Jackpot Minor/Major 1-Spot full-cover states at 125%/312.5%, but the state resolves after sales cutoff; unconditional floor 37.5%.
-- H155 proves a universal pre-announced no-cost 2x on current PA 4-SPOT would yield 129.743674% deterministic gross, but current PA/MD promotions assign boosts probabilistically/Nth-ticket, CT resolves its multiplier too late, and Oregon fixed Special Keno remains below break-even.
-- H156 proves that paid multiplier add-ons must be judged net of surcharge: Ohio's universal Double BOOSTER solves ownership but leaves the guaranteed cover ratio unchanged; BCLC/Michigan free Doublers remain randomly assigned.
-- H157 proves BCLC Value Bundles are the right deterministic ownership architecture. A future buy-3-get-2-free (or stronger) bundle would cross the current Pick-2/Pick-3 exact coverage threshold, while current 2026 BCLC promotion is random Doubler and does not qualify.
-- H158 validates a current deterministic cart-discount architecture at Emirates Draw, but EASY6 remains far below break-even; current SURE residual buyouts have zero strict floor once external sold tickets can occupy all winner slots.
-- **H159 generalizes residual raffle screening: when `e<W`, use the `W-e` cheapest forced prizes, not the whole board. Virginia's 2026 150k-ticket/3,506-winner design fails at every possible `e`.**
+- H122/H128 Florida fixed-board undersubscription: strong +EV class, no strict guarantee because external tickets can occupy winning slots.
+- H129/H159 residual raffle takeovers now have exact worst-case forced-slot theorem; Virginia 2026 high-winner board fails every possible sales state.
+- H130 replenishing Fast Play grids are not depleting inventories.
+- H131 statewide Nth-ticket coupons fail ownership because unrelated purchases can take target positions.
+- H132 deterministic purchase-local free-ticket ownership is structurally valid, but Mega Millions jackpot sharing blocks strict guarantee.
+- H133-H141 multiple wallet/deposit/cart subsidy architectures screened; Kentucky crossed pre-tax break-even mathematically but failed pre-commitment acceptance/entitlement gates.
+- H142 Virginia Keno 1-Spot deterministic cover = **75%**; no >25% pre-locked subsidy found.
+- H144-H149 Nebraska dynamic-special screening/void architecture developed.
+- H150-H153 broader Keno screens: La Vista benchmark **81.0636%**, ordinary state tables remain below strict break-even.
+- H154 KenoGO Minor/Major can exceed 100% after state resolution, but the profitable state is unknown until betting closes.
+- H155-H156 universal free multiplier would work for some Keno tables, but current promos assign multiplier randomly or charge offsetting surcharge.
+- H157 BCLC deterministic `X paid + Y free` architecture is structurally correct; current offer not strong enough.
+- H158 Emirates Draw deterministic cart discount validated but EASY6/SURE economics fail strict floor.
+- H159 fixed-board residual takeover theorem: if `e<W`, exact strict floor is the sum of the `W-e` cheapest prizes; if `e>=W`, floor is zero.
+- **H160 cumulative-trigger promotions can become deterministic before purchase; Michigan forced-red Daily 3 reaches exactly 100% gross, making any future compatible deterministic subsidy high priority.**
 
 ## Azerbaijan live branches
-- `4+4`: only rare exceptional carryover states / materially better primary rules.
-- `TezLoto`: only bulk-history RNG/bias testing on reliable recovered data.
-- `Poz-Qazan`: remaining-prize conditional edge remains data-blocked by missing exact live unsold denominator/registration state.
+- `4+4`: rare exceptional carryover states / materially better primary rules only.
+- `TezLoto`: bulk-history RNG/bias testing only upon reliable data recovery.
+- `Poz-Qazan`: remaining-prize conditional edge data-blocked by missing exact live unsold denominator/registration state.
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Apply H159 `G(e)` to any live/announced fixed-board raffle with many guaranteed winners and visible remaining inventory.** Prioritize boards with full-board payout ratio near/above 100% or an explicit external subsidy; reject immediately when the cheapest forced slots cannot cover remaining cost.
-2. Monitor Michigan online raffles specifically: its no-aggregate-ticket-limit architecture is unusually compatible with an all-remaining takeover if a subsidized/high-payout board appears.
-3. Continue BCLC/current Keno deterministic `X paid + Y free` monitor; reopen immediately on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-4. Continue Nebraska/community scheduled-special recovery where the enhanced paytable is fixed before purchase.
-5. Search other state/provincial Keno products for deterministic bundles and universal no-cost multipliers, prioritizing base cover ratios >67–75%.
-6. For any candidate, test complete-basket limits, liability/proration, cancellation/rollback, taxes, geographic eligibility and timing before terminal promotion.
-7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
-9. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
+1. **Search other free-second-draw / cumulative-trigger promotions where the bonus event becomes certain before betting closes and the base compact-game deterministic cover is >50%.** A guaranteed second draw then crosses 100% without needing a large subsidy.
+2. Monitor future Michigan Red Ball cycles: when five white balls have been removed, check for already-credited deterministic in-store/online free play, coupon or cashback and verify all 1,000 Daily 3 selections can be accepted before close.
+3. Continue H159 live/announced fixed-board raffle monitor, especially Michigan online raffles with unlimited aggregate purchasing and boards whose full-board payout ratio is near/above 100%.
+4. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
+5. Continue Nebraska/community scheduled-special recovery where the enhanced paytable is fixed before purchase.
+6. Search other state/provincial Keno products for deterministic bundles and universal no-cost multipliers, prioritizing base cover ratios >67-75%.
+7. For every candidate verify whole-basket acceptance, liability/proration, cancellation/rollback, taxes, geography and timing before terminal promotion.
+8. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
 10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
-Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H159_APPEND.md`.
-Latest case: `research/h159_residual_raffle_forced_slot_floor.md`.
+Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H160_APPEND.md`.
+Latest case: `research/h160_michigan_red_ball_forced_double_draw_cover.md`.
