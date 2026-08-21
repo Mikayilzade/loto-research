@@ -1,0 +1,5 @@
+game,ticket_price,one_spot_prize,cover_cost,guaranteed_gross_conditional_on_state,gross_ratio,surplus
+classic,1.00,3.00,80.00,60.00,0.750000,-20.00
+jackpot_regular,2.00,3.00,160.00,60.00,0.375000,-100.00
+jackpot_minor,2.00,10.00,160.00,200.00,1.250000,40.00
+jackpot_major,2.00,25.00,160.00,500.00,3.125000,340.00
