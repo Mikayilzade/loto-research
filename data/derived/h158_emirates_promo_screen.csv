@@ -1,0 +1,7 @@
+case,face_or_remaining_cost_usd,favorable_or_prize_gross_usd,strict_floor_usd,gross_ratio_or_note,status
+EASY6_face_full_cover,19575738,4138120,,0.2113902423,negative
+EASY6_Onam_30pct_full_cover,13703016.60,4138120,,0.3019860605,rejected
+EASY6_buy6_get3_full_cover,13050492.00,4138120,,0.3170853635,rejected
+SURE1_buy_all_remaining,26230,30000,0,external_sold=2377;winner_slots=1,rejected_strict_floor_zero
+SURE2_buy_all_remaining,39990,50000,0,external_sold=2334;winner_slots=1,rejected_strict_floor_zero
+SURE3_buy_all_remaining,235710,360000,0,external_sold=12143;winner_slots=5,rejected_strict_floor_zero
