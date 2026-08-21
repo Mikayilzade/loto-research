@@ -1,0 +1,8 @@
+case,face_cost,guaranteed_gross,cover_ratio,subsidy_or_freeplay,external_cash,guaranteed_pre_tax_profit,condition
+base_full_cover,80,60,0.75,0,80,-20,none
+25pct_face_discount,80,60,0.75,20,60,0,break_even
+strict_positive_example_26pct,80,60,0.75,20.8,59.2,0.8,positive_pre_tax
+prelocked_freeplay_20,80,60,0.75,20,60,0,break_even
+prelocked_freeplay_21,80,60,0.75,21,59,1,positive_pre_tax
+prelocked_freeplay_30,80,60,0.75,30,50,10,positive_pre_tax
+same_spend_rewards_points,80,60,0.75,400_points,80,-20,points_post_after_purchase_not_first_basket_subsidy
