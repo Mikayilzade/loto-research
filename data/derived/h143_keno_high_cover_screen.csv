@@ -1,0 +1,6 @@
+jurisdiction,game,field_size,drawn_count,one_spot_prize_usd_equiv,base_cover_ratio,deterministic_discount,effective_cover_ratio,required_additional_subsidy,source_note
+Virginia,Keno,80,20,3.00,0.750000,0.00,0.750000,0.250000,Official VA current prize table; fixed 1-Spot tier per H142 rules
+Massachusetts,Keno,80,20,2.50,0.625000,0.10,0.694444,0.305556,Official current page; 10% Extend & Save for 50-100 consecutive games
+Pennsylvania,Keno,80,20,2.50,0.625000,0.00,0.625000,0.375000,Official retailer prize material
+Ohio,KENO,80,20,2.00,0.500000,0.00,0.500000,0.500000,Official current prize table
+Delaware,KENO,80,20,2.00,0.500000,0.00,0.500000,0.500000,Official current prize table
