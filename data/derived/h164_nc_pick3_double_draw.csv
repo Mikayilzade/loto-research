@@ -1,0 +1,4 @@
+scenario,outcomes,wager_per_outcome,face_spend,drawings,pair_prize,guaranteed_prizes,retailer_commission_rate,retailer_commission,conditional_total_value,conditional_profit,conditional_return_ratio
+ordinary_pair_cover,100,0.50,50.00,1,25.00,25.00,0.00,0.00,25.00,-25.00,0.500000
+forced_double_draw_prize_only,100,0.50,50.00,2,25.00,50.00,0.00,0.00,50.00,0.00,1.000000
+forced_double_draw_plus_7pct_retailer,100,0.50,50.00,2,25.00,50.00,0.07,3.50,53.50,3.50,1.070000
