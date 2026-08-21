@@ -11,35 +11,38 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H143 — Virginia Rewards exact gate + >75% compact Keno screen**.
+Latest completed lottery packet: **H144 — Nebraska municipal Keno special-paytable / free-play route**.
 
-### H143 major result
-H142's Virginia Keno 1-Spot cover remains the strongest verified compact fixed-prize Keno cover in the current screen.
+### H144 major result
+H143 established Virginia Keno 1-Spot as the best verified current compact deterministic cover at 75%. H144 found a structurally stronger current search class in Nebraska county/city Keno.
 
-Virginia Keno identity (preserved from H142):
-- 80 numbers, 20 drawn;
-- $1 on each 1-Spot number = $80 face;
-- fixed $3 payout for each drawn 1-Spot;
-- exactly 20 winners -> **$60 deterministic gross = 75% cover ratio**;
-- exact subsidy threshold for positive pre-tax cover: **more than 25% face**, i.e. more than **$20 pre-owned/pre-locked Keno-usable value** on the $80 basket.
+Current Nebraska Department of Revenue rules expressly permit:
+- free-play keno coupons / similar promotional items;
+- posted prize schedules known before number selection;
+- periodic **special prize payouts** implemented as paytable modifications;
+- outside tickets / transaction logs proving accepted wagers before the game closes;
+- secured prize funds and full payment of winning tickets.
 
-H143 screened current official alternatives:
-- Massachusetts Keno 1-Spot: **62.5%** base; official 10% Extend & Save raises effective deterministic ratio only to **69.4444%**.
-- Pennsylvania Keno 1-Spot: **62.5%**.
-- Ohio KENO 1-Spot: **50%**.
-- Delaware KENO 1-Spot: **50%**.
+Big Red Keno's current official 2026 pages show a live network of 260+ broadcast locations / 295+ bars and grills and direct players to the keno special running in their community.
 
-No screened current Keno product exceeds Virginia's 75% deterministic cover ratio.
+For ordinary 80-number / 20-draw Pick 1, buying all 80 selections gives exact deterministic cover ratio `r = p/4`, where `p` is the gross winning payout multiple:
+- 3.00x -> 75.00%;
+- 3.25x -> 81.25%;
+- 3.50x -> 87.50%;
+- 3.75x -> 93.75%;
+- 4.00x -> 100% before costs/tax;
+- **>4.00x -> direct deterministic pre-tax overlay** if all 80 selections are accepted and aggregate limits do not reduce payout.
 
-Virginia Rewards remains potentially relevant but public primary pages do not expose the exact dollar value/denomination of redeemed Keno-usable credit/coupons while logged out. The current rules confirm free-play redemption and a 5,000-point monthly redemption cap, but **point count cannot be treated as dollars without the actual redemption menu/terms**. No current official Virginia Keno BOGO/direct discount >25% was found in this run. The indexed Summer Sizzle promotion is a random second-chance Scratcher promotion and ended August 2, 2026.
+This route is operationally cleaner than H136 Kentucky because the paytable is posted first and accepted selections are evidenced by tickets before game close; external money need not become irreversibly trapped before complete coverage is known.
 
-Status: **VIRGINIA 75% COVER REMAINS BEST VERIFIED / >25% PRE-COMMITTED SUBSIDY NOT FOUND / NO SUCCESS**.
+Current blocker: the official public Big Red pages confirm active community specials but do not expose the exact numeric current special paytables in reliable retrievable text. No current `r>75%`, much less `r>100%`, schedule was therefore proven in this packet.
+
+Status: **CURRENT SPECIAL-PAYTABLE + FREE-PLAY CLASS VALIDATED / EXACT LIVE NUMERIC SPECIAL STILL REQUIRED / NO SUCCESS**.
 
 Files:
-- `research/h143_virginia_rewards_and_high_cover_keno_screen.md`
-- `data/derived/h143_keno_high_cover_screen.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H143_APPEND.md`
-- prior theorem: `research/h142_virginia_keno_75pct_cover_rewards_threshold.md`
+- `research/h144_nebraska_municipal_keno_special_paytable_route.md`
+- `data/derived/h144_nebraska_pick1_cover_thresholds.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H144_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -60,7 +63,8 @@ Files:
 - H136-H140 Kentucky deposit-promo + Pick 3: positive conditional arithmetic exists, but promo entitlement and wager acceptance are not locked before nonwithdrawable funding.
 - H141 North Carolina checkout architecture validates whole-cart immediate discount mechanics, but no current offer crosses break-even.
 - H142 validates Virginia Keno 1-Spot at **75%** fixed deterministic cover.
-- **H143 confirms Virginia remains the best screened compact Keno target; current public Rewards data still does not prove a >25% pre-locked subsidy.**
+- H143 confirms Virginia as best screened standard state-Keno target; no >25% pre-locked subsidy found.
+- **H144 validates Nebraska municipal Keno as a higher-priority dynamic class because periodic special paytables and free-play coupons are expressly supported by regulation; exact current special schedules remain to be captured.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -69,18 +73,18 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search compact non-shareable lottery games outside standard Keno for deterministic coverage ratio >75%.** A game with ratio `r` needs pre-locked face subsidy only `q > 1-r`.
-2. Continue Virginia monitor for exact Rewards redemption denomination, coupon stacking/use rules, or any current player-owned direct Keno discount/BOGO >25%.
-3. If the exact Virginia Rewards free-play denomination becomes observable, immediately test whether >$20 can be pre-owned and applied across distinct 1-Spot selections for one draw before uncovered cash is committed.
-4. Search state-lottery checkout-level Discount/BOGO offers that apply to compact fixed-prize games and are visible/locked before payment.
-5. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
-6. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-7. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
-8. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
-9. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
+1. **Highest priority: capture current numeric Nebraska municipal-Keno special paytables**, starting with Big Red communities (Omaha, Lincoln, Norfolk, Fremont, Blair, Beatrice, Valley). Compute exact deterministic cover ratio and posted aggregate payout limit for every special.
+2. Trigger immediate deeper analysis on any partitionable special with `r > 0.75`; any fixed `r > 1.00` is a direct pre-tax SUCCESS candidate subject to tax, limits and execution.
+3. Capture current Nebraska free-play coupon face values / restrictions and test whether pre-owned coupons can be applied across a complete cover before remaining cash is committed.
+4. Continue search outside standard Keno for compact non-shareable games with deterministic coverage ratio >75%.
+5. Continue Virginia monitor for exact Rewards redemption denomination, coupon stacking/use rules, or any player-owned direct Keno discount/BOGO >25%.
+6. Search state-lottery checkout-level Discount/BOGO offers that apply to compact fixed-prize games and are visible/locked before payment.
+7. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
+8. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
 10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H143_APPEND.md`.
-Latest case: `research/h143_virginia_rewards_and_high_cover_keno_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H144_APPEND.md`.
+Latest case: `research/h144_nebraska_municipal_keno_special_paytable_route.md`.
