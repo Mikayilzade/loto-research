@@ -11,48 +11,42 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H149 — general Nebraska Keno full-paytable deterministic theorem + break-even atlas**.
+Latest completed lottery packet: **H150 — Missouri Club Keno marked-ball full-cover theorem (Bulls-Eye / Double Bulls-Eye / Multiplier)**.
 
-### H149 major result
-H148's Hit-k-only formula is now generalized to an arbitrary fixed k-Spot paytable.
+### H150 major result
+H149's exact 20-of-80 full-cover theorem was extended to Keno games where one or two of the 20 drawn balls are specially marked.
 
-If every k-subset of 80 numbers is purchased and 20 numbers are drawn, then for every legal draw the number of our tickets with exactly j hits is fixed:
+For Bulls-Eye (one distinguished winning ball), if every k-subset of the 80 numbers is purchased and a ticket has j total drawn-number matches:
+- no marked ball: `C(19,j)C(60,k-j)` tickets;
+- marked ball included: `C(19,j-1)C(60,k-j)` tickets.
 
-`N(k,j)=C(20,j)C(60,k-j)`.
+Therefore with ordinary payout `A_j` and Bulls-Eye payout `B_j`, deterministic gross is:
 
-Therefore for stake `s` and exact-hit payouts `P_j`:
-- tickets = `C(80,k)`;
-- cost `S=s C(80,k)`;
-- deterministic gross `G=sum_j P_j C(20,j)C(60,k-j)`;
-- exact all-outcome return `R_k=G/S`.
+`G_BE=sum_j [A_j C(19,j)C(60,k-j)+B_j C(19,j-1)C(60,k-j)]`.
 
-This is not an EV approximation: complete k-subset ownership removes draw randomness from the gross payout whenever the paytable is fixed/non-shareable.
+For Double Bulls-Eye (two marked winning balls), exact ticket counts with 0/1/2 marks are:
+- `C(18,j)C(60,k-j)`;
+- `2C(18,j-1)C(60,k-j)`;
+- `C(18,j-2)C(60,k-j)`.
 
-Hit-k-only standalone break-even payout multiples are now precomputed for k=1..10:
-- k=1: **4.000000x**
-- k=2: **16.631579x**
-- k=3: **72.070175x**
-- k=4: **326.435501x**
-- k=5: **1,550.568627x**
-- k=6: **7,752.843137x**
-- k=7: **40,979.313725x**
-- k=8: **230,114.607843x**
-- k=9: **1,380,687.647059x**
-- k=10: **8,911,711.176471x**
+Current Missouri official paytables were screened exactly for Spots 1-10.
 
-A deterministic pre-owned credit/discount fraction `d` inverts a fixed-paytable cover exactly when `R_k + d > 1`, assuming the credit reduces external cash dollar-for-dollar and does not alter payout eligibility.
+Best current deterministic/nominal ratios:
+- ordinary Club Keno: **62.4391%** (3-Spot);
+- Bulls-Eye: **60.6500%** (3-Spot);
+- Double Bulls-Eye nominal: **65.3369%** (9-Spot).
 
-The generalized calculator reproduces H148 Omaha August 2026 exactly: 82,160 `$2` 3-Spot tickets, `$116,280` deterministic gross, **70.764484%** return.
+The official $1m-per-ticket / $5m same-Spot liability language can only reduce the Double Bulls-Eye strict floor, so the nominal 65.3369% is already sufficient to reject the current fixed-paytable class.
 
-Status: **GENERAL EXACT KENO SCREEN VALIDATED / NO SUCCESS**.
+Multiplier is even weaker for a strict guarantee: it doubles cost while the legal wheel includes a 1x state, so the best worst-case full-cover ratio is at most **31.2196%**.
+
+Status: **CURRENT MISSOURI MARKED-BALL/MULTIPLIER FIXED-PAYTABLE GUARANTEE CLASS REJECTED / REUSABLE EXACT THEOREM VALIDATED / NO SUCCESS**.
 
 Files:
-- `research/h149_nebraska_keno_general_full_paytable_theorem.md`
-- `src/loto_research/keno_full_cover.py`
-- `data/derived/h149_keno_hitk_break_even_thresholds.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H149_APPEND.md`
-
-Fresh public-web search for additional August community specials returned transient service errors during this run; no unsupported live paytable was inferred. Resume live special recovery next run.
+- `research/h150_missouri_club_keno_marked_ball_cover.md`
+- `src/loto_research/keno_marked_ball_cover.py`
+- `data/derived/h150_missouri_bullseye_full_cover.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H150_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -72,14 +66,15 @@ Fresh public-web search for additional August community specials returned transi
 - H135 scalable BOGO + non-shareable compact coverage: best tested Washington Match 4 reaches 91.4361% strict return.
 - H136-H140 Kentucky deposit-promo + Pick 3: positive conditional arithmetic exists, but promo entitlement and wager acceptance are not locked before nonwithdrawable funding.
 - H141 North Carolina checkout architecture validates whole-cart immediate discount mechanics, but no current offer crosses break-even.
-- H142 validates Virginia Keno 1-Spot at 75% fixed deterministic cover.
+- H142 validates Virginia Keno 1-Spot at **75% fixed deterministic cover**, still the best current standard fixed-paytable Keno benchmark in this branch.
 - H143 confirms Virginia as best screened standard state-Keno target; no >25% pre-locked subsidy found.
 - H144 validates Nebraska municipal Keno periodic special paytables + free-play coupons as a dynamic search class.
 - H145 validates withdrawable Play+ funding + pre-start void execution architecture and the coupon-adjusted Pick-1 trigger `>3.00x` with a $5 credit on a $20 cover.
 - H146 recovers an actual 2026 Kearney Pick-1 special at exactly 3.00x: 75% face return and exact break-even under the hypothetical $5 coupon; also proves scheduled promo dates are not enough because specials may be withdrawn early.
 - H147 validates sequential cover with pre-close rollback as a real risk-control mechanism, but bulk/atomic rollback for an 80-number cover remains unproven.
-- H148 recovers the current Omaha August `$2` 3-Spot special and closes it at only 70.7644% deterministic full-cover return.
-- **H149 generalizes the Keno screen to every fixed exact-hit paytable and precomputes all Hit-k-only break-even multipliers; any newly recovered community special can now be classified exactly without simulation.**
+- H148 recovers the Omaha August `$2` 3-Spot special and closes it at only **70.7644%** deterministic full-cover return.
+- H149 generalizes the Keno screen to every fixed exact-hit paytable and precomputes Hit-k break-even multipliers.
+- **H150 generalizes deterministic coverage again to one/two specially marked winning balls; current Missouri Bulls-Eye/Double Bulls-Eye/Multiplier paytables all remain below 75%, so they are closed as current strict-guarantee candidates.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -88,11 +83,11 @@ Fresh public-web search for additional August community specials returned transi
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: resume recovery of current August 2026 numeric Nebraska specials from Big Red community images/pages (Lincoln, Fremont, Norfolk, Kearney, La Vista and smaller communities) and run each complete paytable through H149 immediately.**
+1. **Resume recovery of current August 2026 numeric Nebraska specials from Big Red community pages/images (Lincoln, Fremont, Norfolk, Kearney, La Vista and smaller communities) and run each complete paytable through H149 immediately.** Do not infer a current paytable from stale cached promo images.
 2. Escalate only paytables with `R_k>1`, or `0.75<R_k<=1` when a genuinely pre-owned deterministic coupon/discount exceeds `1-R_k`.
 3. Prioritize active Pick-1 `p>4.00x`; for multi-tier specials use the full H149 formula rather than headline Hit-k payout alone.
-4. Search for a single-ticket/way-ticket or documented batch construction/void mechanism that can make complete cover acceptance or rollback strict once a threshold-crossing paytable exists.
-5. Continue scan outside Nebraska for compact non-shareable games with deterministic coverage ratio >75% or checkout-level subsidies above exact deficit.
+4. Search outside Nebraska for compact fixed non-shareable Keno/paytable variants with deterministic cover **>75%**, now including marked-ball/bonus-ball structures via H150.
+5. Search for single-ticket/way-ticket or documented batch/void mechanisms that can make complete cover acceptance or rollback strict once a threshold-crossing paytable exists.
 6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
 7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
 8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
@@ -101,5 +96,5 @@ Fresh public-web search for additional August community specials returned transi
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H149_APPEND.md`.
-Latest case: `research/h149_nebraska_keno_general_full_paytable_theorem.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H150_APPEND.md`.
+Latest case: `research/h150_missouri_club_keno_marked_ball_cover.md`.
