@@ -1,0 +1,6 @@
+case,cover_ratio_r,required_bonus_to_cash_strict_gt,required_face_discount_strict_gt,face_cover,guaranteed_gross,current_offer_effect
+NC Pick 3 Exact,0.50,1.00,0.50,500,250,"100% deposit match => pre-tax break-even only"
+NC Pick 3 Pair,0.50,1.00,0.50,50,25,"100% deposit match => pre-tax break-even only"
+Reference r=0.60,0.60,0.6666667,0.40,,,"Kentucky-like cover"
+Reference r=0.6666667,0.6666667,0.50,0.3333333,,,
+Reference r=0.75,0.75,0.3333333,0.25,,,
