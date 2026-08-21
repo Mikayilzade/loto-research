@@ -11,32 +11,46 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H141 — North Carolina checkout-level Lottery Offer architecture**.
+Latest completed lottery packet: **H142 — Virginia Keno 75% deterministic 1-Spot cover + Rewards/free-play threshold**.
 
-### H141 major result
-H140 identified the required ordering for a strict subsidy-backed lottery cover:
+### H142 major result
+A materially better compact fixed-prize coverage game has been validated from current official Virginia Lottery rules.
 
-`lock complete basket + lock subsidy -> commit external cash`.
+Virginia Keno 1-Spot:
+- field: 80 numbers;
+- exactly 20 numbers drawn;
+- $1 wager on one number;
+- a hit pays fixed **$3**;
+- official rules state only the 10-Spot match-10 tier can become pari-mutuel; **all other tier payout values are fixed**.
 
-H141 found the strongest official state-lottery architecture match so far in North Carolina. Current NCEL Online Play Terms explicitly define `Lottery Offers` that can apply to a single game **or the whole shopping cart**, and state that upon qualifying for a **Discount Offer, the ticket is immediately discounted**. A 2026 official campaign (`M4LDEAL26`) separately proves that a lottery promo code can be entered on the Shopping Cart page before completing the purchase.
+Therefore buying all 80 distinct 1-Spot numbers for the same drawing has the exact deterministic identity:
+- face cost **$80**;
+- exactly 20 winners in every possible draw;
+- guaranteed gross **20 × $3 = $60**;
+- deterministic full-cover ratio **75%**.
 
-This materially validates the checkout-level subsidy class and solves the harmful Kentucky-style sequencing **in principle**: a player can potentially verify a purchase-level discount before committing the checkout.
+This is stronger than Kentucky Pick 3 (60%) and NC Pick 3 (50%). The exact purchase-level subsidy threshold is now only:
 
-However, no current August 2026 public NCEL purchase-level Discount Offer was found that crosses a compact game's deterministic break-even threshold.
+`q > 25% of face`, equivalently more than **$20 of pre-locked Keno-usable free play** on the $80 basket.
 
-Current NC Pick 3 is also weaker than Kentucky for full coverage:
-- Exact: 1,000 × $0.50 = $500 face; one winning Exact pays $250 -> **50% deterministic cover**.
-- Pair: 100 × $0.50 = $50 face; one winning Pair pays $25 -> **50% deterministic cover**.
+Virginia Rewards also provides a relevant live subsidy architecture:
+- Keno is explicitly eligible;
+- eligible computer-generated purchases earn 5 points per $1;
+- 250 points redeem a coupon for a free play of a Lottery product;
+- up to 5,000 points/month may be redeemed for free plays;
+- retail redemption can use vending-machine credit or a draw-game coupon.
 
-Therefore a subsidy must be **strictly greater than 100% of external cash**, equivalently a checkout discount **strictly greater than 50% of face price**, for positive pre-tax Pick 3 coverage. NCEL's current 100% first-deposit Welcome Offer reaches only theoretical pre-tax break-even and remains a deposit/promo mechanism subject to the same execution/discretion issues already rejected in H140.
+However no current public rule found in H142 establishes more than $20 of **pre-committed Keno-usable value** for one $80 basket. Same-spend points post only after purchase, and the exact Keno denomination/value represented by each 250-point coupon remains insufficiently specified in the public evidence retrieved.
 
-Status: **CHECKOUT-LEVEL SUBSIDY ARCHITECTURE VALIDATED / CURRENT SUITABLE >BREAK-EVEN OFFER NOT FOUND / NO SUCCESS**.
+Execution also remains open: Keno uses one play per ticket, draws every four minutes, and the rules contemplate unaccepted plays/refunds. All 80 required selections must be valid for the same draw before the $60 floor exists.
+
+Status: **75% FIXED-PAYOUT COVER VALIDATED / >25% PRE-COMMITTED SUBSIDY NOT YET FOUND / NO SUCCESS**.
 
 Files:
-- `research/h141_north_carolina_checkout_offer_architecture.md`
-- `data/derived/h141_nc_checkout_thresholds.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H141_APPEND.md`
-- prior architecture foundation: `research/h140_kentucky_discretionary_promo_gate_and_prefunding_architecture.md`
+- `research/h142_virginia_keno_75pct_cover_rewards_threshold.md`
+- `data/derived/h142_virginia_keno_subsidy_thresholds.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H142_APPEND.md`
+- prior checkout architecture: `research/h141_north_carolina_checkout_offer_architecture.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall historical rolldown: genuine historical +EV control, not current guarantee.
@@ -55,7 +69,8 @@ Files:
 - H134 free random tickets / second-chance entries cannot be counted at face value toward guaranteed floor.
 - H135 scalable BOGO + non-shareable compact coverage validated structurally, but best tested Washington Match 4 package reaches only 91.4361% strict return.
 - H136-H139 Kentucky current 100%/stacked deposit promos create positive conditional cover arithmetic, but H140 closes the current terminal-guarantee route because promo entitlement itself is discretionary before nonwithdrawable funding and wager acceptance is not locked.
-- **H141 validates a better state-lottery checkout architecture: whole-cart immediate Discount Offers exist in NCEL terms and a 2026 promo used Shopping Cart code entry before purchase; no current >break-even compact-game offer found.**
+- H141 validates whole-cart immediate Discount Offer architecture in North Carolina, but no current >break-even compact-game offer was found.
+- **H142 validates Virginia Keno 1-Spot as a 75% fixed-payout deterministic cover, reducing the required pre-committed subsidy to only >25%; no current locked subsidy above that threshold has yet been verified.**
 
 ## Azerbaijan live branches
 - `4+4`: only rare exceptional carryover states / materially better primary rules.
@@ -64,18 +79,19 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search current player-owned checkout-level Discount/BOGO offers that are visible/applied before payment, and pair them with compact non-shareable games having deterministic full-cover ratio >60%.** Required face discount is `q > 1-r`.
-2. Prioritize games with `r >= 2/3` (discount >33.33%) or `r >= .75` (discount >25%); this dramatically widens the set of ordinary checkout promotions that can cross break-even.
-3. Search NCEL and other state lotteries for purchase-level offers explicitly applying to Pick 3/4/5 or whole cart, especially repeated `buy X get Y free` campaigns where free numbers are player-selectable.
-4. Search for wallet systems where unused external cash remains withdrawable after Bonus award; acceptable sequence is `deposit -> lock Bonus -> test basket -> withdraw principal if basket fails`.
-5. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
-6. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
-7. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
-8. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
-9. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
-10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: pair Virginia Keno 1-Spot's 75% deterministic fixed payout with a current player-owned subsidy strictly above 25% that is visible/locked before uncovered cash is committed.** Search Virginia purchase promos, Rewards coupon denominations, direct discounts, vending-machine credits and checkout offers.
+2. Determine the exact Keno value/wager represented by a **250-point Rewards free-play coupon** and whether multiple coupons can fund distinct 1-Spot selections for one drawing. If pre-existing/redeemed free play can exceed $20 on the same $80 cover, test execution immediately.
+3. Test Virginia digital playslip/terminal batching and same-draw cutoff: can all 80 1-Spot selections be prepared/accepted reliably before a four-minute drawing? Preserve the fixed-payout theorem; do not repeat its math.
+4. Search compact non-shareable fixed-prize games with deterministic coverage ratio **>75%**. A game with ratio `r` requires only a face subsidy `q > 1-r`.
+5. Continue state-lottery checkout-level Discount/BOGO monitor, especially whole-cart player-selectable offers.
+6. Continue fixed-board raffle monitor with H129 worst-case floor and H122/H128 +EV denominator math.
+7. Reopen progressive/rolldown buy-the-pot only where verified external subsidy is large relative to exact full-space deficit and sharing is bounded.
+8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API; preregister and require >27.78% out-of-sample probability lift in the best published state.
+9. Azerbaijan 4+4 only on materially new primary rules or rare high-order carryover state.
+10. Fixed-pack instants only with official guaranteed per-pack minimum/subsidy above exact break-even.
+11. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe append packets are authoritative additions where direct replacement of the large master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H141_APPEND.md`.
-Latest case: `research/h141_north_carolina_checkout_offer_architecture.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H142_APPEND.md`.
+Latest case: `research/h142_virginia_keno_75pct_cover_rewards_threshold.md`.
