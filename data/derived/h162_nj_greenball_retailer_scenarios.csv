@@ -1,0 +1,4 @@
+scenario,face_cost,guaranteed_prize,sales_commission,cashing_commission,total_value,pre_tax_profit,gross_ratio
+player_only,50.00,50.00,0.00,0.000,50.000,0.000,1.0000
+retailer_sales_commission,50.00,50.00,2.50,0.000,52.500,2.500,1.0500
+retailer_sales_plus_cashing,50.00,50.00,2.50,0.625,53.125,3.125,1.0625
