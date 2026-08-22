@@ -1,0 +1,6 @@
+discount_pct,face_cost,customer_cash,guaranteed_prizes,customer_pre_tax,retailer_direct_margin_before_other_costs,simplified_taxable_increment,simplified_tax_23pct,customer_after_tax_model
+3,50,48.50,50,1.50,2.00,6.35,1.4605,0.0395
+4,50,48.00,50,2.00,1.50,6.80,1.5640,0.4360
+5,50,47.50,50,2.50,1.00,7.25,1.6675,0.8325
+6,50,47.00,50,3.00,0.50,7.70,1.7710,1.2290
+7,50,46.50,50,3.50,0.00,8.15,1.8745,1.6255
