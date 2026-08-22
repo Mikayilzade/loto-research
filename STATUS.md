@@ -11,33 +11,34 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H165 — North Carolina retailer self-play legality + 2026 tax-floor stress test**.
+Latest completed lottery packet: **H166 — North Carolina Pick 3 forced Double Draw: corporate tax salvage + liability-limit stress**.
 
-### H165 major result
-H164's strongest current recurring architecture remains NC Pick 3 forced Double Draw:
+### H166 major result
+H164/H165's strongest recurring candidate remains NC Pick 3 forced Double Draw:
 - 100 Pair outcomes × $0.50 = **$50** full cover;
-- on a guaranteed Double Draw evening, the two Pick-3 drawings guarantee **$25 + $25 = $50** prizes;
-- ordinary NC retailer commission is **7%**, conditionally adding **$3.50** and producing 107% pre-tax gross if the owner's own valid store purchase is commission-bearing.
+- on a guaranteed Double Draw evening, two drawings guarantee **$25 + $25 = $50** in prizes;
+- ordinary NC retailer commission is **7%**, conditionally adding **$3.50** if an own-store ticket is commission-bearing.
 
-H165 closes one important uncertainty positively: **North Carolina lottery retailers are not categorically barred from playing lottery games.** NCEL itself states that lottery retailers can play and separately says there is no North Carolina law barring retailers from playing. Thus the broad self-play prohibition hypothesis is rejected.
+H166 shows the 2026 wagering-loss rule does **not** necessarily kill the overlay if one lawful C-corporation entity can both own the tickets and receive the retailer commission. Using a deliberately conservative simple 21% federal + 2% NC corporate income-tax screen:
+- $50 face cover -> $50 guaranteed prizes;
+- 90% loss deduction leaves $5 taxable wagering income;
+- +$3.50 commission -> $8.50 simplified taxable increment;
+- tax at 23% = $1.955;
+- simplified after-income-tax surplus = **+$1.545 = +3.09% of face**.
 
-However the exact public accounting sentence needed for terminal proof was still not recovered: current statute/contract say 7% of tickets/shares sold by the retailer, but do not explicitly state that a retailer-owner's personal ticket purchased at the owner's licensed location is commission-bearing gross sales. This gate is now narrow, not broad.
+The $1 Pair denomination doubles the same structure: $100 face -> $100 guaranteed prizes + $7 commission -> about **+$3.09 after the simple 23% income-tax screen**.
 
-H165 also stress-tested the 2026 federal wagering-loss rule. Under the new 90% wagering-loss deduction limit:
-- $50 wagering cost against $50 guaranteed prizes can leave **$5 taxable gambling income**;
-- adding the $3.50 retailer commission gives a simplified **$8.50 incremental taxable-income** screen;
-- simple combined tax-rate break-even is **3.50 / 8.50 = 41.1764706%**;
-- at 37% federal + 3.99% NC, the simplified cushion is only **+$0.01585 per $50 cover** before any other tax/entity/operating friction.
+However H166 also identified a material scaling blocker: current NCEL Pick 3 rules expressly impose **number-level prize-liability limits**. Combinations can sell out and no further wagers on a number are accepted once liability hits the unpublished NCEL threshold. Thus repeated duplicate full covers cannot be assumed available, and even a first complete cover still depends on rollback if one Pair is refused.
 
-Therefore the 7% edge is extremely tax-sensitive and not a universal after-tax floor.
+A new standalone C-corp retailer is therefore rejected on current evidence: the NC franchise tax alone has a $200 minimum, which would require roughly 130 completed $50 covers at the simplified $1.545 edge before any store/setup/operating cost, while forced states are intermittent and liability limits prevent guaranteed scaling.
 
-Status: **SELF-PLAY LEGALITY VALIDATED / TERMINAL GUARANTEE STILL REJECTED ON COMMISSION-ATTRIBUTION + TAX + ACTIVE-STATE + ATOMIC-EXECUTION GATES**.
+Status: **C-CORP TAX SALVAGE NUMERICALLY VALIDATED / STANDALONE NEW-RETAILER ROUTE REJECTED / EXISTING LICENSED C-CORP ROUTE STILL CONDITIONAL ON OWN-STORE COMMISSION + ENTITY OWNERSHIP + ATOMIC ROLLBACK + ACTIVE FORCED STATE**.
 
 Files:
-- `research/h165_nc_retailer_self_play_tax_gate.md`
-- `src/loto_research/h165_nc_double_draw_tax.py`
-- `data/derived/h165_nc_double_draw_tax_sensitivity.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H165_APPEND.md`
+- `research/h166_nc_double_draw_corp_tax_and_liability.md`
+- `src/loto_research/h166_nc_double_draw_corp_tax.py`
+- `data/derived/h166_nc_double_draw_corp_tax.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H166_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -62,7 +63,8 @@ Files:
 - H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly **100% gross**, making any compatible subsidy sufficient before tax/friction.
 - H161-H163 New Jersey Green Ball: forced-state Pair cover reaches 100%; retailer commissions create conditional 105%-106.25%, but at least 10 tickets are required and atomicity remains unresolved.
 - H164 NC Pick 3 forced Double Draw reaches 100% prize gross and conditionally 107% with 7% retailer commission; 15-minute cancellation window materially improves rollback architecture.
-- **H165 validates that NC retailers may legally play, but the exact own-store commission accounting sentence is still missing and the 2026 90% wagering-loss rule makes the 7% edge razor-thin after tax.**
+- H165 validates that NC retailers may legally play, but own-store commission accounting and tax remain unresolved.
+- **H166 shows a lawful same-entity C-corp configuration would survive the 2026 income-tax screen numerically (~+3.09% of face after a conservative simple 23% rate), while explicit NCEL liability limits block assuming unlimited scaling.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -71,11 +73,11 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: obtain new lottery-specific evidence that an owner-personal own-store NC Pick-3 ticket is included in commission-bearing gross sales.** Broad retailer-play legality is already closed positively; do not repeat it.
-2. Search NCEL retailer reference/accounting/terminal materials for whether multiple previously issued Pick-3 tickets remain individually cancelable after intervening ticket transactions throughout the 15-minute window, including recovery behavior after terminal outage.
-3. Monitor for the next NC Pick 3 Double Draw cycle; reopen immediately as white-ball count approaches zero and revalidate promotion wording/current rules.
-4. Only if commission attribution is locked, solve an explicit lawful player/retailer tax-entity structure that stays positive under 2026 federal + NC taxes and all retailer operating costs.
-5. Continue searching cumulative-trigger lottery promotions where a publicly observable forced state reaches >=100% exact coverage **without** needing retailer commission; these are now more valuable because H165 shows small commission overlays can be tax-fragile.
+1. **Highest priority: obtain authoritative NCEL evidence on the exact related-party accounting question: whether a retailer-owner or retailer legal entity's own valid store ticket is included in commission-bearing gross sales.** Broad retailer-play legality is already closed positively; do not repeat it.
+2. Obtain current authoritative NCEL claim/retailer language on whether a licensed retailer legal entity (e.g. C corporation) may itself own/claim its own retail draw tickets. H166 tax salvage is only conditional until this is locked.
+3. Search NCEL retailer terminal/accounting material for sequence/bulk cancellation and post-terminal-outage recovery. The 15-minute rule is known; do not repeat it unless new operational evidence resolves atomic rollback.
+4. Monitor for the next NC Pick 3 Double Draw cycle; reopen when the white-ball process approaches a guaranteed second-draw state and revalidate then-current rules.
+5. Prefer cumulative-trigger promotions that reach **>100% deterministic coverage without retailer commission**, because that avoids H164-H166 entity/tax fragility.
 6. Continue H159 live/announced fixed-board raffle monitor, especially flat boards whose exact worst-case residual floor approaches or exceeds 100%.
 7. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
 8. Continue Nebraska/community scheduled-special recovery where enhanced paytable is fixed before purchase.
@@ -84,5 +86,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H165_APPEND.md`.
-Latest case: `research/h165_nc_retailer_self_play_tax_gate.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H166_APPEND.md`.
+Latest case: `research/h166_nc_double_draw_corp_tax_and_liability.md`.
