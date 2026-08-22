@@ -1,0 +1,13 @@
+{
+  "family_size": 128,
+  "result": [
+    {"permutation":[0,1,2],"diagonal_layers_preserved":128,"preserved_a":[1,3,5,7,9,11,13,15],"is_global_symmetry":true},
+    {"permutation":[0,2,1],"diagonal_layers_preserved":16,"preserved_a":[15],"is_global_symmetry":false},
+    {"permutation":[1,0,2],"diagonal_layers_preserved":128,"preserved_a":[1,3,5,7,9,11,13,15],"is_global_symmetry":true},
+    {"permutation":[1,2,0],"diagonal_layers_preserved":16,"preserved_a":[15],"is_global_symmetry":false},
+    {"permutation":[2,0,1],"diagonal_layers_preserved":16,"preserved_a":[15],"is_global_symmetry":false},
+    {"permutation":[2,1,0],"diagonal_layers_preserved":16,"preserved_a":[15],"is_global_symmetry":false}
+  ],
+  "global_symmetry_permutations": [[0,1,2],[1,0,2]],
+  "conclusion": "Only identity and swap of the two A inputs preserve the full restricted diagonal A family. Full S3 is not a WLOG symmetry."
+}
