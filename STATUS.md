@@ -11,23 +11,24 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H178 — H175 mixed-isotopy adversarial screen**.
+Latest completed lottery packet: **H179 — H175 intensified balanced-adversary screen**.
 
-### H178 major result
-H178 continued the H175 4,336-play Rhode Island conditional doubled-3-spot construction and broadened the concrete Latin-layer search beyond the first fixed GF(16) affine realization.
+### H179 major result
+H179 materially strengthened the H178 screen of the 100 deterministic mixed cyclic/XOR Latin-isotopy designs for H175's 4,336-play conditional doubled Rhode Island 3-spot construction.
 
-One hundred deterministic six-layer designs were generated under H175's strong `3+1+1+1` support allocation, with each layer independently chosen as a row/column/output isotopy of either the cyclic order-16 Latin square or the XOR order-16 Latin square.
+Using 40 balanced greedy restarts per design and up to 60 within-group swap-descent steps, H179 found explicit `n3<=2` balanced counterexamples for **63/100** designs, versus 41/100 in H178. The strengthened best-value histogram is `n3=1:3, 2:60, 3:33, 4:3, 5:1`.
 
-A balanced 4-per-group local adversary found explicit `n3<=2` counterexamples for **41/100** designs. The full heuristic best-value histogram was `n3=1:5, 2:36, 3:42, 4:16, 5:1`.
+Exact MILP follow-up also broke heuristic-hard seeds `178033`, `178042`, and `178008`, each with an exact balanced witness at `n3=2`; under H175 each such witness pays only `4240 + 35*2 = 4310 < 4336`.
 
-Crucially, exact MILP follow-up showed that local minima above the required threshold are unreliable: seeds `178001`, `178004`, and the heuristic-strongest seed `178059` all admit exact balanced witnesses with `n3=2`. For seed `178059`, the resulting H175 gross is only `4240 + 35*2 = 4310 < 4336`.
-
-This rejects additional natural concrete H175 realizations but does **not** prove impossibility of arbitrary Latin/transversal systems. The next mathematical step is therefore a master-design CP-SAT/MILP/cutting-plane formulation with adversarial balanced-witness separation, rather than further reliance on sampled local minima.
+The remaining 37 heuristic-hard designs are **not validated**. Short solver timeouts are not evidence of infeasibility. H175 therefore remains open only at the general design level: the next highest-value step is a master-design CP-SAT/MILP/cutting-plane search with adversarial balanced-witness separation, or a combinatorial impossibility theorem for universal `n3>=3`.
 
 Files:
-- `research/h178_h175_mixed_isotopy_adversarial_screen.md`
-- `src/loto_research/h178_h175_mixed_isotopy_screen.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H178_APPEND.md`
+- `research/h179_h175_intensified_adversarial_screen.md`
+- `src/loto_research/h179_h175_intensified_screen.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H179_APPEND.md`
+
+### H178 preserved result
+H178 broadened the concrete Latin-layer search beyond H175's first GF(16) affine realization. One hundred deterministic six-layer designs were generated from independently isotoped cyclic/XOR order-16 Latin squares. The first local adversary directly rejected 41/100, and exact MILP found `n3=2` witnesses even for heuristic-hard seeds including `178059`.
 
 ### H177 preserved result
 Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute for the H172-H175 free/pre-locked 2X assumption: the Plus wager equals the base wager and `No Plus` is a legal result, so an equal surcharge leaves a legal branch with no payout multiplier. The ordinary paid-Plus substitution is **REJECTED AS A STRICT GUARANTEE MECHANISM**.
@@ -62,7 +63,8 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 - H175 identifies a 4,336-play hybrid candidate whose non-balanced compositions are strict-positive by pair counting; balanced draws require universal `n3>=3`; first GF(16) affine realization fails with exact minimum 0.
 - H176 confirms current RI Keno promotion + official online purchase channel, but bulk/atomic execution, live promo terms and primary 3-spot table remain unresolved.
 - H177 closes ordinary paid Keno Plus as a substitute for a free/pre-locked doubler: equal surcharge + legal `No Plus` branch destroys the guarantee floor.
-- **H178 broadens the H175 concrete design search: 41/100 sampled mixed-isotopy designs are directly counterexampled by local search, and exact MILP also breaks heuristic-hard candidates including the sampled best (`5 -> 2`). H175 remains open only for more general design-level constructions.**
+- H178 broadens the H175 concrete design search: 41/100 sampled mixed-isotopy designs were directly counterexampled by local search, and exact MILP also broke heuristic-hard candidates including sampled best `178059`.
+- **H179 strengthens that same bank: explicit local `n3<=2` witnesses now exist for 63/100 designs, and exact MILP additionally breaks locally hard seeds `178033`, `178042`, and `178008`. H175 remains open only as a general design-level construction/impossibility problem.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -71,7 +73,7 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest mathematical priority: solve or close the H175 balanced transversal gate at design level.** Formulate a master CP-SAT/MILP/cutting-plane search over six Latin/transversal layers with adversarial separation of balanced `n3<=2` witnesses. Do not treat local-search minima as validation. If infeasible, obtain a defensible counterbound and close the 4,336 class.
+1. **Highest mathematical priority: solve or close the H175 balanced transversal gate at design level.** Build a master CP-SAT/MILP/cutting-plane search over six Latin/transversal layers with adversarial separation of balanced `n3<=2` witnesses. Do not treat local-search minima or solver timeouts as validation. If infeasible, obtain a defensible counterbound and close the 4,336 class.
 2. Recover exact official current `Kick Back with Keno` rules through promotion assets/rule indexes/retailer notices. Do not assume historical Lucky 3 Spot mechanics.
 3. Recover current primary RI 3-spot prize data through an official static asset/API/rules attachment.
 4. Recover Rhode Island retailer/terminal mechanics: distinct Keno selections per physical ticket/transaction, future-draw targeting, throughput, and any multi-line import/repeat facility.
@@ -84,5 +86,5 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H178_APPEND.md`.
-Latest case: `research/h178_h175_mixed_isotopy_adversarial_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H179_APPEND.md`.
+Latest case: `research/h179_h175_intensified_adversarial_screen.md`.
