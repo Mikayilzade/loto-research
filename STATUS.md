@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 Branch: `research-work`
-Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is preserved for history but is OUT OF SCOPE and must not drive NEXT ACTION.
+Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is historical only and must not drive NEXT ACTION.
 
 ## Terminal state
 **NO SUCCESS; NOT EXHAUSTED**.
@@ -11,80 +11,61 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H187 — stronger support-(2,3,4) coefficient normalization**.
+Latest completed lottery packet: **H188 — exact B/C shift normalization for the H175 restricted master**.
 
-### H187 major result
-H187 continues the unresolved H175 4,336-play doubled 3-spot hybrid gate. The universal mathematical condition remains `n3>=3` on every balanced `4+4+4+4+4` draw.
+### H188 major result
+The unresolved H175 4,336-play doubled 3-spot hybrid gate still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
 
-H186's follow-up master over 18,952 H186-only valid rows reached a time limit with no incumbent, which remains inconclusive. H187 targets that solver bottleneck with a new exact WLOG symmetry.
+H187 had already proved WLOG that the sole D=`(2,3,4)` layer can be fixed to parameter id0 `(a,c)=(1,0)`, reducing the restricted diagonal cyclic-affine representative master to 2,818,400,256 designs.
 
-Restricted layers are `z=a*x+a*y+c (mod16)` with odd `a`. H183 had normalized the single `(2,3,4)` layer to `c=0` but left all 8 odd values of `a`.
+H188 proves a substantially stronger exact canonicalization.
 
-H187 proves that this coefficient can also be normalized:
-- scale groups 0,1,2,3 by a common odd unit `u`;
-- scale group 4 by an independently chosen odd unit `w`;
-- the `(0,1,2)` coefficients remain unchanged;
-- each support ending in group 4 gets coefficient `a'=(w/u)*a`;
-- choose `w/u=a_D^{-1}` for the selected `(2,3,4)` layer, then choose the group-4 translation to set its shift to zero.
+After D is fixed to `(1,0)`, translate only group0 by `t0` and group1 by `t1`. For B=`(0,3,4)`, the shift changes as
 
-Therefore every universal restricted-family design has an equivalent representative whose sole `(2,3,4)` layer is exactly candidate id **0 = `(a,c)=(1,0)`**. Balanced four-subsets are mapped bijectively, so this does not remove any possible universal `n3>=3` design.
+`c_B' = c_B - a_B*t0 (mod16)`.
 
-The H183 group-0/group-1 swap symmetry remains available, so its B/C ordering constraint can be retained.
+Because every allowed `a_B` is odd and hence invertible modulo 16, choose `t0=a_B^{-1}c_B` and force `c_B'=0`. This leaves C and D unchanged and only relabels A shifts inside A's unrestricted parameter family.
 
-Representative master count therefore falls from
+Likewise choose `t1=a_C^{-1}c_C` to force `c_C'=0`, independently preserving B and D.
 
-`22,547,202,048`
+Swapping groups0 and1 leaves A invariant, swaps B/C and leaves D invariant, so impose coefficient order `a_B<=a_C`.
 
-to
+Therefore every universal restricted-family design has an equivalent representative with:
+- D fixed to id0 `(1,0)`;
+- B restricted to zero-shift ids `{0,16,32,48,64,80,96,112}`;
+- C restricted to the same zero-shift ids;
+- ordered odd coefficients `a_B<=a_C`.
 
-`2,818,400,256`,
+Representative count becomes
 
-an additional exact **8x WLOG reduction** and about 254x fewer representative orientations than H180's original 715.9B raw restricted designs.
+`C(128,3) * 36 = 12,289,536`,
 
-A concrete normalization sanity check maps the already-rejected H185 candidate `[[18,54,111],[12],[88],[16]]` to ordered normalized ids `[[18,54,111],[72],[84],[0]]`; the transformed balanced witness still has exact `n3=2`.
+an additional exact **229.33x reduction vs H187** and about **58,254x reduction vs H180's 715,917,361,152 raw restricted designs**.
 
-A fresh deterministic normalized-master prototype also completed **12 adaptive cycles**:
-- 12/12 master candidates explicitly rejected;
-- exact score histogram: `n3=2` x12;
-- 12 initial valid rows grew to **1,172** unique valid rows after safe common-affine witness-orbit expansion.
-
-This prototype is evidence for the stronger formulation, not an infeasibility proof and not a substitute for the H185/H186 persistent witness banks.
+This is a WLOG theorem, not an infeasibility proof and not a universal construction.
 
 Files:
-- `research/h187_h180_support4_coefficient_normalization.md`
-- `data/derived/h187_support4_normalization_results.json`
-- `src/loto_research/h187_support4_normalized_merged_master.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H187_APPEND.md`
+- `research/h188_h180_bc_shift_normalization.md`
+- `data/derived/h188_bc_shift_normalization.json`
+- `src/loto_research/h188_bc_shift_normalized_master.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H188_APPEND.md`
 
-### H186 preserved result
-H186 produced **189 explicit balanced counterexamples** across two attacked restricted candidates. Their common-affine expansion/deduplication produced **18,952 unique H186-only valid rows**. The subsequent master solve hit its configured time limit with no incumbent; this is inconclusive, not infeasibility.
-
-H186 files:
-- `research/h186_h185_mass_counterexample_packet.md`
-- `data/derived/h186_h185_counterexample_packet.zlib.b64`
-- `src/loto_research/h186_h185_mass_counterexample_packet.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H186_APPEND.md`
-
-### H185 preserved checkpoint
-H185 has 297 stored exact witnesses and 4,878 active unique valid rows after affine expansion. H186 adds 189 new witnesses; H187 provides the stronger normalized master into which the merged bank should now be loaded.
+### Preserved H185-H187 state
+- H185: 297 stored exact balanced witnesses; 4,878 active unique valid rows after safe affine-orbit expansion.
+- H186: 189 additional explicit balanced counterexamples across two rejected candidates; 18,952 H186-only affine-expanded valid rows; later timeout/no-incumbent was inconclusive.
+- H187: D coefficient+shift normalization to id0 and a normalized prototype with 12/12 candidates explicitly rejected.
+- H188 supersedes the weaker H187 master parameterization; all H185/H186 balanced witness cuts remain valid and reusable.
 
 ## Preserved lottery conclusions
-- Cash WinFall: genuine historical rolldown +EV, not current guarantee.
-- H108 Lotto Texas 2023: near-full acquisition operationally real; current Texas route legally closed and jackpot sharing blocks strict guarantee.
-- H109-H112 fixed raffle/scratch/sealed-pack standard takeover materially closed.
-- H113-H116 Azerbaijan `4+4` ordinary/realistic carryover guarantee routes materially closed; reopen only on rare exceptional states/rule change/external subsidy.
-- H114 TezLoto full coverage negative; bias route requires reliable bulk history and out-of-sample lift.
-- H122/H128 fixed-board undersubscription is a strong +EV class but external winning ownership blocks strict guarantee.
-- H129/H159 residual raffle takeovers have exact worst-case forced-slot theorem; sampled boards fail strict floor.
-- H130-H141 replenishing games / coupons / wallet / cart subsidy architectures do not currently produce a strict executable guarantee.
-- H142-H171 several Keno/Pick-style conditional overlays can reach or exceed 100% in favorable modifier states, but random state assignment, execution atomicity, liability limits or insufficient subsidy block terminal guarantee.
-- H172 proves a lottery-issued pre-draw doubled entitlement can exist; current exact Rhode Island terms/execution remain unresolved.
-- H173 gives conditional 4,560-play / 109.6491% doubled 3-spot worst-case cover.
-- H174 proves 4x20 is the cheapest strict-positive member among 411,498 tested clique partitions.
-- H175 identifies the 4,336-play transversal hybrid and universal balanced `n3>=3` gate.
-- H176-H177 reject ordinary paid RI Keno Plus as a locked-2x substitute and leave current free-doubler/execution terms unresolved.
-- H178-H187 continue exact search of the 4,336-play gate; no universal design or impossibility theorem yet.
-- H181-H182 validate Michigan's current free pre-draw multiplier architecture but close random tag acquisition as a strict-guarantee source.
+- Cash WinFall: genuine historical rolldown +EV, not a current strict guarantee.
+- Lotto Texas 2023 near-full acquisition was operationally real; current Texas route legally closed and jackpot sharing blocks strict guarantee.
+- Fixed raffle/scratch/sealed-pack standard takeover materially closed; residual raffle takeovers have a forced-slot theorem but sampled boards fail strict floor.
+- Azerbaijan `4+4` ordinary/realistic carryover guarantee routes materially closed except rare exceptional states/rule changes/external subsidy; TezLoto bias branch needs reliable bulk history.
+- Several Keno/Pick-style conditional overlays can reach/exceed 100% only in favorable modifier states; random state assignment, execution atomicity, liability limits or insufficient prelocked subsidy block terminal guarantee.
+- Rhode Island proves lottery-issued pre-draw doubled entitlement can exist historically; current exact free-doubler terms/execution remain unresolved. Ordinary paid Keno Plus is not a locked-2x substitute.
+- H173 conditional 4,560-play doubled 3-spot cover remains valid; H175's 4,336-play hybrid would improve it if universal `n3>=3` can be constructed.
+- H178-H188 continue exact search of that 4,336-play gate; no universal construction or impossibility theorem yet.
+- Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents strict ex-ante guarantee.
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -93,16 +74,16 @@ H185 has 297 stored exact witnesses and 4,878 active unique valid rows after aff
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: merge H185's 297 stored witnesses with H186's 189 new explicit witnesses, deduplicate across packets, and regenerate the full valid affine-orbit union.**
-2. Solve that merged cut system under H187's stronger exact normalization `(2,3,4)=id0`, retaining the H183 B/C ordering symmetry. Use `src/loto_research/h187_support4_normalized_merged_master.py`.
-3. If a feasible candidate is returned, immediately run exact `n3<=2` separation and persist any witness. If solver-certified infeasible, the entire restricted diagonal cyclic-affine family is closed.
-4. Timeout/no-incumbent is never validation and never an infeasibility proof.
-5. If the diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` with independent odd `a,b`, reusing all accumulated balanced witness cuts.
+1. **Highest priority: run the full merged H185+H186 valid affine-orbit cut system under H188's canonical master** using `src/loto_research/h188_bc_shift_normalized_master.py`.
+2. If a feasible candidate is returned, immediately run exact `n3<=2` separation and persist the witness plus safe orbit rows.
+3. If solver-certified infeasible, the entire restricted diagonal cyclic-affine family is closed. Timeout/no-incumbent is never infeasibility and never validation.
+4. If needed, strengthen the exact formulation further using valid symmetry or aggregated inequalities; do not restart from weaker H187/H186 masters.
+5. If the diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` with independent odd `a,b`, reusing all accumulated balanced witnesses.
 6. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs.
-7. After this master packet, continue recovery of current official Rhode Island free-doubler terms/3-spot data/throughput and deterministic pre-locked lottery overlays.
+7. After the master packet, continue current Rhode Island prelocked-doubler/3-spot throughput evidence and other deterministic lottery overlays.
 8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
-Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H187_APPEND.md`.
-Latest case: `research/h187_h180_support4_coefficient_normalization.md`.
+Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where replacing the large legacy ledger directly is impractical.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H188_APPEND.md`.
+Latest case: `research/h188_h180_bc_shift_normalization.md`.
