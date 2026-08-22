@@ -1,0 +1,23 @@
+{
+  "packet": "H188",
+  "date": "2026-08-22",
+  "terminal_state": "NO SUCCESS; NOT EXHAUSTED",
+  "restricted_family": "z=a*x+a*y+c mod 16, a odd",
+  "preserved_h187_normalization": "support D=(2,3,4) fixed to id0=(a,c)=(1,0)",
+  "new_wlog": {
+    "B_shift": 0,
+    "C_shift": 0,
+    "proof": "independent translations of group0 and group1; odd coefficients are units mod16",
+    "coefficient_order": "a_B <= a_C by swapping groups0 and1"
+  },
+  "B_allowed_ids": [0,16,32,48,64,80,96,112],
+  "C_allowed_ids": [0,16,32,48,64,80,96,112],
+  "ordered_BC_coefficient_pairs": 36,
+  "A_choices": 341376,
+  "h187_representatives": 2818400256,
+  "h188_representatives": 12289536,
+  "reduction_vs_h187": 229.33333333333334,
+  "h180_raw_restricted_designs": 715917361152,
+  "reduction_vs_h180_raw": 58254.22222222222,
+  "result": "exact WLOG reduction only; no universal construction or impossibility proof yet"
+}
