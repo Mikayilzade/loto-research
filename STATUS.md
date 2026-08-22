@@ -11,29 +11,25 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H176 — Rhode Island Keno live execution surface and current-promotion gate**.
+Latest completed lottery packet: **H177 — Rhode Island paid Keno Plus guarantee closure**.
 
-### H176 major result
-Fresh official-site evidence on 2026-08-22 confirms both that Rhode Island currently surfaces a **`Kick Back with Keno Promotion`** and that an official direct online Keno purchase channel is live.
+### H177 major result
+Fresh primary-source review of Rhode Island Lottery Keno rules closes a tempting substitution for the H172-H175 conditional 2X architecture.
 
-The current Keno purchase surface exposes:
-- number selection / Quick Pick;
-- amount per game;
-- consecutive games;
-- KENO / PLUS / KENO OVERTIME options;
-- `Buy Now`;
-- an explicit statement that online ticket purchases cannot be canceled or refunded;
-- a next-draw / wagering-open display showing a short same-draw wagering window.
+Official rules state that:
+- the Keno Plus wager must equal the base Keno wager;
+- the Plus result can be `No Plus`, `2X`, `3X`, `4X`, `5X`, or `10X`;
+- the Plus drawing occurs just prior to the Keno drawing.
 
-This materially improves execution knowledge, but it does **not** solve the H173/H175 execution gate. The public online workflow exposes no documented CSV/bulk combination upload, no API for thousands of unique selections, no atomic multi-thousand-selection basket guarantee, and no evidence that a retail Lucky-3-Spot-style promotion applies online.
+Therefore ordinary paid Keno Plus cannot be treated as a guaranteed pre-locked multiplier. Because `No Plus` is a legal outcome, buying Plus on every line doubles total spend while leaving a legal branch with no payout multiplier.
 
-The live promotion's exact rules are still not recoverable from the indexed official surface, so it cannot be assumed to be the historical free pre-locked 2x mechanic. The current official 3-spot dynamic prize table also remains unrecovered; the `$25/$2.50` table used in H172-H175 therefore remains conditional.
+Using H173's own conditional free/pre-locked 2X floor of 109.6491% of base spend, the implied ordinary floor is about 54.82455% of base spend; paying an equal Plus surcharge makes the `No Plus` strict floor about **27.412275% of total paid spend**. The ordinary paid-Plus substitution is therefore **REJECTED AS A STRICT GUARANTEE MECHANISM**.
 
-Status: **CURRENT KENO PROMOTION + ONLINE EXECUTION CHANNEL CONFIRMED / FREE PRE-LOCKED 2X + PRIMARY PAYTABLE + BULK SAME-DRAW EXECUTION STILL UNPROVEN**.
+The rule wording does not prove that wagering stays open after the Plus result for the immediately following Keno draw, so no post-result execution loophole may be assumed.
 
 Files:
-- `research/h176_ri_keno_live_execution_surface_2026.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H176_APPEND.md`
+- `research/h177_ri_paid_keno_plus_guarantee_closure.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H177_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -47,24 +43,24 @@ Files:
 - H131 statewide Nth-ticket coupons fail ownership because unrelated purchases can take target positions.
 - H132 deterministic purchase-local free-ticket ownership is structurally valid, but Mega Millions jackpot sharing blocks strict guarantee.
 - H133-H141 wallet/deposit/cart subsidy architectures screened; Kentucky crossed pre-tax break-even mathematically but failed pre-commitment acceptance/entitlement gates.
-- H142 Virginia Keno 1-Spot deterministic cover = **75%**; no >25% pre-locked subsidy found.
+- H142 Virginia Keno 1-Spot deterministic cover = 75%; no >25% pre-locked subsidy found.
 - H144-H149 Nebraska dynamic-special screening/void architecture developed.
-- H150-H153 broader Keno screens: La Vista benchmark **81.0636%**, ordinary state tables remain below strict break-even.
+- H150-H153 broader Keno screens: La Vista benchmark 81.0636%, ordinary state tables remain below strict break-even.
 - H154 KenoGO Minor/Major can exceed 100% after state resolution, but profitable state is unknown until betting closes.
 - H155-H156 universal free multiplier would work for some Keno tables, but current promos assign multiplier randomly or charge offsetting surcharge.
 - H157 BCLC deterministic `X paid + Y free` architecture is structurally correct; current offer not strong enough.
 - H158 Emirates Draw deterministic cart discount validated but EASY6/SURE economics fail strict floor.
-- H159 fixed-board residual takeover theorem preserved.
-- H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly **100% gross**, making compatible pre-locked subsidy sufficient.
+- H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly 100% gross, making compatible pre-locked subsidy sufficient.
 - H161-H163 New Jersey Green Ball: forced-state Pair cover reaches 100%; retailer commissions create conditional 105%-106.25%, but atomicity remains unresolved.
 - H164-H169 North Carolina forced Pick 3 Double Draw reaches 100% gross and retailer-discount economics can be positive, but current public rules allow liability-limit refusal and lack whole-basket atomic rollback; strict guarantee rejected.
-- H170 Barbados Pick 3 Mega Ball Pair cover reaches **106% in successful-MB state**, but MB success is random; strict floor 26.5%.
-- H171 Jamaica Cash Pot + Mega reaches **136.11% in Gold state**, but modifier state is random after purchase; strict floor 38.89%.
-- H172 Rhode Island proves that lottery-issued 2x entitlement can be printed/locked before the draw; naive doubled 3-spot full space = **138.7537% conditional**, but 82,160 plays are operationally too large and current 2026 promo terms remain unresolved.
-- H173 reduces that conditional strict doubled cover to **4,560 plays / 109.6491% worst-case pre-tax** using four 20-number triple cliques.
-- H174 exhaustively screens **411,498** clique partitions with 1–8 groups and proves 4×20 is the cheapest strict-positive member; Keno Plus cannot currently be treated as a known pre-purchase multiplier state.
-- H175 identifies a **4,336-play hybrid candidate** whose non-balanced compositions are strict-positive by pair counting; balanced draws require universal `n3>=3`; first GF(16) affine realization fails with exact minimum 0.
-- **H176 confirms the current RI Keno promotion and official online purchase channel, but finds no public bulk/atomic distinct-combination route and still cannot verify the live promotion as free pre-locked 2x or recover the primary 3-spot paytable.**
+- H170 Barbados Pick 3 Mega Ball Pair cover reaches 106% in successful-MB state, but MB success is random; strict floor 26.5%.
+- H171 Jamaica Cash Pot + Mega reaches 136.11% in Gold state, but modifier state is random after purchase; strict floor 38.89%.
+- H172 Rhode Island proves that lottery-issued 2x entitlement can be printed/locked before the draw; naive doubled 3-spot full space = 138.7537% conditional, but 82,160 plays are operationally too large and current 2026 promo terms remain unresolved.
+- H173 reduces that conditional strict doubled cover to 4,560 plays / 109.6491% worst-case pre-tax using four 20-number triple cliques.
+- H174 exhaustively screens 411,498 clique partitions with 1–8 groups and proves 4×20 is the cheapest strict-positive member.
+- H175 identifies a 4,336-play hybrid candidate whose non-balanced compositions are strict-positive by pair counting; balanced draws require universal `n3>=3`; first GF(16) affine realization fails with exact minimum 0.
+- H176 confirms current RI Keno promotion + official online purchase channel, but bulk/atomic execution, live promo terms and primary 3-spot table remain unresolved.
+- **H177 closes ordinary paid Keno Plus as a substitute for a free/pre-locked doubler: equal surcharge + legal `No Plus` branch destroys the guarantee floor.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -86,5 +82,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H176_APPEND.md`.
-Latest case: `research/h176_ri_keno_live_execution_surface_2026.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H177_APPEND.md`.
+Latest case: `research/h177_ri_paid_keno_plus_guarantee_closure.md`.
