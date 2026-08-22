@@ -11,36 +11,41 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H174 — Rhode Island doubled-Keno clique-partition exhaustion + Keno Plus timing gate**.
+Latest completed lottery packet: **H175 — Rhode Island doubled-Keno 4,336-play hybrid transversal gate**.
 
-### H174 major result
-H173's conditional free-2x 3-spot Keno construction was tested against the complete obvious family of disjoint clique partitions.
+### H175 major result
+H173/H174's 4,560-play doubled 3-spot construction is no longer the only concrete subproblem outside clique partitions.
 
-For a partition of 80 numbers into group sizes `g_i`, buying every 3-subset inside each group gives cost `sum C(g_i,3)`. For any 20-number draw with group hit counts `s_i`, exact doubled payout is `sum[50*C(s_i,3)+5*C(s_i,2)*(g_i-s_i)]`. Dynamic programming therefore gives the exact worst case without enumerating `C(80,20)` draws.
+Start from the exact break-even `5 x 16` base:
+- `5*C(16,3)=2,800` plays;
+- worst doubled gross = $2,800;
+- the unique count-composition attaining that minimum is `4+4+4+4+4`.
 
-All nondecreasing integer partitions of 80 into **1 through 8 groups** were screened: **411,498 constructions** total.
+Add six 256-block Latin-square transversal layers across triples of the five groups:
+- add-on = 1,536 plays;
+- total = **4,336 plays**.
 
-Best/cheapest strict-positive results by group count:
-- 1 group: `(80)` -> 82,160 cost / 114,000 worst gross = 138.7537%;
-- 2 groups: `(40,40)` -> 19,760 / 25,500 = 129.0486%;
-- 3 groups: `(26,27,27)` -> 8,450 / 10,170 = 120.3550%;
-- 4 groups: **`(20,20,20,20)` -> 4,560 / 5,000 = 109.6491%**;
-- 5 groups: no strict positive; `(16,16,16,16,16)` is exactly 100%;
-- 6-8 groups: no strict positive.
+For one transversal layer on groups with draw counts `(a,b,c)`, pair incidence is constant at `ab+ac+bc`, so doubled payout is `5(ab+ac+bc)+35*n3`, where `n3` is the number of fully contained layer blocks.
 
-Therefore **H173's 4,560-play construction is proven cheapest within the entire tested 1–8-group clique-partition family**. A smaller guaranteed portfolio must use genuinely different selective cross-group/cyclic/block-design structure rather than merely changing partition sizes.
+All **5,005** weak allocations of six layers over the 10 three-group supports were screened against all **10,451** feasible draw count-compositions. A strong allocation is:
+- 3 layers on `(0,1,2)`;
+- 1 each on `(0,3,4)`, `(1,3,4)`, `(2,3,4)`.
 
-H174 also tested the tempting current Keno Plus timing branch. The 2026 rules say Plus costs an equal additional wager and its wheel is drawn just before the applicable Keno draw. Current Rhode Island FAQ states iLottery wagering is unavailable during each game's draw-break period, and no official same-draw post-wheel purchase path was found. Thus the multiplier must still be treated as unknown when committing the wager; the 2x/3x/4x/5x/10x wheel cannot currently be used as a pre-purchase guaranteed state.
+For this allocation:
+- every non-balanced composition has pair-only gross at least **$4,370 > $4,336**;
+- balanced `4+4+4+4+4` has pair-only gross **$4,240**;
+- therefore the entire guarantee reduces to one exact condition: across the six layers, every balanced draw must contain at least **3 full transversal triples**;
+- if `n3>=3` universally, worst gross is at least **$4,345**, ratio **100.2076%**, surplus **+$9**.
 
-The live August 2026 homepage still shows **`Kick Back with Keno Promotion`**, but its primary current rules and the primary current 3-spot paytable remain unrecovered.
+A first natural GF(16) affine realization was tested by exact binary MILP. Using coefficients `1,2,4` on the three `(0,1,2)` layers and coefficient `1` on each other support, the adversarial balanced minimum is **n3=0**. That concrete realization is rejected.
 
-Status: **H173 OPTIMAL WITHIN CLIQUE-PARTITION FAMILY / KENO PLUS POST-WHEEL EXPLOIT REJECTED ABSENT NEW OFFICIAL EVIDENCE / CURRENT FREE-2X TERMS + EXECUTION STILL UNPROVEN**.
+Status: **NEW 4,336-PLAY CANDIDATE CLASS / ALL NON-BALANCED COMPOSITIONS CLOSED POSITIVE FOR ONE SUPPORT ALLOCATION / BALANCED UNIVERSAL n3>=3 DESIGN STILL OPEN / FIRST AFFINE REALIZATION REJECTED**.
 
 Files:
-- `research/h174_ri_keno_partition_exhaustion_and_plus_timing.md`
-- `src/loto_research/h174_ri_keno_partition_search.py`
-- `data/derived/h174_ri_keno_partition_summary.csv`
-- `research/CHECKED_PROJECTS_AND_TESTS_H174_APPEND.md`
+- `research/h175_ri_keno_hybrid_4336_transversal_gate.md`
+- `src/loto_research/h175_ri_keno_hybrid_transversal.py`
+- `data/derived/h175_ri_keno_hybrid_summary.csv`
+- `research/CHECKED_PROJECTS_AND_TESTS_H175_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -69,7 +74,8 @@ Files:
 - H171 Jamaica Cash Pot + Mega reaches **136.11% in Gold state**, but modifier state is random after purchase; strict floor 38.89%.
 - H172 Rhode Island proves that lottery-issued 2x entitlement can be printed/locked before the draw; naive doubled 3-spot full space = **138.7537% conditional**, but 82,160 plays are operationally too large and current 2026 promo terms remain unresolved.
 - H173 reduces that conditional strict doubled cover to **4,560 plays / 109.6491% worst-case pre-tax** using four 20-number triple cliques.
-- **H174 exhaustively screens 411,498 clique partitions with 1–8 groups and proves 4×20 is the cheapest strict-positive member; smaller cover now requires non-clique block design. Keno Plus cannot currently be treated as a known pre-purchase multiplier state.**
+- H174 exhaustively screens **411,498** clique partitions with 1–8 groups and proves 4×20 is the cheapest strict-positive member; Keno Plus cannot currently be treated as a known pre-purchase multiplier state.
+- **H175 identifies a 4,336-play hybrid candidate: one support allocation makes every non-balanced draw strict-positive by pair counting; only balanced draws need a universal three-full-block property. First GF(16) affine realization fails with exact MILP minimum n3=0.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -78,18 +84,17 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: recover official 2026 Rhode Island `Kick Back with Keno` rules and current primary RI 3-spot paytable.** If it is a free deterministic pre-locked 2x, H173/H174 provide a strict 109.65% pre-tax construction and a closed simple-partition search.
-2. Search **non-clique structured block/cyclic designs below 4,560 plays** satisfying `50*n3(S)+5*n2(S) > |F|` for every 20-number draw. Use symmetry, covering-design bounds, integer programming / adversarial separation, not brute force over all draws.
-3. Recover Rhode Island terminal/ticket mechanics: maximum number of distinct 3-spot selections per ticket/transaction, whether a specific future Keno draw can be targeted, and actual throughput sufficient to place a reduced portfolio into one draw.
-4. Search current pre-printed/pre-locked free doublers in lotteries with smaller state spaces than 80-number Keno.
-5. Continue scheduled Keno special/paytable search for deterministic >100% coverage states known before purchase; La Vista **81.0636%** remains current ordinary benchmark.
+1. **Highest mathematical priority: solve the H175 balanced transversal gate.** Search six-layer non-affine/mixed Latin designs satisfying `n3>=3` for every balanced `4+4+4+4+4` draw, using MILP/CP-SAT/cutting planes. If impossible, prove a counterbound and close the 4,336 class.
+2. Recover official 2026 Rhode Island `Kick Back with Keno` rules and current primary RI 3-spot paytable. Any H173-H175 construction remains conditional until a current free deterministic pre-locked 2x is proven.
+3. Recover Rhode Island terminal/ticket mechanics: distinct 3-spot selections per ticket/transaction, future-draw targeting and throughput.
+4. If H175 fails, search other non-clique block/cyclic designs below 4,560 plays.
+5. Search current pre-printed/pre-locked free doublers in lotteries with smaller state spaces than 80-number Keno.
 6. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-7. Continue Nebraska/community fixed scheduled-special recovery where enhanced paytable is known before purchase.
-8. Continue H159 live/announced fixed-board raffle monitor, prioritizing flat boards near/exceeding 100% worst-case residual floor.
-9. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
-10. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+7. Continue Nebraska/community fixed scheduled-special recovery and H159 fixed-board raffle monitor.
+8. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
+9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H174_APPEND.md`.
-Latest case: `research/h174_ri_keno_partition_exhaustion_and_plus_timing.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H175_APPEND.md`.
+Latest case: `research/h175_ri_keno_hybrid_4336_transversal_gate.md`.
