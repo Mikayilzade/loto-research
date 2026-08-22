@@ -11,54 +11,56 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H184 — exact rejection of the current H183 master candidate**.
+Latest completed lottery packet: **H185 — H180 affine-orbit cut acceleration**.
 
-### H184 major result
-H184 resumed H183 from its persisted 254-cut state without repeating prior tests and attacked the exact unresolved master ids recorded by H183:
+### H185 major result
+H185 continued the unresolved H175 4,336-play doubled 3-spot hybrid gate. The only remaining mathematical condition is still universal `n3>=3` on every balanced `4+4+4+4+4` draw.
 
-`[[3,16,94],[1],[9],[16]]`.
+Starting from H183's persisted 254-cut bank plus H184's exact delta, H185 generated **42 additional explicit balanced counterexamples** against successive restricted diagonal cyclic-affine candidates. Every accepted witness was exactly rescored:
+- `n3=0`: **6**;
+- `n3=1`: **3**;
+- `n3=2`: **33**.
 
-This corresponds to six diagonal cyclic-affine transversal layers `z=a*x+a*y+c (mod 16)`:
-- support `(0,1,2)`: `(a,c)=(1,3),(3,0),(11,14)`;
-- support `(0,3,4)`: `(1,1)`;
-- support `(1,3,4)`: `(1,9)`;
-- support `(2,3,4)`: `(3,0)`.
+H185 also adds a mathematically safe common-affine orbit expansion for every post-H183 witness:
 
-An independently reconstructed exact separator MILP (80 symbol binaries + 1,536 hit binaries; exactly four symbols per group; total completed transversal triples constrained `<=2`) returned HiGHS status **Optimal** in about 2.43 seconds.
+`x -> u*x+v (mod 16)`, odd `u`, `v=0..15`.
 
-Exact balanced counterexample:
+Each image is itself a legal balanced draw and therefore yields a valid necessary `n3>=3` cut. The transformation preserves the restricted family `z=a*x+a*y+c`, changing only the shift to `u*c+(1-2a)v`.
 
-`[[1,5,7,14],[4,6,9,13],[2,3,9,15],[1,8,11,15],[2,4,11,15]]`
+Persistent state now:
+- H183 base witnesses: 254;
+- H184 official delta: 1;
+- H185 new explicit witnesses: 42;
+- **merged actual witness bank: 297**;
+- **active unique cut rows after affine-orbit expansion/deduplication: 4,878**.
 
-Exact score: **`n3=2`**. Only two transversal triples are completed, both on support `(0,1,2)`:
-- layer `(a,c)=(1,3)`: `(7,9,3)`;
-- layer `(a,c)=(3,0)`: `(1,4,15)`.
+The symmetry-reduced master is still feasible after all 4,878 active rows. Current unresolved master ids:
 
-Therefore the current H183 master candidate violates the necessary H175 universal condition `n3>=3` and is rejected exactly.
+`[[18,54,111],[12],[88],[16]]`.
 
-Persistent continuation state:
-- H183 bank: 254 necessary cuts;
-- H184 delta: 1 new exact cut;
-- known total after merge: **255 cuts**;
-- restricted diagonal cyclic-affine family: **still OPEN until the master is re-solved with cut 255**.
+Parameters:
+- `(0,1,2)`: `(a,c)=(3,2),(7,6),(13,15)`;
+- `(0,3,4)`: `(1,12)`;
+- `(1,3,4)`: `(11,8)`;
+- `(2,3,4)`: `(3,0)`.
+
+This is only the next separator target, not a validated construction.
 
 Files:
-- `research/h184_h183_current_master_exact_rejection.md`
-- `data/derived/h184_h183_new_witnesses.json`
-- `src/loto_research/h184_h183_current_candidate_break.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H184_APPEND.md`
+- `research/h185_h180_affine_orbit_cut_acceleration.md`
+- `data/derived/h185_h180_witness_bank.zlib.b64`
+- `data/derived/h185_h180_affine_orbit_delta.json`
+- `src/loto_research/h185_h180_affine_orbit_cut_acceleration.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H185_APPEND.md`
+
+### H184 preserved result
+H184 exactly rejected H183's recorded master `[[3,16,94],[1],[9],[16]]` at `n3=2` and supplied the first post-H183 exact delta. H185 has merged and superseded that continuation state.
 
 ### H183 preserved result
-H183 added exact WLOG symmetry reduction to H180's diagonal cyclic-affine family, reducing representative orientations from 715,917,361,152 to 22,547,202,048 (~31.75x). It generated 246 adaptive explicit counterexamples and persisted 254 total cuts. The master remained feasible at that checkpoint; H184 has now exactly rejected the recorded next master candidate.
+H183 reduced the restricted diagonal cyclic-affine representative space from 715,917,361,152 raw designs to 22,547,202,048 orientations via exact WLOG symmetry constraints and persisted 254 balanced cuts.
 
 ### H182 preserved result
 Current August 2026 Michigan Club Keno Tripler Time is closed as an ex-ante guaranteed subsidy: Doubler/Tripler tags are assigned to random paid tickets and no finite forced-issuance bound is published. Tagged-ticket states remain conditional overlays only.
-
-### H175-H180 preserved result
-- H175: 4,336-play doubled 3-spot hybrid; all non-balanced draw compositions are strict-positive; balanced draws require universal `n3>=3`.
-- H178/H179: broad concrete cyclic/XOR/isotopy screens repeatedly found exact `n3<=2` witnesses; timeout never counts as validation.
-- H180: first adaptive exact master/separator architecture.
-- H183/H184: persistent cutting-plane continuation with symmetry reduction; 255 necessary balanced cuts are now known, and the latest recorded candidate is rejected.
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -89,7 +91,7 @@ Current August 2026 Michigan Club Keno Tripler Time is closed as an ex-ante guar
 - H174 proves 4x20 is the cheapest strict-positive member among 411,498 tested clique partitions.
 - H175 identifies the 4,336-play transversal hybrid and universal balanced `n3>=3` gate.
 - H176-H177 leave current RI free-doubler terms/execution unresolved and reject ordinary paid Keno Plus as a substitute.
-- H178-H184 continue exact search of the 4,336-play gate; no universal design or impossibility proof yet.
+- H178-H185 continue exact search of the 4,336-play gate; no universal design or impossibility proof yet.
 - H181-H182 validate Michigan's current free pre-draw multiplier architecture but close random tag acquisition as a strict-guarantee source.
 
 ## Azerbaijan live branches
@@ -99,15 +101,15 @@ Current August 2026 Michigan Club Keno Tripler Time is closed as an ex-ante guar
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: merge H184's exact delta witness with H183's persisted 254-cut bank, solve the 255-cut symmetry-reduced master, and immediately separate the new candidate.** Continue until restricted-master infeasibility or independently certified exact-separator infeasibility.
-2. Persist subsequent witnesses in a merged/appendable bank so later runs never restart from H183.
-3. Add only mathematically safe symmetry/orbit cuts or valid inequalities; solver timeout is never validation.
-4. If the diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod 16)` with independent odd `a,b` (1,024 layers/support), reusing all valid balanced witnesses.
+1. **Highest priority: resume H185 directly from the 297-witness merged bank / 4,878 active affine-orbit rows and attack current master ids `[[18,54,111],[12],[88],[16]]`.**
+2. Continue adding explicit `n3<=2` witnesses plus mathematically safe orbit rows until restricted-master infeasibility or independently certified separator infeasibility.
+3. If solve time grows, use targeted single-group translation/orbit rows or stronger valid inequalities; do not restart and never treat timeout as validation.
+4. If the diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod 16)` with independent odd `a,b`, reusing all valid balanced witnesses.
 5. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs.
-6. In parallel only after the master packet: recover current official Rhode Island free-doubler terms/3-spot data/throughput, and search deterministic pre-locked lottery overlays in smaller state spaces.
+6. After the master packet, continue recovery of current official Rhode Island free-doubler terms/3-spot data/throughput and deterministic pre-locked overlays in smaller state spaces.
 7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H184_APPEND.md`.
-Latest case: `research/h184_h183_current_master_exact_rejection.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H185_APPEND.md`.
+Latest case: `research/h185_h180_affine_orbit_cut_acceleration.md`.
