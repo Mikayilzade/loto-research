@@ -11,38 +11,40 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H169 — North Carolina Pick 3 atomicity + liability-limit closure**.
+Latest completed lottery packet: **H170 — Caribbean multi-prize / Mega Ball deterministic coverage screen**.
 
-### H169 major result
-The H167-H168 North Carolina forced-Double-Draw retailer-discount route is now **rejected as a strict ex-ante guarantee under current public execution rules**, although its conditional economics remain valid after a complete basket is accepted.
+### H170 major result
+A new current conditional >100% lottery state was found in **Barbados Pick 3 + Mega Ball**.
 
-The key findings are stronger than the previous generic terminal-outage concern:
+Current official Barbados Pick 3 has three prize numbers per draw. Base full coverage remains negative:
+- Straight: `400 + 75 + 50 = 525` on 1,000 full-cover spend = **52.50%**.
 
-1. Current NCEL public materials tie Pick 3 cancellation to the **terminal where the ticket was produced / selling terminal** and impose the 15-minute-or-draw-break limit. No published right was found to cancel issued tickets through another terminal, another retailer or central support after selling-terminal failure.
-2. Current NCEL FAQ/rules say Pick 3 combinations **regularly sell out** because of prize-liability limits; once a limit is reached, further wagers on the affected number are not accepted. Thus complete acceptance can fail even with perfectly functioning equipment.
-3. No current public NCEL mechanism was found to reserve or atomically accept all 100 required Front Pair selections against liability limits before the first ticket becomes live.
-4. Touch-vending/session refund procedures do not create an all-or-none guarantee for a retail Pick 3 cover basket.
+But when Mega Ball succeeds, the published prize schedule inverts coverage:
+- all 1,000 Straight states + MB: spend **2,000**, guaranteed successful-MB gross **2,025 = 101.25%**;
+- stronger all-100 Front Pair cover + MB: spend **200**, guaranteed successful-MB gross `160+32+20 = 212 = 106.00%`.
 
-The deterministic math is still correct conditional on complete acceptance during an officially forced Double Draw state:
-- 100 Front Pair outcomes × $0.50 = **$50 face**;
-- two guaranteed drawings produce one covered Pair winner each;
-- $25 per $0.50 Pair win → **$50 guaranteed prize gross = 100% face**;
-- any lawful pre-agreed retailer discount creates a conditional pre-tax surplus;
-- H167 conservative C-corp tax stress break-even remains about **2.9004% discount**.
+This is the best H170 conditional state because only 100 Pair selections are required and the favorable-state gross margin is +6%.
 
-But current rules admit a lawful execution branch:
+### Why this is NOT SUCCESS
+Mega Ball is an additional random draw after the Pick 3 draw. Current Barbados results can show Mega Ball `NONE`; no current rule was found making the next MB success state certain/forced before betting closes. Current Caribbean Mega Ball mechanism documentation describes a chamber with two white balls and one gold ball, not a cumulative-removal forced-state.
 
-`proper subset of cover issued -> required later selection refused / selling terminal unavailable -> no guaranteed all-basket rollback -> uncovered draw outcome`.
+Therefore a legal branch remains:
 
-That destroys the strict ex-ante payout floor.
+`complete 100-Pair MB cover accepted -> MB does not succeed -> only base 53 returned on 200 spend`.
 
-Status: **CONDITIONAL OVERLAY VALIDATED AFTER COMPLETE ACCEPTANCE / STRICT GUARANTEE REJECTED UNDER CURRENT PUBLIC RULES**.
+Strict floor is therefore **26.50%**, not 106%.
 
-Reopen H167-H169 only with materially new evidence of all-or-none batch acceptance, complete pre-reservation against liability limits, guaranteed cross-terminal/central rollback, or a redesigned single-transaction cover.
+Also, current Barbados digit-game rules include liability-limit/rejection mechanics, so even a future forced-MB state would still need whole-basket acceptance/rollback and tax-cost proof.
+
+Controls screened in same packet:
+- Barbados Pick 4 Straight full cover + successful MB = **96.25%**, rejected even favorable state.
+- Curaçao Wega di Number regulated three-prize full-cover ratios = **70% / 70% / 52.5% nominal before surcharge/tax**, rejected.
+
+Status: **CONDITIONAL >100% STATE VALIDATED / STRICT GUARANTEE REJECTED BECAUSE FAVORABLE MB STATE IS RANDOM**.
 
 Files:
-- `research/h169_nc_pick3_atomicity_liability_limit_closure.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H169_APPEND.md`
+- `research/h170_caribbean_multi_prize_megaball_cover.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H170_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -66,8 +68,8 @@ Files:
 - H159 fixed-board residual takeover theorem preserved.
 - H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly **100% gross**, making compatible pre-locked subsidy sufficient.
 - H161-H163 New Jersey Green Ball: forced-state Pair cover reaches 100%; retailer commissions create conditional 105%-106.25%, but atomicity remains unresolved.
-- H164-H168 North Carolina forced Pick 3 Double Draw reaches 100% gross and retailer-discount economics can be positive; current promotion expired July 31, 2026.
-- **H169 closes the current NC strict-guarantee execution architecture: cancellation is selling-terminal-specific, liability limits can refuse required combinations, and no whole-basket reservation/all-or-none acceptance is publicly guaranteed.**
+- H164-H169 North Carolina forced Pick 3 Double Draw reaches 100% gross and retailer-discount economics can be positive, but current public rules allow liability-limit refusal and lack whole-basket atomic rollback; strict guarantee rejected.
+- **H170 Barbados Pick 3 Mega Ball Pair cover reaches 106% in the successful-MB state, but MB success is random rather than forced before purchase; strict floor is only 26.5%.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -76,16 +78,16 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search currently active forced-extra-draw / guaranteed-extra-draw lottery mechanics where deterministic full coverage can be achieved in one atomic ticket/order or with very few selections.** H169 shows that a 100-selection sequential basket is not enough for terminal guarantee.
-2. Continue scheduled Keno special/paytable search for a single wager class whose deterministic full-cover ratio exceeds 100% before random state resolution; this avoids multi-ticket atomicity entirely.
-3. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-4. Continue Nebraska/community fixed scheduled-special recovery where enhanced paytable is known before purchase.
-5. Continue H159 live/announced fixed-board raffle monitor, prioritizing flat boards near/exceeding 100% worst-case residual floor.
-6. Monitor NC Pick 3 Double Draw recurrence only as a conditional overlay; do not retest ordinary cancellation/liability mechanics without materially new atomic/reservation evidence.
+1. **Highest priority: search other current lottery products where one paid wager participates in multiple fixed prize numbers/draws and the sum of deterministic covered payouts exceeds cost WITHOUT relying on a random multiplier/add-on.** H170 proves the multi-prize architecture can get close/cross conditionally.
+2. Search forced/cumulative colored-ball mechanics where the favorable multiplier/extra-draw state becomes known with certainty before betting closes, then pair with compact Pair/1-Spot coverage. Reopen Barbados Mega Ball only on true pre-purchase forced-state evidence.
+3. Continue scheduled Keno special/paytable search for a single wager class whose deterministic full-cover ratio exceeds 100% before random state resolution.
+4. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
+5. Continue Nebraska/community fixed scheduled-special recovery where enhanced paytable is known before purchase.
+6. Continue H159 live/announced fixed-board raffle monitor, prioritizing flat boards near/exceeding 100% worst-case residual floor.
 7. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
 8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H169_APPEND.md`.
-Latest case: `research/h169_nc_pick3_atomicity_liability_limit_closure.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H170_APPEND.md`.
+Latest case: `research/h170_caribbean_multi_prize_megaball_cover.md`.
