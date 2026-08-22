@@ -1,0 +1,23 @@
+{
+  "packet": "H197",
+  "updated": "2026-08-23",
+  "promotion": {
+    "name": "Rhode Island 50% First-Time Deposit Match iLottery Promotion",
+    "match_rate": 0.5,
+    "maximum_bonus_usd": 50,
+    "bonus_usable_on": ["online Keno", "eInstants"],
+    "bonus_withdrawable": false,
+    "player_deposit_generally_withdrawable": false
+  },
+  "h173_ordinary": {
+    "face_cost_usd": 4560,
+    "doubled_worst_case_gross_ratio": 1.096491,
+    "ordinary_worst_case_gross_ratio": 0.5482455,
+    "ordinary_worst_case_winnings_usd_approx": 2500,
+    "cash_needed_after_max_bonus_usd": 4510,
+    "guaranteed_cash_result_usd_approx": -2010,
+    "max_bonus_as_fraction_of_face_cost": 0.010964912280701754,
+    "required_external_subsidy_fraction_to_break_even_ordinary": 0.4517545
+  },
+  "status": "REJECTED_AS_STANDALONE_SUBSTITUTE_FOR_PRE_DRAW_2X"
+}
