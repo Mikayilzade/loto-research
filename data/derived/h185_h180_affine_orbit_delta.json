@@ -1,0 +1,30 @@
+{
+  "packet": "H185",
+  "base_h183_witnesses": 254,
+  "included_h184_official_delta": 1,
+  "new_h185_explicit_witnesses": 42,
+  "merged_actual_witness_bank": 297,
+  "orbit_expansion_start_index": 254,
+  "orbit_rule": "common affine x -> u*x+v mod 16, u odd, v=0..15",
+  "active_unique_cut_rows_after_dedup": 4878,
+  "h185_score_histogram": {"0": 6, "1": 3, "2": 33},
+  "post_h183_score_histogram_including_h184_delta": {"0": 6, "1": 3, "2": 34},
+  "latest_rejected_candidate_ids": [[6,33,105],[65],[88],[32]],
+  "latest_rejected_candidate_witness": [[5,11,12,13],[1,2,3,12],[0,8,10,11],[7,13,14,15],[0,7,10,15]],
+  "latest_rejected_candidate_n3": 2,
+  "current_master_ids_after_4878_rows": [[18,54,111],[12],[88],[16]],
+  "current_master_params": [
+    [[3,3,2],[7,7,6],[13,13,15]],
+    [[1,1,12]],
+    [[11,11,8]],
+    [[3,3,0]]
+  ],
+  "timed_master_incumbent_check": {
+    "candidate_ids": [[3,38,42],[1],[2],[16]],
+    "active_rows": 4558,
+    "minimum_row_score": 4,
+    "violations": 0,
+    "separate_counterexample_n3": 0
+  },
+  "terminal_state": "NO SUCCESS; NOT EXHAUSTED"
+}
