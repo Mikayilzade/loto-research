@@ -1,6 +1,6 @@
 # STATUS
 
-Updated: 2026-08-22
+Updated: 2026-08-23
 Branch: `research-work`
 Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is historical only and must not drive NEXT ACTION.
 
@@ -11,33 +11,33 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H193 — Rhode Island Keno throughput / ticket-bound screen**.
+Latest completed lottery packet: **H194 — Rhode Island Keno same-draw execution correction**.
 
-### H193 major result
-H193 narrowed the H173/H175 same-draw execution gate using official Rhode Island Keno rules.
+### H194 major result
+H194 re-checked H193's optimistic interpretation of Rhode Island Keno's `$150` ordinary Ticket / Registered Ticketless Play maximum.
 
-Recovered rule facts:
-- ordinary Keno wagers may be $1/$2/$5/$10;
-- ordinary Keno Ticket maximum price is **$150**;
-- Keno draws occur every **4 minutes**;
-- current platform supports Registered Ticketless Play/iKeno.
+Current 2026 official Keno rules say:
+- one Keno selection contains 1–10 spots;
+- wager per single draw is `$1/$2/$5/$10`;
+- that wager can be played for up to **15 consecutive draws**;
+- ordinary Keno Ticket / Registered Ticketless Play maximum is **$150**.
 
-Exact best-case packaging lower bounds for distinct $1 same-draw plays:
-- H175 `4,336` plays -> at least **29** max-value tickets/objects (`ceil(4336/150)`);
-- H173 `4,560` plays -> at least **31** (`ceil(4560/150)`).
+Thus the `$150` cap is naturally and exactly explained by `15 × $10`; it is **not evidence** that a single purchase object can contain 150 arbitrary distinct $1 same-draw selections.
 
-This does **not** prove execution: public rules do not establish that one $150 ticket can carry 150 arbitrary distinct 3-spot selections, nor publish cart-line limits, cutoff interval, transaction-rate guarantee, bulk-upload/API capability, or atomic issuance of 29/31 fully specified tickets before a single four-minute draw.
+The current iKeno UI independently exposes one flow: `Pick your numbers` -> `Amount per game` -> `Consecutive games` -> options -> `Buy Now`. No public multi-line/bulk builder for hundreds or thousands of independently specified same-draw selections was recovered.
 
-Therefore the throughput gate remains **INCONCLUSIVE but materially narrowed**. The $150 cap alone does not reject H173/H175, and it also does not validate them.
+Therefore H193's `29 H175 / 31 H173 max-value objects` figures are withdrawn as execution evidence. Under the currently visible online interface model, H175 still needs **4,336 independently specified selections** in one target draw and H173 needs **4,560**. Consecutive-draw replication does not help same-draw coverage.
 
-Fresh search again confirmed the current official homepage advertises **`Kick Back with Keno Promotion`**, but exact terms remain unrecovered; no multiplier/subsidy assumptions may be inferred from the title.
+This materially weakens online execution but is not a formal impossibility theorem because no authoritative statement has yet been recovered excluding hidden cart aggregation, retailer multi-play packaging, batch tooling or a bulk/API mechanism.
+
+Fresh 2026-08-23 retrieval still shows **`Kick Back with Keno Promotion`** on the official homepage. Exact terms remain unrecovered from public retrievable promotion text / indexed 2026 promotion PDFs, so no subsidy or multiplier is assumed.
 
 Files:
-- `research/h193_ri_keno_throughput_ticket_bound.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H193_APPEND.md`
+- `research/h194_ri_keno_single_selection_execution_correction.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H194_APPEND.md`
 
-### Preserved H192 result
-H192 recovered current RI promotion evidence plus the expired 2026-04-23 Take A Chance Day deterministic $2 iLottery Bonus Money award. The expired bonus is nonwithdrawable/eInstant-only and not a terminal route. Current Kick Back exact economics remained unresolved.
+### Preserved H193 result
+H193 correctly recovered the $150 ordinary Keno cap and four-minute draw cadence, but its `ceil(plays/150)` packaging counts were only hypothetical lower bounds and are superseded by H194's correction.
 
 ### Preserved H175/H191 mathematical state
 The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -54,20 +54,20 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - Fixed raffle/scratch/sealed-pack standard takeovers materially closed; residual raffle takeover theorem exists but tested boards fail strict floor.
 - Azerbaijan `4+4` ordinary/realistic guarantee routes materially closed except rare exceptional states/rule changes/external subsidy; TezLoto bias route needs reliable bulk history.
 - Several Keno/Pick conditional overlays can reach/exceed 100% only in favorable modifier states; random modifier assignment, execution atomicity, liability limits or insufficient prelocked subsidy block terminal guarantee.
-- H173 conditional 4,560-play doubled RI 3-spot cover remains valid.
+- H173 conditional 4,560-play doubled RI 3-spot cover remains mathematically valid.
 - H175 4,336-play hybrid remains open pending universal `n3>=3` construction/impossibility.
 - Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents strict ex-ante guarantee.
 
 ## NEXT ACTION
-1. **Highest live priority: recover exact official rules/landing payload for the active `Kick Back with Keno Promotion`.** Determine dates, deterministic/random award, eligible wager/spot types, retailer vs iLottery, caps, cash/bonus nature, cancellation/disqualification and whether entitlement is known/vested before draw.
-2. Recover live Keno UI/cart mechanics: actual number of arbitrary independently specified plays per Ticket/Registered Ticketless Play, checkout limits and target-draw selection.
-3. Recover authoritative cutoff/throughput evidence sufficient to certify or reject **29 H175 / 31 H173 max-value purchase objects** for one draw.
-4. If promotion supplies a deterministic pre-draw multiplier or sufficient purchase-local subsidy, plug immediately into H173/H175 worst-case economics.
+1. **Highest live priority: recover exact official rules/landing payload for active `Kick Back with Keno Promotion`.** Determine dates, deterministic/random award, eligible wager/spot types, retailer vs iLottery, caps, cash/bonus nature, cancellation/disqualification and whether entitlement is known/vested before draw.
+2. Recover authoritative current Keno packaging mechanics: whether a retailer Ticket or Registered Ticketless transaction can contain multiple independently specified plays for the **same draw**, and the exact plays-per-ticket/cart/checkout limits.
+3. Recover cutoff/throughput evidence. Without a multi-play object, H175/H173 require thousands of submissions inside one four-minute draw window.
+4. If promotion supplies deterministic pre-draw multiplier or sufficient purchase-local subsidy, plug immediately into H173/H175 worst-case economics.
 5. Resume H191/H188 exact pruning in parallel using existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
 6. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
 7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H193_APPEND.md`.
-Latest case: `research/h193_ri_keno_throughput_ticket_bound.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H194_APPEND.md`.
+Latest case: `research/h194_ri_keno_single_selection_execution_correction.md`.
