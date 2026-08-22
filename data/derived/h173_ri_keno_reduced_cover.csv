@@ -1,0 +1,8 @@
+construction,group_size,groups,plays,worst_draw_composition,worst_doubled_gross,floor_ratio,pre_tax_surplus,notes
+naive_full_space,80,1,82160,20,114000,1.3875365141,31840,all C(80\,3) triples
+partition_equal,40,2,19760,10+10,25500,1.2904858299,5740,all triples inside each 40-number group
+partition_equal,20,4,4560,5+5+5+5,5000,1.0964912281,440,first simple equal partition above 100 percent
+partition_equal,16,5,2800,4+4+4+4+4,2800,1.0000000000,0,exact break-even boundary
+partition_equal,10,8,960,2+2+2+2+3+3+3+3,780,0.8125000000,-180,negative control
+partition_unequal,19/20/20/21,4,4579,balanced-adversarial,5000,1.0919414719,421,nearby tested positive but larger than 20/20/20/20
+partition_unequal,19/19/21/21,4,4598,balanced-adversarial,5000,1.0874293171,402,nearby tested positive but larger than 20/20/20/20
