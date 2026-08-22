@@ -11,23 +11,21 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H180 — H175 master-design cutting-plane prototype**.
+Latest completed lottery packet: **H181 — Michigan Club Keno Tripler Time pre-draw overlay**.
 
-### H180 major result
-H180 moved the unresolved H175 4,336-play conditional doubled Rhode Island 3-spot construction from fixed/random design screening to an adaptive exact master/separator architecture.
+### H181 major result
+A fresh 2026 live promotion supplies a stronger pre-draw multiplier lead than ordinary paid Keno multipliers. Michigan Lottery announced on 2026-07-30 that August 2026 Club Keno retail tickets are eligible for **Tripler Time at no additional cost**. A printed `DOUBLER` or `TRIPLER` message multiplies eligible Club Keno/Plus 3/Kicker winnings, and on a multi-draw ticket the message applies to all eligible winnings across all drawings on that ticket.
 
-A restricted but very large Latin family was defined by `z=a*x+a*y+c (mod 16)`, odd `a`, arbitrary `c`. There are 128 candidate layers per support and `C(128,3)*128^3 = 715,917,361,152` possible H175 six-layer designs in this family.
+This is a real observable pre-draw entitlement. However, official Michigan retailer material describes the promotional messages as appearing on **random Club Keno tickets**, and the current public announcement says `if a player receives` the message. No deterministic Nth-ticket award, minimum frequency, bounded waiting rule, or player-controlled issuance mechanism was found. Therefore ex-ante acquisition still has a legal all-untagged branch and cannot be called guaranteed.
 
-The master MILP chooses 3 layers on support `(0,1,2)` and one on each of `(0,3,4)`, `(1,3,4)`, `(2,3,4)`, while satisfying every accumulated balanced witness with `n3>=3`. An exact separator MILP then searches the chosen design for a balanced `4+4+4+4+4` draw with `n3<=2` and feeds any witness back as a cut.
-
-Deterministic seed `180180` completed **20 adaptive master/separator cycles**. Every chosen master design was exactly rejected. Separator scores were `n3=0` for 4 designs, `n3=1` for 1 design, and `n3=2` for 15 designs. This is materially stronger than another shallow random screen because the master redesigns after every exact counterexample.
-
-The restricted family is **not yet proved infeasible**: after 20 cuts the master was still feasible. H175 therefore remains open at the design level.
+Michigan 3-spot full-space screening shows why the entitlement is mathematically meaningful but also why a few tagged tickets are insufficient: `C(80,3)=82,160` $1 plays cost $82,160 and return a deterministic $53,580 base gross (65.214216%). Universal free Tripler would return $160,740 (195.64216%). Even an optimistic average necessary bound requires at least 21,913 Tripler-tagged distinct 3-spot lines merely to erase the full-space deficit; strict all-draw distribution can require more.
 
 Files:
-- `research/h180_h175_master_cutting_plane.md`
-- `src/loto_research/h180_h175_master_cutting_plane.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H180_APPEND.md`
+- `research/h181_michigan_tripler_time_prelocked_overlay.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H181_APPEND.md`
+
+### H180 preserved result
+H180 established an adaptive exact master/separator architecture for the unresolved H175 4,336-play conditional doubled Rhode Island 3-spot construction. In the restricted diagonal cyclic-affine family `z=a*x+a*y+c (mod 16)`, 128 layers/support produce `715,917,361,152` possible six-layer designs. Twenty optimizer-selected designs were each exactly rejected by balanced `n3<=2` witnesses, but the restricted family is not yet proved infeasible.
 
 ### H179 preserved result
 H179 strengthened the H178 screen of 100 deterministic mixed cyclic/XOR Latin-isotopy designs. Explicit local `n3<=2` witnesses were found for 63/100 designs, and exact MILP independently broke heuristic-hard seeds `178033`, `178042`, and `178008` at `n3=2`. Timeouts were never treated as validation.
@@ -67,7 +65,8 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 - H177 closes ordinary paid Keno Plus as a substitute for a free/pre-locked doubler: equal surcharge + legal `No Plus` branch destroys the guarantee floor.
 - H178 broadens the H175 concrete design search: 41/100 sampled mixed-isotopy designs were directly counterexampled and exact MILP broke heuristic-hard candidates.
 - H179 strengthens that bank: explicit local `n3<=2` witnesses for 63/100 designs plus exact breaks of additional hard seeds.
-- **H180 establishes the first adaptive exact master/separator search. Twenty optimizer-selected designs were exactly broken; restricted 715.9B-design diagonal cyclic-affine family remains open because master infeasibility has not yet been reached.**
+- H180 establishes the first adaptive exact master/separator search. Twenty optimizer-selected designs were exactly broken; restricted 715.9B-design diagonal cyclic-affine family remains open because master infeasibility has not yet been reached.
+- **H181 validates a current free pre-draw Michigan Club Keno Doubler/Tripler promotion, but available official evidence says promotional tags are random; without a deterministic issuance bound, ex-ante strict guarantee remains open/blocked.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -76,14 +75,14 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest mathematical priority: continue H180 exact cutting-plane separation** on the 128-layer/support diagonal cyclic-affine family until either the master is infeasible (proof closing all 715,917,361,152 designs in that family) or a candidate survives an independently verified exact separator solve. Persist witness cuts so later runs do not restart from zero.
-2. If that family closes, expand master pool to general cyclic-affine `z=a*x+b*y+c (mod 16)` with independent odd `a,b` (1,024 layers/support), using memory-safe batching/persisted cuts.
-3. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs; do not interpret local-search minima or solver timeouts as validation.
-4. Recover exact official current `Kick Back with Keno` rules through promotion assets/rule indexes/retailer notices. Do not assume historical Lucky 3 Spot mechanics.
-5. Recover current primary RI 3-spot prize data through an official static asset/API/rules attachment.
-6. Recover Rhode Island retailer/terminal mechanics: distinct Keno selections per physical ticket/transaction, future-draw targeting, throughput, and any multi-line import/repeat facility.
-7. If H175 fails generally, search other non-clique block/cyclic designs below 4,560 plays.
-8. Search current pre-printed/pre-locked free doublers in lotteries with smaller outcome spaces than 80-number Keno.
+1. **Highest fresh execution priority: recover exact 2026 Michigan Tripler Time retailer rules / Game Line / administrative terms** and determine Doubler/Tripler issuance probabilities, any deterministic Nth-ticket or bounded-allocation rule, ticket line capacity, and maximum consecutive draws. If any deterministic issuance floor exists, solve the joint acquisition + post-tag coverage problem including failed-purchase costs.
+2. Continue H180 exact cutting-plane separation on the 128-layer/support diagonal cyclic-affine family until master infeasibility or independently certified separator infeasibility; persist witnesses rather than restarting.
+3. If H180 restricted family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod 16)` with independent odd `a,b` (1,024 layers/support).
+4. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs; solver timeout is never validation.
+5. Recover exact official current Rhode Island `Kick Back with Keno` rules and current primary RI 3-spot prize data.
+6. Recover Rhode Island retailer/terminal mechanics: selections per ticket/transaction, future-draw targeting, throughput, multi-line import/repeat.
+7. Search other current pre-printed/pre-locked free doublers in lotteries with smaller outcome spaces than 80-number Keno.
+8. If H175 fails generally, search other non-clique block/cyclic designs below 4,560 plays.
 9. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
 10. Continue Nebraska/community fixed scheduled-special recovery and H159 fixed-board raffle monitor.
 11. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
@@ -91,5 +90,5 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H180_APPEND.md`.
-Latest case: `research/h180_h175_master_cutting_plane.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H181_APPEND.md`.
+Latest case: `research/h181_michigan_tripler_time_prelocked_overlay.md`.
