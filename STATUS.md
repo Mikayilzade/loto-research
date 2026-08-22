@@ -11,25 +11,26 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H177 — Rhode Island paid Keno Plus guarantee closure**.
+Latest completed lottery packet: **H178 — H175 mixed-isotopy adversarial screen**.
 
-### H177 major result
-Fresh primary-source review of Rhode Island Lottery Keno rules closes a tempting substitution for the H172-H175 conditional 2X architecture.
+### H178 major result
+H178 continued the H175 4,336-play Rhode Island conditional doubled-3-spot construction and broadened the concrete Latin-layer search beyond the first fixed GF(16) affine realization.
 
-Official rules state that:
-- the Keno Plus wager must equal the base Keno wager;
-- the Plus result can be `No Plus`, `2X`, `3X`, `4X`, `5X`, or `10X`;
-- the Plus drawing occurs just prior to the Keno drawing.
+One hundred deterministic six-layer designs were generated under H175's strong `3+1+1+1` support allocation, with each layer independently chosen as a row/column/output isotopy of either the cyclic order-16 Latin square or the XOR order-16 Latin square.
 
-Therefore ordinary paid Keno Plus cannot be treated as a guaranteed pre-locked multiplier. Because `No Plus` is a legal outcome, buying Plus on every line doubles total spend while leaving a legal branch with no payout multiplier.
+A balanced 4-per-group local adversary found explicit `n3<=2` counterexamples for **41/100** designs. The full heuristic best-value histogram was `n3=1:5, 2:36, 3:42, 4:16, 5:1`.
 
-Using H173's own conditional free/pre-locked 2X floor of 109.6491% of base spend, the implied ordinary floor is about 54.82455% of base spend; paying an equal Plus surcharge makes the `No Plus` strict floor about **27.412275% of total paid spend**. The ordinary paid-Plus substitution is therefore **REJECTED AS A STRICT GUARANTEE MECHANISM**.
+Crucially, exact MILP follow-up showed that local minima above the required threshold are unreliable: seeds `178001`, `178004`, and the heuristic-strongest seed `178059` all admit exact balanced witnesses with `n3=2`. For seed `178059`, the resulting H175 gross is only `4240 + 35*2 = 4310 < 4336`.
 
-The rule wording does not prove that wagering stays open after the Plus result for the immediately following Keno draw, so no post-result execution loophole may be assumed.
+This rejects additional natural concrete H175 realizations but does **not** prove impossibility of arbitrary Latin/transversal systems. The next mathematical step is therefore a master-design CP-SAT/MILP/cutting-plane formulation with adversarial balanced-witness separation, rather than further reliance on sampled local minima.
 
 Files:
-- `research/h177_ri_paid_keno_plus_guarantee_closure.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H177_APPEND.md`
+- `research/h178_h175_mixed_isotopy_adversarial_screen.md`
+- `src/loto_research/h178_h175_mixed_isotopy_screen.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H178_APPEND.md`
+
+### H177 preserved result
+Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute for the H172-H175 free/pre-locked 2X assumption: the Plus wager equals the base wager and `No Plus` is a legal result, so an equal surcharge leaves a legal branch with no payout multiplier. The ordinary paid-Plus substitution is **REJECTED AS A STRICT GUARANTEE MECHANISM**.
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -60,7 +61,8 @@ Files:
 - H174 exhaustively screens 411,498 clique partitions with 1–8 groups and proves 4×20 is the cheapest strict-positive member.
 - H175 identifies a 4,336-play hybrid candidate whose non-balanced compositions are strict-positive by pair counting; balanced draws require universal `n3>=3`; first GF(16) affine realization fails with exact minimum 0.
 - H176 confirms current RI Keno promotion + official online purchase channel, but bulk/atomic execution, live promo terms and primary 3-spot table remain unresolved.
-- **H177 closes ordinary paid Keno Plus as a substitute for a free/pre-locked doubler: equal surcharge + legal `No Plus` branch destroys the guarantee floor.**
+- H177 closes ordinary paid Keno Plus as a substitute for a free/pre-locked doubler: equal surcharge + legal `No Plus` branch destroys the guarantee floor.
+- **H178 broadens the H175 concrete design search: 41/100 sampled mixed-isotopy designs are directly counterexampled by local search, and exact MILP also breaks heuristic-hard candidates including the sampled best (`5 -> 2`). H175 remains open only for more general design-level constructions.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -69,7 +71,7 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest mathematical priority: solve or close the H175 balanced transversal gate.** Search six-layer non-affine/mixed Latin designs satisfying `n3>=3` for every balanced `4+4+4+4+4` draw, using MILP/CP-SAT/cutting planes. If impossible, prove a counterbound and close the 4,336 class.
+1. **Highest mathematical priority: solve or close the H175 balanced transversal gate at design level.** Formulate a master CP-SAT/MILP/cutting-plane search over six Latin/transversal layers with adversarial separation of balanced `n3<=2` witnesses. Do not treat local-search minima as validation. If infeasible, obtain a defensible counterbound and close the 4,336 class.
 2. Recover exact official current `Kick Back with Keno` rules through promotion assets/rule indexes/retailer notices. Do not assume historical Lucky 3 Spot mechanics.
 3. Recover current primary RI 3-spot prize data through an official static asset/API/rules attachment.
 4. Recover Rhode Island retailer/terminal mechanics: distinct Keno selections per physical ticket/transaction, future-draw targeting, throughput, and any multi-line import/repeat facility.
@@ -82,5 +84,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H177_APPEND.md`.
-Latest case: `research/h177_ri_paid_keno_plus_guarantee_closure.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H178_APPEND.md`.
+Latest case: `research/h178_h175_mixed_isotopy_adversarial_screen.md`.
