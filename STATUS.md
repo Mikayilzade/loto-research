@@ -11,40 +11,34 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H170 — Caribbean multi-prize / Mega Ball deterministic coverage screen**.
+Latest completed lottery packet: **H171 — Jamaica compact single-number coverage + Mega/Monsta Ball screen**.
 
-### H170 major result
-A new current conditional >100% lottery state was found in **Barbados Pick 3 + Mega Ball**.
+### H171 major result
+Current Jamaica Cash Pot is one of the strongest ordinary compact fixed-payout covers found:
+- 36 possible numbers;
+- J$10 minimum wager;
+- J$280 winning payout;
+- full cover J$360 -> deterministic gross J$280 = **77.7778%**.
 
-Current official Barbados Pick 3 has three prize numbers per draw. Base full coverage remains negative:
-- Straight: `400 + 75 + 50 = 525` on 1,000 full-cover spend = **52.50%**.
+Adding the current Mega Ball creates a large conditional overlay. Using the published unit architecture (J$10 base + J$10 Mega; Mega adds J$700 to a winning Cash Pot wager):
+- full 36-number cover costs **J$720**;
+- if Gold/Mega Ball is drawn, guaranteed gross on the covered winning number is **J$980 = 136.1111%**, conditional surplus +36.11%;
+- if a white ball is drawn, only J$280 base returns = **38.8889% strict unfavorable-state floor**.
 
-But when Mega Ball succeeds, the published prize schedule inverts coverage:
-- all 1,000 Straight states + MB: spend **2,000**, guaranteed successful-MB gross **2,025 = 101.25%**;
-- stronger all-100 Front Pair cover + MB: spend **200**, guaranteed successful-MB gross `160+32+20 = 212 = 106.00%`.
+Money Time behaves similarly:
+- 38-state base cover = **68.4211%**;
+- with Mega, favorable state = **126.3158%**, unfavorable state = **34.2105%**.
 
-This is the best H170 conditional state because only 100 Pair selections are required and the favorable-state gross margin is +6%.
+The published Monsta Ball architecture can reach even larger favorable-state cover ratios (Cash Pot both Mega+Monsta = **183.3333%**) but miss branches remain 53.70%/25.93%, and Supreme Ventures currently lists Monsta Ball under past promotions, so it is not relied on as current executable inventory.
 
 ### Why this is NOT SUCCESS
-Mega Ball is an additional random draw after the Pick 3 draw. Current Barbados results can show Mega Ball `NONE`; no current rule was found making the next MB success state certain/forced before betting closes. Current Caribbean Mega Ball mechanism documentation describes a chamber with two white balls and one gold ball, not a cumulative-removal forced-state.
+Current Mega Ball is explicitly a separate random draw after the main game using a chamber containing **two white balls and one gold ball**. No cumulative-removal or pre-purchase forced-gold state is published. Therefore the legal white-ball branch remains deeply negative after the full add-on cover is already purchased.
 
-Therefore a legal branch remains:
-
-`complete 100-Pair MB cover accepted -> MB does not succeed -> only base 53 returned on 200 spend`.
-
-Strict floor is therefore **26.50%**, not 106%.
-
-Also, current Barbados digit-game rules include liability-limit/rejection mechanics, so even a future forced-MB state would still need whole-basket acceptance/rollback and tax-cost proof.
-
-Controls screened in same packet:
-- Barbados Pick 4 Straight full cover + successful MB = **96.25%**, rejected even favorable state.
-- Curaçao Wega di Number regulated three-prize full-cover ratios = **70% / 70% / 52.5% nominal before surcharge/tax**, rejected.
-
-Status: **CONDITIONAL >100% STATE VALIDATED / STRICT GUARANTEE REJECTED BECAUSE FAVORABLE MB STATE IS RANDOM**.
+Status: **CONDITIONAL >100% MODIFIER STATES VALIDATED / STRICT GUARANTEE REJECTED BECAUSE FAVORABLE STATE IS RANDOM POST-PURCHASE**.
 
 Files:
-- `research/h170_caribbean_multi_prize_megaball_cover.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H170_APPEND.md`
+- `research/h171_jamaica_cashpot_megaball_monstaball_cover.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H171_APPEND.md`
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -69,7 +63,8 @@ Files:
 - H160 Michigan cumulative-trigger promotion: forced-red Daily 3 reaches exactly **100% gross**, making compatible pre-locked subsidy sufficient.
 - H161-H163 New Jersey Green Ball: forced-state Pair cover reaches 100%; retailer commissions create conditional 105%-106.25%, but atomicity remains unresolved.
 - H164-H169 North Carolina forced Pick 3 Double Draw reaches 100% gross and retailer-discount economics can be positive, but current public rules allow liability-limit refusal and lack whole-basket atomic rollback; strict guarantee rejected.
-- **H170 Barbados Pick 3 Mega Ball Pair cover reaches 106% in the successful-MB state, but MB success is random rather than forced before purchase; strict floor is only 26.5%.**
+- H170 Barbados Pick 3 Mega Ball Pair cover reaches **106% in successful-MB state**, but MB success is random; strict floor 26.5%.
+- **H171 Jamaica Cash Pot + Mega reaches 136.11% in Gold state (Money Time 126.32%; historical/published Monsta stack up to 183.33%), but current modifier state is random after purchase; strict Cash Pot+Mega floor only 38.89%.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -78,9 +73,9 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: search other current lottery products where one paid wager participates in multiple fixed prize numbers/draws and the sum of deterministic covered payouts exceeds cost WITHOUT relying on a random multiplier/add-on.** H170 proves the multi-prize architecture can get close/cross conditionally.
-2. Search forced/cumulative colored-ball mechanics where the favorable multiplier/extra-draw state becomes known with certainty before betting closes, then pair with compact Pair/1-Spot coverage. Reopen Barbados Mega Ball only on true pre-purchase forced-state evidence.
-3. Continue scheduled Keno special/paytable search for a single wager class whose deterministic full-cover ratio exceeds 100% before random state resolution.
+1. **Highest priority: search current cumulative/removal modifier promotions where the favorable extra-draw/multiplier state becomes publicly certain BEFORE sales close.** H160/H161-H169 show this architecture can reach 100%; H170/H171 show the payout uplift can materially exceed 100% once the favorable state is locked.
+2. Search compact single-number/Pair games with ordinary deterministic cover above Jamaica Cash Pot's **77.78%** and pair only with deterministic pre-locked discounts/subsidies.
+3. Continue scheduled Keno special/paytable search for deterministic >100% coverage states known before purchase; La Vista **81.0636%** remains current ordinary benchmark.
 4. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
 5. Continue Nebraska/community fixed scheduled-special recovery where enhanced paytable is known before purchase.
 6. Continue H159 live/announced fixed-board raffle monitor, prioritizing flat boards near/exceeding 100% worst-case residual floor.
@@ -89,5 +84,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H170_APPEND.md`.
-Latest case: `research/h170_caribbean_multi_prize_megaball_cover.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H171_APPEND.md`.
+Latest case: `research/h171_jamaica_cashpot_megaball_monstaball_cover.md`.
