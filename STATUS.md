@@ -11,44 +11,49 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H190 — correction of H189 full-S3 canonicalization**.
+Latest completed lottery packet: **H191 — exact A-set stabilizer classification after H190**.
 
-### H190 major result
+### H191 major result
 The unresolved H175 4,336-play doubled 3-spot hybrid gate still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
 
-H190 audited H189's claimed full `S3` symmetry on groups `0,1,2`. H189 correctly observed that these permutations rearrange the B/C/D supports, but it did not check that they preserve the restricted diagonal layer family on A=`(0,1,2)`.
-
-For A layers
+H191 exactly classified when H190's withdrawn full-S3 quotient can nevertheless be used on an actual three-layer A-set. For the restricted diagonal A family
 
 `x2 = a*x0 + a*x1 + c (mod16)`, odd `a`,
 
-an input/output swap transforms the relation into a general affine layer whose two input coefficients are `a^{-1}` and `-1`. These are equal only for `a=15`.
+all 128 layers were tested under all 6 coordinate permutations by exact 256-triple set comparison.
 
-H190 exhaustively enumerated all **128 A layers × 6 coordinate permutations** and compared exact 256-triple images against the complete 128-layer restricted family:
-- identity `(0,1,2)`: 128/128 preserved;
-- input swap `(1,0,2)`: 128/128 preserved;
-- each of the other four permutations: only 16/128 preserved, exactly the `a=15` layers.
+Preservation counts:
+- identity `(0,1,2)`: 128/128;
+- input swap `(1,0,2)`: 128/128;
+- each other permutation: exactly 16/128, precisely the slope-15 layers `(a,c)=(15,c)`.
 
-Therefore the restricted diagonal family is globally invariant only under the order-2 subgroup that keeps group 2 as A output. Full S3 is **not** a valid global WLOG symmetry.
+For `a=15`, the relation becomes `x0+x1+x2=c`, so every S3 permutation fixes each layer individually. Therefore an actual three-layer A-set has stabilizer larger than the universal input-swap C2 **iff all three layers have slope 15**.
 
-Consequences:
-- H189's reduction from 36 normalized B/C coefficient pairs to 15 coefficient orbits is withdrawn as globally unsafe;
-- H189's `5,120,640` exhaustive representative count is withdrawn;
-- H188 is restored as the last globally justified canonical checkpoint: `C(128,3)*36 = 12,289,536` representatives;
-- H183-H186 direct balanced witness cuts remain valid because they do not depend on H189's quotient.
+Exact counts:
+- all A-sets: `C(128,3)=341,376`;
+- exceptional full-S3 A-sets: `C(16,3)=560`;
+- generic C2 A-sets: `340,816`.
+
+Applying H189's 15 B/C coefficient orbits only to those 560 exceptional A-sets gives the safe stabilizer-aware representative count
+
+`340,816*36 + 560*15 = 12,277,776`.
+
+H188's count was `12,289,536`, so the exact saving is only `11,760 = 0.09578%`. The stabilizer-quotient acceleration direction is therefore materially exhausted; meaningful next progress must come from stronger valid cuts, better separator/master formulations, direct exact pruning, or a broader structural theorem.
 
 Files:
-- `research/h190_h189_s3_symmetry_correction.md`
-- `data/derived/h190_a_support_s3_symmetry_audit.json`
-- `src/loto_research/h190_a_support_s3_symmetry_audit.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H190_APPEND.md`
+- `research/h191_a_set_stabilizer_classification.md`
+- `data/derived/h191_a_set_stabilizer_summary.json`
+- `src/loto_research/h191_a_set_stabilizer_classification.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H191_APPEND.md`
 
-### Preserved H185-H189 state
+### Preserved H185-H190 state
 - H185: 297 stored exact balanced witnesses; 4,878 active unique valid rows after safe affine-orbit expansion.
 - H186: 189 additional explicit balanced counterexamples across two rejected candidates; 18,952 H186-only affine-expanded valid rows; timeout/no-incumbent was inconclusive.
 - H187: exact D coefficient+shift normalization to id0 `(1,0)`.
 - H188: exact B/C zero-shift normalization and B/C ordering; **12,289,536** globally justified representatives.
-- H189: proposed full-S3 coefficient quotient to 15 classes / 5,120,640 representatives; **rejected by H190 as unsafe globally**. It may remain usable only for explicitly proved A-stabilized subfamilies.
+- H189: proposed full-S3 coefficient quotient to 15 classes / 5,120,640 representatives; rejected globally by H190.
+- H190: proved full S3 is globally unsafe; restored H188 as authoritative global quotient.
+- H191: proved extra S3 applies only to 560 all-slope-15 A-sets, reducing count only to **12,277,776**.
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not a current strict guarantee.
@@ -58,7 +63,7 @@ Files:
 - Several Keno/Pick-style conditional overlays can reach/exceed 100% only in favorable modifier states; random state assignment, execution atomicity, liability limits or insufficient prelocked subsidy block terminal guarantee.
 - Rhode Island proves lottery-issued pre-draw doubled entitlement can exist historically; current exact free-doubler terms/execution remain unresolved. Ordinary paid Keno Plus is not a locked-2x substitute.
 - H173 conditional 4,560-play doubled 3-spot cover remains valid; H175's 4,336-play hybrid would improve it if universal `n3>=3` can be constructed.
-- H178-H190 continue exact search/audit of that 4,336-play gate; no universal construction or impossibility theorem yet.
+- H178-H191 continue exact search/audit of that 4,336-play gate; no universal construction or impossibility theorem yet.
 - Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents strict ex-ante guarantee.
 
 ## Azerbaijan live branches
@@ -68,10 +73,10 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: resume from H188's 12,289,536 globally justified canonical designs and the full H185+H186 valid witness/cut bank. Do not use H189's 15-class quotient globally.**
-2. Compute the exact permutation stabilizer of each actual three-layer A set; use extra B/C/D symmetry only when that A set is mapped back into the restricted diagonal family.
-3. Build/run a stabilizer-aware H188 master or enumerate per-A stabilizer classes, then exact-separate every feasible candidate with `n3<=2` adversaries.
-4. Solver-certified infeasibility closes the restricted diagonal family; timeout/no-incumbent is never infeasibility and never validation.
+1. **Highest priority: resume from H191/H188's safe 12,277,776 representatives plus the full valid H185+H186 witness/cut bank. Stop spending effort on further coordinate-symmetry quotients unless a new theorem gives a materially larger group.**
+2. Build stronger exact pruning for the restricted diagonal family: precompute per-A compatibility with existing balanced cuts and eliminate B/C coefficient pairs before full master solve.
+3. Use exact separator/adversary search against every surviving candidate; add explicit `n3<=2` witnesses and safe affine orbits. Timeout/no-incumbent is never infeasibility and never validation.
+4. Solver-certified infeasibility closes the restricted diagonal family.
 5. If the diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` with independent odd `a,b`, reusing all accumulated balanced witnesses.
 6. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs.
 7. After the master packet, continue current Rhode Island prelocked-doubler/3-spot throughput evidence and other deterministic lottery overlays.
@@ -79,5 +84,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where replacing the large legacy ledger directly is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H190_APPEND.md`.
-Latest case: `research/h190_h189_s3_symmetry_correction.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H191_APPEND.md`.
+Latest case: `research/h191_a_set_stabilizer_classification.md`.
