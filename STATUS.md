@@ -11,27 +11,38 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is prese
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H181 — Michigan Club Keno Tripler Time pre-draw overlay**.
+Latest completed lottery packet: **H182 — Michigan Tripler Time random-acquisition impossibility**.
 
-### H181 major result
-A fresh 2026 live promotion supplies a stronger pre-draw multiplier lead than ordinary paid Keno multipliers. Michigan Lottery announced on 2026-07-30 that August 2026 Club Keno retail tickets are eligible for **Tripler Time at no additional cost**. A printed `DOUBLER` or `TRIPLER` message multiplies eligible Club Keno/Plus 3/Kicker winnings, and on a multi-draw ticket the message applies to all eligible winnings across all drawings on that ticket.
+### H182 major result
+The current August 2026 Michigan Club Keno `Tripler Time` promotion has now been closed as an **ex-ante guaranteed subsidy source** under public rules.
 
-This is a real observable pre-draw entitlement. However, official Michigan retailer material describes the promotional messages as appearing on **random Club Keno tickets**, and the current public announcement says `if a player receives` the message. No deterministic Nth-ticket award, minimum frequency, bounded waiting rule, or player-controlled issuance mechanism was found. Therefore ex-ante acquisition still has a legal all-untagged branch and cannot be called guaranteed.
+Current official evidence establishes:
+- Michigan Lottery's current promotion language says **random Club Keno tickets** print with a `DOUBLER` or `TRIPLER` message;
+- the issuer's 2026-07-30 announcement says eligible retail tickets participate at no additional cost and, **if a player receives** a multiplier message, eligible Club Keno / Plus 3 / Kicker winnings on that ticket are multiplied;
+- on a tagged multi-draw ticket the multiplier persists across all eligible drawings on that ticket;
+- official current Club Keno purchase instructions say the player takes the playslip to the retailer to **pay and get the ticket printed**;
+- no current primary source recovered publishes a deterministic Nth-ticket rule, minimum tag frequency, finite without-replacement allocation, maximum untagged run, pre-payment tag preview, or guaranteed costless cancellation/refund of untagged probes.
 
-Michigan 3-spot full-space screening shows why the entitlement is mathematically meaningful but also why a few tagged tickets are insufficient: `C(80,3)=82,160` $1 plays cost $82,160 and return a deterministic $53,580 base gross (65.214216%). Universal free Tripler would return $160,740 (195.64216%). Even an optimistic average necessary bound requires at least 21,913 Tripler-tagged distinct 3-spot lines merely to erase the full-space deficit; strict all-draw distribution can require more.
+Formal acquisition conclusion:
+- for any finite purchase cap `N`, the public rules do not exclude an all-untagged sequence of length `N`;
+- `buy until Tripler` therefore has no certified finite worst-case stopping time or acquisition cost;
+- multi-draw persistence increases value **after** a tag is acquired but cannot bound the cost of acquiring it;
+- probability estimates, however favorable, cannot convert this random issuance into a strict worst-case guarantee.
+
+Status: **CURRENT RANDOM-TAG ACQUISITION REJECTED FOR TERMINAL GUARANTEE; TAGGED-TICKET STATE RETAINED ONLY AS CONDITIONAL OVERLAY**.
 
 Files:
-- `research/h181_michigan_tripler_time_prelocked_overlay.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H181_APPEND.md`
+- `research/h182_michigan_tripler_random_acquisition_impossibility.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H182_APPEND.md`
+
+### H181 preserved result
+H181 validated the live August 2026 free pre-draw Michigan Doubler/Tripler architecture. A Tripler-tagged ticket is a real observable pre-draw entitlement, but H182 now closes its acquisition as a strict-guarantee source because issuance is random and unbounded under public rules.
 
 ### H180 preserved result
 H180 established an adaptive exact master/separator architecture for the unresolved H175 4,336-play conditional doubled Rhode Island 3-spot construction. In the restricted diagonal cyclic-affine family `z=a*x+a*y+c (mod 16)`, 128 layers/support produce `715,917,361,152` possible six-layer designs. Twenty optimizer-selected designs were each exactly rejected by balanced `n3<=2` witnesses, but the restricted family is not yet proved infeasible.
 
 ### H179 preserved result
 H179 strengthened the H178 screen of 100 deterministic mixed cyclic/XOR Latin-isotopy designs. Explicit local `n3<=2` witnesses were found for 63/100 designs, and exact MILP independently broke heuristic-hard seeds `178033`, `178042`, and `178008` at `n3=2`. Timeouts were never treated as validation.
-
-### H177 preserved result
-Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute for the H172-H175 free/pre-locked 2X assumption: the Plus wager equals the base wager and `No Plus` is a legal result, so an equal surcharge leaves a legal branch with no payout multiplier. The ordinary paid-Plus substitution is **REJECTED AS A STRICT GUARANTEE MECHANISM**.
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not current guarantee.
@@ -66,7 +77,8 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 - H178 broadens the H175 concrete design search: 41/100 sampled mixed-isotopy designs were directly counterexampled and exact MILP broke heuristic-hard candidates.
 - H179 strengthens that bank: explicit local `n3<=2` witnesses for 63/100 designs plus exact breaks of additional hard seeds.
 - H180 establishes the first adaptive exact master/separator search. Twenty optimizer-selected designs were exactly broken; restricted 715.9B-design diagonal cyclic-affine family remains open because master infeasibility has not yet been reached.
-- **H181 validates a current free pre-draw Michigan Club Keno Doubler/Tripler promotion, but available official evidence says promotional tags are random; without a deterministic issuance bound, ex-ante strict guarantee remains open/blocked.**
+- H181 validates a current free pre-draw Michigan Club Keno Doubler/Tripler promotion.
+- **H182 closes that current Michigan promotion as an ex-ante guaranteed subsidy because multiplier issuance is explicitly random, no finite forced-issuance bound is published, and the tag is printed only in the paid-ticket flow.**
 
 ## Azerbaijan live branches
 - `4+4`: rare exceptional carryover states / materially better primary rules only.
@@ -75,20 +87,19 @@ Official Rhode Island Keno rules close ordinary paid Keno Plus as a substitute f
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest fresh execution priority: recover exact 2026 Michigan Tripler Time retailer rules / Game Line / administrative terms** and determine Doubler/Tripler issuance probabilities, any deterministic Nth-ticket or bounded-allocation rule, ticket line capacity, and maximum consecutive draws. If any deterministic issuance floor exists, solve the joint acquisition + post-tag coverage problem including failed-purchase costs.
-2. Continue H180 exact cutting-plane separation on the 128-layer/support diagonal cyclic-affine family until master infeasibility or independently certified separator infeasibility; persist witnesses rather than restarting.
-3. If H180 restricted family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod 16)` with independent odd `a,b` (1,024 layers/support).
-4. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs; solver timeout is never validation.
-5. Recover exact official current Rhode Island `Kick Back with Keno` rules and current primary RI 3-spot prize data.
-6. Recover Rhode Island retailer/terminal mechanics: selections per ticket/transaction, future-draw targeting, throughput, multi-line import/repeat.
-7. Search other current pre-printed/pre-locked free doublers in lotteries with smaller outcome spaces than 80-number Keno.
-8. If H175 fails generally, search other non-clique block/cyclic designs below 4,560 plays.
-9. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
-10. Continue Nebraska/community fixed scheduled-special recovery and H159 fixed-board raffle monitor.
-11. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
-12. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: resume H180 exact cutting-plane separation** on the 128-layer/support diagonal cyclic-affine family until master infeasibility or independently certified separator infeasibility; persist witnesses rather than restarting.
+2. If H180 restricted family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod 16)` with independent odd `a,b` (1,024 layers/support).
+3. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs; solver timeout is never validation.
+4. Recover exact official current Rhode Island `Kick Back with Keno` rules and current primary RI 3-spot prize data.
+5. Recover Rhode Island retailer/terminal mechanics: selections per ticket/transaction, future-draw targeting, throughput, multi-line import/repeat.
+6. Search other current **deterministic** pre-printed/pre-locked free doublers in lotteries with smaller outcome spaces than 80-number Keno. Do not prioritize random multiplier probabilities without a hard issuance bound.
+7. If H175 fails generally, search other non-clique block/cyclic designs below 4,560 plays.
+8. Continue BCLC deterministic `X paid + Y free` Keno monitor; reopen on `Y/X > 0.6631579` for Pick 2 or `>0.6015595` for Pick 3.
+9. Continue Nebraska/community fixed scheduled-special recovery and H159 fixed-board raffle monitor.
+10. H007 TezLoto/RNG only upon recovery of reliable bulk history/API.
+11. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy master file is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H181_APPEND.md`.
-Latest case: `research/h181_michigan_tripler_time_prelocked_overlay.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H182_APPEND.md`.
+Latest case: `research/h182_michigan_tripler_random_acquisition_impossibility.md`.
