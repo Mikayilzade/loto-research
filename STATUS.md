@@ -11,37 +11,44 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H189 — S3 coefficient-orbit canonicalization for the H175 restricted master**.
+Latest completed lottery packet: **H190 — correction of H189 full-S3 canonicalization**.
 
-### H189 major result
+### H190 major result
 The unresolved H175 4,336-play doubled 3-spot hybrid gate still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
 
-H188 had reduced the restricted diagonal cyclic-affine family to `C(128,3)*36 = 12,289,536` representatives by fixing D=`(1,0)`, forcing B/C shifts to zero and ordering `a_B<=a_C`.
+H190 audited H189's claimed full `S3` symmetry on groups `0,1,2`. H189 correctly observed that these permutations rearrange the B/C/D supports, but it did not check that they preserve the restricted diagonal layer family on A=`(0,1,2)`.
 
-H189 proves H188 still underused an exact symmetry. The three single-support layers B=`(0,3,4)`, C=`(1,3,4)`, D=`(2,3,4)` are permuted by the full `S3` action on groups `0,1,2`, while A=`(0,1,2)` is preserved as a support. Combined with H187's common odd-unit scaling of all three B/C/D coefficients, any coefficient triple is equivalent under permutation plus common unit multiplication modulo 16.
+For A layers
 
-Enumerating the 36 H188 ordered pairs `(a_B,a_C)` for normalized `(a_B,a_C,1)` gives exactly **15 coefficient orbits**:
+`x2 = a*x0 + a*x1 + c (mod16)`, odd `a`,
 
-`(1,1), (1,3), (1,5), (1,7), (1,9), (1,11), (1,13), (1,15), (3,5), (3,7), (3,9), (3,13), (3,15), (5,9), (7,9)`.
+an input/output swap transforms the relation into a general affine layer whose two input coefficients are `a^{-1}` and `-1`. These are equal only for `a=15`.
 
-Therefore the exact canonical restricted representative count is now
+H190 exhaustively enumerated all **128 A layers × 6 coordinate permutations** and compared exact 256-triple images against the complete 128-layer restricted family:
+- identity `(0,1,2)`: 128/128 preserved;
+- input swap `(1,0,2)`: 128/128 preserved;
+- each of the other four permutations: only 16/128 preserved, exactly the `a=15` layers.
 
-`C(128,3) * 15 = 5,120,640`.
+Therefore the restricted diagonal family is globally invariant only under the order-2 subgroup that keeps group 2 as A output. Full S3 is **not** a valid global WLOG symmetry.
 
-This is 2.4x smaller than H188 and about 139,808x smaller than H180's 715,917,361,152 raw restricted designs. It is a WLOG quotient, not a construction or infeasibility proof. All accumulated balanced witness cuts remain valid.
+Consequences:
+- H189's reduction from 36 normalized B/C coefficient pairs to 15 coefficient orbits is withdrawn as globally unsafe;
+- H189's `5,120,640` exhaustive representative count is withdrawn;
+- H188 is restored as the last globally justified canonical checkpoint: `C(128,3)*36 = 12,289,536` representatives;
+- H183-H186 direct balanced witness cuts remain valid because they do not depend on H189's quotient.
 
 Files:
-- `research/h189_h188_s3_coefficient_orbits.md`
-- `data/derived/h189_s3_coefficient_orbits.json`
-- `src/loto_research/h189_s3_coefficient_orbits.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H189_APPEND.md`
+- `research/h190_h189_s3_symmetry_correction.md`
+- `data/derived/h190_a_support_s3_symmetry_audit.json`
+- `src/loto_research/h190_a_support_s3_symmetry_audit.py`
+- `research/CHECKED_PROJECTS_AND_TESTS_H190_APPEND.md`
 
-### Preserved H185-H188 state
+### Preserved H185-H189 state
 - H185: 297 stored exact balanced witnesses; 4,878 active unique valid rows after safe affine-orbit expansion.
 - H186: 189 additional explicit balanced counterexamples across two rejected candidates; 18,952 H186-only affine-expanded valid rows; timeout/no-incumbent was inconclusive.
 - H187: exact D coefficient+shift normalization to id0 `(1,0)`.
-- H188: exact B/C zero-shift normalization and B/C ordering; 12,289,536 representatives.
-- H189 supersedes H188's coefficient-pair parameterization with 15 exact S3/common-scaling orbits and 5,120,640 representatives.
+- H188: exact B/C zero-shift normalization and B/C ordering; **12,289,536** globally justified representatives.
+- H189: proposed full-S3 coefficient quotient to 15 classes / 5,120,640 representatives; **rejected by H190 as unsafe globally**. It may remain usable only for explicitly proved A-stabilized subfamilies.
 
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not a current strict guarantee.
@@ -51,7 +58,7 @@ Files:
 - Several Keno/Pick-style conditional overlays can reach/exceed 100% only in favorable modifier states; random state assignment, execution atomicity, liability limits or insufficient prelocked subsidy block terminal guarantee.
 - Rhode Island proves lottery-issued pre-draw doubled entitlement can exist historically; current exact free-doubler terms/execution remain unresolved. Ordinary paid Keno Plus is not a locked-2x substitute.
 - H173 conditional 4,560-play doubled 3-spot cover remains valid; H175's 4,336-play hybrid would improve it if universal `n3>=3` can be constructed.
-- H178-H189 continue exact search of that 4,336-play gate; no universal construction or impossibility theorem yet.
+- H178-H190 continue exact search/audit of that 4,336-play gate; no universal construction or impossibility theorem yet.
 - Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents strict ex-ante guarantee.
 
 ## Azerbaijan live branches
@@ -61,10 +68,10 @@ Files:
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: implement/run an H189 canonical master using only the 15 coefficient-orbit representatives together with the full merged H185+H186 valid affine-orbit cut system.**
-2. If a feasible candidate is returned, immediately run exact `n3<=2` separation and persist each new witness plus mathematically safe orbit rows.
-3. If solver-certified infeasible, the entire restricted diagonal cyclic-affine family is closed. Timeout/no-incumbent is never infeasibility and never validation.
-4. If needed, exploit stabilizers of the 15 coefficient orbits to further quotient A parameters or add stronger valid aggregated inequalities; do not restart from weaker H188/H187 masters.
+1. **Highest priority: resume from H188's 12,289,536 globally justified canonical designs and the full H185+H186 valid witness/cut bank. Do not use H189's 15-class quotient globally.**
+2. Compute the exact permutation stabilizer of each actual three-layer A set; use extra B/C/D symmetry only when that A set is mapped back into the restricted diagonal family.
+3. Build/run a stabilizer-aware H188 master or enumerate per-A stabilizer classes, then exact-separate every feasible candidate with `n3<=2` adversaries.
+4. Solver-certified infeasibility closes the restricted diagonal family; timeout/no-incumbent is never infeasibility and never validation.
 5. If the diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` with independent odd `a,b`, reusing all accumulated balanced witnesses.
 6. General H175 remains open until a construction or impossibility theorem covers arbitrary allowed Latin/transversal designs.
 7. After the master packet, continue current Rhode Island prelocked-doubler/3-spot throughput evidence and other deterministic lottery overlays.
@@ -72,5 +79,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where replacing the large legacy ledger directly is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H189_APPEND.md`.
-Latest case: `research/h189_h188_s3_coefficient_orbits.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H190_APPEND.md`.
+Latest case: `research/h190_h189_s3_symmetry_correction.md`.
