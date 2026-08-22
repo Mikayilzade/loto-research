@@ -1,0 +1,12 @@
+{
+  "packet": "H184",
+  "base_bank": "data/derived/h183_h180_witness_bank.zlib.b64",
+  "base_cut_count": 254,
+  "new_cut_count": 1,
+  "combined_cut_count": 255,
+  "rejected_master_ids": [[3,16,94],[1],[9],[16]],
+  "exact_n3": 2,
+  "witnesses": [
+    [[1,5,7,14],[4,6,9,13],[2,3,9,15],[1,8,11,15],[2,4,11,15]]
+  ]
+}
