@@ -1,0 +1,3 @@
+scenario,state_space,wager_per_selection,total_cost,match3_count,match3_payout,match2_count,match2_payout,gross,ratio,surplus,source_status
+ordinary_screen,82160,1,82160,1140,25,11400,2.5,57000,0.6937682571,-25160,secondary_paytable_not_current_primary_verified
+deterministic_2x_screen,82160,1,82160,1140,50,11400,5,114000,1.3875365141,31840,conditional_on_prelocked_2x_and_current_paytable_confirmation
