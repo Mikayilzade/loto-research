@@ -1,7 +1,8 @@
 {
-  "packet": "H236",
+  "packet": "H235-AUDIT",
   "audit_target": "H235",
   "audit": "independent_leaf_reaggregation_and_schema_partition_check",
+  "numbered_packet": false,
   "all_44_chunks_present_and_disjoint": true,
   "all_11_sector_totals_verified": true,
   "quotient_coefficient_states_verified": 306450,
@@ -139,5 +140,5 @@
       "exact_shift_tuple_survivors": 16054674
     }
   ],
-  "interpretation": "If exact_shift_surviving_coefficient_states is zero, the committed H235 leaf records form a complete finite impossibility certificate for the H225 general cyclic-affine family. Otherwise the remaining exact states are unresolved."
+  "interpretation": "Auxiliary independent audit only. Zero exact survivors would certify H225 at H235; positive survivors remain unresolved."
 }
