@@ -11,30 +11,32 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H207 — RI iLottery strict-execution impossibility**.
+Latest completed lottery packet: **H208 — RI retail/SSVM strict-execution failure**.
 
-### H207 major result
-H207 tested a more fundamental version of H206's Rhode Island Keno execution gate: whether favorable numerical VIP Plus Purchase Limits/cart capacity could ever make current **iLottery** a strict-guarantee channel for H173/H175.
+### H208 major result
+H208 moved the H173/H175 execution test from iLottery to physical Rhode Island retailer terminals / self-service vending machines (SSVMs).
 
-Current official Rhode Island Lottery Terms expressly state that the Lottery **does not guarantee the timeliness of any purchase**, may delay a purchase in its sole discretion, and may **refuse any attempted purchase for any reason**. The Terms also reserve broad rights to suspend/limit services/accounts and state that geolocation verification is not guaranteed for every physically present player.
+Current RI rules cap an ordinary Keno Ticket at **$150** and Keno draws every **4 minutes**. Therefore, even under the most favorable possible packing assumption, complete acquisition requires at least:
 
-Therefore the allowed execution branch
+- H175: `ceil(4,336 / 150) = 29` separately issued $1-ticket-equivalents;
+- H173: `ceil(4,560 / 150) = 31` separately issued $1-ticket-equivalents.
 
-`>=1 required same-draw Keno wager is delayed/refused`
+RI Lottery's current Retailer FAQ expressly recognizes Lottery terminal jams/misprints. The prescribed handling is to reprint and contact the IGT hotline; Keno misprints should be voided prior to the draw, and credit for damaged/misprinted tickets may be given **at Lottery discretion**. No current rule recovered in H208 grants an atomic all-or-none physical transaction covering the full required portfolio or an irrevocable right to force successful reissuance of every failed component before the target draw.
 
-cannot be excluded. H173/H175 require complete ownership of all prescribed same-draw wagers; an incomplete accepted portfolio loses the deterministic worst-case payoff theorem.
+Thus the allowed branch
 
-**Consequence:** current RI online/iLottery is now **CLOSED as the sole strict-guarantee execution channel** for H173/H175, independent of whether future research recovers favorable daily/weekly/monthly caps, cart line capacity or interface speed. Those numbers can still matter for practical/+EV execution, but cannot cure the contractual refusal/delay branch.
+`>=1 required physical issuance fails/misprints and is not successfully reissued before target draw`
+
+cannot be excluded. Since H173/H175 require complete ownership of all prescribed same-draw wagers, their deterministic payoff theorem is lost in that branch.
+
+**Consequence:** current ordinary retail-terminal/SSVM issuance is now **CLOSED as the sole strict-guarantee execution channel** for H173/H175. This does not reject practical/+EV execution, future operator-approved atomic bulk facilities, or the underlying H175 mathematics.
 
 Files:
-- `research/h207_ri_ilottery_strict_execution_impossibility.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H207_APPEND.md`
+- `research/h208_ri_retail_ssvm_strict_execution_failure.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H208_APPEND.md`
 
-### Preserved H206-H199 execution result
-Registered Ticketless Keno, online/app Keno, Favorites, digital play slips, QR scan at retailer/SSVM and current draw-game cart infrastructure are real. The `$150` Keno Ticket/RTP cap does not prove 150 distinct same-draw selections; single-account multi-device simultaneous purchasing is prohibited; Group Play does not establish Keno bulk acquisition. H206 established undisclosed account Purchase Limits and Keno cart/draw-break unknowns. H207 supersedes those unknowns as blockers to an **online strict guarantee**, because even favorable values cannot force acceptance.
-
-### Retail/SSVM execution remains open
-H207 does **not** establish that physical retailer terminal or SSVM issuance has the same discretionary refusal structure after a ticket is actually issued. The remaining execution question is whether the required portfolio can be deterministically issued before cutoff through lawful retail/SSVM mechanisms, with sufficient batching/throughput and without partial-basket failure that destroys the cover.
+### Preserved H207 result
+Current RI online/iLottery is closed as a sole strict-guarantee execution channel because official Terms do not guarantee purchase timeliness and allow attempted purchases to be delayed/refused.
 
 ### Preserved H175/H191 mathematical state
 The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -67,15 +69,14 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: shift RI H173/H175 strict-execution work from iLottery to retail/SSVM.** Recover current rules/manuals for terminal/SSVM batching, number of independently selected Keno plays per physical transaction/ticket, cutoff behavior and whether a submitted transaction can partially fail.
-2. Determine whether already-issued retail/SSVM tickets are irrevocably valid for the target draw absent player fault, and whether retailer/terminal/operator discretion can interrupt a large prescribed acquisition before completion.
-3. Recover exact current `Kick Back with Keno Promotion` rules through new primary-source assets/retailer notices; test whether it supplies a deterministic pre-draw subsidy/doubler.
-4. Resume H191/H188 exact pruning with existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
-5. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
-6. Numerical VIP Plus online purchase maxima/cart capacity are now secondary for strict guarantee; revisit only for +EV/practical feasibility or if Terms materially change to force acceptance.
-7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: recover exact current `Kick Back with Keno Promotion` rules through new primary-source assets, retailer notices, cached documents or linked campaign files.** Test whether it supplies a deterministic pre-draw subsidy, free wager or locked multiplier and whether its issuance terms avoid the H207/H208 execution failure branches.
+2. Resume H191/H188 exact pruning with existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
+3. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
+4. Search other current lottery-issued deterministic pre-draw overlays that operate in smaller state spaces and do not require thousands of separately accepted wagers.
+5. Reopen RI online or physical H173/H175 strict execution only upon materially new evidence: forced acceptance/atomic bulk acquisition, operator-backed syndicate facility, or rule changes curing refusal/failure branches.
+6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H207_APPEND.md`.
-Latest case: `research/h207_ri_ilottery_strict_execution_impossibility.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H208_APPEND.md`.
+Latest case: `research/h208_ri_retail_ssvm_strict_execution_failure.md`.
