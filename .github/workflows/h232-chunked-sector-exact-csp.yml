@@ -87,3 +87,5 @@ jobs:
           git add data/derived/h232_exact_shift_csp_merged.json
           git commit -m "H232 merged exact chunked CSP result" || exit 0
           git push origin HEAD:research-work
+
+# H232 rerun marker: validated zlib-error fallback path after H185 padding hardening.
