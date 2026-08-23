@@ -1,0 +1,29 @@
+name: H230 exact H175 general shift CSP
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h230_exact_shift_csp_screen.py'
+      - '.github/workflows/h230-exact-shift-csp.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h230_exact_shift_csp_screen
+      - name: Commit exact H230 result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h230_exact_shift_csp.json
+          git commit -m "H230 exact general cyclic-affine shift CSP result" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
