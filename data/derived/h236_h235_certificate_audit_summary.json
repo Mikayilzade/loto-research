@@ -1,0 +1,143 @@
+{
+  "packet": "H236",
+  "audit_target": "H235",
+  "audit": "independent_leaf_reaggregation_and_schema_partition_check",
+  "all_44_chunks_present_and_disjoint": true,
+  "all_11_sector_totals_verified": true,
+  "quotient_coefficient_states_verified": 306450,
+  "envelope_survivor_states": 306450,
+  "exact_shift_surviving_coefficient_states": 303802,
+  "exact_surviving_shift_tuples": 90425060,
+  "h225_general_cyclic_affine_family_closed": false,
+  "general_signature_unique_witnesses": 19656,
+  "base_expanded_witness_instances": 24574,
+  "h234_raw_witnesses": 44,
+  "h234_affine_expanded_instances": 5632,
+  "augmented_witness_instances_before_signature_dedupe": 30206,
+  "pre_h186_bank_size": 255,
+  "h186_witnesses": 189,
+  "sectors": [
+    {
+      "sector_index": 0,
+      "representative": [
+        1,
+        1
+      ],
+      "quotient_states": 7806,
+      "envelope_survivors": 7806,
+      "exact_coefficient_survivors": 7501,
+      "exact_shift_tuple_survivors": 1172792
+    },
+    {
+      "sector_index": 1,
+      "representative": [
+        1,
+        3
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 22864,
+      "exact_shift_tuple_survivors": 6173332
+    },
+    {
+      "sector_index": 2,
+      "representative": [
+        1,
+        5
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 22671,
+      "exact_shift_tuple_survivors": 4084124
+    },
+    {
+      "sector_index": 3,
+      "representative": [
+        1,
+        7
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 22760,
+      "exact_shift_tuple_survivors": 5379468
+    },
+    {
+      "sector_index": 4,
+      "representative": [
+        1,
+        9
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 22009,
+      "exact_shift_tuple_survivors": 3407156
+    },
+    {
+      "sector_index": 5,
+      "representative": [
+        1,
+        15
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 22759,
+      "exact_shift_tuple_survivors": 5366634
+    },
+    {
+      "sector_index": 6,
+      "representative": [
+        3,
+        5
+      ],
+      "quotient_states": 45760,
+      "envelope_survivors": 45760,
+      "exact_coefficient_survivors": 45760,
+      "exact_shift_tuple_survivors": 16815046
+    },
+    {
+      "sector_index": 7,
+      "representative": [
+        3,
+        9
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 23050,
+      "exact_shift_tuple_survivors": 8844404
+    },
+    {
+      "sector_index": 8,
+      "representative": [
+        3,
+        13
+      ],
+      "quotient_states": 45760,
+      "envelope_survivors": 45760,
+      "exact_coefficient_survivors": 45760,
+      "exact_shift_tuple_survivors": 18722770
+    },
+    {
+      "sector_index": 9,
+      "representative": [
+        5,
+        9
+      ],
+      "quotient_states": 23052,
+      "envelope_survivors": 23052,
+      "exact_coefficient_survivors": 22909,
+      "exact_shift_tuple_survivors": 4404660
+    },
+    {
+      "sector_index": 10,
+      "representative": [
+        7,
+        9
+      ],
+      "quotient_states": 45760,
+      "envelope_survivors": 45760,
+      "exact_coefficient_survivors": 45759,
+      "exact_shift_tuple_survivors": 16054674
+    }
+  ],
+  "interpretation": "If exact_shift_surviving_coefficient_states is zero, the committed H235 leaf records form a complete finite impossibility certificate for the H225 general cyclic-affine family. Otherwise the remaining exact states are unresolved."
+}
