@@ -4,7 +4,8 @@
   "sector_orbits": 11,
   "raw_representative_sector_coefficient_patterns": 503360,
   "exact_stabilizer_quotiented_coefficient_patterns": 306450,
-  "reduction_vs_H227_rep_pattern_workload": 1.6429858051884484,
+  "reduction_vs_H227_rep_pattern_workload": 1.642551803311307,
+  "reduction_vs_36_sector_raw_pattern_workload": 5.375624082232012,
   "rows": [
     {"representative":[1,1],"ordered_sector_orbit_size":1,"ordered_sector_stabilizer_size":12,"distinct_A_coefficient_actions":6,"coefficient_multiset_orbits":7806,"coefficient_orbit_size_histogram":{"1":8,"2":7,"3":336,"6":7455}},
     {"representative":[1,3],"ordered_sector_orbit_size":6,"ordered_sector_stabilizer_size":2,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
