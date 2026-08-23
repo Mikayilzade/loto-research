@@ -35,3 +35,4 @@ jobs:
             git commit -m 'H213 save exact H212 cut-bank survivor enumeration'
             git push origin HEAD:research-work
           fi
+# retrigger exact finite screen after H214 checkpoint
