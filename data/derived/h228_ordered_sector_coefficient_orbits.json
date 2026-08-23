@@ -1,0 +1,21 @@
+{
+  "packet": "H228",
+  "ordered_normalized_sectors": 64,
+  "sector_orbits": 11,
+  "raw_representative_sector_coefficient_patterns": 503360,
+  "exact_stabilizer_quotiented_coefficient_patterns": 306450,
+  "reduction_vs_H227_rep_pattern_workload": 1.6429858051884484,
+  "rows": [
+    {"representative":[1,1],"ordered_sector_orbit_size":1,"ordered_sector_stabilizer_size":12,"distinct_A_coefficient_actions":6,"coefficient_multiset_orbits":7806,"coefficient_orbit_size_histogram":{"1":8,"2":7,"3":336,"6":7455}},
+    {"representative":[1,3],"ordered_sector_orbit_size":6,"ordered_sector_stabilizer_size":2,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[1,5],"ordered_sector_orbit_size":6,"ordered_sector_stabilizer_size":2,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[1,7],"ordered_sector_orbit_size":3,"ordered_sector_stabilizer_size":4,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[1,9],"ordered_sector_orbit_size":3,"ordered_sector_stabilizer_size":4,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[1,15],"ordered_sector_orbit_size":3,"ordered_sector_stabilizer_size":4,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[3,5],"ordered_sector_orbit_size":12,"ordered_sector_stabilizer_size":1,"distinct_A_coefficient_actions":1,"coefficient_multiset_orbits":45760,"coefficient_orbit_size_histogram":{"1":45760}},
+    {"representative":[3,9],"ordered_sector_orbit_size":6,"ordered_sector_stabilizer_size":2,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[3,13],"ordered_sector_orbit_size":12,"ordered_sector_stabilizer_size":1,"distinct_A_coefficient_actions":1,"coefficient_multiset_orbits":45760,"coefficient_orbit_size_histogram":{"1":45760}},
+    {"representative":[5,9],"ordered_sector_orbit_size":6,"ordered_sector_stabilizer_size":2,"distinct_A_coefficient_actions":2,"coefficient_multiset_orbits":23052,"coefficient_orbit_size_histogram":{"1":344,"2":22708}},
+    {"representative":[7,9],"ordered_sector_orbit_size":6,"ordered_sector_stabilizer_size":2,"distinct_A_coefficient_actions":1,"coefficient_multiset_orbits":45760,"coefficient_orbit_size_histogram":{"1":45760}}
+  ]
+}
