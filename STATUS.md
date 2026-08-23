@@ -11,20 +11,22 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H217 — H216 exact B/C sharding**.
+Latest completed lottery packet: **H218 — exact H217 shard merge/completion pipeline**.
 
-### H217 result
-The expected H216 survivor file `data/derived/h216_h212_bitset_survivors.json` was checked first and remains absent. H217 therefore does not launch another monolithic duplicate screen.
+### H218 result
+At run start the H217 shard result files were still absent from the repository, so H218 did not claim a survivor count and did not restart the monolithic H216 screen.
 
-Instead H217 decomposes the scientifically identical H216/H213 exact necessary-cut screen into **36 independent normalized B/C shards**. Every shard screens all **3,992 H212 A-orbit representatives** for one B/C pair against the same **4,878 exact H185+H186 cut rows**, with the same rejection condition `n3 < 3`.
+H218 added `src/loto_research/h218_merge_h217_shards.py` and upgraded `.github/workflows/h217-bc-shards.yml` so all 36 exact B/C shards are required, downloaded and merged automatically after successful shard completion. The merger is strict: any missing shard aborts; each shard must report 4,878 exact cut rows, 3,992 A-orbits and internally consistent survivor counts.
 
-This is a computation/observability improvement only; the proof standard is unchanged. Shard outputs are not yet collected at this checkpoint, therefore **no survivor count, no restricted-family closure, and no validation claim** is made.
+The resulting exact screen covers `36 * 3,992 = 143,712` H212 normalized classes against the same 4,878 exact balanced-witness cuts. The target merged output is `data/derived/h218_h217_merged_survivors.json`.
+
+At this checkpoint that merged output has not yet appeared on `research-work`; therefore **no restricted-family closure and no universal H175 validation claim** is made.
 
 Files:
-- `src/loto_research/h217_h216_bc_shards.py`
+- `src/loto_research/h218_merge_h217_shards.py`
 - `.github/workflows/h217-bc-shards.yml`
-- `research/h217_h216_exact_bc_sharding.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H217_APPEND.md`
+- `research/h218_h217_exact_merge_pipeline.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H218_APPEND.md`
 
 ### Preserved H175 mathematical state
 The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -38,7 +40,8 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - H212: affine-unit quotient `143,712` classes.
 - H214: exact joint H212+H191 quotient `143,523` classes.
 - H216: threshold-bitset equivalent screen; monolithic output absent.
-- H217: exact 36-way B/C sharding added; outputs pending.
+- H217: exact 36-way B/C sharding added.
+- H218: strict all-shard merger + merge-enabled workflow added; merged survivor output pending.
 - No universal construction or restricted-family impossibility proof exists yet.
 
 ### Preserved promotion/execution state
@@ -61,14 +64,14 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Check H217 shard artifacts/results first. Do not restart H216/H217 blindly.**
-2. If all 36 shard results exist, merge them and record exact survivor count/list.
-3. If survivor union is zero, close the restricted diagonal family and expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
-4. If survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
+1. **Check `data/derived/h218_h217_merged_survivors.json` first. Do not restart H216/H217 blindly.**
+2. If it exists and survivor count is zero, close the restricted diagonal family and expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
+3. If survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
+4. If H218 workflow failed, inspect the failed shard/job and repair only that concrete failure rather than launching another monolithic screen.
 5. Reopen current `Kick Back with Keno` only on materially new primary evidence.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H217_APPEND.md`.
-Latest case: `research/h217_h216_exact_bc_sharding.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H218_APPEND.md`.
+Latest case: `research/h218_h217_exact_merge_pipeline.md`.
