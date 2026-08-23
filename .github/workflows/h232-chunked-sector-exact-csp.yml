@@ -3,13 +3,50 @@ on:
   push:
     branches: [research-work]
     paths:
+      - 'src/loto_research/h226_general_coefficient_envelope_prescreen.py'
       - 'src/loto_research/h232_chunked_sector_exact_shift_csp.py'
+      - 'src/loto_research/h183_h180_symmetry_persistent_cuts.py'
+      - 'src/loto_research/h185_h180_affine_orbit_cut_acceleration.py'
+      - 'src/loto_research/h186_h185_mass_counterexample_packet.py'
+      - 'data/derived/h183_h180_witness_bank.zlib.b64'
+      - 'data/derived/h184_h183_new_witnesses.json'
+      - 'data/derived/h185_h180_witness_bank.zlib.b64'
+      - 'data/derived/h186_h185_counterexample_packet.zlib.b64'
       - '.github/workflows/h232-chunked-sector-exact-csp.yml'
   workflow_dispatch:
+concurrency:
+  group: h232-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - name: Validate exact witness source before fan-out
+        run: |
+          PYTHONPATH=src python - <<'PY'
+          import numpy as np
+          from loto_research.h226_general_coefficient_envelope_prescreen import expand_witnesses, witness_source
+          W, pre_n, h186_n = expand_witnesses()
+          assert pre_n in (255, 297), pre_n
+          assert h186_n == 189, h186_n
+          expected = 254 + ((pre_n - 254) + h186_n) * 128
+          assert W.shape == (expected, 5, 4), W.shape
+          assert np.all((W >= 0) & (W < 16))
+          S = np.sort(W, axis=2)
+          assert np.all(np.diff(S, axis=2) > 0)
+          mode = witness_source()
+          assert mode == ('h185_297' if pre_n == 297 else 'h183_254_plus_h184_1_recovery'), mode
+          print('H232_PREFLIGHT_OK', mode, pre_n, h186_n, expected)
+          PY
   chunk:
+    needs: preflight
     strategy:
       fail-fast: false
       matrix:
@@ -19,7 +56,6 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-        with: {ref: research-work}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: pip install numpy scipy
@@ -35,7 +71,6 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-        with: {ref: research-work}
       - uses: actions/setup-python@v5
         with: {python-version: '3.12'}
       - run: pip install numpy scipy
@@ -51,5 +86,4 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/derived/h232_exact_shift_csp_merged.json
           git commit -m "H232 merged exact chunked CSP result" || exit 0
-          git pull --rebase origin research-work
           git push origin HEAD:research-work
