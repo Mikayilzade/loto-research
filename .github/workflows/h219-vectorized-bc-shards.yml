@@ -1,0 +1,47 @@
+name: H219 vectorized exact H175 B-C shards
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h219_vectorized_bc_shards.py'
+      - '.github/workflows/h219-vectorized-bc-shards.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  shard:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h219_vectorized_bc_shards shard ${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h219-shard-${{ matrix.shard }}
+          path: data/derived/h219_shards/shard_*.json
+  merge:
+    needs: shard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h219-shard-*
+          path: data/derived/h219_shards
+          merge-multiple: true
+      - run: PYTHONPATH=src python -m loto_research.h219_vectorized_bc_shards merge
+      - name: Commit exact merged result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h219_vectorized_merged_survivors.json
+          git commit -m "H219 exact vectorized merge" || exit 0
+          git push origin HEAD:research-work
