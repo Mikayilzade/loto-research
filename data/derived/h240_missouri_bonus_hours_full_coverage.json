@@ -1,0 +1,33 @@
+{
+  "packet": "H240",
+  "date": "2026-08-24",
+  "scope": "Missouri Club Keno base-game full coverage under Bonus Hours",
+  "assumptions": {
+    "field_size": 80,
+    "drawn_numbers": 20,
+    "base_wager_per_line_per_draw": 1,
+    "bonus_hours_required_draws": 10,
+    "dominant_upper_bound": "Every base prize receives +50%, even where official promo exclusions would apply"
+  },
+  "results": [
+    {"spot":1,"lines":80,"base_return":0.5,"universal_50_upper_return":0.75,"official_exclusion_upper_return":0.75},
+    {"spot":2,"lines":3160,"base_return":0.6012658227848101,"universal_50_upper_return":0.9018987341772152,"official_exclusion_upper_return":0.9018987341772152},
+    {"spot":3,"lines":82160,"base_return":0.6243914313534566,"universal_50_upper_return":0.936587147030185,"official_exclusion_upper_return":0.936587147030185},
+    {"spot":4,"lines":1581580,"base_return":0.6126784607797267,"universal_50_upper_return":0.9190176911695899,"official_exclusion_upper_return":0.8126999582695785},
+    {"spot":5,"lines":24040016,"base_return":0.6225420149470783,"universal_50_upper_return":0.9338130224206174,"official_exclusion_upper_return":0.9338130224206174},
+    {"spot":6,"lines":300500200,"base_return":0.6002921129503408,"universal_50_upper_return":0.9004381694255112,"official_exclusion_upper_return":0.8355283956549779},
+    {"spot":7,"lines":3176716400,"base_return":0.6041731959453478,"universal_50_upper_return":0.9062597939180218,"official_exclusion_upper_return":0.818763173193553},
+    {"spot":8,"lines":28987537150,"base_return":0.5820333870619981,"universal_50_upper_return":0.8730500805929972,"official_exclusion_upper_return":0.8730500805929972},
+    {"spot":9,"lines":231900297200,"base_return":0.5849692151235415,"universal_50_upper_return":0.8774538226853122,"official_exclusion_upper_return":0.8204012316375764},
+    {"spot":10,"lines":1646492110120,"base_return":0.6015545047791413,"universal_50_upper_return":0.902331757168712,"official_exclusion_upper_return":0.8967211624120042}
+  ],
+  "best_universal_50_upper_bound": {
+    "spot": 3,
+    "return": 0.936587147030185,
+    "required_10_draw_spend": 821600,
+    "required_10_draw_base_gross": 513000,
+    "required_10_draw_universal_50_upper_gross": 769500,
+    "required_10_draw_universal_50_net": -52100
+  },
+  "verdict": "REJECTED_BASE_CLUB_KENO_FULL_COVERAGE"
+}
