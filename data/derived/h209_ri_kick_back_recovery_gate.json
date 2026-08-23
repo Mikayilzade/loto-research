@@ -1,0 +1,32 @@
+{
+  "packet": "H209",
+  "updated": "2026-08-23",
+  "terminal_state": "NO SUCCESS; NOT EXHAUSTED",
+  "promotion": "Kick Back with Keno Promotion",
+  "current_official_title_confirmed": true,
+  "current_exact_rules_recovered": false,
+  "current_homepage": "https://www.rilot.com/en-us/home.html",
+  "current_promotions_page": "https://www.rilot.com/en-us/player-zone/promotions.html",
+  "current_keno_rules": "https://www.rilot.com/content/dam/interactive/ilottery/pdfs/about-us/RILotteryRules_2026.pdf",
+  "historical_comparator": {
+    "name": "Lucky 3 Spot Keno & Bingo Doubler",
+    "url": "https://www.rilot.com/content/dam/interactive/ilottery/pdfs/Promotions/2025/LaunchAlertRules-Lucky3SpotKenoBingoDoubler.pdf",
+    "pre_draw_multiplier_message": true,
+    "keno_promotional_ticket_cancellation_prohibited": true
+  },
+  "strict_gate_fields_unresolved": [
+    "deterministic subsidy or multiplier amount",
+    "eligible spot/wager/location/time class",
+    "whether every intended basket wager qualifies",
+    "promotion-specific cancellation treatment",
+    "random-tag or issuance-limit behavior",
+    "atomic/bulk execution support"
+  ],
+  "reopen_only_on": [
+    "exact current official campaign rules",
+    "official retailer launch alert",
+    "official campaign page with full mechanics",
+    "direct operator documentation resolving economics and execution"
+  ],
+  "conclusion": "Current title proves existence only. Base Keno cancellation cannot be combined with an assumed promotional doubler because RI historical promotion-specific rules have explicitly disabled cancellation."
+}
