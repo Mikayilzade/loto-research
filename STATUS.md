@@ -11,37 +11,49 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H227 — exact cross-sector support-hypergraph symmetry for H225 general cyclic-affine family**.
+Latest completed lottery packet: **H228 — corrected ordered-sector symmetry + exact A-coefficient multiset quotient**.
 
-### H227 major result
-H226's coefficient-envelope output was still absent at H227 start, so no general-family closure was inferred. H227 instead proves and exploits a new exact symmetry of the complete H175 support structure.
+### H228 major result
+H226's general coefficient-envelope result and H224 restricted exact result were still absent at H228 start, so no closure was inferred.
 
-The four affine support types A={0,1,2}, B={0,3,4}, C={1,3,4}, D={2,3,4} have support-hypergraph automorphism group `S3 x S2` of order 12: arbitrary permutation of groups {0,1,2} and independent swap of groups 3/4. General cyclic-affine layers remain inside the family under these reorientations because all coefficients are odd units modulo 16.
+H228 audited H227 and found a rigor issue in the stated 36-sector action: canonicalizing `(beta,gamma)` to `beta<=gamma` after each `S3 x S2` image does not define a genuine 12-element action on the unordered sector representatives, because the beta/gamma swap subgroup is not normal in the full S3 coordinate action. Therefore H227's unordered-sector orbit sizes/stabilizer sizes must not be reused.
 
-Under H225 normalization, the sole B/C/D layers are encoded projectively by `q=(beta,gamma,1)`. S3 permutes q coordinates and re-normalization divides by the new third entry; swapping groups 3/4 induces inversion. The resulting exact 12-element action permutes the 36 normalized beta<=gamma sectors into exactly **11 WLOG sector orbits**.
+The useful H227 reduction survives after correction. Acting first on all **64 ordered** normalized sectors gives exactly **11 genuine group orbits**, with the same representative labels:
+`(1,1),(1,3),(1,5),(1,7),(1,9),(1,15),(3,5),(3,9),(3,13),(5,9),(7,9)`.
 
-Orbit sizes: `1,4,4,2,2,2,6,3,6,3,3`.
-Representatives: `(1,1),(1,3),(1,5),(1,7),(1,9),(1,15),(3,5),(3,9),(3,13),(5,9),(7,9)`.
+Correct ordered-sector orbit sizes:
+`1,6,6,3,3,3,12,6,12,6,6`.
+Correct stabilizer sizes:
+`12,2,2,4,4,4,1,2,1,2,2`.
 
-Therefore an exhaustive H226-style coefficient-pattern search needs only 11 complete sector representatives rather than 36. Top-level sector/coefficient cases reduce exactly from `36*45,760 = 1,647,360` to `11*45,760 = 503,360`, factor **3.272727x**, before envelope rejection or shift-level quotienting.
+H228 then derives the exact induced stabilizer action on general A coefficient pairs. Writing an A layer as `a*x0+b*x1-x2+c=0`, permutations of groups 0/1/2 permute `(a,b,-1)` and renormalize the third coefficient back to `-1`; this bijects the 64 odd `(a,b)` pairs. The 3/4 flip acts trivially on A coefficient pairs.
+
+Exact enumeration of the 45,760 three-multisets of A coefficient pairs under each true sector stabilizer gives **306,450 total quotient coefficient states across the 11 representative sectors**.
+
+Reduction:
+- H226 original 36-sector coefficient workload: `1,647,360` cases.
+- H227 representative-sector raw workload: `503,360` cases.
+- H228 exact true-stabilizer quotient: **306,450** cases.
+- Reduction vs H227: **1.64255x**.
+- Reduction vs H226 raw: **5.37562x**.
 
 Files:
-- `src/loto_research/h227_general_sector_hypergraph_symmetry.py`
-- `data/derived/h227_general_sector_orbits.json`
-- `research/h227_general_sector_hypergraph_symmetry.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H227_APPEND.md`
+- `src/loto_research/h228_ordered_sector_stabilizer_coefficient_orbits.py`
+- `data/derived/h228_ordered_sector_coefficient_orbits.json`
+- `research/h228_ordered_sector_stabilizer_coefficient_orbits.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H228_APPEND.md`
 
-This is a WLOG search reduction, not a universal construction/impossibility proof. Do not divide H225's 36,243,104 canonical-design count naively by 36/11 because sector stabilizers vary.
+This is an exact WLOG search reduction, not universal `n3>=3` validation or impossibility.
 
 ### Preserved H226/H225 general-family state
-- H226 target `data/derived/h226_general_coefficient_envelope.json` was absent at H227 start; missing output remains inconclusive.
-- H226 exact coefficient-envelope theorem remains valid: 45,760 A coefficient multisets per sector can be rejected when even rowwise best legal shifts fail a stored balanced witness.
-- H225 general cyclic-affine normalization/Burnside quotient remains valid: 36,243,104 canonical classes under the earlier residual group.
-- H227 adds a larger cross-sector WLOG symmetry and reduces the existence/impossibility search to 11 representative sectors.
+- H226 target `data/derived/h226_general_coefficient_envelope.json` was absent at H228 start; missing output remains inconclusive.
+- H226 exact coefficient-envelope theorem remains valid: if even rowwise best legal distinct A shifts cannot reach total incidence 3 on a stored balanced witness, the whole coefficient multiset is impossible.
+- H225 general cyclic-affine normalization/Burnside result remains a valid earlier within-sector quotient, but H228 is now authoritative for cross-sector existence-search symmetry.
+- H225 canonical-design count: 36,243,104 under its earlier residual quotient.
 
 ### Preserved restricted-family state
-- H224/H223/H222/H219 exact restricted output files have not produced an authoritative closure result in the preserved checkpoint.
-- H221 proves any schema-valid exact restricted screen with `survivor_count=0` over all 143,712 H212-normalized classes closes that restricted diagonal family without a second MILP.
+- H224/H223/H222/H219 exact restricted outputs have not produced an authoritative closure result at H228 start.
+- H221 proves any schema-valid restricted exact screen with `survivor_count=0` over all 143,712 H212-normalized classes closes that restricted family without a second MILP.
 
 ### Preserved promotion/execution state
 - Current RI `Kick Back with Keno Promotion` is officially visible, but exact mechanics remain unrecovered; do not repeat H209's exhausted searches without new evidence.
@@ -49,16 +61,15 @@ This is a WLOG search reduction, not a universal construction/impossibility proo
 - Current RI online/iLottery and ordinary retailer/SSVM remain closed as sole strict-guarantee execution channels under recovered public rules.
 
 ## NEXT ACTION
-1. **Check `data/derived/h226_general_coefficient_envelope.json` and late H224/H223/H222/H219 results first.** Use any valid result immediately; missing output proves nothing.
-2. Exploit H227's **11 representative-sector stabilizers** (sizes `12,3,3,6,6,6,2,4,2,4,4`) to quotient A coefficient multisets and then shift realizations before exact general-family screening.
-3. Build the exact globally consistent shift-level screen on those quotient states, reusing H226's envelope theorem as a necessary pre-filter.
-4. For every surviving actual design, run exact `n3<=2` separation; timeout never validates a design.
-5. If H226 rejects all patterns in all needed representative sectors, close the entire H225 general cyclic-affine family by H226+H227 symmetry.
-6. If any restricted exact result returns zero survivors, separately close H212 under H221.
-7. Reopen current `Kick Back with Keno` only on materially new primary evidence.
-8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Check H226 and late H224/H223/H222/H219 result artifacts first.** Missing output proves nothing.
+2. Build an H228-corrected representative-only coefficient-envelope screen over the **306,450** exact quotient coefficient states using the true ordered-sector stabilizers.
+3. If all quotient coefficient states are rejected by H226's exact witness envelope, close the full H225 general cyclic-affine family by H226+H228 symmetry.
+4. Otherwise enumerate globally consistent legal shifts only for surviving coefficient states, quotient by their residual stabilizers, then run exact `n3<=2` separation on every actual design survivor; timeout never validates a design.
+5. If any restricted exact result returns zero survivors, separately close H212 under H221.
+6. Reopen current `Kick Back with Keno` only on materially new primary evidence.
+7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H227_APPEND.md`.
-Latest case: `research/h227_general_sector_hypergraph_symmetry.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H228_APPEND.md`.
+Latest case: `research/h228_ordered_sector_stabilizer_coefficient_orbits.md`.
