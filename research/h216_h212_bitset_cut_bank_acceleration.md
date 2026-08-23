@@ -7,7 +7,7 @@ Lottery-only continuation of the unresolved Rhode Island Keno H175 restricted di
 H215 re-triggered H213, but `data/derived/h213_h212_cut_bank_survivors.json` remained absent. This is not mathematical evidence.
 
 ## Bottleneck diagnosis
-H213 loops over all `143,712` H212 representatives and, for each, scans up to `4,878` exact necessary cut rows in Python. The worst-case scalar-check count is about `700,996,?` million-scale operations (`143,712 × 4,878 = 700,?`), before the six component additions per row. This explains why a result can fail to appear promptly without implying infeasibility or survival.
+H213 loops over all `143,712` H212 representatives and, for each, scans up to `4,878` exact necessary cut rows in Python. The worst-case scalar-check count is exactly `701,027,136` row checks, before the six component additions per row. This explains why a result can fail to appear promptly without implying infeasibility or survival.
 
 ## Exact replacement
 Added `src/loto_research/h216_h212_bitset_cut_bank.py`.
