@@ -11,32 +11,31 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H212 — H175 affine-unit orbit quotient**.
+Latest completed lottery packet: **H214 — joint H212 affine-unit + H191 exceptional-S3 symmetry audit**.
 
-### H212 major result
-H212 safely enlarges H210's residual `C16` translation symmetry by common multiplication of all five group coordinates by any odd unit modulo 16.
+### H214 major result
+H214 closes the joint-symmetry compatibility question deliberately left open by H212.
 
-For every allowed A layer `(a,c)`, the combined 128-element action is
+H191 proved that the extra coordinate S3 stabilizer is legal iff all three A layers have slope `a=15`, where each layer is `x0+x1+x2=c (mod16)` and is individually S3-invariant. H212's exact affine-unit enumeration contains exactly **9** A orbits wholly inside this exceptional sector, out of **3,992** total A orbits.
 
-`(a,c) -> (a, u*c + (2a-1)t) mod 16`,
+The H212 affine-unit action and H191 exceptional coordinate-S3 action are compatible at the set level in that sector. Therefore:
+- 3,983 generic H212 A orbits retain all 36 normalized B/C coefficient classes;
+- 9 exceptional `a=15` H212 A orbits may safely use the exact 15 S3 coefficient classes.
 
-with odd `u` and arbitrary `t mod16`. It preserves H188's B/C zero-shift normalization, D=`(1,0)`, all coefficients, and balanced draws bijectively.
+Exact safe joint representative count:
 
-Exact exhaustive canonicalization of all `C(128,3)=341,376` A-layer 3-subsets gives:
-- 1,920 orbits of size 128;
-- 1,088 orbits of size 64;
-- 640 orbits of size 32;
-- 344 orbits of size 16;
-- **3,992 exact A orbits total**.
+`3,983*36 + 9*15 = 143,523`.
 
-Conservatively retaining all 36 H188 normalized B/C coefficient pairs leaves **143,712** safe restricted-family representatives. This is ~5.3396x smaller than H211's 767,361 and ~85.51x smaller than H188's 12,289,536.
-
-Nine H212 A-orbits lie entirely in the exceptional `a=15` sector. H212 does not yet combine those with H191's S3 quotient because the full joint group action should be audited directly rather than assumed to factor.
+This saves only 189 representatives (about 0.1315%) versus H212's 143,712, so the symmetry direction is now materially exhausted.
 
 Files:
-- `research/h212_h175_affine_unit_orbits.md`
-- `src/loto_research/h212_h175_affine_unit_orbits.py`
-- `research/CHECKED_PROJECTS_AND_TESTS_H212_APPEND.md`
+- `research/h214_h212_h191_joint_symmetry_audit.md`
+- `src/loto_research/h214_h212_h191_joint_symmetry_audit.py`
+- `data/derived/h214_h212_h191_joint_symmetry_summary.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H214_APPEND.md`
+
+### H213 implementation note
+`src/loto_research/h213_h212_cut_bank_enumeration.py` was added as the deterministic finite enumerator for screening H212 representatives against the accumulated exact cut bank. No H213 scientific survivor result is recorded yet; do not treat the existence of the script/workflow as evidence. The authoritative completed result is H214.
 
 ### Preserved H175 mathematical state
 The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -45,10 +44,11 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - H186: 189 additional explicit exact counterexamples across two rejected candidates; timeout/no-incumbent remained inconclusive.
 - H188: globally safe normalized representative count `12,289,536`.
 - H189 full-S3 quotient was withdrawn by H190 as globally unsafe.
-- H191: stabilizer-aware safe saving applies only to A subsets wholly in the `a=15` sector.
+- H191: stabilizer-aware extra S3 is valid only for A subsets wholly in the `a=15` sector.
 - H210: residual translation quotient reduced the family to `768,096` classes.
 - H211: combined translation/stabilizer count `767,361`.
-- **H212: stronger affine-unit quotient reduces conservatively to `143,712` classes.**
+- H212: stronger affine-unit quotient reduced conservatively to `143,712` classes.
+- **H214: exact joint H212+H191 quotient safely reduces to `143,523` classes.**
 - No universal construction or restricted-family impossibility proof exists yet.
 
 ### Preserved H209 promotion state
@@ -72,15 +72,14 @@ Current RI online/iLottery is closed as a sole strict-guarantee H173/H175 execut
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: enumerate the 143,712 H212 restricted diagonal representatives against the accumulated exact balanced witness/cut bank.** Persist exact survivor count/list or solver-independent infeasibility evidence.
+1. **Highest priority: exact-screen the 143,523 H214 joint representatives against the accumulated 4,878 exact balanced witness/cut rows.** Persist exact survivor count/list or solver-independent infeasibility evidence.
 2. Run exact `n3<=2` separation only on surviving classes; timeout never validates a design.
-3. Audit the full combined H212 affine-unit + H191 exceptional S3 action for any additional safe quotient.
-4. If the restricted diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
-5. Reopen current `Kick Back with Keno` only on materially new primary evidence.
-6. Search other current lottery-issued deterministic pre-draw overlays in smaller state spaces that do not require thousands of separately accepted wagers.
-7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+3. If the restricted diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
+4. Reopen current `Kick Back with Keno` only on materially new primary evidence.
+5. Search other current lottery-issued deterministic pre-draw overlays in smaller state spaces that do not require thousands of separately accepted wagers.
+6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H212_APPEND.md`.
-Latest case: `research/h212_h175_affine_unit_orbits.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H214_APPEND.md`.
+Latest case: `research/h214_h212_h191_joint_symmetry_audit.md`.
