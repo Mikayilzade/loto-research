@@ -1,0 +1,27 @@
+{
+  "updated": "2026-08-23",
+  "scope": "lottery-only",
+  "case": "H200",
+  "target": "Rhode Island Keno H173/H175 same-draw acquisition execution",
+  "official_execution_features": {
+    "draw_game_cart_purchases": true,
+    "shopping_cart_checkout": true,
+    "saved_favorite_wagers_replay": true,
+    "digital_play_slip_qr_to_retail_terminal": true,
+    "qr_to_self_service_vending_machine": true,
+    "the_numbers_qty_and_add_to_cart_controls": true,
+    "keno_specific_cart_capacity_recovered": false,
+    "keno_specific_qty_control_recovered": false,
+    "atomic_full_cart_acceptance_proven": false
+  },
+  "strict_guarantee_blockers": {
+    "lottery_may_limit_game_ticket_wager_or_particular_numbers_without_notice": true,
+    "processing_delay_or_denial_disclaimed": true,
+    "lottery_set_account_purchase_limits_exist": true
+  },
+  "required_same_draw_selections": {
+    "H173": 4560,
+    "H175": 4336
+  },
+  "conclusion": "Cart/replay/QR infrastructure materially reduces execution friction and invalidates the prior one-Buy-Now-per-wager lower-bound assumption, but it does not prove guaranteed acquisition of the complete H173/H175 basket before one draw."
+}
