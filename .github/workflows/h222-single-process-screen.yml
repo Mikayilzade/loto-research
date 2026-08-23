@@ -1,0 +1,28 @@
+name: H222 single-process exact H175 screen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h222_single_process_vectorized_screen.py'
+      - '.github/workflows/h222-single-process-screen.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h222_single_process_vectorized_screen
+      - name: Commit exact result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h222_single_process_survivors.json
+          git commit -m "H222 exact single-process H175 result" || exit 0
+          git push origin HEAD:research-work
