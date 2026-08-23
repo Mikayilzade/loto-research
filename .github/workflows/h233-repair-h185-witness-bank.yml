@@ -1,0 +1,37 @@
+name: H233 repair H185 witness bank
+
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h233_repair_h185_witness_bank.py'
+      - '.github/workflows/h233-repair-h185-witness-bank.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research-work
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Repair and validate H185 bank
+        run: PYTHONPATH=src python -m loto_research.h233_repair_h185_witness_bank
+      - name: Commit repaired bank
+        run: |
+          if git diff --quiet -- data/derived/h185_h180_witness_bank.zlib.b64; then
+            echo 'Bank already valid; no commit needed.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/derived/h185_h180_witness_bank.zlib.b64
+          git commit -m 'H233 repair and validate H185 witness bank'
+          git push origin HEAD:research-work
