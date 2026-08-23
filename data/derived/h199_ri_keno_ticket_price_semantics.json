@@ -1,0 +1,28 @@
+{
+  "hypothesis_id": "H199",
+  "updated": "2026-08-23",
+  "scope": "lottery-only",
+  "game": "Rhode Island Keno",
+  "official_rule_facts": {
+    "base_wager_options_usd": [1, 2, 5, 10],
+    "max_consecutive_draws": 15,
+    "base_max_ticket_or_registered_ticketless_play_price_usd": 150,
+    "plus_max_price_usd": 300,
+    "overtime_max_price_usd": 300,
+    "plus_and_overtime_max_price_usd": 450,
+    "draw_interval_minutes": 4
+  },
+  "identity": {
+    "base": "10 * 15 = 150",
+    "interpretation": "The published $150 ceiling is completely explained by maximum per-draw wager multiplied by maximum consecutive draws; it is not evidence for 150 distinct same-draw selections."
+  },
+  "h175_required_distinct_same_draw_selections": 4336,
+  "h173_required_distinct_same_draw_selections": 4560,
+  "closed_inference": "$150 maximum ticket price => 150 independent $1 same-draw selections => ~29 tickets",
+  "status": "rejected inference; execution capacity remains unresolved",
+  "sources": [
+    "https://www.rilot.com/content/dam/interactive/ilottery/pdfs/about-us/RILotteryRules_2026.pdf",
+    "https://www.rilot.com/content/dam/interactive/ilottery/pdfs/about-us/RILotteryRules2026.pdf",
+    "https://www.rilot.com/en-us/keno.html"
+  ]
+}
