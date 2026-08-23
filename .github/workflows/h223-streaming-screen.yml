@@ -1,0 +1,29 @@
+name: H223 streaming exact H175 screen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h223_streaming_exact_h175_screen.py'
+      - '.github/workflows/h223-streaming-screen.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h223_streaming_exact_h175_screen
+      - name: Commit exact result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h223_streaming_survivors.json
+          git commit -m "H223 exact streaming H175 result" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
