@@ -11,43 +11,35 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H205 — RI Registered Ticketless Play execution bound**.
+Latest completed lottery packet: **H206 — RI iLottery cart and purchase-limit gate**.
 
-### H205 major result
-H205 used the current Rhode Island Lottery Rules dated February 20, 2026 plus the current official Keno/app interfaces to tighten the H173/H175 execution gate.
+### H206 major result
+H206 continued the H173/H175 Rhode Island Keno execution branch with new current official FAQ evidence.
 
-Current rules now explicitly establish:
-- Keno may be played via **Registered Ticketless Play**;
-- one Keno play selects 1–10 spots from 1–80;
-- wager per draw is $1/$2/$5/$10;
-- the wager may run for up to 15 consecutive draws;
-- maximum price per Keno Ticket or Registered Ticketless Play is $150 base, $300 with Plus or Overtime, $450 with both;
-- Keno draws occur every four minutes.
+The official FAQ explicitly states that iLottery wagers for Powerball, Mega Millions, Wild Money, Millionaire for Life, The Numbers **and Keno** can result from **cart purchases submitted**. This proves a current cart-submission architecture exists and means H205's `4,336/240 = 18.0667` and `4,560/240 = 19` purchases-per-second figures are only conditional on one checkout per distinct selection; they cannot be promoted to unconditional execution blockers without Keno cart-capacity evidence.
 
-This closes the old shortcut that `$150 maximum` itself implies capacity for 150 different $1 same-draw selections. The monetary caps are fully explainable by `$10 × 15 consecutive draws` and optional equal-cost add-ons. Consecutive draws repeat a selection over future draws and therefore do not reduce the number of distinct selections required in one H173/H175 target draw.
+The same official FAQ establishes a new mandatory gate: VIP Plus accounts have default **daily, weekly and monthly Purchase Limits**, and user-selected limits cannot exceed the Lottery's own maximum limits. The public FAQ does not disclose those numerical maximums.
 
-The current public Keno purchase UI remains single-selection shaped: Pick Numbers/Quick Pick -> Amount per game -> Consecutive games -> Plus/Overtime -> Buy Now, with no exposed add-line, quantity-of-different-lines, or bulk-import control in the public page text.
+Minimum single-account paid-wager hurdles at $1 base stake:
+- H175: **$4,336**;
+- H173: **$4,560**.
 
-At the same time, current official app materials establish a real Keno-compatible electronic architecture: Keno is offered online, favorite draw-game wagers can be saved/replayed, and digital play slips can be scanned at retailers. This strengthens H204 but still does not publish the number of independently selected Keno lines one QR/digital play slip/scan can carry.
+Therefore any strict one-account execution proof requires the Lottery's applicable daily/weekly/monthly maxima and remaining account limits to be at least the required spend. A paid add-on would raise the hurdle.
 
-Conditional rate if each distinct selection needs its own completed purchase inside one 240-second draw interval:
-- H175 4,336 plays: **18.0667 purchases/s**;
-- H173 4,560 plays: **19 purchases/s**.
-
-These are conditional lower bounds only; a proven multi-selection batch mechanism could reduce them.
+The FAQ also says iLottery wagering is unavailable during each game's draw-break period. Since Keno draws every four minutes, the effective submission window for a target draw is at most 240 seconds and may be shorter. Current public evidence still does not publish:
+- independently selected Keno lines per cart;
+- same-draw cart capacity;
+- cart monetary cap;
+- all-or-none/atomic acceptance behavior;
+- Keno draw-break duration;
+- a deterministic target-draw lock that prevents rollover during a large submission.
 
 Files:
-- `research/h205_ri_registered_ticketless_play_execution_bound.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H205_APPEND.md`
+- `research/h206_ri_ilottery_cart_and_purchase_limit_gate.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H206_APPEND.md`
 
-### Preserved H204 result
-The RI Lottery App can make wager selections and generate a QR code for retail purchase at a terminal or SSVM. This proves a pre-purchase selection-transfer channel, but Keno per-QR/per-scan multi-selection capacity remains unproved.
-
-### Preserved H203-H199 execution result
-Official Group Play does not prove Keno bulk acquisition. Single-player multi-device/multi-account parallelization is closed. The `$150` Keno cap does not prove 150 distinct same-draw selections. Draw-game cart/replay/QR infrastructure exists, but discretionary limits/rejection and missing Keno batch capacity block guaranteed acquisition.
-
-### Preserved H202 result
-`Kick Back with Keno Promotion` is currently live/active, but the homepage `Get a free ticket when you buy 2` teaser resolves to Mega Millions and cannot be attributed to Keno. Exact current Keno promo mechanics remain unresolved.
+### Preserved H205-H199 execution result
+Registered Ticketless Keno, online/app Keno, Favorites, digital play slips, QR scan at retailer/SSVM and current draw-game cart infrastructure are real. The `$150` Keno Ticket/RTP cap does not prove 150 distinct same-draw selections; single-account multi-device simultaneous purchasing is prohibited; Group Play does not establish Keno bulk acquisition. Guaranteed acquisition of 4,336/4,560 distinct same-draw selections remains unproved.
 
 ### Preserved H175/H191 mathematical state
 The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -59,6 +51,12 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - H191 exact stabilizer classification safely reduces to **12,277,776** representatives only (~0.096% saving), materially exhausting further coordinate-symmetry quotienting.
 - No universal construction or restricted-family impossibility proof exists yet.
 
+### Preserved promotion state
+- Historical RI Lucky 3 Spot proves a genuine pre-draw printed 2x entitlement can exist.
+- Ordinary paid Keno Plus is not a substitute because its multiplier is random and costs an equal add-on wager.
+- Current `Kick Back with Keno Promotion` is visibly live, but exact current mechanics remain unrecovered; the homepage `buy 2 -> free ticket` teaser was traced to Mega Millions, not Keno.
+- Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents a strict ex-ante guarantee.
+
 ## Preserved lottery conclusions
 - Cash WinFall: genuine historical rolldown +EV, not a current strict guarantee.
 - Fixed raffle/scratch/sealed-pack standard takeovers materially closed; residual raffle takeover theorem exists but tested boards fail strict floor.
@@ -66,20 +64,24 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - Several Keno/Pick conditional overlays can reach/exceed 100% only in favorable modifier states; random modifier assignment, execution atomicity, liability limits or insufficient prelocked subsidy block terminal guarantee.
 - H173 conditional 4,560-play doubled RI 3-spot cover remains mathematically valid.
 - H175 4,336-play hybrid remains open pending universal `n3>=3` construction/impossibility.
-- Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents strict ex-ante guarantee.
-- Historical RI Lucky 3 Spot shows genuine pre-draw 2x printed entitlement.
-- H205 formally validates current electronic Keno and saved digital wagers but leaves distinct-line batch capacity unresolved.
+
+## Azerbaijan live branches
+- `4+4`: rare exceptional carryover states / materially better primary rules only.
+- `TezLoto`: bulk-history RNG/bias testing only upon reliable data recovery.
+- `Poz-Qazan`: remaining-prize conditional edge data-blocked by missing exact live unsold denominator/registration state.
+- `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Highest priority: recover explicit Keno multi-selection/panel capacity for one RI digital play slip / QR / Registered Ticketless transaction from official app help, screenshots, retailer/vendor terminal or SSVM documentation.**
-2. Search vendor/terminal manuals or procurement documents for Keno line counts, QR payload capacity, same-draw transaction batching and processing rate.
-3. If finite capacity is recovered, compute exact minimum QR scans, terminals and lawful participants required for H175 (4,336) and H173 (4,560), including cutoff and rejection branches.
-4. Continue recovery of exact `Kick Back with Keno Promotion` rules through genuinely new primary-source assets/retailer notices.
-5. Resume H191/H188 exact pruning with existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
-6. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
-7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest priority: recover numerical Rhode Island VIP Plus maximum daily/weekly/monthly Purchase Limits from current official help/UI/app assets/terms.**
+2. Recover explicit Keno cart capacity: independently selected same-draw Keno wagers per cart/checkout and any cart monetary/line cap.
+3. Recover Keno draw-break/cutoff duration, target-draw rollover behavior and whether a submitted large basket is accepted atomically/all-or-none.
+4. If finite capacity and limits are recovered, compute exact minimum carts/checkouts/participants and execution margin for H175 (4,336) and H173 (4,560).
+5. Continue recovery of exact `Kick Back with Keno Promotion` rules through genuinely new primary-source assets/retailer notices.
+6. Resume H191/H188 exact pruning with existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
+7. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
+8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H205_APPEND.md`.
-Latest case: `research/h205_ri_registered_ticketless_play_execution_bound.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H206_APPEND.md`.
+Latest case: `research/h206_ri_ilottery_cart_and_purchase_limit_gate.md`.
