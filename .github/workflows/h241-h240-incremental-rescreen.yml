@@ -1,0 +1,55 @@
+name: H241 H240 incremental exact rescreen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'data/derived/h240_new_witnesses.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: h241-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  chunk:
+    strategy:
+      fail-fast: false
+      matrix:
+        sector: [0,1,2,3,4,5,6,7,8,9,10]
+        chunk: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h241-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          path: data/derived/h241_chunk_shards/sector_*_chunk_*.json
+          if-no-files-found: error
+  merge:
+    needs: chunk
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h241-s*-c*
+          path: h241_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h241_download
+      - name: Commit H241 exact incremental result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h241_h240_incremental_exact_rescreen.json
+          git commit -m "H241 merge H240 incremental exact rescreen" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
