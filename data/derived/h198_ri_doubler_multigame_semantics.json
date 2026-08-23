@@ -1,0 +1,14 @@
+{
+  "packet": "H198",
+  "date": "2026-08-23",
+  "scope": "lottery-only",
+  "current_kick_back_confirmed": true,
+  "current_kick_back_exact_rules_recovered": false,
+  "historical_lucky3spot_predraw_doubler_confirmed": true,
+  "historical_multiple_games_same_ticket_doubled": true,
+  "proves_multiple_distinct_same_draw_selections_per_ticket": false,
+  "h175_same_draw_selections_required": 4336,
+  "execution_shortcut_valid": false,
+  "terminal_success": false,
+  "terminal_exhausted": false
+}
