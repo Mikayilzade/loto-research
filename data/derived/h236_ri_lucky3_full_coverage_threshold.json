@@ -1,0 +1,26 @@
+{
+  "packet": "H236",
+  "date": "2026-08-24",
+  "scope": "Rhode Island lottery Keno promotion / historical Lucky 3 Spot structure",
+  "game_structure": "choose 3 of 80; draw 20",
+  "full_space_lines": 82160,
+  "exact_match_counts": {
+    "0": 34220,
+    "1": 35400,
+    "2": 11400,
+    "3": 1140
+  },
+  "doubled_full_space_gross_formula": "2*(11400*P2 + 1140*P3)",
+  "strict_profit_condition": "10*P2 + P3 > 36.03508771929825 for $1 stake and payouts P2/P3",
+  "official_historical_promotion_facts": {
+    "eligible_game": "3-spot Keno",
+    "benefit": "winning prizes doubled",
+    "eligibility_visible_pre_draw": true,
+    "eligible_ticket_non_cancellable": true,
+    "ordinary_keno_general_rule": "same-day same-terminal cancellation before draw; multi-draw only before first draw",
+    "retailer_preprinting_prohibited": true
+  },
+  "current_2026_kick_back_status": "official homepage currently advertises Kick Back with Keno Promotion, but exact current promotion rules/mechanics were not recovered in this packet",
+  "guarantee_result": "NOT EXECUTABLE / NOT SUCCESS",
+  "reason": "A doubled full-space can be mathematically profitable for sufficiently strong 3-spot payouts, but the historical promotion did not establish a lawful executable way to obtain the doubled entitlement for every one of 82,160 distinct combinations; the qualifying message is selective, qualifying tickets cannot be cancelled, retailer preprinting is prohibited, and the promotion window/location are finite. Current Kick Back mechanics remain unrecovered, so no current guarantee may be inferred."
+}
