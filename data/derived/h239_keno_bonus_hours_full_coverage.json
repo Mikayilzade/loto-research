@@ -1,0 +1,34 @@
+{
+  "packet": "H239",
+  "date": "2026-08-24",
+  "status": "NOT SUCCESS",
+  "common_3spot": {
+    "total_lines": 82160,
+    "match_counts": {"0": 34220, "1": 35400, "2": 11400, "3": 1140}
+  },
+  "georgia_2026_bonus_hours": {
+    "base_wager": 1.0,
+    "prizes": {"2": 2.0, "3": 25.0},
+    "promotion_uplift": 0.30,
+    "full_space_cost": 82160.0,
+    "base_deterministic_gross": 51300.0,
+    "promo_deterministic_gross": 66690.0,
+    "deterministic_net": -15470.0,
+    "gross_return_ratio": 0.8117088607594937,
+    "break_even_total_multiplier": 1.6015594541910332,
+    "break_even_required_uplift": 0.6015594541910332
+  },
+  "north_carolina_2026_bonus_hours": {
+    "base_wager": 1.0,
+    "multiplier_required_cost_factor": 2.0,
+    "prizes": {"2": 2.0, "3": 27.0},
+    "promotion_uplift": 0.50,
+    "full_space_cost_with_multiplier": 164320.0,
+    "base_deterministic_gross": 53580.0,
+    "worst_branch_promo_gross": 80370.0,
+    "deterministic_net": -83950.0,
+    "gross_return_ratio": 0.48910662122687437,
+    "break_even_total_multiplier_over_base_payouts": 3.066816, 
+    "conclusion": "Rejected even under favorable interpretation of +50% applying to every winning prize in the lowest multiplier branch"
+  }
+}
