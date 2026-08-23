@@ -1,0 +1,54 @@
+name: H225-X3 survivor exact separators
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'data/derived/h241_h240_incremental_exact_rescreen.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: h225-x3-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  separate:
+    strategy:
+      fail-fast: false
+      matrix:
+        job: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43]
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h225_x3_survivor_separation --job ${{ matrix.job }} --time-limit 180
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x3-j${{ matrix.job }}
+          path: data/derived/h225_x3_separator_shards/job_*.json
+          if-no-files-found: error
+  merge:
+    needs: separate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x3-j*
+          path: h225_x3_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h225_x3_survivor_separation --merge-dir h225_x3_download
+      - name: Commit H225-X3 exact separator packet
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h225_x3_survivor_separation.json data/derived/h225_x3_new_witnesses.json
+          git commit -m "H225-X3 merge survivor exact separators" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
