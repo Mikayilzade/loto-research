@@ -1,0 +1,88 @@
+name: H234 exact H232 survivor separation
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h234_h232_first_survivor_exact_separation.py'
+      - 'data/derived/h232_exact_shift_csp_merged.json'
+      - '.github/workflows/h234-h232-survivor-separation.yml'
+  workflow_dispatch:
+concurrency:
+  group: h234-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - name: Validate H232 source certificate
+        run: |
+          PYTHONPATH=src python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('data/derived/h232_exact_shift_csp_merged.json')
+          d=json.loads(p.read_text())
+          assert d['packet']=='H232'
+          assert d['chunk_shards']==44
+          assert d['sector_shards']==11
+          assert d['quotient_coefficient_states_screened']==306450
+          assert d['exact_shift_surviving_coefficient_states']==306098
+          assert d['exact_surviving_shift_tuples']==139869763
+          assert d['all_general_cyclic_affine_designs_rejected_by_stored_witnesses'] is False
+          assert len(d['sectors'])==11
+          chunks=[c for s in d['sectors'] for c in s['chunks']]
+          assert len(chunks)==44
+          assert all(c['exact_shift_surviving_coefficient_states']>0 for c in chunks)
+          assert all(c['first_exact_survivors'] for c in chunks)
+          assert all(c['first_exact_survivors'][0]['first_shift_examples'] for c in chunks)
+          print('H234_PREFLIGHT_OK', len(chunks))
+          PY
+  separate:
+    needs: preflight
+    strategy:
+      fail-fast: false
+      matrix:
+        job: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43]
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - name: Exact unrestricted separator
+        run: PYTHONPATH=src python -m loto_research.h234_h232_first_survivor_exact_separation --job ${{ matrix.job }} --time-limit 300
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h234-job-${{ matrix.job }}
+          path: data/derived/h234_separator_shards/job_*.json
+          if-no-files-found: error
+  merge:
+    needs: separate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h234-job-*
+          path: h234_download
+          merge-multiple: false
+      - name: Strict merge
+        run: PYTHONPATH=src python -m loto_research.h234_h232_first_survivor_exact_separation --merge-dir h234_download
+      - name: Commit exact merged result and witnesses
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h234_h232_first_survivor_separation.json data/derived/h234_new_witnesses.json
+          git commit -m "H234 merged exact survivor separation result" || exit 0
+          git push origin HEAD:research-work
