@@ -1,0 +1,37 @@
+name: H216 bitset cut-bank enumeration
+
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h216_h212_bitset_cut_bank.py'
+      - '.github/workflows/h216-bitset-cut-bank.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  h216:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research-work
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy
+      - name: Run H216 exact bitset screen
+        run: PYTHONPATH=src python -m loto_research.h216_h212_bitset_cut_bank
+      - name: Commit exact result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/derived/h216_h212_bitset_survivors.json
+          if git diff --cached --quiet; then
+            echo 'No result change'
+          else
+            git commit -m 'H216 save exact H212 bitset survivor enumeration'
+            git push origin HEAD:research-work
+          fi
