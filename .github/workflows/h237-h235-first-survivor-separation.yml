@@ -51,4 +51,6 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/derived/h237_h235_first_survivor_separation.json data/derived/h237_new_witnesses.json
           git commit -m "H237 merge H235 survivor exact separators" || exit 0
+          git pull --rebase origin research-work
           git push origin HEAD:research-work
+# retrigger 2026-08-24 after audited H235 checkpoint
