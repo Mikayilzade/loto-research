@@ -11,25 +11,25 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H221 — H219 zero-survivor certificate theorem**.
+Latest completed lottery packet: **H222 — single-process exact H175 cut-bank screen**.
 
-### H221 result
-H221 formally audited whether a second master-MILP infeasibility certificate would still be needed if H219 returns zero survivors.
+### H222 result
+The authoritative H219 merged result was still absent at H222 start, so no zero-survivor or closure claim was available.
 
-Result: **no**. A schema-valid H219 `survivor_count=0` is itself an exact finite impossibility certificate for the entire H212-covered restricted diagonal family.
+H222 preserves H219's exact finite scientific predicate while removing its 36-fold repeated H212 orbit setup. It computes the 4,878 exact H185+H186 witness rows once, all 3,992 H212 A-orbit representatives once, and the exact `4878 x 3992` A-incidence matrix once, then evaluates all 36 normalized B/C classes in one process.
 
-Reason: H212's proved 128-element affine action reduces every normalized restricted candidate to one of exactly `36 * 3,992 = 143,712` classes. Every H219 rejection is caused by an exact explicit balanced `4+4+4+4+4` witness row with total incidence `n3<=2`; inverse symmetry transports that counterexample to every original candidate in the same orbit. Therefore zero survivors means every restricted candidate has an explicit counterexample. No second solver certificate is logically required.
+Coverage is unchanged: exactly `36 * 3992 = 143,712` H212-normalized restricted classes. The target result is `data/derived/h222_single_process_survivors.json`.
 
-This theorem is conditional only: at H221 time `data/derived/h219_vectorized_merged_survivors.json` is still absent, so the restricted family is **not yet closed**.
+At this checkpoint the H222 result file is pending. Therefore **no restricted-family closure and no universal H175 validation claim** is made yet.
 
 Files:
-- `research/h221_h219_zero_survivor_certificate_theorem.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H221_APPEND.md`
+- `src/loto_research/h222_single_process_vectorized_screen.py`
+- `.github/workflows/h222-single-process-screen.yml`
+- `research/h222_single_process_exact_h175_screen.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H222_APPEND.md`
 
-### Preserved H220/H219 execution state
-- H220 rechecked the required H219 merged artifact and found it absent; missing output is not evidence for zero survivors.
-- H219 exactly screens all `143,712` H212 normalized classes against `4,878` accumulated exact balanced-witness rows via 36 vectorized B/C shards.
-- A positive survivor count still requires exact `n3<=2` separation on every survivor; timeout never validates a design.
+### Preserved H221 certificate theorem
+A schema-valid exact screen with `survivor_count=0` over all 143,712 H212-normalized classes is itself a finite impossibility certificate for the entire H212-covered restricted diagonal family. No second master MILP is logically required.
 
 ### Preserved H175 mathematical state
 The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -42,8 +42,9 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - H212: affine-unit quotient `143,712` classes.
 - H214: exact joint H212+H191 quotient `143,523` classes.
 - H216/H217/H218: earlier exact-screen implementations/output pipelines; no authoritative merged closure result.
-- H219: authoritative exact vectorized screen; merged survivor output pending.
-- H221: proves zero H219 survivors would close the H212 restricted diagonal family without another MILP certificate.
+- H219: authoritative vectorized shard screen; merged result absent through H222 start.
+- H221: zero-survivor finite-certificate theorem.
+- H222: exact single-process replacement launched; result pending.
 - No universal construction or unrestricted-family impossibility proof exists yet.
 
 ### Preserved promotion/execution state
@@ -66,14 +67,14 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Check `data/derived/h219_vectorized_merged_survivors.json` first.**
-2. If H219 exists with `survivor_count=0`, validate its schema/counts and close the H212 restricted diagonal family immediately under H221; then expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
-3. If H219 survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
-4. If concrete H219 workflow/job failure evidence appears, repair only that component; do not restart H216/H217/H218 blindly.
+1. **Check `data/derived/h222_single_process_survivors.json` first; also accept a late valid H219 merged result if it appears.**
+2. If either exact full screen returns `survivor_count=0`, validate schema/counts and close the H212 restricted diagonal family immediately under H221; then expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
+3. If survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
+4. If concrete workflow/job failure evidence appears, repair only that component; do not restart H216/H217/H218 blindly.
 5. Reopen current `Kick Back with Keno` only on materially new primary evidence.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H221_APPEND.md`.
-Latest case: `research/h221_h219_zero_survivor_certificate_theorem.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H222_APPEND.md`.
+Latest case: `research/h222_single_process_exact_h175_screen.md`.
