@@ -11,167 +11,71 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed numbered lottery packet: **H240 — Missouri Club Keno Bonus Hours full-coverage upper-bound closure**.
+Latest completed numbered lottery packet: **H241 — Missouri Club Keno Bulls-Eye / Double Bulls-Eye Bonus Hours full-coverage upper-bound closure**.
 Latest completed exact family packet: **H235 — H234-augmented exact 44-way family rescreen**.
 Current exact family continuation: **H237 — 44-way unrestricted exact separation of actual H235 survivors** (launched/pending merge).
 
-### H232 preserved authoritative result
-- quotient coefficient states screened: **306,450**;
-- coefficient states retaining at least one globally consistent legal shift tuple: **306,098**;
-- exact surviving shift tuples against the old stored witness bank: **139,869,763**;
-- expanded witness instances: **24,574**;
-- general-signature unique witnesses: **15,572**.
-
-H232 did **not** close H225; its witness bank was only a necessary screen.
-
-### H234 authoritative result
-`data/derived/h234_h232_first_survivor_separation.json` and `data/derived/h234_new_witnesses.json` exist.
-
-- selected actual H232 survivor designs: **44** (one from every sector×chunk partition);
-- exact unrestricted balanced `n3<=2` counterexamples found: **44/44**;
-- inconclusive jobs: **0**;
-- unique balanced counterexamples: **44**;
-- `all_selected_designs_broken = true`.
-
-All 44 sampled actual H232 survivors are rigorously non-universal; this alone does not close the remaining family.
-
-### H235 authoritative result
-H235 feeds all 44 H234 exact counterexamples back into the H228/H232 exact family screen. Each witness is expanded through all affine symmetries `x -> u*x+v mod 16` with odd `u`, adding **5,632** balanced witness instances before full-signature deduplication.
-
-Authoritative merged output:
-- `data/derived/h235_h234_augmented_exact_shift_rescreen.json`
-
-Independent auxiliary audit (`H235-AUDIT`) verified all 44 chunks, all 11 sector totals, and decisive totals:
-- quotient coefficient states: **306,450 / 306,450**;
-- augmented witness instances before signature dedupe: **30,206**;
-- general-signature unique witnesses: **19,656**;
-- envelope survivor states: **306,450**;
-- exact shift-surviving coefficient states: **303,802**;
-- exact surviving legal shift tuples: **90,425,060**;
-- `h225_general_cyclic_affine_family_closed = false`.
-
-Thus H235 strengthens H232 but does **not** close H225:
-- coefficient survivors: `306,098 -> 303,802`;
-- shift tuples: `139,869,763 -> 90,425,060`.
-
-Auxiliary audit files:
-- `src/loto_research/h236_h235_certificate_audit.py` (legacy filename only; output packet is `H235-AUDIT`);
-- `data/derived/h236_h235_certificate_audit_summary.json`.
+### H232/H234/H235 exact-family state
+- H232 screened **306,450** quotient coefficient states; **306,098** retained at least one legal shift tuple; **139,869,763** exact legal shift tuples survived the then-current witness bank.
+- H234 selected 44 actual H232 survivor designs and found exact unrestricted balanced `n3<=2` counterexamples for **44/44**, with no inconclusive jobs.
+- H235 added all 44 H234 witnesses with affine symmetries and rescreened the full family: **303,802** coefficient states and **90,425,060** legal shift tuples still survive. H225 remains open.
 
 ### H237 — current exact family continuation
-H237 follows H235 positive survivors. It selects one actual shift-level H235 survivor from each of the 44 sector×chunk partitions and runs the unrestricted exact balanced `n3<=2` separator independently.
+Expected merged outputs:
+- `data/derived/h237_h235_first_survivor_separation.json`
+- `data/derived/h237_new_witnesses.json`
+
+As of H241 these outputs are still absent on `research-work`. Missing output proves nothing. Any returned witness is a rigorous new cut; timeout/no incumbent is inconclusive and never validation.
+
+### H236 — RI Lucky 3 Spot threshold
+Historical Rhode Island Lucky 3 Spot promotions created a real printed pre-draw entitlement doubling winning 3-spot prizes. For full 20/80 3-spot coverage, strict pre-tax profit under a true universal free 2X entitlement requires `10*P2 + P3 > 36.03508771929825`. The theorem is valid, but universal entitlement acquisition and finite-window execution were not established.
+
+### H238 — current RI Kick Back
+Current Rhode Island `Kick Back with Keno` remains **DATA-BLOCKED / NOT SUCCESS**. Ordinary Keno Plus remains random, not player-selectable 2X.
+
+### H239 — Georgia / North Carolina deterministic Bonus Hours
+- Georgia +30% full 3-spot coverage: **81.1709%** deterministic return; rejected.
+- North Carolina +50% with mandatory Multiplier: **48.9107%** guarantee-relevant return; rejected.
+
+### H240 — Missouri base Club Keno Bonus Hours
+All ordinary base Club Keno spot categories 1–10 were screened by exact full coverage under a deliberately stronger-than-real promotion granting universal +50% to every base prize. Best category: **3-spot at 93.6587%**. Base full-coverage class rejected.
+
+### H241 — Missouri Bulls-Eye / Double Bulls-Eye Bonus Hours
+Official Missouri rules establish Bulls-Eye doubles ticket cost, Double Bulls-Eye triples it, and Bonus Hours permits qualifying multi-draw Bulls-Eye / Double Bulls-Eye wagers while excluding Multiplier.
+
+Exact marked-number counting inside a fixed 20/80 draw:
+- Bulls-Eye: `C(1,r) C(19,m-r) C(60,s-m)`.
+- Double Bulls-Eye: `C(2,r) C(18,m-r) C(60,s-m)`.
+- payout uses ordinary base for r=0, Bulls-Eye for r=1, Double Bulls-Eye for r=2.
+
+A dominant upper bound grants **+50% to every payout with no exclusions**, stronger than actual Bonus Hours.
+
+Results across every spot 1–10:
+- best Bulls-Eye: **3-spot at 90.9749%**;
+- best Double Bulls-Eye: **9-spot at 98.0054%**;
+- therefore neither add-on can guarantee profit under the real weaker promotion.
 
 Files:
-- `src/loto_research/h237_h235_first_survivor_exact_separation.py`;
-- `.github/workflows/h237-h235-first-survivor-separation.yml`.
-
-Expected outputs when merged:
-- `data/derived/h237_h235_first_survivor_separation.json`;
-- `data/derived/h237_new_witnesses.json`.
-
-As of H240 the expected H237 merged output is still absent. Missing output proves nothing. Any returned witness is a rigorous new universal cut; timeout/no incumbent is inconclusive and never validation.
-
-### H236 — RI Lucky 3 Spot Keno promotion coverage theorem
-Historical Rhode Island `Lucky 3 Spot Keno` promotions created a real printed pre-draw entitlement that doubled winning prizes on qualifying **3-spot** tickets. Qualifying Lucky tickets were explicitly non-cancellable; retailer preprinting was prohibited.
-
-Exact full-space identity for one 20/80 3-spot draw:
-- all 3-subsets: **82,160**;
-- 0/3 matches: **34,220**;
-- 1/3 matches: **35,400**;
-- 2/3 matches: **11,400**;
-- 3/3 matches: **1,140**.
-
-If every $1 line had a true 2x entitlement, deterministic gross would be `2*(11,400*P2 + 1,140*P3)` and strict pre-tax profit requires:
-
-`10*P2 + P3 > 36.03508771929825`.
-
-This is a reusable exact promotion threshold, but **not an executable guarantee**: recovered historical rules do not establish a lawful/operational way to obtain the doubled entitlement for all 82,160 distinct combinations inside the finite promotion window/location, nor entitlement frequency/issuance control.
-
-Files:
-- `research/h236_ri_lucky3_full_coverage_threshold.md`;
-- `src/loto_research/h236_ri_lucky3_full_coverage_threshold.py`;
-- `data/derived/h236_ri_lucky3_full_coverage_threshold.json`;
-- `research/CHECKED_PROJECTS_AND_TESTS_H236_APPEND.md`.
-
-### H238 — current RI Kick Back with Keno primary-evidence recheck
-Fresh official-source search on 2026-08-24 establishes:
-- the official RI Lottery homepage currently advertises **Kick Back with Keno Promotion**;
-- current 2026 RI Keno rules still define ordinary Keno Plus as a separately purchased multiplier determined by a drawing immediately before the Keno draw (`No Plus`, `2X`, `3X`, `4X`, `5X`, `10X`), so ordinary Plus is not a deterministic player-selectable 2X entitlement;
-- current Keno Overtime is separately purchased and remains a random follow-on feature;
-- fresh searches of the official RILOT domain did **not** recover current Kick Back rules sufficient to establish exact deterministic entitlement value, transaction/ticket thresholds, caps, cancellation/refund interaction, issuance control, or cash-equivalent redemption.
-
-Therefore current Kick Back remains **DATA-BLOCKED / NOT SUCCESS**. Historical Lucky 3 mechanics from H236 may not be imported into the 2026 promotion.
-
-Files:
-- `research/h238_ri_kick_back_primary_evidence_recheck.md`;
-- `research/CHECKED_PROJECTS_AND_TESTS_H238_APPEND.md`.
-
-### H239 — deterministic Keno Bonus Hours full-coverage closure
-Two genuine operator-run deterministic payout-uplift promotions were tested exactly against full 20/80 3-spot coverage.
-
-Georgia 2026 KENO! Bonus Hours:
-- official promotion: every qualifying winning ticket in listed windows paid **30% above standard payout**;
-- current 3-spot base table: `$25` for 3/3 and `$2` for 2/3;
-- full-space cost: **$82,160**;
-- deterministic base gross: **$51,300**;
-- deterministic promo gross: **$66,690**;
-- net: **-$15,470**; return **81.1709%**;
-- exact break-even uplift would need to exceed **+60.1559%**.
-
-North Carolina 2026 Keno Bonus Hours:
-- official promotion: **+50%** on wins during qualifying Friday windows when Multiplier is added;
-- Multiplier doubles base ticket cost;
-- current 3-spot table: `$27` for 3/3 and `$2` for 2/3;
-- base deterministic gross: **$53,580**;
-- Multiplier-required full-space spend: **$164,320**;
-- even granting +50% in the guarantee-relevant lowest multiplier branch gives **$80,370**;
-- net: **-$83,950**; return **48.9107%**.
-
-Thus both deterministic Bonus Hours instances are **REJECTED for guaranteed-profit full 3-spot coverage**.
-
-Files:
-- `research/h239_keno_bonus_hours_full_coverage_closure.md`;
-- `data/derived/h239_keno_bonus_hours_full_coverage.json`;
-- `research/CHECKED_PROJECTS_AND_TESTS_H239_APPEND.md`.
-
-### H240 — Missouri Club Keno Bonus Hours full-coverage upper-bound closure
-Official Missouri Club Keno Bonus Hours uses a qualifying **10-draw single ticket** and advertises increased base prizes of **up to 50%**. Official materials exclude Multiplier wagers; historical/current-linked rules also exclude $1 base prizes and 10-of-10 from the increase.
-
-H240 tests all ordinary base Club Keno spot categories 1–10 by exact full combinatorial coverage. To obtain a decisive upper bound, it grants a hypothetical promotion stronger than the real one: **every base prize receives +50% with no exclusions**.
-
-Results:
-- all ten base spot categories remain below break-even under this dominant upper bound;
-- best category is **3-spot at 93.6587%** deterministic return;
-- required 10-draw full 3-spot coverage costs **$821,600**;
-- deterministic base gross over ten fully covered draws: **$513,000**;
-- hypothetical universal +50% gross: **$769,500**;
-- deterministic net even under the stronger-than-real promotion: **-$52,100**.
-
-Therefore Missouri Bonus Hours is **REJECTED for guaranteed-profit full coverage of every ordinary base Club Keno spot category 1–10**. Bulls-Eye / Double Bulls-Eye remain separate because they change price, payouts and state space.
-
-The Missouri retailer promotional-materials page currently labels Club Keno Bonus Hours as `Current`, but its linked flyer resolves to December 2025; H240 therefore closes the recurring mechanism mathematically and does not assert an executable August 2026 window.
-
-Files:
-- `research/h240_missouri_club_keno_bonus_hours_full_coverage.md`;
-- `src/loto_research/h240_missouri_bonus_hours_full_coverage.py`;
-- `data/derived/h240_missouri_bonus_hours_full_coverage.json`;
-- `research/CHECKED_PROJECTS_AND_TESTS_H240_APPEND.md`.
+- `research/h241_missouri_bullseye_bonus_hours_full_coverage.md`
+- `src/loto_research/h241_missouri_bullseye_bonus_hours_full_coverage.py`
+- `data/derived/h241_missouri_bullseye_bonus_hours_full_coverage.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H241_APPEND.md`
 
 ### Preserved restricted-family state
 - H224/H223/H222/H219 exact restricted outputs have not produced an authoritative closure result at this checkpoint.
 - H221 proves any schema-valid restricted exact screen with `survivor_count=0` over all 143,712 H212-normalized classes closes that restricted family without a second MILP.
 
 ## NEXT ACTION
-1. **Check H237 merged output first.** Missing output proves nothing.
-2. If H237 has new exact balanced witnesses, deduplicate them against H234 and feed only genuinely new cuts into the next 44-way H225 incremental exact rescreen.
-3. If any H237 jobs are inconclusive, retry only those jobs with a larger exact separator budget; never treat timeout/no incumbent as validation.
-4. If a later incremental family rescreen reaches zero exact shift-surviving coefficient states across all 306,450 quotient states, record exact closure of H225 and move to the next still-open lottery-specific class.
+1. **Check H237 merged output first.**
+2. If H237 has new exact balanced witnesses, deduplicate against H234 and feed only genuinely new cuts into the next 44-way H225 incremental exact rescreen.
+3. Retry only genuinely inconclusive H237 jobs with larger exact separator budgets; never treat timeout/no incumbent as validation.
+4. If a later incremental family rescreen reaches zero exact shift-surviving coefficient states across all 306,450 quotient states, record exact closure of H225.
 5. Accept any late schema-valid restricted exact zero-survivor result separately under H221.
-6. Reopen current `Kick Back with Keno` only on materially new **current primary evidence** establishing exact deterministic entitlement, qualifying spend/ticket constraints, cash-equivalent value, limits, cancellation interaction and issuance control.
-7. For future deterministic Keno payout-uplift promotions, apply H239/H240 exact full-coverage upper-bound screens before spending effort on execution feasibility.
-8. If H237 remains absent, next defensible non-duplicate packet: exact Missouri Bulls-Eye / Double Bulls-Eye full-space coverage under the Bonus Hours eligibility rules, including added cost and the Bulls-Eye draw state.
+6. Reopen RI Kick Back only on materially new current primary evidence.
+7. Missouri base/Bulls-Eye/Double Bulls-Eye Bonus Hours full-coverage variants are closed unless rules materially change.
+8. If H237 remains absent, move to the next non-duplicate lottery-specific nonlinear edge class from the audit ledger, prioritizing active deterministic overlays/rolldowns over already-closed additive full-coverage games.
 9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H240_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H241_APPEND.md`.
