@@ -19,27 +19,76 @@ from itertools import combinations_with_replacement
 from pathlib import Path
 import numpy as np
 
+from loto_research.h183_h180_symmetry_persistent_cuts import load_witness_bank as load_h183_bank
 from loto_research.h185_h180_affine_orbit_cut_acceleration import ODDS, load_bank as load_h185_bank
 from loto_research.h186_h185_mass_counterexample_packet import load as load_h186
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'data'/'derived'/'h226_general_coefficient_envelope.json'
+H184_DELTA=ROOT/'data'/'derived'/'h184_h183_new_witnesses.json'
 ORBIT_START=254
 ODD=tuple(int(x) for x in ODDS)
 COEFFS=tuple((a,b) for a in ODD for b in ODD)  # 64 blocks, each 16 shifts
 BC_SECTORS=tuple((be,ga) for i,be in enumerate(ODD) for ga in ODD[i:])
 
 
+_WITNESS_SOURCE='uninitialized'
+
+
+def _validate_balanced_bank(bank,expected):
+    if len(bank)!=expected:
+        raise ValueError(f'unexpected witness count {len(bank)} != {expected}')
+    for wi,w in enumerate(bank):
+        if len(w)!=5:
+            raise ValueError(f'witness {wi} has {len(w)} groups')
+        for gi,grp in enumerate(w):
+            vals=[int(x) for x in grp]
+            if len(vals)!=4 or len(set(vals))!=4 or any(x<0 or x>=16 for x in vals):
+                raise ValueError(f'witness {wi} group {gi} is not a balanced 4-subset')
+    return bank
+
+
+def _load_pre_h186_bank():
+    """Load H185 when intact; otherwise use a named, exact safe recovery subset.
+
+    The historical H185 blob in some research-work commits is corrupted. H232 does
+    not require those exact 297 witnesses: any balanced draws are valid necessary
+    tests for a universal n3>=3 design. The fallback therefore keeps the intact
+    H183 base plus H184 exact delta and lets H186 add its own verified witnesses.
+    It never fabricates or relabels H186 witnesses as historical H185 data.
+    """
+    global _WITNESS_SOURCE
+    try:
+        bank=_validate_balanced_bank(load_h185_bank(),297)
+        _WITNESS_SOURCE='h185_297'
+        return bank
+    except (ValueError, OSError, json.JSONDecodeError, zlib.error) as exc:
+        h183=_validate_balanced_bank(load_h183_bank(),254)
+        h184=json.loads(H184_DELTA.read_text())
+        if h184.get('packet')!='H184' or h184.get('base_cut_count')!=254 or h184.get('new_cut_count')!=1:
+            raise ValueError('invalid H184 recovery delta metadata') from exc
+        delta=_validate_balanced_bank(h184.get('witnesses',[]),1)
+        bank=h183+delta
+        _validate_balanced_bank(bank,255)
+        _WITNESS_SOURCE='h183_254_plus_h184_1_recovery'
+        return bank
+
+
+def witness_source():
+    return _WITNESS_SOURCE
+
+
 def expand_witnesses():
-    h185=load_h185_bank(); h186=load_h186()
+    pre= _load_pre_h186_bank(); h186=load_h186()
     h186_w=[x['witness'] for x in h186['start_witnesses']]
     h186_w += [x['witness'] for x in h186['second_witnesses']]
-    ws=[h185[i] for i in range(ORBIT_START)]
-    for w in list(h185[ORBIT_START:])+h186_w:
+    _validate_balanced_bank(h186_w,189)
+    ws=[pre[i] for i in range(ORBIT_START)]
+    for w in list(pre[ORBIT_START:])+h186_w:
         for u in ODD:
             for v in range(16):
                 ws.append([[(u*int(x)+v)%16 for x in grp] for grp in w])
-    return np.asarray(ws,dtype=np.int16),len(h185),len(h186_w)
+    return np.asarray(ws,dtype=np.int16),len(pre),len(h186_w)
 
 
 def support_hits_general(W,i,j,k,a,b,c):
@@ -126,6 +175,7 @@ def run():
         'expanded_witness_instances':int(len(W)),
         'general_signature_unique_witnesses':int(rows),
         'h185_stored':int(h185_n),'h186_witnesses':int(h186_n),
+        'witness_source':witness_source(),
         'coefficient_blocks':64,'shifts_per_block':16,
         'coefficient_multisets':len(patterns),
         'bc_sectors':len(BC_SECTORS),
