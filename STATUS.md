@@ -11,22 +11,25 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H219 — vectorized exact H175 B/C shard screen**.
+Latest completed lottery packet: **H221 — H219 zero-survivor certificate theorem**.
 
-### H219 result
-At run start `data/derived/h218_h217_merged_survivors.json` was still absent, so no H218 survivor count or closure claim was available.
+### H221 result
+H221 formally audited whether a second master-MILP infeasibility certificate would still be needed if H219 returns zero survivors.
 
-H219 keeps the exact H217 scientific predicate but removes its expensive per-row Python-bigint threshold-mask construction. For each of 36 normalized B/C shards it evaluates the full `4878 x 3992` exact incidence matrix directly with NumPy and requires total incidence `>=3` on every stored balanced-witness row. `uint8` is exact because total incidence is at most 6.
+Result: **no**. A schema-valid H219 `survivor_count=0` is itself an exact finite impossibility certificate for the entire H212-covered restricted diagonal family.
 
-Coverage remains exactly `36 * 3992 = 143,712` H212 normalized classes against the same 4,878 exact H185+H186 witness rows. The strict merger requires all 36 shards and writes `data/derived/h219_vectorized_merged_survivors.json` only after schema/count checks.
+Reason: H212's proved 128-element affine action reduces every normalized restricted candidate to one of exactly `36 * 3,992 = 143,712` classes. Every H219 rejection is caused by an exact explicit balanced `4+4+4+4+4` witness row with total incidence `n3<=2`; inverse symmetry transports that counterexample to every original candidate in the same orbit. Therefore zero survivors means every restricted candidate has an explicit counterexample. No second solver certificate is logically required.
+
+This theorem is conditional only: at H221 time `data/derived/h219_vectorized_merged_survivors.json` is still absent, so the restricted family is **not yet closed**.
 
 Files:
-- `src/loto_research/h219_vectorized_bc_shards.py`
-- `.github/workflows/h219-vectorized-bc-shards.yml`
-- `research/h219_vectorized_exact_h175_shards.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H219_APPEND.md`
+- `research/h221_h219_zero_survivor_certificate_theorem.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H221_APPEND.md`
 
-At this checkpoint the H219 merged survivor file is pending; therefore **no restricted-family closure and no universal H175 validation claim** is made.
+### Preserved H220/H219 execution state
+- H220 rechecked the required H219 merged artifact and found it absent; missing output is not evidence for zero survivors.
+- H219 exactly screens all `143,712` H212 normalized classes against `4,878` accumulated exact balanced-witness rows via 36 vectorized B/C shards.
+- A positive survivor count still requires exact `n3<=2` separation on every survivor; timeout never validates a design.
 
 ### Preserved H175 mathematical state
 The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -34,15 +37,14 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - H185: 297 stored exact witnesses; 4,878 active unique valid rows after safe affine-orbit expansion.
 - H186: 189 additional explicit exact counterexamples across two rejected candidates.
 - H188: globally safe normalized representative count `12,289,536`.
-- H191: stabilizer-aware extra S3 valid only in the exceptional A sector.
 - H210: residual translation quotient `768,096` classes.
 - H211: combined translation/stabilizer count `767,361`.
 - H212: affine-unit quotient `143,712` classes.
 - H214: exact joint H212+H191 quotient `143,523` classes.
-- H216: threshold-bitset equivalent screen; monolithic output absent.
-- H217/H218: exact 36-way sharding + strict merge pipeline; merged output absent at H219 start.
-- H219: exact vectorized 36-way replacement launched; merged survivor output pending.
-- No universal construction or restricted-family impossibility proof exists yet.
+- H216/H217/H218: earlier exact-screen implementations/output pipelines; no authoritative merged closure result.
+- H219: authoritative exact vectorized screen; merged survivor output pending.
+- H221: proves zero H219 survivors would close the H212 restricted diagonal family without another MILP certificate.
+- No universal construction or unrestricted-family impossibility proof exists yet.
 
 ### Preserved promotion/execution state
 - Current RI `Kick Back with Keno Promotion` is officially visible, but exact current mechanics remain unrecovered; do not repeat H209's exhausted searches without new evidence.
@@ -64,14 +66,14 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Check `data/derived/h219_vectorized_merged_survivors.json` first. Do not restart H216/H217/H218 blindly.**
-2. If H219 exists with zero survivors, close the H212 normalized restricted diagonal family against the accumulated cut bank, then confirm whether a solver-certified family-level infeasibility statement is still required before expanding to general cyclic-affine `z=a*x+b*y+c (mod16)`.
-3. If survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
-4. If H219 workflow fails, repair only the concrete failed shard/job.
+1. **Check `data/derived/h219_vectorized_merged_survivors.json` first.**
+2. If H219 exists with `survivor_count=0`, validate its schema/counts and close the H212 restricted diagonal family immediately under H221; then expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
+3. If H219 survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
+4. If concrete H219 workflow/job failure evidence appears, repair only that component; do not restart H216/H217/H218 blindly.
 5. Reopen current `Kick Back with Keno` only on materially new primary evidence.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H219_APPEND.md`.
-Latest case: `research/h219_vectorized_exact_h175_shards.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H221_APPEND.md`.
+Latest case: `research/h221_h219_zero_survivor_certificate_theorem.md`.
