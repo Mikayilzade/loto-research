@@ -128,3 +128,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Push after workflow installation so H233 is guaranteed to receive a push event.
