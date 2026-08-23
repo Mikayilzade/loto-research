@@ -1,0 +1,37 @@
+name: H213 cut-bank enumeration
+
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h213_h212_cut_bank_enumeration.py'
+      - '.github/workflows/h213-cut-bank.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  h213:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research-work
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy
+      - name: Run H213 exact finite screen
+        run: PYTHONPATH=src python -m loto_research.h213_h212_cut_bank_enumeration
+      - name: Commit exact result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/derived/h213_h212_cut_bank_survivors.json
+          if git diff --cached --quiet; then
+            echo 'No result change'
+          else
+            git commit -m 'H213 save exact H212 cut-bank survivor enumeration'
+            git push origin HEAD:research-work
+          fi
