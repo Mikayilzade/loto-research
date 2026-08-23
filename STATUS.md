@@ -11,30 +11,25 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H201 — RI Keno parallel-account execution gate**.
+Latest completed lottery packet: **H202 — RI `Kick Back with Keno` promotion attribution gate**.
 
-### H201 major result
-H201 continued the H173/H175 Rhode Island Keno bulk-execution branch and closed the easiest parallelization shortcuts with current official rules.
+### H202 major result
+H202 attacked the highest-priority live Rhode Island Keno promotion branch.
 
-Official RI Lottery FAQ now explicitly establishes that, although a player may use the app on multiple devices, a **single VIP Club account may not purchase iLottery games on more than one device at a time**.
+Fresh official-site evidence on 2026-08-23 confirms that **`Kick Back with Keno Promotion` is currently live/active** in the RI Lottery promotional carousel.
 
-Current iLottery account terms additionally establish:
-- account access/use is limited to the registered authorized user;
-- credentials may not be shared;
-- one player may not open more than one iLottery account;
-- purchasers must be KYC-verified and physically located in Rhode Island;
-- purchase limits, delay and refusal branches remain available to the Lottery.
+The current official homepage also exposes the copy **`Get a free ticket when you buy 2`**, but following that live official link resolves to the **Mega Millions** purchase page, not Keno or a Keno promotion-rules page. Therefore this phrase cannot be treated as evidence of a deterministic Keno `buy 2 -> free 1` subsidy.
 
-Therefore:
-- one player cannot safely accelerate H173/H175 by simultaneous purchases from many phones on one account;
-- one player cannot lawfully create/control many accounts as a parallel execution farm;
-- a true multi-person syndicate remains an operational hypothesis, but there is no official Keno atomic group-purchase mechanism and every account remains independently exposed to limits/delay/refusal.
+Official-domain searches did not recover the exact current `Kick Back with Keno` rule text, so dates, eligible spot types/wagers, deterministic-vs-random award, same-draw ownership, retailer/iLottery channel, caps, Plus/Overtime compatibility and disqualification/cancellation terms remain unresolved.
 
-The official Group Play tooling recovered is framed for Powerball and Mega Millions, not Keno, so it does not certify all-basket H173/H175 execution.
+New non-repeat rule: **do not use the homepage `Get a free ticket when you buy 2` teaser in Keno economics unless a new official source explicitly associates it with Keno.**
 
 Files:
-- `research/h201_ri_keno_parallel_account_execution_gate.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H201_APPEND.md`
+- `research/h202_ri_kick_back_promo_attribution_gate.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H202_APPEND.md`
+
+### Preserved H201 result
+Official RI Lottery rules close the easiest single-player parallelization shortcuts for H173/H175: one VIP Club account cannot purchase iLottery games from multiple devices simultaneously; credentials cannot be shared; one player cannot lawfully operate multiple iLottery accounts. A true multi-person Keno syndicate remains an operational hypothesis, but no atomic Keno group-purchase mechanism is documented and every account remains independently exposed to limits/delay/refusal.
 
 ### Preserved H200 result
 Rhode Island iLottery has real draw-game cart purchases, favorites/replay and retailer QR play slips, so H195's old assumption of 4,336 fully independent manual Buy Now actions is withdrawn. However Keno-specific cart capacity/atomicity remain unproved and current terms reserve unannounced purchase limits and processing denial.
@@ -64,10 +59,11 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - H199 closes the `$150 maximum => 150 distinct same-draw selections` shortcut.
 - H200 proves real draw-game cart/replay/QR infrastructure, but discretionary purchase-limit and processing-denial terms block treating it as guaranteed H173/H175 acquisition.
 - H201 closes single-player multi-device and multi-account parallelization as guaranteed RI Keno bulk-execution shortcuts; only a true multi-person syndicate remains operationally open.
+- H202 confirms `Kick Back with Keno` is live but rejects attribution of the current homepage `buy 2 -> free ticket` teaser to Keno; exact promo terms remain data-blocked.
 
 ## NEXT ACTION
-1. **Highest live priority: recover exact official mechanics for active `Kick Back with Keno Promotion`.** Determine dates, deterministic/random award, eligible wager/spot types, retailer vs iLottery, caps, cancellation/disqualification and whether any entitlement is known before the draw.
-2. Continue Keno-specific cart/QTY/QR capacity work, now including whether a lawful multi-person syndicate can partition and verify all 4,336/4,560 selections before one draw under current purchase limits.
+1. **Highest live priority: recover the exact `Kick Back with Keno Promotion` detail/rules endpoint through a genuinely new route**: retailer materials, official promo-detail endpoints, archived/current official assets, or direct primary-source indexed documents. Do not repeat generic title searches unless new indexing appears.
+2. Continue Keno-specific cart/QTY/QR capacity work, including whether a lawful multi-person syndicate can partition and verify all 4,336/4,560 selections before one draw under current purchase limits.
 3. Search retailer-terminal training/manual material for QR/digital-slip capacity, replay/batch functions and whether one scan can encode multiple independently specified Keno selections for the same draw.
 4. Resume H191/H188 exact pruning in parallel using existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
 5. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
@@ -75,5 +71,5 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H201_APPEND.md`.
-Latest case: `research/h201_ri_keno_parallel_account_execution_gate.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H202_APPEND.md`.
+Latest case: `research/h202_ri_kick_back_promo_attribution_gate.md`.
