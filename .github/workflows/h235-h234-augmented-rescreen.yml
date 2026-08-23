@@ -1,0 +1,57 @@
+name: H235 H234-augmented exact rescreen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h235_h234_augmented_exact_shift_rescreen.py'
+      - 'data/derived/h234_new_witnesses.json'
+      - '.github/workflows/h235-h234-augmented-rescreen.yml'
+  workflow_dispatch:
+concurrency:
+  group: h235-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  shard:
+    strategy:
+      fail-fast: false
+      matrix:
+        sector: [0,1,2,3,4,5,6,7,8,9,10]
+        chunk: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h235_h234_augmented_exact_shift_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h235-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          path: data/derived/h235_chunk_shards/sector_*_chunk_*.json
+          if-no-files-found: error
+  merge:
+    needs: shard
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h235-s*-c*
+          path: h235_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h235_h234_augmented_exact_shift_rescreen --merge-dir h235_download
+      - name: Commit H235 merged result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h235_h234_augmented_exact_shift_rescreen.json
+          git commit -m "H235 merged H234-augmented exact rescreen" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
