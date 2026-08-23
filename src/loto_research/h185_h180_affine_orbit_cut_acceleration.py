@@ -24,7 +24,14 @@ ROOT=Path(__file__).resolve().parents[2]
 BANK=ROOT/'data'/'derived'/'h185_h180_witness_bank.zlib.b64'
 
 def load_bank():
-    return json.loads(zlib.decompress(base64.b64decode(BANK.read_text().strip())))
+    # The bank is text Base64. Historical commits may omit terminal '=' padding;
+    # tolerate that representation while still letting zlib/json validate payload.
+    s=''.join(BANK.read_text().split())
+    s += '=' * (-len(s) % 4)
+    bank=json.loads(zlib.decompress(base64.b64decode(s, validate=True)))
+    if len(bank) != 297:
+        raise ValueError(f'unexpected H185 witness count: {len(bank)} != 297')
+    return bank
 
 def layer_hits(w,support):
     i,j,k=support
