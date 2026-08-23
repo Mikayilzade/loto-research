@@ -11,25 +11,25 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H222 — single-process exact H175 cut-bank screen**.
+Latest completed lottery packet: **H223 — streaming exact H175 restricted-family screen**.
 
-### H222 result
-The authoritative H219 merged result was still absent at H222 start, so no zero-survivor or closure claim was available.
+### H223 result
+H222's exact result file was still absent at H223 start, so no closure claim was available. H223 therefore expanded the packet rather than merely polling again.
 
-H222 preserves H219's exact finite scientific predicate while removing its 36-fold repeated H212 orbit setup. It computes the 4,878 exact H185+H186 witness rows once, all 3,992 H212 A-orbit representatives once, and the exact `4878 x 3992` A-incidence matrix once, then evaluates all 36 normalized B/C classes in one process.
+H223 independently implements the same exact finite cut-bank predicate over all `143,712` H212-normalized restricted H175 classes and all `4,878` exact balanced witness rows, but evaluates A candidates in bounded blocks of 256. It changes execution shape, not mathematics.
 
-Coverage is unchanged: exactly `36 * 3992 = 143,712` H212-normalized restricted classes. The target result is `data/derived/h222_single_process_survivors.json`.
+The H223 workflow also raises timeout to 120 minutes and rebases before pushing the result, reducing a branch-advance push-conflict failure mode present in earlier long-running workflows.
 
-At this checkpoint the H222 result file is pending. Therefore **no restricted-family closure and no universal H175 validation claim** is made yet.
+Target: `data/derived/h223_streaming_survivors.json`. At this checkpoint the result is pending. Missing output remains inconclusive.
 
 Files:
-- `src/loto_research/h222_single_process_vectorized_screen.py`
-- `.github/workflows/h222-single-process-screen.yml`
-- `research/h222_single_process_exact_h175_screen.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H222_APPEND.md`
+- `src/loto_research/h223_streaming_exact_h175_screen.py`
+- `.github/workflows/h223-streaming-screen.yml`
+- `research/h223_streaming_exact_h175_screen.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H223_APPEND.md`
 
 ### Preserved H221 certificate theorem
-A schema-valid exact screen with `survivor_count=0` over all 143,712 H212-normalized classes is itself a finite impossibility certificate for the entire H212-covered restricted diagonal family. No second master MILP is logically required.
+A schema-valid exact full screen with `survivor_count=0` over all 143,712 H212-normalized classes is itself a finite impossibility certificate for the entire H212-covered restricted diagonal family. No second master MILP is required.
 
 ### Preserved H175 mathematical state
 The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -41,10 +41,9 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - H211: combined translation/stabilizer count `767,361`.
 - H212: affine-unit quotient `143,712` classes.
 - H214: exact joint H212+H191 quotient `143,523` classes.
-- H216/H217/H218: earlier exact-screen implementations/output pipelines; no authoritative merged closure result.
-- H219: authoritative vectorized shard screen; merged result absent through H222 start.
+- H219/H222: exact full-screen implementations; authoritative result files absent through H223 start.
 - H221: zero-survivor finite-certificate theorem.
-- H222: exact single-process replacement launched; result pending.
+- H223: independent block exact screen launched; result pending.
 - No universal construction or unrestricted-family impossibility proof exists yet.
 
 ### Preserved promotion/execution state
@@ -67,14 +66,14 @@ The unresolved H175 4,336-play doubled RI 3-spot hybrid still requires universal
 - `Beşdə 5`, `Super Keno`, `ONLOTO`: ordinary/full-space screens negative.
 
 ## NEXT ACTION
-1. **Check `data/derived/h222_single_process_survivors.json` first; also accept a late valid H219 merged result if it appears.**
-2. If either exact full screen returns `survivor_count=0`, validate schema/counts and close the H212 restricted diagonal family immediately under H221; then expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
+1. **Check `data/derived/h223_streaming_survivors.json` first; also accept late schema-valid H222/H219 full-screen results.**
+2. If any exact full screen returns `survivor_count=0`, validate schema/counts and close the H212 restricted diagonal family immediately under H221; then expand to general cyclic-affine `z=a*x+b*y+c (mod16)` while reusing accumulated witnesses.
 3. If survivors remain, run exact `n3<=2` separation only on those survivors; timeout never validates a design.
-4. If concrete workflow/job failure evidence appears, repair only that component; do not restart H216/H217/H218 blindly.
+4. If H223 also fails operationally, inspect concrete workflow/job evidence before changing implementation again; do not blindly restart H216-H222.
 5. Reopen current `Kick Back with Keno` only on materially new primary evidence.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H222_APPEND.md`.
-Latest case: `research/h222_single_process_exact_h175_screen.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H223_APPEND.md`.
+Latest case: `research/h223_streaming_exact_h175_screen.md`.
