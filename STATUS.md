@@ -11,30 +11,38 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H198 — RI doubler multi-game semantics / Kick Back recovery**.
+Latest completed lottery packet: **H199 — RI Keno ticket-price semantics / execution bound**.
 
-### H198 major result
-Fresh official Rhode Island Lottery pages still list **`Kick Back with Keno Promotion`** as a current promotion in August 2026, but its exact public rules/landing payload remain unrecovered from indexed/static routes.
+### H199 major result
+H199 tests the earlier optimistic interpretation that Rhode Island's current `$150` maximum Keno Ticket / Registered Ticketless Play price might imply capacity for 150 independent `$1` selections in one draw.
 
-H198 also resolves a tempting execution shortcut from historical Lucky 3 Spot doubler rules. Official 2024/2025 rules state that when a qualifying Lucky 3 Spot message appears on a ticket containing **multiple Keno games**, eligible wins for all games on that ticket may be doubled. This confirms that one printed pre-draw 2x entitlement can apply across multiple Keno games on a ticket.
+The 2026 official Keno rules instead state:
+- single-draw wager options are `$1/$2/$5/$10`;
+- the same wager may be played for up to **15 consecutive draws**;
+- base maximum Ticket / Registered Ticketless Play price is **$150**;
+- Plus or Overtime raises the maximum to `$300`; both together to `$450`.
 
-However, RI's current Keno interface separately exposes `Consecutive games`, and the historical rules do **not** state that thousands of independently specified selections for one single draw can be packaged on one ticket. H173/H175 require all constituent selections to face the same 20-number draw. Therefore multi-game/consecutive-draw language does not solve the H175 same-draw throughput gate.
+The base ceiling is exactly `$10 × 15 = $150`. Thus the maximum-price clause is fully explained by one maximum-size wager repeated across the maximum consecutive-draw count. It is **not evidence for 150 distinct same-draw selections**.
 
-A separate homepage phrase `Get a free ticket when you buy 2` was tested and must not be attributed to Kick Back Keno: its public link resolves to Mega Millions.
+Consequences:
+- H193's former `4,336/$150 ≈ 29 tickets` execution inference remains withdrawn and is now rejected on direct official-rule semantics.
+- H194/H195/H198 remain intact: consecutive games/draws and historical `multiple games on one ticket` wording cannot substitute for thousands of independently specified selections facing one common 20-number draw.
+- Registered Ticketless Play is governed by the same current Keno rules; no authoritative bulk distinct-selection basket/API capacity was recovered.
+- The current official homepage still lists `Kick Back with Keno Promotion`, but exact mechanics remain unrecovered; no subsidy is inferred from the title.
 
 Files:
-- `research/h198_ri_doubler_multigame_semantics_and_kickback_recovery.md`
-- `data/derived/h198_ri_doubler_multigame_semantics.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H198_APPEND.md`
+- `research/h199_ri_keno_ticket_price_semantics_and_execution_bound.md`
+- `data/derived/h199_ri_keno_ticket_price_semantics.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H199_APPEND.md`
+
+### Preserved H198 result
+Current `Kick Back with Keno Promotion` is officially listed as live/current in August 2026, but exact public mechanics remain unresolved. Historical Lucky 3 Spot rules prove pre-draw 2x entitlement and multi-game-ticket applicability, but not same-draw bulk distinct-selection packaging.
 
 ### Preserved H197 result
-The current Rhode Island Lottery **50% First-Time Deposit Match** is a genuine Keno-eligible subsidy but capped at **$50**. Against H173's $4,560 ordinary 3-spot basket, maximum bonus leaves about **-$2,010 guaranteed** without a true deterministic 2x overlay. It cannot substitute for the missing doubler.
+The current Rhode Island Lottery **50% First-Time Deposit Match** is a genuine Keno-eligible subsidy but capped at **$50**. Against H173's $4,560 ordinary 3-spot basket, maximum bonus leaves about **-$2,010 guaranteed** without a true deterministic 2x overlay.
 
 ### Preserved H196 result
-Fresh official RI pages showed `Kick Back with Keno Promotion`, but exact public rules remained unrecovered. Even an optimistic deterministic `buy 2, get 1 free` Keno subsidy would raise H173 ordinary floor only to **82.236825%**, insufficient without another nonlinear benefit such as a pre-draw prize multiplier.
-
-### Preserved H195 result
-Current iKeno exposes a single selection/amount/consecutive-games/options -> `Buy Now` flow with no visible Keno `QTY` or `Add to cart`, unlike Mega Millions. H175 would require 4,336 independently specified selections, implying 18.0667 completed submissions/sec over a full 240-second interval under the public flow. This materially weakens execution but is not a hard impossibility proof.
+Even an optimistic deterministic `buy 2, get 1 free` Keno subsidy would raise H173 ordinary floor only to **82.236825%**, insufficient without another nonlinear benefit such as a pre-draw prize multiplier.
 
 ### Preserved H175/H191 mathematical state
 The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -55,18 +63,17 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - H175 4,336-play hybrid remains open pending universal `n3>=3` construction/impossibility.
 - Michigan current pre-draw multiplier architecture exists but random ticket tagging prevents strict ex-ante guarantee.
 - Historical RI Lucky 3 Spot shows genuine pre-draw 2x printed entitlement; H198 confirms multi-game ticket applicability but not same-draw bulk-selection packaging.
-- H197 closes current RI first-deposit match as a standalone replacement for the missing 2x overlay; reopen only if cap/terms materially improve or a much smaller deterministic conversion cover is found.
+- H199 closes the `$150 maximum => 150 distinct same-draw selections` shortcut; ticket-price arithmetic cannot establish bulk execution.
 
 ## NEXT ACTION
-1. **Highest live priority remains recovery of exact official rules/landing payload for active `Kick Back with Keno Promotion`.** Determine dates, deterministic/random award, eligible wager/spot types, retailer vs iLottery, caps, cash/bonus nature, cancellation/disqualification and whether entitlement is known/vested before draw.
-2. Search authoritative retailer-terminal / playslip / registered-ticketless documentation for exact **same-draw distinct selection capacity**. H198 closes the invalid shortcut from historical `multiple games on one ticket` wording.
-3. Specifically test whether current Kick Back includes a **pre-draw multiplier** or combines a free-ticket/rebate with multiplier value; H196 closes simple buy-2/get-1 alone and H197 closes the $50 first-deposit match as substitutes for H173's doubler.
-4. Recover authoritative cutoff/throughput/rate-limit evidence. H195 establishes a conservative public-flow requirement of 18.07 independent H175 submissions/sec over 240 seconds; do not call execution impossible without a hard cap/prohibition.
-5. Resume H191/H188 exact pruning in parallel using existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
-6. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
-7. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+1. **Highest live priority: obtain direct authoritative evidence for retailer-terminal or Registered Ticketless Play same-draw distinct-selection capacity.** Search retailer training manuals, terminal guides, playslip documentation, replay/batch functions, ticket examples and iLottery purchase/API documentation. Do not infer capacity from maximum ticket price.
+2. Continue recovery of exact official rules/landing payload for active `Kick Back with Keno Promotion`; determine dates, deterministic/random award, eligible wager/spot types, retailer vs iLottery, caps, cancellation/disqualification and whether any entitlement is known before the draw.
+3. Recover authoritative cutoff/throughput/rate-limit evidence. H195's public-flow observation remains a conservative execution warning, but do not call execution impossible without a hard cap/prohibition.
+4. Resume H191/H188 exact pruning in parallel using existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
+5. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
+6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H198_APPEND.md`.
-Latest case: `research/h198_ri_doubler_multigame_semantics_and_kickback_recovery.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H199_APPEND.md`.
+Latest case: `research/h199_ri_keno_ticket_price_semantics_and_execution_bound.md`.
