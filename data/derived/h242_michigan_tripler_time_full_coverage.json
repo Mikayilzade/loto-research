@@ -1,0 +1,27 @@
+{
+  "date": "2026-08-24",
+  "game": "Michigan Club Keno",
+  "promotion": "August 2026 Tripler Time",
+  "draw_model": "20 of 80",
+  "wager_per_line": 1,
+  "rows": [
+    {"spot":1,"combinations":80,"base_gross":40,"base_return":0.5,"universal_doubler_return":1.0,"universal_tripler_return":1.5},
+    {"spot":2,"combinations":3160,"base_gross":2090,"base_return":0.6613924050632911,"universal_doubler_return":1.3227848101265822,"universal_tripler_return":1.9841772151898733},
+    {"spot":3,"combinations":82160,"base_gross":53580,"base_return":0.6521421616358325,"universal_doubler_return":1.304284323271665,"universal_tripler_return":1.9564264849074975},
+    {"spot":4,"combinations":1581580,"base_gross":1027140,"base_return":0.6494391684265102,"universal_doubler_return":1.2988783368530203,"universal_tripler_return":1.9483175052795305},
+    {"spot":5,"combinations":24040016,"base_gross":15624840,"base_return":0.6499513145082765,"universal_doubler_return":1.299902629016553,"universal_tripler_return":1.9498539435248294},
+    {"spot":6,"combinations":300500200,"base_gross":194700030,"base_return":0.64791980171727,"universal_doubler_return":1.29583960343454,"universal_tripler_return":1.9437594051518101},
+    {"spot":7,"combinations":3176716400,"base_gross":2074346280,"base_return":0.6529844086806113,"universal_doubler_return":1.3059688173612225,"universal_tripler_return":1.9589532260418339},
+    {"spot":8,"combinations":28987537150,"base_gross":18768706350,"base_return":0.6474750253144566,"universal_doubler_return":1.294950050628913,"universal_tripler_return":1.9424250759433697},
+    {"spot":9,"combinations":231900297200,"base_gross":150287300480,"base_return":0.6480685979905678,"universal_doubler_return":1.2961371959811356,"universal_tripler_return":1.9442057939717035},
+    {"spot":10,"combinations":1646492110120,"base_gross":872068915126,"base_return":0.5296526535207275,"universal_doubler_return":1.059305307041455,"universal_tripler_return":1.5889579605621826}
+  ],
+  "key_result": {
+    "universal_free_doubler_would_profit_spots": [2,3,4,5,6,7,8,9,10],
+    "universal_free_tripler_would_profit_spots": [1,2,3,4,5,6,7,8,9,10],
+    "actual_promotion_entitlement_is_random_ticket_message": true,
+    "deterministic_entitlement_acquisition_proven": false,
+    "lawful_post_print_selective_cancellation_proven": false,
+    "terminal_success": false
+  }
+}
