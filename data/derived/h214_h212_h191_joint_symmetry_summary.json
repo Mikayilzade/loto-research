@@ -1,0 +1,14 @@
+{
+  "packet": "H214",
+  "scope": "H175 restricted diagonal family",
+  "H212_A_orbits": 3992,
+  "exceptional_a15_A_orbits": 9,
+  "generic_A_orbits": 3983,
+  "generic_BC_classes": 36,
+  "exceptional_S3_BC_classes": 15,
+  "H212_representatives": 143712,
+  "H214_joint_representatives": 143523,
+  "saving_vs_H212": 189,
+  "saving_fraction": 0.0013151319985804944,
+  "conclusion": "Joint H212 affine-unit plus H191 exceptional-S3 quotient is safe but only marginally improves the restricted-family count. Universal n3>=3 remains unresolved."
+}
