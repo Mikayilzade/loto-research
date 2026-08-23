@@ -1,0 +1,17 @@
+{
+  "packet": "H225-X1",
+  "legacy_packet_label": "H240",
+  "legacy_merged_file": "data/derived/h240_h235_survivor_separation.json",
+  "source_packet": "H235",
+  "selected_actual_designs": 44,
+  "counterexamples_found": 44,
+  "inconclusive_jobs": 0,
+  "unique_balanced_counterexamples": 44,
+  "duplicates_against_h234": 0,
+  "genuinely_new_witnesses": 44,
+  "all_selected_designs_broken": true,
+  "source_h235_quotient_states": 306450,
+  "source_h235_exact_surviving_coefficient_states": 303802,
+  "source_h235_exact_surviving_shift_tuples": 90425060,
+  "authoritative_interpretation": "H225-X1 is the exact-family meaning of the legacy exact-H240 output. All 44 sampled actual H235 survivor designs have rigorous unrestricted balanced n3<=2 counterexamples, and all 44 witnesses are new relative to H234. This does not itself close H225; feed the new cuts into H225-X2 incremental rescreen."
+}
