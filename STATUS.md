@@ -11,31 +11,28 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed lottery packet: **H202 — RI `Kick Back with Keno` promotion attribution gate**.
+Latest completed lottery packet: **H203 — RI Keno group-play and retailer batch gate**.
 
-### H202 major result
-H202 attacked the highest-priority live Rhode Island Keno promotion branch.
+### H203 major result
+H203 tested whether Rhode Island's official Group Play / retailer infrastructure closes the H173/H175 same-draw bulk-execution gap.
 
-Fresh official-site evidence on 2026-08-23 confirms that **`Kick Back with Keno Promotion` is currently live/active** in the RI Lottery promotional carousel.
+Fresh official evidence shows the current RI Lottery **Group Play** tools are explicitly framed around pooling money for **Powerball and Mega Millions**. They provide organization, payment tracking and prize-claiming aids, but no Keno atomic group-purchase mechanism. Therefore the visible Group Play feature cannot be cited as proof that a 4,336/4,560-selection Keno syndicate can be submitted as one guaranteed order.
 
-The current official homepage also exposes the copy **`Get a free ticket when you buy 2`**, but following that live official link resolves to the **Mega Millions** purchase page, not Keno or a Keno promotion-rules page. Therefore this phrase cannot be treated as evidence of a deterministic Keno `buy 2 -> free 1` subsidy.
+The current official **Retailer Point of Sale Material** page exposes printable material for Mega Millions, Powerball, Wild Money and combination signs, but no public Keno play-slip/batch/terminal-capacity manual proving arbitrary same-draw bulk entry.
 
-Official-domain searches did not recover the exact current `Kick Back with Keno` rule text, so dates, eligible spot types/wagers, deterministic-vs-random award, same-draw ownership, retailer/iLottery channel, caps, Plus/Overtime compatibility and disqualification/cancellation terms remain unresolved.
+Historical official 2025 Keno Changeup rules confirm Keno tickets carry QR/second-chance codes and that promotion entries scale with ticket dollar value. That QR is a **post-purchase ticket identifier**, not evidence of pre-purchase bulk encoding of arbitrary Keno selections.
 
-New non-repeat rule: **do not use the homepage `Get a free ticket when you buy 2` teaser in Keno economics unless a new official source explicitly associates it with Keno.**
+New non-repeat rule: do not use RI Group Play, generic Keno QR codes or current retailer POS materials as evidence of Keno atomic/bulk execution unless new primary-source documentation explicitly establishes it.
 
 Files:
-- `research/h202_ri_kick_back_promo_attribution_gate.md`
-- `research/CHECKED_PROJECTS_AND_TESTS_H202_APPEND.md`
+- `research/h203_ri_keno_group_play_and_retailer_batch_gate.md`
+- `research/CHECKED_PROJECTS_AND_TESTS_H203_APPEND.md`
 
-### Preserved H201 result
-Official RI Lottery rules close the easiest single-player parallelization shortcuts for H173/H175: one VIP Club account cannot purchase iLottery games from multiple devices simultaneously; credentials cannot be shared; one player cannot lawfully operate multiple iLottery accounts. A true multi-person Keno syndicate remains an operational hypothesis, but no atomic Keno group-purchase mechanism is documented and every account remains independently exposed to limits/delay/refusal.
+### Preserved H202 result
+`Kick Back with Keno Promotion` is currently live/active, but the homepage `Get a free ticket when you buy 2` teaser resolves to Mega Millions and cannot be attributed to Keno. Exact current Keno promo mechanics remain unresolved.
 
-### Preserved H200 result
-Rhode Island iLottery has real draw-game cart purchases, favorites/replay and retailer QR play slips, so H195's old assumption of 4,336 fully independent manual Buy Now actions is withdrawn. However Keno-specific cart capacity/atomicity remain unproved and current terms reserve unannounced purchase limits and processing denial.
-
-### Preserved H199-H196 result
-The `$150` Keno maximum does not imply 150 distinct same-draw selections; it is explained by `$10 × 15 consecutive draws`. Current `Kick Back with Keno Promotion` is officially listed as live/current in August 2026 but exact mechanics remain unresolved. Current 50% first-deposit match is capped at $50; an optimistic deterministic buy-2-get-1-free alone cannot rescue H173 ordinary economics without another nonlinear multiplier/subsidy.
+### Preserved H201-H199 result
+Single-player multi-device/multi-account parallelization is closed by current RI rules. The `$150` Keno maximum does not prove 150 different same-draw selections; it is explained by `$10 × 15 consecutive draws`. A true informal multi-person syndicate remains an operational hypothesis, but H203 confirms the official Group Play infrastructure does not supply a Keno group-purchase mechanism.
 
 ### Preserved H175/H191 mathematical state
 The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n3>=3` on every balanced `4+4+4+4+4` draw.
@@ -58,18 +55,19 @@ The unresolved H175 4,336-play doubled 3-spot hybrid still requires universal `n
 - Historical RI Lucky 3 Spot shows genuine pre-draw 2x printed entitlement.
 - H199 closes the `$150 maximum => 150 distinct same-draw selections` shortcut.
 - H200 proves real draw-game cart/replay/QR infrastructure, but discretionary purchase-limit and processing-denial terms block treating it as guaranteed H173/H175 acquisition.
-- H201 closes single-player multi-device and multi-account parallelization as guaranteed RI Keno bulk-execution shortcuts; only a true multi-person syndicate remains operationally open.
-- H202 confirms `Kick Back with Keno` is live but rejects attribution of the current homepage `buy 2 -> free ticket` teaser to Keno; exact promo terms remain data-blocked.
+- H201 closes single-player multi-device and multi-account parallelization as guaranteed RI Keno bulk-execution shortcuts.
+- H202 confirms `Kick Back with Keno` is live but rejects attribution of the current homepage `buy 2 -> free ticket` teaser to Keno.
+- H203 closes official Group Play / generic QR / current POS-material shortcuts as proof of Keno bulk acquisition; informal multi-person execution remains unproved.
 
 ## NEXT ACTION
-1. **Highest live priority: recover the exact `Kick Back with Keno Promotion` detail/rules endpoint through a genuinely new route**: retailer materials, official promo-detail endpoints, archived/current official assets, or direct primary-source indexed documents. Do not repeat generic title searches unless new indexing appears.
-2. Continue Keno-specific cart/QTY/QR capacity work, including whether a lawful multi-person syndicate can partition and verify all 4,336/4,560 selections before one draw under current purchase limits.
-3. Search retailer-terminal training/manual material for QR/digital-slip capacity, replay/batch functions and whether one scan can encode multiple independently specified Keno selections for the same draw.
+1. **Highest live priority: recover the exact `Kick Back with Keno Promotion` rules through a genuinely new primary-source route**: retailer notices, direct promo-detail assets, official archived/current documents or indexed first-party files. Do not repeat generic title searches without new indexing.
+2. Search official/vendor retailer-terminal manuals for Keno `repeat`, `multi-panel`, `batch`, `QR playslip`, ticket-panel limits and transaction-line capacity.
+3. If new execution evidence appears, quantify minimum lawful participants/terminals and verify whether the entire 4,336/4,560 portfolio can be accepted and audited before one draw closes.
 4. Resume H191/H188 exact pruning in parallel using existing balanced cuts; solver-certified infeasibility closes restricted diagonal family, timeout never does.
 5. If diagonal family closes, expand to general cyclic-affine `z=a*x+b*y+c (mod16)` and reuse accumulated witnesses.
 6. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`. Connector-safe Hxxx append packets are authoritative additions where direct replacement of the large legacy ledger is impractical.
-Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H202_APPEND.md`.
-Latest case: `research/h202_ri_kick_back_promo_attribution_gate.md`.
+Latest lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H203_APPEND.md`.
+Latest case: `research/h203_ri_keno_group_play_and_retailer_batch_gate.md`.
