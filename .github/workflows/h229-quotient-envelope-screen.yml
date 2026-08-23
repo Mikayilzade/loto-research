@@ -1,0 +1,29 @@
+name: H229 quotient coefficient envelope screen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h229_quotient_coefficient_envelope_screen.py'
+      - '.github/workflows/h229-quotient-envelope-screen.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h229_quotient_coefficient_envelope_screen
+      - name: Commit exact H229 result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h229_quotient_coefficient_envelope.json
+          git commit -m "H229 exact quotient coefficient-envelope result" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
