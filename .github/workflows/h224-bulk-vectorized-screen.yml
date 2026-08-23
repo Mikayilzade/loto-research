@@ -1,0 +1,29 @@
+name: H224 bulk-vectorized exact H175 screen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'src/loto_research/h224_bulk_vectorized_full_screen.py'
+      - '.github/workflows/h224-bulk-vectorized-screen.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: research-work}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h224_bulk_vectorized_full_screen
+      - name: Commit exact result
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/derived/h224_bulk_vectorized_survivors.json
+          git commit -m "H224 exact bulk-vectorized H175 result" || exit 0
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
