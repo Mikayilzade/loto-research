@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-25 01:31 +04
+Updated: 2026-08-25 02:31 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -14,7 +14,7 @@ Terminal state: **OPEN / NOT CLOSED**
 | H225-X3 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
 | H225-X4 | **288,176** | **50,626,368** | — |
 | H225-X5 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
-| H225-X6 | RETRIGGERED | RETRIGGERED | full 44-way rescreen V2 triggered |
+| H225-X6 | RUNNING V3 | RUNNING V3 | 44-way rescreen retriggered after CI repair |
 
 All rescreen stages use the unchanged H228 quotient universe of **306,450** coefficient states. Zero exact survivors is the closure criterion.
 
@@ -76,21 +76,27 @@ Files:
 - `data/derived/h225_x5_survivor_separation.json`
 - `data/derived/h225_x5_new_witnesses.json`
 
-## H225-X6 — RETRIGGERED / RESULT NOT YET VALIDATED
+## H225-X6 — RUNNING V3 / CI REPAIRED
 X6 reconstructs the witness universe from immutable generations H226 + H234 + X1 + X3 + X5, affine-expanding all added cuts, then rescreens all **306,450** quotient states in **44 exact chunks**.
 
-Original human-token trigger:
-- `data/derived/h225_x6_trigger.json`
-- trigger commit `a50321e30f2b9b28e712f8b2c6ee691516f039d8`
+The V2 trigger did not yield a valid merged result because the workflow invoked a nonexistent module name: `loto_research.h225_x6_incremental_exact_rescreen`, while the implemented source is `src/loto_research/h225_x6_incremental_rescreen.py`. This was a CI wiring failure, not a mathematical result.
 
-The previous checkpoint remained without a validated merged result far beyond the workflow's own 45-minute per-chunk timeout window. At 2026-08-25 01:28 +04 the same computation was retriggered via human-token push; workflow concurrency cancels any stale predecessor.
-
-Authoritative retrigger:
-- packet: `H225-X6-TRIGGER-V2`
-- commit: `c7189841a7e1e0154f167be064cf1c6c4c810f46`
+Repair:
+- workflow fix commit: `a9c0a778f76c867df04a55c16360b336bd99b526`
+- corrected both chunk and merge commands to `python -m loto_research.h225_x6_incremental_rescreen`
+- authenticated V3 trigger commit: `b45621cd340758352f41ea7f0b24da98d561c74c`
+- V3 workflow run: `32784914783`
+- observed after trigger: matrix jobs entered `in_progress`; setup/checkout/setup-python succeeded and the corrected module command is present as the pending compute step.
 
 Expected merged output:
 - `data/derived/h225_x6_incremental_exact_rescreen.json`
+
+Validation contract before accepting X6:
+- exactly **44** unique `(sector, chunk)` shards;
+- shard `chunk_quotient_states` sum exactly **306,450**;
+- merged packet `H225-X6`, `chunk_shards == 44`, `quotient_coefficient_states_screened == 306450`;
+- all 11 sectors present and sector state counts sum **306,450**;
+- only then may survivor totals be interpreted.
 
 A zero-byte placeholder proves neither completion nor zero survivors. Do not infer a mathematical result until merged output/artifacts are validated.
 
@@ -118,7 +124,7 @@ The chain has strict stop gates:
 - every rescreen merge asserts 44 shards and 306,450 states.
 
 ## NEXT ACTION
-1. Validate H225-X6 V2 merged output/artifacts when present; an empty placeholder proves nothing.
+1. Validate H225-X6 V3 run `32784914783` and its merged output/artifacts; an empty placeholder proves nothing.
 2. If X6 reaches zero exact survivors, record rigorous H225 closure and stop this family lane.
 3. If X6 remains positive, create authenticated `data/derived/h225_x7_trigger.json`. The integrated X7->X10 chain then proceeds automatically through valid nonterminal gates.
 4. If X10 still has positive survivors, continue H225-X11/X12 only after validating X10; never launch speculative separator stages against missing/empty merged inputs.
