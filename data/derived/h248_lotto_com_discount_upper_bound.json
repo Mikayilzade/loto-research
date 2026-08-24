@@ -1,0 +1,43 @@
+{
+  "packet": "H248",
+  "discount_assumption": 0.25,
+  "assumption_note": "Dominating upper bound: 25% applies to entire controlled cover, zero fees/caps.",
+  "all_rejected": true,
+  "cases": [
+    {
+      "case": "ohio_keno_3spot",
+      "base_return": 0.65213,
+      "discounted_return_upper_bound": 0.869506667,
+      "break_even_discount_strictly_greater_than": 0.34787,
+      "profitable_under_25pct_upper_bound": false
+    },
+    {
+      "case": "nebraska_2by2",
+      "base_return": 0.380289,
+      "discounted_return_upper_bound": 0.507052,
+      "break_even_discount_strictly_greater_than": 0.619711,
+      "profitable_under_25pct_upper_bound": false
+    },
+    {
+      "case": "nebraska_myday_best",
+      "base_return": 0.584723,
+      "discounted_return_upper_bound": 0.779630667,
+      "break_even_discount_strictly_greater_than": 0.415277,
+      "profitable_under_25pct_upper_bound": false
+    },
+    {
+      "case": "millionaire_for_life_optimistic",
+      "base_return": 0.528876,
+      "discounted_return_upper_bound": 0.705168,
+      "break_even_discount_strictly_greater_than": 0.471124,
+      "profitable_under_25pct_upper_bound": false
+    },
+    {
+      "case": "lotto_america_strict_nonjackpot",
+      "base_return": 0.26900868,
+      "discounted_return_upper_bound": 0.358678241,
+      "break_even_discount_strictly_greater_than": 0.73099132,
+      "profitable_under_25pct_upper_bound": false
+    }
+  ]
+}
