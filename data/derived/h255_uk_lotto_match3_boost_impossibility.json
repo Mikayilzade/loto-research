@@ -1,0 +1,11 @@
+{
+  "packet": "H255",
+  "game": "UK Lotto 6/59 historical Match-3 £100 boost structure",
+  "ticket_price_gbp": 2.0,
+  "combination_space": 45057474,
+  "p_exact_match3": 0.010398274878880249,
+  "expected_match3_100_cash_per_ticket": 1.039827487888025,
+  "expected_fixed_cash_per_ticket_including_match4_match5_match5bonus": 1.2493332404741555,
+  "fixed_cash_ratio_to_ticket_price": 0.6246666202370778,
+  "result": "REJECTED strict guarantee under additive fixed tiers; average cash return remains below stake, so no portfolio of such tickets can be positive on every draw without a separate nonlinear jackpot/rolldown/subsidy mechanism."
+}
