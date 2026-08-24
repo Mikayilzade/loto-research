@@ -106,7 +106,7 @@ Expected progressive value is therefore irrelevant to the terminal guarantee tes
 
 **REJECTED.** The active 50% Bonus Hours promotion is a real deterministic payout uplift on qualifying fixed prizes, but it is not large enough. Exact outcome-independent full coverage remains below stake for every base spot 1–10 and for every BULLSEYE / Double-BULLSEYE spot 1–10. Multiplier has a legal 1X branch and the Progressive Jackpot has a zero-win branch.
 
-This closes the current NJ Quick Draw Progressive 50% Bonus Hours controlled full-cover class. Reopen only if the guaranteed non-jackpot uplift materially exceeds the exact deficit (best current base hurdle: >65.8914% uplift rather than 50%), or rules create a separately guaranteed subsidy not financed by additional wager cost.
+This closes the current NJ Quick Draw Progressive 50% Bonus Hours controlled full-cover class. Reopen only if the guaranteed non-jackpot uplift materially exceeds the exact deficit (best current base hurdle: **>65.7841% uplift** rather than 50%), or rules create a separately guaranteed subsidy not financed by additional wager cost.
 
 Reproduction:
 - `src/loto_research/h256_nj_quick_draw_bonus_hours.py`
