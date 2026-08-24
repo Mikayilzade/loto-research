@@ -1,7 +1,7 @@
 {
   "packet": "H225-X4",
-  "method": "H225-X2_exact_rescreen_plus_H225-X3_new_witness_affine_orbits",
-  "source_packet": "H225-X2",
+  "method": "full_exact_rescreen_after_X3_new_witness_affine_orbits",
+  "source_packet": "H225-X3",
   "chunk_shards": 44,
   "quotient_coefficient_states_screened": 306450,
   "envelope_survivor_states": 306450,
@@ -9,8 +9,7 @@
   "exact_surviving_shift_tuples": 50626368,
   "x3_raw_new_witnesses": 44,
   "x3_affine_expanded_instances": 5632,
-  "no_op_no_new_x3_witnesses": false,
-  "h225_general_cyclic_affine_family_closed": false,
+  "all_general_cyclic_affine_designs_rejected_by_augmented_witnesses": false,
   "sectors": [
     {
       "sector_index": 0,
@@ -25,7 +24,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 0,
           "chunk_index": 0,
           "representative": [
@@ -50,7 +49,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 1951,
           "exact_shift_surviving_coefficient_states": 1409,
           "exact_surviving_shift_tuples": 120940,
@@ -4066,7 +4064,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 0,
           "chunk_index": 1,
           "representative": [
@@ -4091,7 +4089,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 1952,
           "exact_shift_surviving_coefficient_states": 1467,
           "exact_surviving_shift_tuples": 133624,
@@ -8027,7 +8024,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 0,
           "chunk_index": 2,
           "representative": [
@@ -8052,7 +8049,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 1951,
           "exact_shift_surviving_coefficient_states": 1364,
           "exact_surviving_shift_tuples": 123176,
@@ -12052,7 +12048,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 0,
           "chunk_index": 3,
           "representative": [
@@ -12077,7 +12073,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 1952,
           "exact_shift_surviving_coefficient_states": 1522,
           "exact_surviving_shift_tuples": 159024,
@@ -16203,7 +16198,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 1,
           "chunk_index": 0,
           "representative": [
@@ -16228,7 +16223,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5521,
           "exact_surviving_shift_tuples": 1011888,
@@ -20528,7 +20522,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 1,
           "chunk_index": 1,
           "representative": [
@@ -20553,7 +20547,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5284,
           "exact_surviving_shift_tuples": 731848,
@@ -24860,7 +24853,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 1,
           "chunk_index": 2,
           "representative": [
@@ -24885,7 +24878,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5311,
           "exact_surviving_shift_tuples": 759576,
@@ -29289,7 +29281,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 1,
           "chunk_index": 3,
           "representative": [
@@ -29314,7 +29306,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5581,
           "exact_surviving_shift_tuples": 999756,
@@ -33625,7 +33616,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 2,
           "chunk_index": 0,
           "representative": [
@@ -33650,7 +33641,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 4958,
           "exact_surviving_shift_tuples": 525386,
@@ -37538,7 +37528,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 2,
           "chunk_index": 1,
           "representative": [
@@ -37563,7 +37553,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5201,
           "exact_surviving_shift_tuples": 630846,
@@ -41472,7 +41461,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 2,
           "chunk_index": 2,
           "representative": [
@@ -41497,7 +41486,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5322,
           "exact_surviving_shift_tuples": 614368,
@@ -45841,7 +45829,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 2,
           "chunk_index": 3,
           "representative": [
@@ -45866,7 +45854,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 4849,
           "exact_surviving_shift_tuples": 565076,
@@ -50266,7 +50253,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 3,
           "chunk_index": 0,
           "representative": [
@@ -50291,7 +50278,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5505,
           "exact_surviving_shift_tuples": 739960,
@@ -54552,7 +54538,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 3,
           "chunk_index": 1,
           "representative": [
@@ -54577,7 +54563,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5333,
           "exact_surviving_shift_tuples": 685140,
@@ -58902,7 +58887,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 3,
           "chunk_index": 2,
           "representative": [
@@ -58927,7 +58912,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5259,
           "exact_surviving_shift_tuples": 676392,
@@ -63249,7 +63233,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 3,
           "chunk_index": 3,
           "representative": [
@@ -63274,7 +63258,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5407,
           "exact_surviving_shift_tuples": 760752,
@@ -67713,7 +67696,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 4,
           "chunk_index": 0,
           "representative": [
@@ -67738,7 +67721,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 4172,
           "exact_surviving_shift_tuples": 365224,
@@ -71862,7 +71844,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 4,
           "chunk_index": 1,
           "representative": [
@@ -71887,7 +71869,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 4386,
           "exact_surviving_shift_tuples": 428984,
@@ -75812,7 +75793,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 4,
           "chunk_index": 2,
           "representative": [
@@ -75837,7 +75818,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 4483,
           "exact_surviving_shift_tuples": 416952,
@@ -79768,7 +79748,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 4,
           "chunk_index": 3,
           "representative": [
@@ -79793,7 +79773,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 4175,
           "exact_surviving_shift_tuples": 396444,
@@ -83947,7 +83926,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 5,
           "chunk_index": 0,
           "representative": [
@@ -83972,7 +83951,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5485,
           "exact_surviving_shift_tuples": 712068,
@@ -88174,7 +88152,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 5,
           "chunk_index": 1,
           "representative": [
@@ -88199,7 +88177,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5307,
           "exact_surviving_shift_tuples": 669588,
@@ -92464,7 +92441,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 5,
           "chunk_index": 2,
           "representative": [
@@ -92489,7 +92466,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5188,
           "exact_surviving_shift_tuples": 660840,
@@ -96532,7 +96508,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 5,
           "chunk_index": 3,
           "representative": [
@@ -96557,7 +96533,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5374,
           "exact_surviving_shift_tuples": 741524,
@@ -100918,7 +100893,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 6,
           "chunk_index": 0,
           "representative": [
@@ -100943,7 +100918,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11318,
           "exact_surviving_shift_tuples": 2334500,
@@ -105339,7 +105313,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 6,
           "chunk_index": 1,
           "representative": [
@@ -105364,7 +105338,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11417,
           "exact_surviving_shift_tuples": 2455052,
@@ -109780,7 +109753,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 6,
           "chunk_index": 2,
           "representative": [
@@ -109805,7 +109778,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11440,
           "exact_surviving_shift_tuples": 2546606,
@@ -114216,7 +114188,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 6,
           "chunk_index": 3,
           "representative": [
@@ -114241,7 +114213,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11332,
           "exact_surviving_shift_tuples": 2220714,
@@ -118671,7 +118642,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 7,
           "chunk_index": 0,
           "representative": [
@@ -118696,7 +118667,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5703,
           "exact_surviving_shift_tuples": 969924,
@@ -123016,7 +122986,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 7,
           "chunk_index": 1,
           "representative": [
@@ -123041,7 +123011,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5686,
           "exact_surviving_shift_tuples": 917248,
@@ -127342,7 +127311,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 7,
           "chunk_index": 2,
           "representative": [
@@ -127367,7 +127336,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5753,
           "exact_surviving_shift_tuples": 1036572,
@@ -131782,7 +131750,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 7,
           "chunk_index": 3,
           "representative": [
@@ -131807,7 +131775,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5738,
           "exact_surviving_shift_tuples": 1014208,
@@ -136197,7 +136164,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 8,
           "chunk_index": 0,
           "representative": [
@@ -136222,7 +136189,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11318,
           "exact_surviving_shift_tuples": 2600924,
@@ -140558,7 +140524,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 8,
           "chunk_index": 1,
           "representative": [
@@ -140583,7 +140549,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11417,
           "exact_surviving_shift_tuples": 2736070,
@@ -144999,7 +144964,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 8,
           "chunk_index": 2,
           "representative": [
@@ -145024,7 +144989,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11440,
           "exact_surviving_shift_tuples": 2819206,
@@ -149435,7 +149399,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 8,
           "chunk_index": 3,
           "representative": [
@@ -149460,7 +149424,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11332,
           "exact_surviving_shift_tuples": 2477278,
@@ -153890,7 +153853,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 9,
           "chunk_index": 0,
           "representative": [
@@ -153915,7 +153878,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5320,
           "exact_surviving_shift_tuples": 666104,
@@ -158121,7 +158083,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 9,
           "chunk_index": 1,
           "representative": [
@@ -158146,7 +158108,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5241,
           "exact_surviving_shift_tuples": 612320,
@@ -162311,7 +162272,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 9,
           "chunk_index": 2,
           "representative": [
@@ -162336,7 +162297,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5537,
           "exact_surviving_shift_tuples": 812826,
@@ -166739,7 +166699,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 9,
           "chunk_index": 3,
           "representative": [
@@ -166764,7 +166724,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 5763,
           "exact_shift_surviving_coefficient_states": 5462,
           "exact_surviving_shift_tuples": 757758,
@@ -171167,7 +171126,7 @@
       "chunks": [
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 10,
           "chunk_index": 0,
           "representative": [
@@ -171192,7 +171151,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11128,
           "exact_surviving_shift_tuples": 2188672,
@@ -175435,7 +175393,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 10,
           "chunk_index": 1,
           "representative": [
@@ -175460,7 +175418,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11374,
           "exact_surviving_shift_tuples": 2771434,
@@ -179878,7 +179835,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 10,
           "chunk_index": 2,
           "representative": [
@@ -179903,7 +179860,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11304,
           "exact_surviving_shift_tuples": 2860412,
@@ -184322,7 +184278,7 @@
         },
         {
           "packet": "H225-X4",
-          "source_packet": "H225-X2",
+          "source_packet": "H225-X3",
           "sector_index": 10,
           "chunk_index": 3,
           "representative": [
@@ -184347,7 +184303,6 @@
           "general_signature_unique_witnesses": 27208,
           "h185_stored": 255,
           "h186_witnesses": 189,
-          "no_op_no_new_x3_witnesses": false,
           "envelope_survivor_states": 11440,
           "exact_shift_surviving_coefficient_states": 11053,
           "exact_surviving_shift_tuples": 2199164,
@@ -188671,5 +188626,5 @@
       ]
     }
   ],
-  "interpretation": "Zero exact survivors is an exact finite impossibility certificate for H225. Positive survivors require the next H225-X separator/cut iteration."
+  "interpretation": "Zero exact survivors closes H225. Positive survivors require the next separator packet."
 }
