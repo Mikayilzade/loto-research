@@ -1,0 +1,14 @@
+{
+  "packet": "H263",
+  "game": "Spain Sorteo Extraordinario de Navidad 2026",
+  "series": 205,
+  "numbers_per_series": 100000,
+  "billete_price_eur": 200,
+  "complete_issue_cost_eur": 4100000000,
+  "official_total_prize_mass_eur": 2870000000,
+  "gross_return_ratio": 0.7,
+  "deterministic_deficit_eur": 1230000000,
+  "minimum_external_subsidy_fraction_before_friction": 0.3,
+  "guaranteed_profit_full_takeover": false,
+  "interpretation": "Even impossible-perfect ownership of the complete issued inventory captures only the fixed 70% prize mass."
+}
