@@ -1,0 +1,52 @@
+{
+  "packet": "H249",
+  "game": "Maine Pick 3 Single Digit",
+  "cover": {
+    "selections": 10,
+    "wager_per_selection": 0.5,
+    "guaranteed_winners": 1,
+    "payout_per_winner": 2.5,
+    "face_cost": 5.0,
+    "guaranteed_payout": 2.5,
+    "base_return": 0.5,
+    "base_net": -2.5
+  },
+  "theorem": {
+    "guaranteed_net": "P - max(0, C-B) - F - A",
+    "for_0_le_B_le_5": "G = B - 2.50 - F - A",
+    "strict_credit_threshold": "B > 2.50 + F + A",
+    "for_B_ge_5": "G = 2.50 - F - A"
+  },
+  "zero_fee_scenarios": [
+    {"credit": 0.0, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": -2.5},
+    {"credit": 2.0, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": -0.5},
+    {"credit": 2.5, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": 0.0},
+    {"credit": 3.0, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": 0.5},
+    {"credit": 5.0, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": 2.5},
+    {"credit": 10.0, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": 2.5}
+  ],
+  "five_dollar_credit_fee_sensitivity": [
+    {"credit": 5.0, "fee": 0.0, "acquisition_cost": 0.0, "guaranteed_net": 2.5},
+    {"credit": 5.0, "fee": 0.5, "acquisition_cost": 0.0, "guaranteed_net": 2.0},
+    {"credit": 5.0, "fee": 1.0, "acquisition_cost": 0.0, "guaranteed_net": 1.5},
+    {"credit": 5.0, "fee": 2.0, "acquisition_cost": 0.0, "guaranteed_net": 0.5},
+    {"credit": 5.0, "fee": 2.49, "acquisition_cost": 0.0, "guaranteed_net": 0.01},
+    {"credit": 5.0, "fee": 2.5, "acquisition_cost": 0.0, "guaranteed_net": 0.0}
+  ],
+  "evidence": {
+    "maine_pick3_current_single_digit": true,
+    "jackpocket_maine_pick3_game_level_available": true,
+    "credit_funded_winnings_withdrawable_in_recent_terms": true,
+    "current_public_maine_credit_above_threshold_proven": false,
+    "single_digit_order_ui_support_proven": false,
+    "exact_maine_service_fee_proven": false,
+    "promotion_discretion_removed": false
+  },
+  "terminal_status": "NOT_SUCCESS",
+  "blocking_gates": [
+    "no current public Maine-eligible deterministic credit above threshold proven on 2026-08-24",
+    "Maine Jackpocket Single Digit wager UI support unproven",
+    "exact Maine Jackpocket service fee unresolved",
+    "promotion terms retain discretionary cancellation/abuse determination"
+  ]
+}
