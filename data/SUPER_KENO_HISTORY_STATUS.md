@@ -24,18 +24,26 @@ Committed collection blocks:
 - `data/super_keno_2026-07-24_2026-08-22.csv`
 - `data/super_keno_2026-08-23.csv`
 
-A regenerated local master contains **195 rows** and passes structural validation. The persistent Library master still needs replacement with this regenerated version when Library mutation is available; GitHub preserves all newly collected rows meanwhile.
+A regenerated local master contains **195 rows** and passes structural validation. The persistent Library master is still the older 150-row baseline; this discrepancy was re-confirmed on 2026-08-24. GitHub preserves all 45 subsequently recovered rows, so no data is lost. Replace the Library master with the regenerated 195-row version as soon as Library mutation is available in the run environment.
 
 ## Remaining priority gaps
 
 1. **2026-06-22 through 2026-07-09** — contiguous 18-day gap immediately after the baseline.
 2. Older historical gaps remain substantial, especially between isolated recovered blocks in 2022–2025 and within early/mid-2026.
 
-## Latest search pass
+## Latest search passes
 
+### Pass 1
 - Rechecked the live Magayo results page: its currently exposed recent-history text reaches back only to **2026-07-10**, so it does not expose the 18 missing dates.
 - Ran targeted web searches for individual dates in the 2026-06-22..2026-07-09 gap across Magayo, Eurooppalotto and Lucky Numbers wording/URLs.
-- No complete 20-number result from that gap was found with sufficient provenance in this pass, so **0 rows were added** rather than guessing or accepting unrelated Keno results.
+- No complete 20-number result from that gap was found with sufficient provenance.
+
+### Pass 2
+- Re-ran targeted searches for 2026-06-30 through 2026-07-09 using ISO and localized date formats.
+- LotteryGuru statistics independently confirm that the Azerbaijan Super Keno draw of **2026-07-02** contained consecutive runs `33,34,35,36`, but the statistics page does not expose the full 20-number row; therefore it was not accepted.
+- Statlotto search indexing exposes Azerbaijan Super Keno statistical pages and confirms the relevant date range exists in its dataset, but no cached/search result exposed a complete 20-number row for any missing date.
+- Exact date searches on LotteryGuru, Eurooppalotto and Magayo still did not expose complete rows.
+- **0 rows added in this pass**. This is intentional: partial statistics are not promoted to draw records.
 
 ## Validation rule
 
@@ -52,4 +60,4 @@ Accept a draw only when it contains exactly 20 unique integers in the range 1..7
 
 ## Next action
 
-Close **2026-06-22 to 2026-07-09** using older cached/localized Eurooppalotto snapshots, archived result pages, or other verifiable historical feeds; then move backward into older gaps. Keep provenance and deduplicate by date, official draw number, and sorted 20-number combination.
+Close **2026-06-22 to 2026-07-09** using older cached/localized Eurooppalotto snapshots, archived result pages, alternative historical result feeds, or a source endpoint that exposes full rows; then move backward into older gaps. Keep provenance and deduplicate by date, official draw number, and sorted 20-number combination.
