@@ -1,0 +1,20 @@
+{
+  "date": "2026-08-24",
+  "matrix": "6/45",
+  "line_count": 8145060,
+  "price_per_line_eur": 2,
+  "full_cover_spend_eur": 16290120,
+  "reported_new_cap_eur": 16000000,
+  "match3_count": 168720,
+  "match2_bonus_count": 126540,
+  "reported_fixed_prize_each_eur": 4,
+  "fixed_lower_tier_floor_eur": 1181040,
+  "net_floor_by_external_jackpot_winners_eur": {
+    "0": 890920,
+    "1": -7109080,
+    "2": -9775746.666666666
+  },
+  "strict_guarantee": false,
+  "rejection_reason": "One external jackpot-winning line destroys the positive full-cover floor; full coverage also guarantees a Match-6 winner and therefore cannot trigger the zero-jackpot-winner fifth-cap rolldown branch.",
+  "source_note": "6/45 launch/date/price are official; reported EUR16m cap and new fixed EUR4 lower tiers must be rechecked against final official 6/45 rules when published."
+}
