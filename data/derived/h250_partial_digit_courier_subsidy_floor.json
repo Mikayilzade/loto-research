@@ -1,0 +1,21 @@
+{
+  "packet": "H250",
+  "date": "2026-08-24",
+  "method": "exact_full_partition_coverage_and_subsidy_threshold",
+  "maine_state_minimum_wager_covers": [
+    {"name":"Pick3 Single Digit","outcomes":10,"line_cost":0.5,"full_cover_cost":5.0,"deterministic_gross":2.5,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5},
+    {"name":"Pick3 Front/Back Pair","outcomes":100,"line_cost":0.5,"full_cover_cost":50.0,"deterministic_gross":25.0,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5},
+    {"name":"Pick3 Straight","outcomes":1000,"line_cost":0.5,"full_cover_cost":500.0,"deterministic_gross":250.0,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5},
+    {"name":"Pick4 Single Digit","outcomes":10,"line_cost":0.5,"full_cover_cost":5.0,"deterministic_gross":2.5,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5}
+  ],
+  "lotto_com_maine_minimum_wager_covers": [
+    {"name":"Lotto.com Maine Pick3 First/Second/Third Digit","outcomes":10,"line_cost":1.0,"full_cover_cost":10.0,"deterministic_gross":5.0,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5},
+    {"name":"Lotto.com Maine Pick3 Pair","outcomes":100,"line_cost":1.0,"full_cover_cost":100.0,"deterministic_gross":50.0,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5},
+    {"name":"Lotto.com Maine Pick4 Single Digit","outcomes":10,"line_cost":1.0,"full_cover_cost":10.0,"deterministic_gross":5.0,"deterministic_base_return":0.5,"strict_discount_break_even_fraction":0.5}
+  ],
+  "jackpocket_like_50cent_single_digit_formula": {"cost":5.0,"gross":2.5,"guaranteed_net":"2.50 - max(0, 5.00-B) - F - A","strict_profit_for_B_le_5":"B > 2.50 + F + A"},
+  "lotto_com_1dollar_single_digit_formula": {"cost":10.0,"gross":5.0,"guaranteed_net":"5.00 - max(0, 10.00-B) - F - A","strict_profit_for_B_le_10":"B > 5.00 + F + A","percentage_discount_strict_profit_before_fees":"discount > 50%","25_percent_discount_net_before_fees":-2.5,"20_percent_discount_net_before_fees":-3.0},
+  "execution_observations": {"lotto_com_pick3_single_digit_order_menu_publicly_exposed":true,"lotto_com_max_lines_per_game_public_page":100,"pair_full_cover_fits_100_line_limit":true,"current_lotto_com_mystery_scratch_reward_is_random":true,"current_public_deterministic_subsidy_above_50_percent_found":false,"historical_jackpocket_5_and_10_credit_offers_expired":true},
+  "result": "NOT_SUCCESS_DATA_BLOCKED",
+  "reason": "Courier-native exact partial-digit coverage is now evidenced, but no current deterministic non-discretionary subsidy above the 50% arithmetic hurdle (plus fees/acquisition costs) was established."
+}
