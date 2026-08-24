@@ -1,0 +1,20 @@
+{
+  "packet": "H225-X7-VALIDATION-V1",
+  "source_packet": "H225-X6",
+  "workflow_run": 32791403782,
+  "merged_artifact_id": 9543265692,
+  "merged_artifact_digest": "sha256:0a4dc992bf93e98ceeac2516e18b80c67c703afe224a74884aca1c43403244d2",
+  "x6_survivor_states": 210285,
+  "x6_survivor_shift_tuples": 19567210,
+  "total_chunks": 44,
+  "active_survivor_chunks": 44,
+  "skipped_zero_survivor_chunks": 0,
+  "counterexamples_found": 44,
+  "inconclusive_active_jobs": 0,
+  "unique_balanced_counterexamples": 44,
+  "genuinely_new_witnesses": 44,
+  "all_selected_active_designs_broken": true,
+  "witness_count": 44,
+  "deduplicated_against": ["H234", "H225-X1", "H225-X3", "H225-X5"],
+  "validation": "Downloaded merged workflow artifact and checked both H225-X7 JSON packets; 44 jobs present, 44 active chunks broken, zero inconclusive, 44 genuinely new balanced n3<=2 witnesses."
+}
