@@ -1,0 +1,7 @@
+{
+  "packet": "H225-X4-TRIGGER",
+  "date": "2026-08-24",
+  "source": "H225-X3",
+  "x3_genuinely_new_witnesses": 44,
+  "reason": "X3 broke all 44 selected active X2 survivor designs with 44 genuinely new exact balanced witnesses; run full incremental exact rescreen."
+}
