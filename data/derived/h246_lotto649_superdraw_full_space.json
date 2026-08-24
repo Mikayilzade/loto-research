@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-24",
+  "draw_date": "2026-08-29",
+  "game": "LOTTO 6/49 SuperDraw",
+  "combinations": 13983816,
+  "spend_cad": 41951448,
+  "counts": {
+    "6_of_6": 1,
+    "5_of_6_plus_bonus": 6,
+    "5_of_6": 252,
+    "4_of_6": 13545,
+    "3_of_6": 246820,
+    "2_of_6_plus_bonus": 172200,
+    "2_of_6": 1678950
+  },
+  "fixed_cash_cad": 3329200,
+  "free_play_face_cad": 5036850,
+  "prize_fund_18_33pct_cad": 7689700.4184,
+  "favorable_pools_fund_upper_cad": 4360500.4184,
+  "classic_jackpot_cad": 5000000,
+  "white_gold_ball_cad": 1000000,
+  "superdraw_extra_prizes": 20,
+  "superdraw_each_cad": 40000,
+  "superdraw_extra_cad": 800000,
+  "favorable_total_cad": 19526550.4184,
+  "favorable_return_ratio": 0.46545593416465625,
+  "favorable_deficit_cad": 22424897.5816,
+  "strict_guarantee": false,
+  "status": "REJECTED"
+}
