@@ -45,6 +45,13 @@ A regenerated local master contains **195 rows** and passes structural validatio
 - Exact date searches on LotteryGuru, Eurooppalotto and Magayo still did not expose complete rows.
 - **0 rows added in this pass**. This is intentional: partial statistics are not promoted to draw records.
 
+### Pass 3
+- Rechecked the official Azerlotereya archive endpoint `https://www.azerlotereya.com/neticeler/super-keno`. The public page confirms date-based archive search exists, but its server-rendered text does not expose historical results for arbitrary selected dates; the result block remains client-side/undefined to the crawler.
+- Confirmed the official latest-results page exposes full 20-number rows and official draw numbers for recent draws, including draw **26347 on 2026-08-23**, but not the June/early-July gap.
+- Rechecked Magayo's Super Keno page; the current crawl exposes full rows back through **2026-07-10** and no earlier rows.
+- Ran exact-date targeted searches for **2026-06-22**, **2026-06-30**, **2026-07-01**, **2026-07-02**, **2026-07-08**, and **2026-07-09** across the official site, Magayo, LotteryGuru, Statlotto, Eurooppalotto and general search. No complete 20-number row with sufficient provenance surfaced.
+- **0 rows added in this pass**. The 18-day gap remains unchanged; no partial or inferred row was accepted.
+
 ## Validation rule
 
 Accept a draw only when it contains exactly 20 unique integers in the range 1..70. Conflicting source records must be flagged for review rather than guessed.
