@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H248 — Lotto.com 25% draw-discount full-cover upper-bound closure**.
+Latest completed numbered lottery packet: **H249 — Jackpocket lottery credits × Maine Pick 3 Single Digit full-cover conversion**.
 Latest completed exact-family packet: **H235**.
 Current exact-family continuation: **H237**; expected merged outputs remain absent:
 - `data/derived/h237_h235_first_survivor_separation.json`
@@ -31,34 +31,48 @@ Missing output proves nothing.
 - H245 UK Lotto current full-space: fixed-prize return too low and full coverage prevents the relevant rolldown branch.
 - H246 LOTTO 6/49 Aug. 29 SuperDraw: even a deliberately favorable isolated-pool model returns only 46.5456% of full-cover spend.
 - H247 free Quick Pick / BOGO: uncontrolled free selections have zero guaranteed marginal coverage and zero strict cash floor.
+- H248 Lotto.com 25% draw discount: even a dominating full-stake 25% interpretation leaves known finite covers below break-even.
 
-### H248 — Lotto.com 25% draw-discount full-cover upper bound
-Fresh current evidence from Lotto.com Promotional Terms confirms percentage discounts are a real lottery-ticket promotion class, but promotions are one-use, service fees remain, and product/state/time/cap restrictions may apply. A current indexed NY Lotto.com homepage displays a `25% off $30` offer.
+### H249 — Jackpocket credits × Maine Pick 3 Single Digit
+Current official Maine Pick 3 rules expose an unusually small controlled partition:
+- Single Digit wager: **$0.50**;
+- payout: **$2.50**;
+- choose one exact digit position;
+- covering all `0..9` values for that position costs **$5.00** and guarantees exactly one **$2.50** winner.
 
-H248 intentionally grants this observed 25% discount a much stronger scope than published: **25% off the entire controlled full-space stake, zero service fees, no cap, deterministic eligibility, no cancellation**. Even under that dominating assumption, known finite-space constructions remain below strict break-even:
+Therefore, for deterministic lottery credit `B`, all service/checkout fees `F`, and irreversible promo-acquisition cost `A`, the strict guaranteed net is:
 
-- Ohio KENO 3-spot: **86.9507%**;
-- Nebraska MyDaY best case: **77.9631%**;
-- Millionaire for Life optimistic full-cover bound: **70.5168%**;
-- Nebraska 2by2: **50.7052%**;
-- Lotto America strict non-jackpot floor: **35.8678%**.
+`G = 2.50 - max(0, 5-B) - F - A`.
 
-General exact gate: for base deterministic return `r`, a percentage discount must satisfy **`d > 1-r`** before fees/caps. Thus 25% cannot rescue these constructions.
+For `B <= 5`, strict profit requires:
+
+`B > 2.50 + F + A`.
+
+This is the lowest verified promo-subsidy hurdle found so far for a controllable draw-lottery partition in the current courier search. Recent Jackpocket terms prove two important mechanism facts:
+- Jackpocket offers Maine Pick 3 at game level;
+- winnings from lottery-credit-funded winning tickets can be withdrawn.
+
+Recent/historical Jackpocket $5/$10 draw-credit offers were arithmetically sufficient before fees. However **H249 is NOT SUCCESS** because:
+1. no current public Maine-eligible deterministic credit above the threshold was proven on 2026-08-24;
+2. current Maine Jackpocket UI support for the **Single Digit** bet type is not proven;
+3. exact Maine service fee is unresolved;
+4. recent promo contracts retain broad discretionary cancellation/abuse/eligibility gates incompatible with a strict all-branches guarantee.
 
 Files:
-- `research/h248_lotto_com_25pct_discount_full_cover_upper_bound.md`
-- `src/loto_research/h248_lotto_com_discount_upper_bound.py`
-- `data/derived/h248_lotto_com_discount_upper_bound.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H248_APPEND.md`
+- `research/h249_jackpocket_credits_maine_pick3_single_digit.md`
+- `src/loto_research/h249_maine_pick3_credit_conversion.py`
+- `data/derived/h249_maine_pick3_credit_conversion.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H249_APPEND.md`
 
 ## NEXT ACTION
 1. Check H237 merged output first.
-2. If H237 returns new exact balanced witnesses, deduplicate against H234 and feed only new cuts into the next H225 exact rescreen.
-3. Do not repeat H239-H248 without materially new rules/evidence.
-4. Next independent lottery packet should prioritize active deterministic **player-selectable** discounts/subsidies exceeding the exact game-specific deficit, or a newly identified controlled finite-space game with strict full-cover return above 75%.
-5. Also prioritize current forced-distribution/rolldown mechanics where external subsidy is large enough to cross the H021 hurdle and sharing/execution can be bounded.
-6. Continue until lottery-specific SUCCESS or EXHAUSTED.
+2. If H237 returns new exact balanced witnesses, deduplicate against H234 and feed only genuinely new cuts into the next H225 exact rescreen.
+3. Reopen H249 immediately only on new primary evidence establishing a **current** Maine-eligible credit/discount, actual Jackpocket Single Digit order support, exact fee, and non-discretionary entitlement.
+4. Do not repeat H239-H249 without materially new rules/evidence.
+5. Next independent lottery packet should systematically search courier-supported/state-supported **partial digit wager menus** (Single Digit / pair / other exact partitions) for an even lower deterministic subsidy hurdle paired with a currently active, player-selectable lottery credit/discount.
+6. Also prioritize current forced-distribution/rolldown mechanics where external subsidy crosses the H021 hurdle and sharing/execution can be bounded.
+7. Continue until lottery-specific SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H248_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H249_APPEND.md`.
