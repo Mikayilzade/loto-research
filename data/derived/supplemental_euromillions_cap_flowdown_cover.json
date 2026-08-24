@@ -1,0 +1,13 @@
+{
+  "packet": "SUPPLEMENTAL-EUROMILLIONS-CAP-FLOWDOWN-20260824",
+  "minimum_star_pairs_per_exact_main_set": 8,
+  "explicit_cover": [[0,1],[1,2],[3,4],[4,5],[6,7],[7,8],[9,10],[10,11]],
+  "verified_all_66_winning_star_pairs": true,
+  "main_number_space": 2118760,
+  "deterministic_match5_plus1_cover_lines": 16950080,
+  "irish_mandatory_cost_per_line_eur": 2.5,
+  "irish_total_cover_cost_eur": 42375200.0,
+  "full_line_space": 139838160,
+  "strict_profit_guarantee": false,
+  "blocker": "cap excess has no fixed positive minimum and Match5+1 is pari-mutuel with no hard external-winner multiplicity bound"
+}
