@@ -1,5 +1,9 @@
 name: H225-X4 incremental exact rescreen
 on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'data/derived/h225_x4_trigger.json'
   workflow_dispatch:
 permissions:
   contents: write
