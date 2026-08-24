@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-24 12:59 +04
+Updated: 2026-08-24 13:34 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -58,7 +58,7 @@ Improvement vs X2:
 - coefficient states removed: **7,117**
 - legal shift tuples removed: **15,295,493**
 
-Note: connector `fetch_file` can show the very large X4 JSON as empty; the authoritative commit diff contains and validates the non-empty result.
+Note: connector `fetch_file` can show a very large merged JSON as empty; do not infer zero survivors from empty connector content alone. Validate by artifact/commit or independent shard reconstruction.
 
 ## H225-X5 — COMPLETE
 Integrated run: `32707295388`.
@@ -76,7 +76,7 @@ Files:
 - `data/derived/h225_x5_survivor_separation.json`
 - `data/derived/h225_x5_new_witnesses.json`
 
-## H225-X6 — RUNNING
+## H225-X6 — RUNNING / RESULT NOT YET VALIDATED
 X6 reconstructs the witness universe from immutable generations H226 + H234 + X1 + X3 + X5, affine-expanding all added cuts, then rescreens all **306,450** quotient states in **44 exact chunks**.
 
 Human-token trigger:
@@ -86,22 +86,33 @@ Human-token trigger:
 Expected merged output:
 - `data/derived/h225_x6_incremental_exact_rescreen.json`
 
-No X6 result is inferred until merged output/artifacts are validated.
+Current repository path exists as a **zero-byte placeholder**. This proves neither completion nor zero survivors. No GitHub failure notification for X6 was found at the 13:34 +04 checkpoint, so the running computation is not restarted speculatively.
 
-## Downstream — PREPARED
-H225-X7 is implemented as 44 unrestricted exact separators over actual still-positive X6 chunks, with explicit zero-survivor skips and deduplication against all earlier cut generations.
+## Downstream — PREPARED AS ONE INTEGRATED CHAIN
+A single authenticated X7 trigger can now continue multiple cutting-plane generations inside one GitHub Actions run, avoiding suppressed CI->push->CI recursion:
+
+1. **H225-X7** — 44 unrestricted exact separators over actual positive X6 chunks; zero-survivor chunks are explicit skips; witnesses deduplicated against H234/X1/X3/X5.
+2. **H225-X8** — full 44-way / 306,450-state exact rescreen after affine-expanding genuinely new X7 cuts.
+3. **H225-X9** — 44 unrestricted exact separators over actual positive X8 chunks; witnesses deduplicated against H234/X1/X3/X5/X7.
+4. **H225-X10** — full 44-way / 306,450-state exact rescreen after genuinely new X9 cuts.
+
+Implemented files:
 - `src/loto_research/h225_x7_survivor_separation.py`
-- `.github/workflows/h225-x7-survivor-separation.yml`
-
-H225-X8 is implemented as the next full 44-way / 306,450-state rescreen after genuinely new X7 cuts.
 - `src/loto_research/h225_x8_incremental_rescreen.py`
-- `.github/workflows/h225-x8-incremental-rescreen.yml`
+- `src/loto_research/h225_x9_survivor_separation.py`
+- `src/loto_research/h225_x10_incremental_rescreen.py`
+- `.github/workflows/h225-x7-survivor-separation.yml` — integrated X7 -> X8 -> X9 -> X10 artifact chain
 
-Neither X7 nor X8 is triggered speculatively: X7 requires positive X6 survivors; X8 requires genuinely new X7 witnesses.
+Integrated-chain commit: `856d67c03357ba9a22df9068901838c611c61290`.
+
+The chain has strict stop gates:
+- X8 runs only if X7 produced genuinely new cuts;
+- X9 runs only if X8 still has positive exact survivors;
+- X10 runs only if X9 produced genuinely new cuts;
+- every rescreen merge asserts 44 shards and 306,450 states.
 
 ## NEXT ACTION
-1. Validate H225-X6 merged output when present.
+1. Validate H225-X6 merged output/artifacts when present; an empty placeholder proves nothing.
 2. If X6 reaches zero exact survivors, record rigorous H225 closure and stop this family lane.
-3. If X6 remains positive, create authenticated `data/derived/h225_x7_trigger.json` and run X7.
-4. If X7 returns genuinely new cuts, trigger X8 full rescreen.
-5. Continue X9/X10 cutting-plane generations only while exact survivors remain.
+3. If X6 remains positive, create authenticated `data/derived/h225_x7_trigger.json`. The integrated X7->X10 chain then proceeds automatically through valid nonterminal gates.
+4. If X10 still has positive survivors, continue H225-X11/X12 only after validating X10; never launch speculative separator stages against missing/empty merged inputs.
