@@ -8,16 +8,17 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H252 — Irish Lotto 6/45 cap full-cover sharing gate**.
-Exact-family continuation now uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
+Latest completed numbered lottery packet: **H253 — Georgia scratcher endgame inventory gate**.
+Exact-family continuation uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
 - H232: 306,450 quotient states screened; 306,098 retained a legal shift tuple; 139,869,763 exact legal shift tuples survived.
 - H234: exact balanced counterexamples found for 44/44 sampled H232 survivors.
 - H235: after adding H234 witnesses and affine symmetries, 303,802 coefficient states and 90,425,060 legal shift tuples still survive.
 - H225-X1: 44/44 actual H235 survivors broken by unrestricted exact separators; 44 unique genuinely new witnesses, 0 inconclusive.
-- H225-X2: target merged file exists only as an empty placeholder at this checkpoint; therefore no result is inferred. Full 44-way / 306,450-state incremental rescreen remains pending.
-- H225-X3 and X4 remain armed by explicit `workflow_dispatch` chaining.
+- H225-X2: complete over all 306,450 states; **295,293** coefficient states and **65,921,861** legal shift tuples survive. The former empty legacy publication path has been replaced by an audited manifest; compact summary and 44-chunk survivor seed are authoritative.
+- H225-X3: complete; all **44/44 active X2 chunks** produced exact balanced counterexamples, **0 inconclusive**, **44 genuinely new witnesses** after deduplication.
+- H225-X4: full incremental exact rescreen has been triggered from `research-work` using the X3 witness packet. **No result is inferred until the merged X4 output exists and is re-read.**
 
 ### Recent lottery closures / blockers
 - H236 RI Lucky 3 Spot: universal free 2X clears arithmetic threshold, but universal entitlement/execution not established.
@@ -34,33 +35,33 @@ Exact-family continuation now uses a separate namespace: **H225-X***. See `resea
 - H249 Jackpocket credit × Maine Pick 3 Single Digit: $5 retail-style exact cover guarantees $2.50 gross; current qualifying deterministic credit/fee/entitlement evidence incomplete.
 - H250 courier-supported partial-digit exact subsidy floor: exact-position 50% cover verified, but no current deterministic subsidy above the hurdle plus fees.
 - H251 Irish Lotto 6/45 Lotto Plus: full-cover incremental Plus return only 52.8477%.
+- H252 Irish Lotto 6/45 cap full-cover: sole-jackpot-winner floor can be positive, but one external Match-6 line destroys the strict guarantee; full coverage also prevents the zero-winner cap rolldown branch.
+- H253 Georgia scratcher #1709 endgame: third-party residual-prize arithmetic can show apparent >100% conditional EV, but **unclaimed prizes are not certified unsold/purchasable prizes**, remaining-ticket counts are estimated, distributed inventory is not deterministically acquirable, and the game is ended. Public remaining-prize tables alone cannot certify guaranteed scratcher arbitrage.
 
-### H252 — Irish Lotto 6/45 cap full-cover sharing gate
-The new Irish Lotto begins 5 September 2026 with 45 balls and unchanged €2-per-line economics. A current August 2026 launch comparison reports the new jackpot cap at **€16m** and Match-3 / Match-2+Bonus at fixed **€4** each; recheck these two launch values against the final official 6/45 rules PDF when it appears.
+### H253 — Georgia scratcher endgame inventory gate
+Georgia Lottery #1709 `$20 Big Georgia Raffle` was used as a hard endgame test because a third-party snapshot implied unusually strong conditional economics:
+- estimated remaining tickets: **75,511**;
+- estimated residual ticket cost: **$1,510,220**;
+- nominal listed remaining prize value: **$3,003,820**;
+- naive conditional gross ratio: **198.8995%**;
+- naive nominal excess: **$1,493,600** before tax/friction.
 
-Exact full-space size is `C(45,6)=8,145,060`, so full cover costs **€16,290,120**. Against every draw, full cover has 168,720 Match-3 lines and 126,540 Match-2+Bonus lines. At the reported €4 fixed awards these create a deterministic lower-tier floor of **€1,181,040**.
-
-At a €16m cap:
-- with zero external jackpot-winning lines, jackpot + fixed floor gives **+€890,920** before middle-tier pari-mutuel receipts and execution costs;
-- with one external jackpot-winning line, the conservative floor becomes **−€7,109,080**;
-- therefore one external Match-6 line destroys the strict guarantee.
-
-Additionally, full coverage necessarily owns the realized Match-6 combination, so the **zero-jackpot-winner fifth-cap rolldown branch cannot occur** under successful full coverage. This is the same incompatibility class previously identified for capped multi-draw lotteries.
+The strict guarantee fails because the published prize state is based on **unclaimed** prizes, not a certified mapping of prizes embedded in **unsold purchasable** tickets; the residual ticket denominator is estimated rather than an exact official live inventory; retail inventory cannot be deterministically swept statewide; and the game is already ended. Therefore this is a conditional EV signal only, not executable guaranteed arbitrage.
 
 Files:
-- `research/h252_irish_lotto_45_cap_full_cover_sharing_gate.md`
-- `src/loto_research/h252_irish_lotto_45_cap_sharing.py`
-- `data/derived/h252_irish_lotto_45_cap_sharing.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H252_APPEND.md`
+- `research/h253_georgia_scratcher_endgame_inventory_gate.md`
+- `data/derived/h253_georgia_scratcher_1709_endgame.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H253_APPEND.md`
 
 ## NEXT ACTION
-1. Check H225-X2 merged output first; empty/missing output proves nothing. If positive, follow X3 -> X4; if zero, record exact H225 family closure.
-2. Recheck H252 when the final official post-5-Sep 6/45 rules PDF is published; do not otherwise repeat the full-cover cap test.
-3. Search current forced-distribution/rolldown mechanisms where the subsidy can be captured **without requiring zero jackpot winners while simultaneously forcing full coverage**.
-4. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-5. Continue lottery-only until SUCCESS or EXHAUSTED.
+1. Read and independently validate `data/derived/h225_x4_incremental_exact_rescreen.json` when it appears. Missing output proves nothing. If zero survivors, close H225; otherwise continue H225-X5 with actual X4 survivors.
+2. Recheck H252 only when the final official post-5-Sep 6/45 Irish rules PDF is published or materially new mechanics appear.
+3. For scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact **unsold purchasable inventory** and prize content/bounds, not merely unclaimed-prize tables or estimated ticket counts.
+4. Search current forced-distribution/rolldown mechanisms where the subsidy can be captured **without requiring zero jackpot winners while simultaneously forcing full coverage**.
+5. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+6. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H252_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H253_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
