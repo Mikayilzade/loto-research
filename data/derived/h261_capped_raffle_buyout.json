@@ -1,0 +1,45 @@
+{
+  "source": "https://www.homelottery.com.au/terms-and-conditions.html",
+  "raffles": {
+    "home_lottery": {
+      "ticket_cap": 170000,
+      "packs": {"1": 100, "3": 250, "5": 375, "10": 700},
+      "min_full_issuance_cost_aud": 11900000,
+      "prize_upper_aud": 6260851.86,
+      "return": 0.5261220050420168,
+      "return_pct": 52.61220050420168,
+      "deficit_aud": 5639148.14,
+      "required_discount_break_even_pct": 47.38779949579832,
+      "membership_extra_robustness_aud": 87986,
+      "return_with_membership_double_counted_pct": 53.351578655462184
+    },
+    "cash_calendar": {
+      "ticket_cap": 146888,
+      "packs": {"1": 25, "5": 60, "8": 85, "12": 110},
+      "min_full_issuance_cost_aud": 1346485,
+      "prize_upper_aud": 400000,
+      "return": 0.2970697779774747,
+      "return_pct": 29.70697779774747,
+      "deficit_aud": 946485,
+      "required_discount_break_even_pct": 70.29302220225253
+    },
+    "holiday_for_life": {
+      "ticket_cap": 239778,
+      "packs": {"1": 15, "5": 30, "15": 55, "30": 80},
+      "min_full_issuance_cost_aud": 639460,
+      "prize_upper_aud": 240000,
+      "return": 0.37531667344321773,
+      "return_pct": 37.53166734432177,
+      "deficit_aud": 399460,
+      "required_discount_break_even_pct": 62.468332655678225
+    }
+  },
+  "combined": {
+    "cost_aud": 13885945,
+    "prize_upper_aud": 6900851.86,
+    "return": 0.49696667097558,
+    "return_pct": 49.696667097558,
+    "deficit_aud": 6985093.14
+  },
+  "strict_guaranteed_profit": false
+}
