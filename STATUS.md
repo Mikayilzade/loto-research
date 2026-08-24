@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H255 — UK Lotto lower-tier boost covering-design impossibility**.
+Latest completed numbered lottery packet: **H256 — New Jersey Quick Draw Progressive 50% Bonus Hours full-cover closure**.
 Exact-family continuation uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
@@ -16,9 +16,9 @@ Exact-family continuation uses a separate namespace: **H225-X***. See `research/
 - H234: exact balanced counterexamples found for 44/44 sampled H232 survivors.
 - H235: after adding H234 witnesses and affine symmetries, 303,802 coefficient states and 90,425,060 legal shift tuples still survive.
 - H225-X1: 44/44 actual H235 survivors broken by unrestricted exact separators; 44 unique genuinely new witnesses, 0 inconclusive.
-- H225-X2: complete over all 306,450 states; **295,293** coefficient states and **65,921,861** legal shift tuples survive. The former empty legacy publication path has been replaced by an audited manifest; compact summary and 44-chunk survivor seed are authoritative.
+- H225-X2: complete over all 306,450 states; **295,293** coefficient states and **65,921,861** legal shift tuples survive.
 - H225-X3: complete; all **44/44 active X2 chunks** produced exact balanced counterexamples, **0 inconclusive**, **44 genuinely new witnesses** after deduplication.
-- H225-X4: full incremental exact rescreen has been triggered from `research-work`; the current merged path is still empty, so **no result is inferred yet**.
+- H225-X4: full incremental exact rescreen has been triggered from `research-work`; at the start of H256 `data/derived/h225_x4_incremental_exact_rescreen.json` was still empty, so **no X4 result is inferred**.
 
 ### Recent lottery closures / blockers
 - H236 RI Lucky 3 Spot: universal free 2X clears arithmetic threshold, but universal entitlement/execution not established.
@@ -37,32 +37,41 @@ Exact-family continuation uses a separate namespace: **H225-X***. See `research/
 - H251 Irish Lotto 6/45 Lotto Plus: full-cover incremental Plus return only 52.8477%.
 - H252 Irish Lotto 6/45 cap full-cover: sole-jackpot-winner floor can be positive, but one external Match-6 line destroys the strict guarantee; full coverage also prevents the zero-winner cap rolldown branch.
 - H253 Georgia scratcher #1709 endgame: apparent >100% residual-prize EV is not executable because unclaimed prizes are not certified unsold/purchasable inventory and live exact inventory cannot be swept deterministically.
-- H254 Irish guaranteed raffles: finite Christmas Millionaire Raffle full inventory returns only **42.2833%**; EuroMillions Ireland Only Raffle and Lotto Plus €1m overlays are genuine external subsidies but market-wide eligible raffle entries cannot be deterministically monopolized at bounded cost.
-- H255 UK Lotto lower-tier fixed boost: even a historical Match-3=£100 boost plus ordinary fixed higher tiers yields only **£1.24933324 average fixed cash per £2 line = 62.4667%**, so arbitrary additive covering portfolios cannot be strictly profitable on every draw by the averaging/linearity theorem.
+- H254 Irish guaranteed raffles: finite Christmas Millionaire Raffle full inventory returns only **42.2833%**; market-wide raffle identifiers cannot be deterministically monopolized at bounded cost.
+- H255 UK Lotto lower-tier fixed boost: historical Match-3=£100 plus ordinary fixed higher tiers averages only **62.4667%** of stake; additive covering portfolios cannot yield an everywhere-positive profit.
+- H256 NJ Quick Draw Progressive Bonus Hours: current guaranteed +50% fixed-prize uplift remains below break-even for every exact base/BULLSEYE/Double-BULLSEYE full cover; Multiplier has a legal 1X branch and jackpot numbers are uncontrolled.
 
-### H255 — UK Lotto lower-tier boost covering-design impossibility
-A lower-tier boost is structurally attractive because it does not require a zero-jackpot-winner branch. The historical UK Lotto special-event structure with **Match 3 = £100** was therefore tested as a generic partial-covering candidate rather than by enumerating individual wheels.
+### H256 — NJ Quick Draw Progressive 50% Bonus Hours
+Current official 2026 rules schedule Bonus Hours on selected Thursdays through 2026-12-31, including **2026-08-27, 5–7 p.m.** A qualifying single Quick Draw Progressive ticket with wager at least $10 receives a **50% bonus if it is a winner**, excluding the Progressive Jackpot; BULLSEYE, Double BULLSEYE and Multiplier tickets may qualify.
 
-For any fixed 6-number ticket over all `C(59,6)=45,057,474` possible main-number draws, exact Match-3 probability is **0.010398274878880249**. Thus a £100 Match-3 award contributes only **£1.0398274879** average cash per £2 line. Adding Match 4 £140, Match 5 £1,750 and Match 5+Bonus £1m fixed cash in the player's favor raises total average fixed cash only to **£1.2493332405 = 62.4667% of stake**.
+H256 used exact 20-of-80 combinatorial identities and the current published prize tables for every spot category 1–10:
+- best base full-cover promo return: **90.4791%** (5-spot);
+- best BULLSEYE full-cover promo return: **82.2389%** (2-spot);
+- best Double BULLSEYE full-cover promo return: **84.4937%** (2-spot);
+- exact best-base break-even uplift: **>65.7841%**, so the current +50% is insufficient before taxes/execution;
+- 9/10 spot $3m liability/pari-mutuel rules can only lower the nominal upper bound.
 
-Therefore no multiset, wheel, partial covering design, or unequal multiplicity portfolio composed solely of these additive ticket payoffs can guarantee positive cash profit on every possible draw: an everywhere-positive portfolio would necessarily have average payout greater than cost, contradicting the exact average below cost.
+Multiplier is drawn once per Quick Draw drawing; **1X is a legal 40% branch** while the add-on doubles base wager cost. In that branch the best fixed-prize Bonus Hours return is only **45.2396%** of total Multiplier stake. Progressive Jackpot contribution to the strict floor is **$0** because each ticket's nine jackpot numbers are system-random and the 50% bonus explicitly excludes jackpot wins.
+
+Therefore the current NJ Bonus Hours controlled full-cover class is **REJECTED** without needing to rely on promotion cancellation/discretion clauses.
 
 Files:
-- `research/h255_uk_lotto_match3_boost_impossibility.md`
-- `src/loto_research/h255_uk_lotto_match3_boost_impossibility.py`
-- `data/derived/h255_uk_lotto_match3_boost_impossibility.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H255_APPEND.md`
+- `research/h256_nj_quick_draw_bonus_hours_full_cover.md`
+- `src/loto_research/h256_nj_quick_draw_bonus_hours.py`
+- `data/derived/h256_nj_quick_draw_bonus_hours.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H256_APPEND.md`
 
 ## NEXT ACTION
 1. Read and independently validate `data/derived/h225_x4_incremental_exact_rescreen.json` when it becomes non-empty. Missing/empty output proves nothing. If zero survivors, close H225; otherwise continue H225-X5 with actual X4 survivors.
-2. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid into lower tiers **and the trigger does not conflict with owning a covering portfolio**; H255 closes fixed additive boosts without such nonlinear money.
+2. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid into lower tiers and the trigger remains compatible with a controlled covering portfolio.
 3. Search finite lottery identifiers/ticket pools where all eligible identifiers are actually player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
-4. Recheck H252 only when the final official post-5-Sep 6/45 Irish rules PDF is published or materially new mechanics appear.
-5. For scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact **unsold purchasable inventory** and prize content/bounds, not merely unclaimed-prize tables or estimated ticket counts.
-6. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-7. Continue lottery-only until SUCCESS or EXHAUSTED.
+4. Prioritize deterministic current payout boosts **above the exact underlying coverage hurdle**; H256 closes NJ Quick Draw at +50%, with best base requiring >65.7841% before friction.
+5. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
+6. For scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
+7. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+8. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H255_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H256_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
