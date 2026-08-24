@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: h225-x3-${{ github.ref }}
   cancel-in-progress: true
@@ -49,6 +50,22 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/derived/h225_x3_survivor_separation.json data/derived/h225_x3_new_witnesses.json
-          git commit -m "H225-X3 merge survivor exact separators" || exit 0
+          git commit -m "H225-X3 merge survivor exact separators" || true
           git pull --rebase origin research-work
           git push origin HEAD:research-work
+      - name: Dispatch H225-X4 when new cuts exist
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          newcuts=$(python - <<'PY'
+          import json
+          d=json.load(open('data/derived/h225_x3_new_witnesses.json'))
+          print(int(d['witness_count']))
+          PY
+          )
+          echo "H225-X3 new cuts: $newcuts"
+          if [ "$newcuts" -gt 0 ]; then
+            gh workflow run h225-x4-incremental-rescreen.yml --ref research-work
+          else
+            echo "No new X3 cuts; X4 not dispatched."
+          fi
