@@ -7,7 +7,6 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-  actions: write
 jobs:
   merge:
     runs-on: ubuntu-latest
@@ -35,10 +34,8 @@ jobs:
           from pathlib import Path
           import json
           ps=sorted(Path('h225_x2_download').rglob('sector_*_chunk_*.json'))
-          print('SHARDS',len(ps))
           assert len(ps)==44, len(ps)
-          keys=[]
-          total=0
+          keys=[]; total=0
           for p in ps:
             d=json.loads(p.read_text())
             assert d['packet']=='H241'
@@ -48,47 +45,44 @@ jobs:
           assert total==306450, total
           print('H225_X2_SHARD_AUDIT_OK',total)
           PY
-      - name: Merge exact X2 certificate
-        run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h225_x2_download
-      - name: Validate merged certificate
+      - name: Merge and validate exact X2 certificate
         run: |
+          PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h225_x2_download
           python - <<'PY'
-          import json
-          p='data/derived/h241_h240_incremental_exact_rescreen.json'
-          d=json.load(open(p))
+          import json, pathlib
+          p=pathlib.Path('data/derived/h241_h240_incremental_exact_rescreen.json')
+          d=json.loads(p.read_text())
           assert d['packet']=='H241'
           assert d['chunk_shards']==44
           assert d['quotient_coefficient_states_screened']==306450
           assert len(d['sectors'])==11
           assert sum(s['quotient_coefficient_states'] for s in d['sectors'])==306450
-          assert d['exact_shift_surviving_coefficient_states']>=0
-          assert d['exact_surviving_shift_tuples']>=0
-          print('H225_X2_MERGED_OK', d['exact_shift_surviving_coefficient_states'], d['exact_surviving_shift_tuples'])
+          assert d['exact_shift_surviving_coefficient_states']==295293
+          assert d['exact_surviving_shift_tuples']==65921861
+          assert p.stat().st_size>100000
+          print('H225_X2_MERGED_OK',295293,65921861,'BYTES',p.stat().st_size)
           PY
           cp data/derived/h241_h240_incremental_exact_rescreen.json /tmp/h225_x2_merged.json
-      - name: Commit result robustly onto latest research-work
+          sha256sum /tmp/h225_x2_merged.json
+          wc -c /tmp/h225_x2_merged.json
+      - name: Force-publish full certificate onto latest research-work
         run: |
+          set -euxo pipefail
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git fetch origin research-work
           git reset --hard origin/research-work
-          cp /tmp/h225_x2_merged.json data/derived/h241_h240_incremental_exact_rescreen.json
-          git add data/derived/h241_h240_incremental_exact_rescreen.json
-          git commit -m "H225-X2 rescue merged exact rescreen" || true
+          target=data/derived/h241_h240_incremental_exact_rescreen.json
+          git update-index --no-skip-worktree "$target" || true
+          git update-index --no-assume-unchanged "$target" || true
+          cp /tmp/h225_x2_merged.json "$target"
+          echo TARGET_BYTES=$(wc -c < "$target")
+          echo TARGET_HASH=$(git hash-object "$target")
+          git status --short "$target" || true
+          git diff --numstat -- "$target" || true
+          git add -f "$target"
+          git diff --cached --stat
+          git diff --cached --quiet && { echo 'ERROR: full certificate did not stage'; exit 2; }
+          git commit -m "H225-X2 publish full exact rescreen certificate"
+          git pull --rebase origin research-work
           git push origin HEAD:research-work
-      - name: Dispatch X3 only if X2 remains open
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          survivors=$(python - <<'PY'
-          import json
-          d=json.load(open('data/derived/h241_h240_incremental_exact_rescreen.json'))
-          print(int(d['exact_shift_surviving_coefficient_states']))
-          PY
-          )
-          echo "H225-X2 survivors: $survivors"
-          if [ "$survivors" -gt 0 ]; then
-            gh workflow run h225-x3-survivor-separation.yml --ref research-work
-          else
-            echo "H225 closed at X2; no X3 dispatch."
-          fi
