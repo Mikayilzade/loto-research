@@ -1,0 +1,21 @@
+{
+  "packet": "H253",
+  "date": "2026-08-24",
+  "game": "Georgia Lottery #1709 $20 Big Georgia Raffle",
+  "ticket_price_usd": 20,
+  "third_party_estimated_remaining_tickets": 75511,
+  "third_party_nominal_remaining_prize_value_usd": 3003820,
+  "estimated_remaining_ticket_cost_usd": 1510220,
+  "naive_conditional_gross_ratio": 1.9889949809,
+  "naive_nominal_excess_usd": 1493600,
+  "official_top_prize_claimed_snapshot": {"claimed": 3, "total": 4, "top_prize_usd": 2000000},
+  "strict_guarantee": false,
+  "blockers": [
+    "unclaimed prize is not equivalent to prize embedded in unsold inventory",
+    "remaining ticket count is estimated rather than exact official live unsold inventory",
+    "distributed retail inventory cannot be deterministically acquired in full",
+    "game is ended / not currently purchasable",
+    "claim/publication latency prevents hard prize-availability certification"
+  ],
+  "reopen_condition": "official execution-grade unsold inventory/prize mapping or hard worst-case residual-pool bound plus deterministic complete acquisition"
+}
