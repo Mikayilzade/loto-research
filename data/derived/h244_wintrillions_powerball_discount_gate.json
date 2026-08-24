@@ -1,0 +1,12 @@
+{
+  "combination_space": 292201338,
+  "ordinary_full_space_cost_usd": 584402676,
+  "deterministic_non_jackpot_gross_usd": 93466048,
+  "non_jackpot_return_on_ordinary_cost": 0.15993432583118426,
+  "break_even_discount_fraction": 0.8400656741688157,
+  "hypothetical_discount_fraction": 0.9,
+  "hypothetical_discounted_full_space_cost_usd": 58440267.6,
+  "hypothetical_pre_jackpot_margin_usd": 35025780.4,
+  "strict_guarantee_contract_gate": "FAIL: operator terms permit ignoring promotional enhancement where guaranteed profits irrespective of outcome arise",
+  "evidence_note": "90% offer is indexed by third parties; current operator-specific offer cap not independently recovered. Contract gate is decisive even under unlimited-discount counterfactual."
+}
