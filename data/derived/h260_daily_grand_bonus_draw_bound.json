@@ -1,0 +1,18 @@
+{
+  "packet": "H260",
+  "date": "2026-08-24",
+  "game": "Canada DAILY GRAND",
+  "promotion": "June 18 and 22, 2026 Bonus Draws",
+  "main_combinations": 1906884,
+  "ordinary_draw_states": 13348188,
+  "cover_cost_cad": 5720652,
+  "per_selection_favorable_cash_average_cad": 1.2736275515448239,
+  "base_portfolio_favorable_cash_average_cad": 2428660,
+  "bonus_draw_count": 3,
+  "bonus_lump_sum_each_cad": 500000,
+  "impossible_no_sharing_bonus_max_cad": 1500000,
+  "total_average_state_upper_bound_cad": 3928660,
+  "gross_upper_ratio": 0.6867503913889536,
+  "deficit_cad": 1791992,
+  "strict_guaranteed_positive_net_profit": false
+}
