@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H260 — DAILY GRAND Bonus Draw exact main-space cover bound**.
+Latest completed numbered lottery packet: **H261 — Hospital Research Foundation capped-raffle full-buyout screen**.
 Exact-family continuation uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
@@ -46,22 +46,7 @@ Exact-family continuation uses a separate namespace: **H225-X***. See `research/
 - H258 EuroMillions cap flow-down: ordinary cap overflow is compatible with full coverage even when rank 1 wins, but one legal external 5+2 duplicate destroys the strict guarantee even under a dominating all-current-prize-money upper bound.
 - H259 Wisconsin fixed pull-tab box: complete predetermined pack removes RNG and sharing but returns only **62.8571%** of retail cost; no deterministic subsidy crossing the exact **59.0909%** uplift hurdle was established.
 - H260 Canada DAILY GRAND Bonus Draw cover: a one-copy `C(49,5)` cover guarantees all three promotional bonus combinations, but even an impossible no-sharing C$1.5m bonus grant plus favorable base-game cash reaches only **68.6750%** of cover cost.
-
-### H259 — fixed pull-tab pack buyout screen
-Wisconsin Lottery `GONE FISHIN'` Pull-Tab #2752 (official Features and Procedures dated 2026-01-05) is a true finite-population lottery product: **1,050 tickets per box at $0.50 each**, with the complete prize composition published and no drawing.
-
-Exact complete-box arithmetic:
-- acquisition cost: **$525**;
-- complete fixed prize mass: **$330**;
-- deterministic gross return: **62.8571428571%**;
-- deterministic deficit: **$195**;
-- universal free prize uplift required merely for break-even: **59.09090909%** before friction.
-
-Files:
-- `research/h259_fixed_pulltab_pack_buyout_screen.md`
-- `src/loto_research/h259_fixed_pulltab_pack_screen.py`
-- `data/derived/h259_fixed_pulltab_pack_screen.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H259_APPEND.md`
+- H261 Hospital Research Foundation capped raffles: even impossible-perfect ownership of every issued identifier yields only **52.6122%** Home Lottery, **29.7070%** Cash Calendar, and **37.5317%** Holiday for Life at exact cheapest package costs.
 
 ### H260 — DAILY GRAND Bonus Draw exact main-space cover bound
 The official June 18/22, 2026 DAILY GRAND promotion added **three 5/49 Bonus Draws** at no extra cost, each with a C$500,000 lump-sum liability for the winning five-number selection. This is a genuine external subsidy and unlike ordinary DAILY GRAND it can be deterministically hit by covering only the main-number space.
@@ -78,20 +63,35 @@ Total impossible-favorable upper bound:
 - return **68.6750%**;
 - deficit **C$1,791,992**.
 
-Therefore the three-bonus-draw structure is **REJECTED as a strict guaranteed-profit cover** independently of external bonus sharing and independently of how the Grand Numbers are assigned.
-
 Files:
 - `research/h260_daily_grand_bonus_draw_cover_bound.md`
 - `src/loto_research/h260_daily_grand_bonus_draw_bound.py`
 - `data/derived/h260_daily_grand_bonus_draw_bound.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H260_APPEND.md`
 
+### H261 — Hospital Research Foundation capped-raffle full-buyout screen
+Current 2026 No 3 terms publish hard issuance caps and package prices for three active Australian charity-lottery products. H261 grants the player the impossible stronger condition of owning every issued ticket from inception, so every winning identifier is controlled.
+
+Exact cheapest complete-issuance results:
+- **Home Lottery:** 170,000 tickets; minimum acquisition **A$11,900,000**; stated total prize retail value **A$6,260,851.86**; return **52.6122%**, deficit **A$5,639,148.14**. Even double-counting the separately described A$87,986 Membership Draw gives only **53.3516%**.
+- **Cash Calendar:** 146,888 tickets; minimum exact acquisition **A$1,346,485**; five guaranteed cash prizes total **A$400,000**; return **29.7070%**.
+- **Holiday for Life:** 239,778 tickets; minimum exact acquisition **A$639,460**; immediate cash alternative **A$240,000**; return **37.5317%**.
+- Combined impossible-perfect takeover: cost **A$13,885,945** vs prize value **A$6,900,851.86**, only **49.6967%** gross.
+
+Thus these current hard-capped finite raffles validate the takeover mechanism structurally but decisively fail the economics even before real execution/eligibility/valuation friction.
+
+Files:
+- `research/h261_hospital_research_foundation_capped_raffle_buyout.md`
+- `src/loto_research/h261_capped_raffle_buyout.py`
+- `data/derived/h261_capped_raffle_buyout.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H261_APPEND.md`
+
 ## NEXT ACTION
 1. Validate `data/derived/h225_x6_incremental_exact_rescreen.json` when present. If zero survivors, close H225 rigorously; if positive, trigger H225-X7 over actual X6 survivors and continue cutting-plane generations only while survivors remain.
 2. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
-3. Continue finite fixed-pack/pull-tab screening only where the pack composition is certified and either payout is unusually high or a deterministic player-eligible discount/bonus can cross the exact deficit.
-4. Search finite lottery identifiers/ticket pools where all eligible identifiers are actually player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
-5. For bonus-draw promotions, prioritize cases where the maximum deterministic external subsidy divided by the minimum exact-cover cost materially exceeds H260's DAILY GRAND ratio; do not repeat DAILY GRAND unless the promotion or price changes.
+3. For finite capped raffles, prioritize only products with unusually high prize-to-minimum-full-issuance-cost ratios or an external deterministic subsidy; H261 closes ordinary hard-cap charity-raffle buyouts at ratios <=52.6122%.
+4. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
+5. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
 6. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
 7. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
 8. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
@@ -100,5 +100,5 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H260_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H261_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
