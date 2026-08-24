@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H259 — fixed pull-tab pack buyout screen**.
+Latest completed numbered lottery packet: **H260 — DAILY GRAND Bonus Draw exact main-space cover bound**.
 Exact-family continuation uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
@@ -45,17 +45,7 @@ Exact-family continuation uses a separate namespace: **H225-X***. See `research/
 - H257 LOTTO MAX 2026: complete coverage hits every MAXPLUS/MAXMILLIONS exact-match series, but those prizes and the Main Jackpot are shared among duplicate winning selections; no useful hard pre-draw external-duplicate cap exists.
 - H258 EuroMillions cap flow-down: ordinary cap overflow is compatible with full coverage even when rank 1 wins, but one legal external 5+2 duplicate destroys the strict guarantee even under a dominating all-current-prize-money upper bound.
 - H259 Wisconsin fixed pull-tab box: complete predetermined pack removes RNG and sharing but returns only **62.8571%** of retail cost; no deterministic subsidy crossing the exact **59.0909%** uplift hurdle was established.
-
-### H258 — EuroMillions cap flow-down one-external-duplicate bound
-Official current Belgian EuroMillions material confirms that once the €250m jackpot cap is reached, money that would exceed the cap flows to rank 2 (or the first lower winning rank) even if rank 1 itself has a winner. Thus complete coverage does not conflict with ordinary cap flow-down; it conflicts only with the separate terminal no-jackpot-winner roll-down.
-
-Under the legal branch containing exactly one external 5+2 duplicate, full coverage costs **€349,595,400** and our jackpot share is at most **€125m**. Even granting our portfolio every euro of the official 50% current-draw prize allocation from our purchase plus the external line gives gross only **€299,797,701.25**, a net upper bound of **−€49,797,698.75**. Therefore this strict full-cover guarantee is rejected.
-
-Files:
-- `research/h258_euromillions_cap_flowdown_external_duplicate_bound.md`
-- `src/loto_research/h258_euromillions_cap_flowdown_bound.py`
-- `data/derived/h258_euromillions_cap_flowdown_bound.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H258_APPEND.md`
+- H260 Canada DAILY GRAND Bonus Draw cover: a one-copy `C(49,5)` cover guarantees all three promotional bonus combinations, but even an impossible no-sharing C$1.5m bonus grant plus favorable base-game cash reaches only **68.6750%** of cover cost.
 
 ### H259 — fixed pull-tab pack buyout screen
 Wisconsin Lottery `GONE FISHIN'` Pull-Tab #2752 (official Features and Procedures dated 2026-01-05) is a true finite-population lottery product: **1,050 tickets per box at $0.50 each**, with the complete prize composition published and no drawing.
@@ -65,9 +55,7 @@ Exact complete-box arithmetic:
 - complete fixed prize mass: **$330**;
 - deterministic gross return: **62.8571428571%**;
 - deterministic deficit: **$195**;
-- universal free prize uplift required merely for break-even: **59.09090909%** before any friction.
-
-This validates fixed sealed packs as a structurally clean guarantee class because full-pack acquisition removes draw randomness and sharing, but the tested current 2026 box is decisively negative. Reopen only on a fixed pack whose guaranteed cash exceeds acquisition cost or on a deterministic player-eligible subsidy/discount/universal uplift crossing the exact pack hurdle.
+- universal free prize uplift required merely for break-even: **59.09090909%** before friction.
 
 Files:
 - `research/h259_fixed_pulltab_pack_buyout_screen.md`
@@ -75,18 +63,42 @@ Files:
 - `data/derived/h259_fixed_pulltab_pack_screen.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H259_APPEND.md`
 
+### H260 — DAILY GRAND Bonus Draw exact main-space cover bound
+The official June 18/22, 2026 DAILY GRAND promotion added **three 5/49 Bonus Draws** at no extra cost, each with a C$500,000 lump-sum liability for the winning five-number selection. This is a genuine external subsidy and unlike ordinary DAILY GRAND it can be deterministically hit by covering only the main-number space.
+
+Cheapest one-copy main-space cover:
+- `C(49,5) = 1,906,884` selections;
+- C$3 each;
+- acquisition cost **C$5,720,652**.
+
+For any assignment of Grand Numbers to those covered main combinations, the player-favorable no-external-sharing ordinary-draw cash average is invariant at **C$2,428,660**. Hence at least one legal ordinary draw state pays no more than that average. Even ignoring the actual Bonus Draw sharing rule and granting our portfolio the full C$500,000 on all three bonus draws adds only **C$1,500,000**.
+
+Total impossible-favorable upper bound:
+- gross **C$3,928,660**;
+- return **68.6750%**;
+- deficit **C$1,791,992**.
+
+Therefore the three-bonus-draw structure is **REJECTED as a strict guaranteed-profit cover** independently of external bonus sharing and independently of how the Grand Numbers are assigned.
+
+Files:
+- `research/h260_daily_grand_bonus_draw_cover_bound.md`
+- `src/loto_research/h260_daily_grand_bonus_draw_bound.py`
+- `data/derived/h260_daily_grand_bonus_draw_bound.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H260_APPEND.md`
+
 ## NEXT ACTION
 1. Validate `data/derived/h225_x6_incremental_exact_rescreen.json` when present. If zero survivors, close H225 rigorously; if positive, trigger H225-X7 over actual X6 survivors and continue cutting-plane generations only while survivors remain.
 2. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
-3. Continue finite fixed-pack/pull-tab screening only where the pack composition is certified and either payout is unusually high or a deterministic player-eligible discount/bonus can cross the exact deficit; do not waste time on ordinary ~60% packs without a new subsidy.
+3. Continue finite fixed-pack/pull-tab screening only where the pack composition is certified and either payout is unusually high or a deterministic player-eligible discount/bonus can cross the exact deficit.
 4. Search finite lottery identifiers/ticket pools where all eligible identifiers are actually player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
-5. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
-6. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
-7. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
-8. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-9. Continue lottery-only until SUCCESS or EXHAUSTED.
+5. For bonus-draw promotions, prioritize cases where the maximum deterministic external subsidy divided by the minimum exact-cover cost materially exceeds H260's DAILY GRAND ratio; do not repeat DAILY GRAND unless the promotion or price changes.
+6. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
+7. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
+8. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
+9. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+10. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H259_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H260_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
