@@ -1,0 +1,17 @@
+{
+  "packet": "H262",
+  "game": "LOTTO 6/49 Gold Ball Draw",
+  "currency": "CAD",
+  "start_jackpot": 10000000,
+  "white_balls": 29,
+  "jackpot_increment_per_white": 2000000,
+  "terminal_gold_only_jackpot": 68000000,
+  "play_cost": 3,
+  "strict_positive_gold_only_max_paid_plays_terminal": 22666666,
+  "white_ball_prize": 1000000,
+  "strict_positive_gold_only_max_paid_plays_white_state": 333333,
+  "takeover_condition": "player owns every Gold Ball Draw selection issued for the target draw",
+  "execution_status": "blocked",
+  "blocker": "published mechanics provide computer-generated identifiers in an open all-issued-selection pool, including Free Plays; no finite reservable issuance monopoly established",
+  "success": false
+}
