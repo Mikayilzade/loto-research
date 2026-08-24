@@ -1,0 +1,63 @@
+name: H225-X8 incremental exact rescreen
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'data/derived/h225_x8_trigger.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: h225-x8-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  chunk:
+    strategy:
+      fail-fast: false
+      matrix:
+        sector: [0,1,2,3,4,5,6,7,8,9,10]
+        chunk: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - run: PYTHONPATH=src python -m loto_research.h225_x8_incremental_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x8-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          path: data/derived/h225_x8_chunk_shards/sector_*_chunk_*.json
+          if-no-files-found: error
+  merge:
+    needs: chunk
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x8-s*-c*
+          path: h225_x8_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h225_x8_incremental_rescreen --merge-dir h225_x8_download
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x8-merged
+          path: data/derived/h225_x8_incremental_exact_rescreen.json
+          if-no-files-found: error
+      - name: Commit H225-X8 exact incremental result
+        run: |
+          cp data/derived/h225_x8_incremental_exact_rescreen.json /tmp/x8.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          cp /tmp/x8.json data/derived/h225_x8_incremental_exact_rescreen.json
+          git add -f data/derived/h225_x8_incremental_exact_rescreen.json
+          git commit -m "H225-X8 merge incremental exact rescreen" || true
+          git push origin HEAD:research-work
