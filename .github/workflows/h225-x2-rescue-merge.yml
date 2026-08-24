@@ -1,0 +1,94 @@
+name: H225-X2 rescue merge
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - '.github/workflows/h225-x2-rescue-merge.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research-work
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy
+      - name: Download all completed X2 shards from authoritative run
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Mikayilzade/loto-research
+          run-id: 32693907822
+          pattern: h225-x2-s*-c*
+          path: h225_x2_download
+          merge-multiple: false
+      - name: Audit shard completeness before merge
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          ps=sorted(Path('h225_x2_download').rglob('sector_*_chunk_*.json'))
+          print('SHARDS',len(ps))
+          assert len(ps)==44, len(ps)
+          keys=[]
+          total=0
+          for p in ps:
+            d=json.loads(p.read_text())
+            assert d['packet']=='H241'
+            keys.append((d['sector_index'],d['chunk_index']))
+            total += d['chunk_quotient_states']
+          assert sorted(keys)==[(s,c) for s in range(11) for c in range(4)]
+          assert total==306450, total
+          print('H225_X2_SHARD_AUDIT_OK',total)
+          PY
+      - name: Merge exact X2 certificate
+        run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h225_x2_download
+      - name: Validate merged certificate
+        run: |
+          python - <<'PY'
+          import json
+          p='data/derived/h241_h240_incremental_exact_rescreen.json'
+          d=json.load(open(p))
+          assert d['packet']=='H241'
+          assert d['chunk_shards']==44
+          assert d['quotient_coefficient_states_screened']==306450
+          assert len(d['sectors'])==11
+          assert sum(s['quotient_coefficient_states'] for s in d['sectors'])==306450
+          assert d['exact_shift_surviving_coefficient_states']>=0
+          assert d['exact_surviving_shift_tuples']>=0
+          print('H225_X2_MERGED_OK', d['exact_shift_surviving_coefficient_states'], d['exact_surviving_shift_tuples'])
+          PY
+          cp data/derived/h241_h240_incremental_exact_rescreen.json /tmp/h225_x2_merged.json
+      - name: Commit result robustly onto latest research-work
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          cp /tmp/h225_x2_merged.json data/derived/h241_h240_incremental_exact_rescreen.json
+          git add data/derived/h241_h240_incremental_exact_rescreen.json
+          git commit -m "H225-X2 rescue merged exact rescreen" || true
+          git push origin HEAD:research-work
+      - name: Dispatch X3 only if X2 remains open
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          survivors=$(python - <<'PY'
+          import json
+          d=json.load(open('data/derived/h241_h240_incremental_exact_rescreen.json'))
+          print(int(d['exact_shift_surviving_coefficient_states']))
+          PY
+          )
+          echo "H225-X2 survivors: $survivors"
+          if [ "$survivors" -gt 0 ]; then
+            gh workflow run h225-x3-survivor-separation.yml --ref research-work
+          else
+            echo "H225 closed at X2; no X3 dispatch."
+          fi
