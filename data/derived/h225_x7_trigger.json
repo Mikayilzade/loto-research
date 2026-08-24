@@ -1,0 +1,13 @@
+{
+  "packet": "H225-X7-TRIGGER-V1",
+  "source_packet": "H225-X6",
+  "source_run": 32784914783,
+  "source_artifact_id": 9541696415,
+  "source_artifact_digest": "sha256:76256ba6957894e7562098c1552c783dca26f3095a9954dba2a7edfc42b16635",
+  "validated_chunk_shards": 44,
+  "validated_quotient_coefficient_states_screened": 306450,
+  "validated_sector_count": 11,
+  "x6_exact_shift_surviving_coefficient_states": 210285,
+  "x6_exact_surviving_shift_tuples": 19567210,
+  "action": "Run integrated H225-X7 -> X8 -> X9 -> X10 chain on positive X6 survivors"
+}
