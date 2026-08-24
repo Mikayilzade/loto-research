@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H251 — Irish Lotto 6/45 Lotto Plus full-cover additive closure**.
+Latest completed numbered lottery packet: **H252 — Irish Lotto 6/45 cap full-cover sharing gate**.
 Exact-family continuation now uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
@@ -33,35 +33,34 @@ Exact-family continuation now uses a separate namespace: **H225-X***. See `resea
 - H248 Lotto.com 25% draw discount: below break-even for known finite covers.
 - H249 Jackpocket credit × Maine Pick 3 Single Digit: $5 retail-style exact cover guarantees $2.50 gross; current qualifying deterministic credit/fee/entitlement evidence incomplete.
 - H250 courier-supported partial-digit exact subsidy floor: exact-position 50% cover verified, but no current deterministic subsidy above the hurdle plus fees.
+- H251 Irish Lotto 6/45 Lotto Plus: full-cover incremental Plus return only 52.8477%.
 
-### H251 — Irish Lotto 6/45 Lotto Plus full-cover additive closure
-The Irish National Lottery has confirmed that the refreshed Lotto starts **5 September 2026** with 45 balls, unchanged €4 minimum for two Lotto lines and €6 for two lines with Lotto Plus. Thus Lotto Plus remains an incremental **€1 per line** and enters the chosen line in both Plus 1 and Plus 2. Lotto Plus 1 remains €1m; Lotto Plus 2 increases to €1m.
+### H252 — Irish Lotto 6/45 cap full-cover sharing gate
+The new Irish Lotto begins 5 September 2026 with 45 balls and unchanged €2-per-line economics. A current August 2026 launch comparison reports the new jackpot cap at **€16m** and Match-3 / Match-2+Bonus at fixed **€4** each; recheck these two launch values against the final official 6/45 rules PDF when it appears.
 
-Exact full-space size is `C(45,6)=8,145,060`. Owning every line gives deterministic category counts against any six winning numbers plus one bonus. Applying the current official fixed Plus tables with the announced new €1m Plus 2 top prize, and generously valuing every Match-2+Bonus Daily Million prize at its full €2 face value:
+Exact full-space size is `C(45,6)=8,145,060`, so full cover costs **€16,290,120**. Against every draw, full cover has 168,720 Match-3 lines and 126,540 Match-2+Bonus lines. At the reported €4 fixed awards these create a deterministic lower-tier floor of **€1,181,040**.
 
-- incremental Plus full-cover cost: **€8,145,060**;
-- deterministic Plus 1 gross: **€2,283,240**;
-- deterministic Plus 2 gross: **€2,021,240**;
-- combined gross: **€4,304,480**;
-- deterministic net: **-€3,840,580**;
-- return: **52.8477%**.
+At a €16m cap:
+- with zero external jackpot-winning lines, jackpot + fixed floor gives **+€890,920** before middle-tier pari-mutuel receipts and execution costs;
+- with one external jackpot-winning line, the conservative floor becomes **−€7,109,080**;
+- therefore one external Match-6 line destroys the strict guarantee.
 
-Therefore the September Plus 2 increase does **not** rescue full coverage. Under the announced/current fixed tables, adding Plus to every combination strictly worsens the guaranteed floor.
+Additionally, full coverage necessarily owns the realized Match-6 combination, so the **zero-jackpot-winner fifth-cap rolldown branch cannot occur** under successful full coverage. This is the same incompatibility class previously identified for capped multi-draw lotteries.
 
 Files:
-- `research/h251_irish_lotto_45_plus_full_cover.md`
-- `src/loto_research/h251_irish_lotto_45_plus_full_cover.py`
-- `data/derived/h251_irish_lotto_45_plus_full_cover.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H251_APPEND.md`
+- `research/h252_irish_lotto_45_cap_full_cover_sharing_gate.md`
+- `src/loto_research/h252_irish_lotto_45_cap_sharing.py`
+- `data/derived/h252_irish_lotto_45_cap_sharing.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H252_APPEND.md`
 
 ## NEXT ACTION
 1. Check H225-X2 merged output first; empty/missing output proves nothing. If positive, follow X3 -> X4; if zero, record exact H225 family closure.
-2. For the 5 Sep 2026 Irish Lotto refresh, analyze the **main Lotto-only** cap / fifth-cap-draw full-cover economics separately; H251 closes only the Plus add-on.
-3. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-4. Search current forced-distribution/rolldown mechanisms where external subsidy crosses the H021 hurdle and sharing/execution can be bounded.
-5. Do not repeat H239-H251 without materially new evidence; continue until lottery-specific SUCCESS or EXHAUSTED.
+2. Recheck H252 when the final official post-5-Sep 6/45 rules PDF is published; do not otherwise repeat the full-cover cap test.
+3. Search current forced-distribution/rolldown mechanisms where the subsidy can be captured **without requiring zero jackpot winners while simultaneously forcing full coverage**.
+4. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+5. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H251_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H252_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
