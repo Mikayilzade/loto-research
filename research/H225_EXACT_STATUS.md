@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-24
+Updated: 2026-08-24 09:30 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -25,7 +25,7 @@ Result:
 
 The legacy H237 exact attempt is non-authoritative: all 44 separator artifacts existed, but its merge failed because SciPy was not installed in the merge job. H225-X1 reran the task with a corrected merge and completed successfully.
 
-## H225-X2 — RUNNING
+## H225-X2 — RUNNING / EXPLICITLY RETRIGGERED
 Legacy implementation/output filenames use `h241_h240_incremental_exact_rescreen*`; interpret them as H225-X2, not as the global numbered H241 packet.
 
 Input:
@@ -42,13 +42,15 @@ Task:
 Target legacy merged file:
 `data/derived/h241_h240_incremental_exact_rescreen.json`
 
+2026-08-24 diagnosis: the original automatic X1 -> X2 chain never fired because X1's result commit was pushed with the GitHub Actions `GITHUB_TOKEN`; GitHub suppresses ordinary push-triggered workflow recursion. The X2 workflow now has an explicit trigger path and `actions: write`, and this status commit is the deliberate human-token push that starts X2. Its merge step dispatches X3 explicitly through `workflow_dispatch` when positive survivors remain.
+
 Interpretation:
 - zero exact survivors = exact finite closure of H225 general cyclic-affine family
 - positive survivors = continue separator/cut loop
 - missing output = pending/inconclusive only
 
 ## H225-X3 — ARMED
-Workflow is prepared and triggers only when the X2 merged file appears.
+Workflow is prepared for explicit dispatch by X2 when X2 leaves positive survivors.
 It selects one actual survivor from every still-positive X2 chunk; zero-survivor chunks are explicit skips. Returned witnesses are deduplicated against both H234 and H225-X1.
 
 Files:
@@ -62,5 +64,5 @@ Expected outputs:
 ## NEXT ACTION
 1. Check H225-X2 merged output.
 2. If zero survivors, record exact closure of H225 and stop this family lane.
-3. If positive, let armed H225-X3 finish and inspect active chunks / new witnesses.
+3. If positive, inspect automatically dispatched H225-X3 and its active chunks/new witnesses.
 4. Continue future family iterations only under `H225-X4`, `H225-X5`, ...; never consume global H-numbers again.
