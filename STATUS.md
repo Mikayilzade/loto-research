@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H247 — free Quick Pick / BOGO controlled-coverage subsidy closure**.
+Latest completed numbered lottery packet: **H248 — Lotto.com 25% draw-discount full-cover upper-bound closure**.
 Latest completed exact-family packet: **H235**.
 Current exact-family continuation: **H237**; expected merged outputs remain absent:
 - `data/derived/h237_h235_first_survivor_separation.json`
@@ -30,29 +30,35 @@ Missing output proves nothing.
 - H244 WinTrillions Powerball discount: terms permit removal of the promotional enhancement in guaranteed-profit constructions.
 - H245 UK Lotto current full-space: fixed-prize return too low and full coverage prevents the relevant rolldown branch.
 - H246 LOTTO 6/49 Aug. 29 SuperDraw: even a deliberately favorable isolated-pool model returns only 46.5456% of full-cover spend.
+- H247 free Quick Pick / BOGO: uncontrolled free selections have zero guaranteed marginal coverage and zero strict cash floor.
 
-### H247 — free Quick Pick / BOGO coverage-subsidy gate
-Current primary examples:
-- Kentucky Lottery, Aug. 1–31, 2026: $10+ Millionaire for Life purchase at Kroger gives two free $1 Cash Ball 225 **Quick Pick** plays.
-- Hoosier Lottery coupon valid Mar. 23, 2026–Mar. 31, 2027: one free $5 Millionaire for Life ticket, **Quick Pick only**.
+### H248 — Lotto.com 25% draw-discount full-cover upper bound
+Fresh current evidence from Lotto.com Promotional Terms confirms percentage discounts are a real lottery-ticket promotion class, but promotions are one-use, service fees remain, and product/state/time/cap restrictions may apply. A current indexed NY Lotto.com homepage displays a `25% off $30` offer.
 
-Exact worst-case result: an uncontrolled Quick Pick has **zero guaranteed marginal coverage**, because free selections may duplicate already-covered states; if the ticket can lose, its strict cash floor is also zero. Therefore a free Quick Pick cannot be counted as a deterministic discount to a controlled full-cover construction.
+H248 intentionally grants this observed 25% discount a much stronger scope than published: **25% off the entire controlled full-space stake, zero service fees, no cap, deterministic eligibility, no cancellation**. Even under that dominating assumption, known finite-space constructions remain below strict break-even:
 
-For Millionaire for Life the H026 controlled full-space requirement remains **22,910,580 plays / $114,552,900**, rather than a superficially discounted BOGO cover.
+- Ohio KENO 3-spot: **86.9507%**;
+- Nebraska MyDaY best case: **77.9631%**;
+- Millionaire for Life optimistic full-cover bound: **70.5168%**;
+- Nebraska 2by2: **50.7052%**;
+- Lotto America strict non-jackpot floor: **35.8678%**.
+
+General exact gate: for base deterministic return `r`, a percentage discount must satisfy **`d > 1-r`** before fees/caps. Thus 25% cannot rescue these constructions.
 
 Files:
-- `research/h247_free_quick_pick_coverage_gate.md`
-- `src/loto_research/h247_free_quick_pick_coverage_gate.py`
-- `data/derived/h247_free_quick_pick_coverage_gate.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H247_APPEND.md`
+- `research/h248_lotto_com_25pct_discount_full_cover_upper_bound.md`
+- `src/loto_research/h248_lotto_com_discount_upper_bound.py`
+- `data/derived/h248_lotto_com_discount_upper_bound.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H248_APPEND.md`
 
 ## NEXT ACTION
 1. Check H237 merged output first.
 2. If H237 returns new exact balanced witnesses, deduplicate against H234 and feed only new cuts into the next H225 exact rescreen.
-3. Do not repeat H239-H247 without materially new rules/evidence.
-4. Next independent lottery packet should prioritize active deterministic **player-selectable** discounts/subsidies or rolldowns with enough magnitude to cross an exact game-specific threshold.
-5. Continue until lottery-specific SUCCESS or EXHAUSTED.
+3. Do not repeat H239-H248 without materially new rules/evidence.
+4. Next independent lottery packet should prioritize active deterministic **player-selectable** discounts/subsidies exceeding the exact game-specific deficit, or a newly identified controlled finite-space game with strict full-cover return above 75%.
+5. Also prioritize current forced-distribution/rolldown mechanics where external subsidy is large enough to cross the H021 hurdle and sharing/execution can be bounded.
+6. Continue until lottery-specific SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H247_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H248_APPEND.md`.
