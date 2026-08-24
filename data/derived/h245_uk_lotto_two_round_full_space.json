@@ -1,0 +1,31 @@
+{
+  "packet": "H245",
+  "game": "UK Lotto current two-round format",
+  "date": "2026-08-24",
+  "space": 45057474,
+  "line_price_gbp": 2,
+  "full_space_cost_gbp": 90114948,
+  "counts_per_round": {
+    "match6": 1,
+    "match5_bonus": 6,
+    "match5": 312,
+    "match4": 20670,
+    "match3": 468520,
+    "match2": 4392375
+  },
+  "fixed_prizes_gbp": {
+    "match5_bonus": 1000000,
+    "match5": 1000,
+    "match4": 50,
+    "match3": 10,
+    "match2": 1
+  },
+  "fixed_cash_one_round_gbp": 16423075,
+  "fixed_cash_two_rounds_gbp": 32846150,
+  "fixed_return_ratio": 0.36449169343137167,
+  "fixed_deficit_gbp": 57268798,
+  "full_cover_guarantees_match6_each_round": true,
+  "must_be_won_no_jackpot_winner_rolldown_compatible": false,
+  "strict_guarantee": false,
+  "status": "REJECTED"
+}
