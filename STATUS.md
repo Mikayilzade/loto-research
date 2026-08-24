@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H261 — Hospital Research Foundation capped-raffle full-buyout screen**.
+Latest completed numbered lottery packet: **H262 — LOTTO 6/49 terminal Gold Ball takeover screen**.
 Exact-family continuation uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
@@ -47,6 +47,7 @@ Exact-family continuation uses a separate namespace: **H225-X***. See `research/
 - H259 Wisconsin fixed pull-tab box: complete predetermined pack removes RNG and sharing but returns only **62.8571%** of retail cost; no deterministic subsidy crossing the exact **59.0909%** uplift hurdle was established.
 - H260 Canada DAILY GRAND Bonus Draw cover: a one-copy `C(49,5)` cover guarantees all three promotional bonus combinations, but even an impossible no-sharing C$1.5m bonus grant plus favorable base-game cash reaches only **68.6750%** of cover cost.
 - H261 Hospital Research Foundation capped raffles: even impossible-perfect ownership of every issued identifier yields only **52.6122%** Home Lottery, **29.7070%** Cash Calendar, and **37.5317%** Holiday for Life at exact cheapest package costs.
+- H262 LOTTO 6/49 terminal Gold Ball: the final one-ball state creates a real C$68m unique-identifier takeover theorem with a Gold-Ball-only strict cost ceiling of **22,666,666 paid plays**, but open computer-generated issuance (including Free Plays) prevents certifying ownership of every eligible identifier.
 
 ### H260 — DAILY GRAND Bonus Draw exact main-space cover bound
 The official June 18/22, 2026 DAILY GRAND promotion added **three 5/49 Bonus Draws** at no extra cost, each with a C$500,000 lump-sum liability for the winning five-number selection. This is a genuine external subsidy and unlike ordinary DAILY GRAND it can be deterministically hit by covering only the main-number space.
@@ -86,19 +87,31 @@ Files:
 - `data/derived/h261_capped_raffle_buyout.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H261_APPEND.md`
 
+### H262 — LOTTO 6/49 terminal Gold Ball takeover screen
+Current WCLC rules make each Gold Ball identifier unique and draw the winner from all issued identifiers. After 29 consecutive white balls, the only remaining ball is gold and the jackpot arithmetic reaches **C$68,000,000**. If one player could own every issued identifier for that terminal draw, the Gold Ball prize itself would be deterministic and strict positive gross would hold for up to **22,666,666 paid C$3 plays**.
+
+This is a genuine nonlinear lottery mechanism, but not yet executable as a strict guarantee: identifiers are computer-generated, public issuance remains open until cutoff, other players can create eligible entries, and Free Plays also receive Gold Ball entries. A single external eligible identifier preserves a legal outcome where our portfolio receives no Gold Ball prize.
+
+Files:
+- `research/h262_lotto649_final_gold_ball_takeover.md`
+- `src/loto_research/h262_lotto649_gold_ball_takeover.py`
+- `data/derived/h262_lotto649_gold_ball_takeover.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H262_APPEND.md`
+
 ## NEXT ACTION
 1. Validate `data/derived/h225_x6_incremental_exact_rescreen.json` when present. If zero survivors, close H225 rigorously; if positive, trigger H225-X7 over actual X6 survivors and continue cutting-plane generations only while survivors remain.
 2. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
-3. For finite capped raffles, prioritize only products with unusually high prize-to-minimum-full-issuance-cost ratios or an external deterministic subsidy; H261 closes ordinary hard-cap charity-raffle buyouts at ratios <=52.6122%.
-4. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
-5. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
-6. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
-7. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
-8. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
-9. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-10. Continue lottery-only until SUCCESS or EXHAUSTED.
+3. Search terminal/elimination lottery mechanics analogous to H262 **only where the eligible identifier set is hard-capped, player-selectable/reservable, or otherwise monopolizable before cutoff**; H262 shows the economics can cross 100% if execution can be certified.
+4. For finite capped raffles, prioritize only products with unusually high prize-to-minimum-full-issuance-cost ratios or an external deterministic subsidy; H261 closes ordinary hard-cap charity-raffle buyouts at ratios <=52.6122%.
+5. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
+6. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
+7. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
+8. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
+9. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
+10. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+11. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H261_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H262_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
