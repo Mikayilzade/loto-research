@@ -1,4 +1,4 @@
-name: H225-X7 survivor exact separators
+name: H225 X7-X10 integrated exact chain
 on:
   push:
     branches: [research-work]
@@ -8,10 +8,10 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: h225-x7-${{ github.ref }}
+  group: h225-x7-x10-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  separate:
+  x7_separate:
     strategy:
       fail-fast: false
       matrix:
@@ -29,10 +29,13 @@ jobs:
           name: h225-x7-j${{ matrix.job }}
           path: data/derived/h225_x7_separator_shards/job_*.json
           if-no-files-found: error
-  merge:
-    needs: separate
+
+  x7_merge:
+    needs: x7_separate
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    outputs:
+      newcuts: ${{ steps.stats.outputs.newcuts }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -44,6 +47,13 @@ jobs:
           path: h225_x7_download
           merge-multiple: false
       - run: PYTHONPATH=src python -m loto_research.h225_x7_survivor_separation --merge-dir h225_x7_download
+      - id: stats
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          d=json.load(open('data/derived/h225_x7_new_witnesses.json'))
+          print('newcuts='+str(int(d['witness_count'])))
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: h225-x7-merged
@@ -51,7 +61,7 @@ jobs:
             data/derived/h225_x7_survivor_separation.json
             data/derived/h225_x7_new_witnesses.json
           if-no-files-found: error
-      - name: Commit H225-X7 exact separator packet
+      - name: Publish X7 robustly
         run: |
           cp data/derived/h225_x7_survivor_separation.json /tmp/x7.json
           cp data/derived/h225_x7_new_witnesses.json /tmp/x7w.json
@@ -62,5 +72,257 @@ jobs:
           cp /tmp/x7.json data/derived/h225_x7_survivor_separation.json
           cp /tmp/x7w.json data/derived/h225_x7_new_witnesses.json
           git add -f data/derived/h225_x7_survivor_separation.json data/derived/h225_x7_new_witnesses.json
-          git commit -m "H225-X7 merge survivor exact separators" || true
+          git commit -m "H225-X7 publish survivor exact separators" || true
+          git push origin HEAD:research-work
+
+  x8_rescreen:
+    needs: x7_merge
+    if: needs.x7_merge.outputs.newcuts != '0'
+    strategy:
+      fail-fast: false
+      matrix:
+        sector: [0,1,2,3,4,5,6,7,8,9,10]
+        chunk: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x7-merged
+          path: x7_payload
+      - run: cp x7_payload/h225_x7_new_witnesses.json data/derived/h225_x7_new_witnesses.json
+      - run: PYTHONPATH=src python -m loto_research.h225_x8_incremental_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x8-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          path: data/derived/h225_x8_chunk_shards/sector_*_chunk_*.json
+          if-no-files-found: error
+
+  x8_merge:
+    needs: [x7_merge, x8_rescreen]
+    if: needs.x7_merge.outputs.newcuts != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    outputs:
+      survivors: ${{ steps.stats.outputs.survivors }}
+      shifttuples: ${{ steps.stats.outputs.shifttuples }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x7-merged
+          path: x7_payload
+      - run: cp x7_payload/h225_x7_new_witnesses.json data/derived/h225_x7_new_witnesses.json
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x8-s*-c*
+          path: h225_x8_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h225_x8_incremental_rescreen --merge-dir h225_x8_download
+      - id: stats
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          d=json.load(open('data/derived/h225_x8_incremental_exact_rescreen.json'))
+          assert d['packet']=='H225-X8' and d['chunk_shards']==44 and d['quotient_coefficient_states_screened']==306450
+          print('survivors='+str(int(d['exact_shift_surviving_coefficient_states'])))
+          print('shifttuples='+str(int(d['exact_surviving_shift_tuples'])))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x8-merged
+          path: data/derived/h225_x8_incremental_exact_rescreen.json
+          if-no-files-found: error
+      - name: Publish X8 robustly
+        run: |
+          cp data/derived/h225_x8_incremental_exact_rescreen.json /tmp/x8.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          cp /tmp/x8.json data/derived/h225_x8_incremental_exact_rescreen.json
+          git add -f data/derived/h225_x8_incremental_exact_rescreen.json
+          git commit -m "H225-X8 publish full incremental exact rescreen" || true
+          git push origin HEAD:research-work
+
+  x9_separate:
+    needs: [x7_merge, x8_merge]
+    if: needs.x8_merge.outputs.survivors != '0'
+    strategy:
+      fail-fast: false
+      matrix:
+        job: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43]
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x7-merged
+          path: x7_payload
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x8-merged
+          path: x8_payload
+      - run: |
+          cp x7_payload/h225_x7_new_witnesses.json data/derived/h225_x7_new_witnesses.json
+          cp x8_payload/h225_x8_incremental_exact_rescreen.json data/derived/h225_x8_incremental_exact_rescreen.json
+      - run: PYTHONPATH=src python -m loto_research.h225_x9_survivor_separation --job ${{ matrix.job }} --time-limit 180
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x9-j${{ matrix.job }}
+          path: data/derived/h225_x9_separator_shards/job_*.json
+          if-no-files-found: error
+
+  x9_merge:
+    needs: [x7_merge, x8_merge, x9_separate]
+    if: needs.x8_merge.outputs.survivors != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      newcuts: ${{ steps.stats.outputs.newcuts }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x7-merged
+          path: x7_payload
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x8-merged
+          path: x8_payload
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x9-j*
+          path: h225_x9_download
+          merge-multiple: false
+      - run: |
+          cp x7_payload/h225_x7_new_witnesses.json data/derived/h225_x7_new_witnesses.json
+          cp x8_payload/h225_x8_incremental_exact_rescreen.json data/derived/h225_x8_incremental_exact_rescreen.json
+          PYTHONPATH=src python -m loto_research.h225_x9_survivor_separation --merge-dir h225_x9_download
+      - id: stats
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          d=json.load(open('data/derived/h225_x9_new_witnesses.json'))
+          print('newcuts='+str(int(d['witness_count'])))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x9-merged
+          path: |
+            data/derived/h225_x9_survivor_separation.json
+            data/derived/h225_x9_new_witnesses.json
+          if-no-files-found: error
+      - name: Publish X9 robustly
+        run: |
+          cp data/derived/h225_x9_survivor_separation.json /tmp/x9.json
+          cp data/derived/h225_x9_new_witnesses.json /tmp/x9w.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          cp /tmp/x9.json data/derived/h225_x9_survivor_separation.json
+          cp /tmp/x9w.json data/derived/h225_x9_new_witnesses.json
+          git add -f data/derived/h225_x9_survivor_separation.json data/derived/h225_x9_new_witnesses.json
+          git commit -m "H225-X9 publish survivor exact separators" || true
+          git push origin HEAD:research-work
+
+  x10_rescreen:
+    needs: [x7_merge, x8_merge, x9_merge]
+    if: needs.x9_merge.outputs.newcuts != '0'
+    strategy:
+      fail-fast: false
+      matrix:
+        sector: [0,1,2,3,4,5,6,7,8,9,10]
+        chunk: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x7-merged
+          path: x7_payload
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x9-merged
+          path: x9_payload
+      - run: |
+          cp x7_payload/h225_x7_new_witnesses.json data/derived/h225_x7_new_witnesses.json
+          cp x9_payload/h225_x9_new_witnesses.json data/derived/h225_x9_new_witnesses.json
+      - run: PYTHONPATH=src python -m loto_research.h225_x10_incremental_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x10-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          path: data/derived/h225_x10_chunk_shards/sector_*_chunk_*.json
+          if-no-files-found: error
+
+  x10_merge:
+    needs: [x7_merge, x8_merge, x9_merge, x10_rescreen]
+    if: needs.x9_merge.outputs.newcuts != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x7-merged
+          path: x7_payload
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x9-merged
+          path: x9_payload
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x10-s*-c*
+          path: h225_x10_download
+          merge-multiple: false
+      - run: |
+          cp x7_payload/h225_x7_new_witnesses.json data/derived/h225_x7_new_witnesses.json
+          cp x9_payload/h225_x9_new_witnesses.json data/derived/h225_x9_new_witnesses.json
+          PYTHONPATH=src python -m loto_research.h225_x10_incremental_rescreen --merge-dir h225_x10_download
+      - name: Validate X10 certificate
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/derived/h225_x10_incremental_exact_rescreen.json'))
+          assert d['packet']=='H225-X10'
+          assert d['chunk_shards']==44 and d['quotient_coefficient_states_screened']==306450
+          print('H225_X10_RESULT',d['exact_shift_surviving_coefficient_states'],d['exact_surviving_shift_tuples'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x10-merged
+          path: data/derived/h225_x10_incremental_exact_rescreen.json
+          if-no-files-found: error
+      - name: Publish X10 robustly
+        run: |
+          cp data/derived/h225_x10_incremental_exact_rescreen.json /tmp/x10.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          cp /tmp/x10.json data/derived/h225_x10_incremental_exact_rescreen.json
+          git add -f data/derived/h225_x10_incremental_exact_rescreen.json
+          git commit -m "H225-X10 publish full incremental exact rescreen" || true
           git push origin HEAD:research-work
