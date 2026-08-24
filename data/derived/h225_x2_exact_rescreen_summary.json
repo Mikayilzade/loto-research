@@ -1,0 +1,24 @@
+{
+  "packet": "H225-X2-SUMMARY",
+  "date": "2026-08-24",
+  "legacy_packet": "H241",
+  "source_compute_run_id": 32693907822,
+  "rescue_merge_run_id": 32697960407,
+  "chunk_shards": 44,
+  "quotient_coefficient_states_screened": 306450,
+  "exact_shift_surviving_coefficient_states": 295293,
+  "exact_surviving_shift_tuples": 65921861,
+  "h225_general_cyclic_affine_family_closed": false,
+  "x1_raw_new_witnesses": 44,
+  "x1_affine_expanded_instances": 5632,
+  "validation_markers": [
+    "H225_X2_SHARD_AUDIT_OK 306450",
+    "H225_X2_MERGED_OK 295293 65921861"
+  ],
+  "baseline_h235_exact_shift_surviving_coefficient_states": 303802,
+  "baseline_h235_exact_surviving_shift_tuples": 90425060,
+  "coefficient_states_removed_vs_h235": 8509,
+  "shift_tuples_removed_vs_h235": 24503199,
+  "legacy_full_certificate_publication_status": "EMPTY_PLACEHOLDER_CONFIRMED_2026-08-24; repair in progress",
+  "interpretation": "All 44 completed X2 shard artifacts were audited and merged successfully in the rescue runner. Positive survivors mean H225 remains open; the empty legacy file is a publication/infrastructure defect, not an inconclusive computation."
+}
