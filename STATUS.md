@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed numbered lottery packet: **H242 — Michigan Club Keno Tripler Time random-entitlement guarantee gate**.
+Latest completed numbered lottery packet: **H243 — Illinois Pick 3 / Pick 4 plus FIREBALL full-coverage upper bound**.
 Latest completed exact family packet: **H235 — H234-augmented exact 44-way family rescreen**.
 Current exact family continuation: **H237 — 44-way unrestricted exact separation of actual H235 survivors** (launched/pending merge).
 
@@ -25,7 +25,7 @@ Expected merged outputs:
 - `data/derived/h237_h235_first_survivor_separation.json`
 - `data/derived/h237_new_witnesses.json`
 
-As of H242 these outputs are still absent on `research-work`. Missing output proves nothing. Any returned witness is a rigorous new cut; timeout/no incumbent is inconclusive and never validation.
+As of H243 these outputs are still absent on `research-work`. Missing output proves nothing. Any returned witness is a rigorous new cut; timeout/no incumbent is inconclusive and never validation.
 
 ### H236 — RI Lucky 3 Spot threshold
 Historical Rhode Island Lucky 3 Spot promotions created a real printed pre-draw entitlement doubling winning 3-spot prizes. For full 20/80 3-spot coverage, strict pre-tax profit under a true universal free 2X entitlement requires `10*P2 + P3 > 36.03508771929825`. The theorem is valid, but universal entitlement acquisition and finite-window execution were not established.
@@ -54,13 +54,28 @@ Exact current base full-coverage returns for spots 1–10 were computed from the
 - a hypothetical **universal free Tripler** would exceed break-even for all spots 1–10;
 - e.g. 3-spot full coverage costs **$82,160**, base gross **$53,580**, universal 2x gross **$107,160**.
 
-So the active promotion is mathematically strong enough in principle. But the entitlement is a **random printed ticket message**. No current primary source found establishes a deterministic tag quota/floor or a lawful post-print cancellation/refund right allowing the player to inspect and reject untagged tickets. Therefore no strict all-outcome profit guarantee follows.
+The active promotion is mathematically strong enough in principle, but entitlement is a **random printed ticket message**. No primary evidence establishes a deterministic tag quota/floor or lawful post-print cancellation/refund route allowing rejection of untagged tickets. Therefore no strict all-outcome profit guarantee follows.
 
 Files:
 - `research/h242_michigan_tripler_time_random_entitlement_gate.md`
 - `src/loto_research/h242_michigan_tripler_time_full_coverage.py`
 - `data/derived/h242_michigan_tripler_time_full_coverage.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H242_APPEND.md`
+
+### H243 — Illinois plus FIREBALL current prize schedule
+Illinois Lottery currently flags a plus FIREBALL prize change effective **2026-08-22**. Current official Game Rules show the stronger schedules used here.
+
+Full $1 Straight coverage with the add-on was screened by a deliberately player-favorable positional upper bound:
+- **Pick 3:** 1,000 selections; FIREBALL doubles each $1 line cost to $2; full spend **$2,000**; base Straight prize $500 plus at most three full $250 FIREBALL positional awards => gross upper bound **$1,250**, return **62.5%**, net at most **-$750**.
+- **Pick 4:** 10,000 selections; full spend **$20,000**; base Straight prize $5,000 plus at most four full $2,000 FIREBALL positional awards => gross upper bound **$13,000**, return **65.0%**, net at most **-$7,000**.
+
+This bound is independent of the actual Fireball digit and repeated digits. Current rules also permit liability-based wager restrictions, which can only worsen execution. Exhaustive Straight coverage for the current Pick 3/Pick 4 plus FIREBALL schedule is therefore **REJECTED**.
+
+Files:
+- `research/h243_illinois_plus_fireball_full_coverage_upper_bound.md`
+- `src/loto_research/h243_illinois_plus_fireball_full_coverage.py`
+- `data/derived/h243_illinois_plus_fireball_full_coverage.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H243_APPEND.md`
 
 ### Preserved restricted-family state
 - H224/H223/H222/H219 exact restricted outputs have not produced an authoritative closure result at this checkpoint.
@@ -70,12 +85,12 @@ Files:
 1. **Check H237 merged output first.**
 2. If H237 has new exact balanced witnesses, deduplicate against H234 and feed only genuinely new cuts into the next H225 incremental exact rescreen.
 3. Retry only genuinely inconclusive H237 jobs with larger exact separator budgets; never treat timeout/no incumbent as validation.
-4. Reopen Michigan Tripler Time immediately if primary evidence reveals deterministic multiplier-tag frequency/allocation or a non-discretionary post-print cancellation/refund route; this is now a high-value near-miss because universal 2x clears spots 2–10 mathematically.
+4. Reopen Michigan Tripler Time immediately if primary evidence reveals deterministic multiplier-tag frequency/allocation or a non-discretionary post-print cancellation/refund route; universal 2x already clears spots 2–10 mathematically.
 5. Reopen RI Kick Back only on materially new current primary evidence.
-6. Missouri base/Bulls-Eye/Double Bulls-Eye Bonus Hours full-coverage variants are closed unless rules materially change.
+6. Missouri Bonus Hours and Illinois current plus FIREBALL exhaustive full-coverage variants are closed unless rules materially change.
 7. If H237 remains absent and no new entitlement evidence appears, continue with the next non-duplicate active lottery-specific nonlinear overlay/rolldown from the audit ledger.
 8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H242_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H243_APPEND.md`.
