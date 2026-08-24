@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-24 13:34 +04
+Updated: 2026-08-25 01:31 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -14,7 +14,7 @@ Terminal state: **OPEN / NOT CLOSED**
 | H225-X3 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
 | H225-X4 | **288,176** | **50,626,368** | — |
 | H225-X5 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
-| H225-X6 | RUNNING | RUNNING | full 44-way rescreen triggered |
+| H225-X6 | RETRIGGERED | RETRIGGERED | full 44-way rescreen V2 triggered |
 
 All rescreen stages use the unchanged H228 quotient universe of **306,450** coefficient states. Zero exact survivors is the closure criterion.
 
@@ -76,20 +76,26 @@ Files:
 - `data/derived/h225_x5_survivor_separation.json`
 - `data/derived/h225_x5_new_witnesses.json`
 
-## H225-X6 — RUNNING / RESULT NOT YET VALIDATED
+## H225-X6 — RETRIGGERED / RESULT NOT YET VALIDATED
 X6 reconstructs the witness universe from immutable generations H226 + H234 + X1 + X3 + X5, affine-expanding all added cuts, then rescreens all **306,450** quotient states in **44 exact chunks**.
 
-Human-token trigger:
+Original human-token trigger:
 - `data/derived/h225_x6_trigger.json`
 - trigger commit `a50321e30f2b9b28e712f8b2c6ee691516f039d8`
+
+The previous checkpoint remained without a validated merged result far beyond the workflow's own 45-minute per-chunk timeout window. At 2026-08-25 01:28 +04 the same computation was retriggered via human-token push; workflow concurrency cancels any stale predecessor.
+
+Authoritative retrigger:
+- packet: `H225-X6-TRIGGER-V2`
+- commit: `c7189841a7e1e0154f167be064cf1c6c4c810f46`
 
 Expected merged output:
 - `data/derived/h225_x6_incremental_exact_rescreen.json`
 
-Current repository path exists as a **zero-byte placeholder**. This proves neither completion nor zero survivors. No GitHub failure notification for X6 was found at the 13:34 +04 checkpoint, so the running computation is not restarted speculatively.
+A zero-byte placeholder proves neither completion nor zero survivors. Do not infer a mathematical result until merged output/artifacts are validated.
 
 ## Downstream — PREPARED AS ONE INTEGRATED CHAIN
-A single authenticated X7 trigger can now continue multiple cutting-plane generations inside one GitHub Actions run, avoiding suppressed CI->push->CI recursion:
+A single authenticated X7 trigger can continue multiple cutting-plane generations inside one GitHub Actions run, avoiding suppressed CI->push->CI recursion:
 
 1. **H225-X7** — 44 unrestricted exact separators over actual positive X6 chunks; zero-survivor chunks are explicit skips; witnesses deduplicated against H234/X1/X3/X5.
 2. **H225-X8** — full 44-way / 306,450-state exact rescreen after affine-expanding genuinely new X7 cuts.
@@ -112,7 +118,7 @@ The chain has strict stop gates:
 - every rescreen merge asserts 44 shards and 306,450 states.
 
 ## NEXT ACTION
-1. Validate H225-X6 merged output/artifacts when present; an empty placeholder proves nothing.
+1. Validate H225-X6 V2 merged output/artifacts when present; an empty placeholder proves nothing.
 2. If X6 reaches zero exact survivors, record rigorous H225 closure and stop this family lane.
 3. If X6 remains positive, create authenticated `data/derived/h225_x7_trigger.json`. The integrated X7->X10 chain then proceeds automatically through valid nonterminal gates.
 4. If X10 still has positive survivors, continue H225-X11/X12 only after validating X10; never launch speculative separator stages against missing/empty merged inputs.
