@@ -1,0 +1,24 @@
+{
+  "packet": "H259",
+  "game": "Wisconsin Lottery GONE FISHIN' Pull-Tab #2752",
+  "official_effective_date": "2026-01-05",
+  "source": "https://wilottery.com/games/instant-games/gone-fishin-features-procedures",
+  "ticket_count": 1050,
+  "ticket_price": 0.5,
+  "full_pack_cost": 525.0,
+  "prizes": [
+    {"value": 0.5, "count": 200},
+    {"value": 1.0, "count": 25},
+    {"value": 5.0, "count": 10},
+    {"value": 15.0, "count": 2},
+    {"value": 25.0, "count": 2},
+    {"value": 75.0, "count": 1}
+  ],
+  "full_pack_fixed_prize_total": 330.0,
+  "gross_return": 0.6285714285714286,
+  "guaranteed_loss": 195.0,
+  "minimum_universal_free_prize_uplift_for_break_even": 0.5909090909090909,
+  "strict_guarantee": false,
+  "status": "REJECTED current ordinary full-pack buyout",
+  "reopen_condition": "A deterministic player-eligible discount/subsidy or universal prize uplift exceeding 59.0909% after all costs, or another fixed pack whose guaranteed prize total exceeds acquisition cost."
+}
