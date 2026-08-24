@@ -1,0 +1,25 @@
+{
+  "packet": "H256",
+  "status": "rejected",
+  "bonus_multiplier": 1.5,
+  "rows": [
+    {"spot": 1, "combinations": 80, "base_return": 0.5, "base_promo_return": 0.75, "bullseye_return": 0.5125, "bullseye_promo_return": 0.76875, "double_bullseye_return": 0.5166666666666667, "double_bullseye_promo_return": 0.775},
+    {"spot": 2, "combinations": 3160, "base_return": 0.6012658227848101, "base_promo_return": 0.9018987341772152, "bullseye_return": 0.5482594936708861, "bullseye_promo_return": 0.8223892405063291, "double_bullseye_return": 0.5632911392405063, "double_bullseye_promo_return": 0.8449367088607594},
+    {"spot": 3, "combinations": 82160, "base_return": 0.5966407010710808, "base_promo_return": 0.8949610516066212, "bullseye_return": 0.5378164556962025, "bullseye_promo_return": 0.8067246835443038, "double_bullseye_return": 0.5539435248296007, "double_bullseye_promo_return": 0.8309152872444012},
+    {"spot": 4, "combinations": 1581580, "base_return": 0.5973614992602334, "base_promo_return": 0.8960422488903501, "bullseye_return": 0.5284667863781788, "bullseye_promo_return": 0.7927001795672681, "double_bullseye_return": 0.5479531017505701, "double_bullseye_promo_return": 0.8219296526258552},
+    {"spot": 5, "combinations": 24040016, "base_return": 0.60319427408035, "base_promo_return": 0.9047914111205251, "bullseye_return": 0.5133533396982765, "bullseye_promo_return": 0.7700300095474146, "double_bullseye_return": 0.5286722770899986, "double_bullseye_promo_return": 0.7930084156349979},
+    {"spot": 6, "combinations": 300500200, "base_return": 0.5978736453419998, "base_promo_return": 0.8968104680129997, "bullseye_return": 0.5055844471983713, "bullseye_promo_return": 0.7583766707975569, "double_bullseye_return": 0.5226235123969968, "double_bullseye_promo_return": 0.7839352685954951},
+    {"spot": 7, "combinations": 3176716400, "base_return": 0.5953577725729624, "base_promo_return": 0.8930366588594437, "bullseye_return": 0.5070564925153532, "bullseye_promo_return": 0.7605847387730299, "double_bullseye_return": 0.5230149569956365, "double_bullseye_promo_return": 0.7845224354934548},
+    {"spot": 8, "combinations": 28987537150, "base_return": 0.5956747501744901, "base_promo_return": 0.8935121252617351, "bullseye_return": 0.4956356837993738, "bullseye_promo_return": 0.7434535256990606, "double_bullseye_return": 0.5096571186168076, "double_bullseye_promo_return": 0.7644856779252114},
+    {"spot": 9, "combinations": 231900297200, "base_return": 0.5964083311230874, "base_promo_return": 0.8946124966846313, "bullseye_return": 0.4833450232615743, "bullseye_promo_return": 0.7250175348923615, "double_bullseye_return": 0.5012504547579338, "double_bullseye_promo_return": 0.7518756821369007},
+    {"spot": 10, "combinations": 1646492110120, "base_return": 0.6015545047791413, "base_promo_return": 0.902331757168712, "bullseye_return": 0.5163910883229396, "bullseye_promo_return": 0.7745866324844093, "double_bullseye_return": 0.5377326609886632, "double_bullseye_promo_return": 0.8065989914829947}
+  ],
+  "best_base": {"spot": 5, "promo_return": 0.9047914111205251},
+  "best_bullseye": {"spot": 2, "promo_return": 0.8223892405063291},
+  "best_double_bullseye": {"spot": 2, "promo_return": 0.8449367088607594},
+  "required_base_uplift_best": 0.657840670859539,
+  "multiplier_worst_legal_factor": 1,
+  "multiplier_worst_branch_best_fixed_return": 0.45239570556026254,
+  "progressive_jackpot_guaranteed_floor": 0,
+  "all_fixed_full_covers_below_one": true
+}
