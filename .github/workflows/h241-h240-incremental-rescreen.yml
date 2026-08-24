@@ -1,14 +1,17 @@
-name: H241 H240 incremental exact rescreen
+name: H225-X2 incremental exact rescreen
 on:
   push:
     branches: [research-work]
     paths:
       - 'data/derived/h240_new_witnesses.json'
+      - 'research/H225_EXACT_STATUS.md'
+      - '.github/workflows/h241-h240-incremental-rescreen.yml'
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
-  group: h241-${{ github.ref }}
+  group: h225-x2-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   chunk:
@@ -27,7 +30,7 @@ jobs:
       - run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
       - uses: actions/upload-artifact@v4
         with:
-          name: h241-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          name: h225-x2-s${{ matrix.sector }}-c${{ matrix.chunk }}
           path: data/derived/h241_chunk_shards/sector_*_chunk_*.json
           if-no-files-found: error
   merge:
@@ -41,15 +44,31 @@ jobs:
       - run: pip install numpy scipy
       - uses: actions/download-artifact@v4
         with:
-          pattern: h241-s*-c*
-          path: h241_download
+          pattern: h225-x2-s*-c*
+          path: h225_x2_download
           merge-multiple: false
-      - run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h241_download
-      - name: Commit H241 exact incremental result
+      - run: PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h225_x2_download
+      - name: Commit H225-X2 exact incremental result
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/derived/h241_h240_incremental_exact_rescreen.json
-          git commit -m "H241 merge H240 incremental exact rescreen" || exit 0
+          git commit -m "H225-X2 merge incremental exact rescreen" || true
           git pull --rebase origin research-work
           git push origin HEAD:research-work
+      - name: Dispatch H225-X3 when survivors remain
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          survivors=$(python - <<'PY'
+          import json
+          d=json.load(open('data/derived/h241_h240_incremental_exact_rescreen.json'))
+          print(int(d['exact_shift_surviving_coefficient_states']))
+          PY
+          )
+          echo "H225-X2 survivors: $survivors"
+          if [ "$survivors" -gt 0 ]; then
+            gh workflow run h225-x3-survivor-separation.yml --ref research-work
+          else
+            echo "H225 closed at X2; X3 not dispatched."
+          fi
