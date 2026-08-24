@@ -1,0 +1,18 @@
+{
+  "packet": "H257",
+  "game": "LOTTO MAX 3.0 (effective April 2026)",
+  "combination_space": 133784560,
+  "selections_per_play": 4,
+  "play_price_cad": 6,
+  "idealized_minimum_plays_if_all_four_slots_perfectly_packable": 33446140,
+  "idealized_minimum_full_cover_cost_cad": 200676840,
+  "match_4_fixed_winning_selections": 463540,
+  "match_3_plus_bonus_fixed_winning_selections": 463540,
+  "fixed_cash_floor_cad": 18541600,
+  "fixed_cash_floor_ratio": 0.09239531577236317,
+  "strict_shared_prize_floor_cad": 0,
+  "strict_total_cash_floor_cad": 18541600,
+  "strict_floor_deficit_cad": 182135240,
+  "strict_guarantee": false,
+  "reason": "All headline jackpot/MAXPLUS/MAXMILLIONS and upper main tiers are shareable by an externally unbounded number of matching selections under published rules; no useful hard pre-draw duplicate cap is available."
+}
