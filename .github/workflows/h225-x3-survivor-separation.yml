@@ -3,7 +3,9 @@ on:
   push:
     branches: [research-work]
     paths:
-      - 'data/derived/h241_h240_incremental_exact_rescreen.json'
+      - 'data/derived/h225_x2_survivor_seed.json'
+      - 'src/loto_research/h225_x3_survivor_separation.py'
+      - '.github/workflows/h225-x3-survivor-separation.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -53,9 +55,7 @@ jobs:
           git commit -m "H225-X3 merge survivor exact separators" || true
           git pull --rebase origin research-work
           git push origin HEAD:research-work
-      - name: Dispatch H225-X4 when new cuts exist
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Record X4 handoff condition
         run: |
           newcuts=$(python - <<'PY'
           import json
@@ -65,7 +65,7 @@ jobs:
           )
           echo "H225-X3 new cuts: $newcuts"
           if [ "$newcuts" -gt 0 ]; then
-            gh workflow run h225-x4-incremental-rescreen.yml --ref research-work
+            echo "H225-X4 required; orchestrator will trigger it with an authenticated research-work push."
           else
-            echo "No new X3 cuts; X4 not dispatched."
+            echo "No new X3 cuts; X4 is not useful without another separator strategy."
           fi
