@@ -1,0 +1,24 @@
+{
+  "date": "2026-08-24",
+  "matrix": "6/45",
+  "first_new_format_draw": "2026-09-05",
+  "full_space_lines": 8145060,
+  "category_counts": {
+    "match6": 1,
+    "match5_bonus": 6,
+    "match5": 228,
+    "match4_bonus": 570,
+    "match4": 10545,
+    "match3_bonus": 14060,
+    "match3": 168720,
+    "match2_bonus": 126540
+  },
+  "incremental_plus_cost_eur": 8145060,
+  "plus1_gross_eur": 2283240,
+  "plus2_gross_eur": 2021240,
+  "combined_plus_gross_eur": 4304480,
+  "net_eur": -3840580,
+  "deterministic_return": 0.5284773838375654,
+  "daily_million_prizes_valued_at_face": true,
+  "result": "REJECTED guaranteed-profit full-cover Plus add-on under announced/current fixed tables"
+}
