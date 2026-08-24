@@ -1,0 +1,22 @@
+{
+  "packet": "H255",
+  "mechanism": "EuroMillions flow-down-cap excess to next lower winning tier",
+  "main_number_space": 2118760,
+  "lucky_star_pairs": 66,
+  "full_line_space": 139838160,
+  "minimum_star_pairs_per_exact_main_set_for_guaranteed_match5_plus1": 8,
+  "explicit_star_pair_cover": [[0,1],[1,2],[3,4],[4,5],[6,7],[7,8],[9,10],[10,11]],
+  "star_cover_verified_for_all_66_winning_pairs": true,
+  "deterministic_match5_plus1_cover_lines": 16950080,
+  "irish_mandatory_cost_per_line_eur": 2.5,
+  "irish_total_cover_cost_eur": 42375200.0,
+  "core_game_component_cost_eur": 2.2,
+  "core_component_equivalent_cost_eur": 37290176.0,
+  "strict_profit_guarantee": false,
+  "blocking_reasons": [
+    "rules specify flow-down of the amount above the cap but no positive fixed minimum excess amount",
+    "Match 5+1 prizes are pari-mutuel and depend on the number of winning external plays, so captured share has no execution-grade positive lower bound",
+    "Irish purchase is bundled with Ireland Only Raffle at 2.50 EUR per line; EuroMillions cannot be bought alone",
+    "operator rules permit restricting participation that interferes with other players reasonable access, adding an execution blocker at 16,950,080 lines"
+  ]
+}
