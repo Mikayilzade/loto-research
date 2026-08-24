@@ -11,7 +11,7 @@ Scope: **LOTTERY ONLY**. Earlier H050-H107 non-lottery automation drift is histo
 - `EXHAUSTED` = all defensible registered lottery-specific edge classes tested/closed without SUCCESS.
 
 ## Authoritative current checkpoint
-Latest completed numbered lottery packet: **H243 — Illinois Pick 3 / Pick 4 plus FIREBALL full-coverage upper bound**.
+Latest completed numbered lottery packet: **H244 — WinTrillions 90% Powerball promotional-discount guarantee gate**.
 Latest completed exact family packet: **H235 — H234-augmented exact 44-way family rescreen**.
 Current exact family continuation: **H237 — 44-way unrestricted exact separation of actual H235 survivors** (launched/pending merge).
 
@@ -25,7 +25,7 @@ Expected merged outputs:
 - `data/derived/h237_h235_first_survivor_separation.json`
 - `data/derived/h237_new_witnesses.json`
 
-As of H243 these outputs are still absent on `research-work`. Missing output proves nothing. Any returned witness is a rigorous new cut; timeout/no incumbent is inconclusive and never validation.
+As of H244 these outputs are still absent on `research-work`. Missing output proves nothing. Any returned witness is a rigorous new cut; timeout/no incumbent is inconclusive and never validation.
 
 ### H236 — RI Lucky 3 Spot threshold
 Historical Rhode Island Lucky 3 Spot promotions created a real printed pre-draw entitlement doubling winning 3-spot prizes. For full 20/80 3-spot coverage, strict pre-tax profit under a true universal free 2X entitlement requires `10*P2 + P3 > 36.03508771929825`. The theorem is valid, but universal entitlement acquisition and finite-window execution were not established.
@@ -77,6 +77,27 @@ Files:
 - `data/derived/h243_illinois_plus_fireball_full_coverage.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H243_APPEND.md`
 
+### H244 — WinTrillions 90% Powerball promotional-discount gate
+Current third-party indexes advertise a new-player WinTrillions offer described as a **90% discount** on a monthly US Powerball subscription. The detailed indexed offer describes 8 consecutive draws for EUR 4.40. Exact current operator promotion caps were not recovered, so the offer is not treated as primary evidence of unlimited availability.
+
+The mathematical counterfactual is important:
+- Powerball full space: **292,201,338** combinations;
+- ordinary $2 full-space cost: **$584,402,676**;
+- exact deterministic non-jackpot fixed-prize gross: **$93,466,048**;
+- fixed-prize break-even discount: **84.0066%**;
+- hypothetical universal 90% cost: **$58,440,267.60**;
+- hypothetical pre-jackpot deterministic margin: **+$35,025,780.40**.
+
+Thus a genuine irrevocable universal 90% discount would be strong enough for a guaranteed-profit full-space construction without relying on the jackpot. However, current WinTrillions Terms expressly reserve the right to **ignore promotional enhancement where enhanced offers create guaranteed player profits irrespective of outcome**. That adverse contractual branch directly destroys the strict guarantee. The terms also reserve promotion eligibility/anti-abuse discretion and prohibit professional/commercial use.
+
+Therefore H244 is **REJECTED FOR STRICT GUARANTEE** despite a mathematically sufficient discount magnitude.
+
+Files:
+- `research/h244_wintrillions_90pct_powerball_promo_guarantee_gate.md`
+- `src/loto_research/h244_wintrillions_powerball_discount_gate.py`
+- `data/derived/h244_wintrillions_powerball_discount_gate.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H244_APPEND.md`
+
 ### Preserved restricted-family state
 - H224/H223/H222/H219 exact restricted outputs have not produced an authoritative closure result at this checkpoint.
 - H221 proves any schema-valid restricted exact screen with `survivor_count=0` over all 143,712 H212-normalized classes closes that restricted family without a second MILP.
@@ -87,10 +108,11 @@ Files:
 3. Retry only genuinely inconclusive H237 jobs with larger exact separator budgets; never treat timeout/no incumbent as validation.
 4. Reopen Michigan Tripler Time immediately if primary evidence reveals deterministic multiplier-tag frequency/allocation or a non-discretionary post-print cancellation/refund route; universal 2x already clears spots 2–10 mathematically.
 5. Reopen RI Kick Back only on materially new current primary evidence.
-6. Missouri Bonus Hours and Illinois current plus FIREBALL exhaustive full-coverage variants are closed unless rules materially change.
-7. If H237 remains absent and no new entitlement evidence appears, continue with the next non-duplicate active lottery-specific nonlinear overlay/rolldown from the audit ledger.
-8. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
+6. Missouri Bonus Hours, Illinois current plus FIREBALL exhaustive coverage, and WinTrillions promotional full-space arbitrage are closed unless rules materially change.
+7. Prioritize future deterministic lottery discounts/subsidies above game-specific fixed-prize break-even thresholds **only if** the terms lack anti-guaranteed-profit/anti-abuse cancellation branches and the discount scales to the required coverage.
+8. If H237 remains absent and no new entitlement evidence appears, continue with the next non-duplicate active lottery-specific nonlinear overlay/rolldown from the audit ledger.
+9. Continue until lottery-specific `SUCCESS` or `EXHAUSTED`.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H243_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H244_APPEND.md`.
