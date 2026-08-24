@@ -33,7 +33,7 @@ jobs:
   merge:
     needs: chunk
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -44,12 +44,56 @@ jobs:
           pattern: h225-x6-s*-c*
           path: h225_x6_download
           merge-multiple: false
-      - run: PYTHONPATH=src python -m loto_research.h225_x6_incremental_exact_rescreen --merge-dir h225_x6_download
-      - name: Commit H225-X6 exact incremental result
+      - name: Audit all X6 shards before merge
         run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          ps=sorted(Path('h225_x6_download').rglob('sector_*_chunk_*.json'))
+          assert len(ps)==44, len(ps)
+          keys=[]; total=0
+          for p in ps:
+              d=json.loads(p.read_text())
+              assert d['packet']=='H225-X6'
+              keys.append((int(d['sector_index']),int(d['chunk_index'])))
+              total += int(d['chunk_quotient_states'])
+          assert sorted(keys)==[(s,c) for s in range(11) for c in range(4)]
+          assert total==306450, total
+          print('H225_X6_SHARD_AUDIT_OK',total)
+          PY
+      - run: PYTHONPATH=src python -m loto_research.h225_x6_incremental_exact_rescreen --merge-dir h225_x6_download
+      - name: Validate merged X6 certificate
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('data/derived/h225_x6_incremental_exact_rescreen.json')
+          assert p.stat().st_size>1000, p.stat().st_size
+          d=json.loads(p.read_text())
+          assert d['packet']=='H225-X6'
+          assert d['chunk_shards']==44 and d['quotient_coefficient_states_screened']==306450
+          assert len(d['sectors'])==11
+          assert sum(int(s['quotient_coefficient_states']) for s in d['sectors'])==306450
+          assert int(d['exact_shift_surviving_coefficient_states'])>=0
+          assert int(d['exact_surviving_shift_tuples'])>=0
+          print('H225_X6_MERGED_OK',d['exact_shift_surviving_coefficient_states'],d['exact_surviving_shift_tuples'],p.stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x6-merged
+          path: data/derived/h225_x6_incremental_exact_rescreen.json
+          if-no-files-found: error
+      - name: Publish X6 robustly onto latest research-work
+        run: |
+          cp data/derived/h225_x6_incremental_exact_rescreen.json /tmp/x6.json
+          test -s /tmp/x6.json
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add data/derived/h225_x6_incremental_exact_rescreen.json
-          git commit -m "H225-X6 merge incremental exact rescreen" || true
-          git pull --rebase origin research-work
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          cp /tmp/x6.json data/derived/h225_x6_incremental_exact_rescreen.json
+          test -s data/derived/h225_x6_incremental_exact_rescreen.json
+          git update-index --no-assume-unchanged data/derived/h225_x6_incremental_exact_rescreen.json 2>/dev/null || true
+          git update-index --no-skip-worktree data/derived/h225_x6_incremental_exact_rescreen.json 2>/dev/null || true
+          git add -f data/derived/h225_x6_incremental_exact_rescreen.json
+          git commit -m "H225-X6 publish incremental exact rescreen" || true
           git push origin HEAD:research-work
