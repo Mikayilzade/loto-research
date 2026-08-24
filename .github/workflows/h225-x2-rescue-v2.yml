@@ -1,0 +1,78 @@
+name: H225-X2 rescue v2 artifact-first
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - '.github/workflows/h225-x2-rescue-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  rescue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research-work
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Mikayilzade/loto-research
+          run-id: 32693907822
+          pattern: h225-x2-s*-c*
+          path: h225_x2_download
+          merge-multiple: false
+      - name: Audit and merge
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          ps=sorted(Path('h225_x2_download').rglob('sector_*_chunk_*.json'))
+          assert len(ps)==44, len(ps)
+          keys=[]; total=0
+          for p in ps:
+            d=json.loads(p.read_text()); assert d['packet']=='H241'
+            keys.append((d['sector_index'],d['chunk_index'])); total += d['chunk_quotient_states']
+          assert sorted(keys)==[(s,c) for s in range(11) for c in range(4)]
+          assert total==306450
+          print('SHARD_AUDIT_OK',len(ps),total)
+          PY
+          PYTHONPATH=src python -m loto_research.h241_h240_incremental_exact_rescreen --merge-dir h225_x2_download
+          python - <<'PY'
+          import json, pathlib, hashlib
+          p=pathlib.Path('data/derived/h241_h240_incremental_exact_rescreen.json')
+          b=p.read_bytes(); d=json.loads(b)
+          assert d['packet']=='H241' and d['chunk_shards']==44
+          assert d['quotient_coefficient_states_screened']==306450
+          assert d['exact_shift_surviving_coefficient_states']==295293
+          assert d['exact_surviving_shift_tuples']==65921861
+          assert len(d['sectors'])==11 and len(b)>100000
+          print('MERGED_AUDIT_OK',len(b),hashlib.sha256(b).hexdigest())
+          PY
+      - name: Preserve merged certificate as artifact first
+        uses: actions/upload-artifact@v4
+        with:
+          name: h225-x2-full-merged-certificate
+          path: data/derived/h241_h240_incremental_exact_rescreen.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Publish merged certificate
+        run: |
+          set -euxo pipefail
+          cp data/derived/h241_h240_incremental_exact_rescreen.json /tmp/x2.json
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git fetch origin research-work
+          git reset --hard origin/research-work
+          target=data/derived/h241_h240_incremental_exact_rescreen.json
+          cp /tmp/x2.json "$target"
+          git add -f "$target"
+          git diff --cached --quiet && { echo 'No staged diff; artifact remains authoritative'; exit 0; }
+          git commit -m "H225-X2 publish full merged certificate v2"
+          git pull --rebase origin research-work
+          git push origin HEAD:research-work
