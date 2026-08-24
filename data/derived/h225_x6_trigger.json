@@ -1,5 +1,5 @@
 {
-  "packet": "H225-X6-TRIGGER-V1",
+  "packet": "H225-X6-TRIGGER-V2",
   "source_packet": "H225-X5",
   "x4_survivor_states": 288176,
   "x4_survivor_shift_tuples": 50626368,
@@ -9,5 +9,7 @@
   "x5_genuinely_new_witnesses": 44,
   "x5_merged_artifact_id": 9513550747,
   "x5_merged_artifact_digest": "sha256:a94bde0d61f002d5496f2bc728854d10cace901b2ab8fcbd354ac552944e2d30",
+  "retriggered_at": "2026-08-25T01:28:00+04:00",
+  "reason": "Previous X6 checkpoint remained without a validated merged result far beyond the workflow job timeout window; retrigger the same 44-way exact rescreen with a human-token push. Workflow concurrency cancels any stale in-progress predecessor.",
   "purpose": "Human-token trigger for the full 44-way H225-X6 incremental exact rescreen after validated X5 cuts."
 }
