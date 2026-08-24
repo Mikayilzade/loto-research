@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H250 — courier-supported partial-digit exact subsidy floor**.
+Latest completed numbered lottery packet: **H251 — Irish Lotto 6/45 Lotto Plus full-cover additive closure**.
 Exact-family continuation now uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
 
 ### Exact-family state
@@ -16,8 +16,8 @@ Exact-family continuation now uses a separate namespace: **H225-X***. See `resea
 - H234: exact balanced counterexamples found for 44/44 sampled H232 survivors.
 - H235: after adding H234 witnesses and affine symmetries, 303,802 coefficient states and 90,425,060 legal shift tuples still survive.
 - H225-X1: 44/44 actual H235 survivors broken by unrestricted exact separators; 44 unique genuinely new witnesses, 0 inconclusive.
-- H225-X2: full 44-way / 306,450-state incremental rescreen explicitly retriggered after diagnosing GitHub Actions token recursion suppression. Missing merged output remains pending only.
-- H225-X3 and X4 are armed by explicit `workflow_dispatch` chaining rather than push-recursion.
+- H225-X2: target merged file exists only as an empty placeholder at this checkpoint; therefore no result is inferred. Full 44-way / 306,450-state incremental rescreen remains pending.
+- H225-X3 and X4 remain armed by explicit `workflow_dispatch` chaining.
 
 ### Recent lottery closures / blockers
 - H236 RI Lucky 3 Spot: universal free 2X clears arithmetic threshold, but universal entitlement/execution not established.
@@ -32,35 +32,36 @@ Exact-family continuation now uses a separate namespace: **H225-X***. See `resea
 - H247 free Quick Pick / BOGO: uncontrolled free selections have zero guaranteed marginal coverage and zero strict cash floor.
 - H248 Lotto.com 25% draw discount: below break-even for known finite covers.
 - H249 Jackpocket credit × Maine Pick 3 Single Digit: $5 retail-style exact cover guarantees $2.50 gross; current qualifying deterministic credit/fee/entitlement evidence incomplete.
+- H250 courier-supported partial-digit exact subsidy floor: exact-position 50% cover verified, but no current deterministic subsidy above the hurdle plus fees.
 
-### H250 — courier-supported partial digit exact subsidy floor
-H250 directly verifies that the small exact-position digit partition is not only a state-rule abstraction: Lotto.com Maine publicly exposes **First Digit / Second Digit / Third Digit** wagers, 1:10 odds and a $5 payout on its $1 minimum wager. Its public Pick 3 page also permits up to 100 lines/game, so both the 10-line Single Digit cover and 100-line Pair cover are operationally representable on the public courier menu.
+### H251 — Irish Lotto 6/45 Lotto Plus full-cover additive closure
+The Irish National Lottery has confirmed that the refreshed Lotto starts **5 September 2026** with 45 balls, unchanged €4 minimum for two Lotto lines and €6 for two lines with Lotto Plus. Thus Lotto Plus remains an incremental **€1 per line** and enters the chosen line in both Plus 1 and Plus 2. Lotto Plus 1 remains €1m; Lotto Plus 2 increases to €1m.
 
-Current state evidence confirms the same basic partition in Maine, Vermont and Minnesota. Exact deterministic return for the tested Single Digit / Pair / Straight partitions is **50% before subsidy**.
+Exact full-space size is `C(45,6)=8,145,060`. Owning every line gives deterministic category counts against any six winning numbers plus one bonus. Applying the current official fixed Plus tables with the announced new €1m Plus 2 top prize, and generously valuing every Match-2+Bonus Daily Million prize at its full €2 face value:
 
-Key thresholds:
-- retail/Jackpocket-like $0.50 Single Digit cover: cost **$5**, gross **$2.50**; for credit `B<=5`, strict profit requires `B > 2.50 + F + A`;
-- Lotto.com $1 Single Digit cover: cost **$10**, gross **$5**; for credit `B<=10`, strict profit requires `B > 5 + F + A`;
-- percentage discount must be **strictly greater than 50% before fees**. A 25% discount gives -$2.50 before fees; current Lotto.com Mystery Scratch's listed 20% draw discount gives -$3 before fees and the Mystery Scratch reward itself is random.
+- incremental Plus full-cover cost: **€8,145,060**;
+- deterministic Plus 1 gross: **€2,283,240**;
+- deterministic Plus 2 gross: **€2,021,240**;
+- combined gross: **€4,304,480**;
+- deterministic net: **-€3,840,580**;
+- return: **52.8477%**.
 
-Recovered Jackpocket $5/$10 lottery-credit offers prove that sufficiently large subsidies have existed and that winnings from credit-funded winning tickets can be withdrawn, but the strong public offers recovered are historical/expired or offer-dependent/discretionary. No current August 2026 deterministic, non-discretionary subsidy above the exact 50% hurdle plus fees/acquisition costs was established.
-
-Result: **NOT SUCCESS / CURRENT SUBSIDY BLOCKED**.
+Therefore the September Plus 2 increase does **not** rescue full coverage. Under the announced/current fixed tables, adding Plus to every combination strictly worsens the guaranteed floor.
 
 Files:
-- `research/h250_partial_digit_courier_subsidy_floor.md`
-- `src/loto_research/h250_partial_digit_courier_subsidy_floor.py`
-- `data/derived/h250_partial_digit_courier_subsidy_floor.json`
-- `research/CHECKED_PROJECTS_AND_TESTS_H250_APPEND.md`
+- `research/h251_irish_lotto_45_plus_full_cover.md`
+- `src/loto_research/h251_irish_lotto_45_plus_full_cover.py`
+- `data/derived/h251_irish_lotto_45_plus_full_cover.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H251_APPEND.md`
 
 ## NEXT ACTION
-1. Check H225-X2 merged output first; if positive, follow the explicit X3 -> X4 separator/rescreen chain; if zero, record exact H225 family closure.
-2. Reopen H249/H250 immediately on a **current deterministic >50% effective subsidy** (or fixed credit crossing the exact formula after all fees/acquisition costs) in a state/courier with a proven exact-position wager menu.
-3. Search current forced-distribution/rolldown mechanisms where external subsidy crosses the H021 hurdle and sharing/execution can be bounded.
-4. Search other deterministic lottery entitlements/credits with lower acquisition cost or no discretionary award branch; do not repeat H239-H250 without materially new evidence.
-5. Continue until lottery-specific SUCCESS or EXHAUSTED.
+1. Check H225-X2 merged output first; empty/missing output proves nothing. If positive, follow X3 -> X4; if zero, record exact H225 family closure.
+2. For the 5 Sep 2026 Irish Lotto refresh, analyze the **main Lotto-only** cap / fifth-cap-draw full-cover economics separately; H251 closes only the Plus add-on.
+3. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+4. Search current forced-distribution/rolldown mechanisms where external subsidy crosses the H021 hurdle and sharing/execution can be bounded.
+5. Do not repeat H239-H251 without materially new evidence; continue until lottery-specific SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H250_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H251_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
