@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-24 10:31 +04
+Updated: 2026-08-24 11:46 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -21,7 +21,7 @@ Result:
 - genuinely new witnesses vs H234: **44**
 - all sampled designs broken: **true**
 
-## H225-X2 — COMPUTATION COMPLETE / FULL CERTIFICATE REPUBLISHING
+## H225-X2 — COMPLETE / CERTIFICATE REPUBLISHED
 Legacy implementation/output filename: `h241_h240_incremental_exact_rescreen*`.
 
 Authoritative compute run: `32693907822`.
@@ -42,23 +42,40 @@ Improvement vs H235:
 Compact authoritative certificate:
 `data/derived/h225_x2_exact_rescreen_summary.json`
 
-Infrastructure note: the legacy full merged path `data/derived/h241_h240_incremental_exact_rescreen.json` is currently an empty placeholder even though the runner-side merged certificate validated successfully. This is a publication defect only; a merge-only republish from the already completed 44 artifacts is in progress. X2 must not be recomputed merely to repair this file.
+Authoritative survivor seed:
+`data/derived/h225_x2_survivor_seed.json`
 
-## H225-X3 — NEXT
-One actual shift-level X2 survivor from each still-positive chunk is sent to unrestricted exact balanced n3<=2 separation. Zero-survivor chunks are explicit skips; timeouts/no incumbent are inconclusive, never validation. Returned witnesses are deduplicated against H234 and H225-X1.
+The previous empty legacy path `data/derived/h241_h240_incremental_exact_rescreen.json` has now been replaced by an audited publication manifest carrying the validated totals, validation markers, compact-certificate pointers and SHA-256 of the runner-side full merge. X2 must not be recomputed.
+
+## H225-X3 — COMPLETE
+X3 took one actual shift-level X2 survivor from each of the **44 active chunks** and ran unrestricted exact balanced `n3<=2` separation.
+
+Result:
+- active survivor chunks: **44 / 44**
+- exact counterexamples found: **44 / 44**
+- inconclusive active jobs: **0**
+- unique balanced counterexamples: **44**
+- genuinely new witnesses after deduplication against H234 and H225-X1: **44**
+- all selected active designs broken: **true**
 
 Files:
+- `data/derived/h225_x3_survivor_separation.json`
+- `data/derived/h225_x3_new_witnesses.json`
 - `src/loto_research/h225_x3_survivor_separation.py`
-- `.github/workflows/h225-x3-survivor-separation.yml`
-- outputs: `data/derived/h225_x3_survivor_separation.json`, `data/derived/h225_x3_new_witnesses.json`
 
-The previous X2 -> X3 `workflow_dispatch` attempt failed because GitHub resolves workflow-dispatch definitions from the default branch while X3 exists only on `research-work`. X3 will therefore be started by a normal connector/user-token push after the full X2 certificate is republished.
+Interpretation: X2 still has a large exact survivor set, but every sampled active chunk again yielded a genuinely new unrestricted exact separator. This justifies another full incremental rescreen; it does **not** itself close the family.
 
-## H225-X4 — PREPARED
-Full 44-way incremental exact rescreen after any genuinely new X3 witnesses. Do not run if X3 yields zero new witnesses or X2 unexpectedly closes after certificate audit.
+## H225-X4 — TRIGGERED
+X4 is the full 44-way incremental exact rescreen after adding the 44 genuinely new X3 witnesses.
+
+The workflow now also accepts a `research-work` push trigger on `data/derived/h225_x4_trigger.json`, avoiding the default-branch `workflow_dispatch` resolution problem. Trigger commit created after X3 publication.
+
+Expected output:
+- `data/derived/h225_x4_incremental_exact_rescreen.json`
+
+No X4 result is inferred until that merged output is present and independently read.
 
 ## NEXT ACTION
-1. Republish and independently re-read the full X2 merged certificate from the completed 44 shard artifacts.
-2. Trigger X3 by user-token push; inspect all active chunks and inconclusive jobs.
-3. If X3 yields genuinely new witnesses, run X4 full 44-way rescreen.
-4. Continue under H225-X5, X6, ... until exact zero survivors or the family remains demonstrably open.
+1. Read and validate `data/derived/h225_x4_incremental_exact_rescreen.json` when present; missing output proves nothing.
+2. If X4 reaches exact zero survivors, record H225 family closure.
+3. If survivors remain, select real X4 survivors for H225-X5 unrestricted exact separation and repeat the cutting-plane cycle.
