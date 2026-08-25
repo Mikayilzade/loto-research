@@ -1,0 +1,27 @@
+{
+  "packet": "H273",
+  "subject": "Moldova National Lottery / 7777.md AUGUST GENEROS 2026",
+  "campaign_period": "2026-08-01 through 2026-08-31",
+  "entry_turnover_mdl": 100,
+  "special_prizes_cash_equivalent_mdl": {
+    "aug_1_6": 700000,
+    "aug_7_16": 420000,
+    "aug_17_30": 1000000,
+    "campaign_total": 2120000
+  },
+  "tournament_bonus_pool_mdl": 500000,
+  "tournament_paid_places": 1000,
+  "strict_guarantee": {
+    "current_special_draw_floor_with_one_external_entry_mdl": 0,
+    "tournament_floor_with_1000_higher_external_scores_mdl": 0,
+    "calendar_bonus_fixed_cash_floor_mdl": 0
+  },
+  "blockers": [
+    "Special-prize entries are auto-generated from turnover and the winner is selected randomly; identifiers are not player-reservable.",
+    "A single external eligible entry preserves a legal current-period outcome paying the player zero special-prize cash.",
+    "Tournament points have no published participant/score cap; 1,000 higher external scores can legally push any finite player score outside paid places.",
+    "Tournament awards are bonus funds, not cash, and carry x10 E-ticket or x5 SPORT wagering conditions.",
+    "Calendar offers are conditional/periodic and several awards are random, so they do not provide a fixed precommitted cash floor."
+  ],
+  "conclusion": "CLOSED / REJECTED for strict deterministic-profit construction under the published August 2026 rules; the campaign adds real external promotional money but it is not monopolizable or deterministically allocable to a finite player portfolio."
+}
