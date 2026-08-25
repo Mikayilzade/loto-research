@@ -1,0 +1,36 @@
+{
+  "packet": "H266",
+  "game": "Australian Super66 / Lotterywest",
+  "space": 1000000,
+  "player_favourable_exact_full_cover_cost_aud": 1000000.0,
+  "exact_division_counts": {
+    "1": 1,
+    "2": 18,
+    "3": 180,
+    "4": 1800,
+    "5": 17901
+  },
+  "fixed_lower_division_gross_aud": 476814.6,
+  "fixed_lower_return_fraction": 0.4768146,
+  "division1_share_needed_for_break_even_aud": 523185.4,
+  "strict_profit_requires_div1_share_gt_aud": 523185.4,
+  "jackpot_threshold_if_no_external_div1_duplicate_aud": 523185.4,
+  "jackpot_threshold_if_one_external_div1_duplicate_aud": 1046370.8,
+  "general_threshold_with_E_external_duplicates": "J > 523185.40*(E+1)",
+  "current_2026_08_22_jackpot_aud": 80000.0,
+  "current_sole_winner_full_cover_gross_aud": 556814.6,
+  "current_sole_winner_return_fraction": 0.5568146,
+  "recent_2026_08_08_jackpot_aud": 449669.85,
+  "recent_sole_winner_full_cover_gross_aud": 926484.45,
+  "recent_sole_winner_return_fraction": 0.92648445,
+  "structural_gates": {
+    "exact_full_cover_forces_own_division1_winner": true,
+    "therefore_terminal_no_div1_rolldown_not_compatible_with_full_cover": true,
+    "any_nonempty_fixed_portfolio_has_a_legal_draw_equal_to_one_owned_entry": true,
+    "therefore_no_nonempty_portfolio_can_force_no_own_division1_in_every_draw": true,
+    "official_lotterywest_numbers_automatically_generated": true,
+    "player_selectable_exact_identifier_takeover_established": false,
+    "hard_pre_draw_external_duplicate_cap_established": false
+  },
+  "conclusion": "REJECTED for strict guaranteed-profit terminal/takeover mechanism under checked current rules."
+}
