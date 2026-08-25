@@ -1,0 +1,16 @@
+{
+  "packet": "H271",
+  "game": "UK EuroMillions Millionaire Maker",
+  "line_cost_gbp": 2.5,
+  "millionaire_maker_prize_gbp": 1000000,
+  "raffle_only_break_even_lines": 400000.0,
+  "raffle_only_strict_profit_max_lines": 399999,
+  "main_matrix_lines": 139838160,
+  "main_matrix_cover_cost_gbp": 349595400.0,
+  "one_mm_prize_vs_main_cover_return": 0.0028604495368074064,
+  "structural_guarantee_condition": "portfolio must own every valid generated raffle code in the draw",
+  "external_code_counterexample": "if one externally owned generated code exists, selecting it is a legal raffle outcome and portfolio MM gross is 0",
+  "player_selectable_codes": false,
+  "takeover_certified_executable": false,
+  "status": "CLOSED / REJECTED for strict guaranteed-profit takeover under checked rules"
+}
