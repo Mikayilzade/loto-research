@@ -4,8 +4,6 @@ on:
     branches: [research-work]
     paths:
       - 'data/derived/h240_new_witnesses.json'
-      - 'research/H225_EXACT_STATUS.md'
-      - '.github/workflows/h241-h240-incremental-rescreen.yml'
   workflow_dispatch:
 permissions:
   contents: write
