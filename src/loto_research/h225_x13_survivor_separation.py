@@ -1,0 +1,54 @@
+"""H225-X13: unrestricted exact separators for actual validated H225-X12 survivors."""
+from __future__ import annotations
+import argparse, json
+from pathlib import Path
+import loto_research.h225_x9_survivor_separation as base
+
+ROOT=Path(__file__).resolve().parents[2]
+X12=ROOT/'data'/'derived'/'h225_x12_incremental_exact_rescreen.json'
+OUTDIR=ROOT/'data'/'derived'/'h225_x13_separator_shards'
+MERGED=ROOT/'data'/'derived'/'h225_x13_survivor_separation.json'
+NEW=ROOT/'data'/'derived'/'h225_x13_new_witnesses.json'
+base.X8=X12
+base.OUTDIR=OUTDIR
+base.MERGED=MERGED
+base.NEW=NEW
+base.OLD=base.OLD+[
+ (ROOT/'data'/'derived'/'h225_x9_new_witnesses.json','H225-X9'),
+ (ROOT/'data'/'derived'/'h225_x11_new_witnesses.json','H225-X11'),
+]
+
+def load_x12():
+ d=json.loads(X12.read_text())
+ assert d['packet']=='H225-X12' and d['chunk_shards']==44 and d['quotient_coefficient_states_screened']==306450 and len(d['sectors'])==11
+ assert sum(int(s['quotient_coefficient_states']) for s in d['sectors'])==306450
+ assert sum(int(s['exact_shift_surviving_coefficient_states']) for s in d['sectors'])==int(d['exact_shift_surviving_coefficient_states'])
+ assert sum(int(s['exact_surviving_shift_tuples']) for s in d['sectors'])==int(d['exact_surviving_shift_tuples'])
+ return d
+base.load_x8=load_x12
+
+def relabel_job(out):
+ out['packet']='H225-X13'; out['source_packet']='H225-X12'
+ if 'x8_chunk_survivor_states' in out: out['x12_chunk_survivor_states']=out.pop('x8_chunk_survivor_states')
+ if 'x8_chunk_survivor_shift_tuples' in out: out['x12_chunk_survivor_shift_tuples']=out.pop('x8_chunk_survivor_shift_tuples')
+ return out
+
+def solve_job(job,time_limit): return relabel_job(base.solve_job(job,time_limit))
+
+def merge(paths):
+ merged,wp=base.merge(paths); x12=load_x12()
+ merged['packet']='H225-X13'; merged['source_packet']='H225-X12'
+ merged['x12_survivor_states']=int(x12['exact_shift_surviving_coefficient_states'])
+ merged['x12_survivor_shift_tuples']=int(x12['exact_surviving_shift_tuples'])
+ merged.pop('x8_survivor_states',None); merged.pop('x8_survivor_shift_tuples',None)
+ for r in merged['jobs']: relabel_job(r)
+ wp['packet']='H225-X13'; wp['deduplicated_against']=['H234','H225-X1','H225-X3','H225-X5','H225-X7','H225-X9','H225-X11']
+ return merged,wp
+
+def main():
+ ap=argparse.ArgumentParser(); ap.add_argument('--job',type=int); ap.add_argument('--time-limit',type=float,default=180.0); ap.add_argument('--merge-dir',type=Path); a=ap.parse_args()
+ if a.job is not None:
+  out=solve_job(a.job,a.time_limit); OUTDIR.mkdir(parents=True,exist_ok=True); (OUTDIR/f'job_{a.job:02d}.json').write_text(json.dumps(out,indent=2)+'\n'); print(json.dumps({k:v for k,v in out.items() if k!='witness'},indent=2)); return
+ assert a.merge_dir is not None
+ merged,wp=merge(sorted(a.merge_dir.rglob('job_*.json'))); MERGED.write_text(json.dumps(merged,indent=2)+'\n'); NEW.write_text(json.dumps(wp,indent=2)+'\n'); print(json.dumps({k:v for k,v in merged.items() if k!='jobs'},indent=2))
+if __name__=='__main__': main()
