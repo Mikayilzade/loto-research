@@ -1,0 +1,18 @@
+{
+  "packet": "H280",
+  "model": "conditional 200% deposit match + one-copy 00-99 Front Pair cover",
+  "official_pick3_fact": "NH Pick 3 Front Pair pays $50 on a $1 bet; 100 possible pairs.",
+  "conditional_offer_fact": "Third-party current advertisement claims 200% deposit match up to $100.",
+  "example": {
+    "deposit": 34.0,
+    "bonus": 68.0,
+    "wallet": 102.0,
+    "cover_cost": 100.0,
+    "feasible_wallet": true,
+    "guaranteed_prize_if_full_cover_accepted": 50.0,
+    "cash_profit_if_full_cover_accepted": 16.0,
+    "profit_pct_on_deposit": 47.058823529411775
+  },
+  "execution_certified": false,
+  "reason_not_success": "NH official terms reserve purchase refusal/number-limit rights; offer-specific 200% code terms are not authoritative public Lottery terms."
+}
