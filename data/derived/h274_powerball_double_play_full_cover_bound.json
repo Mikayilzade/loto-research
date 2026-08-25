@@ -1,0 +1,20 @@
+{
+  "packet": "H274",
+  "universe_lines": 292201338,
+  "line_price_with_double_play": 3,
+  "full_cover_cost": 876604014,
+  "main_fixed_gross_excluding_jackpot": 93466048,
+  "double_play_gross": 156133184,
+  "double_play_return_on_addon": 0.5343342541436275,
+  "combined_fixed_gross": 249599232,
+  "combined_fixed_return_on_total_cost": 0.284734301935332,
+  "current_advertised_jackpot": 96000000,
+  "current_cash_value": 41200000,
+  "impossible_favorable_gross_plus_full_annuity_face": 345599232,
+  "impossible_favorable_return_plus_full_annuity_face": 0.3942478319520905,
+  "gross_plus_full_cash_value": 290799232,
+  "return_plus_full_cash_value": 0.3317338585675242,
+  "fixed_deficit_before_jackpot": 627004782,
+  "status": "REJECTED_CURRENT_DRAW_FULL_COVER",
+  "note": "Full-cover fixed gross is exact and draw-invariant. Even granting the player the entire advertised Aug 26 2026 $96m annuity face value, ignoring sharing and cash-value discount, remains far below acquisition cost."
+}
