@@ -1,0 +1,66 @@
+{
+  "packet": "H265",
+  "candidate": "New Jersey Pick-3 Green Ball terminal guaranteed Double Draw",
+  "status": "CLOSED_REJECTED",
+  "promotion_checked": "2026-07-06 through 2026-08-03",
+  "promotion_active_on_validation_date": false,
+  "terminal_state_granted": "six white balls already removed, so Green Ball is the only remaining promotion ball",
+  "base_wager_dollars": 0.5,
+  "fireball_addon_dollars": 0.5,
+  "green_ball_fireball_included": false,
+  "rows": [
+    {
+      "wager": "straight",
+      "base_one_draw_expected_dollars": 0.25,
+      "fireball_regular_draw_expected_dollars": 0.27,
+      "terminal_double_draw_no_fireball_cost_dollars": 0.5,
+      "terminal_double_draw_no_fireball_average_gross_dollars": 0.5,
+      "terminal_double_draw_no_fireball_average_return_ratio": 1.0,
+      "terminal_double_draw_with_fireball_cost_dollars": 1.0,
+      "terminal_double_draw_with_fireball_average_gross_dollars": 0.77,
+      "terminal_double_draw_with_fireball_average_return_ratio": 0.77
+    },
+    {
+      "wager": "3_way_box",
+      "base_one_draw_expected_dollars": 0.24,
+      "fireball_regular_draw_expected_dollars": 0.27,
+      "terminal_double_draw_no_fireball_cost_dollars": 0.5,
+      "terminal_double_draw_no_fireball_average_gross_dollars": 0.48,
+      "terminal_double_draw_no_fireball_average_return_ratio": 0.96,
+      "terminal_double_draw_with_fireball_cost_dollars": 1.0,
+      "terminal_double_draw_with_fireball_average_gross_dollars": 0.75,
+      "terminal_double_draw_with_fireball_average_return_ratio": 0.75
+    },
+    {
+      "wager": "6_way_box",
+      "base_one_draw_expected_dollars": 0.24,
+      "fireball_regular_draw_expected_dollars": 0.27,
+      "terminal_double_draw_no_fireball_cost_dollars": 0.5,
+      "terminal_double_draw_no_fireball_average_gross_dollars": 0.48,
+      "terminal_double_draw_no_fireball_average_return_ratio": 0.96,
+      "terminal_double_draw_with_fireball_cost_dollars": 1.0,
+      "terminal_double_draw_with_fireball_average_gross_dollars": 0.75,
+      "terminal_double_draw_with_fireball_average_return_ratio": 0.75
+    },
+    {
+      "wager": "pair",
+      "base_one_draw_expected_dollars": 0.25,
+      "fireball_regular_draw_expected_dollars": 0.27,
+      "terminal_double_draw_no_fireball_cost_dollars": 0.5,
+      "terminal_double_draw_no_fireball_average_gross_dollars": 0.5,
+      "terminal_double_draw_no_fireball_average_return_ratio": 1.0,
+      "terminal_double_draw_with_fireball_cost_dollars": 1.0,
+      "terminal_double_draw_with_fireball_average_gross_dollars": 0.77,
+      "terminal_double_draw_with_fireball_average_return_ratio": 0.77
+    }
+  ],
+  "max_terminal_average_return_ratio_no_fireball": 1.0,
+  "max_terminal_average_return_ratio_with_fireball": 0.77,
+  "strict_profit_guarantee_possible_from_green_ball_fixed_wagers": false,
+  "proof": "For any portfolio, minimum gross over legal draw outcomes is at most its average gross. Every primitive terminal average return is <= 100%; nonnegative mixtures, Straight/Box combinations, and Wheels inherit the bound. FIREBALL is <100% because it adds cost and is excluded from Green Ball winner determination.",
+  "instant_match_note": "Instant Match is a separate paid random add-on with a legal nonwinning result; it adds cost and no positive worst-case floor, so it cannot rescue a strict guarantee.",
+  "official_sources": [
+    "https://www.njlottery.com/en-us/drawgames/pick3.html",
+    "https://www.njlottery.com/en-us/newsandevents/newsinput/2026/press-releases/P3_GreenBallPromotionResults_081826.html"
+  ]
+}
