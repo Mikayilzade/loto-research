@@ -1,0 +1,12 @@
+{
+  "packet": "H225-X17-TRIGGER-V1",
+  "source_packet": "H225-X16",
+  "source_run": 32805383127,
+  "source_artifact": 9548762247,
+  "source_artifact_digest": "sha256:16e55597261a820cd00561541cba10e5c1feeee3885b0a81b7520846be1f9d13",
+  "quotient_coefficient_states_screened": 306450,
+  "source_exact_survivor_states": 48387,
+  "source_exact_survivor_shift_tuples": 2116464,
+  "validated": true,
+  "next": "H225-X17 exact separators; H225-X18 full rescreen if new cuts remain"
+}
