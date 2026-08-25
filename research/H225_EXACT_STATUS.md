@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-25 03:56 +04
+Updated: 2026-08-25 05:07 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -12,137 +12,102 @@ Terminal state: **OPEN / NOT CLOSED**
 | H225-X1 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
 | H225-X2 | 295,293 | 65,921,861 | — |
 | H225-X3 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
-| H225-X4 | **288,176** | **50,626,368** | — |
-| H225-X5 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
-| H225-X6 | **210,285** | **19,567,210** | full 44-way rescreen validated; positive survivors remain |
-| H225-X7→X10 | RUNNING | RUNNING | integrated chain run `32791403782` |
+| H225-X4 | 288,176 | 50,626,368 | — |
+| H225-X5 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
+| H225-X6 | 210,285 | 19,567,210 | full 44-way rescreen validated |
+| H225-X7 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
+| H225-X8 | **170,893** | **12,498,982** | full 44-way rescreen validated |
+| H225-X9 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
+| H225-X10 | **138,871** | **8,845,562** | full 44-way rescreen validated; positive survivors remain |
+| H225-X11→X12 | RUNNING | RUNNING | workflow run `32796246076` |
 
 All rescreen stages use the unchanged H228 quotient universe of **306,450** coefficient states. Zero exact survivors is the closure criterion.
 
-## H225-X2 certificate
-Authoritative compute run: `32693907822`; all 44 shard artifacts exist and were independently reconstructed.
-
-Totals:
-- states screened: **306,450 / 306,450**
-- exact shift-surviving coefficient states: **295,293**
-- exact surviving legal shift tuples: **65,921,861**
-
-Compact certificate: `data/derived/h225_x2_exact_rescreen_summary.json`.
-Survivor seed: `data/derived/h225_x2_survivor_seed.json`.
-Full independently reconstructed merge SHA-256: `bd61f2fa7c3b5edaf4e793cdd9d33881fdb6d69cb6eb8badae47be5372d83e35`.
-
-## H225-X3 — COMPLETE
-- active chunks: **44/44**
-- unrestricted exact balanced `n3<=2` counterexamples: **44/44**
-- inconclusive: **0**
-- unique balanced counterexamples: **44**
-- genuinely new witnesses vs H234 + X1: **44**
-
-Files:
-- `data/derived/h225_x3_survivor_separation.json`
-- `data/derived/h225_x3_new_witnesses.json`
-
-## H225-X4 — COMPLETE
-Full 44-way exact rescreen after affine-expanding the 44 X3 cuts through 128 symmetries.
-
-Authoritative commit: `4778806680740aa6f01b2e6c0a61957b7061b06a` (`H225-X4 publish full incremental exact rescreen`).
-
-Result:
-- states screened: **306,450 / 306,450**
-- exact shift-surviving coefficient states: **288,176**
-- exact surviving legal shift tuples: **50,626,368**
-- X3 raw new witnesses: **44**
-- X3 affine instances: **5,632**
-- H225 family closed: **false**
-
-Improvement vs X2:
-- coefficient states removed: **7,117**
-- legal shift tuples removed: **15,295,493**
-
-Note: connector `fetch_file` can show a very large merged JSON as empty; do not infer zero survivors from empty connector content alone. Validate by artifact/commit or independent shard reconstruction.
-
-## H225-X5 — COMPLETE
-Integrated run: `32707295388`.
-Latest validated merged artifact: `9513550747`, digest `sha256:a94bde0d61f002d5496f2bc728854d10cace901b2ab8fcbd354ac552944e2d30`.
-
-Result:
-- active X4 survivor chunks: **44/44**
-- exact unrestricted counterexamples: **44/44**
-- inconclusive: **0**
-- unique balanced counterexamples: **44**
-- genuinely new witnesses vs H234/X1/X3: **44**
-- all selected active designs broken: **true**
-
-Files:
-- `data/derived/h225_x5_survivor_separation.json`
-- `data/derived/h225_x5_new_witnesses.json`
-
 ## H225-X6 — COMPLETE / VALIDATED
-X6 reconstructs the witness universe from immutable generations H226 + H234 + X1 + X3 + X5, affine-expanding all added cuts, then rescreens all **306,450** quotient states in **44 exact chunks**.
+Authoritative run `32784914783`, merged artifact `9541696415`, digest `sha256:76256ba6957894e7562098c1552c783dca26f3095a9954dba2a7edfc42b16635`.
 
-The V2 trigger failed only because the workflow used the nonexistent module `loto_research.h225_x6_incremental_exact_rescreen`; this CI wiring defect was repaired before V3.
+Independent validation:
+- 44 chunk artifacts + merged artifact;
+- exactly 306,450 states;
+- 11 sectors;
+- exact survivors **210,285**;
+- exact shift tuples **19,567,210**.
 
-Repair and authoritative run:
-- workflow fix commit: `a9c0a778f76c867df04a55c16360b336bd99b526`
-- authenticated V3 trigger commit: `b45621cd340758352f41ea7f0b24da98d561c74c`
-- V3 workflow run: `32784914783` — **completed / success**
-- merged artifact: `9541696415`
-- artifact digest: `sha256:76256ba6957894e7562098c1552c783dca26f3095a9954dba2a7edfc42b16635`
+## H225-X7 → X10 — COMPLETE / VALIDATED
+Integrated run `32791403782` completed with conclusion **success**.
 
-Validation performed independently from the downloaded merged artifact, not from the repository placeholder:
-- workflow artifact count: **45 = 44 chunk artifacts + 1 merged artifact**;
-- merged packet: `H225-X6`;
+### H225-X7 separator
+Artifact `9543265692`, digest `sha256:0a4dc992bf93e98ceeac2516e18b80c67c703afe224a74884aca1c43403244d2`.
+- total chunks: 44;
+- active survivor chunks: 44;
+- skipped-zero-survivor chunks: 0;
+- counterexamples found: **44/44**;
+- inconclusive active jobs: **0**;
+- genuinely new balanced witnesses: **44**;
+- all selected active designs broken: true.
+
+### H225-X8 rescreen
+Artifact `9543862728`, digest `sha256:9b1e04900acd47e369c86e34727e0457b4f7bb145a593a0e7aa9860d39b39c0b`.
+Independent merged-artifact validation:
 - `chunk_shards == 44`;
-- `quotient_coefficient_states_screened == 306450`;
-- exactly **11** sectors present;
+- exactly **11** sectors and **44** embedded chunks;
 - sector quotient-state counts sum exactly **306,450**;
-- sector survivor counts sum exactly **210,285**, matching the merged top-level total;
-- sector shift-tuple counts sum exactly **19,567,210**, matching the merged top-level total.
+- exact survivor states sum/top-level = **170,893**;
+- exact shift tuples sum/top-level = **12,498,982**.
 
-Result:
-- exact shift-surviving coefficient states: **210,285**;
-- exact surviving legal shift tuples: **19,567,210**;
-- H225 family closed: **false**.
+Improvement vs X6:
+- coefficient states removed: **39,392**;
+- legal shift tuples removed: **7,068,228**.
 
-Improvement vs X4:
-- coefficient states removed: **77,891**;
-- legal shift tuples removed: **31,059,158**.
+### H225-X9 separator
+Artifact `9543925306`, digest `sha256:e87ae780416db24ad9e17cd0d5a7acf6f7e7a8d2972a9f959bb1e78bfa90fe10`.
+- total chunks: 44;
+- active survivor chunks: 44;
+- skipped-zero-survivor chunks: 0;
+- counterexamples found: **44/44**;
+- inconclusive active jobs: **0**;
+- genuinely new balanced witnesses: **44**;
+- all selected active designs broken: true.
 
-The repository copy `data/derived/h225_x6_incremental_exact_rescreen.json` may appear empty through the connector because of large-file handling; the validated workflow artifact is authoritative.
+### H225-X10 rescreen
+Artifact `9544543215`, digest `sha256:761189ceb7afb6e8eaa338932dd18c26cadbf92976620b8ed916cd76cef3f343`.
+Independent merged-artifact validation:
+- packet `H225-X10`;
+- `chunk_shards == 44`;
+- exactly **11** sectors and **44** embedded chunks;
+- sector quotient-state counts sum exactly **306,450**;
+- exact survivor states sum/top-level = **138,871**;
+- exact shift tuples sum/top-level = **8,845,562**;
+- family closure flag is false because survivors remain.
 
-## H225-X7 → X10 — RUNNING INTEGRATED CHAIN
-Because X6 has positive survivors, the downstream chain was authenticated and launched.
+Improvement vs X8:
+- coefficient states removed: **32,022**;
+- legal shift tuples removed: **3,653,420**.
 
-Trigger:
-- `data/derived/h225_x7_trigger.json`
-- trigger commit: `93e804ea921e26687a9719c836e3ffe4a5c9ea4f`
-- chain workflow run: `32791403782`
-- observed state after launch: **in_progress**.
+The repository copy of a large merged rescreen JSON can appear empty through the connector. Artifact contents and the above independent sum checks are authoritative; never infer zero from an empty placeholder.
 
-Chain:
-1. **H225-X7** — 44 unrestricted exact separators over actual positive X6 chunks; zero-survivor chunks are explicit skips; witnesses deduplicated against H234/X1/X3/X5.
-2. **H225-X8** — full 44-way / 306,450-state exact rescreen after affine-expanding genuinely new X7 cuts.
-3. **H225-X9** — 44 unrestricted exact separators over actual positive X8 chunks; witnesses deduplicated against H234/X1/X3/X5/X7.
-4. **H225-X10** — full 44-way / 306,450-state exact rescreen after genuinely new X9 cuts.
+## H225-X11 → X12 — LAUNCHED
+Because validated X10 remains positive, the next exact cutting-plane generation was implemented and triggered.
 
-Implemented files:
-- `src/loto_research/h225_x7_survivor_separation.py`
-- `src/loto_research/h225_x8_incremental_rescreen.py`
-- `src/loto_research/h225_x9_survivor_separation.py`
-- `src/loto_research/h225_x10_incremental_rescreen.py`
-- `.github/workflows/h225-x7-survivor-separation.yml`
+Implementation:
+- `src/loto_research/h225_x11_survivor_separation.py` — commit `4da0376fd456287f6589cb6fe8281f6030f77a59`;
+- `src/loto_research/h225_x12_incremental_rescreen.py` — commit `0bb88c3f85340e9eac0a3db6ea6dc6a76f50e19a`;
+- `.github/workflows/h225-x11-x12.yml` — commit `665a01b85f03e0c8220e2cf81977033e42d8c951`;
+- trigger `data/derived/h225_x11_trigger.json` — commit `449521551d60140c884ab9a719133746121d9928`.
 
-Integrated-chain implementation commit: `856d67c03357ba9a22df9068901838c611c61290`.
+Workflow run: `32796246076`.
+Observed immediately after trigger: **queued**.
 
-Strict stop gates:
-- X8 runs only if X7 produced genuinely new cuts;
-- X9 runs only if X8 still has positive exact survivors;
-- X10 runs only if X9 produced genuinely new cuts;
-- every rescreen merge asserts 44 shards and 306,450 states.
+Strict gates:
+1. X11 consumes the authoritative X10 merged artifact from run `32791403782`, not the repository placeholder.
+2. X11 accepts a witness packet only with `inconclusive_active_jobs == 0` and `counterexamples_found == active_survivor_chunks`.
+3. X12 runs only if X11 has genuinely new cuts.
+4. X12 merge requires 44 unique chunks, 11 sectors and exactly **306,450** states; survivor and shift-tuple sector sums must equal top-level totals.
+5. Zero X12 exact survivors rigorously closes H225. Positive X12 survivors require X13/X14, built only from the actual X12 packet.
 
 ## NEXT ACTION
-1. Validate run `32791403782` stage-by-stage. Never interpret an empty repository placeholder as a result.
-2. For X7/X9 separators, require all active jobs to be conclusive before accepting their witness packet; record exact counts of broken, skipped-zero-survivor, and inconclusive jobs.
-3. For X8/X10 rescreens, require exactly 44 unique chunks and exactly **306,450** states before interpreting survivor totals.
-4. If any validated rescreen reaches zero exact survivors, record rigorous H225 closure and stop this family lane.
-5. If X10 remains positive, only then prepare H225-X11/X12 from the actual X10 survivor packet.
+1. Validate run `32796246076` stage-by-stage.
+2. Require zero inconclusive X11 active jobs before accepting X11.
+3. If X12 runs, validate 44 shards / 306,450 states and exact sector sums before interpreting survivors.
+4. If X12 reaches zero exact survivors, record rigorous H225 closure and stop this lane.
+5. If X12 remains positive, prepare H225-X13/X14 only from the actual validated X12 survivor packet.
