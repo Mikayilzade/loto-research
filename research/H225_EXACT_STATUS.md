@@ -1,6 +1,6 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-25 06:25 +04
+Updated: 2026-08-25 06:34 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
 Terminal state: **OPEN / NOT CLOSED**
 
@@ -19,9 +19,10 @@ Terminal state: **OPEN / NOT CLOSED**
 | H225-X8 | 170,893 | 12,498,982 | full 44-way rescreen validated |
 | H225-X9 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
 | H225-X10 | 138,871 | 8,845,562 | full 44-way rescreen validated |
-| H225-X11 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
+| H225-X11 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
 | H225-X12 | **110,487** | **6,180,594** | full 44-way rescreen validated; positive survivors remain |
-| H225-X13→X14 | RUNNING | RUNNING | workflow run `32801267776` |
+| H225-X13 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive — VALIDATED** |
+| H225-X14 | QUEUED | QUEUED | same workflow run `32801267776`; no shard artifact yet |
 
 All rescreen stages use the unchanged H228 quotient universe of **306,450** coefficient states. Zero exact survivors is the closure criterion.
 
@@ -87,29 +88,37 @@ Improvement vs X10:
 - coefficient states removed: **28,384**;
 - legal shift tuples removed: **2,664,968**.
 
-## H225-X13 → X14 — LAUNCHED
-Because validated X12 remains positive, the next generation was built strictly from the actual X12 artifact and prior immutable witness history.
+## H225-X13 — COMPLETE / VALIDATED
+Authoritative workflow run `32801267776`; merged artifact `9546611965`, digest `sha256:d605873ab023f4fbbdc6b4b1c66cde7870f7242c679b4b41e84ac8dc40203315`.
 
-Implementation:
-- `src/loto_research/h225_x13_survivor_separation.py` — commit `14fa389ae1bdd8eb9a9f7fa3b330f07c55a3658c`;
-- `src/loto_research/h225_x14_incremental_rescreen.py` — commit `626ec8c8c90741fba1fc0def390167a6aad4b7df`;
-- `.github/workflows/h225-x13-x14.yml` — commit `963fcb6f7ba485c95f50112821f4a7944ba686df`;
-- trigger `data/derived/h225_x13_trigger.json` — commit `f26eb975f15e11aa5480d2f693e4d0b47e816bbb`.
+Independent merged-artifact validation:
+- packet `H225-X13`, source packet `H225-X12`, source run `32796246076`;
+- source X12 survivor totals exactly **110,487 coefficient states / 6,180,594 legal shift tuples**;
+- exactly 44 ordered jobs (IDs `0..43`);
+- active survivor chunks **44**;
+- counterexamples found **44/44**;
+- inconclusive active jobs **0**;
+- unique balanced counterexamples **44**;
+- genuinely new witnesses **44** after deduplication through X11 history;
+- `all_selected_active_designs_broken == true`.
 
-Workflow run: `32801267776`.
-Initial observation after trigger: **queued**.
+Permanent independent certificate: `research/H225_X13_VALIDATION.md`.
 
-Strict gates:
-1. X13 consumes X12 merged artifact `9545748723` from run `32796246076`, not any repository placeholder.
-2. X13 also imports authoritative X11 witness artifact `9544974539` so deduplication/history is complete through X11.
-3. X13 is accepted only with `inconclusive_active_jobs == 0` and `counterexamples_found == active_survivor_chunks`.
-4. X14 runs only if X13 produces genuinely new cuts.
-5. X14 merge requires 44 unique chunks, 11 sectors, exactly **306,450** states, and survivor/shift-tuple sector sums matching top-level totals.
-6. Zero X14 exact survivors rigorously closes H225. Positive X14 survivors require X15/X16 from the actual validated X14 packet.
+This rigorously passes the X13 separator gate but does **not** close H225. A full X14 rescreen remains mandatory.
+
+## H225-X14 — WAITING FOR RUNNER / NO RESULT CLAIM
+The integrated run `32801267776` currently reports workflow status **queued** after publishing all 44 X13 shard artifacts and the merged X13 artifact. At the latest artifact check there were **no X14 shard or merged artifacts yet**. Therefore no X14 survivor count is inferred or claimed.
+
+Strict X14 gate:
+1. consume the actual validated X13 witness packet;
+2. require 44 unique chunk shards and exactly 11 sectors;
+3. require sector quotient-state counts to sum exactly **306,450** and equal top-level total;
+4. require survivor-state and legal-shift-tuple sector sums to equal top-level totals;
+5. zero X14 exact survivors rigorously closes H225; positive survivors require X15/X16 from the actual validated X14 packet.
 
 ## NEXT ACTION
-1. Validate run `32801267776` stage-by-stage.
-2. Require zero inconclusive X13 active jobs before accepting X13.
-3. If X14 runs, validate 44 shards / 306,450 states and exact sector sums before interpreting survivors.
+1. Recheck run `32801267776` for X14 execution/artifacts; do not rerun while it is merely queued.
+2. If X14 fails, inspect the failing job/log and repair only the concrete CI fault before retrying.
+3. If X14 completes, validate 44 shards / 11 sectors / exactly **306,450** states plus survivor and shift-tuple sector sums before interpreting the result.
 4. If X14 reaches zero exact survivors, record rigorous H225 closure and stop this lane.
 5. If X14 remains positive, prepare H225-X15/X16 only from the actual validated X14 survivor packet.
