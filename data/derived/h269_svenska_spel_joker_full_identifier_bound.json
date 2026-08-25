@@ -1,0 +1,27 @@
+{
+  "closure": "Exact full Joker-identifier takeover is economically below cost even before considering execution; mandatory Lotto base cost only worsens the fixed-plan takeover ratio.",
+  "exact_joker_fixed_plan_gross_sek": 39664000,
+  "game": "Svenska Spel Joker with Lotto",
+  "identifier_space": 10000000,
+  "joker_fixed_plan_return_on_joker_stake": 0.39664,
+  "joker_fixed_plan_return_on_minimum_combined_spend": 0.2833142857142857,
+  "joker_only_full_cover_cost_sek": 100000000,
+  "joker_stake_sek": 10,
+  "mandatory_minimum_lotto_row_cost_sek": 4,
+  "minimum_combined_full_identifier_acquisition_cost_sek": 140000000,
+  "packet": "H269",
+  "payout_distribution_identifier_counts": {
+    "0": 9455130,
+    "40": 494262,
+    "80": 46413,
+    "120": 486,
+    "160": 9,
+    "500": 3402,
+    "540": 18,
+    "10000": 261,
+    "100000": 18,
+    "10000000": 1
+  },
+  "winning_identifier_fraction": 0.054487,
+  "winning_identifiers_for_any_draw": 544870
+}
