@@ -1,8 +1,18 @@
 # H225 EXACT FAMILY STATUS
 
-Updated: 2026-08-25 09:35 +04
+Updated: 2026-08-25 10:27 +04
 Namespace: `H225-X*` (separate from the global numbered lottery H-stream)
-Terminal state: **OPEN / NOT CLOSED**
+Terminal state: **CLOSED / EXHAUSTED**
+
+## Terminal result
+
+Authoritative workflow run `32813117144` completed successfully. H225-X19 produced 12 genuinely new exact balanced counterexamples from the 12 active X18 survivor chunks with **0 inconclusive active jobs**. H225-X20 then performed the required full exact family rescreen over all 44 canonical shards, all 11 sectors, and exactly **306,450** quotient coefficient states.
+
+**H225-X20 exact survivors: 0 coefficient states / 0 legal shift tuples.**
+
+Therefore the H225 general cyclic-affine family is rigorously exhausted under the unchanged H228 quotient universe. No H225-X21/X22 continuation is warranted unless the family definition itself is deliberately broadened or changed.
+
+This is an impossibility/closure result for this construction family, not a profitable lottery strategy.
 
 ## Authoritative progression
 
@@ -25,69 +35,44 @@ Terminal state: **OPEN / NOT CLOSED**
 | H225-X14 | 76,196 | 3,807,980 | full 44-way rescreen validated |
 | H225-X15 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
 | H225-X16 | 48,387 | 2,116,464 | full 44-way rescreen validated |
-| H225-X17 | — | — | **44/44 broken; 44 new cuts; 0 inconclusive** |
-| H225-X18 | **3,300** | **71,392** | **full 44-way rescreen validated; positive survivors remain** |
-| H225-X19 | LAUNCHING | LAUNCHING | exact separators implemented from authoritative X18 |
-| H225-X20 | PENDING X19 | PENDING X19 | full rescreen wired behind strict X19 merge gate |
+| H225-X17 | — | — | 44/44 broken; 44 new cuts; 0 inconclusive |
+| H225-X18 | 3,300 | 71,392 | full 44-way rescreen validated |
+| H225-X19 | — | — | 12/12 active chunks broken; 12 new cuts; 0 inconclusive; 32 chunks already zero |
+| **H225-X20** | **0** | **0** | **full 44-way / 306,450-state exact rescreen; CLOSED** |
 
-All rescreen stages use the unchanged H228 quotient universe of **306,450** coefficient states. Zero exact survivors is the closure criterion.
+## H225-X19 validation
 
-## Validated chain
-- X6 run `32784914783`: **210,285 / 19,567,210**.
-- X7→X10 run `32791403782`: X7 44/44; X8 **170,893 / 12,498,982**; X9 44/44; X10 **138,871 / 8,845,562**.
-- X11→X12 run `32796246076`: X11 44/44; X12 **110,487 / 6,180,594**.
-- X13→X14 run `32801267776`: X13 44/44; X14 **76,196 / 3,807,980**.
-- X15→X16 run `32805383127`: X15 44/44; X16 **48,387 / 2,116,464**.
-- X17→X18 run `32809156175`: X17 44/44; X18 **3,300 / 71,392**.
+Artifact `h225-x19-merged`:
+- run: `32813117144`;
+- artifact id: `9550508802`;
+- digest: `sha256:c4c40fcc52b9ec1b10a0540e0ed36cf0cf737a53b502d3c3122f5487d3bd28df`;
+- exactly 44 ordered jobs with canonical sector/chunk mapping;
+- 12 active survivor chunks; 32 skipped because X18 already had zero survivors there;
+- 12/12 active exact designs broken;
+- 0 inconclusive active jobs;
+- 12 genuinely new balanced witnesses, all `n3 <= 2` and valid under the H234 balanced predicate;
+- source X18 totals exactly 3,300 states / 71,392 shift tuples.
 
-Permanent certificates include `research/H225_X15_X16_VALIDATION.md` and `research/H225_X17_X18_VALIDATION.md`.
+## H225-X20 validation
 
-## H225-X17 → X18 — COMPLETE / VALIDATED
-Authoritative workflow run `32809156175` completed with conclusion `success`.
+Artifact `h225-x20-merged`:
+- run: `32813117144`;
+- artifact id: `9551144208`;
+- digest: `sha256:b1bf6cd78521a178b6f225c248027276dfb72b53910fc810e9615c0ca0914c20`;
+- exactly 44 unique `(sector, chunk)` shards = 11 sectors x 4 chunks;
+- chunk quotient-state sum = **306,450**;
+- sector quotient-state sum = **306,450**;
+- every sector chunk-sum matches its sector total;
+- X19 supplied 12 raw new witnesses / 1,536 affine instances;
+- exact surviving coefficient states = **0**;
+- exact surviving legal shift tuples = **0**;
+- every individual chunk has zero exact survivors;
+- closure flag true.
 
-### X17
-Merged artifact `9549487377`, digest `sha256:0279a59e00f7111475fa1b5d9242bc4c0fbc138c065afbea8376e5e83d41d230`.
-Independent artifact validation established:
-- exactly 44 ordered jobs;
-- active chunks 44;
-- counterexamples 44/44;
-- inconclusive active jobs 0;
-- all selected active designs broken;
-- 44 genuinely new balanced witnesses;
-- witness history deduplicated through H225-X15.
-
-### X18
-Merged artifact `9550091411`, digest `sha256:147b9b9a5e7ee1dc43ed9c37db84cd85edc7caaee7acbbe381923e4214207892`.
-Independent artifact validation established:
-- exactly 44 canonical `(sector, chunk)` shards = 11 sectors × 4 chunks;
-- exactly **306,450** quotient coefficient states screened;
-- sector quotient-state sums match top level;
-- sector survivor sums match **3,300** exact coefficient survivors;
-- sector shift-tuple sums match **71,392** legal shift tuples;
-- X17 supplied 44 raw witnesses / 5,632 affine instances;
-- closure flag false.
-
-Improvement vs X16:
-- coefficient states removed: **45,087**;
-- legal shift tuples removed: **2,045,072**.
-
-## H225-X19 → X20 — IMPLEMENTED
-Added:
-- `src/loto_research/h225_x19_survivor_separation.py`;
-- `src/loto_research/h225_x20_incremental_rescreen.py`;
-- `.github/workflows/h225-x19-x20.yml`.
-
-Strict gates:
-1. X19 consumes authoritative X18 merged artifact from run `32809156175` and asserts source totals **3,300 / 71,392**.
-2. X19 merge requires 44 ordered jobs, zero inconclusive active jobs, and every active selected design broken before witness acceptance.
-3. X19 witnesses are deduplicated through H225-X17.
-4. X20 runs only if X19 yields nonzero genuinely new cuts.
-5. X20 merge requires 44 unique shards / 11 sectors / exactly **306,450** states plus exact sector-sum equality.
-6. X20 zero survivors closes H225; positive survivors require H225-X21/X22 from the actual X20 packet.
+Permanent records:
+- `research/H225_X19_X20_VALIDATION.md`;
+- `data/derived/h225_x20_closure_certificate.json`.
 
 ## NEXT ACTION
-1. Trigger and monitor H225-X19/X20 without duplicating a healthy run.
-2. Validate X19 merged artifact: 44 ordered jobs, active chunks, `0 inconclusive`, balanced witness validity, deduplication through X17.
-3. If X19 yields new cuts, validate X20 full rescreen on 44 shards / 11 sectors / exactly 306,450 states and matching sector sums.
-4. If X20 survivors are zero, record rigorous H225 closure and stop this lane.
-5. If X20 survivors remain positive, continue with H225-X21/X22 only from the actual validated X20 packet.
+
+**STOP this H225-X* lane.** It has reached its rigorous terminal criterion. Do not create X21/X22 from the same family. Global lottery research should continue from `STATUS.md` NEXT ACTIONs outside this closed namespace.
