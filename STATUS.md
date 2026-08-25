@@ -1,6 +1,6 @@
 # STATUS
 
-Updated: 2026-08-24
+Updated: 2026-08-25
 Branch: `research-work`
 Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 
@@ -9,18 +9,15 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 
 ## Current checkpoint
 Latest completed numbered lottery packet: **H262 — LOTTO 6/49 terminal Gold Ball takeover screen**.
-Exact-family continuation uses a separate namespace: **H225-X***. See `research/H225_EXACT_STATUS.md`.
+Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EXACT_STATUS.md` and `research/H225_X19_X20_VALIDATION.md`.
 
 ### Exact-family state
 - H232: 306,450 quotient states screened; 306,098 retained a legal shift tuple; 139,869,763 exact legal shift tuples survived.
-- H234: exact balanced counterexamples found for 44/44 sampled H232 survivors.
-- H235 baseline after H234 cuts: **303,802** coefficient states and **90,425,060** legal shift tuples survived.
-- H225-X1: 44/44 sampled H235 survivors broken; **44 new cuts**, 0 inconclusive.
-- H225-X2: complete over all 306,450 states; **295,293** coefficient states and **65,921,861** legal shift tuples survive.
-- H225-X3: 44/44 active X2 chunks broken; **44 new cuts**, 0 inconclusive.
-- H225-X4: complete; **288,176** coefficient states and **50,626,368** legal shift tuples survive.
-- H225-X5: 44/44 active X4 chunks broken; **44 new cuts**, 0 inconclusive.
-- H225-X6: full 44-way / 306,450-state rescreen is **RUNNING**. No result is inferred until its merged output/artifacts are validated.
+- H234/H235 established the cutting-plane baseline at **303,802** coefficient states / **90,425,060** legal shift tuples.
+- H225-X1 through X18 iteratively added exact balanced separator cuts and full 44-way rescans, reducing the family to **3,300 states / 71,392 shift tuples** at X18.
+- H225-X19: only 12 of 44 chunks remained active; all **12/12** returned exact `n3<=2` balanced counterexamples, **0 inconclusive**, yielding **12 new cuts**.
+- **H225-X20:** full exact rescreen over **44 canonical shards / 11 sectors / exactly 306,450 quotient states** left **0 coefficient survivors / 0 legal shift tuples**.
+- Therefore the unchanged H225 general cyclic-affine family is rigorously **exhausted**. Do not create X21/X22 unless the mathematical family itself is broadened.
 
 ### Recent lottery closures / blockers
 - H236 RI Lucky 3 Spot: universal free 2X clears arithmetic threshold, but universal entitlement/execution not established.
@@ -99,19 +96,19 @@ Files:
 - `research/CHECKED_PROJECTS_AND_TESTS_H262_APPEND.md`
 
 ## NEXT ACTION
-1. Validate `data/derived/h225_x6_incremental_exact_rescreen.json` when present. If zero survivors, close H225 rigorously; if positive, trigger H225-X7 over actual X6 survivors and continue cutting-plane generations only while survivors remain.
-2. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
-3. Search terminal/elimination lottery mechanics analogous to H262 **only where the eligible identifier set is hard-capped, player-selectable/reservable, or otherwise monopolizable before cutoff**; H262 shows the economics can cross 100% if execution can be certified.
-4. For finite capped raffles, prioritize only products with unusually high prize-to-minimum-full-issuance-cost ratios or an external deterministic subsidy; H261 closes ordinary hard-cap charity-raffle buyouts at ratios <=52.6122%.
-5. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
-6. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
-7. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
-8. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
-9. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
-10. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-11. Continue lottery-only until SUCCESS or EXHAUSTED.
+1. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
+2. Search terminal/elimination lottery mechanics analogous to H262 **only where the eligible identifier set is hard-capped, player-selectable/reservable, or otherwise monopolizable before cutoff**; H262 shows the economics can cross 100% if execution can be certified.
+3. For finite capped raffles, prioritize only products with unusually high prize-to-minimum-full-issuance-cost ratios or an external deterministic subsidy; H261 closes ordinary hard-cap charity-raffle buyouts at ratios <=52.6122%.
+4. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
+5. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
+6. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
+7. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
+8. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
+9. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+10. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
 Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H262_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
+Exact-family terminal validation: `research/H225_X19_X20_VALIDATION.md`.
