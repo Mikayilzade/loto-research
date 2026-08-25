@@ -1,0 +1,43 @@
+{
+  "packet": "H267",
+  "mechanism": "finite unique ticket-pool full-buyout / accumulated jackpot",
+  "rules_effective_from": "2025-05-18",
+  "products": [
+    {
+      "name": "Lucky Lotteries Super Jackpot",
+      "ticket_pool": 270000,
+      "retail_price": 2.2,
+      "subscription_excluding_commission": 2.0,
+      "retail_full_buyout_cost": 594000.0,
+      "subscription_full_buyout_cost": 540000.0,
+      "cash_prizes": 176050,
+      "cash_consolation": 2000,
+      "free_ticket_equivalent_entries": 8410,
+      "free_ticket_cash_equivalent": 16820.0,
+      "legal_no_jackpot_full_buyout_gross": 194870.0,
+      "retail_floor_return": 0.32806397306397306,
+      "subscription_only_floor_return": 0.3608703703703704,
+      "retail_deficit": 399130.0,
+      "jackpot_not_forced_by_full_buyout": true
+    },
+    {
+      "name": "Lucky Lotteries Mega Jackpot",
+      "ticket_pool": 200000,
+      "retail_price": 5.5,
+      "subscription_excluding_commission": 5.0,
+      "retail_full_buyout_cost": 1100000.0,
+      "subscription_full_buyout_cost": 1000000.0,
+      "cash_prizes": 314725,
+      "cash_consolation": 2000,
+      "free_ticket_equivalent_entries": 8940,
+      "free_ticket_cash_equivalent": 44700.0,
+      "legal_no_jackpot_full_buyout_gross": 361425.0,
+      "retail_floor_return": 0.3285681818181818,
+      "subscription_only_floor_return": 0.361425,
+      "retail_deficit": 738575.0,
+      "jackpot_not_forced_by_full_buyout": true
+    }
+  ],
+  "strict_result": "REJECTED",
+  "reason": "Even impossible ownership of every unique identifier has a legal draw branch where the Jackpot Number is not a cash-prize Winning Number. On that branch the accumulated jackpot is not paid, and guaranteed cash plus cash-equivalent free tickets is far below acquisition cost."
+}
