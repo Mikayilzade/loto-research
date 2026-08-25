@@ -1,0 +1,10 @@
+{
+  "packet": "H225-X11-TRIGGER-V1",
+  "source_run": 32791403782,
+  "source_x10_artifact": 9544543215,
+  "source_x10_digest": "sha256:761189ceb7afb6e8eaa338932dd18c26cadbf92976620b8ed916cd76cef3f343",
+  "x10_states_screened": 306450,
+  "x10_survivor_states": 138871,
+  "x10_survivor_shift_tuples": 8845562,
+  "reason": "Validated X10 remains positive; continue exact cutting-plane family with X11 separators then X12 full rescreen."
+}
