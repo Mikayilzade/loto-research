@@ -1,0 +1,24 @@
+{
+  "packet": "H263",
+  "game": "Spain Loteria Nacional Sorteo Extraordinario de Navidad 2026",
+  "mechanism": "fixed per-number prize schedule; hypothetical one-decimo complete number-space cover within one series",
+  "numbers": 100000,
+  "series": 205,
+  "decimo_price_eur": 20,
+  "full_ticket_price_eur": 200,
+  "prizes_per_series_eur": 14000000,
+  "cover_cost_eur": 2000000,
+  "guaranteed_gross_eur": 1400000,
+  "guaranteed_net_eur": -600000,
+  "gross_return_ratio": 0.7,
+  "gross_return_pct": 70.0,
+  "break_even_subsidy_eur": 600000,
+  "required_discount_on_stake_pct": 30.0,
+  "strict_profit_without_external_subsidy": false,
+  "interpretation": "Complete number-space ownership removes draw risk but inherits the official 70% payout ratio; no strict positive gross is possible from the base prize schedule.",
+  "official_sources": [
+    "https://www.loteriasyapuestas.es/f/loterias/documentos/Loter%C3%ADa%20Nacional/programas%20de%20premios/PROGRAMAS_PREMIOS_CUARTO_TRIMESTRE_2026_SABADOS.pdf",
+    "https://www.loteriasyapuestas.es/f/loterias/documentos/Loter%C3%ADa%20Nacional/Calendarios/CALENDARIO_CUARTO_TRIMESTRE_2026_SABADO.pdf",
+    "https://www.loteriasyapuestas.es/es/centro-de-ayuda/como-se-juega/jugar-a-loteria-de-navidad"
+  ]
+}
