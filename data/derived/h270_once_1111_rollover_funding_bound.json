@@ -1,0 +1,38 @@
+{
+  "packet": "H270",
+  "mechanism": "ONCE 11/11 prior-unsold-prize funding",
+  "rule_date": "2026-05-07",
+  "draw_date": "2026-11-11",
+  "sale_start": "2026-09-21",
+  "price_per_coupon_eur": 6,
+  "max_prior_unsold_funding_eur": 11000000,
+  "key_result": "Prior unsold prize amounts may fund up to EUR 11m of the already-fixed category-1/2 awards; they do not increase the stated prizes.",
+  "additive_external_subsidy_eur": 0,
+  "historical_120_series_screen": {
+    "series": 120,
+    "issued_coupons": 12000000,
+    "acquisition_cost_eur": 72000000,
+    "category_upper_eur": {
+      "cat1": 11000000,
+      "cat2": 11000000,
+      "cat3": 5950000,
+      "cat4": 2618000,
+      "cat5": 1296000,
+      "cat6": 1296000,
+      "cat7": 1296000,
+      "cat8": 6480000
+    },
+    "scheduled_gross_upper_eur": 40936000,
+    "scheduled_gross_upper_return": 0.5685555555555556,
+    "current_emission_funding_if_full_11m_imported_eur": 29936000,
+    "current_emission_funding_ratio_if_full_11m_imported": 0.4157777777777778,
+    "additive_rollover_increment_eur": 0
+  },
+  "status": "CLOSED for additive-rollover subsidy; no guaranteed-profit result",
+  "notes": [
+    "2026 category 1 is fixed at EUR 11m and category 2 at eleven EUR 1m prizes before paragraph 3.4 describes source funding.",
+    "Paragraph 3.4 permits up to EUR 11m of those fixed amounts to come from prior unsold prizes; it does not add EUR 11m on top.",
+    "The 120-series screen calibrates against official 2024/2025 issuance and is not a claim that the 2026 Q4 series count has already been published.",
+    "Collision-free lower-category arithmetic is an upper bound because non-category-1/2 prizes are non-accumulable."
+  ]
+}
