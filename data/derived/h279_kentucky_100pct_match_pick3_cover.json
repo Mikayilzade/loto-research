@@ -1,0 +1,40 @@
+{
+  "packet": "H279",
+  "promotion": "Kentucky Lottery August 2026 100% First-Ever Deposit Match",
+  "promotion_match": 1.0,
+  "promotion_cap": 250.0,
+  "arithmetic_state": "STRICT_POSITIVE_IF_FULL_COVER_PURCHASE_EXECUTES",
+  "global_state": "NOT_YET_CERTIFIED_SUCCESS",
+  "covers": [
+    {
+      "name": "Pick 3 Front Pair full 00-99 cover",
+      "outcomes_covered": 100,
+      "wager_per_selection": 0.5,
+      "cover_cost": 50.0,
+      "required_cash_deposit": 25.0,
+      "bonus": 25.0,
+      "guaranteed_prize_gross": 30.0,
+      "guaranteed_cash_profit_before_tax_fees": 5.0,
+      "gross_over_cash_deposit": 1.2,
+      "profit_over_cash_deposit": 0.2
+    },
+    {
+      "name": "Pick 3 Straight full 000-999 cover",
+      "outcomes_covered": 1000,
+      "wager_per_selection": 0.5,
+      "cover_cost": 500.0,
+      "required_cash_deposit": 250.0,
+      "bonus": 250.0,
+      "guaranteed_prize_gross": 300.0,
+      "guaranteed_cash_profit_before_tax_fees": 50.0,
+      "gross_over_cash_deposit": 1.2,
+      "profit_over_cash_deposit": 0.2
+    }
+  ],
+  "execution_blockers": [
+    "player must satisfy Kentucky iLottery eligibility/location requirements",
+    "Pick 3 rules permit undisclosed prize-liability sales cutoffs",
+    "iLottery terms reserve the right to refuse attempted purchases",
+    "therefore complete same-draw acquisition is not yet a rigorous pre-purchase guarantee"
+  ]
+}
