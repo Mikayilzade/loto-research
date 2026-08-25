@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H267 — Lucky Lotteries finite unique-pool full-buyout bound**.
+Latest completed numbered lottery packet: **H268 — New Zealand Powerball terminal / Must Be Won duplicate bound**.
 Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EXACT_STATUS.md` and `research/H225_X19_X20_VALIDATION.md`.
 
 ### Exact-family state
@@ -49,6 +49,7 @@ Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EX
 - H265 NJ Pick-3 Green Ball: the elimination chamber can make a free second Pick-3 draw deterministic after six white removals, but the strongest portfolio-wide average-return ceiling is exactly **100%** without FIREBALL and **77%** with FIREBALL, so strict guaranteed profit is impossible under the checked rules.
 - H266 Australian Super66: exact one-copy 10^6 identifier cover returns only **47.68146%** from lower fixed tiers; any nonempty portfolio also contains a legal D1 outcome, so terminal no-D1 rolldown cannot be forced.
 - H267 Australian Lucky Lotteries: even impossible-perfect ownership of all unique identifiers leaves a legal no-jackpot branch because the separate Jackpot Number need not coincide with a cash-prize Winning Number; full-buyout floors are only **32.8063973%** Super Jackpot and **32.8568182%** Mega Jackpot at retail cost.
+- H268 NZ Powerball Must Be Won: any nonempty portfolio preserves a legal own-D1 outcome and therefore cannot force the no-D1 rolldown branch; exact full-cover duplicate stress gives legal below-cost states at both the current 10-Powerball matrix and the enacted 14-Powerball matrix from 13 Sep 2026.
 
 ### H260 — DAILY GRAND Bonus Draw exact main-space cover bound
 The official June 18/22, 2026 DAILY GRAND promotion added **three 5/49 Bonus Draws** at no extra cost, each with a C$500,000 lump-sum liability for the winning five-number selection. This is a genuine external subsidy and unlike ordinary DAILY GRAND it can be deterministically hit by covering only the main-number space.
@@ -137,7 +138,7 @@ Files:
 H266 tested the six-digit Super66 space under an impossible-favourable complete identifier cover. Fixed lower-tier prizes return only **47.68146%** of retail acquisition cost. More importantly, any nonempty portfolio contains an identifier that is itself a legal Division-1 draw, so no nonempty portfolio can guarantee the terminal no-D1 rolldown branch in every outcome. Current Lotterywest material also generates digits automatically, so exact player-selectable takeover is not established.
 
 Files:
-- `research/h266_super66_terminal_must_be_won_bound.md`
+- `research/h266_super66_terminal_must_be-won_bound.md`
 - `research/H266_VALIDATION.md`
 - `src/loto_research/h266_super66_terminal_bound.py`
 - `data/derived/h266_super66_terminal_bound.json`
@@ -161,6 +162,31 @@ Files:
 - `data/derived/h267_lucky_lotteries_full_buyout_bound.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H267_APPEND.md`
 
+### H268 — New Zealand Powerball terminal / Must Be Won duplicate bound
+New Zealand Powerball has a real terminal rolldown: when the jackpot cannot roll further (or on a specified date) and Division 1 has no winner, the D1 allocation flows to the next-lowest winning Powerball division. H268 tests whether full outcome coverage can make that mechanism a strict guarantee.
+
+It cannot. Every purchased paired line is itself a legal D1 outcome, so any nonempty portfolio preserves a legal state in which it creates D1 and prevents the no-D1 rolldown. Full coverage guarantees own D1 rather than forcing rolldown.
+
+Exact current-matrix stress:
+- `C(40,6) * 10 = 38,383,800` paired lines;
+- cost **NZ$57,575,700**;
+- at NZ$50m jackpot, a legal state with **18,968 external exact D1 duplicates** leaves only **NZ$10,281,979.96** gross under conservative rules-minimum pool accounting.
+
+Enacted 13-Sep-2026 matrix:
+- `C(40,6) * 14 = 53,737,320` paired lines;
+- cost **NZ$80,605,980**;
+- at NZ$60m jackpot, **23,175 external exact D1 duplicates** leave only **NZ$15,122,347.33** gross.
+
+Thus H268 is closed for ordinary terminal/Must-Be-Won full-cover takeover. Reopen only if top-prize identifiers become hard-capped/reservable, the terminal prize becomes fixed per winning selection, or another deterministic subsidy survives external-duplicate stress.
+
+Files:
+- `research/h268_nz_powerball_terminal_duplicate_bound.md`
+- `research/H268_VALIDATION.md`
+- `research/H268_STATUS.md`
+- `src/loto_research/h268_nz_powerball_terminal_duplicate_bound.py`
+- `data/derived/h268_nz_powerball_terminal_duplicate_bound.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H268_APPEND.md`
+
 ## NEXT ACTION
 1. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
 2. Search terminal/elimination lottery mechanics analogous to H262 **only where the eligible identifier set is hard-capped, player-selectable/reservable, or otherwise monopolizable before cutoff**; H262 shows the economics can cross 100% if execution can be certified.
@@ -176,6 +202,6 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H267_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H268_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
 Exact-family terminal validation: `research/H225_X19_X20_VALIDATION.md`.
