@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H262 — LOTTO 6/49 terminal Gold Ball takeover screen**.
+Latest completed numbered lottery packet: **H265 — New Jersey Pick-3 Green Ball terminal Double Draw bound**.
 Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EXACT_STATUS.md` and `research/H225_X19_X20_VALIDATION.md`.
 
 ### Exact-family state
@@ -45,6 +45,8 @@ Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EX
 - H260 Canada DAILY GRAND Bonus Draw cover: a one-copy `C(49,5)` cover guarantees all three promotional bonus combinations, but even an impossible no-sharing C$1.5m bonus grant plus favorable base-game cash reaches only **68.6750%** of cover cost.
 - H261 Hospital Research Foundation capped raffles: even impossible-perfect ownership of every issued identifier yields only **52.6122%** Home Lottery, **29.7070%** Cash Calendar, and **37.5317%** Holiday for Life at exact cheapest package costs.
 - H262 LOTTO 6/49 terminal Gold Ball: the final one-ball state creates a real C$68m unique-identifier takeover theorem with a Gold-Ball-only strict cost ceiling of **22,666,666 paid plays**, but open computer-generated issuance (including Free Plays) prevents certifying ownership of every eligible identifier.
+- H264 Uganda LOTTO: current v1.6 special jackpot roll-down explicitly excludes fixed payout Divisions 7/8; exact full-cover fixed-tier return is only **18.1221%**.
+- H265 NJ Pick-3 Green Ball: the elimination chamber can make a free second Pick-3 draw deterministic after six white removals, but the strongest portfolio-wide average-return ceiling is exactly **100%** without FIREBALL and **77%** with FIREBALL, so strict guaranteed profit is impossible under the checked rules.
 
 ### H260 — DAILY GRAND Bonus Draw exact main-space cover bound
 The official June 18/22, 2026 DAILY GRAND promotion added **three 5/49 Bonus Draws** at no extra cost, each with a C$500,000 lump-sum liability for the winning five-number selection. This is a genuine external subsidy and unlike ordinary DAILY GRAND it can be deterministically hit by covering only the main-number space.
@@ -95,6 +97,40 @@ Files:
 - `data/derived/h262_lotto649_gold_ball_takeover.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H262_APPEND.md`
 
+### H264 — Uganda LOTTO fixed-tier / roll-down screen
+Current Uganda National Lottery LOTTO rules v1.6 contain two fixed per-winning-entry lower tiers, but the special Division-1 roll-down explicitly excludes fixed payout divisions. Ordinary no-winner funds from Division 6 also roll into next-draw Division 1 rather than into fixed Division 7.
+
+Exact one-copy `C(52,6)` cover arithmetic:
+- 20,358,520 entries at UGX 1,000;
+- total cost **UGX 20,358,520,000**;
+- fixed Match-3 + Match-2+Bonus gross **UGX 3,689,400,000**;
+- fixed-tier return **18.1221424740%**.
+
+Thus H264 is closed for the target fixed-per-selection external-subsidy mechanism under current rules.
+
+Files:
+- `research/H264_VALIDATION.md`
+- `research/h264_uganda_lotto_fixed_tier_rolldown.md`
+- `src/loto_research/h264_uganda_lotto_fixed_tier_rolldown.py`
+- `data/derived/h264_uganda_lotto_fixed_tier_rolldown.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H264_APPEND.md`
+
+### H265 — NJ Pick-3 Green Ball terminal Double Draw bound
+The July 6–August 3, 2026 Green Ball promotion used six white balls and one Green Ball. White balls were removed after selection; therefore after six consecutive white removals the next promotion result is deterministic and the same base Pick-3 wager receives a free second Pick-3 draw.
+
+This is a real terminal/elimination mechanic, but exact current fixed-prize arithmetic closes it globally rather than only for one hand-picked cover. For a $0.50 base wager, Straight and Pair have 50% one-draw average return while 3-Way/6-Way Box have 48%. Two guaranteed base draws therefore cap primitive terminal averages at **100%** and **96%** respectively. Since `minimum legal-outcome gross <= average gross`, no nonnegative portfolio can guarantee gross strictly above cost. Straight/Box and Wheel are nonnegative decompositions and inherit the bound.
+
+Adding FIREBALL does not help: it doubles cost, is excluded from Green Ball second-draw winner determination, and yields at most **77%** terminal average return on Straight/Pair (75% on Box). Instant Match has a legal nonwinning outcome and no positive worst-case floor.
+
+The checked promotion is now over, and even its strongest known-terminal state cannot cross strict break-even. Reopen only on a future material payout/discount/promotion change that pushes the deterministic terminal average strictly above 100%.
+
+Files:
+- `research/h265_nj_pick3_green_ball_terminal_bound.md`
+- `research/H265_VALIDATION.md`
+- `src/loto_research/h265_nj_pick3_green_ball_bound.py`
+- `data/derived/h265_nj_pick3_green_ball_bound.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H265_APPEND.md`
+
 ## NEXT ACTION
 1. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
 2. Search terminal/elimination lottery mechanics analogous to H262 **only where the eligible identifier set is hard-capped, player-selectable/reservable, or otherwise monopolizable before cutoff**; H262 shows the economics can cross 100% if execution can be certified.
@@ -102,13 +138,14 @@ Files:
 4. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
 5. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
 6. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
-7. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
-8. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
-9. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
-10. Continue lottery-only until SUCCESS or EXHAUSTED.
+7. Specifically reopen Green Ball/Double Draw style elimination promotions only if the known-terminal benefit exceeds H265's exact two-draw break-even ceiling: more than one guaranteed extra draw, higher fixed payouts, or a deterministic acquisition discount/subsidy.
+8. Recheck H252 only when final official post-5-Sep Irish 6/45 rules are published or mechanics materially change.
+9. For ordinary scratchers/instant tickets, reopen endgame-buyout only on execution-grade evidence of exact unsold purchasable inventory and prize content/bounds.
+10. Reopen H249/H250 immediately on a current deterministic >50% effective subsidy crossing the exact formula after all fees/acquisition costs.
+11. Continue lottery-only until SUCCESS or EXHAUSTED.
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H262_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H265_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
 Exact-family terminal validation: `research/H225_X19_X20_VALIDATION.md`.
