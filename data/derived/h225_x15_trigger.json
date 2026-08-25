@@ -1,0 +1,11 @@
+{
+  "packet": "H225-X15-TRIGGER-V1",
+  "source_packet": "H225-X14",
+  "source_run": 32801267776,
+  "source_artifact": 9547418136,
+  "source_artifact_digest": "sha256:1707429da6ec71ad08d7bf04e9c2ee7756490a27d7b4dd5142e1fe1cf9c35316",
+  "validated_survivor_states": 76196,
+  "validated_survivor_shift_tuples": 3807980,
+  "expected_universe_states": 306450,
+  "next": "H225-X15 separator, then H225-X16 full exact rescreen if new cuts are found"
+}
