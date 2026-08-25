@@ -23,27 +23,32 @@ Exact Pick 3 constructions:
 
 The arithmetic does not depend on probabilities, jackpot size, sharing, or historical data.
 
-## Why global SUCCESS is not yet claimed
+## Execution follow-up
 
-Complete same-draw acquisition is not yet rigorously guaranteed:
+The live Kentucky Pick 3 online page exposes **Add to cart** and **Buy Now**, with confirmation before charge. This narrows the implementation problem: multi-selection checkout exists in some form and the route is not inherently retail-only.
+
+However, public material still does not prove that a cart containing all 100 Front Pair plays is committed atomically/all-or-none. Complete same-draw acquisition therefore remains unproven because:
 - online play requires Kentucky eligibility and physical location;
 - Pick 3 rules permit an undisclosed prize-liability cutoff that can stop sales;
 - iLottery terms reserve the right to refuse attempted purchases;
-- no atomic/pre-validated bulk mechanism guaranteeing acceptance of all 100 Pair lines (or 1,000 Straight lines) has yet been established.
+- no public rule found guarantees acceptance of every line in a large cart as one indivisible transaction.
 
-A partial cover destroys the deterministic floor, so the project standard requires resolving this execution gate before promoting H279 to SUCCESS.
+The 100-pair route is now the priority because it requires only $50 total wallet and adds a uniform $30 liability to every possible draw result, versus $500/$300 for the Straight route.
+
+A partial cover destroys the deterministic floor, so the project standard still blocks a global SUCCESS claim.
 
 Files:
 - `src/loto_research/h279_kentucky_100pct_match_pick3_cover.py`
 - `data/derived/h279_kentucky_100pct_match_pick3_cover.json`
 - `research/h279_kentucky_100pct_match_pick3_cover.md`
 - `research/H279_VALIDATION.md`
+- `research/H279_EXECUTION_CHECK.md`
 - `research/CHECKED_PROJECTS_AND_TESTS_H279_APPEND.md`
 
 ## NEXT ACTION
 
 Prioritize H279 execution certification while the Aug 1-31, 2026 promotion is live:
-1. determine exact online Pick 3 multi-selection/bulk purchase mechanics and per-ticket/per-transaction limits;
-2. determine whether a complete 100-pair cover can be pre-validated/accepted atomically or whether liability cutoff can interrupt it;
+1. determine exact online Pick 3 cart/play count limits and whether all 100 pair selections can coexist in one checkout;
+2. determine whether checkout is all-or-none under prize-liability controls, or whether individual plays can be rejected/omitted;
 3. if complete acquisition can be guaranteed for an eligible account, promote to rigorous SUCCESS and stop inventing further research;
 4. otherwise close H279 as execution-blocked and continue to another deterministic subsidy >50% or equivalent guaranteed external-value mechanism.
