@@ -1,0 +1,3316 @@
+{
+  "packet": "H225-X9",
+  "source_packet": "H225-X8",
+  "x8_survivor_states": 170893,
+  "x8_survivor_shift_tuples": 12498982,
+  "total_chunks": 44,
+  "active_survivor_chunks": 44,
+  "skipped_zero_survivor_chunks": 0,
+  "counterexamples_found": 44,
+  "inconclusive_active_jobs": 0,
+  "unique_balanced_counterexamples": 44,
+  "genuinely_new_witnesses": 44,
+  "all_selected_active_designs_broken": true,
+  "jobs": [
+    {
+      "packet": "H225-X9",
+      "job": 0,
+      "sector_index": 0,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 811,
+      "x8_chunk_survivor_shift_tuples": 40856,
+      "representative": [
+        1,
+        1
+      ],
+      "coefficients": [
+        0,
+        0,
+        2
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "shifts": [
+        1,
+        7,
+        4
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          6,
+          11,
+          15
+        ],
+        [
+          0,
+          5,
+          6,
+          11
+        ],
+        [
+          5,
+          9,
+          14,
+          15
+        ],
+        [
+          4,
+          9,
+          10,
+          15
+        ],
+        [
+          1,
+          6,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 1,
+      "sector_index": 0,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 858,
+      "x8_chunk_survivor_shift_tuples": 45184,
+      "representative": [
+        1,
+        1
+      ],
+      "coefficients": [
+        1,
+        20,
+        45
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          3
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "shifts": [
+        3,
+        3,
+        2
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          7,
+          8
+        ],
+        [
+          2,
+          5,
+          7,
+          8
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 2,
+      "sector_index": 0,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 744,
+      "x8_chunk_survivor_shift_tuples": 40212,
+      "representative": [
+        1,
+        1
+      ],
+      "coefficients": [
+        2,
+        35,
+        37
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "shifts": [
+        2,
+        7,
+        13
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          1,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          4,
+          14
+        ],
+        [
+          4,
+          5,
+          11,
+          15
+        ],
+        [
+          0,
+          1,
+          6,
+          11
+        ],
+        [
+          3,
+          8,
+          9,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 3,
+      "sector_index": 0,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 869,
+      "x8_chunk_survivor_shift_tuples": 50680,
+      "representative": [
+        1,
+        1
+      ],
+      "coefficients": [
+        10,
+        11,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        4,
+        1,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          6,
+          7,
+          14,
+          15
+        ],
+        [
+          1,
+          3,
+          9,
+          11
+        ],
+        [
+          1,
+          4,
+          9,
+          12
+        ],
+        [
+          3,
+          8,
+          11,
+          14
+        ],
+        [
+          0,
+          3,
+          8,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 4,
+      "sector_index": 1,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 4541,
+      "x8_chunk_survivor_shift_tuples": 469592,
+      "representative": [
+        1,
+        3
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        15,
+        8
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          2,
+          3,
+          4,
+          15
+        ],
+        [
+          9,
+          10,
+          11,
+          12
+        ],
+        [
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          9,
+          10
+        ],
+        [
+          1,
+          2,
+          3,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 5,
+      "sector_index": 1,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 4083,
+      "x8_chunk_survivor_shift_tuples": 355924,
+      "representative": [
+        1,
+        3
+      ],
+      "coefficients": [
+        2,
+        58,
+        60
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          9
+        ]
+      ],
+      "shifts": [
+        2,
+        3,
+        5
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          3,
+          14,
+          15
+        ],
+        [
+          2,
+          5,
+          8,
+          11
+        ],
+        [
+          0,
+          1,
+          3,
+          6
+        ],
+        [
+          0,
+          2,
+          3,
+          15
+        ],
+        [
+          7,
+          10,
+          12,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 6,
+      "sector_index": 1,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 4168,
+      "x8_chunk_survivor_shift_tuples": 348332,
+      "representative": [
+        1,
+        3
+      ],
+      "coefficients": [
+        10,
+        36,
+        40
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "shifts": [
+        3,
+        3,
+        6
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          0,
+          4,
+          8,
+          12
+        ],
+        [
+          0,
+          4,
+          11,
+          12
+        ],
+        [
+          0,
+          4,
+          8,
+          12
+        ],
+        [
+          2,
+          6,
+          10,
+          14
+        ],
+        [
+          0,
+          4,
+          8,
+          12
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 7,
+      "sector_index": 1,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 4496,
+      "x8_chunk_survivor_shift_tuples": 463928,
+      "representative": [
+        1,
+        3
+      ],
+      "coefficients": [
+        16,
+        18,
+        48
+      ],
+      "coefficient_pairs": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          3,
+          6,
+          11,
+          14
+        ],
+        [
+          1,
+          3,
+          9,
+          11
+        ],
+        [
+          4,
+          5,
+          12,
+          13
+        ],
+        [
+          4,
+          5,
+          12,
+          13
+        ],
+        [
+          4,
+          6,
+          13,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 8,
+      "sector_index": 2,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3265,
+      "x8_chunk_survivor_shift_tuples": 202760,
+      "representative": [
+        1,
+        5
+      ],
+      "coefficients": [
+        0,
+        0,
+        2
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "shifts": [
+        1,
+        3,
+        2
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          6,
+          9,
+          14
+        ],
+        [
+          1,
+          7,
+          9,
+          15
+        ],
+        [
+          4,
+          7,
+          12,
+          15
+        ],
+        [
+          2,
+          10,
+          12,
+          13
+        ],
+        [
+          4,
+          7,
+          12,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 9,
+      "sector_index": 2,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3220,
+      "x8_chunk_survivor_shift_tuples": 242328,
+      "representative": [
+        1,
+        5
+      ],
+      "coefficients": [
+        2,
+        58,
+        60
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          9
+        ]
+      ],
+      "shifts": [
+        8,
+        3,
+        13
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          4,
+          5,
+          13,
+          14
+        ],
+        [
+          1,
+          4,
+          11,
+          12
+        ],
+        [
+          6,
+          7,
+          14,
+          15
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          4,
+          6,
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 10,
+      "sector_index": 2,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3542,
+      "x8_chunk_survivor_shift_tuples": 230430,
+      "representative": [
+        1,
+        5
+      ],
+      "coefficients": [
+        10,
+        36,
+        40
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "shifts": [
+        1,
+        6,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          4,
+          7,
+          12,
+          15
+        ],
+        [
+          3,
+          6,
+          11,
+          14
+        ],
+        [
+          1,
+          7,
+          9,
+          15
+        ],
+        [
+          0,
+          5,
+          8,
+          13
+        ],
+        [
+          2,
+          5,
+          8,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 11,
+      "sector_index": 2,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3238,
+      "x8_chunk_survivor_shift_tuples": 214292,
+      "representative": [
+        1,
+        5
+      ],
+      "coefficients": [
+        16,
+        18,
+        48
+      ],
+      "coefficient_pairs": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          6,
+          7,
+          14,
+          15
+        ],
+        [
+          4,
+          6,
+          12,
+          14
+        ],
+        [
+          4,
+          7,
+          12,
+          15
+        ],
+        [
+          1,
+          5,
+          9,
+          13
+        ],
+        [
+          2,
+          6,
+          10,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 12,
+      "sector_index": 3,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3688,
+      "x8_chunk_survivor_shift_tuples": 262400,
+      "representative": [
+        1,
+        7
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        7,
+        4
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          6,
+          9,
+          11,
+          14
+        ],
+        [
+          0,
+          5,
+          8,
+          13
+        ],
+        [
+          0,
+          3,
+          6,
+          11
+        ],
+        [
+          0,
+          2,
+          5,
+          10
+        ],
+        [
+          1,
+          4,
+          12,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 13,
+      "sector_index": 3,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3203,
+      "x8_chunk_survivor_shift_tuples": 199676,
+      "representative": [
+        1,
+        7
+      ],
+      "coefficients": [
+        2,
+        58,
+        60
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          9
+        ]
+      ],
+      "shifts": [
+        2,
+        7,
+        12
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          5,
+          7,
+          14
+        ],
+        [
+          1,
+          2,
+          11,
+          12
+        ],
+        [
+          2,
+          4,
+          11,
+          13
+        ],
+        [
+          0,
+          5,
+          7,
+          14
+        ],
+        [
+          6,
+          8,
+          10,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 14,
+      "sector_index": 3,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3377,
+      "x8_chunk_survivor_shift_tuples": 209468,
+      "representative": [
+        1,
+        7
+      ],
+      "coefficients": [
+        10,
+        36,
+        40
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "shifts": [
+        2,
+        3,
+        0
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          0,
+          5,
+          8,
+          13
+        ],
+        [
+          0,
+          3,
+          8,
+          11
+        ],
+        [
+          4,
+          5,
+          12,
+          13
+        ],
+        [
+          1,
+          2,
+          9,
+          10
+        ],
+        [
+          0,
+          3,
+          8,
+          12
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 15,
+      "sector_index": 3,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3514,
+      "x8_chunk_survivor_shift_tuples": 254524,
+      "representative": [
+        1,
+        7
+      ],
+      "coefficients": [
+        16,
+        18,
+        48
+      ],
+      "coefficient_pairs": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          3,
+          6,
+          9
+        ],
+        [
+          1,
+          3,
+          9,
+          11
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          0,
+          3,
+          5,
+          8
+        ],
+        [
+          2,
+          5,
+          10,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 16,
+      "sector_index": 4,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2452,
+      "x8_chunk_survivor_shift_tuples": 128020,
+      "representative": [
+        1,
+        9
+      ],
+      "coefficients": [
+        0,
+        0,
+        2
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "shifts": [
+        1,
+        7,
+        4
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          5,
+          6,
+          12,
+          13
+        ],
+        [
+          3,
+          5,
+          11,
+          13
+        ],
+        [
+          4,
+          5,
+          12,
+          13
+        ],
+        [
+          5,
+          6,
+          13,
+          14
+        ],
+        [
+          5,
+          13,
+          14,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 17,
+      "sector_index": 4,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2342,
+      "x8_chunk_survivor_shift_tuples": 137624,
+      "representative": [
+        1,
+        9
+      ],
+      "coefficients": [
+        2,
+        59,
+        59
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          7
+        ],
+        [
+          15,
+          7
+        ]
+      ],
+      "shifts": [
+        4,
+        1,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          1,
+          4,
+          11,
+          14
+        ],
+        [
+          4,
+          6,
+          9,
+          11
+        ],
+        [
+          1,
+          4,
+          11,
+          14
+        ],
+        [
+          5,
+          7,
+          10,
+          13
+        ],
+        [
+          4,
+          7,
+          13,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 18,
+      "sector_index": 4,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2445,
+      "x8_chunk_survivor_shift_tuples": 129856,
+      "representative": [
+        1,
+        9
+      ],
+      "coefficients": [
+        10,
+        36,
+        46
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          11,
+          13
+        ]
+      ],
+      "shifts": [
+        1,
+        0,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          4,
+          9,
+          12
+        ],
+        [
+          1,
+          4,
+          9,
+          14
+        ],
+        [
+          3,
+          4,
+          12,
+          14
+        ],
+        [
+          1,
+          3,
+          8,
+          14
+        ],
+        [
+          0,
+          3,
+          8,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 19,
+      "sector_index": 4,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2747,
+      "x8_chunk_survivor_shift_tuples": 143660,
+      "representative": [
+        1,
+        9
+      ],
+      "coefficients": [
+        16,
+        18,
+        48
+      ],
+      "coefficient_pairs": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          1,
+          2,
+          8
+        ],
+        [
+          0,
+          8,
+          10,
+          15
+        ],
+        [
+          2,
+          8,
+          10,
+          13
+        ],
+        [
+          0,
+          2,
+          3,
+          11
+        ],
+        [
+          6,
+          7,
+          9,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 20,
+      "sector_index": 5,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3674,
+      "x8_chunk_survivor_shift_tuples": 257120,
+      "representative": [
+        1,
+        15
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        7,
+        4
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          2,
+          11,
+          14
+        ],
+        [
+          7,
+          8,
+          11,
+          14
+        ],
+        [
+          1,
+          2,
+          5,
+          8
+        ],
+        [
+          0,
+          3,
+          6,
+          13
+        ],
+        [
+          0,
+          9,
+          12,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 21,
+      "sector_index": 5,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3176,
+      "x8_chunk_survivor_shift_tuples": 196040,
+      "representative": [
+        1,
+        15
+      ],
+      "coefficients": [
+        2,
+        58,
+        63
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          15
+        ]
+      ],
+      "shifts": [
+        6,
+        0,
+        1
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          5,
+          9,
+          13,
+          14
+        ],
+        [
+          0,
+          4,
+          8,
+          9
+        ],
+        [
+          2,
+          5,
+          13,
+          14
+        ],
+        [
+          1,
+          5,
+          10,
+          13
+        ],
+        [
+          0,
+          5,
+          9,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 22,
+      "sector_index": 5,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3342,
+      "x8_chunk_survivor_shift_tuples": 206560,
+      "representative": [
+        1,
+        15
+      ],
+      "coefficients": [
+        10,
+        36,
+        40
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          11,
+          1
+        ]
+      ],
+      "shifts": [
+        2,
+        3,
+        0
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          4,
+          5,
+          12,
+          13
+        ],
+        [
+          1,
+          2,
+          9,
+          10
+        ],
+        [
+          4,
+          7,
+          12,
+          15
+        ],
+        [
+          0,
+          5,
+          8,
+          13
+        ],
+        [
+          0,
+          8,
+          11,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 23,
+      "sector_index": 5,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3499,
+      "x8_chunk_survivor_shift_tuples": 249880,
+      "representative": [
+        1,
+        15
+      ],
+      "coefficients": [
+        16,
+        18,
+        48
+      ],
+      "coefficient_pairs": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          13,
+          1
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          9,
+          12,
+          13,
+          14
+        ],
+        [
+          0,
+          9,
+          14,
+          15
+        ],
+        [
+          3,
+          4,
+          8,
+          9
+        ],
+        [
+          1,
+          6,
+          11,
+          12
+        ],
+        [
+          1,
+          6,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 24,
+      "sector_index": 6,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 5503,
+      "x8_chunk_survivor_shift_tuples": 362972,
+      "representative": [
+        3,
+        5
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        7,
+        0
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          6,
+          7,
+          14,
+          15
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          6,
+          13,
+          14,
+          15
+        ],
+        [
+          0,
+          5,
+          7,
+          15
+        ],
+        [
+          0,
+          1,
+          8,
+          10
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 25,
+      "sector_index": 6,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6424,
+      "x8_chunk_survivor_shift_tuples": 528104,
+      "representative": [
+        3,
+        5
+      ],
+      "coefficients": [
+        5,
+        50,
+        55
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          11
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          2,
+          9,
+          11,
+          14
+        ],
+        [
+          0,
+          3,
+          4,
+          6
+        ],
+        [
+          0,
+          1,
+          5,
+          11
+        ],
+        [
+          8,
+          10,
+          12,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 26,
+      "sector_index": 6,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6636,
+      "x8_chunk_survivor_shift_tuples": 533008,
+      "representative": [
+        3,
+        5
+      ],
+      "coefficients": [
+        13,
+        25,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          11
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        3,
+        8
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          3,
+          6,
+          11,
+          14
+        ],
+        [
+          0,
+          1,
+          8,
+          9
+        ],
+        [
+          4,
+          7,
+          12,
+          15
+        ],
+        [
+          3,
+          5,
+          11,
+          13
+        ],
+        [
+          0,
+          3,
+          11,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 27,
+      "sector_index": 6,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 5903,
+      "x8_chunk_survivor_shift_tuples": 406746,
+      "representative": [
+        3,
+        5
+      ],
+      "coefficients": [
+        24,
+        25,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        2,
+        1,
+        15
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          3,
+          4,
+          5
+        ],
+        [
+          5,
+          7,
+          11,
+          14
+        ],
+        [
+          1,
+          6,
+          8,
+          15
+        ],
+        [
+          5,
+          8,
+          10,
+          14
+        ],
+        [
+          5,
+          8,
+          10,
+          12
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 28,
+      "sector_index": 7,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2376,
+      "x8_chunk_survivor_shift_tuples": 143412,
+      "representative": [
+        3,
+        9
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        15,
+        0
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          0,
+          10,
+          11,
+          14
+        ],
+        [
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          2,
+          4,
+          7,
+          9
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 29,
+      "sector_index": 7,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2497,
+      "x8_chunk_survivor_shift_tuples": 154112,
+      "representative": [
+        3,
+        9
+      ],
+      "coefficients": [
+        2,
+        59,
+        59
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          7
+        ],
+        [
+          15,
+          7
+        ]
+      ],
+      "shifts": [
+        0,
+        1,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          6,
+          7,
+          14,
+          15
+        ],
+        [
+          2,
+          3,
+          10,
+          11
+        ],
+        [
+          3,
+          4,
+          10,
+          11
+        ],
+        [
+          5,
+          6,
+          13,
+          14
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 30,
+      "sector_index": 7,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 2858,
+      "x8_chunk_survivor_shift_tuples": 198908,
+      "representative": [
+        3,
+        9
+      ],
+      "coefficients": [
+        6,
+        36,
+        38
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          13
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          13
+        ]
+      ],
+      "shifts": [
+        1,
+        0,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          2,
+          5,
+          10,
+          13
+        ],
+        [
+          0,
+          1,
+          8,
+          9
+        ],
+        [
+          4,
+          7,
+          9,
+          12
+        ],
+        [
+          5,
+          9,
+          12,
+          13
+        ],
+        [
+          7,
+          10,
+          11,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 31,
+      "sector_index": 7,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3051,
+      "x8_chunk_survivor_shift_tuples": 196192,
+      "representative": [
+        3,
+        9
+      ],
+      "coefficients": [
+        12,
+        30,
+        53
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          9
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          13,
+          11
+        ]
+      ],
+      "shifts": [
+        1,
+        3,
+        4
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          4,
+          5,
+          10,
+          12
+        ],
+        [
+          1,
+          2,
+          9,
+          10
+        ],
+        [
+          2,
+          5,
+          10,
+          13
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          2,
+          7,
+          10,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 32,
+      "sector_index": 8,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 5628,
+      "x8_chunk_survivor_shift_tuples": 383152,
+      "representative": [
+        3,
+        13
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        7,
+        8
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          7,
+          10,
+          13
+        ],
+        [
+          1,
+          2,
+          11,
+          14
+        ],
+        [
+          1,
+          4,
+          7,
+          13
+        ],
+        [
+          3,
+          5,
+          6,
+          8
+        ],
+        [
+          1,
+          11,
+          13,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 33,
+      "sector_index": 8,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6549,
+      "x8_chunk_survivor_shift_tuples": 546282,
+      "representative": [
+        3,
+        13
+      ],
+      "coefficients": [
+        5,
+        50,
+        55
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          11
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          3,
+          6,
+          11,
+          14
+        ],
+        [
+          1,
+          3,
+          4,
+          9
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          0,
+          2,
+          8,
+          10
+        ],
+        [
+          0,
+          2,
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 34,
+      "sector_index": 8,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6789,
+      "x8_chunk_survivor_shift_tuples": 558544,
+      "representative": [
+        3,
+        13
+      ],
+      "coefficients": [
+        13,
+        25,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          11
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        3,
+        8
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          3,
+          5,
+          6,
+          11
+        ],
+        [
+          3,
+          5,
+          11,
+          12
+        ],
+        [
+          0,
+          2,
+          8,
+          13
+        ],
+        [
+          4,
+          5,
+          10,
+          13
+        ],
+        [
+          0,
+          3,
+          8,
+          11
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 35,
+      "sector_index": 8,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6080,
+      "x8_chunk_survivor_shift_tuples": 424732,
+      "representative": [
+        3,
+        13
+      ],
+      "coefficients": [
+        24,
+        25,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        2,
+        1,
+        15
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          3,
+          10,
+          12,
+          14
+        ],
+        [
+          1,
+          2,
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          12,
+          14
+        ],
+        [
+          5,
+          9,
+          10,
+          11
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 36,
+      "sector_index": 9,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3709,
+      "x8_chunk_survivor_shift_tuples": 285852,
+      "representative": [
+        5,
+        9
+      ],
+      "coefficients": [
+        0,
+        0,
+        1
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "shifts": [
+        1,
+        15,
+        8
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          0,
+          1,
+          2,
+          15
+        ],
+        [
+          1,
+          12,
+          13,
+          14
+        ],
+        [
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          5,
+          6,
+          7,
+          9
+        ],
+        [
+          1,
+          5,
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 37,
+      "sector_index": 9,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 3663,
+      "x8_chunk_survivor_shift_tuples": 270372,
+      "representative": [
+        5,
+        9
+      ],
+      "coefficients": [
+        2,
+        58,
+        60
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          9
+        ]
+      ],
+      "shifts": [
+        4,
+        1,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 1,
+      "witness": [
+        [
+          0,
+          13,
+          14,
+          15
+        ],
+        [
+          6,
+          8,
+          11,
+          15
+        ],
+        [
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          2,
+          5,
+          6,
+          8
+        ],
+        [
+          0,
+          2,
+          4,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 38,
+      "sector_index": 9,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 4159,
+      "x8_chunk_survivor_shift_tuples": 346210,
+      "representative": [
+        5,
+        9
+      ],
+      "coefficients": [
+        6,
+        36,
+        37
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          13
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "shifts": [
+        3,
+        0,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          5,
+          6,
+          7,
+          13
+        ],
+        [
+          1,
+          3,
+          9,
+          11
+        ],
+        [
+          3,
+          4,
+          11,
+          12
+        ],
+        [
+          4,
+          5,
+          13,
+          15
+        ],
+        [
+          4,
+          5,
+          12,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 39,
+      "sector_index": 9,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 4160,
+      "x8_chunk_survivor_shift_tuples": 334752,
+      "representative": [
+        5,
+        9
+      ],
+      "coefficients": [
+        12,
+        30,
+        53
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          9
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          13,
+          11
+        ]
+      ],
+      "shifts": [
+        1,
+        3,
+        4
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          0,
+          6,
+          8,
+          14
+        ],
+        [
+          0,
+          3,
+          8,
+          11
+        ],
+        [
+          0,
+          7,
+          8,
+          15
+        ],
+        [
+          1,
+          6,
+          9,
+          14
+        ],
+        [
+          2,
+          7,
+          10,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 40,
+      "sector_index": 10,
+      "chunk_index": 0,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 5081,
+      "x8_chunk_survivor_shift_tuples": 331658,
+      "representative": [
+        7,
+        9
+      ],
+      "coefficients": [
+        0,
+        0,
+        2
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "shifts": [
+        1,
+        3,
+        2
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          4,
+          9,
+          12
+        ],
+        [
+          1,
+          3,
+          9,
+          11
+        ],
+        [
+          1,
+          7,
+          9,
+          12
+        ],
+        [
+          0,
+          3,
+          8,
+          14
+        ],
+        [
+          0,
+          2,
+          8,
+          13
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 41,
+      "sector_index": 10,
+      "chunk_index": 1,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6335,
+      "x8_chunk_survivor_shift_tuples": 524288,
+      "representative": [
+        7,
+        9
+      ],
+      "coefficients": [
+        5,
+        50,
+        55
+      ],
+      "coefficient_pairs": [
+        [
+          1,
+          11
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          15
+        ]
+      ],
+      "shifts": [
+        1,
+        4,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          2,
+          5,
+          6
+        ],
+        [
+          5,
+          8,
+          9,
+          11
+        ],
+        [
+          0,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          5,
+          7
+        ],
+        [
+          12,
+          13,
+          14,
+          15
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 42,
+      "sector_index": 10,
+      "chunk_index": 2,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 6710,
+      "x8_chunk_survivor_shift_tuples": 521148,
+      "representative": [
+        7,
+        9
+      ],
+      "coefficients": [
+        13,
+        25,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          3,
+          11
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        4,
+        1,
+        7
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 0,
+      "witness": [
+        [
+          2,
+          4,
+          10,
+          12
+        ],
+        [
+          0,
+          1,
+          8,
+          9
+        ],
+        [
+          1,
+          4,
+          9,
+          12
+        ],
+        [
+          1,
+          7,
+          9,
+          15
+        ],
+        [
+          4,
+          6,
+          12,
+          14
+        ]
+      ]
+    },
+    {
+      "packet": "H225-X9",
+      "job": 43,
+      "sector_index": 10,
+      "chunk_index": 3,
+      "skipped_no_survivor": false,
+      "x8_chunk_survivor_states": 5488,
+      "x8_chunk_survivor_shift_tuples": 369192,
+      "representative": [
+        7,
+        9
+      ],
+      "coefficients": [
+        24,
+        25,
+        25
+      ],
+      "coefficient_pairs": [
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          3
+        ]
+      ],
+      "shifts": [
+        4,
+        1,
+        3
+      ],
+      "triples": 1536,
+      "separator_status": 0,
+      "separator_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "counterexample_found": true,
+      "conclusive_for_selected_design": true,
+      "n3": 2,
+      "witness": [
+        [
+          1,
+          8,
+          10,
+          12
+        ],
+        [
+          0,
+          10,
+          11,
+          15
+        ],
+        [
+          0,
+          13,
+          14,
+          15
+        ],
+        [
+          1,
+          3,
+          4,
+          6
+        ],
+        [
+          7,
+          9,
+          10,
+          12
+        ]
+      ]
+    }
+  ]
+}
