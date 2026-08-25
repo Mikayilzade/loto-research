@@ -1,0 +1,11 @@
+{
+  "packet": "H225-X19-TRIGGER",
+  "source_packet": "H225-X18",
+  "source_run": 32809156175,
+  "source_artifact": 9550091411,
+  "source_artifact_sha256": "147b9b9a5e7ee1dc43ed9c37db84cd85edc7caaee7acbbe381923e4214207892",
+  "source_survivor_states": 3300,
+  "source_survivor_shift_tuples": 71392,
+  "expected_quotient_states": 306450,
+  "action": "Run X19 exact separators, require zero inconclusive; if new cuts exist, run full X20 rescreen."
+}
