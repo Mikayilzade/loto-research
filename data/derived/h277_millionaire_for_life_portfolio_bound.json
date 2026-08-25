@@ -1,0 +1,43 @@
+{
+  "packet": "H277",
+  "game": "Millionaire for Life",
+  "matrix": {
+    "white_choose": 5,
+    "white_from": 58,
+    "millionaire_ball_from": 5
+  },
+  "price_per_play_usd": 5,
+  "outcome_space": 22910580,
+  "full_cover_cost_usd": 114552900,
+  "dominating_no_sharing_full_cover_gross_usd": 60584320,
+  "dominating_return_ratio": 0.5288763531957724,
+  "dominating_return_percent": 52.88763531957724,
+  "deficit_usd": 53968580,
+  "multiplicities": {
+    "0+MB": 2869685,
+    "0+noMB": 11478740,
+    "1+MB": 1464125,
+    "1+noMB": 5856500,
+    "2+MB": 234260,
+    "2+noMB": 937040,
+    "3+MB": 13780,
+    "3+noMB": 55120,
+    "4+MB": 265,
+    "4+noMB": 1060,
+    "5+MB": 1,
+    "5+noMB": 4
+  },
+  "gross_contributions_usd": {
+    "5+MB": 18000000,
+    "5+noMB": 8800000,
+    "4+MB": 1987500,
+    "4+noMB": 530000,
+    "3+MB": 3445000,
+    "3+noMB": 2756000,
+    "2+MB": 5856500,
+    "2+noMB": 7496320,
+    "1+MB": 11713000
+  },
+  "payout_assumption": "Player-favourable dominating model: use published $18m and $2.2m top-two cash options as if fixed and undiluted. Official rules permit pari-mutuel reduction, so actual worst-case cannot exceed this model.",
+  "proof": "By draw symmetry every single play has the same average gross under the dominating payout table. Any nonnegative portfolio has the same gross/cost average ratio. Since minimum legal-draw gross is at most average gross and average gross is below cost, no such portfolio can guarantee strict profit."
+}
