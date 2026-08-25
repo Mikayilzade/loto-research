@@ -1,0 +1,43 @@
+{
+  "packet": "H278",
+  "checked_on": "2026-08-26",
+  "promotion": {
+    "name": "Georgia Lottery iHOPE 50% first-deposit bonus",
+    "deposit_min_usd": 10,
+    "bonus_rate": 0.5,
+    "bonus_cap_usd": 125,
+    "max_matched_deposit_usd": 250,
+    "max_restricted_playing_balance_usd": 375,
+    "strict_profit_wager_return_hurdle": 0.6666666666666666,
+    "restriction": "Both deposited and bonus funds may be used only to purchase lottery games and may not be withdrawn."
+  },
+  "georgia_five": {
+    "full_cover_cost_usd": 100000,
+    "full_cover_gross_usd": 53650,
+    "cover_return_ratio": 0.5365,
+    "ratio_vs_cash_deposit_after_50pct_bonus": 0.80475
+  },
+  "cash_pop": {
+    "construction": "all 15 numbers for one draw at one wager level",
+    "minimum_assigned_prize_multiple_of_wager": 5,
+    "exact_worst_case_cover_return_ratio": 0.3333333333333333,
+    "ratio_vs_cash_deposit_after_50pct_bonus": 0.5
+  },
+  "keno": [
+    {"spot":1,"base_gross":40,"base_cost":80,"base_ratio":0.5,"base_vs_deposit":0.75,"bullseye_gross":88,"bullseye_cost":160,"bullseye_ratio":0.55,"bullseye_vs_deposit":0.825},
+    {"spot":2,"base_gross":1900,"base_cost":3160,"base_ratio":0.6012658227848101,"base_vs_deposit":0.9018987341772151,"bullseye_gross":3845,"bullseye_cost":6320,"bullseye_ratio":0.6083860759493671,"bullseye_vs_deposit":0.9125791139240507},
+    {"spot":3,"base_gross":51300,"base_cost":82160,"base_ratio":0.6243914313534566,"base_vs_deposit":0.936587147030185,"bullseye_gross":103080,"bullseye_cost":164320,"bullseye_ratio":0.6273125608568647,"bullseye_vs_deposit":0.940968841285297},
+    {"spot":4,"base_gross":1017450,"base_cost":1581580,"base_ratio":0.6433123838187129,"base_vs_deposit":0.9649685757280694,"bullseye_gross":2035000,"bullseye_cost":3163160,"bullseye_ratio":0.6433439977743776,"bullseye_vs_deposit":0.9650159966615663},
+    {"spot":5,"base_gross":15179100,"base_cost":24040016,"base_ratio":0.6314097295109954,"base_vs_deposit":0.9471145942664931,"bullseye_gross":30209905,"bullseye_cost":48080032,"bullseye_ratio":0.6283253929614689,"bullseye_vs_deposit":0.9424880894422034},
+    {"spot":6,"base_gross":192064350,"base_cost":300500200,"base_ratio":0.6391488258576866,"base_vs_deposit":0.9587232387865299,"bullseye_gross":381140475,"bullseye_cost":601000400,"bullseye_ratio":0.6341767409805384,"bullseye_vs_deposit":0.9512651114708077},
+    {"spot":7,"base_gross":2065702800,"base_cost":3176716400,"base_ratio":0.6502635236812452,"base_vs_deposit":0.9753952855218677,"bullseye_gross":4055599856,"bullseye_cost":6353432800,"bullseye_ratio":0.6383320613700361,"bullseye_vs_deposit":0.9574980920550541},
+    {"spot":8,"base_gross":18761341950,"base_cost":28987537150,"base_ratio":0.6472209713062843,"base_vs_deposit":0.9708314569594265,"bullseye_gross":36948864254,"bullseye_cost":57975074300,"bullseye_ratio":0.6373232755649957,"bullseye_vs_deposit":0.9559849133474936},
+    {"spot":9,"base_gross":145716630840,"base_cost":231900297200,"base_ratio":0.6283589654666472,"base_vs_deposit":0.9425384481999708,"bullseye_gross":290413808757,"bullseye_cost":463800594400,"bullseye_ratio":0.6261609240339516,"bullseye_vs_deposit":0.9392413860509274},
+    {"spot":10,"base_gross":1048311797926,"base_cost":1646492110120,"base_ratio":0.6366940913246142,"base_vs_deposit":0.9550411369869213,"bullseye_gross":2080472952056,"bullseye_cost":3292984220240,"bullseye_ratio":0.6317895297732008,"bullseye_vs_deposit":0.9476842946598012}
+  ],
+  "best_checked_keno_base": {"spot":7,"wager_return_ratio":0.6502635236812452,"ratio_vs_cash_deposit_after_bonus":0.9753952855218677},
+  "best_checked_keno_bullseye": {"spot":4,"wager_return_ratio":0.6433439977743776,"ratio_vs_cash_deposit_after_bonus":0.9650159966615663},
+  "multiplier": "Does not improve a strict guarantee: it doubles base ticket cost and the official draw has a legal None multiplier branch.",
+  "result": "REJECTED for the checked exact-cover routes: none crosses the >2/3 deterministic wager-return hurdle needed to turn the 50% restricted deposit match into strict positive cash profit.",
+  "scope_note": "This does not claim every Georgia Lottery product is globally exhausted; it closes the compact exact-cover Cash Pop, Georgia FIVE, and base/BULLS-EYE KENO routes under the current promotion."
+}
