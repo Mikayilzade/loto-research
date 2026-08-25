@@ -1,0 +1,27 @@
+{
+  "packet": "H276",
+  "game": "UK National Lottery Thunderball",
+  "matrix": {"main": "5/39", "thunderball": "1/14"},
+  "line_price_gbp": 1,
+  "draw_universe": 8060598,
+  "one_copy_full_cover_cost_gbp": 8060598,
+  "one_copy_full_cover_gross_gbp": 4262568,
+  "fixed_return_ratio": 0.5288153558830251,
+  "fixed_return_percent": 52.88153558830251,
+  "deficit_gbp": 3798030,
+  "portfolio_theorem": "Every allowed line has the same average gross over the complete draw universe. Any nonnegative portfolio therefore has average gross/cost equal to this ratio, hence at least one legal draw has gross no greater than the average; because the ratio is <1, strict guaranteed profit is impossible for every nonnegative portfolio under the checked fixed paytable.",
+  "tiers": [
+    {"main_matches":5,"thunderball_match":true,"ticket_count":1,"prize_gbp":500000,"full_cover_gross_gbp":500000},
+    {"main_matches":5,"thunderball_match":false,"ticket_count":13,"prize_gbp":5000,"full_cover_gross_gbp":65000},
+    {"main_matches":4,"thunderball_match":true,"ticket_count":170,"prize_gbp":250,"full_cover_gross_gbp":42500},
+    {"main_matches":4,"thunderball_match":false,"ticket_count":2210,"prize_gbp":100,"full_cover_gross_gbp":221000},
+    {"main_matches":3,"thunderball_match":true,"ticket_count":5610,"prize_gbp":20,"full_cover_gross_gbp":112200},
+    {"main_matches":3,"thunderball_match":false,"ticket_count":72930,"prize_gbp":10,"full_cover_gross_gbp":729300},
+    {"main_matches":2,"thunderball_match":true,"ticket_count":59840,"prize_gbp":10,"full_cover_gross_gbp":598400},
+    {"main_matches":2,"thunderball_match":false,"ticket_count":777920,"prize_gbp":0,"full_cover_gross_gbp":0},
+    {"main_matches":1,"thunderball_match":true,"ticket_count":231880,"prize_gbp":5,"full_cover_gross_gbp":1159400},
+    {"main_matches":1,"thunderball_match":false,"ticket_count":3014440,"prize_gbp":0,"full_cover_gross_gbp":0},
+    {"main_matches":0,"thunderball_match":true,"ticket_count":278256,"prize_gbp":3,"full_cover_gross_gbp":834768},
+    {"main_matches":0,"thunderball_match":false,"ticket_count":3617328,"prize_gbp":0,"full_cover_gross_gbp":0}
+  ]
+}
