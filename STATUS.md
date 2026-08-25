@@ -8,7 +8,7 @@ Scope: **LOTTERY ONLY**. Ignore historical non-lottery automation drift.
 **NO SUCCESS; NOT EXHAUSTED**.
 
 ## Current checkpoint
-Latest completed numbered lottery packet: **H265 — New Jersey Pick-3 Green Ball terminal Double Draw bound**.
+Latest completed numbered lottery packet: **H267 — Lucky Lotteries finite unique-pool full-buyout bound**.
 Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EXACT_STATUS.md` and `research/H225_X19_X20_VALIDATION.md`.
 
 ### Exact-family state
@@ -47,6 +47,8 @@ Exact-family lane `H225-X*` is now **CLOSED / EXHAUSTED**. See `research/H225_EX
 - H262 LOTTO 6/49 terminal Gold Ball: the final one-ball state creates a real C$68m unique-identifier takeover theorem with a Gold-Ball-only strict cost ceiling of **22,666,666 paid plays**, but open computer-generated issuance (including Free Plays) prevents certifying ownership of every eligible identifier.
 - H264 Uganda LOTTO: current v1.6 special jackpot roll-down explicitly excludes fixed payout Divisions 7/8; exact full-cover fixed-tier return is only **18.1221%**.
 - H265 NJ Pick-3 Green Ball: the elimination chamber can make a free second Pick-3 draw deterministic after six white removals, but the strongest portfolio-wide average-return ceiling is exactly **100%** without FIREBALL and **77%** with FIREBALL, so strict guaranteed profit is impossible under the checked rules.
+- H266 Australian Super66: exact one-copy 10^6 identifier cover returns only **47.68146%** from lower fixed tiers; any nonempty portfolio also contains a legal D1 outcome, so terminal no-D1 rolldown cannot be forced.
+- H267 Australian Lucky Lotteries: even impossible-perfect ownership of all unique identifiers leaves a legal no-jackpot branch because the separate Jackpot Number need not coincide with a cash-prize Winning Number; full-buyout floors are only **32.8063973%** Super Jackpot and **32.8568182%** Mega Jackpot at retail cost.
 
 ### H260 — DAILY GRAND Bonus Draw exact main-space cover bound
 The official June 18/22, 2026 DAILY GRAND promotion added **three 5/49 Bonus Draws** at no extra cost, each with a C$500,000 lump-sum liability for the winning five-number selection. This is a genuine external subsidy and unlike ordinary DAILY GRAND it can be deterministically hit by covering only the main-number space.
@@ -131,11 +133,39 @@ Files:
 - `data/derived/h265_nj_pick3_green_ball_bound.json`
 - `research/CHECKED_PROJECTS_AND_TESTS_H265_APPEND.md`
 
+### H266 — Australian Super66 terminal / must-be-won bound
+H266 tested the six-digit Super66 space under an impossible-favourable complete identifier cover. Fixed lower-tier prizes return only **47.68146%** of retail acquisition cost. More importantly, any nonempty portfolio contains an identifier that is itself a legal Division-1 draw, so no nonempty portfolio can guarantee the terminal no-D1 rolldown branch in every outcome. Current Lotterywest material also generates digits automatically, so exact player-selectable takeover is not established.
+
+Files:
+- `research/h266_super66_terminal_must_be_won_bound.md`
+- `research/H266_VALIDATION.md`
+- `src/loto_research/h266_super66_terminal_bound.py`
+- `data/derived/h266_super66_terminal_bound.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H266_APPEND.md`
+
+### H267 — Lucky Lotteries finite unique-pool full-buyout bound
+Lucky Lotteries Super Jackpot and Mega Jackpot have hard finite sequential ticket pools, duplicate cancellation, sellout-triggered draws, guaranteed prize schedules, and accumulated jackpot reserves. H267 deliberately granted impossible-perfect ownership of every identifier.
+
+The jackpot still cannot be forced: after the cash-prize Winning Numbers are selected, a separate Jackpot Number is drawn, and the Jackpot Prize is paid only if that number coincides with a cash-prize Winning Number. A legal non-coincidence branch therefore remains even under total ownership.
+
+Exact full-buyout floors on that branch, valuing all free-ticket consolation prizes at their rules-defined cash equivalent, are:
+- Super Jackpot: **A$194,870 / A$594,000 = 32.8063973%**;
+- Mega Jackpot: **A$361,425 / A$1,100,000 = 32.8568182%**.
+
+Thus H267 is closed for strict guaranteed-profit takeover despite unusually favorable finite-pool structure.
+
+Files:
+- `research/h267_lucky_lotteries_full_buyout_bound.md`
+- `research/H267_VALIDATION.md`
+- `src/loto_research/h267_lucky_lotteries_full_buyout_bound.py`
+- `data/derived/h267_lucky_lotteries_full_buyout_bound.json`
+- `research/CHECKED_PROJECTS_AND_TESTS_H267_APPEND.md`
+
 ## NEXT ACTION
 1. Search current forced-distribution/rolldown mechanics where externally accumulated money is paid as **fixed per-winning-selection** lower-tier prizes rather than shareable pools.
 2. Search terminal/elimination lottery mechanics analogous to H262 **only where the eligible identifier set is hard-capped, player-selectable/reservable, or otherwise monopolizable before cutoff**; H262 shows the economics can cross 100% if execution can be certified.
 3. For finite capped raffles, prioritize only products with unusually high prize-to-minimum-full-issuance-cost ratios or an external deterministic subsidy; H261 closes ordinary hard-cap charity-raffle buyouts at ratios <=52.6122%.
-4. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost.
+4. Search finite lottery identifiers/ticket pools where all eligible identifiers are player-selectable/reservable and total guaranteed cash exceeds complete acquisition cost. H267 adds an extra gate: full ownership must itself force any accumulated jackpot or external reserve payment.
 5. For bonus-draw promotions, prioritize cases where maximum deterministic external subsidy divided by exact-cover cost materially exceeds H260's DAILY GRAND ratio.
 6. Prioritize deterministic current payout boosts above exact coverage hurdles; random ticket-level Doubler/Tripler tags remain non-guaranteed because a legal no-tag branch exists.
 7. Specifically reopen Green Ball/Double Draw style elimination promotions only if the known-terminal benefit exceeds H265's exact two-draw break-even ceiling: more than one guaranteed extra draw, higher fixed payouts, or a deterministic acquisition discount/subsidy.
@@ -146,6 +176,6 @@ Files:
 
 ## Audit trail
 Master ledger: `research/CHECKED_PROJECTS_AND_TESTS.md`.
-Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H265_APPEND.md`.
+Latest numbered lottery append: `research/CHECKED_PROJECTS_AND_TESTS_H267_APPEND.md`.
 Exact-family ledger: `research/H225_EXACT_STATUS.md`.
 Exact-family terminal validation: `research/H225_X19_X20_VALIDATION.md`.
