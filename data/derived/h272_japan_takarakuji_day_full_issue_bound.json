@@ -1,0 +1,26 @@
+{
+  "packet": "H272",
+  "game": "Japan Takarakuji Day commemorative lottery, draw 1118",
+  "ticket_price_jpy": 200,
+  "units": 2,
+  "tickets_per_unit": 10000000,
+  "full_issue_tickets": 20000000,
+  "full_issue_cost_jpy": 4000000000,
+  "published_prize_components_jpy": {
+    "first": 300000000,
+    "first_adjacent": 100000000,
+    "first_different_group": 19800000,
+    "second": 200000000,
+    "third": 100000000,
+    "fourth": 200000000,
+    "fifth": 400000000,
+    "sixth": 400000000,
+    "special": 180000000
+  },
+  "published_prize_total_jpy": 1899800000,
+  "full_issue_return_ratio": 0.47495,
+  "full_issue_return_percent": 47.495,
+  "full_issue_deficit_jpy": 2100200000,
+  "strict_guaranteed_profit_possible_under_perfect_full_ownership": false,
+  "interpretation": "Even impossible-perfect ownership of every issued ticket returns only the complete published prize pool, which is below acquisition cost. Real execution constraints can only weaken this bound."
+}
