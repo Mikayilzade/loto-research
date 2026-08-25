@@ -1,0 +1,9 @@
+{
+  "packet": "H225-X13-TRIGGER",
+  "source_run": 32796246076,
+  "source_artifact": 9545748723,
+  "source_packet": "H225-X12",
+  "validated_x12_survivor_states": 110487,
+  "validated_x12_surviving_shift_tuples": 6180594,
+  "reason": "X12 remains positive after full 44-shard / 306450-state validation; continue exact cutting-plane generation."
+}
