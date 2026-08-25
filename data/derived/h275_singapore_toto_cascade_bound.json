@@ -1,0 +1,29 @@
+{
+  "packet": "H275",
+  "game": "Singapore Pools TOTO",
+  "main_space": 13983816,
+  "ordinary_entry_cost_sgd": 1,
+  "one_copy_full_cover_cost_sgd": 13983816,
+  "winning_line_counts_for_any_draw": {
+    "group1_6": 1,
+    "group2_5_plus_additional": 6,
+    "group3_5": 252,
+    "group4_4_plus_additional": 630,
+    "group5_4": 12915,
+    "group6_3_plus_additional": 17220,
+    "group7_3": 229600
+  },
+  "fixed_prizes_sgd": {
+    "group5_4": 50,
+    "group6_3_plus_additional": 25,
+    "group7_3": 10
+  },
+  "fixed_lower_tier_gross_sgd": 3372250,
+  "fixed_lower_tier_return_fraction": 0.2411537737624694,
+  "fixed_lower_tier_return_percent": 24.11537737624694,
+  "fixed_lower_tier_deficit_sgd": 10611566,
+  "cascade_force_gate": false,
+  "full_cover_cascade_gate": false,
+  "duplicate_stress_gate": false,
+  "verdict": "REJECTED for strict guaranteed-profit cascade/full-cover takeover under checked current rules"
+}
