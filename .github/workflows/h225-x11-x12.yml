@@ -1,0 +1,147 @@
+name: H225 X11-X12 exact continuation
+on:
+  push:
+    branches: [research-work]
+    paths:
+      - 'data/derived/h225_x11_trigger.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: h225-x11-x12-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  x11_separate:
+    strategy:
+      fail-fast: false
+      matrix:
+        job: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43]
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x10-merged
+          path: x10_payload
+          github-token: ${{ github.token }}
+          run-id: 32791403782
+      - run: cp x10_payload/h225_x10_incremental_exact_rescreen.json data/derived/h225_x10_incremental_exact_rescreen.json
+      - run: PYTHONPATH=src python -m loto_research.h225_x11_survivor_separation --job ${{ matrix.job }} --time-limit 180
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x11-j${{ matrix.job }}
+          path: data/derived/h225_x11_separator_shards/job_*.json
+          if-no-files-found: error
+
+  x11_merge:
+    needs: x11_separate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      newcuts: ${{ steps.stats.outputs.newcuts }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x10-merged
+          path: x10_payload
+          github-token: ${{ github.token }}
+          run-id: 32791403782
+      - run: cp x10_payload/h225_x10_incremental_exact_rescreen.json data/derived/h225_x10_incremental_exact_rescreen.json
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x11-j*
+          path: x11_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h225_x11_survivor_separation --merge-dir x11_download
+      - id: stats
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          d=json.load(open('data/derived/h225_x11_survivor_separation.json')); w=json.load(open('data/derived/h225_x11_new_witnesses.json'))
+          assert d['packet']=='H225-X11' and d['total_chunks']==44
+          assert d['inconclusive_active_jobs']==0
+          assert d['counterexamples_found']==d['active_survivor_chunks']
+          assert w['packet']=='H225-X11' and len(w['witnesses'])==w['witness_count']
+          print('newcuts='+str(int(w['witness_count'])))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x11-merged
+          path: |
+            data/derived/h225_x11_survivor_separation.json
+            data/derived/h225_x11_new_witnesses.json
+          if-no-files-found: error
+
+  x12_rescreen:
+    needs: x11_merge
+    if: needs.x11_merge.outputs.newcuts != '0'
+    strategy:
+      fail-fast: false
+      matrix:
+        sector: [0,1,2,3,4,5,6,7,8,9,10]
+        chunk: [0,1,2,3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x11-merged
+          path: x11_payload
+      - run: cp x11_payload/h225_x11_new_witnesses.json data/derived/h225_x11_new_witnesses.json
+      - run: PYTHONPATH=src python -m loto_research.h225_x12_incremental_rescreen --sector ${{ matrix.sector }} --chunk ${{ matrix.chunk }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x12-s${{ matrix.sector }}-c${{ matrix.chunk }}
+          path: data/derived/h225_x12_chunk_shards/sector_*_chunk_*.json
+          if-no-files-found: error
+
+  x12_merge:
+    needs: [x11_merge,x12_rescreen]
+    if: needs.x11_merge.outputs.newcuts != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install numpy scipy
+      - uses: actions/download-artifact@v4
+        with:
+          name: h225-x11-merged
+          path: x11_payload
+      - run: cp x11_payload/h225_x11_new_witnesses.json data/derived/h225_x11_new_witnesses.json
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: h225-x12-s*-c*
+          path: x12_download
+          merge-multiple: false
+      - run: PYTHONPATH=src python -m loto_research.h225_x12_incremental_rescreen --merge-dir x12_download
+      - name: Validate X12 totals
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('data/derived/h225_x12_incremental_exact_rescreen.json'))
+          assert d['packet']=='H225-X12' and d['chunk_shards']==44 and d['quotient_coefficient_states_screened']==306450
+          assert len(d['sectors'])==11 and sum(len(s['chunks']) for s in d['sectors'])==44
+          assert sum(s['quotient_coefficient_states'] for s in d['sectors'])==306450
+          assert sum(s['exact_shift_surviving_coefficient_states'] for s in d['sectors'])==d['exact_shift_surviving_coefficient_states']
+          assert sum(s['exact_surviving_shift_tuples'] for s in d['sectors'])==d['exact_surviving_shift_tuples']
+          print('H225_X12_RESULT',d['exact_shift_surviving_coefficient_states'],d['exact_surviving_shift_tuples'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: h225-x12-merged
+          path: data/derived/h225_x12_incremental_exact_rescreen.json
+          if-no-files-found: error
