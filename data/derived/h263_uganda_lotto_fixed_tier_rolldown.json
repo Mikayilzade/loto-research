@@ -1,0 +1,29 @@
+{
+  "packet": "H263",
+  "game": "Uganda National Lottery LOTTO",
+  "rules_version": "1.6",
+  "matrix": "6/52 + bonus",
+  "entry_price_ugx": 1000,
+  "participant_daily_wager_cap_ugx": 500000,
+  "full_cover_entries": 20358520,
+  "full_cover_cost_ugx": 20358520000,
+  "exact_category_counts_under_one_copy_full_cover": {
+    "match6": 1,
+    "match5_bonus": 6,
+    "match5": 270,
+    "match4_bonus": 675,
+    "match4": 14850,
+    "match3_bonus": 19800,
+    "match3": 283800,
+    "match2_bonus": 212850
+  },
+  "fixed_tiers": {
+    "division_7_match3_ugx": 10000,
+    "division_8_match2_bonus_ugx": 4000
+  },
+  "fixed_tier_full_cover_gross_ugx": 3689400000,
+  "fixed_tier_return_ratio": 0.1812214247401088,
+  "special_roll_down_reaches_fixed_tiers": false,
+  "reason": "Rules 7.2 and 7.3 explicitly exclude fixed payout divisions from the special Division-1 roll-down. Ordinary Division-6 no-winner funds roll to next draw Division 1 rather than Division 7.",
+  "status": "REJECTED_AS_FIXED_PER_SELECTION_EXTERNAL_SUBSIDY_MECHANISM"
+}
