@@ -1,0 +1,16 @@
+{
+  "packet": "H285",
+  "mechanism": "Hoosier Lottery noncash free-ticket coupon",
+  "coupon_cash_redeemable": false,
+  "single_use": true,
+  "per_person_limit": 1,
+  "checked_example": {
+    "game": "JUMBO BUCKS Fast Play",
+    "ticket_price_usd": 1.0,
+    "overall_win_odds_denominator": 3.69,
+    "legal_nonwinning_outcome_exists": true
+  },
+  "guaranteed_withdrawable_cash_usd": 0.0,
+  "strict_positive_cash_floor": false,
+  "status": "CLOSED_REJECTED_FOR_STRICT_GUARANTEE"
+}
