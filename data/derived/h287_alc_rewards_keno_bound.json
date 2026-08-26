@@ -1,0 +1,32 @@
+{
+  "packet": "H287",
+  "mechanism": "Atlantic Lottery AL Rewards Promo Cash applied to KENO Atlantic fixed-pay selections",
+  "keno_universe": {
+    "numbers": 70,
+    "drawn": 20,
+    "spots_checked": [2, 3, 4, 5, 6, 7, 8, 9, 10]
+  },
+  "rewards_player_favourable_upper_bound": {
+    "points_per_cash_dollar": 6,
+    "points_per_1_dollar_promo_cash": 1000,
+    "extra_playable_balance_fraction": 0.006,
+    "total_playable_factor": 1.006,
+    "promo_cash_spend_earns_points": false
+  },
+  "rows": [
+    {"spot": 2, "base_average_percent": 55.07246376811594, "rewards_upper_bound_percent": 55.40289855072463, "exact_base_fraction": "38/69"},
+    {"spot": 3, "base_average_percent": 52.06430398246255, "rewards_upper_bound_percent": 52.37668980635732, "exact_base_fraction": "1425/2737"},
+    {"spot": 4, "base_average_percent": 52.06430398246255, "rewards_upper_bound_percent": 52.37668980635732, "exact_base_fraction": "1425/2737"},
+    {"spot": 5, "base_average_percent": 52.04075612901051, "rewards_upper_bound_percent": 52.35300066578458, "exact_base_fraction": "61750/118657"},
+    {"spot": 6, "base_average_percent": 53.39566338917410, "rewards_upper_bound_percent": 53.71603736950914, "exact_base_fraction": "823650/1542541"},
+    {"spot": 7, "base_average_percent": 56.42110971442574, "rewards_upper_bound_percent": 56.75963637271230, "exact_base_fraction": "497325/881452"},
+    {"spot": 8, "base_average_percent": 53.03846056604006, "rewards_upper_bound_percent": 53.35669132943630, "exact_base_fraction": "818140/1542541"},
+    {"spot": 9, "base_average_percent": 54.02186099680395, "rewards_upper_bound_percent": 54.34599216278477, "exact_base_fraction": "3690370/6831253"},
+    {"spot": 10, "base_average_percent": 56.01225415292050, "rewards_upper_bound_percent": 56.34832767783803, "exact_base_fraction": "7935826655/14168018722"}
+  ],
+  "best_spot": 7,
+  "best_base_average_percent": 56.42110971442574,
+  "best_rewards_upper_bound_percent": 56.75963637271230,
+  "strict_profit_possible_under_checked_additive_class": false,
+  "proof": "For each symmetric fixed-pay selection class, minimum legal-outcome gross is no greater than average gross. Any nonnegative mixture is bounded by the maximum class average. Even granting the player-favourable 6 points per cash dollar and spending all Promo Cash, the maximum remains below cash cost."
+}
