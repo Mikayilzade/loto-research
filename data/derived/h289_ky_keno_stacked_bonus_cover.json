@@ -1,0 +1,36 @@
+{
+  "packet": "H289",
+  "status": "CONDITIONAL_POSITIVE_MATH__NOT_RIGOROUS_SUCCESS",
+  "h225_lane": "CLOSED_EXHAUSTED",
+  "spot1": {
+    "plays": 80,
+    "cost": 80,
+    "guaranteed_winners": 20,
+    "prize_each": 2,
+    "guaranteed_gross": 40,
+    "cash_deposit": 30,
+    "first_deposit_match": 30,
+    "referral_bonus": 20,
+    "playable_funds": 80,
+    "conditional_profit_vs_cash_deposit": 10
+  },
+  "spot2_clique_certificate": {
+    "group_sizes": [14, 14, 13, 13, 13, 13],
+    "plays": 494,
+    "cost": 494,
+    "guaranteed_matching_pairs": 24,
+    "prize_each": 11,
+    "guaranteed_gross": 264,
+    "cash_deposit": 237,
+    "first_deposit_match": 237,
+    "referral_bonus": 20,
+    "playable_funds": 494,
+    "conditional_profit_vs_cash_deposit": 27
+  },
+  "math_positive_if_stacking_and_acceptance": true,
+  "rigorous_success": false,
+  "open_gates": [
+    "Official August 2026 material does not explicitly prove that the Refer-A-Friend bonus stacks with the 100% first-deposit match.",
+    "Kentucky iLottery Terms reserve the right to refuse attempted purchases and to limit wagers on particular number sets without notice, so complete same-draw cover acquisition is not guaranteed."
+  ]
+}
