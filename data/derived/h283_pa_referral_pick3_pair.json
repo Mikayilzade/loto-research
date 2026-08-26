@@ -1,0 +1,19 @@
+{
+  "packet": "H283",
+  "mechanism": "PA iLottery Refer-A-Friend $100 Bonus Money + PICK 3 Front Pair exact cover",
+  "external_cash_deposit": 10.0,
+  "bonus_money": 100.0,
+  "starting_wallet": 110.0,
+  "pair_count": 100,
+  "pair_stake": 1.0,
+  "cover_cost": 100.0,
+  "pair_prize": 50.0,
+  "guaranteed_cash_prize_if_full_cover_accepted": 50.0,
+  "cash_profit_vs_external_deposit_if_full_cover_accepted": 40.0,
+  "cash_gross_multiple_vs_deposit": 5.0,
+  "profit_roi_vs_deposit": 4.0,
+  "single_pick3_ticket_max": 100.0,
+  "conditional_theorem": "If an eligible referred new player receives the current $100 Bonus Money after a $10 first deposit, and PA iLottery accepts all 100 $1 Front Pair selections 00-99 for one PICK 3 draw, exactly one pair matches and pays $50 cash, yielding $40 gross cash profit versus the $10 external deposit.",
+  "rigorous_success_claimed": false,
+  "remaining_gate": "Official public evidence does not yet establish that the online system can atomically accept the complete 100-selection Pair cover in one transaction without partial acceptance, system limits, or a promotion-specific execution block."
+}
