@@ -1,0 +1,37 @@
+{
+  "packet": "H296",
+  "state": "CLOSED / NO SUCCESS",
+  "all_impossible_favourable_bounds_below_break_even": true,
+  "candidates": [
+    {
+      "name": "USA Luge 2026 tractor raffle",
+      "currency": "USD",
+      "acquisition_cost": 50000,
+      "favourable_liability": 25900,
+      "return_ratio": 0.518,
+      "return_percent": 51.8,
+      "deficit": 24100,
+      "notes": "500-ticket hard cap; favourable current dealer cash valuation."
+    },
+    {
+      "name": "ECHO 2026 Mercedes raffle",
+      "currency": "USD",
+      "acquisition_cost": 100000,
+      "favourable_liability": 50000,
+      "return_ratio": 0.5,
+      "return_percent": 50.0,
+      "deficit": 50000,
+      "notes": "Explicit $50,000 cash alternative; sub-900 fallback is 50/50."
+    },
+    {
+      "name": "Mater Prize Home No.327",
+      "currency": "AUD",
+      "acquisition_cost": 13455147,
+      "favourable_liability": 5592059,
+      "return_ratio": 0.4156074251734299,
+      "return_percent": 41.56074251734299,
+      "deficit": 7863088,
+      "notes": "Impossible-favourable minimum ticket count multiplied by minimum unit price; prize side includes main prize, maximum book-buyer bonus, all published VIP prizes and an extra A$5k early-bird amount."
+    }
+  ]
+}
