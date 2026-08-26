@@ -1,0 +1,50 @@
+{
+  "packet": "H298",
+  "checked_date": "2026-08-27",
+  "model": "impossible-favorable full ownership of every issued ticket/entry; count all published cash liabilities; ignore taxes, fees, already-sold tickets, eligibility and acquisition friction",
+  "results": {
+    "chelsea_fire_liberty_street_2026": {
+      "currency": "USD",
+      "ticket_cap": 250,
+      "ticket_price": 100,
+      "full_acquisition_cost": 25000,
+      "published_cash_liabilities": 20000,
+      "gross_ratio": 0.8,
+      "deficit": 5000,
+      "note": "The five USD 100 early-bird prizes were already scheduled for 2026-08-01; counting them anyway is player-favorable and raises the bound."
+    },
+    "pacc_st_jude_2026": {
+      "currency": "USD",
+      "ticket_cap": 500,
+      "ticket_price": 10,
+      "full_acquisition_cost": 5000,
+      "published_cash_liabilities": 3000,
+      "gross_ratio": 0.6,
+      "deficit": 2000
+    },
+    "tour_de_cure_100_club_2026": {
+      "currency": "AUD",
+      "ticket_cap": 100,
+      "packages": [[1,50],[3,120],[6,210]],
+      "exact_cheapest_full_acquisition_cost": 3530,
+      "optimal_package_counts": {"6_for_210": 16, "3_for_120": 1, "1_for_50": 1},
+      "published_cash_liabilities": 1500,
+      "gross_ratio": 0.42492917847025496,
+      "deficit": 2030
+    },
+    "henley_great_white_2026": {
+      "currency": "AUD",
+      "ticket_cap": 500,
+      "ticket_price": 100,
+      "full_acquisition_cost": 50000,
+      "published_cash_liabilities": 10000,
+      "cash_only_gross_ratio": 0.2,
+      "cash_only_deficit": 40000,
+      "note": "Ticket also includes food/drinks; H298 screens guaranteed cash liability only and does not assign resale/cash value to consumption benefits."
+    }
+  },
+  "best_cash_ratio": 0.8,
+  "best_candidate": "chelsea_fire_liberty_street_2026",
+  "terminal_for_checked_candidates": true,
+  "global_state": "NO SUCCESS; NOT EXHAUSTED"
+}
