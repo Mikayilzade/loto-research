@@ -1,0 +1,22 @@
+{
+  "packet": "H295",
+  "checked_date": "2026-08-26",
+  "shopping_spree": {
+    "ticket_cap": 500,
+    "ticket_price_usd": 50,
+    "full_takeover_cost_usd": 25000,
+    "advertised_prize_usd": 10000,
+    "impossible_perfect_full_takeover_gross_ratio": 0.4,
+    "state": "CLOSED_ARITHMETIC"
+  },
+  "mercedes": {
+    "ticket_price_usd": 10,
+    "advertised_msrp_usd": 50605,
+    "published_ticket_cap_found": false,
+    "strict_positive_full_takeover_max_entries_before_tax_or_resale": 5060,
+    "cash_alternative_published": false,
+    "winner_tax_liability_disclosed": true,
+    "state": "CLOSED_FOR_RIGOROUS_GUARANTEE_DATA_EXECUTION_BLOCKED"
+  },
+  "global_result": "NO_SUCCESS_NOT_EXHAUSTED"
+}
