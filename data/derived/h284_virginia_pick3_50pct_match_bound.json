@@ -1,0 +1,25 @@
+{
+  "packet": "H284",
+  "game": "Virginia Pick 3",
+  "checked_date": "2026-08-26",
+  "assumed_deposit_match": 0.5,
+  "base_average_gross_ratios": {
+    "exact": 0.5,
+    "pair": 0.5,
+    "any_order_3way": 0.48,
+    "any_order_6way": 0.48,
+    "fifty_fifty_3way": 0.49,
+    "fifty_fifty_6way": 0.49,
+    "combo_3way": 0.5,
+    "combo_6way": 0.5
+  },
+  "best_base_average_gross_ratio": 0.5,
+  "best_base_cash_recovery_per_deposit": 0.75,
+  "fireball_generous_addon_ratio_ceiling": 0.57,
+  "best_generous_blended_average_gross_ratio": 0.535,
+  "best_generous_blended_cash_recovery_per_deposit": 0.8025,
+  "strict_profit_possible_under_tested_additive_class": false,
+  "terminal_for_packet": true,
+  "global_terminal": false,
+  "interpretation": "Even granting a deterministic 50% playable-balance subsidy in full, the symmetric fixed-pay Pick 3 additive class cannot guarantee cash profit because minimum outcome gross cannot exceed average gross. Base primitives cap at 50% average gross, hence 75% of cash deposit after the match. A deliberately favorable 57% FIREBALL add-on ceiling still leaves an equal-stake blend below 80.25% cash recovery."
+}
