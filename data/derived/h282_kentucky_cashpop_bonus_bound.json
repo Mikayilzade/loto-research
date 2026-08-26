@@ -1,0 +1,32 @@
+{
+  "packet": "H282",
+  "game": "Kentucky CASH POP",
+  "promotion": "August 2026 First Ever Deposit 100 Percent Match",
+  "promotion_period": "2026-08-01 through 2026-08-31 ET",
+  "cash_pop_numbers": 15,
+  "allowed_wagers_usd": [1, 2, 5, 10],
+  "minimum_prizes_usd": [5, 10, 25, 50],
+  "minimum_prize_multiple": 5,
+  "portfolio_worst_case_wallet_return_fraction": "1/3",
+  "portfolio_worst_case_wallet_return_pct": 33.333333333333336,
+  "first_deposit_match_pct": 100,
+  "first_deposit_match_cap_usd": 250,
+  "first_deposit_only_cash_recovery_ceiling_fraction": "2/3",
+  "first_deposit_only_cash_recovery_ceiling_pct": 66.66666666666667,
+  "favorable_tiki_stack": {
+    "assumption": "Deliberately grant both the 100% first-deposit match and current $50 Tiki Tuesday bonus on a $150 deposit, regardless of combinability.",
+    "cash_deposit_usd": 150,
+    "playable_wallet_usd": 350,
+    "strict_prize_floor_upper_bound_usd": 116.66666666666667,
+    "cash_recovery_ceiling_pct": 77.77777777777779
+  },
+  "favorable_summer_friday_stack": {
+    "assumption": "Deliberately grant both the 100% first-deposit match and 25% Friday deposit match.",
+    "playable_wallet_per_cash_deposit": 2.25,
+    "cash_recovery_ceiling_pct": 75.0
+  },
+  "withdrawal_model": "Deposits and Bonuses are nonwithdrawable; online prize winnings are tracked separately and may be withdrawn subject to Kentucky Lottery Terms.",
+  "proof": "Any guaranteed-positive single-draw portfolio must cover all 15 numbers. In the legal minimum-prize assignment branch, outcome i pays 5*s_i where s_i is total stake on number i. Since min(s_i) <= total_stake/15, worst-case gross <= total_stake/3. The inequality adds over multi-draw portfolios.",
+  "strict_guaranteed_profit": false,
+  "state": "CLOSED / NO STRICT GUARANTEED-PROFIT FLOOR FOR CASH POP UNDER CHECKED AUGUST 2026 DEPOSIT BONUSES"
+}
