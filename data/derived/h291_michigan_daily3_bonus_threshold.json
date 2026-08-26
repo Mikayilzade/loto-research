@@ -1,0 +1,40 @@
+{
+  "packet": "H291",
+  "game": "Michigan Daily 3",
+  "construction": "all 1000 Straight outcomes at $0.50",
+  "cover_lines": 1000,
+  "cover_cost": 500.0,
+  "guaranteed_gross": 250.0,
+  "base_floor_ratio": 0.5,
+  "strict_match_threshold": ">100%",
+  "examples": {
+    "10_percent": {
+      "match_fraction": 0.1,
+      "cash_required": 454.54545454545456,
+      "guaranteed_gross": 250.0,
+      "cash_profit_floor": -204.54545454545453,
+      "cash_recovery_ratio": 0.55
+    },
+    "40_percent": {
+      "match_fraction": 0.4,
+      "cash_required": 357.14285714285717,
+      "guaranteed_gross": 250.0,
+      "cash_profit_floor": -107.14285714285717,
+      "cash_recovery_ratio": 0.7
+    },
+    "100_percent": {
+      "match_fraction": 1.0,
+      "cash_required": 250.0,
+      "guaranteed_gross": 250.0,
+      "cash_profit_floor": 0.0,
+      "cash_recovery_ratio": 1.0
+    },
+    "101_percent": {
+      "match_fraction": 1.01,
+      "cash_required": 248.75621890547265,
+      "guaranteed_gross": 250.0,
+      "cash_profit_floor": 1.2437810945273632,
+      "cash_recovery_ratio": 1.005
+    }
+  }
+}
