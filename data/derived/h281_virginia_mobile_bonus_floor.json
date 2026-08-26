@@ -1,0 +1,30 @@
+{
+  "packet": "H281",
+  "game": "Virginia Pick 3 Pair + current first-mobile-cashing bonus",
+  "pair_cover": [
+    {
+      "stake_per_pair": 0.5,
+      "selections": 100,
+      "cover_cost": 50.0,
+      "guaranteed_prize": 25.0,
+      "gross_return_ratio": 0.5,
+      "bonus_credit_required_for_break_even": 25.0,
+      "bonus_credit_required_for_strict_profit": "> 25.00"
+    },
+    {
+      "stake_per_pair": 1.0,
+      "selections": 100,
+      "cover_cost": 100.0,
+      "guaranteed_prize": 50.0,
+      "gross_return_ratio": 0.5,
+      "bonus_credit_required_for_break_even": 50.0,
+      "bonus_credit_required_for_strict_profit": "> 50.00"
+    }
+  ],
+  "current_mobile_cashing_bonus_games": 10,
+  "bonus_game": "Jackpot Spectacular",
+  "bonus_game_published_odds_any_prize": "1 in 3.99",
+  "bonus_game_positive_guaranteed_cash_floor": 0.0,
+  "reason": "Jackpot Spectacular has non-winning outcomes; ten uncontrolled free random games therefore do not create a strictly positive worst-case cash floor.",
+  "verdict": "CLOSED for strict guaranteed-profit use of the checked Virginia bonus mechanics"
+}
