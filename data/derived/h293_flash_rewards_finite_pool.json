@@ -1,0 +1,47 @@
+{
+  "packet": "H293",
+  "title": "Flash Rewards finite-pool full-acquisition screen",
+  "checked_date": "2026-08-26",
+  "draws": {
+    "flight_centre_5000": {
+      "entries": 2000,
+      "packages": [[1,10],[4,34],[8,60]],
+      "min_exact_full_acquisition_cost_aud": 15000,
+      "player_prize_value_aud": 5000,
+      "cash_alternative_aud": 4000,
+      "retail_value_return": 0.3333333333333333,
+      "cash_return": 0.26666666666666666
+    },
+    "dji_osmo_769": {
+      "entries": 500,
+      "packages": [[1,5],[5,22],[10,40]],
+      "min_exact_full_acquisition_cost_aud": 2000,
+      "player_prize_value_aud": 769,
+      "cash_alternative_aud": 600,
+      "retail_value_return": 0.3845,
+      "cash_return": 0.3
+    },
+    "apple_watch_airpods_618": {
+      "entries": 1000,
+      "packages": [[1,1],[8,7],[19,15]],
+      "min_exact_full_acquisition_cost_aud": 791,
+      "player_prize_value_aud": 618,
+      "cash_alternative_aud": 500,
+      "retail_value_return": 0.7812895069532237,
+      "cash_return": 0.6321112515802781
+    },
+    "airpods_219": {
+      "entries": 90,
+      "packages": [[1,5],[3,13],[6,24]],
+      "min_exact_full_acquisition_cost_aud": 360,
+      "player_prize_value_aud": 219,
+      "cash_alternative_aud": 150,
+      "retail_value_return": 0.6083333333333333,
+      "cash_return": 0.4166666666666667
+    }
+  },
+  "best_player_value_case": "apple_watch_airpods_618",
+  "best_player_value_return": 0.7812895069532237,
+  "terminal_result": "REJECTED",
+  "reason": "Even impossible-perfect ownership of every issued entry is below cost for all four current finite draws; terms also reserve discretion not to accept a particular entry or to cancel a promotion."
+}
