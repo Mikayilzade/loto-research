@@ -1,0 +1,22 @@
+{
+  "packet": "H286",
+  "mechanism": "Michigan Lottery Daily Spin to Win guaranteed-reward cash-floor audit",
+  "every_spin_wins_a_prize": true,
+  "prize_classes": {
+    "in_store_free_play": {
+      "guaranteed_withdrawable_cash_floor": 0.0,
+      "reason": "noncash free-play coupon"
+    },
+    "online_free_play_or_bonus": {
+      "guaranteed_withdrawable_cash_floor": 0.0,
+      "reason": "not guaranteed Bonus Cash; free-play/bonus value requires play"
+    },
+    "monthly_giveaway_entry": {
+      "guaranteed_withdrawable_cash_floor": 0.0,
+      "reason": "legal later drawing outcome in which entry is not selected"
+    }
+  },
+  "strict_withdrawable_cash_floor_per_spin": 0.0,
+  "strict_positive_cash_floor": false,
+  "conclusion": "CLOSED / REJECTED for strict guaranteed-profit use"
+}
