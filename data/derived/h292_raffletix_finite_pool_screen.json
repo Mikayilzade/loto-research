@@ -1,0 +1,15 @@
+{
+  "packet": "H292",
+  "checked_on": "2026-08-26",
+  "model": "impossible-perfect full identifier takeover at cheapest published bundle rate",
+  "best_return_name": "Waves & Wheels",
+  "best_return_percent": 77.1189744,
+  "all_below_break_even": true,
+  "raffles": [
+    {"name":"Waves & Wheels","tickets":125000,"bundle_tickets":100,"bundle_cost":500.0,"prize_pool":481993.59,"perfect_full_buyout_cost":625000.0,"return_percent":77.1189744,"deficit":143006.41},
+    {"name":"The 6e Gold Rush","tickets":65000,"bundle_tickets":100,"bundle_cost":500.0,"prize_pool":111682.0,"perfect_full_buyout_cost":325000.0,"return_percent":34.36369230769231,"deficit":213318.0},
+    {"name":"Bruthen FNC Toyota Corolla Cross","tickets":5000,"bundle_tickets":1,"bundle_cost":25.0,"prize_pool":50300.0,"perfect_full_buyout_cost":125000.0,"return_percent":40.24,"deficit":74700.0},
+    {"name":"Norwood FC 2026 Major Lottery","tickets":30000,"bundle_tickets":1,"bundle_cost":5.0,"prize_pool":58382.0,"perfect_full_buyout_cost":150000.0,"return_percent":38.92133333333334,"deficit":91618.0},
+    {"name":"TRG 2026 Major Raffle","tickets":2500,"bundle_tickets":1,"bundle_cost":10.0,"prize_pool":6018.0,"perfect_full_buyout_cost":25000.0,"return_percent":24.072,"deficit":18982.0}
+  ]
+}
