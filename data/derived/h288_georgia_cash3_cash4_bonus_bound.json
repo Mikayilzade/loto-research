@@ -1,0 +1,43 @@
+{
+  "cash3": {
+    "box_3way": 0.48,
+    "box_6way": 0.48,
+    "combo_3way": 0.5,
+    "combo_6way": 0.5,
+    "front_or_back_pair": 0.5,
+    "one_off": 0.506,
+    "straight": 0.5,
+    "straight_box_3way": 0.49,
+    "straight_box_6way": 0.49
+  },
+  "cash3_best": {
+    "average_gross_ratio": 0.506,
+    "deposit_recovery_upper_bound": 0.759,
+    "name": "one_off"
+  },
+  "cash4": {
+    "box_12way": 0.48,
+    "box_24way": 0.48,
+    "box_4way": 0.48,
+    "box_6way": 0.48,
+    "combo_12way": 0.5,
+    "combo_24way": 0.5,
+    "combo_4way": 0.5,
+    "combo_6way": 0.5,
+    "one_off": 0.5028,
+    "straight": 0.5,
+    "straight_box_12way": 0.49,
+    "straight_box_24way": 0.49,
+    "straight_box_4way": 0.49,
+    "straight_box_6way": 0.49
+  },
+  "cash4_best": {
+    "average_gross_ratio": 0.5028,
+    "deposit_recovery_upper_bound": 0.7542,
+    "name": "one_off"
+  },
+  "global_checked_best_deposit_recovery_upper_bound": 0.759,
+  "packet": "H288",
+  "promotion_playable_multiplier": 1.5,
+  "strict_profit_possible_for_checked_additive_class": false
+}
