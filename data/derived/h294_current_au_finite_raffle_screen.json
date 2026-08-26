@@ -1,0 +1,59 @@
+{
+  "packet": "H294",
+  "as_of": "2026-08-26",
+  "method": "impossible-perfect full ownership plus generous advertised-liability upper bound",
+  "pool_count": 4,
+  "all_closed_by_arithmetic": true,
+  "best_case": "yourtown Luxury Prize Home Draw 559",
+  "best_return_pct": 42.836879432624114,
+  "rows": [
+    {
+      "name": "yourtown Luxury Prize Home Draw 559",
+      "max_tickets": 470000,
+      "ticket_price_aud": 15.0,
+      "prizes_aud": [2940000, 15000, 5000, 10000, 50000],
+      "full_takeover_cost_aud": 7050000.0,
+      "player_favourable_total_liabilities_aud": 3020000,
+      "full_takeover_return_ratio": 0.42836879432624114,
+      "full_takeover_return_pct": 42.836879432624114,
+      "deficit_aud": 4030000.0,
+      "strict_profit_under_perfect_takeover": false
+    },
+    {
+      "name": "yourtown Prestige Car Draw 1158",
+      "max_tickets": 130000,
+      "ticket_price_aud": 10.0,
+      "prizes_aud": [260000, 5000, 2000, 2000, 2000],
+      "full_takeover_cost_aud": 1300000.0,
+      "player_favourable_total_liabilities_aud": 271000,
+      "full_takeover_return_ratio": 0.20846153846153847,
+      "full_takeover_return_pct": 20.846153846153847,
+      "deficit_aud": 1029000.0,
+      "strict_profit_under_perfect_takeover": false
+    },
+    {
+      "name": "RSPCA Lottery Draw 92",
+      "max_tickets": 160000,
+      "ticket_price_aud": 10.0,
+      "prizes_aud": [320000, 3000],
+      "full_takeover_cost_aud": 1600000.0,
+      "player_favourable_total_liabilities_aud": 323000,
+      "full_takeover_return_ratio": 0.201875,
+      "full_takeover_return_pct": 20.1875,
+      "deficit_aud": 1277000.0,
+      "strict_profit_under_perfect_takeover": false
+    },
+    {
+      "name": "MS QLD Cash Grab Draw 2",
+      "max_tickets": 10000,
+      "ticket_price_aud": 5.0,
+      "prizes_aud": [10000],
+      "full_takeover_cost_aud": 50000.0,
+      "player_favourable_total_liabilities_aud": 10000,
+      "full_takeover_return_ratio": 0.2,
+      "full_takeover_return_pct": 20.0,
+      "deficit_aud": 40000.0,
+      "strict_profit_under_perfect_takeover": false
+    }
+  ]
+}
