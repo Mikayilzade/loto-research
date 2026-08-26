@@ -11,9 +11,9 @@ H225-X* was read first and remains rigorously CLOSED / EXHAUSTED at X20 with 0 c
 
 Current official PA iLottery Refer A Friend terms give a referred new player **$100 Bonus Money** after registration through a unique referral link, code `FRIEND`, and a first deposit of at least **$10**.
 
-Current PA iLottery Bonus Policy allows Bonus Money to buy Plays, including Draw Games under the checked offer/policy combination, while Draw Game prizes are cash winnings rather than locked deposit funds.
+Current PA iLottery Bonus Policy allows Bonus Money to wager on Draw Games and explicitly states that prizes won on Draw Games with Bonus Money are paid in cash regardless of remaining play-through on the Bonus Money used.
 
-Current PICK 3 rules give 100 ordered Front Pair outcomes. One $1 play on each `00`-`99` costs exactly **$100** and every draw has exactly one winning Front Pair paying **$50**. The official 2026 retailer terminal guide states the maximum value of a single PICK 3 ticket is exactly **$100**.
+Current PICK 3 rules give 100 ordered Front Pair outcomes. One $1 play on each `00`-`99` costs exactly **$100** and every draw has exactly one winning Front Pair paying **$50**.
 
 Therefore, if an eligible account receives the referral bonus and the online system accepts the complete 100-Pair cover for one draw:
 - external cash deposit: **$10**;
@@ -25,25 +25,28 @@ Therefore, if an eligible account receives the referral bonus and the online sys
 
 The $0.50 cover is also positive: $50 spend -> $25 guaranteed cash -> +$15 vs the $10 deposit.
 
-## 2026-08-26 execution-verification advance
+## 2026-08-26 execution-verification checkpoint
 
-Fresh official checks materially strengthen the lead:
-- PA iLottery Terms explicitly define Draw products as sold through the PA iLottery System and contemplate a purchase containing a chosen **number of Plays** and chosen **numbers/selections**; purchases are final once made.
-- PA iLottery currently advertises all PICK Games for online purchase.
-- Unlike the Kentucky/New Hampshire execution-blocked cases, the checked PA iLottery Terms do **not** contain a broad clause allowing the Lottery to selectively refuse an otherwise valid purchase merely because of the chosen number.
-- Official 2026 retail PICK 3 documentation supports FRONT PAIR, ADD TO CART / BUY NOW and a maximum single PICK 3 ticket value of **$100**.
-- However, official PA iLottery Help proves that online limits can be game-specific (for example, Powerball/Mega Millions are explicitly capped at five plays), so the absence of a published PICK 3 online cap cannot be treated as proof that 100 online Pair plays are accepted.
+Fresh official evidence now establishes more of the execution chain:
 
-Detailed evidence is saved in `research/H283_EXECUTION_VERIFICATION_2026-08-26.md`.
+1. PA iLottery Help explicitly says PICK 3 is playable online and lists FRONT PAIR as a supported play type.
+2. Current binding PA iLottery Terms describe one purchase as containing a **number of Plays**, the price of the Play(s), and the **numbers/selections chosen on any Play**; initiating that purchase authorizes deduction of the cost of that purchase, and completed sales are final.
+3. An official PA iLottery online-promotion rule explicitly had a PICK 3 wagering tier for **$100.00 or more**, proving that $100+ online PICK 3 wagering is contemplated by official rules, although not proving it occurs in one transaction.
+4. Current 2026 retail PICK 3 documentation supports FRONT PAIR, ADD TO CART / BUY NOW and a **$100 maximum single PICK 3 ticket value**.
+5. Current PA iLottery Terms still do not show a Kentucky/NH-style blanket right to reject a valid purchase merely because of selected numbers. Explicit refusal language located is tied to invalid geolocation/eligibility conditions.
+6. Official PA Help also proves online play caps can be game-specific (Powerball/Mega Millions: five plays), so the absence of a published PICK 3 online cap cannot be converted into a 100-play assumption.
+
+The detailed evidence matrix is in `research/H283_EXECUTION_VERIFICATION_2026-08-26.md`.
 
 ## Why SUCCESS is still not declared
 
-The remaining gate is execution, not arithmetic. Public official material still has not proved all of the following simultaneously:
-1. an online PICK 3 transaction may contain at least **100 distinct Front Pair plays** for one drawing;
-2. those 100 selections can be committed **atomically / all-or-none**, rather than as separately accepted purchases;
-3. no hidden online-specific line/cart/payout-liability cap can stop the acquisition after only a strict subset has been accepted.
+The remaining gate is now very narrow and entirely operational. Public official material still has not proved all of the following simultaneously:
 
-A partial Pair cover has no positive worst-case floor. Therefore the retail $100 ticket limit and the general online multi-play language are strong compatibility evidence but are not enough for a rigorous SUCCESS claim.
+1. one online PICK 3 purchase may contain at least **100 distinct Front Pair plays for the same drawing**;
+2. those 100 selections are committed **atomically / all-or-none**, rather than being separately accepted purchases;
+3. no online-specific line/cart/payout-liability control can stop the acquisition after only a strict subset has been accepted.
+
+A partial Pair cover has a legal zero-return draw outcome. Therefore the strong retail limit, the binding multi-play purchase language, and the historical $100+ online-wager evidence are not yet enough for a rigorous SUCCESS claim.
 
 ## Saved evidence
 
@@ -56,8 +59,8 @@ A partial Pair cover has no positive worst-case floor. Therefore the retail $100
 
 ## NEXT ACTION
 
-Continue H283 execution verification before opening another broad packet:
-1. locate an official PA iLottery PICK 3 online help/manual/UI source stating the per-transaction play count or cart limit;
-2. seek official confirmation that one checkout can contain all 100 distinct $1 Front Pair selections for one drawing;
-3. verify whether checkout is all-or-none and whether any unpublished number-liability/payout cap can partially block the set;
-4. if complete acquisition is rigorously established while the referral offer remains current, elevate H283 to **SUCCESS for eligible Pennsylvania referred-new-player accounts**; otherwise record the exact execution blocker and continue the broader search.
+Stay on H283 before opening another broad packet. Highest-value closure evidence is a current authoritative PA iLottery source or support confirmation that:
+- one PICK 3 online checkout can hold **100 distinct $1 Front Pair selections for one drawing**; and
+- checkout completion is all-or-none (a failed/rejected checkout cannot leave an unknowable partial subset purchased).
+
+If that is rigorously established while the referral offer remains current, elevate H283 to **SUCCESS for eligible Pennsylvania referred-new-player accounts**. If official evidence instead reveals a lower online play/cart/liability limit or sequential partial acceptance, close H283 as execution-blocked and resume the global search.
