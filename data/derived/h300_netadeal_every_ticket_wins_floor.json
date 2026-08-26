@@ -1,0 +1,22 @@
+{
+  "packet": "H300",
+  "checked_on": "2026-08-27",
+  "operator": "Net-A-Deal Competitions Ltd",
+  "competition": "£10,000 Instant Wins August / August #2 | Every ticket wins",
+  "total_tickets": 49999,
+  "max_per_person": 1000,
+  "entry_price_gbp": 0.49,
+  "cash_ticket_count": 32,
+  "site_credit_ticket_count": 40,
+  "residual_rewards_entries": 49927,
+  "cash_prize_total_gbp": 9000,
+  "site_credit_face_total_gbp": 1000,
+  "max_paid_spend_gbp": 490.0,
+  "strict_withdrawable_cash_floor_gbp": 0.0,
+  "strict_profit_possible_from_checked_mechanic": false,
+  "reason": "There are at least 1,000 residual identifiers whose only immediate outcome is entry into a separate random £5,000 rewards competition. A legal allocation can place all of one person's allowed tickets among those identifiers, and the later rewards draw has a legal non-winning outcome. Therefore the worst-case withdrawable cash return is zero despite the 'Every ticket wins' label.",
+  "sources": [
+    "https://www.net-a-deal.com/competition/10000-instant-wins-august-every-ticket-wins/",
+    "https://www.net-a-deal.com/competition/10000-instant-wins-august-2-every-ticket-wins/"
+  ]
+}
