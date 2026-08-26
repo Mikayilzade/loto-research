@@ -1,0 +1,55 @@
+{
+  "packet": "H297",
+  "as_of": "2026-08-27",
+  "method": "Impossible-perfect ownership of every issued ticket; compare all player-facing liabilities against exact full acquisition cost.",
+  "candidates": [
+    {
+      "name": "Holy Cross Charities 31 Days of Cash 2026",
+      "currency": "USD",
+      "ticket_cap": 500,
+      "unit_cost": 50.0,
+      "full_acquisition_cost": 25000.0,
+      "perfect_takeover_gross": 10400.0,
+      "gross_ratio": 0.416,
+      "deficit": 14600.0,
+      "strict_profit_possible_under_perfect_takeover": false
+    },
+    {
+      "name": "NvACD Sportsman's Raffle 2026",
+      "currency": "USD",
+      "ticket_cap": 500,
+      "unit_cost": 100.0,
+      "full_acquisition_cost": 50000.0,
+      "perfect_takeover_gross": 15000.0,
+      "gross_ratio": 0.3,
+      "deficit": 35000.0,
+      "strict_profit_possible_under_perfect_takeover": false
+    },
+    {
+      "name": "UFTGFNC Footy Finals Lotto 2026",
+      "currency": "AUD",
+      "ticket_cap": 400,
+      "unit_cost": 50.0,
+      "full_acquisition_cost": 20000.0,
+      "perfect_takeover_gross": 2500.0,
+      "gross_ratio": 0.125,
+      "deficit": 17500.0,
+      "strict_profit_possible_under_perfect_takeover": false
+    },
+    {
+      "name": "Sister Cities of Nashville Mendoza Raffle 2026",
+      "currency": "USD",
+      "ticket_cap": 500,
+      "unit_cost": 100.0,
+      "full_acquisition_cost": 50000.0,
+      "perfect_takeover_gross": 5000.0,
+      "gross_ratio": 0.1,
+      "deficit": 45000.0,
+      "strict_profit_possible_under_perfect_takeover": false
+    }
+  ],
+  "best_candidate": "Holy Cross Charities 31 Days of Cash 2026",
+  "best_gross_ratio": 0.416,
+  "terminal_result_for_checked_candidates": "CLOSED_BY_ARITHMETIC",
+  "global_result": "NO_SUCCESS_NOT_EXHAUSTED"
+}
