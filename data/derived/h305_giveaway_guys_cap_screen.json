@@ -1,0 +1,65 @@
+{
+  "packet": "H305",
+  "status": "CLOSED / TAKEOVER-BLOCKED",
+  "draws": [
+    {
+      "name": "GBP 6767 cash",
+      "tickets": 20195,
+      "max_per_person": 500,
+      "price_gbp": 0.67,
+      "cash_prize_gbp": 6767.0,
+      "draw_date": "2026-09-06",
+      "full_buyout_cost_gbp": 13530.65,
+      "impossible_full_buyout_gross_ratio": 0.5001237930180737,
+      "max_player_fraction": 0.02475860361475613,
+      "strict_takeover_possible_under_cap": false,
+      "guaranteed_draw_cash_floor_gbp": 0.0,
+      "uncontrolled_identifiers_at_cap": 19695
+    },
+    {
+      "name": "GBP 4444 cash",
+      "tickets": 20195,
+      "max_per_person": 500,
+      "price_gbp": 0.44,
+      "cash_prize_gbp": 4444.0,
+      "draw_date": "2026-09-04",
+      "full_buyout_cost_gbp": 8885.8,
+      "impossible_full_buyout_gross_ratio": 0.5001237930180739,
+      "max_player_fraction": 0.02475860361475613,
+      "strict_takeover_possible_under_cap": false,
+      "guaranteed_draw_cash_floor_gbp": 0.0,
+      "uncontrolled_identifiers_at_cap": 19695
+    },
+    {
+      "name": "GBP 2500 cash",
+      "tickets": 6995,
+      "max_per_person": 250,
+      "price_gbp": 0.7,
+      "cash_prize_gbp": 2500.0,
+      "draw_date": "2026-08-28",
+      "full_buyout_cost_gbp": 4896.5,
+      "impossible_full_buyout_gross_ratio": 0.5105687736138058,
+      "max_player_fraction": 0.035739814152966405,
+      "strict_takeover_possible_under_cap": false,
+      "guaranteed_draw_cash_floor_gbp": 0.0,
+      "uncontrolled_identifiers_at_cap": 6745
+    },
+    {
+      "name": "GBP 750 cash",
+      "tickets": 1195,
+      "max_per_person": 30,
+      "price_gbp": 1.29,
+      "cash_prize_gbp": 750.0,
+      "draw_date": "2026-08-28",
+      "full_buyout_cost_gbp": 1541.55,
+      "impossible_full_buyout_gross_ratio": 0.48652330446628395,
+      "max_player_fraction": 0.02510460251046025,
+      "strict_takeover_possible_under_cap": false,
+      "guaranteed_draw_cash_floor_gbp": 0.0,
+      "uncontrolled_identifiers_at_cap": 1165
+    }
+  ],
+  "strongest_control_fraction": 0.035739814152966405,
+  "best_impossible_full_buyout_ratio": 0.5105687736138058,
+  "interpretation": "Per-person caps leave legal external winning identifiers in every checked draw; strict draw-prize cash floor is therefore zero. Free postal entry uses the same per-person maximum and is accepted only if capacity remains when received."
+}
