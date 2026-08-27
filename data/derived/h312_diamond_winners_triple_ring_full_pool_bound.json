@@ -1,0 +1,30 @@
+{
+  "packet": "H312",
+  "candidate": "Diamond Winners - The Triple Ring Winner - 3 x GBP 2,150 Rings",
+  "snapshot_date": "2026-08-27",
+  "pool_tickets": 9999,
+  "ticket_price_gbp": 1.99,
+  "full_pool_cost_gbp": 19898.01,
+  "published_user_ticket_limit": 9999,
+  "snapshot_sold": 254,
+  "favourable_liability_model": {
+    "rings_3x2150_gbp": 6450.0,
+    "cash_2x500_gbp": 1000.0,
+    "cash_4x250_gbp": 1000.0,
+    "cash_10x100_gbp": 1000.0,
+    "cash_20x50_gbp": 1000.0,
+    "cash_100x10_gbp": 1000.0,
+    "cash_1000x1_gbp": 1000.0,
+    "site_credit_1000x0_50_face_gbp": 500.0,
+    "site_credit_5000x0_10_face_gbp": 500.0,
+    "total_gbp": 13450.0
+  },
+  "full_pool_gross_ratio": 0.6759469916840931,
+  "full_pool_gross_percent": 67.59469916840931,
+  "full_pool_deficit_gbp": 6448.01,
+  "closure": "ARITHMETICALLY_CLOSED",
+  "reason": "Even impossible-perfect ownership of all 9,999 identifiers and full face valuation of rings/site credit yields only 67.5947% of acquisition cost.",
+  "source_urls": [
+    "https://diamondwinners.co.uk/product/the-triple-ring-winner-3-x-2150-rings/"
+  ]
+}
