@@ -1,0 +1,65 @@
+{
+  "packet": "H309",
+  "date_checked": "2026-08-27",
+  "royal_mail_second_class_letter_gbp": 0.91,
+  "cases": [
+    {
+      "name": "Salexmo £2,000 cash 4 Sep 2026",
+      "entries": 200000,
+      "max_per_user": 50000,
+      "postal_entries_per_card": 43,
+      "sold_snapshot": 25650,
+      "control_fraction_cap": 0.25,
+      "paid_full_cost_gbp": 4000.0,
+      "total_player_liability_gbp": 2000.0,
+      "hypothetical_full_postal_cards": 4652,
+      "hypothetical_full_postal_cost_gbp": 4233.32,
+      "hypothetical_full_postal_return_ratio": 0.47244243288955245,
+      "strict_takeover_possible_now": false
+    },
+    {
+      "name": "Salexmo £900 + 10x£90 2 Sep 2026",
+      "entries": 40000,
+      "max_per_user": 10000,
+      "postal_entries_per_card": 10,
+      "sold_snapshot": 3808,
+      "control_fraction_cap": 0.25,
+      "paid_full_cost_gbp": 3600.0,
+      "total_player_liability_gbp": 1800.0,
+      "hypothetical_full_postal_cards": 4000,
+      "hypothetical_full_postal_cost_gbp": 3640.0,
+      "hypothetical_full_postal_return_ratio": 0.4945054945054945,
+      "strict_takeover_possible_now": false
+    },
+    {
+      "name": "Salexmo £10,000 instant pot + £2,000 end prize 17 Sep 2026",
+      "entries": 12000,
+      "max_per_user": 2500,
+      "postal_entries_per_card": 1,
+      "sold_snapshot": 728,
+      "control_fraction_cap": 0.20833333333333334,
+      "paid_full_cost_gbp": 24000.0,
+      "total_player_liability_gbp": 12000.0,
+      "hypothetical_full_postal_cards": 12000,
+      "hypothetical_full_postal_cost_gbp": 10920.0,
+      "hypothetical_full_postal_return_ratio": 1.098901098901099,
+      "strict_takeover_possible_now": false
+    },
+    {
+      "name": "Salexmo £12,500 instant pot + £500 end prize 7 Sep 2026",
+      "entries": 866666,
+      "max_per_user": 150000,
+      "postal_entries_per_card": 29,
+      "sold_snapshot": 39516,
+      "control_fraction_cap": 0.17307705621312017,
+      "paid_full_cost_gbp": 25999.98,
+      "total_player_liability_gbp": 13000.0,
+      "hypothetical_full_postal_cards": 29886,
+      "hypothetical_full_postal_cost_gbp": 27196.26,
+      "hypothetical_full_postal_return_ratio": 0.4780069024196709,
+      "strict_takeover_possible_now": false
+    }
+  ],
+  "key_result": "The 17 Sep draw is a genuine arithmetic near-success: if a single entrant could own all 12,000 identifiers via the postal route at 91p each, £12,000 of advertised cash liabilities would exceed £10,920 postage cost by £1,080. Current rules block this: max 2,500 entries per user, 728 entries already sold at the checked snapshot, postal receipt is not guaranteed, and entries arriving after a cap fills are excluded.",
+  "terminal_state": "NO SUCCESS; H309 CLOSED / TAKEOVER-BLOCKED"
+}
