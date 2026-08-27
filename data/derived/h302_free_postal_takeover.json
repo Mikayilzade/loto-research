@@ -1,0 +1,26 @@
+{
+  "packet": "H302",
+  "state": "CLOSED / EXECUTION-BLOCKED",
+  "candidate": "SC Competitions £100 Cash ONLY 100 Tickets",
+  "pool_entries": 100,
+  "paid_price_gbp": 1.99,
+  "cash_prize_gbp": 100.0,
+  "royal_mail_second_class_postage_gbp": 0.91,
+  "paid_full_acquisition_gbp": 199.0,
+  "hypothetical_all_postal_acquisition_gbp": 91.0,
+  "conditional_all_postal_surplus_gbp": 9.0,
+  "conditional_all_postal_roi_on_cost": 0.0989010989010989,
+  "minimum_postal_entries_for_positive_mixed_full_takeover": 92,
+  "mixed_threshold_cost_gbp": 99.64,
+  "mixed_threshold_surplus_gbp": 0.36,
+  "execution_guaranteed": false,
+  "blockers": [
+    "postal receipt is not guaranteed",
+    "proof of posting is not proof of receipt",
+    "paid entries can consume finite capacity before postal arrival",
+    "per-person limits may apply",
+    "promoter retains discretion over conduct contrary to raffle intention",
+    "under-allocation can trigger alternative percentage-of-sales payout or extension"
+  ],
+  "h225_x_lane": "CLOSED / EXHAUSTED; X20=0 coefficient survivors, 0 legal shift tuples"
+}
