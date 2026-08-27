@@ -1,0 +1,21 @@
+{
+  "packet": "H307",
+  "candidate": "Salexmo £300 CASH FOR 3P, PLUS CASH INSTANT WINS 11/9/26",
+  "snapshot_date": "2026-08-27",
+  "total_entries": 40000,
+  "sold_snapshot": 5583,
+  "remaining_snapshot": 34417,
+  "instant_wins_total": 10,
+  "instant_wins_remaining_snapshot": 9,
+  "non_instant_remaining_lower_bound": 34408,
+  "max_entries_per_user": 10000,
+  "ticket_price_gbp": 0.03,
+  "instant_prize_gbp": 30.0,
+  "max_paid_spend_gbp": 300.0,
+  "allocation_rule": "random entry number on completion/payment",
+  "legal_all_noninstant_allocation_exists": true,
+  "strict_instant_win_cash_floor_gbp": 0.0,
+  "main_draw_strict_floor_gbp": 0.0,
+  "strict_total_cash_floor_gbp": 0.0,
+  "closure": "TARGETING_BLOCKED"
+}
