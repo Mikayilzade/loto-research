@@ -1,0 +1,21 @@
+{
+  "packet": "H314",
+  "game": "WinWink £50k COIN FLIP",
+  "snapshot_date": "2026-08-27",
+  "total_tickets": 142857,
+  "total_instant_win_positions": 71428,
+  "total_nonwinning_positions": 71429,
+  "sold": 1615,
+  "instant_wins_remaining": 70598,
+  "instant_wins_claimed": 830,
+  "nonwinning_sold": 785,
+  "remaining_tickets": 141242,
+  "nonwinning_remaining": 70644,
+  "player_cap": 21429,
+  "ticket_price_gbp": 1.0,
+  "max_player_spend_gbp": 21429.0,
+  "nonwinning_remaining_minus_cap": 49215,
+  "strict_guaranteed_cash_floor_gbp": 0.0,
+  "closure": "CAP-BLOCKED / ZERO STRICT CASH FLOOR",
+  "proof": "The operator precommits instant-win ticket positions, keeps them hidden until purchase, and caps one player at 21,429 tickets. At the snapshot, 70,644 non-winning positions remain, more than enough to contain every ticket the player is permitted to buy. Therefore a legal outcome exists where all of the player's tickets are non-winning."
+}
