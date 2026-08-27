@@ -1,0 +1,34 @@
+{
+  "packet": "H320",
+  "state": "CLOSED / ZERO-WITHDRAWABLE-CASH-FLOOR",
+  "competition": "Prizle Grab A Prize",
+  "total_instant_identifiers": 8000,
+  "max_entries_per_person": 1000,
+  "paid_entry_price_gbp": 4.99,
+  "max_paid_spend_gbp": 4990.0,
+  "full_schedule": {
+    "site_credit_only_identifiers": 7000,
+    "cash_identifiers": 971,
+    "product_or_gift_identifiers": 29,
+    "non_site_credit_identifiers": 1000,
+    "site_credit_face_gbp": 16500.0,
+    "cash_face_gbp": 1850.0,
+    "product_or_gift_face_gbp": 6508.97,
+    "end_draw_cash_gbp": 500.0,
+    "advertised_face_including_end_draw_gbp": 25358.97
+  },
+  "current_snapshot": {
+    "available_site_credit_identifiers": 6985,
+    "available_site_credit_ids_at_least_player_cap": true,
+    "minimum_face_value_of_1000_distinct_available_site_credit_ids_gbp": 161.8,
+    "minimum_site_credit_face_to_paid_spend_ratio": 0.0324248496993988
+  },
+  "strict_withdrawable_cash_floor_gbp": 0.0,
+  "proof": [
+    "There are at least 6,985 currently-available site-credit-only instant identifiers, exceeding the 1,000-entry player cap.",
+    "Hence a legal allocation exists in which every player entry receives site credit and no withdrawable-cash instant prize.",
+    "The separate GBP500 end draw can legally be won by an external entry because one player cannot control the 8,000-entry pool.",
+    "Therefore the player's strict withdrawable-cash floor is GBP0 even though every ticket wins an instant prize."
+  ],
+  "conclusion": "Guaranteed positive prize face value is not guaranteed withdrawable cash; H320 is closed for strict-profit purposes."
+}
