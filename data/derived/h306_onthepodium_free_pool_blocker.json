@@ -1,0 +1,29 @@
+{
+  "packet": "H306",
+  "as_of": "2026-08-27",
+  "source": "On The Podium Prizes current homepage and competition terms",
+  "cash_draw": {
+    "name": "FREE TO ENTER £100 CASH",
+    "pool": 1000,
+    "displayed_sold_pct": 16.2,
+    "prize_cash_gbp": 100.0,
+    "external_identifier_exists": true,
+    "strict_current_takeover_possible": false,
+    "guaranteed_draw_cash_floor_gbp": 0.0
+  },
+  "other_current_free_draws": [
+    {"name": "2 BSB tickets - free", "pool": 1000, "displayed_sold_pct": 5.6},
+    {"name": "FREE TO ENTER £25 SITE CREDIT", "pool": 1000, "displayed_sold_pct": 6.1},
+    {"name": "FREE TO ENTER £50 SITE CREDIT", "pool": 1000, "displayed_sold_pct": 6.5},
+    {"name": "FREE TO ENTER £75 SITE CREDIT", "pool": 1000, "displayed_sold_pct": 6.2}
+  ],
+  "rule_gates": {
+    "free_route_described_as_postal": true,
+    "one_postcard_per_entry": true,
+    "proof_of_posting_guarantees_entry": false,
+    "entry_rejected_if_pool_cap_reached_before_receipt": true,
+    "electronic_zero_price_full_pool_reservation_proven": false,
+    "per_player_limit_equals_pool_proven": false
+  },
+  "conclusion": "Current strict takeover is impossible because the displayed positive sold share proves at least one eligible identifier is already outside our control. Independently, the published free-entry mechanism is postal and does not guarantee receipt before the finite cap fills."
+}
