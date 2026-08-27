@@ -1,0 +1,17 @@
+{
+  "packet": "H318",
+  "candidate": "SOBO Win a £200 Local Experience",
+  "total_identifiers": 299,
+  "paid_entry_price_gbp": 1.0,
+  "advertised_prize_value_gbp": 200.0,
+  "max_entries_per_person": 25,
+  "max_free_entries_per_person": 1,
+  "max_control_fraction": 0.08361204013377926,
+  "minimum_external_identifiers": 274,
+  "strict_main_draw_cash_floor_gbp": 0.0,
+  "impossible_full_buyout_cost_gbp": 299.0,
+  "impossible_full_buyout_prize_to_cost_ratio": 0.6688963210702341,
+  "full_buyout_deficit_gbp": 99.0,
+  "closed": true,
+  "reason": "One-person cap leaves legal external winning identifiers; even ignoring the cap, full paid acquisition costs more than the advertised prize value."
+}
