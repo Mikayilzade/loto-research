@@ -1,0 +1,26 @@
+{
+  "packet": "H313",
+  "candidate": "Diamond Winners - £15,000 Diamond Spins!",
+  "snapshot_date": "2026-08-27",
+  "pool_tickets": 119999,
+  "ticket_price_gbp": 0.2,
+  "max_per_person": 119999,
+  "snapshot_sold": 3625,
+  "remaining_tickets": 116374,
+  "full_paid_cost_gbp": 23999.8,
+  "advertised_total_prize_pool_gbp": 15000.0,
+  "published_cash_instant_gbp": 13500.0,
+  "implied_non_cash_or_site_credit_face_gbp": 1500.0,
+  "full_paid_gross_ratio": 0.6250052083767363,
+  "cash_only_gross_ratio": 0.5625046875390628,
+  "second_class_postage_gbp": 0.91,
+  "full_postal_cost_gbp": 109199.09,
+  "full_postal_gross_ratio": 0.1373637820608212,
+  "state": "CLOSED / BELOW BREAK-EVEN",
+  "closure_basis": [
+    "Even impossible-perfect ownership of all 119,999 entries returns at most the advertised £15,000 against £23,999.80 paid acquisition cost.",
+    "The published cash instant-win schedule totals only £13,500.",
+    "The free postal route is not economically free: one separate postal item per entry at current £0.91 2nd Class postage makes full postal acquisition far more expensive than paid entry.",
+    "3,625 tickets were already sold in the live snapshot, so present-day total identifier ownership is impossible for a fresh entrant anyway."
+  ]
+}
