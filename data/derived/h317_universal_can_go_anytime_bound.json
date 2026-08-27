@@ -1,0 +1,20 @@
+{
+  "packet": "H317",
+  "operator": "Universal Competitions",
+  "competition": "£100 CASH!! 1 PRIZE! CAN GO ANYTIME!!!! £100 Cash Jackpot!!",
+  "snapshot_date": "2026-08-27",
+  "total_identifiers": 3999,
+  "snapshot_sold": 1135,
+  "remaining_identifiers": 2864,
+  "ticket_price_gbp": 0.10,
+  "full_pool_cost_gbp": 399.90,
+  "remaining_tail_cost_gbp": 286.40,
+  "instant_cash_gbp": 100.00,
+  "player_favourable_jackpot_upper_gbp": 100.00,
+  "player_favourable_total_liability_upper_gbp": 200.00,
+  "full_pool_gross_ratio": 0.5001250313,
+  "remaining_tail_gross_ratio": 0.6983240223,
+  "strict_profit_possible_under_full_tail_takeover": false,
+  "state": "CLOSED / NO SUCCESS",
+  "reason": "Even granting the player both the advertised £100 instant cash and a separate full £100 jackpot, all remaining tickets cost £286.40, so the strongest possible deterministic full-tail liability is below acquisition cost."
+}
