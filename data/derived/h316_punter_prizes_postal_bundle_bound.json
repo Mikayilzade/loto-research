@@ -1,0 +1,29 @@
+{
+  "packet": "H316",
+  "snapshot_date": "2026-08-27",
+  "competition": "Punter Prizes CASH DASH 3",
+  "ticket_price_gbp": 0.1,
+  "ticket_limit": 20000,
+  "tickets_sold": 1811,
+  "tickets_remaining": 18189,
+  "advertised_total_prize_face_gbp": 2000.0,
+  "remaining_advertised_prize_face_gbp": 1800.0,
+  "second_class_postage_gbp": 0.91,
+  "postal_entries_per_letter": 9,
+  "full_pool_paid_cost_gbp": 2000.0,
+  "full_pool_paid_face_return": 1.0,
+  "full_pool_postal_letters": 2223,
+  "full_pool_postal_cost_gbp": 2022.93,
+  "full_pool_postal_face_return": 0.9886649562762923,
+  "remaining_pool_paid_cost_gbp": 1818.9,
+  "remaining_pool_paid_face_return": 0.9896091044037605,
+  "remaining_pool_postal_letters": 2021,
+  "remaining_pool_postal_cost_gbp": 1839.11,
+  "remaining_pool_postal_face_return": 0.9787342790806421,
+  "strict_profit_possible_under_impossible_full_takeover": false,
+  "execution_blockers": [
+    "1811 tickets were already sold on the current snapshot",
+    "postal entries are processed only after receipt and can be excluded if the cap fills first",
+    "the promoter does not acknowledge receipt or confirm correctness before close"
+  ]
+}
