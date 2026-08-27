@@ -1,0 +1,18 @@
+{
+  "packet": "H308",
+  "candidate": "CrazyWins HAMSTER FRENZY indexed zero-sold finite pool",
+  "checked_date": "2026-08-27",
+  "pool_entries": 2000,
+  "paid_ticket_gbp": 0.1,
+  "paid_full_pool_gbp": 200.0,
+  "second_class_postage_gbp": 0.91,
+  "postal_full_pool_postage_only_gbp": 1820.0,
+  "postal_to_paid_cost_ratio": 9.1,
+  "free_route_separate_post_required": true,
+  "proof_of_posting_guarantees_entry": false,
+  "entry_rejected_if_cap_fills_before_receipt": true,
+  "entry_numbers_randomly_allocated": true,
+  "atomic_full_pool_reservation_established": false,
+  "strict_takeover_certified": false,
+  "status": "CLOSED / EXECUTION-BLOCKED"
+}
