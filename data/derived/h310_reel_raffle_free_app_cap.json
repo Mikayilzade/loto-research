@@ -1,0 +1,22 @@
+{
+  "packet": "H310",
+  "checked_date": "2026-08-27",
+  "operator": "Reel Raffle",
+  "competition": "APP EXCLUSIVE! - Win £1000 Cash for FREE!",
+  "closes": "2026-09-27T20:55:00+01:00",
+  "entry_price_gbp": 0.0,
+  "cash_prize_gbp": 1000.0,
+  "total_ticket_cap": 99999,
+  "max_entries_per_person": 50,
+  "snapshot_entries": 10585,
+  "minimum_existing_external_entries_for_any_single_player": 10535,
+  "maximum_identifier_share": 0.0005000050000500005,
+  "strict_guaranteed_cash_floor_gbp": 0.0,
+  "strict_guaranteed_profit_floor_gbp": 0.0,
+  "state": "CLOSED / TAKEOVER-BLOCKED",
+  "reason": "The per-person cap is 50 while 10,585 entries already exist. For any single player at least 10,535 current entries are necessarily external, so a legal draw can select an external entrant and pay the player £0. The free price does not create guaranteed positive cash.",
+  "sources": [
+    "https://reelraffle.com/product/app-exclusive-win-1000-cash-for-free-2/",
+    "https://reelraffle.com/competitions/"
+  ]
+}
