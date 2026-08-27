@@ -1,0 +1,35 @@
+{
+  "packet": "H303",
+  "updated": "2026-08-27",
+  "state": "OPEN_EVIDENCE_BLOCKED_NOT_SUCCESS",
+  "candidate": "Birdie Tickets",
+  "verified": {
+    "hard_entry_cap_per_promotion": true,
+    "no_purchase_method_exists": true,
+    "paid_ticket_instant_confirmation": true,
+    "paid_ticket_identifier_locked": true,
+    "winner_verification_checkout_usd": 1,
+    "public_seed_reproducible_draw": true
+  },
+  "unverified_critical_gates": {
+    "amoe_is_electronic": null,
+    "amoe_uses_same_finite_identifier_pool": null,
+    "amoe_per_person_limit": null,
+    "amoe_identifier_immediately_reserved": null,
+    "single_player_can_acquire_full_pool": null,
+    "current_live_draw_cap_N": null,
+    "current_live_draw_paid_price": null,
+    "current_live_draw_prize_value": null,
+    "cash_alternative": null
+  },
+  "theorem": {
+    "description": "If one eligible player can electronically reserve all N identifiers in the same hard-capped pool through zero-cost AMOE (or a sufficiently cheap AMOE/paid mix), complete ownership makes the random winner deterministic.",
+    "success_claimed": false
+  },
+  "sources": [
+    "https://birdietickets.com/trust",
+    "https://birdietickets.com/",
+    "https://birdietickets.com/tickets",
+    "https://birdietickets.com/rules"
+  ]
+}
