@@ -1,0 +1,14 @@
+{
+  "packet": "H304",
+  "date": "2026-08-27",
+  "state": "CLOSED / TAKEOVER-BLOCKED",
+  "candidates": [
+    {"name":"Elite £101,000 Cash","total_entries":4999999,"max_per_player":20000,"ticket_price_gbp":0.05,"prize_value_gbp":101000,"ownership_fraction":0.00400000080000016,"full_sellout_return":0.40400008080001615},
+    {"name":"Elite £88,000 Cash","total_entries":2999999,"max_per_player":12500,"ticket_price_gbp":0.08,"prize_value_gbp":88000,"ownership_fraction":0.004166668055556018,"full_sellout_return":0.3666667888889296},
+    {"name":"Elite £1.8m Dream Home & Away","total_entries":25999999,"max_per_player":7500,"ticket_price_gbp":0.19,"cash_alternative_gbp":1250000,"ownership_fraction":0.0002884615495562134,"full_sellout_cash_alt_return":0.2530364469791346},
+    {"name":"Elite Time & Tyres Wheel","total_entries":5000000,"max_per_player":15000,"ticket_price_gbp":0.10,"published_prize_value_gbp":190000,"ownership_fraction":0.003,"published_value_full_sellout_return":0.38}
+  ],
+  "necessary_takeover_condition": "max_per_player >= total_entries (absent another exclusive reservation mechanism)",
+  "max_observed_ownership_fraction": 0.004166668055556018,
+  "conclusion": "All checked current draws preserve legal external identifiers by explicit per-player caps; deterministic one-player takeover is impossible. Principal full-sellout economics are independently below break-even."
+}
