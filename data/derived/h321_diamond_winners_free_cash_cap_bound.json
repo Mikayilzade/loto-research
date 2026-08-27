@@ -1,0 +1,18 @@
+{
+  "packet": "H321",
+  "mechanism": "electronic_100pct_discount_finite_cash_draw",
+  "snapshot_date": "2026-08-28",
+  "total_ticket_cap": 1000,
+  "max_entries_per_person": 1,
+  "observed_valid_entries": 178,
+  "minimum_external_entries_even_if_player_already_holds_one": 177,
+  "list_price_gbp": 10.0,
+  "discount_fraction": 1.0,
+  "effective_entry_cost_gbp": 0.0,
+  "cash_prize_gbp": 100.0,
+  "max_share_of_advertised_identifier_space": 0.001,
+  "external_winner_state_exists": true,
+  "strict_withdrawable_cash_floor_gbp": 0.0,
+  "terminal": true,
+  "closure_reason": "one-entry person cap plus already-existing external entrants leaves a legal external-winner state"
+}
