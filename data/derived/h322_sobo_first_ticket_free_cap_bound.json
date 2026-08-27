@@ -1,0 +1,28 @@
+{
+  "packet": "H322",
+  "snapshot_date": "2026-08-28",
+  "competition": "SOBO Competitions — Instant Win Frenzy — 29p Tickets",
+  "total_tickets": 500000,
+  "current_sold_snapshot": 1,
+  "max_per_person": 2000,
+  "ticket_price_gbp": 0.29,
+  "free_tickets_per_person": 1,
+  "advertised_instant_credit_ids": 50000,
+  "advertised_cash_prizes": 5,
+  "cash_prize_each_gbp": 1000,
+  "max_prize_bearing_ids_player_favourable": 50005,
+  "min_zero_instant_ids": 449995,
+  "residual_zero_ids_cover_player_cap": true,
+  "max_paid_tickets_at_cap": 1999,
+  "max_cap_spend_gbp": 579.71,
+  "ticket_assignment": "random from remaining pool; specific number cannot be chosen",
+  "strict_withdrawable_cash_floor_gbp": 0,
+  "state": "CLOSED / CAP-AND-RANDOM-ALLOCATION-BLOCKED",
+  "closure_reason": "Even under a player-favourable assumption that all advertised credit and cash prizes occupy distinct identifiers, at least 449,995 identifiers have no instant prize, far more than the 2,000-entry player cap. Rules allocate identifiers randomly and prohibit choosing a specific number. Thus a legal allocation exists in which all allowed player tickets are residual zero-instant identifiers; the open main draw also retains legal external-winner states.",
+  "sources": [
+    "https://sobocompetitions.com/competitions/instant-win-29p",
+    "https://sobocompetitions.com/competition-rules",
+    "https://sobocompetitions.com/terms",
+    "https://sobocompetitions.com/free-entry"
+  ]
+}
