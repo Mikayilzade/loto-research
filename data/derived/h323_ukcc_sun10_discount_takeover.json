@@ -1,0 +1,25 @@
+{
+  "packet": "H323",
+  "checked_date": "2026-08-28",
+  "candidate": "UKCC 2025 VW Crafter Campervan + 2025 Mercedes GLC",
+  "total_tickets": 499999,
+  "base_ticket_price_gbp": 0.79,
+  "sun10_ticket_price_gbp": 0.71,
+  "cash_alternative_gbp": 140000,
+  "base_full_pool_cost_gbp": 394999.21,
+  "sun10_full_pool_cost_gbp": 354999.29,
+  "impossible_full_buyout_gross_ratio": 0.3943669859170704,
+  "impossible_full_buyout_deficit_gbp": 214999.29,
+  "break_even_ticket_price_gbp": 0.28000056000112,
+  "required_discount_from_base_fraction": 0.6455689113909874,
+  "required_further_discount_from_sun10_fraction": 0.6056330140829296,
+  "max_per_person": 950,
+  "max_control_fraction": 0.0019000038000076,
+  "snapshot_sold": 37281,
+  "strict_worst_case_cash_floor_gbp": 0,
+  "terminal_classification": "CLOSED / CAP-AND-ECONOMICS-BLOCKED",
+  "sources": [
+    "https://welcome.ukcarpcompetitions.co.uk/competition/vwglc",
+    "https://www.thesun.co.uk/sport/38564587/win-car-competition-ukcc/"
+  ]
+}
