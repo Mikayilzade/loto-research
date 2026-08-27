@@ -1,0 +1,23 @@
+{
+  "packet": "H311",
+  "checked_date": "2026-08-27",
+  "operator": "Kilted Competitions",
+  "competition": "KILTED LUCKY DIPS – £200,000 Prize Pot – EVERY TICKET WINS",
+  "total_tickets": 10000,
+  "price_per_ticket_gbp": 20.0,
+  "full_cost_gbp": 200000.0,
+  "max_per_person": 499,
+  "max_control_fraction": 0.0499,
+  "snapshot_sold": 1215,
+  "remaining": 8785,
+  "min_external_existing_even_if_player_owned_499_sold": 716,
+  "stated_instant_prize_pot_gbp": 200000.0,
+  "end_cash_prize_gbp": 1000.0,
+  "player_favourable_total_liability_gbp": 201000.0,
+  "player_favourable_full_pool_ratio": 1.005,
+  "full_takeover_allowed": false,
+  "strict_guaranteed_profit_from_takeover": false,
+  "status": "CLOSED / TAKEOVER-BLOCKED",
+  "source": "https://www.kiltedcompetitions.co.uk/product/kilted-lucky-dips-200000-prize-pot-every-ticket-wins/",
+  "note": "The 201000 liability deliberately treats the separately stated £1000 end prize as additive to the £200000 headline, a stronger-than-real interpretation. If it is already included, full-pool economics are exactly 100%, not positive. In either interpretation the published 499-person cap makes full ownership impossible."
+}
