@@ -1,0 +1,59 @@
+{
+  "packet": "H324",
+  "checked_at": "2026-08-28",
+  "terminal_for_checked_cases": true,
+  "global_success": false,
+  "cases": [
+    {
+      "name": "Click free £10k / 40 winners",
+      "pool": 300000,
+      "sold_snapshot": 2367,
+      "player_cap": 49,
+      "winners": 40,
+      "ticket_price_gbp": 0.0,
+      "total_prize_gbp": 10000.0,
+      "minimum_external_already_sold": 2318,
+      "cap_fraction": 0.00016333333333333334,
+      "snapshot_external_can_fill_all_winner_slots": true,
+      "strict_cash_floor_gbp": 0.0
+    },
+    {
+      "name": "Click £1k LOW ODDS",
+      "pool": 149,
+      "sold_snapshot": 0,
+      "player_cap": 5,
+      "winners": 1,
+      "ticket_price_gbp": 9.99,
+      "total_prize_gbp": 1000.0,
+      "full_pool_cost_gbp": 1488.51,
+      "full_buyout_ratio": 0.6718127523496651,
+      "one_player_full_takeover_possible": false
+    },
+    {
+      "name": "Click £10k for 2p",
+      "pool": 1189995,
+      "sold_snapshot": 43224,
+      "player_cap": 50000,
+      "winners": 1,
+      "ticket_price_gbp": 0.02,
+      "total_prize_gbp": 10000.0,
+      "full_pool_cost_gbp": 23799.9,
+      "full_buyout_ratio": 0.42016983264635566,
+      "one_player_full_takeover_possible": false
+    },
+    {
+      "name": "Click £20k for 2p",
+      "pool": 1749999,
+      "sold_snapshot": 1055034,
+      "player_cap": 50000,
+      "winners": 1,
+      "ticket_price_gbp": 0.02,
+      "total_prize_gbp": 20000.0,
+      "minimum_external_already_sold": 1005034,
+      "full_pool_cost_gbp": 34999.98,
+      "full_buyout_ratio": 0.57142889795937,
+      "one_player_full_takeover_possible": false
+    }
+  ],
+  "reusable_gate": "For a k-winner finite draw, if at least k valid external entries can remain, a legal all-external winner set exists, so the player's strict cash floor from that draw is zero. For single-winner draws, any unavoidable external entry preserves a legal zero-prize outcome."
+}
