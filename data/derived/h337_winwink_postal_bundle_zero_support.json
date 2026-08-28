@@ -1,0 +1,18 @@
+{
+  "packet": "H337",
+  "candidate": "WinWink MYSTERY CASH! £5,000 Jackpot prize!",
+  "checked_date": "2026-08-28",
+  "live_close_date": "2026-09-05",
+  "total_identifiers": 122667,
+  "instant_win_identifiers": 13673,
+  "zero_instant_identifiers": 108994,
+  "paid_ticket_price_gbp": 0.30,
+  "second_class_stamp_gbp": 0.91,
+  "postal_tickets_per_submission": 3,
+  "worst_bundle_withdrawable_cash_gbp": 0.00,
+  "accepted_entry_worst_case_net_before_materials_gbp": -0.91,
+  "arithmetic_inconclusive": 0,
+  "execution_inconclusive": 0,
+  "strict_guaranteed_profit": false,
+  "state": "CLOSED_NOT_SUCCESS"
+}
