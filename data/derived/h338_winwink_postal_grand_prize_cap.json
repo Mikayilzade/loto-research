@@ -1,0 +1,31 @@
+{
+  "packet": "H338",
+  "checked_date": "2026-08-28",
+  "second_class_stamp_gbp": 0.91,
+  "ticket_price_gbp": 0.20,
+  "postal_tickets_per_submission": 4,
+  "candidates": [
+    {
+      "name": "NEW ARMAGEDDON Warhammer Launch Box",
+      "total_identifiers": 2000,
+      "per_person_cap": 300,
+      "minimum_external_identifiers": 1700,
+      "grand_prizes": 1,
+      "instant_win_layer": false,
+      "strict_cash_floor_gbp": 0.0
+    },
+    {
+      "name": "WARHAMMER Core Set: Necromunda Skirmish",
+      "total_identifiers": 1000,
+      "per_person_cap": 150,
+      "minimum_external_identifiers": 850,
+      "grand_prizes": 1,
+      "instant_win_layer": false,
+      "strict_cash_floor_gbp": 0.0
+    }
+  ],
+  "arithmetic_inconclusive": 0,
+  "execution_inconclusive": 0,
+  "strict_guaranteed_profit": false,
+  "state": "CLOSED_NOT_SUCCESS"
+}
