@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-08-28",
+  "packet": "H329",
+  "state": "CLOSED / CREDIT-RECYCLING DOES NOT FORCE CASH",
+  "live_pool_tickets": 75000,
+  "ticket_price_gbp": 0.25,
+  "full_paid_cost_gbp": 18750.0,
+  "favourable_liability_stress_gbp": 10100.0,
+  "favourable_full_pool_ratio": 0.5386666666666666,
+  "legal_site_credit_only_outcome": true,
+  "site_credit_directly_withdrawable_as_cash": false,
+  "credit_recycling_forces_positive_cash": false,
+  "strict_cash_floor_from_credit_recycling_alone_gbp": 0,
+  "sources": [
+    "https://toomuchcompetitions.co.uk/",
+    "https://www.competitionshowroom.com/competition/toomuchcompetitions-10000-bank-instant-flip-every-ticket-wins-100-end-prize",
+    "https://toomuchcompetitions.co.uk/draw-results/instant-win/",
+    "https://toomuchcompetitions.co.uk/competition/instantwin39-big-bank-25000-every-ticket-wins-end-prize-500/",
+    "https://toomuchcompetitions.co.uk/competition/double-or-nothing-10-20-in-too-much-credit-50-50-odds/"
+  ]
+}
