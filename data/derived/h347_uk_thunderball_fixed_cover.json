@@ -1,0 +1,30 @@
+{
+  "packet": "H347",
+  "game": "UK National Lottery Thunderball",
+  "matrix": "5/39 + 1/14 Thunderball",
+  "universe_lines": 8060598,
+  "line_price_gbp": 1,
+  "full_cover_cost_gbp": 8060598,
+  "advertised_fixed_prize_full_cover_gross_gbp": 4262568,
+  "deficit_gbp": 3798030,
+  "return_ratio": 0.5288153558830251,
+  "return_percent": 52.88153558830251,
+  "category_count_sum": 8060598,
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "categories": [
+    {"main_matches": 5, "thunderball_match": true, "count": 1, "prize_gbp": 500000, "gross_gbp": 500000},
+    {"main_matches": 5, "thunderball_match": false, "count": 13, "prize_gbp": 5000, "gross_gbp": 65000},
+    {"main_matches": 4, "thunderball_match": true, "count": 170, "prize_gbp": 250, "gross_gbp": 42500},
+    {"main_matches": 4, "thunderball_match": false, "count": 2210, "prize_gbp": 100, "gross_gbp": 221000},
+    {"main_matches": 3, "thunderball_match": true, "count": 5610, "prize_gbp": 20, "gross_gbp": 112200},
+    {"main_matches": 3, "thunderball_match": false, "count": 72930, "prize_gbp": 10, "gross_gbp": 729300},
+    {"main_matches": 2, "thunderball_match": true, "count": 59840, "prize_gbp": 10, "gross_gbp": 598400},
+    {"main_matches": 2, "thunderball_match": false, "count": 777920, "prize_gbp": 0, "gross_gbp": 0},
+    {"main_matches": 1, "thunderball_match": true, "count": 231880, "prize_gbp": 5, "gross_gbp": 1159400},
+    {"main_matches": 1, "thunderball_match": false, "count": 3014440, "prize_gbp": 0, "gross_gbp": 0},
+    {"main_matches": 0, "thunderball_match": true, "count": 278256, "prize_gbp": 3, "gross_gbp": 834768},
+    {"main_matches": 0, "thunderball_match": false, "count": 3617328, "prize_gbp": 0, "gross_gbp": 0}
+  ],
+  "conclusion": "CLOSED FOR THIS SCREEN — NOT SUCCESS. Under the advertised fixed prize table, an exact one-copy full cover returns 52.8815355883% of cost. The game's exceptional prize-cap/reduction provisions can only weaken this advertised-prize upper bound, not turn it into a strict guaranteed profit."
+}
