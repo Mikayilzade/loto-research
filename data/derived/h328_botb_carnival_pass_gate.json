@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-08-28",
+  "packet": "H328",
+  "state": "CLOSED / RANDOM-ALLOCATION ZERO-SUPPORT BLOCKED",
+  "max_ticket_identifiers": 999999,
+  "ticket_price_gbp": 1.29,
+  "instant_prizes_won": 4761,
+  "instant_prizes_left": 195204,
+  "snapshot_prize_identifiers": 199965,
+  "zero_instant_identifiers": 800034,
+  "documented_instant_entries": 15,
+  "favourable_pass_stress_entries": 209,
+  "all_zero_allocation_exists_for_209": true,
+  "strict_instant_cash_floor_gbp": 0,
+  "strict_end_draw_cash_floor_gbp": 0,
+  "full_paid_cost_gbp": 1289998.71,
+  "headline_liability_stress_gbp": 502000,
+  "headline_ratio": 0.3891476759693814,
+  "sources": [
+    "https://www.botb.com/prizes/instantwin",
+    "https://support.botb.com/hc/en-gb/articles/32649573626898-How-to-use-BOTB-Pass-tickets",
+    "https://www.botb.com/win",
+    "https://radubucur.com/botb-pass.html"
+  ]
+}
