@@ -1,0 +1,19 @@
+{
+  "closure": "CLOSED / RANDOM-ALLOCATION-AND-FREE-ROUTE-CAP BLOCKED",
+  "found_snapshot": 41,
+  "max_per_user": 999,
+  "paid_cost_for_same_10_tickets_gbp": 1.0,
+  "paid_price_gbp": 0.1,
+  "postal_cost_gbp": 0.91,
+  "postal_discount_vs_paid_fraction": 0.09,
+  "postal_effective_per_ticket_gbp": 0.091,
+  "postal_tickets": 10,
+  "remaining_instant_ids": 11988,
+  "remaining_tickets": 99683,
+  "remaining_zero_instant_ids": 87695,
+  "sold_snapshot": 316,
+  "strict_withdrawable_cash_floor_gbp": 0.0,
+  "total_instant_face_gbp": 5650.0,
+  "total_instant_ids": 12029,
+  "total_tickets": 99999
+}
