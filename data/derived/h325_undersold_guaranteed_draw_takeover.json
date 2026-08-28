@@ -1,0 +1,81 @@
+{
+  "packet": "H325",
+  "snapshot_date": "2026-08-28",
+  "mechanism": "undersold guaranteed finite single-winner draw residual takeover",
+  "theorem": "If any valid external entry already exists, a legal external-winner outcome remains and one-player strict cash floor from the main prize is zero. If no external entries exist, full deterministic takeover still requires max_per_player >= N. Economics are tested only after both structural gates pass.",
+  "draws": [
+    {
+      "name": "Elite £101,000 Cash",
+      "N": 4999999,
+      "sold_snapshot": 1,
+      "price_gbp": 0.05,
+      "liability_gbp": 101000.0,
+      "max_per_player": 20000,
+      "full_cost_gbp": 249999.95,
+      "full_buyout_ratio": 0.40400008080001615,
+      "max_control_fraction": 0.00400000080000016,
+      "external_entry_block": true,
+      "cap_block": true,
+      "strict_profit_possible": false
+    },
+    {
+      "name": "Clubhouse £250 Flash Cash",
+      "N": 499,
+      "sold_snapshot": 1,
+      "price_gbp": 1.0,
+      "liability_gbp": 250.0,
+      "max_per_player": 49,
+      "full_cost_gbp": 499.0,
+      "full_buyout_ratio": 0.501002004008016,
+      "max_control_fraction": 0.09819639278557114,
+      "external_entry_block": true,
+      "cap_block": true,
+      "strict_profit_possible": false
+    },
+    {
+      "name": "Competition Go £500",
+      "N": 180,
+      "sold_snapshot": 1,
+      "price_gbp": 5.0,
+      "liability_gbp": 500.0,
+      "max_per_player": 12,
+      "full_cost_gbp": 900.0,
+      "full_buyout_ratio": 0.5555555555555556,
+      "max_control_fraction": 0.06666666666666667,
+      "external_entry_block": true,
+      "cap_block": true,
+      "strict_profit_possible": false
+    },
+    {
+      "name": "Caddy £3k Mega Bundle",
+      "N": 21999,
+      "sold_snapshot": 1,
+      "price_gbp": 0.33,
+      "liability_gbp": 3000.0,
+      "max_per_player": 1467,
+      "full_cost_gbp": 7259.67,
+      "full_buyout_ratio": 0.4132419242196959,
+      "max_control_fraction": 0.06668484931133234,
+      "external_entry_block": true,
+      "cap_block": true,
+      "strict_profit_possible": false
+    },
+    {
+      "name": "Competition Go TUI + instants",
+      "N": 21600,
+      "sold_snapshot": 1,
+      "price_gbp": 0.25,
+      "liability_gbp": 3000.0,
+      "max_per_player": 1510,
+      "full_cost_gbp": 5400.0,
+      "full_buyout_ratio": 0.5555555555555556,
+      "max_control_fraction": 0.0699074074074074,
+      "external_entry_block": true,
+      "cap_block": true,
+      "strict_profit_possible": false
+    }
+  ],
+  "max_full_buyout_ratio": 0.5555555555555556,
+  "result": "CLOSED / TAKEOVER-BLOCKED",
+  "success": false
+}
