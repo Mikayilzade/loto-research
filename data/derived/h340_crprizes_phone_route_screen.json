@@ -1,0 +1,34 @@
+{
+  "packet": "H340",
+  "date": "2026-08-28",
+  "operator": "C&R Prizes",
+  "lane": "non-postal free-entry acquisition screen",
+  "governing_terms": {
+    "contractual_routes": ["paid online", "free postal"],
+    "schedule_1": "postal entry requirements only",
+    "page_footer_phone_copy_present": true,
+    "binding_phone_route_established": false,
+    "reason": "The governing HOW TO ENTER clause states there are two routes and names only paid online and free postal; Schedule 1 contains postal requirements. Footer/template phone copy conflicts with those governing terms and even points to Schedule 1 for phone rules that are not there."
+  },
+  "reference_instant_pool": {
+    "total_ids": 1000,
+    "listed_prize_ids": 100,
+    "withdrawable_cash_ids": 14,
+    "site_credit_ids": 86,
+    "zero_instant_ids": 900,
+    "arithmetic_inconclusive": 0,
+    "note": "Current search snapshots for the operator show a 1,000-ID instant-win product; the recovered prize vector has 100 listed prize IDs. Because this packet closes the phone acquisition route on governing-terms grounds, it does not rely on current ticket price for closure."
+  },
+  "closure": {
+    "success": false,
+    "route_closed": true,
+    "global_research_exhausted": false,
+    "execution_inconclusive_relevant_to_route_closure": 0
+  },
+  "sources": [
+    "https://www.crprizes.co.uk/terms-condition/",
+    "https://www.crprizes.co.uk/how-to-play/",
+    "https://www.crprizes.co.uk/active-draws/",
+    "https://www.crprizes.co.uk/raffle/instant-wins-2500-in-cash-site-credit-prizes/"
+  ]
+}
