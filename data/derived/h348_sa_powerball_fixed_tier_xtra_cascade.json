@@ -1,0 +1,36 @@
+{
+  "packet": "H348",
+  "game": "South Africa PowerBall / PowerBall XTRA (post-June-2026)",
+  "matrix": {"main_pool": 50, "main_pick": 5, "powerball_pool": 16},
+  "legal_boards": 33900160,
+  "partition_sum": 33900160,
+  "winning_cells": {
+    "5+PB": 1,
+    "5": 15,
+    "4+PB": 225,
+    "4": 3375,
+    "3+PB": 9900,
+    "3": 148500,
+    "2+PB": 141900,
+    "1+PB": 744975,
+    "PB_only": 1221759
+  },
+  "main": {
+    "price_per_board_rand": 10,
+    "full_cover_cost_rand": 339001600,
+    "fixed_tier_gross_rand": 67857090,
+    "fixed_tier_return": 0.200167465284
+  },
+  "xtra": {
+    "incremental_price_per_board_rand": 5,
+    "full_cover_incremental_cost_rand": 169500800,
+    "fixed_tier_gross_rand": 33928545,
+    "combined_cost_rand": 508502400,
+    "combined_fixed_gross_rand": 101785635,
+    "combined_fixed_return": 0.200167465284,
+    "jackpot_cascade_forcible_by_nonempty_portfolio": false
+  },
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "result": "CLOSED_NOT_SUCCESS"
+}
