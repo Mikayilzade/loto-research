@@ -1,0 +1,27 @@
+{
+  "packet": "H345",
+  "checked_at": "2026-08-29",
+  "candidate": "Palladium Competitions — Always A Winner Every Ticket Wins Over £100,000 Worth of Instant Wins",
+  "total_ids": 20000,
+  "ticket_price_gbp": 10.0,
+  "per_person_cap": 1000,
+  "advertised_min_prize_gbp": 2.0,
+  "advertised_max_prize_gbp": 2000.0,
+  "second_class_postage_gbp": 0.91,
+  "accepted_entry_postage_only_floor_gbp": 1.09,
+  "dispatch_without_acceptance_floor_gbp": -0.91,
+  "governing_route": {
+    "free_postal": true,
+    "proof_of_posting_guarantees_entry": false,
+    "lost_delayed_misdirected_branch_expressly_preserved": true,
+    "cap_before_receipt_voids_entry": true,
+    "paid_and_free_entries_same_prize_allocator_once_accepted": true
+  },
+  "source_warning_demo_store_no_orders_fulfilled": true,
+  "full_instant_prize_vector_reconstructed": false,
+  "full_vector_required_for_closure": false,
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_acceptance_inconclusive": 0,
+  "state": "CLOSED_NOT_SUCCESS",
+  "next_action": "Require binding zero-cost digital/telephone/free-web accepted allocation before exact payout work; ordinary positive-cost postal dispatch with a legal zero-entry branch cannot give strict guaranteed profit."
+}
