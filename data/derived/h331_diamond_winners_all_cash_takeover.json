@@ -1,0 +1,39 @@
+{
+  "packet": "H331",
+  "checked_date": "2026-08-28",
+  "mechanism": "Diamond Winners historical Every Ticket Wins all-cash finite pool",
+  "competition_closed": "2026-06-14",
+  "snapshot": {
+    "total_ids": 19999,
+    "entry_price_gbp": 0.59,
+    "max_per_person": 19999,
+    "end_prize_gbp": 150.0
+  },
+  "cash_classes": [
+    {"cash_gbp":500.0,"count":2},
+    {"cash_gbp":250.0,"count":3},
+    {"cash_gbp":100.0,"count":6},
+    {"cash_gbp":50.0,"count":12},
+    {"cash_gbp":20.0,"count":30},
+    {"cash_gbp":10.0,"count":60},
+    {"cash_gbp":5.0,"count":120},
+    {"cash_gbp":1.0,"count":100},
+    {"cash_gbp":0.50,"count":400},
+    {"cash_gbp":0.25,"count":1200},
+    {"cash_gbp":0.10,"count":5000},
+    {"cash_gbp":0.05,"count":10000},
+    {"cash_gbp":0.05,"count":3066}
+  ],
+  "validated_totals": {
+    "class_count_sum": 19999,
+    "instant_cash_gbp": 6503.30,
+    "full_online_cost_gbp": 11799.41,
+    "full_takeover_gross_including_end_prize_gbp": 6653.30,
+    "full_takeover_return_pct": 56.386718,
+    "break_even_ticket_price_gbp": 0.332681634,
+    "required_additional_discount_pct": 43.613282,
+    "inconclusive_checks": 0
+  },
+  "state": "CLOSED / ALL-CASH FLOOR BUT ECONOMICS BELOW BREAK-EVEN",
+  "reason": "This is structurally stronger than H329/H330 because every identifier has positive cash and the per-person cap equals the whole finite pool. Nevertheless, owning all 19,999 IDs at the stated online price costs GBP 11,799.41 while all instant cash plus the guaranteed GBP 150 end prize totals only GBP 6,653.30."
+}
