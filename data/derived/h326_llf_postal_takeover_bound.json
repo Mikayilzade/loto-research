@@ -1,0 +1,21 @@
+{
+  "full_online_cost_gbp": 696.5,
+  "full_online_gross_ratio": 0.5025125628140703,
+  "full_postal_cost_gbp": 318.5,
+  "full_postal_gross_ratio": 1.098901098901099,
+  "full_postal_surplus_gbp": 31.5,
+  "max_per_person": 35,
+  "minimum_external_ids_now_if_all_allowed_entries_were_already_ours": 0,
+  "online_price_gbp": 1.99,
+  "player_cap_share": 0.1,
+  "prize_gbp": 350.0,
+  "remaining_postal_cost_gbp": 309.4,
+  "remaining_postal_gross_ratio_if_all_remaining_controlled": 1.1312217194570136,
+  "remaining_postal_surplus_if_all_remaining_controlled_gbp": 40.6,
+  "remaining_tickets": 340,
+  "second_class_postage_gbp": 0.91,
+  "sold_snapshot": 10,
+  "strict_one_player_guaranteed_cash_floor_gbp": 0.0,
+  "total_tickets": 350,
+  "uncontrollable_ids_even_from_zero": 315
+}
