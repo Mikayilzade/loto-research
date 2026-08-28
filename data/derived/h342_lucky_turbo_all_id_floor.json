@@ -1,0 +1,40 @@
+{
+  "packet": "H342",
+  "date": "2026-08-28",
+  "candidate": "Lucky Turbo Free Credit Raffle #28",
+  "close_date": "2026-08-31",
+  "total_identifiers": 100,
+  "prize_vector_site_credit_gbp": [
+    {"value": 20.0, "count": 1},
+    {"value": 1.0, "count": 5},
+    {"value": 0.5, "count": 5},
+    {"value": 0.2, "count": 10},
+    {"value": 0.1, "count": 79}
+  ],
+  "prize_identifiers": 100,
+  "zero_prize_identifiers": 0,
+  "aggregate_site_credit_gbp": 37.4,
+  "minimum_site_credit_face_value_gbp": 0.1,
+  "governing_terms": {
+    "binding_zero_cost_online_free_route": false,
+    "free_entry_defined_as_postal": true,
+    "site_credit_unconditionally_exchangeable_for_cash": false,
+    "conditional_unavailability_substitution_is_cashout_right": false
+  },
+  "minimum_withdrawable_cash_gbp": 0.0,
+  "validation": {
+    "identifier_arithmetic_inconclusive": 0,
+    "route_inconclusive_relevant_to_closure": 0,
+    "prize_convertibility_inconclusive_relevant_to_closure": 0
+  },
+  "closure": {
+    "success": false,
+    "packet_closed": true,
+    "global_research_exhausted": false
+  },
+  "sources": [
+    "https://luckyturbo.co.uk/competition/free-credit-raffle-1a0636-ld9gki-604n15",
+    "https://luckyturbo.co.uk/terms",
+    "https://luckyturbo.co.uk/how-it-works"
+  ]
+}
