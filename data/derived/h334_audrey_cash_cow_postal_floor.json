@@ -1,0 +1,19 @@
+{
+  "packet": "H334",
+  "date": "2026-08-28",
+  "mechanism": "live per-entry postal all-cash floor",
+  "operator": "Audrey Competitions",
+  "game": "Cash Cow - Every Ticket Wins!",
+  "live_snapshot_sold": 2840,
+  "total_identifiers": 15125,
+  "prize_identifiers_reconciled": 15125,
+  "instant_cash_reconciled_gbp": 20075,
+  "minimum_cash_per_identifier_gbp": 1.0,
+  "current_second_class_postage_gbp": 0.91,
+  "stamp_only_net_floor_gbp": 0.09,
+  "stamp_only_gross_percent": 109.8901098901,
+  "arithmetic_inconclusive": 0,
+  "execution_inconclusive": 2,
+  "success": false,
+  "closure": "live positive arithmetic candidate, but strict all-in execution not established: A5 postcard/material/fulfilment cost must fit inside 9p margin and terms bar computer-generated entries / permit spirit-intention disqualification; UK-resident eligibility also applies"
+}
