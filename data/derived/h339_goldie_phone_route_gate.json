@@ -1,0 +1,20 @@
+{
+  "packet": "H339",
+  "checked_date": "2026-08-28",
+  "candidate": "Goldie Lucks Every Other Ticket Wins!",
+  "state": "OPEN",
+  "total_ids": 37500,
+  "instant_win_ids": 18750,
+  "zero_instant_ids": 18750,
+  "zero_instant_fraction": 0.5,
+  "paid_ticket_price_gbp": 2.5,
+  "end_prize_gbp": 1000.0,
+  "second_class_postage_gbp": 0.91,
+  "single_postal_worst_instant_cash_gbp": 0.0,
+  "single_postal_worst_net_gbp": -0.91,
+  "arithmetic_inconclusive": 0,
+  "phone_route_current_candidate": false,
+  "phone_route_rule": "Only raffles with <4 days launch-to-close and a Quick Draw tag; otherwise postal route.",
+  "full_multi_entry_candidate_closed": false,
+  "next_action": "Search live Quick Draw-tagged free-phone competitions and compute exact worst-case withdrawable cash over reachable allocations."
+}
