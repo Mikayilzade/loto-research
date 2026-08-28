@@ -1,0 +1,28 @@
+{
+  "packet": "H344",
+  "candidate": "Lake District Giveaways - Every Ticket Wins - PRIZE GRABBER",
+  "checked_on": "2026-08-28",
+  "state": "CLOSED_NOT_SUCCESS",
+  "total_ids": 81020,
+  "prize_vector": {
+    "cash_0_50_ids": 80000,
+    "cash_5_00_ids": 1000,
+    "prize_grabber_ids": 20
+  },
+  "reconciled_total_ids": 81020,
+  "ticket_price_gbp": 1.99,
+  "second_class_postage_gbp": 0.91,
+  "postal_tickets_per_submission": 1,
+  "minimum_ordinary_cash_gbp": 0.50,
+  "ordinary_cash_net_floor_gbp": -0.41,
+  "strict_withdrawable_cash_floor_gbp": 0.0,
+  "strict_net_floor_gbp": -0.91,
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "notes": [
+    "Prize vector reconciles exactly: 80000 + 1000 + 20 = 81020.",
+    "Ticket price exceeds Second Class stamp cost, so LDG multiple-ticket balancing clause does not apply.",
+    "Even the minimum ordinary cash ticket loses 41p versus postage before material/labour costs.",
+    "Prize Grabber outcomes include non-cash prizes and governing T&C 6.2 gives no cash alternative unless otherwise stated."
+  ]
+}
