@@ -1,0 +1,16 @@
+{
+  "packet": "H346",
+  "game": "Weekday Windfall / Millionaire Medley",
+  "state": "CLOSED_FOR_THIS_SCREEN_NOT_SUCCESS",
+  "space": 8145060,
+  "published_ticket_unit": {"aud": 2.0, "games": 3},
+  "full_cover_cost_aud": 5430040,
+  "division_counts": {"D1": 1, "D2": 12, "D3": 222, "D4": 11115, "D5": 27380, "D6": 56610},
+  "total_prize_eligible_lines": 95340,
+  "d1_max_ordinary_receipt_aud": 1000000,
+  "required_lower_tier_receipt_to_break_even_aud": 4430040,
+  "d1_rule": "A$1m per winner for up to six winners; A$6m pool shared if seven or more winners",
+  "blocker": "lower divisions needed for economics are share-based and no hard pre-draw external-duplicate cap establishes a strict floor",
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0
+}
