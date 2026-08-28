@@ -1,0 +1,17 @@
+{
+  "packet":"H332",
+  "checked_date":"2026-08-28",
+  "mechanism":"Win A Million Cash Grab all-cash postal takeover",
+  "total_ids":10000,
+  "postal_cost_per_entry_gbp":0.91,
+  "instant_cash_gbp":16719,
+  "main_draw_gbp":100,
+  "full_postal_cost_gbp":9100,
+  "full_gross_gbp":16819,
+  "return_pct":184.824176,
+  "surplus_gbp":7719,
+  "break_even_entry_cost_gbp":1.6819,
+  "inconclusive_checks":0,
+  "state":"CLOSED / ARITHMETIC >100%, EXECUTION NOT GUARANTEED",
+  "blockers":["postal processing delay","rollover when tickets unavailable","separate-postcard requirement","anti-syndicate/anti-exploit discretion","no atomic full-pool reservation"]
+}
