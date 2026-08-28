@@ -1,0 +1,22 @@
+{
+  "packet": "H336",
+  "candidate": "WinWink POKEMON MEGA PACK CHARIZARD RIP",
+  "checked_date": "2026-08-28",
+  "live_close_date": "2026-08-29",
+  "total_identifiers": 7274,
+  "published_count_sum": 7274,
+  "count_inconclusive": 0,
+  "all_cash_alternative_liability_gbp": 9159.10,
+  "paid_ticket_price_gbp": 2.50,
+  "second_class_stamp_gbp": 0.91,
+  "postal_tickets_per_submission": 1,
+  "minimum_legal_withdrawable_cash_gbp": 0.08,
+  "minimum_cash_identifier_count": 3215,
+  "accepted_entry_worst_case_net_before_materials_gbp": -0.83,
+  "transport_non_delivery_branch": true,
+  "tracked_or_signed_free_route_allowed": false,
+  "arithmetic_inconclusive": 0,
+  "execution_inconclusive": 0,
+  "strict_guaranteed_profit": false,
+  "state": "CLOSED_NOT_SUCCESS"
+}
