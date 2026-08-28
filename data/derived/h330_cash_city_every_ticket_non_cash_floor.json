@@ -1,0 +1,29 @@
+{
+  "packet": "H330",
+  "checked_date": "2026-08-28",
+  "mechanism": "Cash City Ticket Bundle — EVERY TICKET WINS",
+  "snapshot": {
+    "total_ids": 150,
+    "sold": 53,
+    "left": 97,
+    "max_per_person": 15,
+    "entry_price_gbp": 2.5,
+    "main_prize": "GBP 20 site credit"
+  },
+  "instant_classes": [
+    {"name":"3 Paw Patrol tickets + 1 site-credit ticket","total":40,"left":28},
+    {"name":"3 Paw Patrol tickets + 1 Dior ticket","total":20,"left":14},
+    {"name":"14 SnoozeBand tickets","total":36,"left":25},
+    {"name":"7 Dior tickets","total":22,"left":12},
+    {"name":"GBP 2.50 site credit","total":32,"left":18}
+  ],
+  "validated_totals": {
+    "instant_class_total_sum": 150,
+    "instant_class_left_sum": 97,
+    "sold_plus_left": 150,
+    "inconclusive_checks": 0
+  },
+  "strict_withdrawable_cash_floor_gbp": 0.0,
+  "state": "CLOSED / NON-CASH EVERY-TICKET-WINS",
+  "reason": "Every published instant outcome is site credit or entries into other competitions; the main prize is also site credit. No cash alternative is stated for this competition, while governing terms say an alternative cash prize is available only when offered in the prize description. Therefore 'every ticket wins' does not imply positive withdrawable cash on every legal outcome."
+}
