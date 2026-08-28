@@ -1,0 +1,16 @@
+{
+  "packet": "H333",
+  "date": "2026-08-28",
+  "mechanism": "per-entry postal all-cash floor",
+  "historical_game": "Win A Million Cash Grab",
+  "tickets_reconciled": 10000,
+  "instant_cash_reconciled_gbp": 16719,
+  "minimum_cash_gbp": 1.0,
+  "current_second_class_postage_gbp": 0.91,
+  "one_accepted_entry_net_floor_gbp": 0.09,
+  "one_accepted_entry_gross_percent": 109.8901098901,
+  "arithmetic_inconclusive": 0,
+  "execution_temporal_inconclusive": 1,
+  "success": false,
+  "closure": "current strategy not established: qualifying game historical; verified postal terms post-date its close; no live equivalent evidenced"
+}
