@@ -1,32 +1,39 @@
 # H334 STATUS
 
 Updated: 2026-08-28
-State: **ЕЩЁ НЕ УСПЕХ — LIVE POSITIVE POSTAL FLOOR CANDIDATE; EXECUTION NOT YET RIGOROUS**
+State: **CLOSED — ARITHMETIC POSITIVE, STRICT EXECUTION GUARANTEE FAILS**
 
 H225-X* was checked first and remains CLOSED / EXHAUSTED at X20: 44 canonical shards, 11 sectors, exactly 306,450 quotient states, 0 coefficient survivors, 0 legal shift tuples. No X21/X22 was created.
 
-## New live candidate
-Audrey Competitions currently lists `Cash Cow - Every Ticket Wins!` with 15,125 total identifiers. The published prize vector is entirely cash and reconciles exactly:
+## Candidate recap
+Audrey Competitions currently lists `Cash Cow - Every Ticket Wins!` with 15,125 total identifiers. The published all-cash prize vector reconciles exactly:
 
 `6x£300 + 6x£200 + 6x£100 + 10x£50 + 12x£25 + 15x£15 + 20x£10 + 50x£5 + 15,000x£1`
 
-Counts: **15,125 / 15,125**. Total instant cash: **£20,075**. Minimum cash on every identifier: **£1**. Live snapshot checked 2026-08-28 showed 2,840 / 15,125 sold.
+Counts: **15,125 / 15,125**. Total instant cash: **£20,075**. Minimum cash on every identifier: **£1**. Arithmetic inconclusive: **0**.
 
-The same competition page publishes a free postal route requiring a separate unenclosed A5 postcard per free entry. Audrey's current Terms say qualifying free-route instant-win entrants are assigned an entry number using an RNG. Because every identifier pays at least £1 cash, identifier randomness, external entrants, and pool takeover are irrelevant to the per-entry floor.
+Current Royal Mail Second Class standard-letter postage is **£0.91**. Audrey requires a separate unenclosed A5 postcard for each free entry. A5 (210 x 148 mm) is within Royal Mail's standard-letter 240 x 165 mm size envelope, so the 91p rate is applicable if weight/thickness remain within the standard-letter limits.
 
-At the current Royal Mail Second Class stamp price of £0.91, the stamp-only floor is:
+The material-cost hurdle is not the decisive blocker. Current UK bulk A5 postcard printing can be sourced below the remaining 9p margin at sufficiently large quantities; e.g. Spingold publishes A5 black single-sided 5,000 for £180 before VAT (=3.6p/card before VAT, 4.32p/card at 20% VAT). A compliant approach can therefore use pre-cut/preprinted blank stock and hand-complete the entrant-specific fields, avoiding an automatically computer-generated entry.
 
-`£1.00 - £0.91 = +£0.09`, or **109.8901098901% gross** per accepted entry.
+Under that physical-cost benchmark, one accepted entry has an indicative direct-cash cost of about **£0.9532** and a minimum £1 cash outcome, or about **+£0.0468** before valuing the entrant's own manual labour. Five accepted minimum-win entries also clear Audrey's £5 wallet withdrawal threshold.
 
-Arithmetic reconciliation has **0 inconclusive checks**.
+## Rigorous execution blocker
+The current Audrey terms make strict acceptance impossible to guarantee through the free route:
 
-## Why this is not SUCCESS yet
-Strict project rules require all real execution costs and eligibility/acceptance risk. Two execution conditions remain unresolved:
+- free entries must be **received** before closing/cap;
+- proof of posting does **not** guarantee entry;
+- entries lost or delayed are not the Promoter's responsibility;
+- hand delivery is explicitly rejected;
+- recorded-delivery entries are explicitly rejected;
+- incomplete/illegible/non-compliant entries can be disqualified;
+- the Promoter also retains the normal eligibility/spirit-of-competition disqualification provisions.
 
-1. the free route requires an **unenclosed A5 postcard**, so stamp-only arithmetic leaves only £0.09 for card stock, printing/writing and any fulfilment cost. Cheap bulk mail services can quote below £1 all-in, but the checked Audrey Terms reject automatically computer-generated entries and reserve disqualification for conduct contrary to the spirit/intention of the competition. A fully compliant scalable all-in route below £1 per accepted entry is therefore not yet rigorously established;
-2. eligibility is limited to UK residents aged 18+, so executability must be stated for an eligible UK entrant rather than assumed universally.
+Thus even a correctly prepared, low-cost postcard has a legal/physical execution branch in which it is delayed or lost and never becomes an accepted ticket. In that branch the £1 prize floor is never acquired while the postage/material spend is incurred. Therefore the strict guaranteed net floor for the attempted strategy is negative, not positive.
 
-No claim of guaranteed profit is made while either execution condition remains unresolved.
+This closes H334 for the project's **strict guarantee** target. The economics remain a genuine positive conditional-on-acceptance near-hit, but they are not a rigorous guaranteed-profit construction.
+
+Eligibility remains UK residents aged 18+; that condition is explicit rather than an inconclusive arithmetic issue.
 
 ## NEXT ACTION
-Test the H334 candidate at the execution layer only: establish a clearly compliant, non-automated A5-postcard all-in marginal cost below £1 and verify whether Audrey imposes any per-user/postal-entry cap or other condition that can make a valid free entry discretionary. If those checks become zero-inconclusive, recompute the net floor and evaluate whether H334 reaches SUCCESS under explicit UK-resident eligibility.
+Do not repeat Audrey/Cash Cow prize arithmetic. Search for a live all-cash or minimum-cash-per-ID free-entry mechanism where the entrant can obtain **binding acceptance/identifier issuance before incurring irreversible marginal cost**, or where the permitted delivery method itself carries an enforceable arrival/acceptance guarantee and its all-in cost remains below the minimum withdrawable cash floor.
