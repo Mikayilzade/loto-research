@@ -1,0 +1,45 @@
+{
+  "packet": "H341",
+  "date": "2026-08-28",
+  "lane": "binding non-postal free-phone entry",
+  "theorem": "finite per-person cap + one random winner + legally possible external valid entry => player worst-case gross is 0",
+  "candidates": [
+    {
+      "operator": "Global",
+      "promotion": "Cash Call £700,000",
+      "close_date": "2026-08-28",
+      "binding_phone_route": true,
+      "player_free_phone_cap": 300,
+      "winner_count": 1,
+      "external_paid_routes_legal": true,
+      "worst_case_player_gross_gbp": 0,
+      "strict_positive_guarantee_at_zero_call_cost": false
+    },
+    {
+      "operator": "Bauer Radio Limited",
+      "promotion": "Make Me A Winner £400,000",
+      "close_date": "2026-09-04",
+      "binding_phone_route": true,
+      "player_phone_cap": 250,
+      "winner_count": 1,
+      "external_paid_routes_legal": true,
+      "worst_case_player_gross_gbp": 0,
+      "strict_positive_guarantee_at_zero_call_cost": false
+    }
+  ],
+  "validation": {
+    "arithmetic_inconclusive": 0,
+    "route_inconclusive_relevant_to_closure": 0,
+    "execution_inconclusive_relevant_to_closure": 0
+  },
+  "closure": {
+    "success": false,
+    "class_closed": "finite-cap single-winner public free-phone draws",
+    "global_research_exhausted": false
+  },
+  "sources": [
+    "https://winplus.heart.co.uk/competition/cashcall/terms-and-conditions",
+    "https://www.winplus.co.uk/competition/13037/cash-call",
+    "https://makemeawinner.co.uk/campaign/MAKEMEAWINNER400K_WINHAPPY"
+  ]
+}
