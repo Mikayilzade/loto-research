@@ -1,0 +1,35 @@
+{
+  "packet": "H343",
+  "date": "2026-08-28",
+  "candidate": "Jackpotz Competitions Trash or Treasure?",
+  "live_end_date": "2026-09-13",
+  "standard_ticket_price_gbp": 0.15,
+  "second_class_stamp_gbp": 0.91,
+  "postal_rounding_rule": "ceil(stamp_value / ticket_price)",
+  "allocated_tickets_per_valid_postal_submission": 7,
+  "advertised_every_ticket_wins": true,
+  "advertised_minimum_win_gbp": 0.03,
+  "favorable_assumption": "Treat the advertised 3p minimum on every allocated ticket as withdrawable cash, even if actual low outcomes may include site coins.",
+  "favorable_bundle_floor_gbp": 0.21,
+  "net_before_postcard_and_labour_gbp": -0.70,
+  "necessary_condition_passed": false,
+  "validation": {
+    "allocation_arithmetic_inconclusive": 0,
+    "postage_price_inconclusive": 0,
+    "prize_vector_inconclusive_relevant_to_closure": 0,
+    "cash_convertibility_inconclusive_relevant_to_closure": 0,
+    "mail_execution_inconclusive_relevant_to_closure": 0
+  },
+  "closure": {
+    "success": false,
+    "packet_closed": true,
+    "global_research_exhausted": false
+  },
+  "sources": [
+    "https://jackpotzcompetitions.com/app/",
+    "https://jackpotzcompetitions.com/shop/",
+    "https://jackpotzcompetitions.com/postal-entry/",
+    "https://jackpotzcompetitions.com/terms-conditions/",
+    "https://www.royalmail.com/sending/uk/2nd-class"
+  ]
+}
