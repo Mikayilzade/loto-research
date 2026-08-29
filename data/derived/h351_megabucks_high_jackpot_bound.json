@@ -1,0 +1,22 @@
+{
+  "packet": "H351",
+  "game": "Massachusetts Megabucks",
+  "draw_date": "2026-08-29",
+  "matrix": "6/44",
+  "play_price_usd": 2,
+  "cover_lines": 7059052,
+  "cover_cost_usd": 14118104,
+  "match_counts": {"6": 1, "5": 228, "4": 10545, "3": 168720, "2": 1107225, "1": 3011652, "0": 2760681},
+  "fixed_lower_gross_usd": 3923880,
+  "advertised_annuity_jackpot_usd": 28600000,
+  "isolated_nominal_gross_usd": 32523880,
+  "isolated_nominal_net_usd": 18405776,
+  "stress_assumption": "impossibly favorable: add 100% of our cover cost to advertised jackpot before sharing",
+  "dominating_jackpot_usd": 42718104,
+  "first_external_duplicate_count_below_cost": 4,
+  "gross_upper_at_four_external_duplicates_usd": 12467500.8,
+  "net_upper_at_four_external_duplicates_usd": -1650603.2,
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "strict_guaranteed_profit": false
+}
