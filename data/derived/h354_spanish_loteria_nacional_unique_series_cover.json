@@ -1,0 +1,38 @@
+{
+  "packet": "H354",
+  "as_of_date": "2026-08-29",
+  "candidate": "Spain Loteria Nacional Thursday finite unique-series/fraction takeover",
+  "official_draw_model": {
+    "numbers_per_series": 100000,
+    "series": 6,
+    "billete_price_eur": 30,
+    "decimos_per_billete": 10,
+    "decimo_price_eur": 3,
+    "issue_eur": 18000000,
+    "prize_pool_eur": 12600000,
+    "prize_pool_fraction": 0.7
+  },
+  "exact_one_fraction_one_series_cover": {
+    "entries": 100000,
+    "cost_eur": 300000,
+    "guaranteed_gross_eur": 210000,
+    "net_eur": -90000,
+    "return_fraction": 0.7
+  },
+  "impossible_perfect_full_issue_takeover": {
+    "cost_eur": 18000000,
+    "gross_eur": 12600000,
+    "net_eur": -5400000,
+    "return_fraction": 0.7
+  },
+  "structural_result": {
+    "duplicate_dilution": false,
+    "finite_identifiers": true,
+    "all_numbers_covered": true,
+    "economic_closure": "CLOSED_BELOW_BREAK_EVEN"
+  },
+  "validation": {
+    "arithmetic_inconclusive": 0,
+    "closure_relevant_inconclusive": 0
+  }
+}
