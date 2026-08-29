@@ -14,7 +14,7 @@ H225-X* is terminal. `research/H225_EXACT_STATUS.md` says X20 = 0 coefficient su
 ---
 
 ## STAGE 0 — SYNC AND PROTECT
-Status: TODO
+Status: COMPLETE
 
 1. Read:
    - `STATUS.md`
@@ -32,7 +32,7 @@ Exit condition:
 ---
 
 ## STAGE 1 — BUILD THE REAL H-PACKET INVENTORY
-Status: TODO
+Status: COMPLETE
 
 The root `STATUS.md` is stale around H268 while the branch has progressed to at least H357. Build a machine-readable inventory rather than fixing this by hand.
 
@@ -64,7 +64,7 @@ Exit condition:
 ---
 
 ## STAGE 2 — RECONCILE THE PROJECT STATUS
-Status: TODO
+Status: COMPLETE
 
 Repair the stale project-level navigation without deleting historical detail.
 
@@ -90,7 +90,7 @@ Exit condition:
 ---
 
 ## STAGE 3 — COMPRESS FAILURES INTO REUSABLE FILTERS
-Status: TODO
+Status: COMPLETE
 
 Stop treating each failed game as isolated. Group the research into general blockers/lemmas.
 
@@ -124,7 +124,7 @@ Exit condition:
 ---
 
 ## STAGE 4 — RANK THE NEAR-HITS AND REOPEN CONDITIONS
-Status: TODO
+Status: COMPLETE
 
 Create:
 - `research/NEAR_HITS_AND_REOPEN_CONDITIONS.md`
@@ -148,7 +148,7 @@ Exit condition:
 ---
 
 ## STAGE 5 — DEFINE THE NEW SEARCH PLAYBOOK
-Status: TODO
+Status: COMPLETE
 
 Create:
 - `research/NEXT_SEARCH_PLAYBOOK.md`
@@ -178,7 +178,7 @@ Exit condition:
 ---
 
 ## STAGE 6 — USE REMAINING SESSION TIME ON THE BEST NEW LEAD
-Status: TODO
+Status: COMPLETE
 
 Only start this stage after Stages 0-5 are COMPLETE.
 
@@ -197,7 +197,7 @@ Exit condition:
 ---
 
 ## STAGE 7 — FINAL SESSION REPORT
-Status: TODO
+Status: COMPLETE
 
 Create/update:
 - `research/CODEX_SESSION_2026-08-29.md`
