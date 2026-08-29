@@ -107,7 +107,7 @@
     {
       "h_number": 5,
       "name": "nonlinear portfolio / pricing / promotion overlay screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -156,7 +156,7 @@
     {
       "h_number": 11,
       "name": "lawful visible pre-purchase information leakage",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -180,7 +180,7 @@
     {
       "h_number": 15,
       "name": "crowd-choice / anti-popularity sharing edge",
-      "state": "OPEN",
+      "state": "UNCLASSIFIED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -193,7 +193,7 @@
     {
       "h_number": 18,
       "name": "Virginia Lucky Contestant hidden daily time-state",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -603,7 +603,7 @@
     {
       "h_number": 122,
       "name": "Florida Millionaire Raffle 2026 undersubscription overlay",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 57.045,
       "key_files": [
@@ -720,7 +720,7 @@
     {
       "h_number": 131,
       "name": "global `Nth` lottery coupon allocation / deterministic tranche test",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "H131 validates that deterministic lottery promotion subsidies **large enough to invert ticket cost really do exist** — Lotto Love is the cleanest proof, with a $208 coupon attached to a $104 qualifying Advance Play purchase when the coupon hits.",
       "best_reported_ratio_percent": 200.0,
       "key_files": [
@@ -798,7 +798,7 @@
     {
       "h_number": 137,
       "name": "Kentucky stacked referral + 100% first-deposit match + Pick 3 Pair cover",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Simultaneous August promotion overlap: VALIDATED. Stacked subsidy arithmetic: VALIDATED conditionally. Minimum external cash for Pair cover if stackable: $15. Conditional pre-tax guaranteed payout: $30, surplus +$15 / +100% external-cash ROI. Terminal SUCCESS: NOT ESTABLISHED** because stackability, award timing, complete-basket pre-acceptance and tax are not locked before the non-withdrawable deposit.",
       "best_reported_ratio_percent": 60.0,
       "key_files": [
@@ -811,7 +811,7 @@
     {
       "h_number": 138,
       "name": "cross-state >=100% lottery-bonus + compact fixed-prize coverage screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Kentucky cart/batch UI: **operationally helpful, not an atomic acceptance lock**. Kentucky H136/H137: **still best current validated positive-cover arithmetic, not terminal SUCCESS**. Delaware current 100% welcome bonus: **validated, but 50% digit cover reaches only break-even and iLottery is eInstant/playthrough oriented**. New Hampshire Pick 3: **50% deterministic partition ratio; no authoritative current >100% one-pass draw-game subsidy validated**. Terminal state: **NO SUCCESS; NOT EXHAUSTED**.",
       "best_reported_ratio_percent": 100.0,
       "key_files": [
@@ -824,7 +824,7 @@
     {
       "h_number": 139,
       "name": "Kentucky concurrent deposit-promo stack + Pick 3 Pair coverage",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Current concurrent Kentucky deposit promotions: VALIDATED. Tiki Tuesday + first-deposit conditional cover: up to +$80 pre-tax floor. Summer Friday + first-deposit conditional cover: up to +$80 pre-tax floor. Either $50 deposit promo + referral + first-match: discrete optimum tested at +$90 pre-tax. Registration $5 correctly excluded from Pick 3 because current offer is Instant-Play-specific. Stackability: NOT CONTRACTUALLY PROVEN. Complete-basket acceptance before irreversible funding: STILL NOT LOCKED. Terminal SUCCESS: NOT ESTABLISHED.",
       "best_reported_ratio_percent": 125.0,
       "key_files": [
@@ -876,7 +876,7 @@
     {
       "h_number": 143,
       "name": "Virginia Rewards exact-gate + >75% compact Keno screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "1. **No current >25% pre-committed Virginia Keno subsidy was verified from public primary sources. 2. **Exact Rewards free-play dollar denomination is public-web/login gated; do not assume point value. 3. **Virginia 75% remains the best verified compact Keno fixed-prize cover among Virginia, Massachusetts, Pennsylvania, Ohio and Delaware controls. 4. Massachusetts' deterministic 10% long-play discount is real but raises effective cover only to ~69.44%, still below Virginia. 5. Terminal SUCCESS remains unproven.",
       "best_reported_ratio_percent": 75.0,
       "key_files": [
@@ -889,7 +889,7 @@
     {
       "h_number": 144,
       "name": "Nebraska municipal Keno special-paytable / free-play route",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "New current lottery-specific structural class VALIDATED:** Nebraska municipal keno allows periodic special paytables + free-play coupons inside a regulated fixed-prize framework. Current Big Red community-special infrastructure VALIDATED. Direct >75% candidate NOT YET VALIDATED** because the live special numeric paytable is not publicly captured in reliable text. Terminal SUCCESS: NO.",
       "best_reported_ratio_percent": 100.0,
       "key_files": [
@@ -1161,7 +1161,7 @@
     {
       "h_number": 164,
       "name": "North Carolina Pick 3 forced Double Draw + retailer commission overlay",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Forced Double Draw state:** validated historical/current-2026 recurring mechanism. 100-Pair exact cover:** validated, $50 cost -> $50 guaranteed prizes on a forced two-draw evening. NC retailer commission:** validated at 7% of retail ticket/share sales by statute and current contract. Cancellation window:** validated at retail as up to 15 minutes / before draw break. Conditional pre-tax overlay:** **107% / +$3.50** if self-purchased valid tickets are commission-bearing. Terminal SUCCESS:** not yet; inactive current state + self-sale accounting + non-atomic outage/tax gates remain.",
       "best_reported_ratio_percent": 107.0,
       "key_files": [
@@ -1189,7 +1189,7 @@
     {
       "h_number": 166,
       "name": "NC Pick 3 forced Double Draw: corporate tax salvage + liability-limit stress",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "C-corporation tax salvage:** VALIDATED as a numerical conditional screen. At 23% simplified federal+NC income tax, the 7% commission overlay remains positive: about +$1.545 per $50 face cover / +3.09% of face. Standalone new-retailer strategy:** REJECTED on current evidence because fixed retailer/franchise costs plus liability-limited scaling are not bounded by the small edge. Existing licensed C-corp retailer:** remains a strong conditional candidate, but own-store commission, corporate ticket ownership, atomic rollback and active forced-state gates remain unresolved. Terminal SUCCESS:** NOT ",
       "best_reported_ratio_percent": 23.0,
       "key_files": [
@@ -1203,7 +1203,7 @@
     {
       "h_number": 167,
       "name": "NC retailer-authorized discount + forced Pick 3 Double Draw",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Retailer-authorized draw-ticket discount:** VALIDATED in current official NCEL rules. Commission-to-customer transfer architecture:** VALIDATED structurally; avoids the H166 own-store commission dependency. Forced Pair cover:** remains exact 100% prize gross before discount. Conservative simple C-corp tax threshold:** discount **>2.9004%** preserves positive modeled after-tax surplus; 5%-7% gives approximately +$0.83 to +$1.63 per $50 cover under the stated assumptions. Terminal SUCCESS:** NOT PROVEN because a live forced state, specific compliant retailer discount, and atomic/guaranteed rollb",
       "best_reported_ratio_percent": 21.0,
       "key_files": [
@@ -1216,7 +1216,7 @@
     {
       "h_number": 168,
       "name": "NC Pick 3 retailer discount authority + current Double Draw availability",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Pick-3-specific retailer discount authority: VALIDATED current.** The rules themselves say retailers may authorize promotional discounts. Forced-state observability: VALIDATED structurally** from official same-day NCEL guaranteed-Double-Draw notices. Current execution on 2026-08-22: UNAVAILABLE.** Verified 2026 Double Draw ended July 31. Ticket-by-ticket cancellation: VALIDATED operationally. Whole-basket atomicity / guaranteed rollback under outage: NOT PROVEN. Terminal SUCCESS: NOT PROVEN.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -1229,7 +1229,7 @@
     {
       "h_number": 169,
       "name": "NC Pick 3 atomicity + liability-limit closure",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Same-terminal cancellation: **VALIDATED but insufficient**. Cross-terminal/support rollback: **NOT PROVIDED by public rules found**. Liability-limit rejection branch: **VALIDATED current**. Complete-basket pre-reservation: **NOT FOUND**. H168/H167 NC forced-Double-Draw overlay: **CONDITIONALLY VALIDATED AFTER COMPLETE ACCEPTANCE; STRICT GUARANTEE REJECTED UNDER CURRENT PUBLIC RULES**. Lottery-project terminal SUCCESS: **NO**.",
       "best_reported_ratio_percent": 100.0,
       "key_files": [
@@ -1242,7 +1242,7 @@
     {
       "h_number": 170,
       "name": "Caribbean multi-prize / Mega Ball deterministic coverage screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Barbados Pick 3 ordinary three-prize full cover: **52.5%, REJECTED**. Barbados Pick 3 Straight + successful MB: **101.25% conditional, NOT GUARANTEED**. Barbados Pick 3 Pair + successful MB: **106.0% conditional, strongest H170 lead, NOT GUARANTEED**. Barbados Pick 4 Straight + successful MB: **96.25%, REJECTED even in favorable state**. Curaçao Wega di Number multi-prize cover: **<=70% nominal before surcharge, REJECTED**. Lottery terminal SUCCESS: **NO**.",
       "best_reported_ratio_percent": 106.0,
       "key_files": [
@@ -1255,7 +1255,7 @@
     {
       "h_number": 171,
       "name": "Jamaica compact single-number coverage + Mega/Monsta Ball screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Current Cash Pot base cover: **77.7778%, REJECTED guarantee**. Cash Pot + Mega: **136.1111% conditional**, but **38.8889% strict floor** → NOT SUCCESS. Money Time + Mega: **126.3158% conditional**, but **34.2105% strict floor** → NOT SUCCESS. Monsta control can reach **183.3333% conditional**, but misses fall to 53.70%/25.93%, and current promotion status is not established → NOT SUCCESS.",
       "best_reported_ratio_percent": 136.1111,
       "key_files": [
@@ -1281,7 +1281,7 @@
     {
       "h_number": 173,
       "name": "Rhode Island doubled 3-spot Keno reduced block cover",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "A strict reduced deterministic cover exists:** 4,560 plays instead of 82,160. Conditional free-2x worst-case gross = 109.6491%, +$440 pre-tax. 94.45% reduction in wager count relative to naive full space. Current executable SUCCESS: NO** because current 2026 2x terms/paytable and same-draw bulk acceptance are not proved.",
       "best_reported_ratio_percent": 138.7537,
       "key_files": [
@@ -1309,7 +1309,7 @@
     {
       "h_number": 175,
       "name": "Rhode Island doubled-Keno 4,336-play hybrid transversal gate",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "New sub-4,560 target: **4,336 plays**. Non-balanced compositions: **closed positive** for the identified support allocation, pair-only floor $4,370 > $4,336. Balanced composition: requires universal `n3>=3`. First affine realization: **REJECTED (MILP minimum n3=0)**. Terminal SUCCESS: **NO**.",
       "best_reported_ratio_percent": 100.2076,
       "key_files": [
@@ -1323,7 +1323,7 @@
     {
       "h_number": 176,
       "name": "Rhode Island Keno live execution surface and current-promotion gate",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "1. **Current Keno-specific Rhode Island promotion: CONFIRMED active/surfaced. 2. **Current official online Keno purchase channel: CONFIRMED. 3. **Online tickets non-cancellable: CONFIRMED. 4. **Public online bulk/atomic distinct-combination mechanism: NOT FOUND. 5. **Current promotion = free pre-locked 2x: NOT PROVEN. 6. **Current primary 3-spot paytable: NOT RECOVERED. 7. **H173/H175 executable guarantee: NO.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -1391,7 +1391,7 @@
     {
       "h_number": 181,
       "name": "Michigan Club Keno Tripler Time pre-draw overlay",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 195.64216,
       "key_files": [
@@ -1404,7 +1404,7 @@
     {
       "h_number": 182,
       "name": "Michigan Tripler Time random-acquisition impossibility",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Current August 2026 Tripler Time: **LIVE and free on qualifying tagged tickets**. Multiplier entitlement after printing: **observable pre-draw and persistent across a multi-draw ticket**. Tag acquisition: **explicitly random** under current official evidence. Published deterministic issuance floor / Nth-ticket rule / bounded waiting rule: **NONE FOUND**. Pre-payment tag preview: **NONE FOUND; current FAQ describes pay then printed ticket**. Ex-ante strict guaranteed-profit use of Tripler Time: **REJECTED under current public executable conditions**.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -1684,7 +1684,7 @@
     {
       "h_number": 202,
       "name": "Rhode Island `Kick Back with Keno` promotion attribution gate",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -1901,7 +1901,7 @@
     {
       "h_number": 219,
       "name": "vectorized exact H175 shard screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "Yes. H217 rebuilds 3 threshold masks for every one of 4,878 witness rows inside every B/C shard: 14,634 Python big-integer masks per shard. H219 replaces that representation with the exact incidence matrix already implicit in the calculation.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -1915,7 +1915,7 @@
     {
       "h_number": 220,
       "name": "H219 pending-output gate",
-      "state": "OPEN",
+      "state": "UNCLASSIFIED",
       "main_result_or_blocker": "No lottery SUCCESS claim.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2093,7 +2093,7 @@
     {
       "h_number": 232,
       "name": "44-way chunked exact sector CSP",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2108,7 +2108,7 @@
     {
       "h_number": 234,
       "name": "exact unrestricted separation of actual H232 survivors",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2338,7 +2338,7 @@
     {
       "h_number": 251,
       "name": "Irish Lotto 6/45 Lotto Plus full-cover additive closure",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 52.847738,
       "key_files": [
@@ -2353,7 +2353,7 @@
     {
       "h_number": 252,
       "name": "Irish Lotto 6/45 cap full-cover sharing gate",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2368,7 +2368,7 @@
     {
       "h_number": 253,
       "name": "Georgia scratcher endgame inventory gate",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "NOT A SUCCESS.** Georgia #1709 demonstrates that scratcher endgames can display very large apparent positive conditional EV, but the missing unsold-inventory certificate prevents a guaranteed-profit conclusion.",
       "best_reported_ratio_percent": 198.8995,
       "key_files": [
@@ -2382,7 +2382,7 @@
     {
       "h_number": 254,
       "name": "Irish guaranteed-raffle capture screen",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "Three distinct guaranteed-prize/overlay structures were tested: 1. **finite fixed-ticket raffle** — fully coverable in principle, but total guaranteed prizes are only 42.2833% of full ticket cost; 2. **market-generated raffle overlay** — €1m external subsidy exists, but the player cannot deterministically own the full eligible code population; 3. **winning-number overlay** — €1m external subsidy exists, but ownership of all tickets sharing the winning raffle number cannot be guaranteed at bounded cost.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2395,7 +2395,7 @@
     {
       "h_number": 255,
       "name": "UK Lotto lower-tier boost covering-design impossibility",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 62.4667,
       "key_files": [
@@ -2500,7 +2500,7 @@
     {
       "h_number": 262,
       "name": "LOTTO 6/49 final Gold Ball takeover screen",
-      "state": "OPEN",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [

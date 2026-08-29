@@ -34,8 +34,9 @@ See `research/CURRENT_POSITION.md` for a plain-language checkpoint. The reusable
 
 ## This consolidation work
 - Added reproducible inventory builder, JSON inventory and Markdown index.
+- Corrected inventory state precedence so explicit final rejection/closure outranks incidental conditional, promising or reopening language; added regressions for false SUCCESS and false OPEN packets.
 - Preserved the former long H268-era status in `research/STATUS_ARCHIVE_THROUGH_H268.md`.
-- Checks run: inventory generation, Python compilation, JSON/status coverage validation, and `git diff --check`.
+- Checks run: inventory generation, Python compilation, JSON/status coverage validation, `git diff --check`, and the complete test suite (**187 passed**).
 
 ## Audit trail
 - Full packet navigation: `research/H_PACKET_INDEX.md`.

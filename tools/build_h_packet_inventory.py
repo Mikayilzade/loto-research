@@ -49,6 +49,22 @@ def heading(text: str, fallback: str) -> str:
     return fallback
 
 
+def final_conclusion_text(text: str) -> str:
+    """Return bodies of explicit final/result sections, preferring the last one."""
+    sections: list[str] = []
+    lines = text.upper().splitlines()
+    for index, line in enumerate(lines):
+        if not re.match(r"^#{1,3}\s+(?:FINAL\s+)?(?:RESULT|CONCLUSION|TERMINAL\s+RESULT|GUARANTEE\s+FAILURE)\b", line):
+            continue
+        body: list[str] = []
+        for following in lines[index + 1:]:
+            if following.startswith("#"):
+                break
+            body.append(following)
+        sections.append("\n".join(body))
+    return sections[-1] if sections else ""
+
+
 def state(text: str) -> str:
     """Classify terminal state conservatively from authoritative statements.
 
@@ -62,9 +78,10 @@ def state(text: str) -> str:
         line for line in upper.splitlines()
         if re.match(r"^\s*(?:UPDATED\s+)?(?:STATUS|STATE|TERMINAL\s+STATE|TERMINAL\s+SUCCESS)\s*:", line.replace("*", ""))
     )
+    conclusion = final_conclusion_text(text)
     sample = authoritative or upper[:2500]
     negative_success = bool(re.search(
-        r"(?:NO|NOT)\s+(?:CURRENT\s+|TERMINAL\s+)?SUCCESS|"
+        r"(?:NO|NOT)\s+(?:A\s+|CURRENT\s+|TERMINAL\s+)?SUCCESS|"
         r"TERMINAL\s+SUCCESS\s*:\s*(?:NO|NOT|UNPROVEN|NOT\s+ESTABLISHED)|"
         r"SUCCESS\s*:\s*(?:NO|NOT)",
         upper,
@@ -81,15 +98,31 @@ def state(text: str) -> str:
     ))
     if terminal_success and success_proof and not negative_success:
         return "SUCCESS"
+    # An explicit final rejection/closure outranks an earlier OPEN/conditional
+    # description. Limit this override to a named final section so references to
+    # older rejected subcases elsewhere in the report do not close the packet.
+    if conclusion:
+        if re.match(r"^\s*\**REJECTED\b", conclusion) or any(phrase in conclusion for phrase in (
+            "STRICT GUARANTEE REJECTED", "GUARANTEE: REJECTED",
+            "NOT A SUCCESS", "TERMINAL SUCCESS: NO", "TERMINAL SUCCESS: NOT",
+        )):
+            return "CLOSED"
+    # Explicit closure words in an authoritative status dominate descriptions of
+    # a conditional construction or future reopen condition. This ordering is
+    # essential: "REJECTED / CONDITIONAL STATE RETAINED" is a closure, not OPEN.
     if "CLOSED" in sample and "EXHAUSTED" in sample:
         return "CLOSED / EXHAUSTED"
     if "EXHAUSTED" in sample:
         return "EXHAUSTED"
     if any(x in sample for x in ("EVIDENCE-BLOCKED", "DATA-BLOCKED", "EVIDENCE BLOCKED")):
         return "EVIDENCE-BLOCKED"
-    if any(x in sample for x in ("OPEN", "PROMISING", "CONDITIONAL", "INCONCLUSIVE", "REMAINS")) and "CLOSED" not in sample:
+    if any(x in sample for x in ("CLOSED", "REJECTED", "IMPOSSIBILITY", "IMPOSSIBLE", "COMPLETE")):
+        return "CLOSED"
+    # OPEN must itself be explicit. Incidental words such as conditional,
+    # promising, remains, candidate, or a later reopen condition are not enough.
+    if any(x in sample for x in ("OPEN", "INCONCLUSIVE", "UNRESOLVED")):
         return "OPEN"
-    if any(x in sample for x in ("CLOSED", "REJECTED", "COMPLETE")) or negative_success:
+    if negative_success:
         return "CLOSED"
     return "UNCLASSIFIED"
 

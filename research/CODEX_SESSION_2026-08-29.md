@@ -65,6 +65,8 @@ The dominant blocker is no longer finding attractive isolated arithmetic. Severa
 
 The inventory classifier is deliberately conservative: `SUCCESS` now requires an explicit, non-negated terminal-success statement. H137/H138/H164/H166/H167 remain non-success conditional work, and H225-X* is classified `CLOSED / EXHAUSTED`, not as a successful strategy.
 
+The follow-up state audit also makes explicit final closure/rejection override incidental words such as `conditional`, `promising`, `remains`, or a future reopen condition. Regression coverage includes H169, H170, H171, H182 and H253; the complete suite passes **187 tests**.
+
 ## Session outputs
 - `tools/build_h_packet_inventory.py`
 - `data/derived/h_packet_inventory.json`

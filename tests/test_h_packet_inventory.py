@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import re
 from pathlib import Path
 
 
@@ -22,6 +23,7 @@ def test_explicit_terminal_success_negations_override_success_word() -> None:
         "Status: NO TERMINAL SUCCESS",
         "Result\nTerminal SUCCESS: NOT ESTABLISHED",
         "Terminal SUCCESS: NOT PROVEN",
+        "Status: NOT A SUCCESS",
         "State: CLOSED — NO SUCCESS",
     ):
         assert inventory.state(statement) != "SUCCESS"
@@ -49,6 +51,29 @@ def test_known_false_success_packets_regression() -> None:
         assert inventory.state(source.read_text(encoding="utf-8")) != "SUCCESS"
 
 
+def test_explicit_rejection_overrides_conditional_or_reopen_language() -> None:
+    assert inventory.state(
+        "Status: STRICT GUARANTEE REJECTED / CONDITIONAL OVERLAY PRESERVED"
+    ) == "CLOSED"
+    assert inventory.state(
+        "Status: CURRENT EX-ANTE GUARANTEE REJECTED / CONDITIONAL STATE RETAINED"
+    ) == "CLOSED"
+    assert inventory.state(
+        "Status: CLOSED under checked rules; candidate remains interesting if rules change"
+    ) == "CLOSED"
+    assert inventory.state(
+        "Status: OPEN / candidate remains interesting\n\n## Result\nSTRICT GUARANTEE REJECTED under current rules."
+    ) == "CLOSED"
+
+
+def test_known_false_open_packets_regression() -> None:
+    for number in (169, 170, 171, 182, 251, 252, 253):
+        files = [p for p in (ROOT / "research").iterdir() if f"h{number}" in p.name.lower()]
+        source = inventory.best_markdown(files, number)
+        assert source is not None
+        assert inventory.state(source.read_text(encoding="utf-8")) == "CLOSED"
+
+
 def test_h225_exact_family_is_closed_exhausted() -> None:
     source = ROOT / "research/H225_EXACT_STATUS.md"
     assert inventory.status_number(source) == 225
@@ -73,6 +98,13 @@ def test_generated_inventory_has_no_false_success_or_drift() -> None:
     assert not ({20, *range(39, 108)} & set(data["summary"]["intentional_or_unobserved_gaps"]))
     assert all(packet["state"] != "SUCCESS" for packet in packets.values())
     assert packets[225]["state"] == "CLOSED / EXHAUSTED"
+    contradictory_open = [
+        packet["h_number"]
+        for packet in packets.values()
+        if packet["state"] == "OPEN"
+        and re.search(r"CLOS(?:URE|ED)|IMPOSSIB(?:ILITY|LE)|REJECT(?:ION|ED)|EXHAUSTED", packet["name"], re.I)
+    ]
+    assert contradictory_open == []
     assert data["summary"]["status_files_discovered"] == len(
         [
             path
