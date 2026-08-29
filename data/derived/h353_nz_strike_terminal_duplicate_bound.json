@@ -1,0 +1,66 @@
+{
+  "as_of_date": "2026-08-29",
+  "candidate": "New Zealand Lotto Strike terminal / Must Be Won full-cover duplicate bound",
+  "current_policy": {
+    "division4_fixed_bonus_line_equivalent_nzd": 1.0,
+    "maximum_jackpot_games": 9,
+    "minimum_game_prize_pool_fraction_of_turnover": 0.6,
+    "post_div4_allocations": {
+      "division1": 0.3691,
+      "division2": 0.0959,
+      "division3": 0.535
+    },
+    "strike4_threshold_nzd": 1500000.0
+  },
+  "exact_full_cover": {
+    "cost_nzd": 2193360.0,
+    "entries": 2193360,
+    "exact_position_match_counts": {
+      "match0": 1982313,
+      "match1": 202904,
+      "match2": 7998,
+      "match3": 144,
+      "match4": 1
+    },
+    "partition_sum": 2193360,
+    "partition_valid": true
+  },
+  "matrix": {
+    "numbers": 40,
+    "ordered_distinct_outcomes": 2193360,
+    "ordered_pick": 4,
+    "price_per_strike_line_nzd": 1.0
+  },
+  "packet": "H353",
+  "player_favourable_terminal_full_cover_screen": {
+    "assumptions": [
+      "Strike 4 total is NZ$1.5m threshold amount",
+      "game prize pool is the rules-permitted 60% of turnover",
+      "all our division 2 and 3 full-cover winners receive their full allocated pools",
+      "division 4 bonus lines are valued at their NZ$1 monetary equivalent",
+      "no acquisition friction or ticket limits are charged"
+    ],
+    "isolated_no_external_duplicate": {
+      "gross_nzd": 2405166.3608,
+      "net_nzd": 211806.3608,
+      "return_fraction": 1.0965670755370756
+    },
+    "one_external_duplicate_of_winning_strike4": {
+      "gross_nzd": 1655166.73934,
+      "net_nzd": -538193.26066,
+      "return_fraction": 0.7546261167067877,
+      "strict_guarantee_destroyed": true
+    }
+  },
+  "result": "CLOSED_FOR_TERMINAL_MUST_BE_WON_STRICT_GUARANTEE",
+  "terminal_mechanic": {
+    "any_nonempty_portfolio_has_a_legal_draw_equal_to_one_of_its_entries": true,
+    "full_cover_always_contains_exactly_one_own_division1_selection": true,
+    "requires_no_division1_winning_selection_for_roll_down": true,
+    "therefore_no_nonempty_portfolio_can_force_no_division1_branch": true
+  },
+  "validation": {
+    "arithmetic_inconclusive": 0,
+    "closure_relevant_inconclusive": 0
+  }
+}
