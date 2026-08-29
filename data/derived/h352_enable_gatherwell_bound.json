@@ -1,0 +1,26 @@
+{
+  "packet": "H352",
+  "candidate": "Enable Lottery weekly draw + Gatherwell 29 Aug 2026 Super Draw",
+  "ticket_cost_gbp": 1,
+  "six_digit_game_number_space": 1000000,
+  "advertised_jackpot_gbp": 25000,
+  "super_draw_prize_gbp": 2000,
+  "weekly_guaranteed_prize_fraction_of_sales": 0.24,
+  "external_entry_branch_exists": true,
+  "piecewise_strict_cash_upper_bound": {
+    "1_to_999999": 0,
+    "1000000_and_above": 25000
+  },
+  "boundary_checks": [
+    {"n": 1, "net_upper_bound_gbp": -1},
+    {"n": 267, "net_upper_bound_gbp": -267},
+    {"n": 999999, "net_upper_bound_gbp": -999999},
+    {"n": 1000000, "net_upper_bound_gbp": -975000},
+    {"n": 1000001, "net_upper_bound_gbp": -975001},
+    {"n": 2000000, "net_upper_bound_gbp": -1975000}
+  ],
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "closed": true,
+  "success": false
+}
