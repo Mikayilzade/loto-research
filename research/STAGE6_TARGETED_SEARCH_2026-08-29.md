@@ -9,7 +9,7 @@ A. all-ID positive withdrawable cash plus binding zero/low-cost digital acquisit
 B. special-event/external subsidy with isolated full-cover above 100% and no duplicate dilution;
 C. finite unique identifiers that one player can reserve/own across the complete winning support.
 
-Before searching, the 342 parsed packet records in `data/derived/h_packet_inventory.json`, the near-hit ranking and all ten mechanism filters were checked for novelty. H225-X* remained closed and was not touched.
+Before searching, the 273 parsed lottery-only packet records in `data/derived/h_packet_inventory.json`, the near-hit ranking and all ten mechanism filters were checked for novelty. H225-X* remained closed and was not touched.
 
 ## Targeted current-rule queries attempted
 On 2026-08-29 the session attempted these query families:

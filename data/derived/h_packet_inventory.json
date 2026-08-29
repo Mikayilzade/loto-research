@@ -1,8 +1,81 @@
 {
   "generated_by": "tools/build_h_packet_inventory.py",
+  "scope": "LOTTERY ONLY",
+  "excluded_non_lottery_packet_numbers": [
+    20,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
   "summary": {
-    "discovered_packet_numbers": 347,
-    "parsed_packets": 342,
+    "discovered_packet_numbers": 278,
+    "parsed_packets": 273,
     "skipped_or_unparsed": 5,
     "status_files_discovered": 93,
     "status_files_unrepresented": [],
@@ -15,8 +88,7 @@
       13,
       14,
       16,
-      17,
-      49
+      17
     ]
   },
   "packets": [
@@ -35,7 +107,7 @@
     {
       "h_number": 5,
       "name": "nonlinear portfolio / pricing / promotion overlay screen",
-      "state": "UNCLASSIFIED",
+      "state": "OPEN",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -96,7 +168,7 @@
     {
       "h_number": 12,
       "name": "full-space coverage / buy-the-pot",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See `data/derived/h012_full_space_screen.csv`.",
       "best_reported_ratio_percent": 23.0,
       "key_files": [
@@ -108,7 +180,7 @@
     {
       "h_number": 15,
       "name": "crowd-choice / anti-popularity sharing edge",
-      "state": "UNCLASSIFIED",
+      "state": "OPEN",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -133,7 +205,7 @@
     {
       "h_number": 19,
       "name": "capped fixed-prize competition saturation / buy-all-entries",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 28.6,
       "key_files": [
@@ -143,21 +215,9 @@
       "inventory_source": "research/h019_capped_fixed_prize_saturation.md"
     },
     {
-      "h_number": 20,
-      "name": "lawful two-sided hedging / arbitrage",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": 5.0,
-      "key_files": [
-        "research/h020_two_sided_hedging_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h020_two_sided_hedging_arbitrage.md"
-    },
-    {
       "h_number": 21,
       "name": "forced-distribution / external-subsidy bound",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -372,877 +432,6 @@
       "inventory_source": "research/h038_deterministic_rebate_guarantee.md"
     },
     {
-      "h_number": 39,
-      "name": "cash-refund / matched-betting guarantee gate",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h039_cash_refund_matched_betting_gate.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h039_cash_refund_matched_betting_gate.md"
-    },
-    {
-      "h_number": 40,
-      "name": "current cash-refund operator scan + selective-refund theorem",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h040_cash_refund_operator_scan.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h040_cash_refund_operator_scan.md"
-    },
-    {
-      "h_number": 41,
-      "name": "free-bet token conversion through matched lay",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H041_APPEND.md",
-        "research/h041_free_bet_matched_conversion.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h041_free_bet_matched_conversion.md"
-    },
-    {
-      "h_number": 42,
-      "name": "contract-permitted matched-promotion scan",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h042_contract_permitted_matched_promo_scan.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h042_contract_permitted_matched_promo_scan.md"
-    },
-    {
-      "h_number": 43,
-      "name": "acquisition-first free-bet / credit screen",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h043_acquisition_first_freebet_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h043_acquisition_first_freebet_screen.md"
-    },
-    {
-      "h_number": 44,
-      "name": "Azerbaijan-accessible promotion + external hedge screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H044_SUPPLEMENT.md",
-        "research/h044_azerbaijan_accessible_promo_hedge.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h044_azerbaijan_accessible_promo_hedge.md"
-    },
-    {
-      "h_number": 45,
-      "name": "eTopaz contract + settlement-equivalence gate",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H045_APPEND.md",
-        "research/h045_etopaz_contract_settlement_gate.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h045_etopaz_contract_settlement_gate.md"
-    },
-    {
-      "h_number": 46,
-      "name": "same-clearing-venue arbitrage + deterministic cash-subsidy gate",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h046_same_venue_and_cash_subsidy_gate.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h046_same_venue_and_cash_subsidy_gate.md"
-    },
-    {
-      "h_number": 47,
-      "name": "vested-cash entitlement / rebate screen",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H047_APPEND.md",
-        "research/h047_vested_cash_entitlement_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h047_vested_cash_entitlement_screen.md"
-    },
-    {
-      "h_number": 48,
-      "name": "/H049 — deterministic action cash and make-whole yield screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H048_H049_APPEND.md",
-        "research/h048_action_cash_and_makewhole_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h048_action_cash_and_makewhole_screen.md"
-    },
-    {
-      "h_number": 50,
-      "name": "# Checked projects and tests — H050",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H050.md",
-        "research/h050_current_principal_protected_yield.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/CHECKED_PROJECTS_AND_TESTS_H050.md"
-    },
-    {
-      "h_number": 51,
-      "name": "regulated deposit / e-money / broker fixed-reward screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h051_regulated_deposit_fixed_reward_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h051_regulated_deposit_fixed_reward_screen.md"
-    },
-    {
-      "h_number": 52,
-      "name": "upfront interest + insured principal",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h052_upfront_insured_interest.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h052_upfront_insured_interest.md"
-    },
-    {
-      "h_number": 53,
-      "name": "deterministic bank cashback / welcome-subsidy screen",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "Current Azerbaijan banking promotions do contain deterministic, non-lottery subsidies, but the live examples found in this packet are tied to real consumption or eligibility costs. None yet supplies a contractually guaranteed `principal return + vested cash bonus` pair.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h053_deterministic_cashback_subsidies.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h053_deterministic_cashback_subsidies.md"
-    },
-    {
-      "h_number": 54,
-      "name": "principal-preserving deposit / funding bonus screen",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H054_ADDENDUM.md",
-        "research/h054_principal_preserving_bonus_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h054_principal_preserving_bonus_screen.md"
-    },
-    {
-      "h_number": 55,
-      "name": "fixed-cash account-opening / transfer / funding credits",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h055_fixed_cash_account_funding_credits.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h055_fixed_cash_account_funding_credits.md"
-    },
-    {
-      "h_number": 56,
-      "name": "Azerbaijan-compatible fixed-cash referral / funding rewards",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h056_azerbaijan_fixed_cash_referral.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h056_azerbaijan_fixed_cash_referral.md"
-    },
-    {
-      "h_number": 57,
-      "name": "irrevocably vested cash reward screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h057_irrevocable_cash_reward_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h057_irrevocable_cash_reward_screen.md"
-    },
-    {
-      "h_number": 58,
-      "name": "business-volume / payment-rail cash rebates",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h058_business_volume_payment_rail_rebates.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h058_business_volume_payment_rail_rebates.md"
-    },
-    {
-      "h_number": 59,
-      "name": "marketplace / creator / freelancer payout bonuses",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H059_APPEND.md",
-        "research/h059_marketplace_creator_freelancer_bonuses.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h059_marketplace_creator_freelancer_bonuses.md"
-    },
-    {
-      "h_number": 60,
-      "name": "regulated cross-border payment / funding cash-credit screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H060_APPEND.md",
-        "research/h060_crossborder_payment_cash_credits.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h060_crossborder_payment_cash_credits.md"
-    },
-    {
-      "h_number": 61,
-      "name": "same-currency account-opening / funding cash rewards",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H061_APPEND.md",
-        "research/h061_same_currency_account_rewards.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h061_same_currency_account_rewards.md"
-    },
-    {
-      "h_number": 62,
-      "name": "regulated business-account onboarding / payroll / merchant-acquiring activation grants",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H062_APPEND.md",
-        "research/h062_business_onboarding_merchant_grants.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h062_business_onboarding_merchant_grants.md"
-    },
-    {
-      "h_number": 63,
-      "name": "Azerbaijan POS-linked tax subsidy / merchant-acquiring economics",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": 6.5,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H063_APPEND.md",
-        "research/h063_azerbaijan_pos_tax_subsidy.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h063_azerbaijan_pos_tax_subsidy.md"
-    },
-    {
-      "h_number": 64,
-      "name": "Azerbaijan statutory/state-backed business subsidies",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H064_APPEND.md",
-        "research/h064_azerbaijan_state_business_subsidies.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h064_azerbaijan_state_business_subsidies.md"
-    },
-    {
-      "h_number": 65,
-      "name": "Azerbaijan fixed-cash agricultural/state bounties",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H065_APPEND.md",
-        "research/h065_azerbaijan_fixed_cash_agri_bounties.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h065_azerbaijan_fixed_cash_agri_bounties.md"
-    },
-    {
-      "h_number": 66,
-      "name": "Azerbaijan vehicle-scrappage fixed-cash arbitrage screen",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H066_APPEND.md",
-        "research/h066_azerbaijan_vehicle_scrappage_cash_floor.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h066_azerbaijan_vehicle_scrappage_cash_floor.md"
-    },
-    {
-      "h_number": 67,
-      "name": "Azerbaijan transferable vehicle-scrappage certificate arbitrage",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H067_APPEND.md",
-        "research/h067_transferable_scrappage_certificate_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h067_transferable_scrappage_certificate_arbitrage.md"
-    },
-    {
-      "h_number": 68,
-      "name": "CBAR investment-coin mandatory buyback / secondary-market arbitrage",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H068_APPEND.md",
-        "research/h068_cbar_investment_coin_buyback_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h068_cbar_investment_coin_buyback_arbitrage.md"
-    },
-    {
-      "h_number": 69,
-      "name": "damaged AZN face-redemption arbitrage",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H069_APPEND.md",
-        "research/h069_damaged_azn_face_redemption_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h069_damaged_azn_face_redemption_arbitrage.md"
-    },
-    {
-      "h_number": 70,
-      "name": "Azerbaijan interbank FX cross-arbitrage",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H070_APPEND.md",
-        "research/h070_azerbaijan_interbank_fx_cross_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h070_azerbaijan_interbank_fx_cross_arbitrage.md"
-    },
-    {
-      "h_number": 71,
-      "name": "statutory gift-card cash redemption arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H071_APPEND.md",
-        "research/h071_statutory_giftcard_cash_redemption.md"
-      ],
-      "reopening_condition": "1. a current live in-scope card below the statutory threshold; 2. a purchase/escrow mechanism that locks balance and non-revocation before irreversible payment; 3. a guaranteed low-cost California redemption route; or 4. a jurisdiction with remote/electronic mandatory cash redemption that removes the geography cost.",
-      "inventory_source": "research/h071_statutory_giftcard_cash_redemption.md"
-    },
-    {
-      "h_number": 72,
-      "name": "Azerbaijan electronic-money / stored-value redemption arbitrage",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H072_APPEND.md",
-        "research/h072_azerbaijan_stored_value_redemption.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h072_azerbaijan_stored_value_redemption.md"
-    },
-    {
-      "h_number": 73,
-      "name": "Germany mandatory container-deposit arbitrage",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H073_APPEND.md",
-        "research/h073_germany_container_deposit_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h073_germany_container_deposit_arbitrage.md"
-    },
-    {
-      "h_number": 74,
-      "name": "Baku local gold-scrap arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H074_APPEND.md",
-        "research/h074_baku_gold_scrap_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h074_baku_gold_scrap_arbitrage.md"
-    },
-    {
-      "h_number": 75,
-      "name": "Germany refundable gas-bottle deposit arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H075_APPEND.md",
-        "research/h075_germany_gas_bottle_deposit_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h075_germany_gas_bottle_deposit_arbitrage.md"
-    },
-    {
-      "h_number": 76,
-      "name": "zero-cost salvage -> deterministic scrap-cash arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H076_APPEND.md",
-        "research/h076_zero_cost_salvage_to_scrap_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h076_zero_cost_salvage_to_scrap_arbitrage.md"
-    },
-    {
-      "h_number": 77,
-      "name": "Baku catalytic-converter pre-quote arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H077_APPEND.md",
-        "research/h077_baku_catalytic_converter_atomic_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h077_baku_catalytic_converter_atomic_arbitrage.md"
-    },
-    {
-      "h_number": 78,
-      "name": "Baku e-scrap PCB pre-quote arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H078_APPEND.md",
-        "research/h078_baku_e_scrap_board_atomic_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h078_baku_e_scrap_board_atomic_arbitrage.md"
-    },
-    {
-      "h_number": 79,
-      "name": "Baku salvage component density screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H079_APPEND.md",
-        "research/h079_baku_component_density_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h079_baku_component_density_screen.md"
-    },
-    {
-      "h_number": 80,
-      "name": "Baku contactor silver-contact atomic arbitrage screen",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H080_APPEND.md",
-        "research/h080_baku_contactor_silver_contact_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h080_baku_contactor_silver_contact_screen.md"
-    },
-    {
-      "h_number": 81,
-      "name": "Baku contactor execution-route closure",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H081_APPEND.md",
-        "research/h081_baku_contactor_execution_route.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h081_baku_contactor_execution_route.md"
-    },
-    {
-      "h_number": 82,
-      "name": "Soviet relay passport/value arbitrage",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H082_APPEND.md",
-        "research/h082_soviet_relay_passport_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h082_soviet_relay_passport_arbitrage.md"
-    },
-    {
-      "h_number": 83,
-      "name": "Baku KEM-1 fixed-price live listing screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "At the current **2 AZN/unit** ask, the ordinary KEM-1 interpretation is decisively uneconomic. The listing is **not a SUCCESS candidate** and should not be purchased for precious-metal arbitrage without a model-specific binding buyer quote that independently exceeds 2 AZN + all costs.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H083_APPEND.md",
-        "research/h083_kem1_local_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h083_kem1_local_screen.md"
-    },
-    {
-      "h_number": 84,
-      "name": "current relay cash-price targeting",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H084_APPEND.md",
-        "research/h084_current_relay_cash_price_targeting.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h084_current_relay_cash_price_targeting.md"
-    },
-    {
-      "h_number": 85,
-      "name": "Baku precious-capacitor targeting",
-      "state": "OPEN",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h085_baku_precious_capacitor_targeting.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h085_baku_precious_capacitor_targeting.md"
-    },
-    {
-      "h_number": 86,
-      "name": "Baku tantalum-capacitor break-even screen",
-      "state": "OPEN",
-      "main_result_or_blocker": "H086 does **not** establish SUCCESS because the execution variables remain unbound: exact qualifying unit/price, subtype/count/weight and a binding Baku buyer quote. H088 materially hardens H086 by preventing generic `K53` false positives.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H086_APPEND.md",
-        "research/h086_baku_tantalum_capacitor_break_even.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h086_baku_tantalum_capacitor_break_even.md"
-    },
-    {
-      "h_number": 87,
-      "name": "Baku tantalum execution route / web-only seller discovery",
-      "state": "EXHAUSTED",
-      "main_result_or_blocker": "No currently indexed Azerbaijan seller page was recovered that simultaneously exposes: 1. readable exact K52/K53 marking; 2. fixed ask for that exact marked unit; 3. available count/weight.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H087_APPEND.md",
-        "research/h087_baku_tantalum_execution_route.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h087_baku_tantalum_execution_route.md"
-    },
-    {
-      "h_number": 88,
-      "name": "K52/K53 material-classification gate",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/h088_k52_k53_material_classification.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h088_k52_k53_material_classification.md"
-    },
-    {
-      "h_number": 89,
-      "name": "BakıKart refundable-balance secondary-market arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H089_APPEND.md",
-        "research/h089_bakikart_refundable_balance_secondary_market.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h089_bakikart_refundable_balance_secondary_market.md"
-    },
-    {
-      "h_number": 90,
-      "name": "Azerbaijan VAT cashback + merchandise return cycle",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H090_APPEND.md",
-        "research/h090_vat_cashback_return_cycle.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h090_vat_cashback_return_cycle.md"
-    },
-    {
-      "h_number": 91,
-      "name": "Azerbaijan prepaid mobile balance redemption / secondary-market arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "REJECTED as standalone guaranteed-profit class.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H091_APPEND.md",
-        "research/h091_azerbaijan_prepaid_mobile_balance_redemption.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h091_azerbaijan_prepaid_mobile_balance_redemption.md"
-    },
-    {
-      "h_number": 92,
-      "name": "matured claim / bank-balance assignment arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "H092 validates a **new deterministic-arbitrage class** in Azerbaijan: purchase of a matured monetary claim below fixed redemption value. Naxcivanbank residual balances are a particularly strong candidate because the Central Bank publicly states the balances are held on a special account and currently refundable.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H092_APPEND.md",
-        "research/h092_azerbaijan_utility_container_deposit_redemption_screen.md",
-        "research/h092_matured_claim_assignment_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h092_matured_claim_assignment_arbitrage.md"
-    },
-    {
-      "h_number": 93,
-      "name": "Azerbaijan pre-funded assigned-claim arbitrage",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H093_APPEND.md",
-        "research/h093_prefunded_assigned_claim_arbitrage.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h093_prefunded_assigned_claim_arbitrage.md"
-    },
-    {
-      "h_number": 94,
-      "name": "Azerbaijan export-cost compensation as deterministic subsidy",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H094_APPEND.md",
-        "research/h094_azerbaijan_export_cost_compensation.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h094_azerbaijan_export_cost_compensation.md"
-    },
-    {
-      "h_number": 95,
-      "name": "Azerbaijan Energy Efficiency Fund grants/subsidies",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H095_APPEND.md",
-        "research/h095_azerbaijan_energy_efficiency_fund.md"
-      ],
-      "reopening_condition": "concrete AERA-approved project with signed subsidy/grant contract **before** supplier commitment; and fixed supplier price plus guaranteed savings/resale/other deterministic value producing a positive all-in floor.",
-      "inventory_source": "research/h095_azerbaijan_energy_efficiency_fund.md"
-    },
-    {
-      "h_number": 96,
-      "name": "Azerbaijan employment / self-employment / liberated-territory subsidy screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": 80.0,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H096_APPEND.md",
-        "research/h096_azerbaijan_employment_selfemployment_subsidy_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h096_azerbaijan_employment_selfemployment_subsidy_screen.md"
-    },
-    {
-      "h_number": 97,
-      "name": "Azerbaijan self-employment asset-package residual-value screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H097_APPEND.md",
-        "research/h097_selfemployment_asset_package_residual_screen.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h097_selfemployment_asset_package_residual_screen.md"
-    },
-    {
-      "h_number": 98,
-      "name": "Azerbaijan statutory finder / treasure / archive rewards",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": 5.0,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H098_APPEND.md",
-        "research/h098_azerbaijan_statutory_finders_treasure_archive_rewards.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h098_azerbaijan_statutory_finders_treasure_archive_rewards.md"
-    },
-    {
-      "h_number": 99,
-      "name": "Azerbaijan cultural-export valuation / state acquisition screen",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H099_APPEND.md",
-        "research/h099_azerbaijan_cultural_export_mandatory_buyout.md"
-      ],
-      "reopening_condition": "1. a seller can obtain a transferable binding state purchase commitment/value certificate that survives transfer to the buyer; 2. the payout claim itself is legally assignable after official valuation but before payment; 3. a specific already-valued object/claim is offered below the locked state entitlement with custodian/Ministry confirmation before payment.",
-      "inventory_source": "research/h099_azerbaijan_cultural_export_mandatory_buyout.md"
-    },
-    {
-      "h_number": 100,
-      "name": "Prefunded notary-deposit claim assignment in Azerbaijan",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H100_APPEND.md",
-        "research/h100_prefunded_notary_deposit_claim_assignment.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h100_prefunded_notary_deposit_claim_assignment.md"
-    },
-    {
-      "h_number": 101,
-      "name": "prefunded execution-service deposit claim assignment",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H101_APPEND.md",
-        "research/h101_prefunded_execution_service_deposit_claim_assignment.md"
-      ],
-      "reopening_condition": "Search specifically for: 1. claims already paid into state enforcement deposit accounts but not yet distributed; 2. creditors willing to sell those claims below distributable face value for immediate liquidity; 3. a closing structure where enforcement-officer Article-31 substitution is completed before seller payment; 4. court/notary/auction-refund equivalents with the same prefunding + successor-recognition property; 5. operator-specific refund/escrow systems with explicit assignee payout rules.",
-      "inventory_source": "research/h101_prefunded_execution_service_deposit_claim_assignment.md"
-    },
-    {
-      "h_number": 102,
-      "name": "prefunded statutory refund receivables",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H102_APPEND.md",
-        "research/h102_prefunded_refund_receivables.md"
-      ],
-      "reopening_condition": "Prioritize: 1. refund systems with explicit third-party/assignee payment rules; 2. escrow/notary/court deposits where successor recognition is statutory; 3. current sellers of already-accrued refundable claims at a discount; 4. H101 live prefunded enforcement claims, which remain stronger whenever Article-31 substitution can be locked before payment.",
-      "inventory_source": "research/h102_prefunded_refund_receivables.md"
-    },
-    {
-      "h_number": 103,
-      "name": "prefunded enforcement-advance refund claim assignment",
-      "state": "CLOSED",
-      "main_result_or_blocker": "H103 is a **materially stronger deterministic-cash class** than H102 because it combines: cash already prefunded into the enforcement system; statutory refund entitlement; explicit Article-31 successor substitution when the claim is assigned.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H103_APPEND.md",
-        "research/h103_prefunded_enforcement_advance_refund_assignment.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h103_prefunded_enforcement_advance_refund_assignment.md"
-    },
-    {
-      "h_number": 104,
-      "name": "Azerbaijan sovereign fixed-income control",
-      "state": "UNCLASSIFIED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H104_APPEND.md",
-        "research/h104_azerbaijan_sovereign_fixed_income_control.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h104_azerbaijan_sovereign_fixed_income_control.md"
-    },
-    {
-      "h_number": 105,
-      "name": "Azerbaijan private-enforcement advance: deterministic-refund control",
-      "state": "SUCCESS",
-      "main_result_or_blocker": "REJECTED as a standalone prefunded guaranteed-refund class.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H105_APPEND.md",
-        "research/h105_private_enforcement_advance_control.md"
-      ],
-      "reopening_condition": "## Next implication The search priority stays with **already matured/prefunded claims**, not advances whose repayment still depends on a debtor. Highest-value next searches: 1. final H103 state-enforcement advance refunds; 2. H101 money already cleared into enforcement-service deposit accounts; 3. other public/notarial/court custody claims where cash is already segregated and successor payout can be locked before seller payment.",
-      "inventory_source": "research/h105_private_enforcement_advance_control.md"
-    },
-    {
-      "h_number": 106,
-      "name": "prefunded bank-liquidation payout claim assignment",
-      "state": "CLOSED",
-      "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H106_APPEND.md",
-        "research/h106_bank_liquidation_prefunded_payout_claim_assignment.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h106_bank_liquidation_prefunded_payout_claim_assignment.md"
-    },
-    {
-      "h_number": 107,
-      "name": "Article 87.4 successor route / assignee-recognition theorem",
-      "state": "CLOSED",
-      "main_result_or_blocker": "H106 is stronger than before: the legal-successor bridge is now supported directly by Article 87.4 plus Civil Code 194.2/196. The project still lacks a concrete discounted live claim and pre-payment written recipient lock, so this is **NOT SUCCESS**.",
-      "best_reported_ratio_percent": null,
-      "key_files": [
-        "research/CHECKED_PROJECTS_AND_TESTS_H107_APPEND.md",
-        "research/h107_article87_successor_route.md"
-      ],
-      "reopening_condition": "No explicit reopening condition recorded; require materially new rules or evidence.",
-      "inventory_source": "research/h107_article87_successor_route.md"
-    },
-    {
       "h_number": 108,
       "name": "Lotto Texas 2023 full-coverage control",
       "state": "CLOSED",
@@ -1427,7 +616,7 @@
     {
       "h_number": 123,
       "name": "fixed-prize raffle undersubscription monitor calibration",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 65.344,
       "key_files": [
@@ -1531,7 +720,7 @@
     {
       "h_number": 131,
       "name": "global `Nth` lottery coupon allocation / deterministic tranche test",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "H131 validates that deterministic lottery promotion subsidies **large enough to invert ticket cost really do exist** — Lotto Love is the cleanest proof, with a $208 coupon attached to a $104 qualifying Advance Play purchase when the coupon hits.",
       "best_reported_ratio_percent": 200.0,
       "key_files": [
@@ -1609,7 +798,7 @@
     {
       "h_number": 137,
       "name": "Kentucky stacked referral + 100% first-deposit match + Pick 3 Pair cover",
-      "state": "SUCCESS",
+      "state": "OPEN",
       "main_result_or_blocker": "Simultaneous August promotion overlap: VALIDATED. Stacked subsidy arithmetic: VALIDATED conditionally. Minimum external cash for Pair cover if stackable: $15. Conditional pre-tax guaranteed payout: $30, surplus +$15 / +100% external-cash ROI. Terminal SUCCESS: NOT ESTABLISHED** because stackability, award timing, complete-basket pre-acceptance and tax are not locked before the non-withdrawable deposit.",
       "best_reported_ratio_percent": 60.0,
       "key_files": [
@@ -1622,7 +811,7 @@
     {
       "h_number": 138,
       "name": "cross-state >=100% lottery-bonus + compact fixed-prize coverage screen",
-      "state": "SUCCESS",
+      "state": "OPEN",
       "main_result_or_blocker": "Kentucky cart/batch UI: **operationally helpful, not an atomic acceptance lock**. Kentucky H136/H137: **still best current validated positive-cover arithmetic, not terminal SUCCESS**. Delaware current 100% welcome bonus: **validated, but 50% digit cover reaches only break-even and iLottery is eInstant/playthrough oriented**. New Hampshire Pick 3: **50% deterministic partition ratio; no authoritative current >100% one-pass draw-game subsidy validated**. Terminal state: **NO SUCCESS; NOT EXHAUSTED**.",
       "best_reported_ratio_percent": 100.0,
       "key_files": [
@@ -1635,7 +824,7 @@
     {
       "h_number": 139,
       "name": "Kentucky concurrent deposit-promo stack + Pick 3 Pair coverage",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "Current concurrent Kentucky deposit promotions: VALIDATED. Tiki Tuesday + first-deposit conditional cover: up to +$80 pre-tax floor. Summer Friday + first-deposit conditional cover: up to +$80 pre-tax floor. Either $50 deposit promo + referral + first-match: discrete optimum tested at +$90 pre-tax. Registration $5 correctly excluded from Pick 3 because current offer is Instant-Play-specific. Stackability: NOT CONTRACTUALLY PROVEN. Complete-basket acceptance before irreversible funding: STILL NOT LOCKED. Terminal SUCCESS: NOT ESTABLISHED.",
       "best_reported_ratio_percent": 125.0,
       "key_files": [
@@ -1687,7 +876,7 @@
     {
       "h_number": 143,
       "name": "Virginia Rewards exact-gate + >75% compact Keno screen",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "1. **No current >25% pre-committed Virginia Keno subsidy was verified from public primary sources. 2. **Exact Rewards free-play dollar denomination is public-web/login gated; do not assume point value. 3. **Virginia 75% remains the best verified compact Keno fixed-prize cover among Virginia, Massachusetts, Pennsylvania, Ohio and Delaware controls. 4. Massachusetts' deterministic 10% long-play discount is real but raises effective cover only to ~69.44%, still below Virginia. 5. Terminal SUCCESS remains unproven.",
       "best_reported_ratio_percent": 75.0,
       "key_files": [
@@ -1972,7 +1161,7 @@
     {
       "h_number": 164,
       "name": "North Carolina Pick 3 forced Double Draw + retailer commission overlay",
-      "state": "SUCCESS",
+      "state": "OPEN",
       "main_result_or_blocker": "Forced Double Draw state:** validated historical/current-2026 recurring mechanism. 100-Pair exact cover:** validated, $50 cost -> $50 guaranteed prizes on a forced two-draw evening. NC retailer commission:** validated at 7% of retail ticket/share sales by statute and current contract. Cancellation window:** validated at retail as up to 15 minutes / before draw break. Conditional pre-tax overlay:** **107% / +$3.50** if self-purchased valid tickets are commission-bearing. Terminal SUCCESS:** not yet; inactive current state + self-sale accounting + non-atomic outage/tax gates remain.",
       "best_reported_ratio_percent": 107.0,
       "key_files": [
@@ -2000,7 +1189,7 @@
     {
       "h_number": 166,
       "name": "NC Pick 3 forced Double Draw: corporate tax salvage + liability-limit stress",
-      "state": "SUCCESS",
+      "state": "OPEN",
       "main_result_or_blocker": "C-corporation tax salvage:** VALIDATED as a numerical conditional screen. At 23% simplified federal+NC income tax, the 7% commission overlay remains positive: about +$1.545 per $50 face cover / +3.09% of face. Standalone new-retailer strategy:** REJECTED on current evidence because fixed retailer/franchise costs plus liability-limited scaling are not bounded by the small edge. Existing licensed C-corp retailer:** remains a strong conditional candidate, but own-store commission, corporate ticket ownership, atomic rollback and active forced-state gates remain unresolved. Terminal SUCCESS:** NOT ",
       "best_reported_ratio_percent": 23.0,
       "key_files": [
@@ -2014,7 +1203,7 @@
     {
       "h_number": 167,
       "name": "NC retailer-authorized discount + forced Pick 3 Double Draw",
-      "state": "SUCCESS",
+      "state": "OPEN",
       "main_result_or_blocker": "Retailer-authorized draw-ticket discount:** VALIDATED in current official NCEL rules. Commission-to-customer transfer architecture:** VALIDATED structurally; avoids the H166 own-store commission dependency. Forced Pair cover:** remains exact 100% prize gross before discount. Conservative simple C-corp tax threshold:** discount **>2.9004%** preserves positive modeled after-tax surplus; 5%-7% gives approximately +$0.83 to +$1.63 per $50 cover under the stated assumptions. Terminal SUCCESS:** NOT PROVEN because a live forced state, specific compliant retailer discount, and atomic/guaranteed rollb",
       "best_reported_ratio_percent": 21.0,
       "key_files": [
@@ -2040,7 +1229,7 @@
     {
       "h_number": 169,
       "name": "NC Pick 3 atomicity + liability-limit closure",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "Same-terminal cancellation: **VALIDATED but insufficient**. Cross-terminal/support rollback: **NOT PROVIDED by public rules found**. Liability-limit rejection branch: **VALIDATED current**. Complete-basket pre-reservation: **NOT FOUND**. H168/H167 NC forced-Double-Draw overlay: **CONDITIONALLY VALIDATED AFTER COMPLETE ACCEPTANCE; STRICT GUARANTEE REJECTED UNDER CURRENT PUBLIC RULES**. Lottery-project terminal SUCCESS: **NO**.",
       "best_reported_ratio_percent": 100.0,
       "key_files": [
@@ -2053,7 +1242,7 @@
     {
       "h_number": 170,
       "name": "Caribbean multi-prize / Mega Ball deterministic coverage screen",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "Barbados Pick 3 ordinary three-prize full cover: **52.5%, REJECTED**. Barbados Pick 3 Straight + successful MB: **101.25% conditional, NOT GUARANTEED**. Barbados Pick 3 Pair + successful MB: **106.0% conditional, strongest H170 lead, NOT GUARANTEED**. Barbados Pick 4 Straight + successful MB: **96.25%, REJECTED even in favorable state**. Curaçao Wega di Number multi-prize cover: **<=70% nominal before surcharge, REJECTED**. Lottery terminal SUCCESS: **NO**.",
       "best_reported_ratio_percent": 106.0,
       "key_files": [
@@ -2066,7 +1255,7 @@
     {
       "h_number": 171,
       "name": "Jamaica compact single-number coverage + Mega/Monsta Ball screen",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "Current Cash Pot base cover: **77.7778%, REJECTED guarantee**. Cash Pot + Mega: **136.1111% conditional**, but **38.8889% strict floor** → NOT SUCCESS. Money Time + Mega: **126.3158% conditional**, but **34.2105% strict floor** → NOT SUCCESS. Monsta control can reach **183.3333% conditional**, but misses fall to 53.70%/25.93%, and current promotion status is not established → NOT SUCCESS.",
       "best_reported_ratio_percent": 136.1111,
       "key_files": [
@@ -2092,7 +1281,7 @@
     {
       "h_number": 173,
       "name": "Rhode Island doubled 3-spot Keno reduced block cover",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "A strict reduced deterministic cover exists:** 4,560 plays instead of 82,160. Conditional free-2x worst-case gross = 109.6491%, +$440 pre-tax. 94.45% reduction in wager count relative to naive full space. Current executable SUCCESS: NO** because current 2026 2x terms/paytable and same-draw bulk acceptance are not proved.",
       "best_reported_ratio_percent": 138.7537,
       "key_files": [
@@ -2120,7 +1309,7 @@
     {
       "h_number": 175,
       "name": "Rhode Island doubled-Keno 4,336-play hybrid transversal gate",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "New sub-4,560 target: **4,336 plays**. Non-balanced compositions: **closed positive** for the identified support allocation, pair-only floor $4,370 > $4,336. Balanced composition: requires universal `n3>=3`. First affine realization: **REJECTED (MILP minimum n3=0)**. Terminal SUCCESS: **NO**.",
       "best_reported_ratio_percent": 100.2076,
       "key_files": [
@@ -2215,7 +1404,7 @@
     {
       "h_number": 182,
       "name": "Michigan Tripler Time random-acquisition impossibility",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "Current August 2026 Tripler Time: **LIVE and free on qualifying tagged tickets**. Multiplier entitlement after printing: **observable pre-draw and persistent across a multi-draw ticket**. Tag acquisition: **explicitly random** under current official evidence. Published deterministic issuance floor / Nth-ticket rule / bounded waiting rule: **NONE FOUND**. Pre-payment tag preview: **NONE FOUND; current FAQ describes pay then printed ticket**. Ex-ante strict guaranteed-profit use of Tripler Time: **REJECTED under current public executable conditions**.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2361,7 +1550,7 @@
     {
       "h_number": 192,
       "name": "Rhode Island 2026 live Keno promotion screen",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "H192 does not produce SUCCESS. It does establish two useful current facts: 1. Rhode Island has demonstrated in 2026 that its online platform can deterministically award a Keno-linked purchase subsidy, although the recovered offer was expired and non-cash. 2. A new **Kick Back with Keno Promotion** is visibly active on the official site in August 2026 and is now the highest-value RI execution lead; its exact rule PDF/page must be recovered before any economics can be claimed.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2614,7 +1803,7 @@
     {
       "h_number": 211,
       "name": "H175 combined residual-translation + stabilizer quotient",
-      "state": "SUCCESS",
+      "state": "CLOSED",
       "main_result_or_blocker": "The exact safe restricted-family search checkpoint improves from H210's `768,096` to **767,361** representatives, an additional 735-class reduction. Relative to H188 this is a reduction factor of about 16.016x.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2657,7 +1846,7 @@
     {
       "h_number": 215,
       "name": "H214/H213 exact cut-bank execution checkpoint",
-      "state": "EXHAUSTED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2726,7 +1915,7 @@
     {
       "h_number": 220,
       "name": "H219 pending-output gate",
-      "state": "UNCLASSIFIED",
+      "state": "OPEN",
       "main_result_or_blocker": "No lottery SUCCESS claim.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2794,7 +1983,7 @@
     {
       "h_number": 225,
       "name": "EXACT FAMILY STATUS",
-      "state": "SUCCESS",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2832,7 +2021,7 @@
     {
       "h_number": 227,
       "name": "exact cross-sector symmetry for the H225 general cyclic-affine family",
-      "state": "SUCCESS",
+      "state": "UNCLASSIFIED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2919,7 +2108,7 @@
     {
       "h_number": 234,
       "name": "exact unrestricted separation of actual H232 survivors",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -2935,7 +2124,7 @@
     {
       "h_number": 236,
       "name": "Rhode Island Lucky 3 Spot Keno doubled full-space threshold",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "NO SUCCESS.** H236 adds a reusable exact theorem for any 20/80 3-spot promotion that doubles prizes without doubling stake, and narrows the only interesting execution path to entitlement acquisition. Historical Lucky 3 Spot remains non-executable as a strict guarantee on recovered evidence; current Kick Back remains open only if materially new primary rules reveal a deterministic or fully controllable entitlement mechanism.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3134,7 +2323,7 @@
     {
       "h_number": 250,
       "name": "courier-supported partial digit wagers and exact subsidy floor",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 50.0,
       "key_files": [
@@ -3149,7 +2338,7 @@
     {
       "h_number": 251,
       "name": "Irish Lotto 6/45 Lotto Plus full-cover additive closure",
-      "state": "UNCLASSIFIED",
+      "state": "OPEN",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 52.847738,
       "key_files": [
@@ -3164,7 +2353,7 @@
     {
       "h_number": 252,
       "name": "Irish Lotto 6/45 cap full-cover sharing gate",
-      "state": "SUCCESS",
+      "state": "UNCLASSIFIED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3179,7 +2368,7 @@
     {
       "h_number": 253,
       "name": "Georgia scratcher endgame inventory gate",
-      "state": "CLOSED",
+      "state": "OPEN",
       "main_result_or_blocker": "NOT A SUCCESS.** Georgia #1709 demonstrates that scratcher endgames can display very large apparent positive conditional EV, but the missing unsold-inventory certificate prevents a guaranteed-profit conclusion.",
       "best_reported_ratio_percent": 198.8995,
       "key_files": [
@@ -3193,7 +2382,7 @@
     {
       "h_number": 254,
       "name": "Irish guaranteed-raffle capture screen",
-      "state": "SUCCESS",
+      "state": "UNCLASSIFIED",
       "main_result_or_blocker": "Three distinct guaranteed-prize/overlay structures were tested: 1. **finite fixed-ticket raffle** — fully coverable in principle, but total guaranteed prizes are only 42.2833% of full ticket cost; 2. **market-generated raffle overlay** — €1m external subsidy exists, but the player cannot deterministically own the full eligible code population; 3. **winning-number overlay** — €1m external subsidy exists, but ownership of all tickets sharing the winning raffle number cannot be guaranteed at bounded cost.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3206,7 +2395,7 @@
     {
       "h_number": 255,
       "name": "UK Lotto lower-tier boost covering-design impossibility",
-      "state": "SUCCESS",
+      "state": "UNCLASSIFIED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 62.4667,
       "key_files": [
@@ -3326,7 +2515,7 @@
     {
       "h_number": 263,
       "name": "Spain Christmas Lottery 2026 full-issue takeover cap",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "REJECTED for guaranteed-profit full takeover.** Current official 2026 economics impose a hard 70% gross ceiling.",
       "best_reported_ratio_percent": 70.0,
       "key_files": [
@@ -3341,7 +2530,7 @@
     {
       "h_number": 264,
       "name": "Uganda LOTTO fixed-tier / special-roll-down screen",
-      "state": "UNCLASSIFIED",
+      "state": "CLOSED",
       "main_result_or_blocker": "REJECTED for the fixed-per-selection external-subsidy search.",
       "best_reported_ratio_percent": 18.122142474,
       "key_files": [
@@ -3373,7 +2562,7 @@
     {
       "h_number": 266,
       "name": "AUTONOMOUS CHECKPOINT",
-      "state": "OPEN",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 55.68146,
       "key_files": [
@@ -3390,7 +2579,7 @@
     {
       "h_number": 267,
       "name": "AUTONOMOUS CHECKPOINT",
-      "state": "OPEN",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 36.087,
       "key_files": [
@@ -3425,7 +2614,7 @@
     {
       "h_number": 269,
       "name": "H269_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "Svenska Spel Joker was screened as a finite, partly player-selectable, fixed-payout identifier space.",
       "best_reported_ratio_percent": 40.0,
       "key_files": [
@@ -3442,7 +2631,7 @@
     {
       "h_number": 270,
       "name": "H270_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "The 2026 ONCE 11/11 rules were screened because they appear to contain an external subsidy: up to EUR 11m of top-prize money may come from unsold prizes in earlier draws.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3459,7 +2648,7 @@
     {
       "h_number": 271,
       "name": "H271_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "H271 screened UK EuroMillions Millionaire Maker as a candidate external-subsidy / finite-identifier takeover. It is genuinely attractive structurally because every UK EuroMillions entry automatically receives a raffle number and the raffle guarantees a £1,000,000 winner.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3476,7 +2665,7 @@
     {
       "h_number": 272,
       "name": "H272_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "H272 screened Japan's 2026 Takarakuji Day commemorative lottery (draw 1118) as a genuinely finite printed-ticket takeover candidate. The official issue is exactly **2 units × 10,000,000 tickets**, JPY 200 per ticket, so complete face-value acquisition is **JPY 4,000,000,000**.",
       "best_reported_ratio_percent": 47.495,
       "key_files": [
@@ -3493,7 +2682,7 @@
     {
       "h_number": 273,
       "name": "H273_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "H273 reviewed the active Moldova National Lottery / 7777.md `AUGUST GENEROS 2026` promotion as a possible source of externally funded promotional value.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3510,7 +2699,7 @@
     {
       "h_number": 274,
       "name": "H274_STATUS",
-      "state": "CLOSED",
+      "state": "EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 28.4734302,
       "key_files": [
@@ -3527,7 +2716,7 @@
     {
       "h_number": 275,
       "name": "Singapore TOTO cascade/full-cover",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 24.1153773762,
       "key_files": [
@@ -3544,7 +2733,7 @@
     {
       "h_number": 276,
       "name": "UK Thunderball fixed-prize exact bound",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 52.8815355883,
       "key_files": [
@@ -3561,7 +2750,7 @@
     {
       "h_number": 277,
       "name": "Millionaire for Life",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 52.8876353196,
       "key_files": [
@@ -3578,7 +2767,7 @@
     {
       "h_number": 278,
       "name": "Georgia Lottery deterministic 50% deposit subsidy",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 53.65,
       "key_files": [
@@ -3595,7 +2784,7 @@
     {
       "h_number": 279,
       "name": "Kentucky 100% match + Pick 3 exact cover",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3613,7 +2802,7 @@
     {
       "h_number": 280,
       "name": "New Hampshire 200% promo lead + Pick 3 exact cover",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3628,7 +2817,7 @@
     {
       "h_number": 281,
       "name": "Virginia free-game bonus worst-case floor",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 50.0,
       "key_files": [
@@ -3645,7 +2834,7 @@
     {
       "h_number": 282,
       "name": "Kentucky CASH POP + August 2026 deposit bonuses",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 77.7778,
       "key_files": [
@@ -3662,7 +2851,7 @@
     {
       "h_number": 283,
       "name": "Pennsylvania referral Bonus Money + PICK covers",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3682,7 +2871,7 @@
     {
       "h_number": 284,
       "name": "H284_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 57.0,
       "key_files": [
@@ -3699,7 +2888,7 @@
     {
       "h_number": 285,
       "name": "H285_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3716,7 +2905,7 @@
     {
       "h_number": 286,
       "name": "H286_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3733,7 +2922,7 @@
     {
       "h_number": 287,
       "name": "H287_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "AL Rewards converts at 1,000 points = $1 Promo Cash. Using the published maximum 6 points per $1 as a player-favourable upper bound gives at most 0.6% extra playable balance. Promo-Cash-funded play earns no further points on that portion.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3750,7 +2939,7 @@
     {
       "h_number": 288,
       "name": "H288_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "The promotion gives at most 1.5x playable balance per unit of deposited external cash. Exact full-result-space recomputation of every published primitive fixed-pay wager class gives:",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3835,7 +3024,7 @@
     {
       "h_number": 293,
       "name": "H293_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "Four current hard-capped Flash Rewards draws were tested under impossible-perfect ownership of every issued entry. Exact package optimization shows all unambiguous player-facing prize values remain below full-acquisition cost.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3852,7 +3041,7 @@
     {
       "h_number": 294,
       "name": "H294_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "Four genuinely new current hard-capped Australian raffle pools were screened under an impossible-perfect full-ownership model. None reaches break-even even after counting advertised prize liabilities generously in the player's favour.",
       "best_reported_ratio_percent": 20.0,
       "key_files": [
@@ -3869,7 +3058,7 @@
     {
       "h_number": 295,
       "name": "H295_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "The current Junior League of Baton Rouge Hollydays raffle pair was screened as a genuinely new finite-identifier lead.",
       "best_reported_ratio_percent": 40.0,
       "key_files": [
@@ -3886,7 +3075,7 @@
     {
       "h_number": 296,
       "name": "H296_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "Three genuinely new current finite-pool candidates were screened under impossible-perfect ownership and player-favourable valuations:",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -3903,7 +3092,7 @@
     {
       "h_number": 297,
       "name": "H297_STATUS",
-      "state": "CLOSED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 41.6,
       "key_files": [
@@ -3920,7 +3109,7 @@
     {
       "h_number": 298,
       "name": "H298_STATUS",
-      "state": "CLOSED",
+      "state": "CLOSED / EXHAUSTED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 80.0,
       "key_files": [
@@ -3937,7 +3126,7 @@
     {
       "h_number": 299,
       "name": "H299_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -4032,7 +3221,7 @@
     {
       "h_number": 305,
       "name": "H305_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "Four current guaranteed-winner cash draws were checked. In every case the published per-person entry cap is far below the finite pool size, and the free postal route is explicitly subject to the same per-entrant maximum.",
       "best_reported_ratio_percent": 51.0568774,
       "key_files": [
@@ -4048,7 +3237,7 @@
     {
       "h_number": 306,
       "name": "H306_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "A genuinely useful mechanism was found: current On The Podium Prizes pages display several competitions at **Free per ticket** with a hard **1,000-ticket** finite pool. The strongest checked draw is `FREE TO ENTER £100 CASH!`.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -4097,7 +3286,7 @@
     {
       "h_number": 309,
       "name": "H309_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": 109.8901,
       "key_files": [
@@ -4114,7 +3303,7 @@
     {
       "h_number": 310,
       "name": "H310_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "See key files; older packet lacks a standardized result section.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -4199,7 +3388,7 @@
     {
       "h_number": 315,
       "name": "H315_STATUS",
-      "state": "SUCCESS",
+      "state": "CLOSED",
       "main_result_or_blocker": "Current U Comps `£50,000 Instant Win Competition` (#143) publishes unclaimed instant-win identifiers, but the one-player acquisition cap and ticket-allocation mechanics prevent deterministic capture.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -4333,7 +3522,7 @@
     {
       "h_number": 323,
       "name": "H323_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "Current UKCC VW Crafter + Mercedes GLC draw was tested with the deterministic `SUN10` promotional discount.",
       "best_reported_ratio_percent": 39.4366986,
       "key_files": [
@@ -4367,7 +3556,7 @@
     {
       "h_number": 325,
       "name": "H325_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "H325 tested a genuinely different mechanism: buying all remaining tickets in a heavily undersold finite draw that is guaranteed to run regardless of sellout.",
       "best_reported_ratio_percent": 55.5556,
       "key_files": [
@@ -4384,7 +3573,7 @@
     {
       "h_number": 326,
       "name": "H326_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "H326 tested the current LLF Games recurring **£350 Cash For £1.99** finite pool using its free postal entry route.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -4401,7 +3590,7 @@
     {
       "h_number": 327,
       "name": "H327_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "H327 tested the current KRAZED `COSMIC CASH` pool because its postal route is a genuine deterministic acquisition subsidy: one £0.91 2nd Class postal entry receives 10 tickets that would cost £1.00 online, a **9% discount**.",
       "best_reported_ratio_percent": 9.0,
       "key_files": [
@@ -4418,7 +3607,7 @@
     {
       "h_number": 328,
       "name": "H328_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "H328 tested the current BOTB `Carnival Extravaganza` finite Instant Wins pool against the BOTB Pass subsidy route.",
       "best_reported_ratio_percent": null,
       "key_files": [
@@ -4435,7 +3624,7 @@
     {
       "h_number": 329,
       "name": "H329_STATUS",
-      "state": "EXHAUSTED",
+      "state": "CLOSED",
       "main_result_or_blocker": "H329 tested whether a current `Every Ticket Wins` finite pool can become a strict guaranteed-cash-profit construction by repeatedly recycling non-withdrawable site credit into more tickets.",
       "best_reported_ratio_percent": null,
       "key_files": [

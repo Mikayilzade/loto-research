@@ -19,7 +19,7 @@ All planned stages 0-7 are complete:
 
 ## Current scale and endpoint
 - **Real latest numbered H packet:** H357.
-- **Inventory:** 347 distinct H numbers discovered from repository filenames; 342 parsed packet records; five file-only discoveries explicitly listed as unparsed; all 92 discovered `H*_STATUS.md` files represented; zero duplicate-status conflicts.
+- **Inventory:** 278 distinct lottery-only H numbers discovered; 273 parsed packet records; five file-only discoveries explicitly listed as unparsed; all 93 in-scope authoritative status files (including `H225_EXACT_STATUS.md`) represented; zero duplicate-status conflicts. Old H020/H039-H107 non-lottery drift is preserved but excluded.
 - **Terminal state:** **NO SUCCESS; NOT EXHAUSTED**.
 - **New H packet this session:** **No.** H358 was intentionally not created because no candidate passed the cheap gates.
 
@@ -62,6 +62,8 @@ The Stage 6 external search was environment-limited (web endpoint HTTP 401; fall
 
 ## Main research conclusion
 The dominant blocker is no longer finding attractive isolated arithmetic. Several packets already exceed 100% under exclusive/no-duplicate assumptions. The hard missing property is **binding exclusive control of payout support**: postal acceptance can fail, public identifiers remain external, or shared prizes can be diluted. Future searches should demand that control condition before expensive modelling.
+
+The inventory classifier is deliberately conservative: `SUCCESS` now requires an explicit, non-negated terminal-success statement. H137/H138/H164/H166/H167 remain non-success conditional work, and H225-X* is classified `CLOSED / EXHAUSTED`, not as a successful strategy.
 
 ## Session outputs
 - `tools/build_h_packet_inventory.py`

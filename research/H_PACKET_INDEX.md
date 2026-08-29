@@ -1,34 +1,34 @@
-# H Packet Index
+# H Packet Index — Lottery Only
 
-Generated reproducibly by `tools/build_h_packet_inventory.py` from packet evidence in the repository.
+Generated reproducibly by `tools/build_h_packet_inventory.py` from lottery packet evidence in the repository.
+Old non-lottery drift (H020 and H039-H107: betting, banking, FX, scrap, claims, and related work) remains in the repository but is intentionally excluded from this current navigation map.
 
 ## Validation counts
 
-- Discovered packet numbers: **347**.
-- Parsed records: **342**.
+- Discovered packet numbers: **278**.
+- Parsed records: **273**.
 - Skipped/unparsed: **5**.
-- Discovered `H*_STATUS.md` files: **93**; unrepresented: **0**.
+- In-scope authoritative status files (`H*_STATUS.md`, including `H225_EXACT_STATUS.md`): **93**; unrepresented: **0**.
 - Duplicate status conflicts: **0**.
-- Filename gaps (not invented as research): **H3, H4, H6, H10, H13, H14, H16, H17, H49**.
+- Filename gaps (not invented as research): **H3, H4, H6, H10, H13, H14, H16, H17**.
 
-The JSON record is authoritative for full file lists and extracted blocker/reopening text. `UNCLASSIFIED` means older evidence did not use a standardized state label; it does not imply an open lead.
+The JSON record is authoritative for full file lists and extracted blocker/reopening text. `SUCCESS` is reserved for an explicit, non-negated terminal project success; successful intermediate tests never qualify. `UNCLASSIFIED` does not imply an open lead.
 
 ## Inventory
 
 | H | State | Packet / mechanism | Best reported ratio | Inventory source |
 |---:|---|---|---:|---|
 | H2 | UNCLASSIFIED | Powerball observed demand / winner-count proxy | — | `research/h002_powerball_demand_proxy.md` |
-| H5 | UNCLASSIFIED | nonlinear portfolio / pricing / promotion overlay screen | — | `research/h005_nonlinear_overlay_screen.md` |
+| H5 | OPEN | nonlinear portfolio / pricing / promotion overlay screen | — | `research/h005_nonlinear_overlay_screen.md` |
 | H7 | UNCLASSIFIED | Azerbaijan high-frequency RNG/history source discovery | — | `research/h007_rng_source_discovery.md` |
 | H8 | CLOSED | EuroMillions cross-jurisdiction valuation | — | `research/h008_euromillions_cross_jurisdiction.md` |
 | H9 | UNCLASSIFIED | current deterministic subsidy / promotion screen | — | `research/h009_current_deterministic_subsidy_screen_2026-08-15.md` |
 | H11 | OPEN | lawful visible pre-purchase information leakage | — | `research/h011_visible_prepurchase_information.md` |
-| H12 | UNCLASSIFIED | full-space coverage / buy-the-pot | 23% | `research/h012_full_space_coverage.md` |
-| H15 | UNCLASSIFIED | crowd-choice / anti-popularity sharing edge | — | `research/h015_crowd_sharing.md` |
+| H12 | CLOSED | full-space coverage / buy-the-pot | 23% | `research/h012_full_space_coverage.md` |
+| H15 | OPEN | crowd-choice / anti-popularity sharing edge | — | `research/h015_crowd_sharing.md` |
 | H18 | OPEN | Virginia Lucky Contestant hidden daily time-state | — | `research/h018_lucky_contestant_time_state.md` |
-| H19 | UNCLASSIFIED | capped fixed-prize competition saturation / buy-all-entries | 28.6% | `research/h019_capped_fixed_prize_saturation.md` |
-| H20 | SUCCESS | lawful two-sided hedging / arbitrage | 5% | `research/h020_two_sided_hedging_arbitrage.md` |
-| H21 | UNCLASSIFIED | forced-distribution / external-subsidy bound | — | `research/h021_forced_distribution_subsidy_bound.md` |
+| H19 | CLOSED | capped fixed-prize competition saturation / buy-all-entries | 28.6% | `research/h019_capped_fixed_prize_saturation.md` |
+| H21 | CLOSED | forced-distribution / external-subsidy bound | — | `research/h021_forced_distribution_subsidy_bound.md` |
 | H22 | CLOSED | Irish Lotto 5-4-3-2-1 full-coverage theorem | 76.5957% | `research/h022_irish_54321_full_coverage.md` |
 | H23 | CLOSED | UK fixed-prize full-space coverage: Set For Life + Thunderball | 100% | `research/h023_uk_fixed_prize_full_coverage.md` |
 | H24 | CLOSED | UK HotPicks + Irish Daily Million full-coverage screen | 54.7658% | `research/h024_hotpick_daily_million_full_coverage.md` |
@@ -46,74 +46,6 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H36 | CLOSED | Irish Plus full coverage + active OLG targeted bonus screen | — | `research/h036_irish_plus_and_olg_targeted_bonus.md` |
 | H37 | CLOSED | Irish Lotto Plus Million Euro Raffle | — | `research/h037_lotto_plus_million_raffle.md` |
 | H38 | CLOSED | deterministic rebate / lottery-credit guarantee screen | — | `research/h038_deterministic_rebate_guarantee.md` |
-| H39 | CLOSED | cash-refund / matched-betting guarantee gate | — | `research/h039_cash_refund_matched_betting_gate.md` |
-| H40 | UNCLASSIFIED | current cash-refund operator scan + selective-refund theorem | — | `research/h040_cash_refund_operator_scan.md` |
-| H41 | SUCCESS | free-bet token conversion through matched lay | — | `research/h041_free_bet_matched_conversion.md` |
-| H42 | UNCLASSIFIED | contract-permitted matched-promotion scan | — | `research/h042_contract_permitted_matched_promo_scan.md` |
-| H43 | UNCLASSIFIED | acquisition-first free-bet / credit screen | — | `research/h043_acquisition_first_freebet_screen.md` |
-| H44 | CLOSED | Azerbaijan-accessible promotion + external hedge screen | — | `research/h044_azerbaijan_accessible_promo_hedge.md` |
-| H45 | CLOSED | eTopaz contract + settlement-equivalence gate | — | `research/h045_etopaz_contract_settlement_gate.md` |
-| H46 | CLOSED | same-clearing-venue arbitrage + deterministic cash-subsidy gate | — | `research/h046_same_venue_and_cash_subsidy_gate.md` |
-| H47 | UNCLASSIFIED | vested-cash entitlement / rebate screen | — | `research/h047_vested_cash_entitlement_screen.md` |
-| H48 | CLOSED | /H049 — deterministic action cash and make-whole yield screen | — | `research/h048_action_cash_and_makewhole_screen.md` |
-| H50 | OPEN | # Checked projects and tests — H050 | — | `research/CHECKED_PROJECTS_AND_TESTS_H050.md` |
-| H51 | CLOSED | regulated deposit / e-money / broker fixed-reward screen | — | `research/h051_regulated_deposit_fixed_reward_screen.md` |
-| H52 | OPEN | upfront interest + insured principal | — | `research/h052_upfront_insured_interest.md` |
-| H53 | UNCLASSIFIED | deterministic bank cashback / welcome-subsidy screen | — | `research/h053_deterministic_cashback_subsidies.md` |
-| H54 | UNCLASSIFIED | principal-preserving deposit / funding bonus screen | — | `research/h054_principal_preserving_bonus_screen.md` |
-| H55 | UNCLASSIFIED | fixed-cash account-opening / transfer / funding credits | — | `research/h055_fixed_cash_account_funding_credits.md` |
-| H56 | SUCCESS | Azerbaijan-compatible fixed-cash referral / funding rewards | — | `research/h056_azerbaijan_fixed_cash_referral.md` |
-| H57 | CLOSED | irrevocably vested cash reward screen | — | `research/h057_irrevocable_cash_reward_screen.md` |
-| H58 | UNCLASSIFIED | business-volume / payment-rail cash rebates | — | `research/h058_business_volume_payment_rail_rebates.md` |
-| H59 | CLOSED | marketplace / creator / freelancer payout bonuses | — | `research/h059_marketplace_creator_freelancer_bonuses.md` |
-| H60 | CLOSED | regulated cross-border payment / funding cash-credit screen | — | `research/h060_crossborder_payment_cash_credits.md` |
-| H61 | CLOSED | same-currency account-opening / funding cash rewards | — | `research/h061_same_currency_account_rewards.md` |
-| H62 | CLOSED | regulated business-account onboarding / payroll / merchant-acquiring activation grants | — | `research/h062_business_onboarding_merchant_grants.md` |
-| H63 | SUCCESS | Azerbaijan POS-linked tax subsidy / merchant-acquiring economics | 6.5% | `research/h063_azerbaijan_pos_tax_subsidy.md` |
-| H64 | CLOSED | Azerbaijan statutory/state-backed business subsidies | — | `research/h064_azerbaijan_state_business_subsidies.md` |
-| H65 | UNCLASSIFIED | Azerbaijan fixed-cash agricultural/state bounties | — | `research/h065_azerbaijan_fixed_cash_agri_bounties.md` |
-| H66 | UNCLASSIFIED | Azerbaijan vehicle-scrappage fixed-cash arbitrage screen | — | `research/h066_azerbaijan_vehicle_scrappage_cash_floor.md` |
-| H67 | UNCLASSIFIED | Azerbaijan transferable vehicle-scrappage certificate arbitrage | — | `research/h067_transferable_scrappage_certificate_arbitrage.md` |
-| H68 | OPEN | CBAR investment-coin mandatory buyback / secondary-market arbitrage | — | `research/h068_cbar_investment_coin_buyback_arbitrage.md` |
-| H69 | UNCLASSIFIED | damaged AZN face-redemption arbitrage | — | `research/h069_damaged_azn_face_redemption_arbitrage.md` |
-| H70 | SUCCESS | Azerbaijan interbank FX cross-arbitrage | — | `research/h070_azerbaijan_interbank_fx_cross_arbitrage.md` |
-| H71 | CLOSED | statutory gift-card cash redemption arbitrage | — | `research/h071_statutory_giftcard_cash_redemption.md` |
-| H72 | UNCLASSIFIED | Azerbaijan electronic-money / stored-value redemption arbitrage | — | `research/h072_azerbaijan_stored_value_redemption.md` |
-| H73 | SUCCESS | Germany mandatory container-deposit arbitrage | — | `research/h073_germany_container_deposit_arbitrage.md` |
-| H74 | CLOSED | Baku local gold-scrap arbitrage | — | `research/h074_baku_gold_scrap_arbitrage.md` |
-| H75 | CLOSED | Germany refundable gas-bottle deposit arbitrage | — | `research/h075_germany_gas_bottle_deposit_arbitrage.md` |
-| H76 | CLOSED | zero-cost salvage -> deterministic scrap-cash arbitrage | — | `research/h076_zero_cost_salvage_to_scrap_arbitrage.md` |
-| H77 | CLOSED | Baku catalytic-converter pre-quote arbitrage | — | `research/h077_baku_catalytic_converter_atomic_arbitrage.md` |
-| H78 | CLOSED | Baku e-scrap PCB pre-quote arbitrage | — | `research/h078_baku_e_scrap_board_atomic_arbitrage.md` |
-| H79 | CLOSED | Baku salvage component density screen | — | `research/h079_baku_component_density_screen.md` |
-| H80 | OPEN | Baku contactor silver-contact atomic arbitrage screen | — | `research/h080_baku_contactor_silver_contact_screen.md` |
-| H81 | CLOSED | Baku contactor execution-route closure | — | `research/h081_baku_contactor_execution_route.md` |
-| H82 | OPEN | Soviet relay passport/value arbitrage | — | `research/h082_soviet_relay_passport_arbitrage.md` |
-| H83 | CLOSED | Baku KEM-1 fixed-price live listing screen | — | `research/h083_kem1_local_screen.md` |
-| H84 | OPEN | current relay cash-price targeting | — | `research/h084_current_relay_cash_price_targeting.md` |
-| H85 | OPEN | Baku precious-capacitor targeting | — | `research/h085_baku_precious_capacitor_targeting.md` |
-| H86 | OPEN | Baku tantalum-capacitor break-even screen | — | `research/h086_baku_tantalum_capacitor_break_even.md` |
-| H87 | EXHAUSTED | Baku tantalum execution route / web-only seller discovery | — | `research/h087_baku_tantalum_execution_route.md` |
-| H88 | CLOSED | K52/K53 material-classification gate | — | `research/h088_k52_k53_material_classification.md` |
-| H89 | CLOSED | BakıKart refundable-balance secondary-market arbitrage | — | `research/h089_bakikart_refundable_balance_secondary_market.md` |
-| H90 | UNCLASSIFIED | Azerbaijan VAT cashback + merchandise return cycle | — | `research/h090_vat_cashback_return_cycle.md` |
-| H91 | CLOSED | Azerbaijan prepaid mobile balance redemption / secondary-market arbitrage | — | `research/h091_azerbaijan_prepaid_mobile_balance_redemption.md` |
-| H92 | CLOSED | matured claim / bank-balance assignment arbitrage | — | `research/h092_matured_claim_assignment_arbitrage.md` |
-| H93 | CLOSED | Azerbaijan pre-funded assigned-claim arbitrage | — | `research/h093_prefunded_assigned_claim_arbitrage.md` |
-| H94 | UNCLASSIFIED | Azerbaijan export-cost compensation as deterministic subsidy | — | `research/h094_azerbaijan_export_cost_compensation.md` |
-| H95 | UNCLASSIFIED | Azerbaijan Energy Efficiency Fund grants/subsidies | — | `research/h095_azerbaijan_energy_efficiency_fund.md` |
-| H96 | CLOSED | Azerbaijan employment / self-employment / liberated-territory subsidy screen | 80% | `research/h096_azerbaijan_employment_selfemployment_subsidy_screen.md` |
-| H97 | CLOSED | Azerbaijan self-employment asset-package residual-value screen | — | `research/h097_selfemployment_asset_package_residual_screen.md` |
-| H98 | CLOSED | Azerbaijan statutory finder / treasure / archive rewards | 5% | `research/h098_azerbaijan_statutory_finders_treasure_archive_rewards.md` |
-| H99 | CLOSED | Azerbaijan cultural-export valuation / state acquisition screen | — | `research/h099_azerbaijan_cultural_export_mandatory_buyout.md` |
-| H100 | CLOSED | Prefunded notary-deposit claim assignment in Azerbaijan | — | `research/h100_prefunded_notary_deposit_claim_assignment.md` |
-| H101 | CLOSED | prefunded execution-service deposit claim assignment | — | `research/h101_prefunded_execution_service_deposit_claim_assignment.md` |
-| H102 | CLOSED | prefunded statutory refund receivables | — | `research/h102_prefunded_refund_receivables.md` |
-| H103 | CLOSED | prefunded enforcement-advance refund claim assignment | — | `research/h103_prefunded_enforcement_advance_refund_assignment.md` |
-| H104 | UNCLASSIFIED | Azerbaijan sovereign fixed-income control | — | `research/h104_azerbaijan_sovereign_fixed_income_control.md` |
-| H105 | SUCCESS | Azerbaijan private-enforcement advance: deterministic-refund control | — | `research/h105_private_enforcement_advance_control.md` |
-| H106 | CLOSED | prefunded bank-liquidation payout claim assignment | — | `research/h106_bank_liquidation_prefunded_payout_claim_assignment.md` |
-| H107 | CLOSED | Article 87.4 successor route / assignee-recognition theorem | — | `research/h107_article87_successor_route.md` |
 | H108 | CLOSED | Lotto Texas 2023 full-coverage control | — | `research/h108_lotto_texas_2023_full_coverage_control.md` |
 | H109 | CLOSED | unique-issued-number raffle / guaranteed-winner takeover screen | — | `research/h109_unique_issued_raffle_takeover.md` |
 | H110 | CLOSED | Texas scratch closing-inventory / remaining-liability bound | 62.5% | `research/h110_texas_scratch_closing_inventory_bound.md` |
@@ -128,7 +60,7 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H120 | CLOSED | FDJ Grand LOTO forced-distribution / full-space bound | 77.4243% | `research/h120_fdj_grand_loto_forced_distribution_bound.md` |
 | H121 | CLOSED | micro-capped / donated-prize raffle full-takeover screen | 100% | `research/h121_micro_capped_donated_prize_raffle_takeover.md` |
 | H122 | OPEN | Florida Millionaire Raffle 2026 undersubscription overlay | 57.045% | `research/h122_florida_millionaire_raffle_undersubscription_overlay.md` |
-| H123 | UNCLASSIFIED | fixed-prize raffle undersubscription monitor calibration | 65.344% | `research/h123_fixed_prize_raffle_monitor_calibration.md` |
+| H123 | CLOSED | fixed-prize raffle undersubscription monitor calibration | 65.344% | `research/h123_fixed_prize_raffle_monitor_calibration.md` |
 | H124 | CLOSED | Ohio MyLotto Rewards deterministic losing-ticket rebate screen | 78.125% | `research/h124_ohio_mylotto_rewards_deterministic_rebate.md` |
 | H125 | UNCLASSIFIED | fixed-board raffle near-threshold calibration | 96.2963% | `research/h125_fixed_board_raffle_near_threshold_calibration.md` |
 | H126 | UNCLASSIFIED | Michigan Super Raffle 2025 undersubscription reconstruction | 113.59% | `research/h126_michigan_super_raffle_undersubscription_reconstruction.md` |
@@ -136,19 +68,19 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H128 | CLOSED | Florida Millionaire Raffle 2026 early-ticket cumulative overlay | 73.6% | `research/h128_florida_early_ticket_cumulative_overlay.md` |
 | H129 | CLOSED | fixed-board raffle late-takeover floor / North Carolina Celebrate America 2026 | 65% | `research/h129_nc_raffle_late_takeover_floor.md` |
 | H130 | CLOSED | New Jersey Fast Play Progressive finite-grid interpretation / jackpot threshold screen | — | `research/h130_nj_fast_play_progressive_grid.md` |
-| H131 | CLOSED | global `Nth` lottery coupon allocation / deterministic tranche test | 200% | `research/h131_global_nth_coupon_allocation.md` |
+| H131 | OPEN | global `Nth` lottery coupon allocation / deterministic tranche test | 200% | `research/h131_global_nth_coupon_allocation.md` |
 | H132 | CLOSED | Rhode Island player-owned `buy 2, get 1 free` lottery subsidy | 33.3333% | `research/h132_ri_player_owned_buy2_get1_free.md` |
 | H133 | CLOSED | current lottery-wallet bonus + compact fixed-coverage screen | 50% | `research/h133_wallet_bonus_compact_coverage.md` |
 | H134 | CLOSED | guaranteed-prize subscriptions and free-ticket subsidy screen | 8.6957% | `research/h134_guaranteed_prize_and_free_ticket_subsidy_screen.md` |
 | H135 | CLOSED | Washington Happy Hour deterministic subsidy + compact coverage | — | `research/h135_washington_happy_hour_compact_coverage.md` |
 | H136 | CLOSED | Kentucky 100% first-deposit bonus + Pick 3 deterministic coverage | 60% | `research/h136_kentucky_100pct_bonus_pick3_cover.md` |
-| H137 | SUCCESS | Kentucky stacked referral + 100% first-deposit match + Pick 3 Pair cover | 60% | `research/h137_kentucky_stacked_referral_match_pair_cover.md` |
-| H138 | SUCCESS | cross-state >=100% lottery-bonus + compact fixed-prize coverage screen | 100% | `research/h138_cross_state_100pct_bonus_compact_cover_screen.md` |
-| H139 | CLOSED | Kentucky concurrent deposit-promo stack + Pick 3 Pair coverage | 125% | `research/h139_kentucky_concurrent_deposit_promo_stack.md` |
+| H137 | OPEN | Kentucky stacked referral + 100% first-deposit match + Pick 3 Pair cover | 60% | `research/h137_kentucky_stacked_referral_match_pair_cover.md` |
+| H138 | OPEN | cross-state >=100% lottery-bonus + compact fixed-prize coverage screen | 100% | `research/h138_cross_state_100pct_bonus_compact_cover_screen.md` |
+| H139 | OPEN | Kentucky concurrent deposit-promo stack + Pick 3 Pair coverage | 125% | `research/h139_kentucky_concurrent_deposit_promo_stack.md` |
 | H140 | CLOSED | Kentucky discretionary-promotion gate + pre-funding acceptance architecture | 60% | `research/h140_kentucky_discretionary_promo_gate_and_prefunding_architecture.md` |
 | H141 | CLOSED | North Carolina checkout-level Lottery Offer architecture | 50% | `research/h141_north_carolina_checkout_offer_architecture.md` |
 | H142 | CLOSED | Virginia Keno 75% deterministic 1-Spot cover + Rewards/free-play threshold | 75% | `research/h142_virginia_keno_75pct_cover_rewards_threshold.md` |
-| H143 | CLOSED | Virginia Rewards exact-gate + >75% compact Keno screen | 75% | `research/h143_virginia_rewards_and_high_cover_keno_screen.md` |
+| H143 | OPEN | Virginia Rewards exact-gate + >75% compact Keno screen | 75% | `research/h143_virginia_rewards_and_high_cover_keno_screen.md` |
 | H144 | OPEN | Nebraska municipal Keno special-paytable / free-play route | 100% | `research/h144_nebraska_municipal_keno_special_paytable_route.md` |
 | H145 | CLOSED | Nebraska Keno execution lock + coupon threshold | — | `research/h145_nebraska_keno_execution_lock_and_coupon_threshold.md` |
 | H146 | CLOSED | Nebraska Kearney special boundary + ticket/paytable lock | 75% | `research/h146_nebraska_kearney_special_boundary_and_ticket_lock.md` |
@@ -169,25 +101,25 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H161 | CLOSED | New Jersey Pick-3 Green Ball forced-state + retailer commission corollary | 100% | `research/h161_nj_green_ball_forced_state_retailer_commission.md` |
 | H162 | CLOSED | New Jersey Green Ball: retailer commission entitlement materially strengthened | 100% | `research/h162_nj_green_ball_retailer_commission_lock.md` |
 | H163 | CLOSED | New Jersey Pick-3 Green Ball atomicity lower bound | — | `research/h163_nj_green_ball_atomicity_lower_bound.md` |
-| H164 | SUCCESS | North Carolina Pick 3 forced Double Draw + retailer commission overlay | 107% | `research/h164_nc_pick3_double_draw_retailer_overlay.md` |
+| H164 | OPEN | North Carolina Pick 3 forced Double Draw + retailer commission overlay | 107% | `research/h164_nc_pick3_double_draw_retailer_overlay.md` |
 | H165 | CLOSED | NC retailer self-play legality + 2026 tax-floor stress test | 90% | `research/h165_nc_retailer_self_play_tax_gate.md` |
-| H166 | SUCCESS | NC Pick 3 forced Double Draw: corporate tax salvage + liability-limit stress | 23% | `research/h166_nc_double_draw_corp_tax_and_liability.md` |
-| H167 | SUCCESS | NC retailer-authorized discount + forced Pick 3 Double Draw | 21% | `research/h167_nc_retail_discount_double_draw.md` |
+| H166 | OPEN | NC Pick 3 forced Double Draw: corporate tax salvage + liability-limit stress | 23% | `research/h166_nc_double_draw_corp_tax_and_liability.md` |
+| H167 | OPEN | NC retailer-authorized discount + forced Pick 3 Double Draw | 21% | `research/h167_nc_retail_discount_double_draw.md` |
 | H168 | OPEN | NC Pick 3 retailer discount authority + current Double Draw availability | — | `research/h168_nc_pick3_discount_authority_and_current_availability.md` |
-| H169 | CLOSED | NC Pick 3 atomicity + liability-limit closure | 100% | `research/h169_nc_pick3_atomicity_liability_limit_closure.md` |
-| H170 | CLOSED | Caribbean multi-prize / Mega Ball deterministic coverage screen | 106% | `research/h170_caribbean_multi_prize_megaball_cover.md` |
-| H171 | CLOSED | Jamaica compact single-number coverage + Mega/Monsta Ball screen | 136.111% | `research/h171_jamaica_cashpot_megaball_monstaball_cover.md` |
+| H169 | OPEN | NC Pick 3 atomicity + liability-limit closure | 100% | `research/h169_nc_pick3_atomicity_liability_limit_closure.md` |
+| H170 | OPEN | Caribbean multi-prize / Mega Ball deterministic coverage screen | 106% | `research/h170_caribbean_multi_prize_megaball_cover.md` |
+| H171 | OPEN | Jamaica compact single-number coverage + Mega/Monsta Ball screen | 136.111% | `research/h171_jamaica_cashpot_megaball_monstaball_cover.md` |
 | H172 | CLOSED | Rhode Island pre-locked Keno doubler architecture | 138.754% | `research/h172_rhode_island_prelocked_keno_doubler.md` |
-| H173 | CLOSED | Rhode Island doubled 3-spot Keno reduced block cover | 138.754% | `research/h173_ri_keno_reduced_block_cover.md` |
+| H173 | OPEN | Rhode Island doubled 3-spot Keno reduced block cover | 138.754% | `research/h173_ri_keno_reduced_block_cover.md` |
 | H174 | CLOSED | Rhode Island doubled-Keno clique-partition exhaustion + Keno Plus timing gate | 94.5513% | `research/h174_ri_keno_partition_exhaustion_and_plus_timing.md` |
-| H175 | CLOSED | Rhode Island doubled-Keno 4,336-play hybrid transversal gate | 100.208% | `research/h175_ri_keno_hybrid_4336_transversal_gate.md` |
+| H175 | OPEN | Rhode Island doubled-Keno 4,336-play hybrid transversal gate | 100.208% | `research/h175_ri_keno_hybrid_4336_transversal_gate.md` |
 | H176 | CLOSED | Rhode Island Keno live execution surface and current-promotion gate | — | `research/h176_ri_keno_live_execution_surface_2026.md` |
 | H177 | CLOSED | Rhode Island paid Keno Plus guarantee closure | 54.8246% | `research/h177_ri_paid_keno_plus_guarantee_closure.md` |
 | H178 | OPEN | H175 mixed-isotopy adversarial screen | — | `research/h178_h175_mixed_isotopy_adversarial_screen.md` |
 | H179 | OPEN | H175 intensified balanced-adversary screen | — | `research/h179_h175_intensified_adversarial_screen.md` |
 | H180 | OPEN | H175 master-design cutting-plane prototype | — | `research/h180_h175_master_cutting_plane.md` |
 | H181 | OPEN | Michigan Club Keno Tripler Time pre-draw overlay | 195.642% | `research/h181_michigan_tripler_time_prelocked_overlay.md` |
-| H182 | CLOSED | Michigan Tripler Time random-acquisition impossibility | — | `research/h182_michigan_tripler_random_acquisition_impossibility.md` |
+| H182 | OPEN | Michigan Tripler Time random-acquisition impossibility | — | `research/h182_michigan_tripler_random_acquisition_impossibility.md` |
 | H183 | CLOSED | H180 symmetry reduction + persistent 246-counterexample cut bank | — | `research/h183_h180_symmetry_reduced_persistent_cut_bank.md` |
 | H184 | CLOSED | exact rejection of the current H183 master candidate | — | `research/h184_h183_current_master_exact_rejection.md` |
 | H185 | CLOSED | H180 affine-orbit cut acceleration | — | `research/h185_h180_affine_orbit_cut_acceleration.md` |
@@ -197,7 +129,7 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H189 | CLOSED | S3 coefficient-orbit canonicalization for the H175 restricted master | — | `research/h189_h188_s3_coefficient_orbits.md` |
 | H190 | CLOSED | correction of H189 full-S3 canonicalization | — | `research/h190_h189_s3_symmetry_correction.md` |
 | H191 | EXHAUSTED | exact A-set stabilizer classification after H190 | — | `research/h191_a_set_stabilizer_classification.md` |
-| H192 | EXHAUSTED | Rhode Island 2026 live Keno promotion screen | — | `research/h192_rhode_island_2026_live_keno_promo_screen.md` |
+| H192 | CLOSED | Rhode Island 2026 live Keno promotion screen | — | `research/h192_rhode_island_2026_live_keno_promo_screen.md` |
 | H193 | CLOSED | Rhode Island Keno throughput / ticket-bound screen | — | `research/h193_ri_keno_throughput_ticket_bound.md` |
 | H194 | CLOSED | Rhode Island Keno same-draw execution correction | — | `research/h194_ri_keno_single_selection_execution_correction.md` |
 | H195 | CLOSED | Rhode Island Keno bulk-cart interface differential | — | `research/h195_ri_keno_bulk_cart_interface_differential.md` |
@@ -216,29 +148,29 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H208 | CLOSED | Rhode Island retail/SSVM strict Keno execution failure | — | `research/h208_ri_retail_ssvm_strict_execution_failure.md` |
 | H209 | CLOSED | Rhode Island `Kick Back with Keno` public-rule recovery gate | — | `research/h209_ri_kick_back_public_rule_recovery_gate.md` |
 | H210 | OPEN | H175 residual translation quotient | — | `research/h210_h175_residual_translation_quotient.md` |
-| H211 | SUCCESS | H175 combined residual-translation + stabilizer quotient | — | `research/h211_h175_combined_translation_stabilizer_quotient.md` |
+| H211 | CLOSED | H175 combined residual-translation + stabilizer quotient | — | `research/h211_h175_combined_translation_stabilizer_quotient.md` |
 | H212 | OPEN | H175 affine-unit orbit quotient | — | `research/h212_h175_affine_unit_orbits.md` |
 | H214 | EXHAUSTED | joint H212 affine-unit + H191 exceptional-S3 symmetry audit | — | `research/h214_h212_h191_joint_symmetry_audit.md` |
-| H215 | EXHAUSTED | H214/H213 exact cut-bank execution checkpoint | — | `research/h215_h214_cut_bank_execution_checkpoint.md` |
+| H215 | CLOSED / EXHAUSTED | H214/H213 exact cut-bank execution checkpoint | — | `research/h215_h214_cut_bank_execution_checkpoint.md` |
 | H216 | CLOSED | H212 exact cut-bank bitset acceleration | — | `research/h216_h212_bitset_cut_bank_acceleration.md` |
 | H217 | OPEN | exact H216 B/C sharding | — | `research/h217_h216_exact_bc_sharding.md` |
 | H218 | EXHAUSTED | exact H217 shard merge pipeline | — | `research/h218_h217_exact_merge_pipeline.md` |
 | H219 | OPEN | vectorized exact H175 shard screen | — | `research/h219_vectorized_exact_h175_shards.md` |
-| H220 | UNCLASSIFIED | H219 pending-output gate | — | `research/h220_h219_pending_gate.md` |
+| H220 | OPEN | H219 pending-output gate | — | `research/h220_h219_pending_gate.md` |
 | H221 | CLOSED | zero-survivor certificate theorem for the H175 restricted family | — | `research/h221_h219_zero_survivor_certificate_theorem.md` |
 | H222 | OPEN | single-process exact H175 cut-bank screen | — | `research/h222_single_process_exact_h175_screen.md` |
 | H223 | OPEN | streaming exact H175 restricted-family screen | — | `research/h223_streaming_exact_h175_screen.md` |
 | H224 | OPEN | bulk-vectorized exact H175 restricted-family screen | — | `research/h224_bulk_vectorized_exact_h175_screen.md` |
-| H225 | SUCCESS | EXACT FAMILY STATUS | — | `research/H225_EXACT_STATUS.md` |
+| H225 | CLOSED / EXHAUSTED | EXACT FAMILY STATUS | — | `research/H225_EXACT_STATUS.md` |
 | H226 | CLOSED | exact coefficient-envelope pre-screen for the H225 general cyclic-affine family | — | `research/h226_general_coefficient_envelope_prescreen.md` |
-| H227 | SUCCESS | exact cross-sector symmetry for the H225 general cyclic-affine family | — | `research/h227_general_sector_hypergraph_symmetry.md` |
+| H227 | UNCLASSIFIED | exact cross-sector symmetry for the H225 general cyclic-affine family | — | `research/h227_general_sector_hypergraph_symmetry.md` |
 | H228 | EXHAUSTED | corrected ordered-sector symmetry and exact A-coefficient multiset quotient | — | `research/h228_ordered_sector_stabilizer_coefficient_orbits.md` |
 | H229 | OPEN | exact H228-quotient coefficient-envelope screen | — | `research/h229_quotient_coefficient_envelope_screen.md` |
 | H230 | OPEN | exact globally consistent shift CSP for the H225 general cyclic-affine family | — | `research/h230_exact_global_shift_csp.md` |
 | H231 | OPEN | 11-way sector-sharded exact global-shift CSP | — | `research/h231_sector_sharded_exact_shift_csp.md` |
 | H232 | UNCLASSIFIED | 44-way chunked exact sector CSP | — | `research/h232_chunked_sector_exact_shift_csp.md` |
-| H234 | CLOSED | exact unrestricted separation of actual H232 survivors | — | `research/h234_h232_first_survivor_exact_separation.md` |
-| H236 | UNCLASSIFIED | Rhode Island Lucky 3 Spot Keno doubled full-space threshold | — | `research/h236_ri_lucky3_full_coverage_threshold.md` |
+| H234 | OPEN | exact unrestricted separation of actual H232 survivors | — | `research/h234_h232_first_survivor_exact_separation.md` |
+| H236 | CLOSED | Rhode Island Lucky 3 Spot Keno doubled full-space threshold | — | `research/h236_ri_lucky3_full_coverage_threshold.md` |
 | H238 | EVIDENCE-BLOCKED | Rhode Island Kick Back with Keno primary-evidence recheck | — | `research/h238_ri_kick_back_primary_evidence_recheck.md` |
 | H239 | CLOSED | Deterministic Keno Bonus Hours full-coverage closure | 81.1709% | `research/h239_keno_bonus_hours_full_coverage_closure.md` |
 | H240 | CLOSED | Missouri Club Keno Bonus Hours full-coverage upper-bound closure | 93.6587% | `research/h240_missouri_club_keno_bonus_hours_full_coverage.md` |
@@ -251,12 +183,12 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H247 | CLOSED | Free Quick Pick / BOGO coverage-subsidy gate | 52.8876% | `research/h247_free_quick_pick_coverage_gate.md` |
 | H248 | CLOSED | Lotto.com 25% draw-discount full-cover upper bound | 75% | `research/h248_lotto_com_25pct_discount_full_cover_upper_bound.md` |
 | H249 | EVIDENCE-BLOCKED | Jackpocket lottery credits × Maine Pick 3 Single Digit full-cover conversion | 50% | `research/h249_jackpocket_credits_maine_pick3_single_digit.md` |
-| H250 | UNCLASSIFIED | courier-supported partial digit wagers and exact subsidy floor | 50% | `research/h250_partial_digit_courier_subsidy_floor.md` |
-| H251 | UNCLASSIFIED | Irish Lotto 6/45 Lotto Plus full-cover additive closure | 52.8477% | `research/h251_irish_lotto_45_plus_full_cover.md` |
-| H252 | SUCCESS | Irish Lotto 6/45 cap full-cover sharing gate | — | `research/h252_irish_lotto_45_cap_full_cover_sharing_gate.md` |
-| H253 | CLOSED | Georgia scratcher endgame inventory gate | 198.899% | `research/h253_georgia_scratcher_endgame_inventory_gate.md` |
-| H254 | SUCCESS | Irish guaranteed-raffle capture screen | — | `research/h254_irish_guaranteed_raffle_capture_screen.md` |
-| H255 | SUCCESS | UK Lotto lower-tier boost covering-design impossibility | 62.4667% | `research/h255_uk_lotto_match3_boost_impossibility.md` |
+| H250 | CLOSED | courier-supported partial digit wagers and exact subsidy floor | 50% | `research/h250_partial_digit_courier_subsidy_floor.md` |
+| H251 | OPEN | Irish Lotto 6/45 Lotto Plus full-cover additive closure | 52.8477% | `research/h251_irish_lotto_45_plus_full_cover.md` |
+| H252 | UNCLASSIFIED | Irish Lotto 6/45 cap full-cover sharing gate | — | `research/h252_irish_lotto_45_cap_full_cover_sharing_gate.md` |
+| H253 | OPEN | Georgia scratcher endgame inventory gate | 198.899% | `research/h253_georgia_scratcher_endgame_inventory_gate.md` |
+| H254 | UNCLASSIFIED | Irish guaranteed-raffle capture screen | — | `research/h254_irish_guaranteed_raffle_capture_screen.md` |
+| H255 | UNCLASSIFIED | UK Lotto lower-tier boost covering-design impossibility | 62.4667% | `research/h255_uk_lotto_match3_boost_impossibility.md` |
 | H256 | CLOSED | New Jersey Quick Draw Progressive 50% Bonus Hours full-cover closure | — | `research/h256_nj_quick_draw_bonus_hours_full_cover.md` |
 | H257 | CLOSED | LOTTO MAX 2026 MAXPLUS/MAXMILLIONS full-cover guarantee screen | — | `research/h257_lotto_max_overlay_full_cover.md` |
 | H258 | CLOSED | EuroMillions cap flow-down × one-external-jackpot-duplicate bound | — | `research/h258_euromillions_cap_flowdown_external_duplicate_bound.md` |
@@ -264,59 +196,59 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H260 | CLOSED | DAILY GRAND Bonus Draw main-space cover bound | 68.675% | `research/h260_daily_grand_bonus_draw_cover_bound.md` |
 | H261 | CLOSED | Hospital Research Foundation capped-raffle full-buyout screen | 53.3516% | `research/h261_hospital_research_foundation_capped_raffle_buyout.md` |
 | H262 | OPEN | LOTTO 6/49 final Gold Ball takeover screen | — | `research/h262_lotto649_final_gold_ball_takeover.md` |
-| H263 | UNCLASSIFIED | Spain Christmas Lottery 2026 full-issue takeover cap | 70% | `research/h263_spanish_christmas_2026_full_issue_takeover.md` |
-| H264 | UNCLASSIFIED | Uganda LOTTO fixed-tier / special-roll-down screen | 18.1221% | `research/h264_uganda_lotto_fixed_tier_rolldown.md` |
+| H263 | CLOSED | Spain Christmas Lottery 2026 full-issue takeover cap | 70% | `research/h263_spanish_christmas_2026_full_issue_takeover.md` |
+| H264 | CLOSED | Uganda LOTTO fixed-tier / special-roll-down screen | 18.1221% | `research/h264_uganda_lotto_fixed_tier_rolldown.md` |
 | H265 | CLOSED | New Jersey Pick-3 Green Ball terminal-double-draw bound | 100% | `research/h265_nj_pick3_green_ball_terminal_bound.md` |
-| H266 | OPEN | AUTONOMOUS CHECKPOINT | 55.6815% | `research/H266_STATUS.md` |
-| H267 | OPEN | AUTONOMOUS CHECKPOINT | 36.087% | `research/H267_STATUS.md` |
+| H266 | CLOSED / EXHAUSTED | AUTONOMOUS CHECKPOINT | 55.6815% | `research/H266_STATUS.md` |
+| H267 | CLOSED / EXHAUSTED | AUTONOMOUS CHECKPOINT | 36.087% | `research/H267_STATUS.md` |
 | H268 | CLOSED | H268_STATUS | — | `research/H268_STATUS.md` |
-| H269 | EXHAUSTED | H269_STATUS | 40% | `research/H269_STATUS.md` |
-| H270 | EXHAUSTED | H270_STATUS | — | `research/H270_STATUS.md` |
-| H271 | EXHAUSTED | H271_STATUS | — | `research/H271_STATUS.md` |
-| H272 | EXHAUSTED | H272_STATUS | 47.495% | `research/H272_STATUS.md` |
-| H273 | EXHAUSTED | H273_STATUS | — | `research/H273_STATUS.md` |
-| H274 | CLOSED | H274_STATUS | 28.4734% | `research/H274_STATUS.md` |
-| H275 | EXHAUSTED | Singapore TOTO cascade/full-cover | 24.1154% | `research/H275_STATUS.md` |
-| H276 | EXHAUSTED | UK Thunderball fixed-prize exact bound | 52.8815% | `research/H276_STATUS.md` |
-| H277 | EXHAUSTED | Millionaire for Life | 52.8876% | `research/H277_STATUS.md` |
-| H278 | EXHAUSTED | Georgia Lottery deterministic 50% deposit subsidy | 53.65% | `research/H278_STATUS.md` |
-| H279 | EXHAUSTED | Kentucky 100% match + Pick 3 exact cover | — | `research/H279_STATUS.md` |
-| H280 | EXHAUSTED | New Hampshire 200% promo lead + Pick 3 exact cover | — | `research/H280_STATUS.md` |
-| H281 | EXHAUSTED | Virginia free-game bonus worst-case floor | 50% | `research/H281_STATUS.md` |
-| H282 | EXHAUSTED | Kentucky CASH POP + August 2026 deposit bonuses | 77.7778% | `research/H282_STATUS.md` |
-| H283 | EXHAUSTED | Pennsylvania referral Bonus Money + PICK covers | — | `research/H283_STATUS.md` |
-| H284 | EXHAUSTED | H284_STATUS | 57% | `research/H284_STATUS.md` |
-| H285 | EXHAUSTED | H285_STATUS | — | `research/H285_STATUS.md` |
-| H286 | EXHAUSTED | H286_STATUS | — | `research/H286_STATUS.md` |
-| H287 | EXHAUSTED | H287_STATUS | — | `research/H287_STATUS.md` |
-| H288 | EXHAUSTED | H288_STATUS | — | `research/H288_STATUS.md` |
+| H269 | CLOSED / EXHAUSTED | H269_STATUS | 40% | `research/H269_STATUS.md` |
+| H270 | CLOSED / EXHAUSTED | H270_STATUS | — | `research/H270_STATUS.md` |
+| H271 | CLOSED / EXHAUSTED | H271_STATUS | — | `research/H271_STATUS.md` |
+| H272 | CLOSED / EXHAUSTED | H272_STATUS | 47.495% | `research/H272_STATUS.md` |
+| H273 | CLOSED / EXHAUSTED | H273_STATUS | — | `research/H273_STATUS.md` |
+| H274 | EXHAUSTED | H274_STATUS | 28.4734% | `research/H274_STATUS.md` |
+| H275 | CLOSED | Singapore TOTO cascade/full-cover | 24.1154% | `research/H275_STATUS.md` |
+| H276 | CLOSED | UK Thunderball fixed-prize exact bound | 52.8815% | `research/H276_STATUS.md` |
+| H277 | CLOSED | Millionaire for Life | 52.8876% | `research/H277_STATUS.md` |
+| H278 | CLOSED | Georgia Lottery deterministic 50% deposit subsidy | 53.65% | `research/H278_STATUS.md` |
+| H279 | CLOSED | Kentucky 100% match + Pick 3 exact cover | — | `research/H279_STATUS.md` |
+| H280 | CLOSED | New Hampshire 200% promo lead + Pick 3 exact cover | — | `research/H280_STATUS.md` |
+| H281 | CLOSED | Virginia free-game bonus worst-case floor | 50% | `research/H281_STATUS.md` |
+| H282 | CLOSED | Kentucky CASH POP + August 2026 deposit bonuses | 77.7778% | `research/H282_STATUS.md` |
+| H283 | CLOSED | Pennsylvania referral Bonus Money + PICK covers | — | `research/H283_STATUS.md` |
+| H284 | CLOSED | H284_STATUS | 57% | `research/H284_STATUS.md` |
+| H285 | CLOSED | H285_STATUS | — | `research/H285_STATUS.md` |
+| H286 | CLOSED | H286_STATUS | — | `research/H286_STATUS.md` |
+| H287 | CLOSED | H287_STATUS | — | `research/H287_STATUS.md` |
+| H288 | CLOSED | H288_STATUS | — | `research/H288_STATUS.md` |
 | H289 | CLOSED | H289_STATUS | — | `research/H289_STATUS.md` |
 | H290 | CLOSED | H290_STATUS | 100% | `research/H290_STATUS.md` |
 | H291 | CLOSED | H291_STATUS | 50% | `research/H291_STATUS.md` |
 | H292 | CLOSED | H292_STATUS | — | `research/H292_STATUS.md` |
-| H293 | EXHAUSTED | H293_STATUS | — | `research/H293_STATUS.md` |
-| H294 | EXHAUSTED | H294_STATUS | 20% | `research/H294_STATUS.md` |
-| H295 | EXHAUSTED | H295_STATUS | 40% | `research/H295_STATUS.md` |
-| H296 | EXHAUSTED | H296_STATUS | — | `research/H296_STATUS.md` |
-| H297 | CLOSED | H297_STATUS | 41.6% | `research/H297_STATUS.md` |
-| H298 | CLOSED | H298_STATUS | 80% | `research/H298_STATUS.md` |
-| H299 | EXHAUSTED | H299_STATUS | — | `research/H299_STATUS.md` |
+| H293 | CLOSED | H293_STATUS | — | `research/H293_STATUS.md` |
+| H294 | CLOSED | H294_STATUS | 20% | `research/H294_STATUS.md` |
+| H295 | CLOSED | H295_STATUS | 40% | `research/H295_STATUS.md` |
+| H296 | CLOSED | H296_STATUS | — | `research/H296_STATUS.md` |
+| H297 | CLOSED / EXHAUSTED | H297_STATUS | 41.6% | `research/H297_STATUS.md` |
+| H298 | CLOSED / EXHAUSTED | H298_STATUS | 80% | `research/H298_STATUS.md` |
+| H299 | CLOSED | H299_STATUS | — | `research/H299_STATUS.md` |
 | H300 | CLOSED | H300_STATUS | — | `research/H300_STATUS.md` |
 | H301 | CLOSED | H301_STATUS | 53.2781% | `research/H301_STATUS.md` |
 | H302 | CLOSED | H302_STATUS | — | `research/H302_STATUS.md` |
 | H303 | EVIDENCE-BLOCKED | H303_STATUS | — | `research/H303_STATUS.md` |
 | H304 | CLOSED | H304_STATUS | 40.4% | `research/H304_STATUS.md` |
-| H305 | EXHAUSTED | H305_STATUS | 51.0569% | `research/H305_STATUS.md` |
-| H306 | EXHAUSTED | H306_STATUS | — | `research/H306_STATUS.md` |
+| H305 | CLOSED | H305_STATUS | 51.0569% | `research/H305_STATUS.md` |
+| H306 | CLOSED | H306_STATUS | — | `research/H306_STATUS.md` |
 | H307 | CLOSED | Salexmo published instant-win numbers / random-allocation blocker | — | `research/H307_STATUS.md` |
 | H308 | CLOSED | CrazyWins zero-sold finite-pool / postal free-entry takeover | — | `research/H308_STATUS.md` |
-| H309 | EXHAUSTED | H309_STATUS | 109.89% | `research/H309_STATUS.md` |
-| H310 | EXHAUSTED | H310_STATUS | — | `research/H310_STATUS.md` |
+| H309 | CLOSED | H309_STATUS | 109.89% | `research/H309_STATUS.md` |
+| H310 | CLOSED | H310_STATUS | — | `research/H310_STATUS.md` |
 | H311 | CLOSED | H311_STATUS | — | `research/H311_STATUS.md` |
 | H312 | CLOSED | H312_STATUS | 67.5947% | `research/H312_STATUS.md` |
 | H313 | CLOSED | H313_STATUS | 62.5005% | `research/H313_STATUS.md` |
 | H314 | CLOSED | H314_STATUS | — | `research/H314_STATUS.md` |
-| H315 | SUCCESS | H315_STATUS | — | `research/H315_STATUS.md` |
+| H315 | CLOSED | H315_STATUS | — | `research/H315_STATUS.md` |
 | H316 | CLOSED | Punter Prizes postal-bundle bound | 98.8665% | `research/H316_STATUS.md` |
 | H317 | CLOSED | Universal Competitions stop-on-hit cash pool | — | `research/H317_STATUS.md` |
 | H318 | CLOSED | SOBO same-pool free-entry finite-cap screen | — | `research/H318_STATUS.md` |
@@ -324,13 +256,13 @@ The JSON record is authoritative for full file lists and extracted blocker/reope
 | H320 | CLOSED | Prizle Grab A Prize guaranteed-win cash-floor bound | — | `research/H320_STATUS.md` |
 | H321 | CLOSED | Diamond Winners electronic-free-entry cap bound | — | `research/H321_STATUS.md` |
 | H322 | CLOSED | SOBO first-ticket-free random-allocation cap bound | — | `research/H322_STATUS.md` |
-| H323 | EXHAUSTED | H323_STATUS | 39.4367% | `research/H323_STATUS.md` |
+| H323 | CLOSED | H323_STATUS | 39.4367% | `research/H323_STATUS.md` |
 | H324 | CLOSED | H324_STATUS | — | `research/H324_STATUS.md` |
-| H325 | EXHAUSTED | H325_STATUS | 55.5556% | `research/H325_STATUS.md` |
-| H326 | EXHAUSTED | H326_STATUS | — | `research/H326_STATUS.md` |
-| H327 | EXHAUSTED | H327_STATUS | 9% | `research/H327_STATUS.md` |
-| H328 | EXHAUSTED | H328_STATUS | — | `research/H328_STATUS.md` |
-| H329 | EXHAUSTED | H329_STATUS | — | `research/H329_STATUS.md` |
+| H325 | CLOSED | H325_STATUS | 55.5556% | `research/H325_STATUS.md` |
+| H326 | CLOSED | H326_STATUS | — | `research/H326_STATUS.md` |
+| H327 | CLOSED | H327_STATUS | 9% | `research/H327_STATUS.md` |
+| H328 | CLOSED | H328_STATUS | — | `research/H328_STATUS.md` |
+| H329 | CLOSED | H329_STATUS | — | `research/H329_STATUS.md` |
 | H330 | CLOSED | H330_STATUS | — | `research/H330_STATUS.md` |
 | H331 | CLOSED | H331_STATUS | 56.3867% | `research/H331_STATUS.md` |
 | H332 | CLOSED | H332_STATUS | 184.824% | `research/H332_STATUS.md` |
