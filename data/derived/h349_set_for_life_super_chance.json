@@ -1,0 +1,45 @@
+{
+  "packet": "H349",
+  "game": "UK National Lottery Set For Life",
+  "matrix": {"main_n":47,"main_pick":5,"life_n":10},
+  "line_cost_gbp": 1.5,
+  "full_cover_lines": 15339390,
+  "full_cover_cost_gbp": 23009085.0,
+  "exact_partition": {
+    "0+LB": 850668,
+    "0": 7656012,
+    "1+LB": 559650,
+    "1": 5036850,
+    "2+LB": 114800,
+    "2": 1033200,
+    "3+LB": 8610,
+    "3": 77490,
+    "4+LB": 210,
+    "4": 1890,
+    "5+LB": 1,
+    "5": 9
+  },
+  "partition_sum": 15339390,
+  "regular_draw": {
+    "gross_gbp": 12949100.0,
+    "return_ratio": 0.5627820489167649,
+    "deficit_gbp": 10059985.0
+  },
+  "super_chance": {
+    "status": "not currently announced as of 2026-08-29 source check",
+    "top_prize_cap_gbp": 18000000.0,
+    "our_top_winning_entries_under_full_cover": 10,
+    "non_top_fixed_gross_gbp": 8269100.0,
+    "no_external_top_duplicates": {"gross_gbp":26269100.0,"profit_gbp":3260015.0,"return_ratio":1.1416838175007828},
+    "external_top_duplicate_stress": [
+      {"external":1,"gross_gbp":24632736.363636363,"profit_gbp":1623651.3636363633},
+      {"external":2,"gross_gbp":23269100.0,"profit_gbp":260015.0},
+      {"external":3,"gross_gbp":22115253.846153848,"profit_gbp":-893831.1538461521}
+    ],
+    "strict_guarantee": false,
+    "blocker": "Three legal external top-tier winning entries are sufficient to push the capped full-cover gross below acquisition cost; no hard pre-draw bound of <=2 external top-tier winners is established."
+  },
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "result": "NOT SUCCESS; new near-break-even special-event checkpoint"
+}
