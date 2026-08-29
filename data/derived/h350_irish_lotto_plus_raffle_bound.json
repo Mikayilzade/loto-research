@@ -1,0 +1,43 @@
+{
+  "packet": "H350",
+  "game": "Irish National Lottery Lotto Plus / Lotto Plus Raffle",
+  "rules_issue": "Issue 8 October-2024 (applies from 30 October 2024 and subsequent draws)",
+  "parameters": {
+    "raffle_code_count": 10000,
+    "raffle_code_range": "0000-9999",
+    "allocation": "sequential",
+    "one_raffle_entry_number_per_lotto_plus_play": true,
+    "lotto_plus_incremental_cost_eur_per_play": 1,
+    "ordinary_raffle_fixed_prize_eur_per_matching_entry": 500,
+    "million_euro_raffle_pool_eur": 1000000
+  },
+  "ordinary_raffle_exact_bound": {
+    "for_n_plays": "min_code_multiplicity <= floor(N/10000)",
+    "worst_code_gross_upper_eur": "500*floor(N/10000)",
+    "incremental_plus_cost_eur": "N",
+    "strict_net_upper_eur": "500*floor(N/10000)-N < 0 for every N>0",
+    "complete_cycle_cost_eur": 10000,
+    "complete_cycle_fixed_raffle_gross_eur": 500,
+    "complete_cycle_return_ratio": 0.05,
+    "complete_cycle_deficit_eur": 9500
+  },
+  "special_million_raffle": {
+    "additional_to_ordinary_500": true,
+    "rules_modes": [
+      "divide €1m equally among all Ticket Owners whose Ticket bears the winning raffle number",
+      "award €1m to one Ticket Owner selected from all Tickets containing the winning raffle number"
+    ],
+    "strict_player_bonus_floor_with_external_matching_ticket_allowed_eur": 0,
+    "reason": "In single-owner mode an external matching ticket may be selected; in sharing mode external owners dilute the player's share and there is no binding pre-draw cap establishing monopoly."
+  },
+  "execution_blocker": "Rules permit the operator to restrict/prohibit participation deemed to interfere with other players' reasonable access.",
+  "implementation_scan": {
+    "n_from": 1,
+    "n_to": 2000000,
+    "nonnegative_ordinary_cases": 0
+  },
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "strict_guaranteed_profit": false,
+  "result": "CLOSED for ordinary fixed raffle subsidy and special-million strict-guarantee rescue under checked rules"
+}
