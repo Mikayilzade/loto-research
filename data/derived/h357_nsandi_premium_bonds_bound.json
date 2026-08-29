@@ -1,0 +1,21 @@
+{
+  "packet": "H357",
+  "game": "UK NS&I Premium Bonds",
+  "mechanism": "principal-preserving lottery with externally funded monthly prizes",
+  "max_holding_gbp": 50000,
+  "august_2026_eligible_bonds": 136946390805,
+  "august_2026_prize_count": 6224837,
+  "august_2026_prize_value_gbp": 433663575,
+  "august_2026_external_bonds_at_max_holding": 136946340805,
+  "august_2026_external_capacity_after_all_prizes": 136940115968,
+  "zero_prize_branch_exists": true,
+  "redeemable_principal_floor_gbp": 50000,
+  "nominal_prize_floor_gbp": 0,
+  "nominal_profit_floor_gbp": 0,
+  "strict_positive_profit_guaranteed": false,
+  "announced_september_2026_prize_fund_rate": 0.0435,
+  "announced_september_2026_odds_per_one_pound": 21000,
+  "arithmetic_inconclusive": 0,
+  "closure_relevant_inconclusive": 0,
+  "result": "CLOSED_FOR_STRICT_GUARANTEED_PROFIT_UNDER_CURRENT_STRUCTURE"
+}
